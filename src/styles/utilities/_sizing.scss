@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// sizing utility placeholder
+
+$widths: (
+  "25": 25%,
+  "50": 50%,
+  "75": 75%,
+  "100": 100%,
+  "auto": auto,
+);
+
+@each $class, $width in $widths {
+  .w-#{$class} {
+    width: $width !important;
+  }
+
+  @each $bp, $size in $cssbreakpoints {
+    @include mqpc($bp) {
+      .w-#{$bp}-#{$class} {
+        width: $width !important;
+      }
+    }
+  }
+}
+
+@each $bp, $size in $cssbreakpoints {
+  @include mqpc($bp) {
+    .mw-#{$bp}-100 {
+      max-width: 100% !important;
+    }
+  }
+}
+
+$heights: (
+  "25": 25%,
+  "50": 50%,
+  "75": 75%,
+  "100": 100%,
+  "auto": auto,
+);
+
+@each $class, $height in $heights {
+  .h-#{$class} {
+    height: $height !important;
+  }
+
+  @each $bp, $size in $cssbreakpoints {
+    @include mqpc($bp) {
+      .h-#{$bp}-#{$class} {
+        height: $height !important;
+      }
+    }
+  }
+}
+
+@each $bp, $size in $cssbreakpoints {
+  @include mqpc($bp) {
+    .mh-#{$bp}-100 {
+      max-height: 100% !important;
+    }
+  }
+}

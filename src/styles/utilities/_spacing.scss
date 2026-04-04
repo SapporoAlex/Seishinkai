@@ -1,0 +1,69 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@for $i from 1 through 8 {
+  .mb-#{$i} {
+    margin-bottom: var(--space-#{$i}) !important;
+  }
+  .mt-#{$i} {
+    margin-top: var(--space-#{$i}) !important;
+  }
+  .ml-#{$i} {
+    margin-left: var(--space-#{$i}) !important;
+  }
+  .mr-#{$i} {
+    margin-right: var(--space-#{$i}) !important;
+  }
+  .m-#{$i} {
+    margin: var(--space-#{$i}) !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: var(--space-#{$i}) !important;
+  }
+  .pt-#{$i} {
+    padding-top: var(--space-#{$i}) !important;
+  }
+  .pl-#{$i} {
+    padding-left: var(--space-#{$i}) !important;
+  }
+  .pr-#{$i} {
+    padding-right: var(--space-#{$i}) !important;
+  }
+  .p-#{$i} {
+    padding: var(--space-#{$i}) !important;
+  }
+  @each $bp, $size in $cssbreakpoints {
+    @include mqpc($bp) {
+      .mb-#{$bp}-#{$i} {
+        margin-bottom: var(--space-#{$i}) !important;
+      }
+      .mt-#{$bp}-#{$i} {
+        margin-top: var(--space-#{$i}) !important;
+      }
+      .ml-#{$bp}-#{$i} {
+        margin-left: var(--space-#{$i}) !important;
+      }
+      .mr-#{$bp}-#{$i} {
+        margin-right: var(--space-#{$i}) !important;
+      }
+      .m-#{$bp}-#{$i} {
+        margin: var(--space-#{$i}) !important;
+      }
+      .pb-#{$bp}-#{$i} {
+        padding-bottom: var(--space-#{$i}) !important;
+      }
+      .pt-#{$bp}-#{$i} {
+        padding-top: var(--space-#{$i}) !important;
+      }
+      .pl-#{$bp}-#{$i} {
+        padding-left: var(--space-#{$i}) !important;
+      }
+      .pr-#{$bp}-#{$i} {
+        padding-right: var(--space-#{$i}) !important;
+      }
+      .p-#{$bp}-#{$i} {
+        padding: var(--space-#{$i}) !important;
+      }
+    }
+  }
+}

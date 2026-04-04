@@ -1,0 +1,107 @@
+---
+import Button from "@components/buttons/Button.astro";
+import Picture from "@components/Picture.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import data from 'src/data/cards-who.en.json';
+const cards = data.cards;
+---
+
+<BaseLayout title="Welcome" lang="ja" path="/">
+<section class="fv" id="fv">
+  <div class="swiper-container">
+    <div class="fv__text">
+      <h1 class="fv__title"></h1>
+      <p class="fv__copy"></p>
+      <a href="#contact"><Button>Free trial</Button></a>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
+        </div>
+      </div>
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+        </div>
+      </div>
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
+        </div>
+      </div>
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+        </div>
+      </div>
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cards-who" id="cards-who">
+    <div class="cards-who__container">
+        <div class="cards-who__card-box">
+        <h2>For Anyone</h2>
+        <p>This is perfect for anybody</p>
+            <div class="cards-who__card-group">
+                <div class="cards-who__card u-color-red">
+                    <span class="cards-who__card-title">{ cards.card01.title }</span>
+                    <h3 class="cards-who__card-text">{ cards.card01.text }</h3>
+                </div>
+                <div class="cards-who__card u-color-blue">
+                    <span class="cards-who__card-title">{ cards.card02.title }</span>
+                    <h3 class="cards-who__card-text">{ cards.card02.text }</h3>
+                </div>
+                <div class="cards-who__card u-color-green">
+                    <span class="cards-who__card-title">{ cards.card03.title }</span>
+                    <h3 class="cards-who__card-text">{ cards.card03.text }</h3>
+                </div>
+                <div class="cards-who__card u-color-yellow">
+                    <span class="cards-who__card-title">{ cards.card04.title }</span>
+                    <h3 class="cards-who__card-text">{ cards.card04.text }</h3>
+                </div>
+            </div>
+            <a href="./about/"><Button>Learn more</Button>
+        </div>
+    </div>
+</section>
+<section class="classes" id="classes">
+    <div class="classes__container">
+        <h2>Classes / Locations</h2>
+        <p>We have locations Sapporo wide</p>
+        <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+        <a href="./locations/"><Button>View classes</Button></a>
+    </div>
+</section>
+<section class="join" id="join">
+    <div class="join__container">
+        <h2>Membership</h2>
+        <p>Easy to join</p>
+        <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+        <a href="./joining/"><Button>See pricing</Button></a>
+    </div>
+</section>
+<section class="sns" id="sns">
+    <div class="sns__container">
+        <h2>News</h2>
+        <p>See our latest announcements, SNS updates and blogs</p>
+        <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="contact__container">
+        <h2>Contact</h2>
+        <p>Call or Email to set up a free trial</p>
+        <form action="https://formspree.io/f/yourFormID" method="POST">
+          <input type="email" name="email" required />
+          <textarea name="message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+</BaseLayout>

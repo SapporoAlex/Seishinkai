@@ -1,0 +1,32 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    border-radius: 15px;
+    th,
+    td {
+        text-align: left;
+        padding: 5px;
+        /* black line between rows */
+        border-bottom: 1px solid #000;
+    }
+
+    thead {
+
+        tr {
+            th {
+                background-color: var(--color-blue-chalk);
+            }
+        }
+    }
+
+    tbody {
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    }
+}

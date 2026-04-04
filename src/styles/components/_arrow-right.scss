@@ -1,0 +1,43 @@
+.arrow-right__circle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid #000;
+    overflow: hidden;
+    z-index: 2; 
+}
+
+.arrow-right__chevron {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 2; /* keep chevron above overlay */
+}
+
+/* Hover triggered by the button parent */
+.button:hover .arrow-right__circle::before,
+.button.is-open .arrow-right__circle::before {
+    transform: translateX(0);
+}
+
+.button:hover .arrow-right__circle,
+.button.is-open .arrow-right__circle {
+    border-color: #fff;
+}
+
+.button:hover .arrow-right__chevron,
+.button.is-open .arrow-right__chevron {
+    border-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .arrow-right__circle::before { transition: none; transform: none; opacity: 0.5; }
+}
+

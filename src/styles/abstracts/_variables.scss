@@ -1,0 +1,16 @@
+@use "sass:map";
+
+// メディアクエリのブレイクポイント
+$breakpoints: (
+  "xs": 20rem, //320
+  "sm": 40rem, //640
+  "md": 48rem, //768
+  "lg": 64rem, //1024
+  "xl": 80rem, //1280
+  "2xl": 96rem, //1536
+);
+
+$cssbreakpoints: (
+  "md": map.get($breakpoints, "md"),
+  "lg": map.get($breakpoints, "lg"),
+);

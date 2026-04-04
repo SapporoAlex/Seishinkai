@@ -1,0 +1,116 @@
+---
+import "../styles/main.scss";
+// import GtmHeader from "@components/gtm/Header.astro";
+// import GtmBody from "@components/gtm/Body.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+import siteData from "../data/site.json";
+
+const siteTitle = siteData.title;
+const siteDescription = siteData.description;
+const siteDomain = siteData.url;
+const siteOgImage = siteData.ogImage;
+const isDev = import.meta.env.DEV;
+
+let mainJsUrl = "/atmosphere/assets/js/main.js";
+if (isDev) {
+  mainJsUrl = await import("../scripts/main.js?url").then((mod) => mod.default);
+}
+
+interface ListItem {
+  path: string;
+  name: string;
+}
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  path?: string;
+  breadcrumb?: ListItem[];
+  lang?: string;
+}
+const props = Astro.props;
+
+const lang = props.lang ?? "ja";
+const title = props.title && props.title !== "" ? props.title : siteData.title;
+const description = props.description ?? siteData.description;
+const keywords = props.keywords ?? undefined;
+const path = props.path ?? undefined;
+const ogImage = props.ogImage ?? siteData.ogImage;
+const breadcrumb = props.breadcrumb ?? undefined;
+
+const ogLocaleMap: Record<string, string> = {
+  ja: "ja_JP",
+  en: "en_US",
+};
+const ogLocale = ogLocaleMap[lang] ?? "ja_JP";
+// Load localized strings from JSON under src/data/locales/{lang}.json
+let localeData = null;
+try {
+  // dynamic import - Astro will handle static bundling for known files
+  localeData = (await import(`../data/locales/${lang}.json`)).default;
+} catch (e) {
+  // fallback to Japanese
+  localeData = (await import(`../data/locales/ja.json`)).default;
+}
+
+const headerProps = localeData?.header ?? {
+  brand: siteData.title,
+  nav: [
+    { label: 'トップ', href: '/' },
+    { label: '概要', href: '/about/' },
+    { label: 'お問い合わせ', href: '/contact/' },
+    { label: '参加方法', href: '/joining/' },
+    { label: '店舗', href: '/locations/' },
+    { label: 'スケジュール', href: '/schedule/' },
+  ],
+};
+
+const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{siteTitle}</title>
+    <!-- <GtmHeader /> -->
+    {description ? <meta name="description" content={description} /> : <meta name="description" content="" />}
+    {keywords ? <meta name="keywords" content={keywords} /> : <meta name="keywords" content="" />}
+
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={siteTitle} />
+    <meta property="og:description" content={description ? description : siteDescription} />
+    <meta property="og:url" content={path ? siteDomain + path : siteDomain} />
+    <meta property="og:image" content={ogImage ? siteDomain + ogImage : siteOgImage} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <meta name="format-detection" content="telephone=no" />
+
+    <link type="image/x-icon" rel="shortcut icon" href="/atmosphere/favicon.ico" />
+    <link rel="canonical" href={path ? siteDomain + path : siteDomain} />
+    <!-- hreflang alternates -->
+    <link rel="alternate" href={`${siteDomain}${path ?? '/'}`} hreflang={lang === 'ja' ? 'ja' : 'en'} />
+    <link rel="alternate" href={`${siteDomain}${path ? '/en' + path : '/en/'}`} hreflang={lang === 'ja' ? 'en' : 'ja'} />
+    <link rel="alternate" href={`${siteDomain}/`} hreflang="x-default" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/atmosphere/assets/css/swiper-bundle.min.css" />
+    <script is:inline src="/atmosphere/assets/js/swiper-bundle.min.js"></script>
+    <script type="module" src={mainJsUrl}></script>
+  </head>
+  <body>
+    <Header {...headerProps} />
+    <main>
+      <slot />
+    </main>
+    <Footer {...footerProps} />
+  </body>
+</html>

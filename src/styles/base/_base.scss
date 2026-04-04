@@ -1,0 +1,99 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+:root,
+:host {
+  --spacing: 0.25rem;
+  --space-1: calc(var(--spacing) * 1); // 4px
+  --space-2: calc(var(--spacing) * 2); // 8px
+  --space-3: calc(var(--spacing) * 4); // 16px
+  --space-4: calc(var(--spacing) * 6); // 24px
+  --space-5: calc(var(--spacing) * 8); // 32px
+  --space-6: calc(var(--spacing) * 10); // 40px
+  --space-7: calc(var(--spacing) * 12); // 48px
+  --space-8: calc(var(--spacing) * 16); // 64px
+  --font-jp: "Noto Serif JP", serif;
+  --font-jp-sans: "Noto Sans JP", serif;
+  --font-gothic: "Noto Sans JP", sans-serif;
+  --font-en: "";
+  --default-font-family: var(--font-jp);
+  --default-font-family-en: var(--font-en);
+  --fs-xs: clamp(0.75rem, calc(0.64rem + 0.26vw), 0.875rem);
+  --fs-sm: clamp(0.875rem, calc(0.78rem + 0.4vw), 1rem);
+  --fs-md: clamp(1rem, calc(0.9rem + 0.7vw), 1.125rem);
+  --fs-lg: clamp(1.25rem, calc(1.05rem + 1.2vw), 1.75rem);
+  --fs-xl: clamp(2rem, calc(1.6rem + 2.5vw), 3rem);
+  --lead: clamp(1.125rem, calc(1rem + 0.6vw), 1.375rem);
+  --side-spacing: 40px;
+  --max-width: 1020px;
+  --color-yellow-chalk: #f5ff9e;
+  --color-blue-chalk: #9efffd;
+  --color-red-chalk: #ff9e9e;
+  --color-green-chalk: #a2ff92;
+}
+
+body {
+  font-family: var(--default-font-family);
+  line-height: calc(33 / 14);
+  background: #ffffff;
+  color: #000000;
+
+  &:not(.is-fv-hidden):has(.fv__slide-full.swiper-slide-active) {
+    --nav-bar-color: #fff;
+  }
+
+  &.is-nav-open {
+    @include mqsp {
+      overflow: hidden;
+    }
+  }
+}
+
+body .product-detail {
+  --nav-bar-color: #fff;
+}
+
+[tabindex="-1"]:focus-visible {
+  outline: none !important;
+}
+
+h1 { font-size: var(--fs-xl); line-height: 1.1; }
+h2 { font-size: var(--fs-lg); line-height: 1.2; }
+h3 { font-size: var(--fs-md); line-height: 1.3; }
+p    { font-size: var(--fs-md); line-height: var(--line-height-text); }
+span    { font-size: var(--fs-sm); line-height: var(--line-height-text); }
+small    { font-size: var(--fs-xs); line-height: var(--line-height-text); }
+h4 {
+  font-size: var(--text-xl);
+  line-height: var(--text-lg--line-height);
+  font-weight: 500;
+}
+
+h5 {
+  font-size: var(--text-xl);
+  line-height: var(--text-lg--line-height);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: var(--text-xl);
+  line-height: var(--text-lg--line-height);
+  font-weight: 500;
+}
+
+#main {
+  overflow: clip;
+}
+
+.container {
+  padding: 0 var(--side-spacing);
+}
+
+html, body, main {
+  max-width: none;
+  width: 100%;
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

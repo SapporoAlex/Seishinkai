@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+$fontsizes: (
+  "xs": var(--text-xs),
+  "sm": var(--text-sm),
+  "base": var(--text-base),
+  "lg": var(--text-lg),
+  "xl": var(--text-xl),
+  "2xl": var(--text-2xl),
+);
+
+@each $class, $fontsize in $fontsizes {
+  .text-#{$class} {
+    font-size: $fontsize !important;
+  }
+
+  @each $bp, $size in $cssbreakpoints {
+    @include mqpc($bp) {
+      .text-#{$bp}-#{$class} {
+        font-size: $fontsize !important;
+      }
+    }
+  }
+}
+
+$aligns: (
+  "left": left,
+  "right": right,
+  "center": center,
+  "justify": justify,
+  "start": start,
+  "end": end,
+);
+
+@each $class, $align in $aligns {
+  .text-#{$class} {
+    text-align: $align !important;
+  }
+
+  @each $bp, $size in $cssbreakpoints {
+    @include mqpc($bp) {
+      .text-#{$bp}-#{$class} {
+        text-align: $align !important;
+      }
+    }
+  }
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+@each $bp, $size in $cssbreakpoints {
+  @include mqpc($bp) {
+    .text-#{$bp}-nowrap {
+      white-space: nowrap !important;
+    }
+  }
+}
+
+$lineheights: (
+  "1": 1,
+  "sm": var(--line-height-sm),
+  "md": var(--line-height-md),
+  "base": var(--line-height-base), // "lg": $line-height-lg,
+);
+
+@each $class, $lineheight in $lineheights {
+  .lh-#{$class} {
+    line-height: $lineheight !important;
+  }
+
+  @each $bp, $size in $cssbreakpoints {
+    @include mqpc($bp) {
+      .lh-#{$bp}-#{$class} {
+        line-height: $lineheight !important;
+      }
+    }
+  }
+}

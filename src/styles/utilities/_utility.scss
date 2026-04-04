@@ -1,0 +1,16 @@
+.u {
+    &-color {
+        &-blue {
+            background: var(--color-blue-chalk);
+        }
+        &-yellow {
+            background: var(--color-yellow-chalk);
+        }
+        &-green {
+            background: var(--color-green-chalk);
+        }
+        &-red {
+            background: var(--color-red-chalk);
+        }
+    }
+}

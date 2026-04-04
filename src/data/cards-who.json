@@ -1,0 +1,20 @@
+{
+    "cards": {
+        "card01": {
+            "title": "子供用",
+            "text": "from 3 to 82"
+        },
+        "card02": {
+            "title": "for women",
+            "text": "safe training environment"
+        },
+        "card03": {
+            "title": "for foreign visitors",
+            "text": "we welcome those from abroad"
+        },
+        "card04": {
+            "title": "for aged activity",
+            "text": "to maintain and build health"
+        }
+    }
+}

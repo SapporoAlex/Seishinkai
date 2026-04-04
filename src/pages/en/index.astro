@@ -1,0 +1,168 @@
+---
+import Button from "@components/buttons/Button.astro";
+import Picture from "@components/Picture.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import data from 'src/data/cards-who.en.json';
+const cards = data.cards;
+---
+
+<BaseLayout title="Welcome" lang="en" path="/en/">
+<section class="fv" id="fv">
+  <div class="swiper-container">
+    <div class="fv__text">
+      <h1 class="fv__title">Seishinkai Karate</h1>
+      <p class="fv__copy"></p>
+      <a href="#contact"><Button>Free trial</Button></a>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
+        </div>
+      </div>
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+        </div>
+      </div>
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
+        </div>
+      </div>
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+        </div>
+      </div>
+      <div class="swiper-slide fv__slide">
+        <div class="fv__slide-bg">
+          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cards-who" id="cards-who">
+    <div class="cards-who__container">
+        <div class="cards-who__card-box">
+        <h2>About</h2>
+        <p>Seishinkai Karate is a traditional dojo with over 50 years of history, offering training for all ages—from children to seniors. Unlike competition-focused styles, we emphasize physical development, health, self-defense, and mental strength.</p>
+            <div class="cards-who__card-group">
+                <div class="cards-who__card u-color-red">
+                  <div class="cards-who__card-text">
+                    <span class="cards-who__card-title">{ cards.card01.title }</span>
+                    <h3 class="cards-who__card-text">{ cards.card01.text }</h3>
+                  </div>
+                </div>
+                <div class="cards-who__card u-color-blue">
+                  <div class="cards-who__card-text">
+                    <span class="cards-who__card-title">{ cards.card02.title }</span>
+                    <h3 class="cards-who__card-text">{ cards.card02.text }</h3>
+                  </div>
+                </div>
+                <div class="cards-who__card u-color-green">
+                  <div class="cards-who__card-text">
+                    <span class="cards-who__card-title">{ cards.card03.title }</span>
+                    <h3 class="cards-who__card-text">{ cards.card03.text }</h3>
+                  </div>
+                </div>
+                <div class="cards-who__card u-color-yellow">
+                  <div class="cards-who__card-text">
+                    <span class="cards-who__card-title">{ cards.card04.title }</span>
+                    <h3 class="cards-who__card-text">{ cards.card04.text }</h3>
+                  </div>
+                </div>
+            </div>
+          <p class="">We welcome beginners, international residents in Sapporo, and anyone looking to start their karate journey.</p>
+        </div>
+    </div>
+</section>
+
+<section class="join-section">
+  <div class="join-section__container">
+    <p>Contact us to arrange for a free trial lesson.</p>
+    <a href="#contact"><Button>Free trial</Button></a>
+  </div>
+</section>
+
+
+<section class="page-links" id="page-links">
+    <div class="page-links__container">
+
+      <a href="./en/schedule/">
+        <div class="page-links__card">
+          <h2>Schedule</h2>
+          <p>We have locations Sapporo wide</p>
+          <div class="page-links__card-img">
+            <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+          </div>
+        </div>
+      </a>
+
+      <a href="./en/instructors/">
+        <div class="page-links__card">
+          <h2>Instructors</h2>
+          <p>We have locations Sapporo wide</p>
+          <div class="page-links__card-img">
+            <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+          </div>
+        </div>
+      </a>
+
+      <a href="./en/locations/">
+        <div class="page-links__card">
+          <h2>Dojo List</h2>
+          <p>We have locations Sapporo wide</p>
+          <div class="page-links__card-img">
+            <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+          </div>
+        </div>
+      </a>
+
+      <a href="./en/membership/">
+        <div class="page-links__card">
+          <h2>Schedule</h2>
+          <p>We have locations Sapporo wide</p>
+          <div class="page-links__card-img">
+            <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+          </div>
+        </div>
+      </a>
+
+      <a href="./en/about/">
+        <div class="page-links__card">
+          <h2>Schedule</h2>
+          <p>We have locations Sapporo wide</p>
+          <div class="page-links__card-img">
+            <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+          </div>
+        </div>
+      </a>
+
+      <a href="./en/News/">
+        <div class="page-links__card">
+          <h2>Schedule</h2>
+          <p>We have locations Sapporo wide</p>
+          <div class="page-links__card-img">
+            <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+          </div>
+        </div>
+      </a>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact__container">
+        <h2>Contact</h2>
+        <p>Call or Email to set up a free trial</p>
+        <form action="https://formspree.io/f/yourFormID" method="POST">
+          <input type="email" name="email" required />
+          <textarea name="message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+</BaseLayout>

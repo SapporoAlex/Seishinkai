@@ -1,0 +1,67 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+// Keyframe Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes sliderFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fv {
+  position: relative;
+  overflow: clip;
+  .swiper-container {
+    aspect-ratio: 1280/703;
+    width: 100%;
+    @include mqsp {
+      aspect-ratio: 375/686;
+    }
+  }
+  .swiper-slide {
+    position: relative;
+    
+    &:nth-child(1) {
+      z-index: 2;
+    }
+    
+    &:nth-child(n+2) {
+      z-index: 3;
+    }
+  }
+  
+  &__slide {
+    &-bg {
+      position: absolute;
+      inset: 0;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

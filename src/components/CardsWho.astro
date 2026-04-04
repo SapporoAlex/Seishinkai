@@ -1,0 +1,29 @@
+---
+import data from 'src/data/cards-who.json';
+import Button from './buttons/Button.astro';
+const cards = data.cards;
+---
+
+<section class="cards-who">
+    <div class="cards-who__container">
+        <h2>For Anyone</h2>
+        <div class="cards-who__card-box">
+            <div class="cards-who__card u-color-red">
+                <span class="cards-who__card-title">{ cards.card01.title }</span>
+                <h3 class="cards-who__card-text">{ cards.card01.text }</h3>
+            </div>
+            <div class="cards-who__card u-color-blue">
+                <span class="cards-who__card-title">{ cards.card02.title }</span>
+                <h3 class="cards-who__card-text">{ cards.card02.text }</h3>
+            </div>
+            <div class="cards-who__card u-color-green">
+                <span class="cards-who__card-title">{ cards.card03.title }</span>
+                <h3 class="cards-who__card-text">{ cards.card03.text }</h3>
+            </div>
+            <div class="cards-who__card u-color-yellow">
+                <span class="cards-who__card-title">{ cards.card04.title }</span>
+                <h3 class="cards-who__card-text">{ cards.card04.text }</h3>
+            </div>
+        </div>
+    </div>
+</section>

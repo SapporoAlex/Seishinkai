@@ -1,0 +1,16 @@
+{
+  "header": {
+    "brand": "AGREETS（アグリーツ）",
+    "nav": [
+      { "label": "トップ", "href": "/" },
+      { "label": "概要", "href": "/about/" },
+      { "label": "お問い合わせ", "href": "/contact/" },
+      { "label": "参加方法", "href": "/joining/" },
+      { "label": "店舗", "href": "/locations/" },
+      { "label": "スケジュール", "href": "/schedule/" }
+    ]
+  },
+  "footer": {
+    "text": "© 2026 AGREETS（アグリーツ）"
+  }
+}
