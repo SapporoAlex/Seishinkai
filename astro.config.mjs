@@ -20,12 +20,12 @@ export default defineConfig({
                         const name = Array.isArray(assetInfo.names) ? assetInfo.names[0] : assetInfo.names[0] || "";
                         const ext = name.slice(name.lastIndexOf("."));
                         if (assetInfo.type === "asset" && ext === ".css") {
-                            return "agreets/assets/css/style.css";
+                            return "seishinkai/assets/css/style.css";
                         }
                         if (assetInfo.type === "asset" && ext === ".js") {
-                            return "agreets/assets/js/main.js";
+                            return "seishinkai/assets/js/main.js";
                         }
-                        return "agreets/assets/[name][extname]";
+                        return "seishinkai/assets/[name][extname]";
                     },
                 },
             },
