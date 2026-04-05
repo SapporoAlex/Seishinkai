@@ -3,7 +3,7 @@ import ArrowRight from "./ArrowRight.astro";
 const { text, ariaLabel, ...rest } = Astro.props;
 ---
 
-<button class="button" aria-label={ariaLabel} {...rest}>
+<button class='button' aria-label={ariaLabel} {...rest}>
     <span class="button__label"><slot>{text ?? 'Button'}</slot></span>
     <ArrowRight />
 </button>

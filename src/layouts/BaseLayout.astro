@@ -5,7 +5,7 @@ import "../styles/main.scss";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 
-import siteData from "../data/site.json";
+import siteData from "@data/site.json";
 
 const siteTitle = siteData.title;
 const siteDescription = siteData.description;
@@ -13,7 +13,7 @@ const siteDomain = siteData.url;
 const siteOgImage = siteData.ogImage;
 const isDev = import.meta.env.DEV;
 
-let mainJsUrl = "/atmosphere/assets/js/main.js";
+let mainJsUrl = "/seishinkai/assets/js/main.js";
 if (isDev) {
   mainJsUrl = await import("../scripts/main.js?url").then((mod) => mod.default);
 }
@@ -92,7 +92,7 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
 
     <meta name="format-detection" content="telephone=no" />
 
-    <link type="image/x-icon" rel="shortcut icon" href="/atmosphere/favicon.ico" />
+    <link type="image/x-icon" rel="shortcut icon" href="/seishinkai/favicon.ico" />
     <link rel="canonical" href={path ? siteDomain + path : siteDomain} />
     <!-- hreflang alternates -->
     <link rel="alternate" href={`${siteDomain}${path ?? '/'}`} hreflang={lang === 'ja' ? 'ja' : 'en'} />
@@ -102,8 +102,8 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/atmosphere/assets/css/swiper-bundle.min.css" />
-    <script is:inline src="/atmosphere/assets/js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/seishinkai/assets/css/swiper-bundle.min.css" />
+    <script is:inline src="/seishinkai/assets/js/swiper-bundle.min.js"></script>
     <script type="module" src={mainJsUrl}></script>
   </head>
   <body>

@@ -21,6 +21,29 @@
     z-index: 2; /* keep chevron above overlay */
 }
 
+.button-inverse .arrow-right__chevron {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 2;
+}
+
+.button-inverse .arrow-right__circle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    z-index: 2; 
+}
+
 /* Hover triggered by the button parent */
 .button:hover .arrow-right__circle::before,
 .button.is-open .arrow-right__circle::before {
@@ -34,6 +57,21 @@
 
 .button:hover .arrow-right__chevron,
 .button.is-open .arrow-right__chevron {
+    border-color: #fff;
+}
+
+.button-inverse:hover .arrow-right__circle::before,
+.button-inverse.is-open .arrow-right__circle::before {
+    transform: translateX(0);
+}
+
+.button-inverse:hover .arrow-right__circle,
+.button-inverse.is-open .arrow-right__circle {
+    border-color: #fff;
+}
+
+.button-inverse:hover .arrow-right__chevron,
+.button-inverse.is-open .arrow-right__chevron {
     border-color: #fff;
 }
 

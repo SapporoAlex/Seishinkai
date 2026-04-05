@@ -1,6 +1,6 @@
 {
   "header": {
-    "brand": "AGREETS（アグリーツ）",
+    "brand": "清心会",
     "nav": [
       { "label": "トップ", "href": "/" },
       { "label": "概要", "href": "/about/" },
@@ -11,6 +11,6 @@
     ]
   },
   "footer": {
-    "text": "© 2026 AGREETS（アグリーツ）"
+    "text": "Copyright© 1995 全日本清心会空手道連盟 All Rights Reserved."
   }
 }

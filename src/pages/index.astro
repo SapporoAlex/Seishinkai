@@ -1,107 +1,194 @@
 ---
 import Button from "@components/buttons/Button.astro";
+import ArrowRight from "@components/buttons/ArrowRight.astro";
 import Picture from "@components/Picture.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import data from 'src/data/cards-who.en.json';
+import data from 'src/data/cards-who.json';
 const cards = data.cards;
 ---
 
 <BaseLayout title="Welcome" lang="ja" path="/">
-<section class="fv" id="fv">
-  <div class="swiper-container">
-    <div class="fv__text">
-      <h1 class="fv__title"></h1>
-      <p class="fv__copy"></p>
-      <a href="#contact"><Button>Free trial</Button></a>
+  <section class="fv" id="fv">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <Picture pcFile="img_training_01.jpg" spFile="img_training_01.jpg"><img src="/seishinkai/assets/images/img_training_01.jpg" alt="" /></Picture>
+              </div>
+            </div>
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <Picture pcFile="img_training_02.jpg" spFile="img_training_02.jpg"><img src="/seishinkai/assets/images/img_training_02.jpg" alt="" /></Picture>
+              </div>
+            </div>
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <Picture pcFile="img_training_03.jpg" spFile="img_training_03.jpg"><img src="/seishinkai/assets/images/img_training_03.jpg" alt="" /></Picture>
+              </div>
+            </div>
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <Picture pcFile="img_training_04.jpg" spFile="img_training_04.jpg"><img src="/seishinkai/assets/images/img_training_04.jpg" alt="" /></Picture>
+              </div>
+            </div>
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <Picture pcFile="img_training_05.jpg" spFile="img_training_05.jpg"><img src="/seishinkai/assets/images/img_training_05.jpg" alt="" /></Picture>
+              </div>
+            </div>
+          </div>
+      <div class="fv__overlay"></div>
+      <div class="fv__text">
+        <h1 class="fv__title">清心会</h1>
+        <p class="fv__copy">今の時代だから、<br class="u-sp-visible">健康空手、<br class="u-sp-visible">体育空手、<br class="u-sp-visible">空手</p>
+        <a href="#contact">
+          <button class='button-inverse'>
+            <span class="button__label">無料体験</span>
+            <ArrowRight />
+          </button>
+        </a>
+      </div>
     </div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide fv__slide">
-        <div class="fv__slide-bg">
-          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
-        </div>
-      </div>
-      <div class="swiper-slide fv__slide">
-        <div class="fv__slide-bg">
-          <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
-        </div>
-      </div>
-      <div class="swiper-slide fv__slide">
-        <div class="fv__slide-bg">
-          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
-        </div>
-      </div>
-      <div class="swiper-slide fv__slide">
-        <div class="fv__slide-bg">
-          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
-        </div>
-      </div>
-      <div class="swiper-slide fv__slide">
-        <div class="fv__slide-bg">
-          <Picture pcFile="wide.jpg" spFile="wide.jpg"><img src="/atmosphere/assets/images/wide.jpg" alt="" /></Picture>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="cards-who" id="cards-who">
-    <div class="cards-who__container">
-        <div class="cards-who__card-box">
-        <h2>For Anyone</h2>
-        <p>This is perfect for anybody</p>
-            <div class="cards-who__card-group">
-                <div class="cards-who__card u-color-red">
+  </section>
+
+  <section class="cards-who" id="cards-who">
+      <div class="cards-who__container">
+        <img class="cards-who__top-img" src="/seishinkai/assets/images/logo.svg">
+          <h2 class="cards-who__title">清心会</h2>
+          <p class="cards-who__text">清心会は、競技中心ではなく心身の成長と健康を大切にする伝統空手道場です。3歳から83歳まで幅広い年齢層が参加し、50年以上にわたり札幌を中心に活動しています。子どもには発育を促す体育として、大人やシニアには健康維持として、女性には護身術として、それぞれに合わせた指導を行っています。また、不登校生徒向けクラスや外国人の受け入れも行い、誰もが安心して学べる環境を提供しています。</p>
+          <a href="./about/"><Button>もっと見る</Button></a>
+          <div class="cards-who__card-box">
+            <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_01.png')">
+                <div class="cards-who__card-overlay"></div>
+                <div class="cards-who__card-content">
                     <span class="cards-who__card-title">{ cards.card01.title }</span>
                     <h3 class="cards-who__card-text">{ cards.card01.text }</h3>
                 </div>
-                <div class="cards-who__card u-color-blue">
+            </div>
+            <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_02.png')">
+                <div class="cards-who__card-overlay"></div>
+                <div class="cards-who__card-content">
                     <span class="cards-who__card-title">{ cards.card02.title }</span>
                     <h3 class="cards-who__card-text">{ cards.card02.text }</h3>
                 </div>
-                <div class="cards-who__card u-color-green">
+            </div>
+            <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_03.png')">
+                <div class="cards-who__card-overlay"></div>
+                <div class="cards-who__card-content">
                     <span class="cards-who__card-title">{ cards.card03.title }</span>
                     <h3 class="cards-who__card-text">{ cards.card03.text }</h3>
                 </div>
-                <div class="cards-who__card u-color-yellow">
+            </div>
+            <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_04.png')">
+                <div class="cards-who__card-overlay"></div>
+                <div class="cards-who__card-content">
                     <span class="cards-who__card-title">{ cards.card04.title }</span>
                     <h3 class="cards-who__card-text">{ cards.card04.text }</h3>
                 </div>
             </div>
-            <a href="./about/"><Button>Learn more</Button>
         </div>
+      </div>
+  </section>
+
+  <section class="layout__grid">
+
+    <div style="background-image: url('/seishinkai/assets/images/img_schedule.jpg')">
+      <div class="layout__container">
+        <div class="layout__pair">
+          <div class="layout__pair-text">
+            <h2>スケジュール</h2>
+            <p>各支部のスケジュール</p>
+            <a href="./locations/">
+              <button class='button-inverse'>
+                <span class="button__label">スケジュールを見る</span>
+                <ArrowRight />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-<section class="classes" id="classes">
-    <div class="classes__container">
-        <h2>Classes / Locations</h2>
-        <p>We have locations Sapporo wide</p>
-        <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
-        <a href="./locations/"><Button>View classes</Button></a>
+
+    <div style="background-image: url('/seishinkai/assets/images/img_instructors.jpg')">
+      <div class="layout__container">
+        <div class="layout__pair">
+          <div class="layout__pair-text">
+            <h2>インストラクター</h2>
+            <p>国内外で活躍する指導員紹介</p>
+            <a href="./instructors/">
+              <button class='button-inverse'>
+                <span class="button__label">講師一覧へ</span>
+                <ArrowRight />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-<section class="join" id="join">
-    <div class="join__container">
-        <h2>Membership</h2>
-        <p>Easy to join</p>
-        <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
-        <a href="./joining/"><Button>See pricing</Button></a>
+
+    <div style="background-image: url('/seishinkai/assets/images/img_dojo-list.jpg')">
+      <div class="layout__container">
+        <div class="layout__pair">
+          <div class="layout__pair-text">
+            <h2>道場</h2>
+            <p>全道場一覧</p>
+            <a href="./locations/">
+              <button class='button-inverse'>
+                <span class="button__label">道場を探す</span>
+                <ArrowRight />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-<section class="sns" id="sns">
-    <div class="sns__container">
-        <h2>News</h2>
-        <p>See our latest announcements, SNS updates and blogs</p>
-        <Picture pcFile="square.jpg" spFile="square.jpg"><img src="/atmosphere/assets/images/square.jpg" alt="" /></Picture>
+
+    <div style="background-image: url('/seishinkai/assets/images/img_membership.jpg')">
+      <div class="layout__container">
+        <div class="layout__pair">
+          <div class="layout__pair-text">
+            <h2>入会</h2>
+            <p>入会手続き・料金について</p>
+            <a href="./locations/">
+              <button class='button-inverse'>
+                <span class="button__label">入会案内を見る</span>
+                <ArrowRight />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-<section class="contact" id="contact">
-    <div class="contact__container">
-        <h2>Contact</h2>
-        <p>Call or Email to set up a free trial</p>
-        <form action="https://formspree.io/f/yourFormID" method="POST">
-          <input type="email" name="email" required />
-          <textarea name="message"></textarea>
-          <button type="submit">Send</button>
-        </form>
+  </section>
+
+  <section class="layout__container" id="sns">
+    <div class="sns" style="background-image: url('/seishinkai/assets/images/img_news.jpg')">
+      <div class="sns__container">
+        <div class="layout__pair">
+          <div class="layout__pair-text">
+            <h2>発表とSNS</h2>
+            <a href="./locations/">
+              <button class='button-inverse'>
+                <span class="button__label">もっと見る</span>
+                <ArrowRight />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <section class="contact" id="contact">
+      <div class="contact__container layout__container">
+          <h2>Contact</h2>
+          <p>Call or Email to set up a free trial</p>
+          <form action="https://formspree.io/f/yourFormID" method="POST">
+            <input type="email" name="email" required />
+            <textarea name="message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+      </div>
+  </section>
+
 </BaseLayout>

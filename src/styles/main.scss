@@ -6,7 +6,7 @@
 
 
 
-// @use "./utilities/_layout.scss";
+@use "./utilities/_layout.scss";
 @use "./utilities/_utility.scss";
 // @use "./utilities/_opacity.scss";
 // @use "./utilities/_shadows.scss";
@@ -23,3 +23,4 @@
 @use "./components/_header.scss";
 @use "./components/_fv.scss";
 @use "./components/_cardswho.scss";
+@use "./components/_classes.scss";

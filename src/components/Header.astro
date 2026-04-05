@@ -2,7 +2,7 @@
 // Props:
 // - brand: string or html for the logo/brand link
 // - nav: array of { label, href } items for the main nav
-const { brand = 'LOGO', nav = [
+const { brand = '清心会', nav = [
   { label: 'Top', href: '/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
@@ -14,8 +14,10 @@ const { brand = 'LOGO', nav = [
 
 <header class="header">
   <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">{brand}</a>
+
+    <div class="header__left">
+      <img class="header__logo" src="seishinkai/assets/images/logo.svg" alt="清心会空手のロゴ">
+      <p class="header__brand">{brand}</p>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">

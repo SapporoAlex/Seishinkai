@@ -33,23 +33,53 @@
 
 .fv {
   position: relative;
-  overflow: clip;
+  overflow: hidden;
   .swiper-container {
-    aspect-ratio: 1280/703;
+    position: relative;
     width: 100%;
+    height: 800px;
     @include mqsp {
       aspect-ratio: 375/686;
     }
   }
+  .swiper-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
   .swiper-slide {
     position: relative;
-    
-    &:nth-child(1) {
-      z-index: 2;
+  }
+  
+  &__text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    color: white;
+    a {
+      pointer-events: auto;
     }
-    
-    &:nth-child(n+2) {
-      z-index: 3;
+  }
+  &__title {
+    font-size: calc(120 / 1250 *100vw) !important;
+    @include mqsp {
+      font-size: 50px !important;
+    }
+  }
+  &__copy {
+    font-size: calc(40 / 1250 *100vw);
+    @include mqsp {
+      font-size: 20px;
     }
   }
   
@@ -57,11 +87,24 @@
     &-bg {
       position: absolute;
       inset: 0;
+      overflow: hidden;
       img {
         object-fit: cover;
+        object-position: center;
         width: 100%;
         height: 100%;
       }
     }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 0, 51, 0.705);
+    z-index: 2;
   }
 }

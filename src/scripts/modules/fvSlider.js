@@ -16,10 +16,10 @@ export function initFvSlider() {
     loop: true,
     initialSlide: 0,
     autoplay: {
-      delay: 100,
+      delay: 1000,
       disableOnInteraction: false,
     },
-    speed: 5000,
+    speed: 1000,
     effect: 'fade',
     fadeEffect: {
       crossFade: true,
@@ -29,11 +29,8 @@ export function initFvSlider() {
     navigation: false,
   });
 
-  fvSwiper.autoplay.stop();
 
-  setTimeout(() => {
-    fvSwiper.autoplay.start();
-  }, 5000);
+  fvSwiper.autoplay.start();
 
   return fvSwiper;
 }

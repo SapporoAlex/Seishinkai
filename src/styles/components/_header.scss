@@ -67,10 +67,11 @@
 // Header styles
 .header {
 	width: 100%;
+	top: 0;
+	position: sticky;
 	background: #fff;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-	position: relative;
-	z-index: 10;
+	z-index: 1000;
 }
 
 .header__inner {
@@ -83,12 +84,19 @@
 	height: 64px;
 }
 
-.header__logo a {
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: #222;
-	text-decoration: none;
-	letter-spacing: 0.05em;
+.header__left {
+	display: flex;
+	gap: 1rem;
+	flex-direction: row;
+}
+
+.header__logo {
+	width: 50px;
+}
+
+.header__brand {
+	font-size: 30px;
+	font-weight: 600;
 }
 
 .header__nav-list {
@@ -98,7 +106,7 @@
 }
 
 .header__nav-list li a {
-	color: #222;
+	color: #000000;
 	text-decoration: none;
 	font-size: 1rem;
 	transition: color 0.2s;
@@ -144,5 +152,8 @@
 	}
 	.header__inner {
 		height: 56px;
+	}
+	.header__logo {
+		width: 45px;
 	}
 }
