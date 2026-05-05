@@ -1,22 +1,13 @@
 ---
 import "../styles/main.scss";
-// import GtmHeader from "@components/gtm/Header.astro";
-// import GtmBody from "@components/gtm/Body.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-
 import siteData from "@data/site.json";
 
 const siteTitle = siteData.title;
 const siteDescription = siteData.description;
 const siteDomain = siteData.url;
 const siteOgImage = siteData.ogImage;
-const isDev = import.meta.env.DEV;
-
-let mainJsUrl = "/seishinkai/assets/js/main.js";
-if (isDev) {
-  mainJsUrl = await import("../scripts/main.js?url").then((mod) => mod.default);
-}
 
 interface ListItem {
   path: string;
@@ -104,7 +95,7 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
 
     <link rel="stylesheet" href="/seishinkai/assets/css/swiper-bundle.min.css" />
     <script is:inline src="/seishinkai/assets/js/swiper-bundle.min.js"></script>
-    <script type="module" src={mainJsUrl}></script>
+<script src="../scripts/main.js"></script>
   </head>
   <body>
     <Header {...headerProps} lang={lang} />
@@ -116,4 +107,5 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
     </button>
     <Footer {...footerProps} />
   </body>
+
 </html>
