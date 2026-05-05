@@ -117,7 +117,15 @@ export function initBackToTop() {
     return;
   }
 
+  const updateVisibility = () => {
+    const shouldShow = window.scrollY > window.innerHeight;
+    button.classList.toggle('back-to-top--visible', shouldShow);
+  };
+
   button.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  document.addEventListener('scroll', updateVisibility, { passive: true });
+  updateVisibility();
 }
