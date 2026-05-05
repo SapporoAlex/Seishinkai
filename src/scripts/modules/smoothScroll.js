@@ -29,6 +29,14 @@ export function smoothScrollTo(target, headerEl) {
     block: "start",
   });
 
+  window.setTimeout(() => {
+    if (originalScrollMargin) {
+      el.style.scrollMarginBlockStart = originalScrollMargin;
+    } else {
+      el.style.removeProperty('scroll-margin-block-start');
+    }
+  }, 500);
+
   el.focus({ preventScroll: true });
 
   if (document.activeElement !== el) {
@@ -47,4 +55,69 @@ export function smoothScrollTo(target, headerEl) {
   if (hash !== window.location.hash) {
     history.pushState({}, "", hash);
   }
+}
+
+export function initSmoothScroll() {
+  const header = document.querySelector('.header');
+  if (!header) {
+    return;
+  }
+
+  const handleAnchorClick = (event) => {
+    const anchor = event.target.closest('a[href]');
+    if (!anchor) {
+      return;
+    }
+
+    const href = anchor.getAttribute('href');
+    if (!href || !href.includes('#')) {
+      return;
+    }
+
+    const url = new URL(href, window.location.href);
+    if (url.origin !== window.location.origin || url.pathname !== window.location.pathname) {
+      return;
+    }
+
+    const hash = url.hash;
+    if (!hash || hash === '#') {
+      return;
+    }
+
+    const target = document.getElementById(hash.slice(1));
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+    smoothScrollTo(target, header);
+
+    const drawer = document.getElementById('js-drawer');
+    const backdrop = document.getElementById('js-drawer-backdrop');
+    if (drawer?.classList.contains('header__drawer--open')) {
+      drawer.classList.remove('header__drawer--open');
+      drawer.setAttribute('aria-hidden', 'true');
+      backdrop?.classList.remove('header__drawer-backdrop--open');
+    }
+  };
+
+  document.addEventListener('click', handleAnchorClick);
+
+  if (window.location.hash) {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target) {
+      smoothScrollTo(target, header);
+    }
+  }
+}
+
+export function initBackToTop() {
+  const button = document.getElementById('js-back-to-top');
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }

@@ -31,14 +31,14 @@
         text-align: center;
     }
     &__card-box {
-        padding: 50px 0;
+        padding: 100px 0 0 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
         width: 100%;
         @include mqsp {
             flex-direction: column;
-            padding: 50px 0;
+            padding: 80px 0 0 0;
         }
     }
     &__card {
@@ -50,28 +50,36 @@
         background-position: center;
         background-repeat: no-repeat;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         overflow: hidden;
+
         @include mqsp {
-        height: 300px;
+            height: 300px;
         }
+
         &-overlay {
             position: absolute;
-            top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 2, 97, 0.507);
+            height: 100px;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 40, 120, 0.15) 0%,
+                rgba(0, 40, 120, 0.85) 100%
+            );
             z-index: 1;
+            transition: height 0.45s ease;
         }
 
         &-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            color: rgb(255, 255, 255);
+            color: white;
             padding: 20px;
+            transition: transform 0.45s ease;
         }
 
         &-title {
@@ -81,10 +89,7 @@
             margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
-
-            @include mqsp {
-                font-size: 18px;
-            }
+            transition: transform 0.45s ease;
         }
 
         &-text {
@@ -92,14 +97,40 @@
             font-weight: 700;
             margin: 0;
             line-height: 1.3;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.35s ease, transform 0.45s ease;
+        }
 
-            @include mqsp {
-                font-size: 16px;
+        // Desktop hover effect
+        &:hover {
+            .cards-who__card-overlay {
+                height: 100%;
+            }
+
+            .cards-who__card-title {
+                transform: translateY(-10px);
+                    @include mqsp {
+                        transform: translateY(0px);
+                    }
+            }
+
+            .cards-who__card-text {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
+        // Mobile: always visible
         @include mqsp {
-            height: 250px;
+            .cards-who__card-overlay {
+                height: 100%;
+            }
+
+            .cards-who__card-text {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     }
 

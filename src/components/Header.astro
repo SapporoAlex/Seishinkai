@@ -9,7 +9,7 @@ const { brand = '清心会', nav = [
   { label: 'Joining', href: '/joining/' },
   { label: 'Locations', href: '/locations/' },
   { label: 'Schedule', href: '/schedule/' },
-] } = Astro.props;
+], lang = 'ja' } = Astro.props;
 ---
 
 <header class="header">
@@ -25,6 +25,11 @@ const { brand = '清心会', nav = [
           <li><a href={item.href}>{item.label}</a></li>
         ))}
       </ul>
+      <div class="header__lang-desktop" role="group" aria-label="Language switch">
+        <a class={"header__lang-link" + (lang === 'ja' ? ' header__lang-link--active' : '')} href="/">Ja</a>
+        <span class="header__lang-separator">|</span>
+        <a class={"header__lang-link" + (lang === 'en' ? ' header__lang-link--active' : '')} href="/en/">En</a>
+      </div>
     </nav>
     <button class="header__hamburger" aria-label="Open menu" id="js-hamburger">
       <span></span><span></span><span></span>
@@ -36,6 +41,10 @@ const { brand = '清心会', nav = [
           <li><a href={item.href}>{item.label}</a></li>
         ))}
       </ul>
+      <div class="header__drawer-lang" role="group" aria-label="Language switch">
+        <a class={"header__lang-link" + (lang === 'ja' ? ' header__lang-link--active' : '')} href="/">Ja</a>
+        <a class={"header__lang-link" + (lang === 'en' ? ' header__lang-link--active' : '')} href="/en/">En</a>
+      </div>
     </div>
     <div class="header__drawer-backdrop" id="js-drawer-backdrop"></div>
   </div>

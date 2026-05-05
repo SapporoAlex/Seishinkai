@@ -107,10 +107,13 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
     <script type="module" src={mainJsUrl}></script>
   </head>
   <body>
-    <Header {...headerProps} />
+    <Header {...headerProps} lang={lang} />
     <main>
       <slot />
     </main>
+    <button id="js-back-to-top" class="back-to-top" aria-label="Back to top" type="button">
+      <span class="back-to-top__chevron" aria-hidden="true"></span>
+    </button>
     <Footer {...footerProps} />
   </body>
 </html>

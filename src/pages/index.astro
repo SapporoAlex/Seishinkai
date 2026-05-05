@@ -40,7 +40,7 @@ const cards = data.cards;
       <div class="fv__overlay"></div>
       <div class="fv__text">
         <h1 class="fv__title">清心会</h1>
-        <p class="fv__copy">今の時代だから、<br class="u-sp-visible">健康空手、<br class="u-sp-visible">体育空手、<br class="u-sp-visible">空手</p>
+        <p class="fv__copy">今の時代だから、<br class="u-sp-visible">健康空手、<br class="u-sp-visible">体育空手、<br class="u-sp-visible">護身空手</p>
         <a href="#contact">
           <button class='button-inverse'>
             <span class="button__label">無料体験</span>
@@ -56,34 +56,34 @@ const cards = data.cards;
         <img class="cards-who__top-img" src="/seishinkai/assets/images/logo.svg">
           <h2 class="cards-who__title">清心会</h2>
           <p class="cards-who__text">清心会は、競技中心ではなく心身の成長と健康を大切にする伝統空手道場です。3歳から83歳まで幅広い年齢層が参加し、50年以上にわたり札幌を中心に活動しています。子どもには発育を促す体育として、大人やシニアには健康維持として、女性には護身術として、それぞれに合わせた指導を行っています。また、不登校生徒向けクラスや外国人の受け入れも行い、誰もが安心して学べる環境を提供しています。</p>
-          <a href="./about/"><Button>もっと見る</Button></a>
+          <a href="https://seishinkan.ne.jp/profile.html"><Button>もっと見る</Button></a>
           <div class="cards-who__card-box">
             <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_01.png')">
                 <div class="cards-who__card-overlay"></div>
                 <div class="cards-who__card-content">
-                    <span class="cards-who__card-title">{ cards.card01.title }</span>
-                    <h3 class="cards-who__card-text">{ cards.card01.text }</h3>
+                    <h2 class="cards-who__card-title">{ cards.card01.title }</h2>
+                    <p class="cards-who__card-text">{ cards.card01.text }</p>
                 </div>
             </div>
             <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_02.png')">
                 <div class="cards-who__card-overlay"></div>
                 <div class="cards-who__card-content">
-                    <span class="cards-who__card-title">{ cards.card02.title }</span>
-                    <h3 class="cards-who__card-text">{ cards.card02.text }</h3>
+                    <h2 class="cards-who__card-title">{ cards.card02.title }</h2>
+                    <p class="cards-who__card-text">{ cards.card02.text }</p>
                 </div>
             </div>
             <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_03.png')">
                 <div class="cards-who__card-overlay"></div>
                 <div class="cards-who__card-content">
-                    <span class="cards-who__card-title">{ cards.card03.title }</span>
-                    <h3 class="cards-who__card-text">{ cards.card03.text }</h3>
+                    <h2 class="cards-who__card-title">{ cards.card03.title }</h2>
+                    <p class="cards-who__card-text">{ cards.card03.text }</p>
                 </div>
             </div>
             <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_04.png')">
                 <div class="cards-who__card-overlay"></div>
                 <div class="cards-who__card-content">
-                    <span class="cards-who__card-title">{ cards.card04.title }</span>
-                    <h3 class="cards-who__card-text">{ cards.card04.text }</h3>
+                    <h2 class="cards-who__card-title">{ cards.card04.title }</h2>
+                    <p class="cards-who__card-text">{ cards.card04.text }</p>
                 </div>
             </div>
         </div>
@@ -93,28 +93,28 @@ const cards = data.cards;
   <section class="top-cards__section">
     <div class="layout__container">
       <div class="top-cards__grid">
-        <a class="top-cards__link" href="schedule/">
+        <a class="top-cards__link" href="https://seishinkan.ne.jp/keiko.html">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_schedule.png">
             <h2>スケジュール</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="locations/">
+        <a class="top-cards__link" href="https://seishinkan.ne.jp/schedule.html">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_dojo.png">
             <h2>道場</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="instructors/">
+        <a class="top-cards__link" href="https://seishinkan.ne.jp/manifesto.html">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_instructors.png">
             <h2>インストラクター</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="joining/">
+        <a class="top-cards__link" href="https://seishinkan.ne.jp/schedule2.html">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_join.png">
             <h2>入会</h2>
@@ -124,16 +124,68 @@ const cards = data.cards;
     </div>
   </section>
 
-  <section class="contact" id="contact">
-      <div class="contact__container layout__container">
-          <h2>Contact</h2>
-          <p>Call or Email to set up a free trial</p>
-          <form action="https://formspree.io/f/yourFormID" method="POST">
-            <input type="email" name="email" required />
-            <textarea name="message"></textarea>
-            <button type="submit">Send</button>
-          </form>
+  <section class="top-contact" id="contact">
+
+    <div class="layout__container">
+      <div class="top-contact__contact-header">
+        <span>CONTACT</span>
+        <h2>体験申込・お問い合わせ</h2>
+        <p>清心会空手体験申込はこちらからご連絡ください</p>
       </div>
+
+      <div class="top-contact__contact-grid">
+
+        <!-- Phone -->
+        <div class="top-contact__contact-card highlight">
+          <div class="top-contact__icon">☎</div>
+          <h3>お電話</h3>
+          <p class="top-contact__big">011-300-0048</p>
+          <small>月・木 13:00〜16:00 / 火・木・金 13:00〜15:00</small>
+        </div>
+
+        <!-- Email -->
+        <div class="top-contact__contact-card">
+          <div class="top-contact__icon">✉</div>
+          <h3>メール</h3>
+          <p class="top-contact__email">Karate@seishinkan.ne.jp</p>
+          <small>24時間受付</small>
+        </div>
+
+        <!-- Fax -->
+        <div class="top-contact__contact-card">
+          <div class="top-contact__icon">📠</div>
+          <h3>FAX</h3>
+          <p>011-300-0094</p>
+        </div>
+
+        <!-- QR -->
+        <div class="top-contact__contact-card top-contact__qr-card">
+          <img src="/seishinkai/assets/images/img_qr_volunteer.jpg" alt="お問い合わせQRコード">
+          <p>スマホから簡単お問い合わせ</p>
+        </div>
+
+      </div>
+
+      <div class="top-contact__contact-info">
+        <div>
+          <h4>受付時間</h4>
+          <p>月〜金 13:00〜15:00</p>
+        </div>
+
+        <div>
+          <h4>所在地</h4>
+          <p>札幌市白石区栄通2丁目1-27（東北通沿）</p>
+        </div>
+      </div>
+
+      <div class="top-contact__notice-box">
+        <strong>ご注意</strong>
+        <p>
+          事務局は交代制のため、時間内でも電話対応できない場合があります。
+          その際はメールにてお問い合わせください。
+        </p>
+      </div>
+    </div>
   </section>
 
 </BaseLayout>

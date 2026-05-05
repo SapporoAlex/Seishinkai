@@ -26,10 +26,12 @@
   --lead: clamp(1.125rem, calc(1rem + 0.6vw), 1.375rem);
   --side-spacing: 40px;
   --max-width: 1020px;
-  --color-yellow-chalk: #f5ff9e;
-  --color-blue-chalk: #9efffd;
-  --color-red-chalk: #ff9e9e;
-  --color-green-chalk: #a2ff92;
+  --color-seishin-red: #ee0000;
+  --color-seishin-blue: #0011ffa1;
+  --color-bg-blue: #01042e;
+  --color-overlay-blue: rgba(1, 0, 51, 0.705);
+  --color-inverse-text: rgb(255, 255, 255);
+  --color-inverse-sub-text: rgba(255, 255, 255, 0.808);
 }
 
 body {

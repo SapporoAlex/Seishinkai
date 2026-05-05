@@ -4,27 +4,30 @@
 .top-cards {
 
     &__section {
-        background: linear-gradient(to bottom, #0028da, #040076);
-        padding: 0 var(--side-spacing);
+        // background: linear-gradient(to bottom, #0028da, #040076);
+        padding: 40px var(--side-spacing);
         @include mqsp {
-            padding: 0 var(--side-spacing);
+            padding: 40px var(--side-spacing);
         }
     }
     &__grid {
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-        @include mqsp {
-            width: 100%;
-            flex-direction: column;
-        }
+        // display: flex;
+        // flex-direction: row;
+        // gap: 40px;
+        // @include mqsp {
+        //     width: 100%;
+        //     flex-direction: column;
+        // }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
     }
     &__card {
-        padding: 20px;
+        padding: 40px;
         border-radius: 20px;
         border: white 3px solid;
         color: white;
-        background: rgb(238, 0, 0);
+        background: #ee0000;
         display: flex;
         flex: 1 1 0;
         min-width: 0;
@@ -34,7 +37,7 @@
         text-align: center;
         font-weight: 700;
         gap: 1rem;
-        min-height: 220px;
+        min-height: 270px;
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
         transition: transform 220ms ease, box-shadow 220ms ease;
         will-change: transform, box-shadow;
@@ -53,10 +56,10 @@
         }
     }
     &__image {
-        width: 250px;
+        width: 100px;
         height: auto;
         @include mqsp {
-            width: 150px;
+            width: 100px;
         }
     }
 
