@@ -12,7 +12,10 @@
         text-align: start;
     }
     &__introduction {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
+        @include mqsp {
+            margin-bottom: 40px;
+        }
     }
     &__card-group {
         display: flex;
@@ -23,6 +26,8 @@
         column-gap:40px;
         @include mqsp {
             flex-direction: column;
+            margin-bottom: 40px;
+            gap: 20px;
         }
     }
     &__card {
@@ -30,6 +35,7 @@
         border: 1px solid #000;
         border-radius: 10px;
         padding: 20px 30px;
+        background: #fff;
         &-title {
 
             @include mqsp {
@@ -42,10 +48,23 @@
 
             }
         }
-        &-right {
+        &-left {
+            width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
+            @include mqsp {
+                gap: 20px;
+            }
+        }
+        &-right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @include mqsp {
+                gap: 20px;
+            }
         }
     }
 
@@ -93,7 +112,6 @@
     border-radius: 8px;
     padding: 20px;
     transition: all 0.3s ease;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 12px;

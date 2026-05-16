@@ -1,5 +1,6 @@
 import { initHamburger } from './modules/hamburger.js';
 import { initFvSlider } from './modules/fvSlider.js';
+import { initAccordion } from './modules/accordion.js';
 import { initSmoothScroll, initBackToTop } from './modules/smoothScroll.js';
 
 
@@ -8,5 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initBackToTop();
   initFvSlider();
+  initAccordion();
 
 });
