@@ -1,0 +1,137 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+.instructors {
+    &__container {
+        padding: 40px var(--side-spacing);
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1050px;
+        text-align: start;
+    }
+
+    &__category {
+        margin-bottom: 60px;
+
+        &-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #000;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 24px;
+
+        @include mqsp {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__belt-levels {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__subsection-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+// Profile Card Component
+.profile-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
+
+    &__image {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        background: #f5f5f5;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+
+    &__content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex: 1;
+    }
+
+    &__name {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin: 0;
+        color: #000;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    &__info-item {
+        margin: 0;
+        display: flex;
+        gap: 8px;
+    }
+
+    &__label {
+        font-weight: bold;
+        color: #333;
+        min-width: 80px;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+        padding-top: 12px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    &__tag {
+        background: #f0f0f0;
+        color: #333;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border: 1px solid #ddd;
+    }
+}

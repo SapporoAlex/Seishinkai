@@ -5,28 +5,61 @@
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #000;
-    border-radius: 15px;
+
+    
     th,
     td {
         text-align: left;
-        padding: 5px;
-        /* black line between rows */
-        border-bottom: 1px solid #000;
+        padding: 10px 30px;
+        /* black line between cells */
+        border: 1px solid #000;
     }
+    th {
+        background: #f5f5f5;
+        border-right: 1px solid #ddd;
+}
 
-    thead {
+    @include mqsp {
+        display: block;
+        border: 1px solid #000;
+
+        tbody, tr {
+            display: block;
+            width: 100%;
+        }
 
         tr {
-            th {
-                background-color: var(--color-blue-chalk);
+            margin-bottom: 20px;
+            // border: 1px solid #000;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:first-child th {
+                border-top: none;
             }
         }
-    }
 
-    tbody {
+        th, td {
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 10px 20px;
+            overflow: hidden;
+        }
 
-        tr:last-child td {
-            border-bottom: none;
+        th {
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #000;
+        }
+
+
+        td {
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
 }

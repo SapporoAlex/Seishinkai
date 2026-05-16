@@ -1,0 +1,101 @@
+[
+  {
+    "id": "instructor-1-1",
+    "category": "1",
+    "image": "/images/instructors/instructor-1.jpg",
+    "name": "田中太郎",
+    "date": "1980年4月15日",
+    "prefecture": "東京都",
+    "position": "師範",
+    "profession": "会社員",
+    "tags": ["初心者向け", "キッズ", "柔道"]
+  },
+  {
+    "id": "instructor-1-2",
+    "category": "1",
+    "image": "/images/instructors/instructor-2.jpg",
+    "name": "佐藤花子",
+    "date": "1992年7月22日",
+    "prefecture": "神奈川県",
+    "position": "教士",
+    "profession": "フィットネストレーナー",
+    "tags": ["上級者向け", "女性向け", "空手"]
+  },
+  {
+    "id": "instructor-1-3",
+    "category": "1",
+    "image": "/images/instructors/instructor-3.jpg",
+    "name": "鈴木次郎",
+    "date": "1975年11月8日",
+    "prefecture": "埼玉県",
+    "position": "段位者",
+    "profession": "学校教員",
+    "tags": ["中級者向け", "形", "武道"]
+  },
+  {
+    "id": "instructor-2-1",
+    "category": "2",
+    "image": "/images/instructors/instructor-4.jpg",
+    "name": "山田美優",
+    "date": "1988年3月5日",
+    "prefecture": "大阪府",
+    "position": "教士",
+    "profession": "スポーツインストラクター",
+    "tags": ["キッズ", "体力向上", "初心者向け"]
+  },
+  {
+    "id": "instructor-2-2",
+    "category": "2",
+    "image": "/images/instructors/instructor-5.jpg",
+    "name": "伊藤健一",
+    "date": "1983年9月12日",
+    "prefecture": "京都府",
+    "position": "段位者",
+    "profession": "建築士",
+    "tags": ["上級者向け", "競技向け", "試合対策"]
+  },
+  {
+    "id": "instructor-3-1",
+    "category": "3",
+    "image": "/images/instructors/instructor-6.jpg",
+    "name": "中村彩子",
+    "date": "1995年2月18日",
+    "prefecture": "福岡県",
+    "position": "指導員",
+    "profession": "学生",
+    "tags": ["初心者向け", "女性向け", "楽しさ重視"]
+  },
+  {
+    "id": "instructor-3-2",
+    "category": "3",
+    "image": "/images/instructors/instructor-7.jpg",
+    "name": "渡辺昭夫",
+    "date": "1970年6月30日",
+    "prefecture": "北海道",
+    "position": "師範",
+    "profession": "退職者",
+    "tags": ["経験者向け", "本格的", "伝統武道"]
+  },
+  {
+    "id": "instructor-4-1",
+    "category": "4",
+    "image": "/images/instructors/instructor-8.jpg",
+    "name": "吉田麗華",
+    "date": "1990年10月25日",
+    "prefecture": "愛知県",
+    "position": "教士",
+    "profession": "ヨガインストラクター",
+    "tags": ["体の柔軟性", "健康", "瞑想"]
+  },
+  {
+    "id": "instructor-4-2",
+    "category": "4",
+    "image": "/images/instructors/instructor-9.jpg",
+    "name": "青木英治",
+    "date": "1985年1月7日",
+    "prefecture": "兵庫県",
+    "position": "段位者",
+    "profession": "栄養士",
+    "tags": ["健康管理", "食事指導", "体調管理"]
+  }
+]

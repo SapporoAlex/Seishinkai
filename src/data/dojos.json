@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sumiyoshi",
+    "category": "direct",
+    "name": "札幌西地区本部・住吉塾",
+    "phone": "090-7517-3285",
+    "sensei": "住吉一徳",
+    "title": "師範 住吉一徳",
+    "subtitle": "(清心会札幌西本部長)",
+    "locations": [
+      "新発寒",
+      "西町",
+      "手稲",
+      "宮の沢",
+      "前田",
+      "新川",
+      "新琴似",
+      "星置",
+      "発寒",
+      "西野",
+      "麻生",
+      "屯田",
+      "八軒"
+    ]
+  },
+  {
+    "id": "inoue",
+    "category": "direct",
+    "name": "清心館井上道場",
+    "phone": "090-7646-9552",
+    "sensei": "井上龍一郎",
+    "title": "師範 井上龍一郎",
+    "subtitle": "",
+    "locations": [
+      "井上道場"
+    ]
+  },
+  {
+    "id": "takahashi",
+    "category": "participating",
+    "name": "清心館髙橋道場",
+    "phone": "090-3114-7066",
+    "sensei": "髙橋 剛",
+    "title": "師範 髙橋 剛",
+    "subtitle": "",
+    "locations": [
+      "安平町",
+      "苫小牧市"
+    ]
+  },
+  {
+    "id": "hokushinkai",
+    "category": "participating",
+    "name": "北新会",
+    "phone": "090-9086-7943",
+    "sensei": "高野 均",
+    "title": "師範　高野 均",
+    "subtitle": "",
+    "locations": [
+      "新冠町"
+    ]
+  },
+  {
+    "id": "aozorakai",
+    "category": "affiliated",
+    "name": "青空会",
+    "phone": "090-9239-0144",
+    "sensei": "青木和也",
+    "title": "師範 青木和也",
+    "subtitle": "",
+    "locations": [
+      "月寒",
+      "真駒内",
+      "澄川",
+      "福井",
+      "平和",
+      "小樽"
+    ]
+  },
+  {
+    "id": "muryujuku",
+    "category": "affiliated",
+    "name": "無流塾",
+    "phone": "電話・Fax：043-304-5991",
+    "sensei": "鈴木雄三",
+    "title": "師範 鈴木雄三",
+    "subtitle": "",
+    "locations": [
+      "千葉市"
+    ]
+  }
+]

@@ -4,10 +4,10 @@
     "nav": [
       { "label": "トップ", "href": "/" },
       { "label": "概要", "href": "/about/" },
-      { "label": "お問い合わせ", "href": "/contact/" },
-      { "label": "参加方法", "href": "/joining/" },
-      { "label": "店舗", "href": "/locations/" },
-      { "label": "スケジュール", "href": "/schedule/" }
+      { "label": "スケジュール", "href": "/schedule/" },
+      { "label": "入会", "href": "/membership/" },
+      { "label": "インストラクター", "href": "/instructors/" },
+      { "label": "店舗一覧", "href": "/dojo/" }
     ]
   },
   "footer": {

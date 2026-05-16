@@ -1,0 +1,26 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  sensei: string;
+  category: string;
+}
+
+const { id, name, sensei, category } = Astro.props;
+
+// Category labels for display
+const categoryLabels: Record<string, string> = {
+  direct: "清心会直系・公認道場/自主管理道場",
+  participating: "清心流参加道場・加盟道場",
+  affiliated: "準加盟道場・提携協力道場",
+};
+---
+
+<div class="dojo-card" data-dojo-id={id}>
+  <div class="dojo-card__category">{categoryLabels[category]}</div>
+  <h3 class="dojo-card__name">{name}</h3>
+  <p class="dojo-card__sensei">{sensei}</p>
+  <button class="dojo-card__button" data-modal-trigger={id}>
+    詳細を見る
+  </button>
+</div>

@@ -4,10 +4,10 @@
     "nav": [
       { "label": "Home", "href": "/" },
       { "label": "About", "href": "/en/about/" },
-      { "label": "Contact", "href": "/en/contact/" },
-      { "label": "Joining", "href": "/en/joining/" },
-      { "label": "Locations", "href": "/en/locations/" },
-      { "label": "Schedule", "href": "/en/schedule/" }
+      { "label": "Schedule", "href": "/en/schedule/" },
+      { "label": "Membership", "href": "/en/membership/" },
+      { "label": "Instructors", "href": "/en/instructors/" },
+      { "label": "Dojo List", "href": "/en/dojo/" }
     ]
   },
   "footer": {

@@ -1,0 +1,61 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  phone: string;
+  title: string;
+  subtitle: string;
+  locations: string[];
+  category: string;
+}
+
+const { id, name, phone, title, subtitle, locations, category } = Astro.props;
+
+// Category labels and notes
+const categoryNotes: Record<string, string> = {
+  direct: "※練習日は下記をクリックして下さい",
+  participating: "※練習日時は下記へご確認ください",
+  affiliated: "※練習日時は下記へご確認下さい。運営活動関係等は直接道場へ。",
+};
+---
+
+<div class="dojo-modal" id={`modal-${id}`} data-modal={id}>
+  <div class="dojo-modal__overlay" data-modal-close={id}></div>
+  <div class="dojo-modal__content">
+    <button class="dojo-modal__close" data-modal-close={id} aria-label="閉じる">
+      ×
+    </button>
+
+    <h2 class="dojo-modal__name">{name}</h2>
+
+    <div class="dojo-modal__info">
+      <p class="dojo-modal__phone">
+        <strong>電話:</strong>
+        {phone}
+      </p>
+      <p class="dojo-modal__sensei">
+        {title}
+        {subtitle && <span class="dojo-modal__subtitle">{subtitle}</span>}
+      </p>
+    </div>
+
+    {
+      locations.length > 0 && (
+        <div class="dojo-modal__locations">
+          <h3 class="dojo-modal__locations-title">活動地域</h3>
+          <ul class="dojo-modal__locations-list">
+            {locations.map((location) => (
+              <li>{location}</li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+
+    {
+      categoryNotes[category] && (
+        <p class="dojo-modal__note">{categoryNotes[category]}</p>
+      )
+    }
+  </div>
+</div>

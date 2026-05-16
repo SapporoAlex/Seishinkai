@@ -1,0 +1,37 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+.about {
+    &__container {
+        padding: 40px var(--side-spacing);
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1050px;
+        text-align: start;
+    }
+    &__introduction {
+        margin-bottom: 40px;
+    }
+    &__timeline {
+        margin-bottom: 40px;
+        width: 100%;
+        &-content ul{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-left: 5rem;
+            gap: 20px;
+        }
+        &-date {
+            position: absolute;
+            margin-left: -5rem;
+            font-weight: 700;
+        }
+    }
+    &__info {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+}

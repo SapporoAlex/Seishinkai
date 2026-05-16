@@ -1,0 +1,88 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+.dojo-list {
+    &__container {
+        padding: 40px var(--side-spacing);
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1050px;
+        text-align: start;
+    }
+    &__introduction {
+        margin-bottom: 60px;
+        @include mqsp {
+            margin-bottom: 40px;
+        }
+    }
+    &__card-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 40px;
+        margin-bottom: 60px;
+        @include mqsp {
+            flex-direction: column;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+    }
+    &__card {
+        width: 100%;
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 20px 30px;
+        &-title {
+
+            @include mqsp {
+
+            }
+        }
+        &-text {
+
+            @include mqsp {
+
+            }
+        }
+        &-left {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @include mqsp {
+                gap: 20px;
+            }
+        }
+        &-right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @include mqsp {
+                gap: 20px;
+            }
+        }
+    }
+    &__map {
+        margin-bottom: 80px;
+        // &-title {
+        //     padding-bottom: 1rem;
+        // }
+        &-frame {
+            padding-top: 1rem;
+            iframe {
+                height: 600px;
+                @include mqsp {
+                    height: 300px;
+                }
+            }
+        }
+        @include mqsp {
+            margin-bottom: 40px;
+        }
+    }
+
+}

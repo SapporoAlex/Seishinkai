@@ -1,7 +1,6 @@
 ---
 import Button from "@components/buttons/Button.astro";
 import ArrowRight from "@components/buttons/ArrowRight.astro";
-import Picture from "@components/Picture.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import data from 'src/data/cards-who.json';
 const cards = data.cards;
@@ -56,7 +55,7 @@ const cards = data.cards;
         <img class="cards-who__top-img" src="/seishinkai/assets/images/logo.svg" alt="">
           <h2 class="cards-who__title">清心会</h2>
           <p class="cards-who__text">清心会は、競技中心ではなく心身の成長と健康を大切にする伝統空手道場です。3歳から83歳まで幅広い年齢層が参加し、50年以上にわたり札幌を中心に活動しています。子どもには発育を促す体育として、大人やシニアには健康維持として、女性には護身術として、それぞれに合わせた指導を行っています。また、不登校生徒向けクラスや外国人の受け入れも行い、誰もが安心して学べる環境を提供しています。</p>
-          <a href="https://seishinkan.ne.jp/profile.html"><Button>もっと見る</Button></a>
+          <a href="/about/"><Button>もっと見る</Button></a>
           <div class="cards-who__card-box">
             <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_01.png')">
                 <div class="cards-who__card-overlay"></div>
@@ -93,28 +92,28 @@ const cards = data.cards;
   <section class="top-cards__section">
     <div class="layout__container">
       <div class="top-cards__grid">
-        <a class="top-cards__link" href="https://seishinkan.ne.jp/keiko.html">
+        <a class="top-cards__link" href="/schedule/">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_schedule.png">
             <h2>スケジュール</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="https://seishinkan.ne.jp/schedule.html">
+        <a class="top-cards__link" href="/dojo/">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_dojo.png">
             <h2>道場</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="https://seishinkan.ne.jp/manifesto.html">
+        <a class="top-cards__link" href="/instructors/">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_instructors.png">
             <h2>インストラクター</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="https://seishinkan.ne.jp/schedule2.html">
+        <a class="top-cards__link" href="/membership/">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_join.png">
             <h2>入会</h2>

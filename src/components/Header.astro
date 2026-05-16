@@ -3,12 +3,13 @@
 // - brand: string or html for the logo/brand link
 // - nav: array of { label, href } items for the main nav
 const { brand = 'Seishinkai', nav = [
-  { label: 'Top', href: '/' },
+  { label: 'Home', href: '/' },
   { label: 'About', href: '/about/' },
-  { label: 'Contact', href: '/contact/' },
-  { label: 'Joining', href: '/joining/' },
-  { label: 'Locations', href: '/locations/' },
   { label: 'Schedule', href: '/schedule/' },
+  { label: 'Membership', href: '/membership/' },
+  { label: 'Instructors', href: '/instructors/' },
+  { label: 'Dojo List', href: '/dojo/' },
+
 ], lang = 'ja' } = Astro.props;
 ---
 

@@ -1,0 +1,80 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+
+// Accordion Component
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+
+    &__item {
+        border: 1px solid #000;
+        max-width: 100%;
+        
+        &:not(:last-child) {
+            border-bottom: none;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        padding: 20px 30px;
+        background: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        box-sizing: border-box;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+
+        &.is-active {
+            background-color: #f0f0f0;
+        }
+
+        // span {
+        //     flex: 1;
+        // }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+
+        .is-active & {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__panel {
+        display: grid;
+        height: 0px;
+        grid-template-rows: 1fr;
+
+        overflow: hidden;
+        transition: height 0.4s ease;
+
+        &.is-open {
+        height: auto;
+        }
+    }
+
+    &__content {
+        min-height: 0;
+        padding: 20px 30px;
+        background: #fff;
+        border-top: 1px solid #e0e0e0;
+    }
+}

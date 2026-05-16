@@ -1,0 +1,89 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ProfileCard from "@components/ProfileCard.astro";
+import instructors from "@data/instructors.json";
+import beltLevels from "@data/belt-levels.json";
+
+// Group instructors by category
+const categories = ["1", "2", "3", "4"];
+const instructorsByCategory = categories.map((cat) => ({
+  category: cat,
+  instructors: instructors.filter((i) => i.category === cat),
+}));
+
+// Category labels
+const categoryLabels: Record<string, string> = {
+  "1": "カテゴリー1",
+  "2": "カテゴリー2",
+  "3": "カテゴリー3",
+  "4": "カテゴリー4",
+};
+---
+
+<BaseLayout title="Instructors" lang="ja" path="/instructors/">
+  <section class="instructors" id="instructors">
+    <div class="instructors__container">
+      <h1>インストラクター一覧</h1>
+
+      {
+        instructorsByCategory.map((group) => (
+          <div class="instructors__category">
+            <h2 class="instructors__category-title">
+              {categoryLabels[group.category]}
+            </h2>
+
+            <div class="instructors__grid">
+              {group.instructors.map((instructor) => (
+                <ProfileCard
+                  id={instructor.id}
+                  image={instructor.image}
+                  name={instructor.name}
+                  date={instructor.date}
+                  prefecture={instructor.prefecture}
+                  position={instructor.position}
+                  profession={instructor.profession}
+                  tags={instructor.tags}
+                />
+              ))}
+            </div>
+          </div>
+        ))
+      }
+
+      <div class="instructors__belt-levels">
+        <h2 class="instructors__category-title">
+          登録段位保持者 (※{beltLevels.lastUpdated}現在)
+        </h2>
+
+        <table class="table">
+          <tbody>
+            {
+              beltLevels.danRanks.map((rank) => (
+                <tr>
+                  <th>{rank.rank}</th>
+                  <td>{rank.count}名</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+
+        <h3 class="instructors__subsection-title">準加盟・提携道場</h3>
+        <table class="table">
+          <tbody>
+            {
+              beltLevels.associateDojos.map((dojo) => (
+                <tr>
+                  <th>{dojo.name}</th>
+                  <td>
+                    {dojo.location} / {dojo.dojo}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+interface Props {
+  id: string;
+  image: string;
+  name: string;
+  date: string;
+  prefecture: string;
+  position: string;
+  profession: string;
+  tags: string[];
+}
+
+const { id, image, name, date, prefecture, position, profession, tags } =
+  Astro.props;
+---
+
+<div class="profile-card">
+  <div class="profile-card__image">
+    <img src={image} alt={name} />
+  </div>
+
+  <div class="profile-card__content">
+    <h3 class="profile-card__name">{name}</h3>
+
+    <div class="profile-card__info">
+      <p class="profile-card__info-item">
+        <span class="profile-card__label">生年月日:</span>
+        <span>{date}</span>
+      </p>
+      <p class="profile-card__info-item">
+        <span class="profile-card__label">都道府県:</span>
+        <span>{prefecture}</span>
+      </p>
+      <p class="profile-card__info-item">
+        <span class="profile-card__label">職位:</span>
+        <span>{position}</span>
+      </p>
+      <p class="profile-card__info-item">
+        <span class="profile-card__label">職業:</span>
+        <span>{profession}</span>
+      </p>
+    </div>
+
+    {
+      tags.length > 0 && (
+        <div class="profile-card__tags">
+          {tags.map((tag) => (
+            <span class="profile-card__tag">{tag}</span>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</div>
