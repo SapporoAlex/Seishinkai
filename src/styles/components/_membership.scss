@@ -3,12 +3,15 @@
 
 .membership {
     &__container {
-        padding: 40px var(--side-spacing);
+        padding: 80px var(--side-spacing);
         margin-inline: auto;
         display: flex;
         flex-direction: column;
         max-width: 1050px;
         text-align: start;
+        @include mqsp {
+            padding: 50px var(--side-spacing);
+        }
     }
 
     &__audience {

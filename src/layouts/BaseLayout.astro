@@ -28,9 +28,14 @@ const lang = props.lang ?? "ja";
 const title = props.title && props.title !== "" ? props.title : siteData.title;
 const description = props.description ?? siteData.description;
 const keywords = props.keywords ?? undefined;
-const path = props.path ?? undefined;
+const path = props.path ?? '/';
+const currentPath = path;
 const ogImage = props.ogImage ?? siteData.ogImage;
 const breadcrumb = props.breadcrumb ?? undefined;
+
+const jaPath = currentPath.startsWith('/en/') ? currentPath.replace(/^\/en/, '') || '/' : currentPath;
+const enPath = currentPath.startsWith('/en/') ? currentPath : currentPath === '/' ? '/en/' : `/en${currentPath}`;
+const alternatePath = lang === 'ja' ? enPath : jaPath;
 
 const ogLocaleMap: Record<string, string> = {
   ja: "ja_JP",
@@ -86,8 +91,8 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
     <link type="image/x-icon" rel="shortcut icon" href="/seishinkai/favicon.ico" />
     <link rel="canonical" href={path ? siteDomain + path : siteDomain} />
     <!-- hreflang alternates -->
-    <link rel="alternate" href={`${siteDomain}${path ?? '/'}`} hreflang={lang === 'ja' ? 'ja' : 'en'} />
-    <link rel="alternate" href={`${siteDomain}${path ? '/en' + path : '/en/'}`} hreflang={lang === 'ja' ? 'en' : 'ja'} />
+    <link rel="alternate" href={`${siteDomain}${path}`} hreflang={lang === 'ja' ? 'ja' : 'en'} />
+    <link rel="alternate" href={`${siteDomain}${alternatePath}`} hreflang={lang === 'ja' ? 'en' : 'ja'} />
     <link rel="alternate" href={`${siteDomain}/`} hreflang="x-default" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -98,14 +103,14 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
 <script src="../scripts/main.js"></script>
   </head>
   <body>
-    <Header {...headerProps} lang={lang} />
+    <Header {...headerProps} lang={lang} currentPath={path} />
     <main>
       <slot />
     </main>
     <button id="js-back-to-top" class="back-to-top" aria-label="Back to top" type="button">
       <span class="back-to-top__chevron" aria-hidden="true"></span>
     </button>
-    <Footer {...footerProps} />
+    <Footer {...footerProps} lang={lang} />
   </body>
 
 </html>

@@ -3,13 +3,16 @@
 
 .instructors {
     &__container {
-        padding: 40px var(--side-spacing);
+        padding: 80px var(--side-spacing);
         margin-inline: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         max-width: 1050px;
         text-align: start;
+        @include mqsp {
+            padding: 50px var(--side-spacing);
+        }
     }
 
     &__category {

@@ -138,10 +138,13 @@
 	color: #000000;
 	text-decoration: none;
 	font-size: 1rem;
-	transition: color 0.2s;
+	transition: color 0.2s, font-weight 0.2s;
 }
 .header__nav-list li a:hover {
 	color: #0077ff;
+}
+.header__nav-list li a.header__nav-link--active {
+	font-weight: 700;
 }
 
 .header__lang-desktop {

@@ -1,186 +1,192 @@
 ---
+import Button from "@components/buttons/Button.astro";
+import ArrowRight from "@components/buttons/ArrowRight.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import DojoCard from "@components/DojoCard.astro";
-import DojoModal from "@components/DojoModal.astro";
-import dojos from "@data/dojos.json";
-
-// Group dojos by category
-const directDojos = dojos.filter((d) => d.category === "direct");
-const participatingDojos = dojos.filter((d) => d.category === "participating");
-const affiliatedDojos = dojos.filter((d) => d.category === "affiliated");
+import data from 'src/data/cards-who.en.json';
+const cards = data.cards;
 ---
 
-<BaseLayout title="Schedule" lang="ja" path="/schedule/">
-  <section class="schedule" id="schedule">
-    <div class="schedule__container">
-      <h1>Page Title</h1>
-      <p class="schedule__introduction">
-        Dummy text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy text.
-        Dummy text. Dummy text. Dummy text. Dummy text.
-      </p>
-
-      <div class="schedule__card-group">
-        <div class="schedule__card">
-          <h2 class="schedule__card-title">Main Box</h2>
-          <ul>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-          </ul>
-        </div>
-        <div class="schedule__card-right">
-          <div class="schedule__card">
-            <h2 class="schedule__card-title">Secondary Box</h2>
-            <ul>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-            </ul>
+<BaseLayout title="Welcome" lang="en" path="/en/">
+  <section class="fv" id="fv">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <img src="/seishinkai/assets/images/img_training_01.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <img src="/seishinkai/assets/images/img_training_02.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <img src="/seishinkai/assets/images/img_training_03.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <img src="/seishinkai/assets/images/img_training_04.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide fv__slide">
+              <div class="fv__slide-bg">
+                <img src="/seishinkai/assets/images/img_training_05.jpg" alt="" />
+              </div>
+            </div>
           </div>
-          <div class="schedule__card">
-            <h2 class="schedule__card-title">Secondary Box</h2>
-            <ul>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-            </ul>
-          </div>
-          <div class="schedule__card">
-            <h2 class="schedule__card-title">Secondary Box</h2>
-            <ul>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="fv__overlay"></div>
+      <div class="fv__text">
+        <h1 class="fv__title">Seishinkai</h1>
+        <p class="fv__copy">Karate for Modern Life:<br> Health,<br> Physical Development,<br> and Self-Defense</p>
+        <a href="#contact">
+          <button class='button-inverse'>
+            <span class="button__label">Free Trial Lesson</span>
+            <ArrowRight />
+          </button>
+        </a>
       </div>
-
-      <!-- Dojo Cards Section -->
-      <div class="schedule__dojos">
-        <h2 class="schedule__dojos-title">清心会直系・公認道場/自主管理道場</h2>
-        <p class="schedule__dojos-note">※練習日は下記をクリックして下さい</p>
-        <div class="schedule__dojos-grid">
-          {
-            directDojos.map((dojo) => (
-              <DojoCard
-                id={dojo.id}
-                name={dojo.name}
-                sensei={dojo.sensei}
-                category={dojo.category}
-              />
-            ))
-          }
-        </div>
-
-        <h2 class="schedule__dojos-title">清心流参加道場・加盟道場</h2>
-        <p class="schedule__dojos-note">※練習日時は下記へご確認ください</p>
-        <div class="schedule__dojos-grid">
-          {
-            participatingDojos.map((dojo) => (
-              <DojoCard
-                id={dojo.id}
-                name={dojo.name}
-                sensei={dojo.sensei}
-                category={dojo.category}
-              />
-            ))
-          }
-        </div>
-
-        <h2 class="schedule__dojos-title">準加盟道場・提携協力道場</h2>
-        <p class="schedule__dojos-note">
-          ※練習日時は下記へご確認下さい。運営活動関係等は直接道場へ。
-        </p>
-        <div class="schedule__dojos-grid">
-          {
-            affiliatedDojos.map((dojo) => (
-              <DojoCard
-                id={dojo.id}
-                name={dojo.name}
-                sensei={dojo.sensei}
-                category={dojo.category}
-              />
-            ))
-          }
-        </div>
-
-        <p class="schedule__dojos-footer">
-          加盟、準加盟道場は直接各団体へ問い合わせ下さい。
-        </p>
-      </div>
-
-      <!-- Modals -->
-      {
-        dojos.map((dojo) => (
-          <DojoModal
-            id={dojo.id}
-            name={dojo.name}
-            phone={dojo.phone}
-            title={dojo.title}
-            subtitle={dojo.subtitle}
-            locations={dojo.locations}
-            category={dojo.category}
-          />
-        ))
-      }
     </div>
   </section>
+
+  <section class="cards-who" id="cards-who">
+      <div class="cards-who__container">
+        <img class="cards-who__top-img" src="/seishinkai/assets/images/logo.svg" alt="">
+          <h2 class="cards-who__title">Seishinkai Karate</h2>
+          <p class="cards-who__text">
+          Seishinkai is a traditional karate dojo that values personal growth, physical well-being, and health over competition-focused training. Students range in age from 3 to 83, and we have been serving the Sapporo community for over 50 years. For children, karate supports healthy physical development; for adults and seniors, it promotes lifelong wellness; and for women, it provides practical self-defense skills through instruction tailored to individual needs. We also offer classes for students who are not currently attending school and welcome international participants, providing a safe and supportive environment where everyone can learn with confidence.
+          </p>
+          <a href="/about/"><Button>Learn More</Button></a>
+          <div class="cards-who__card-box">
+            <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_01.png')">
+                <div class="cards-who__card-overlay"></div>
+                <div class="cards-who__card-content">
+                    <h2 class="cards-who__card-title">{ cards.card01.title }</h2>
+                    <p class="cards-who__card-text">{ cards.card01.text }</p>
+                </div>
+            </div>
+            <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_02.png')">
+                <div class="cards-who__card-overlay"></div>
+                <div class="cards-who__card-content">
+                    <h2 class="cards-who__card-title">{ cards.card02.title }</h2>
+                    <p class="cards-who__card-text">{ cards.card02.text }</p>
+                </div>
+            </div>
+            <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_03.png')">
+                <div class="cards-who__card-overlay"></div>
+                <div class="cards-who__card-content">
+                    <h2 class="cards-who__card-title">{ cards.card03.title }</h2>
+                    <p class="cards-who__card-text">{ cards.card03.text }</p>
+                </div>
+            </div>
+            <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_04.png')">
+                <div class="cards-who__card-overlay"></div>
+                <div class="cards-who__card-content">
+                    <h2 class="cards-who__card-title">{ cards.card04.title }</h2>
+                    <p class="cards-who__card-text">{ cards.card04.text }</p>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="top-cards__section">
+    <div class="layout__container">
+      <div class="top-cards__grid">
+        <a class="top-cards__link" href="/schedule/">
+          <div class="top-cards__card">
+            <img class="top-cards__image" src="/seishinkai/assets/images/icon_schedule.png">
+            <h2>Schedule</h2>
+          </div>
+        </a>
+
+        <a class="top-cards__link" href="/dojo/">
+          <div class="top-cards__card">
+            <img class="top-cards__image" src="/seishinkai/assets/images/icon_dojo.png">
+            <h2>Dojo List</h2>
+          </div>
+        </a>
+
+        <a class="top-cards__link" href="/instructors/">
+          <div class="top-cards__card">
+            <img class="top-cards__image" src="/seishinkai/assets/images/icon_instructors.png">
+            <h2>Instructors</h2>
+          </div>
+        </a>
+
+        <a class="top-cards__link" href="/membership/">
+          <div class="top-cards__card">
+            <img class="top-cards__image" src="/seishinkai/assets/images/icon_join.png">
+            <h2>Membership</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="top-contact" id="contact">
+
+    <div class="layout__container">
+      <div class="top-contact__contact-header">
+        <span>CONTACT</span>
+        <h2>Trial Class Registration & Inquiries</h2>
+        <p>Please contact us here to register for a trial class or make an inquiry about Seishinkai Karate.</p>
+      </div>
+
+      <div class="top-contact__contact-grid">
+
+        <!-- Phone -->
+        <div class="top-contact__contact-card highlight">
+          <div class="top-contact__icon">☎</div>
+          <h3>Phone</h3>
+          <p class="top-contact__big">011-300-0048</p>
+          <small>Mon & Thu 1:00 PM–4:00 PM / Tue, Thu & Fri 1:00 PM–3:00 PM</small>
+        </div>
+
+        <!-- Email -->
+        <div class="top-contact__contact-card">
+          <div class="top-contact__icon">✉</div>
+          <h3>Email</h3>
+          <p class="top-contact__email">Karate@seishinkan.ne.jp</p>
+          <small>Available 24/7</small>
+        </div>
+
+        <!-- Fax -->
+        <div class="top-contact__contact-card">
+          <div class="top-contact__icon">📠</div>
+          <h3>Fax</h3>
+          <p>011-300-0094</p>
+        </div>
+
+        <!-- QR -->
+        <div class="top-contact__contact-card top-contact__qr-card">
+          <img src="/seishinkai/assets/images/img_qr_volunteer.jpg" alt="Contact QR Code">
+          <p>Quick and easy contact from your smartphone</p>
+        </div>
+
+      </div>
+
+      <div class="top-contact__contact-info">
+        <div>
+          <h4>Office Hours</h4>
+          <p>Monday–Friday 1:00 PM–3:00 PM</p>
+        </div>
+
+        <div>
+          <h4>Location</h4>
+          <p>2-1-27 Sakaedori, Shiroishi-ku, Sapporo (along Tohoku-dori)</p>
+        </div>
+      </div>
+
+      <div class="top-contact__notice-box">
+        <strong>Please Note</strong>
+        <p>
+          Our office is staffed on a rotating schedule, so we may occasionally be unable to answer phone calls during office hours.
+          In such cases, please contact us by email.
+        </p>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>

@@ -1,8 +1,8 @@
 {
   "header": {
-    "brand": "清心会",
+    "brand": "Seishinkai",
     "nav": [
-      { "label": "Home", "href": "/" },
+      { "label": "Home", "href": "/en/" },
       { "label": "About", "href": "/en/about/" },
       { "label": "Schedule", "href": "/en/schedule/" },
       { "label": "Membership", "href": "/en/membership/" },
@@ -11,6 +11,6 @@
     ]
   },
   "footer": {
-    "text": "Copyright© 1995 全日本清心会空手道連盟 All Rights Reserved."
+    "text": "Copyright© 1995 All Japan Seishinkai Karate Federation All Rights Reserved."
   }
 }

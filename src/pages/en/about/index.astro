@@ -3,6 +3,326 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="About" lang="en" path="/en/about/">
-  <h1>About</h1>
-  <p>Learn more about our organization.</p>
+  <section class="about">
+    <div class="about__container">
+      <h1>About Seishinkai</h1>
+
+      <div class="about__introduction">
+        <p>
+          Seishinkai is Hokkaido’s first non-profit karate organization,
+          officially incorporated in February 2004 with approval from the
+          Governor of Hokkaido.
+        </p>
+
+        <p>
+          It was established on the foundation of the Seishinkan Okubo Dojo,
+          founded in 1986 after the passing of the first Soke, and traces its
+          roots back to the original Seishin-ryu Karate Sapporo Branch founded
+          in 1976 under Branch Chief Katsumi Okubo.
+        </p>
+
+        <p>
+          Official registered name: Specified Nonprofit Corporation All Japan
+          Seishinkai
+        </p>
+
+        <p>
+          Main activities: Karate instruction, international cultural exchange,
+          and support programs for international karate students.
+        </p>
+
+        <p>
+          We also offer long-term and short-term training opportunities for
+          international students, trial karate experiences, and Iaido
+          experiences for overseas visitors.
+        </p>
+      </div>
+      <div class="about__timeline">
+        <h2>History</h2>
+        <div class="accordion">
+
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item1">
+              <span>Founding & Foundation Building (1957–1986)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item1">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li>
+                    <span class="about__timeline-date">1957</span>
+                    Seishin-ryu was founded in Mita, Tokyo by Soke Kazuo Kikuchi
+                    (Karate, Iaido, Jujutsu, and Jojutsu)
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1976</span>
+                    Established as the Seishin-ryu Sapporo Branch<br>
+                    (Katsumi Okubo appointed branch chief by Soke Kazuo Kikuchi)
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1983</span>
+                    Passing of founder Soke Kazuo Kikuchi
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1986</span>
+                    Seishinkan Okubo Dojo (Seishin-ryu Okubo Branch) established
+                    with the support of Supporters’ Association Chairman Yoshihiko Watanabe
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item2">
+              <span>Development & Expansion Across Hokkaido (1987–2003)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item2">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li><span class="about__timeline-date">1987</span> First Seishinkai Karate Tournament held</li>
+                  <li><span class="about__timeline-date">1990</span> Sapporo East Branch established with support from San-ai Motor Industry</li>
+                  <li><span class="about__timeline-date">1992</span> Hokuto Branch established with support from Alumni Chairman Masami Koyano</li>
+                  <li><span class="about__timeline-date">1993–</span> Atsubetsu, Asabu, Tsukisamu, Okushiri Island and other regional branches established</li>
+                  <li><span class="about__timeline-date">1995</span> Official Seishinkan website launched</li>
+                  <li><span class="about__timeline-date">2000</span> Internet Karate School launched</li>
+                  <li>
+                    <span class="about__timeline-date">2002</span>
+                    Yamanashi Branch (Minobusan University Karate Club) and Shizuoka Branch established<br>
+                    Headquarters relocated to Higashi-Sapporo
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2003</span>
+                    Surpassed 20 branches and submitted NPO certification application to the Governor of Hokkaido
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item3">
+              <span>Incorporation & National Organization Growth (2004–2011)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item3">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li><span class="about__timeline-date">2004</span> Officially registered as the Specified Nonprofit Corporation “All Japan Seishinkai”</li>
+                  <li>
+                    <span class="about__timeline-date">2005</span>
+                    Hayakita Branch (Seishinkan Takahashi Dojo) joined<br>
+                    Headquarters relocated to Shiroishi Seishinkan; Iaido Division established
+                  </li>
+                  <li><span class="about__timeline-date">2006</span> Niikappu Hokushinkai joined</li>
+                  <li><span class="about__timeline-date">2007</span> Kimobetsu Branch established; short-term international student program began</li>
+                  <li><span class="about__timeline-date">2008</span> Muryujuku (Chiba Prefecture) joined</li>
+                  <li><span class="about__timeline-date">2009</span> Surpassed 70 branches; All Japan Seishinkai Karate Federation established</li>
+                  <li><span class="about__timeline-date">2010</span> Permanent Oasa Seishinkan dojo established; full-scale live-in karate student program began</li>
+                  <li><span class="about__timeline-date">2011</span> First overseas branch established in Sri Lanka; Hondori Seishinkan opened</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item4">
+              <span>International Expansion & Major Growth (2012–2019)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item4">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li>
+                    <span class="about__timeline-date">2012</span>
+                    Surpassed 120 domestic and international branches; ISKF established<br>
+                    Trademark registration of Seishin-ryu Karate, Seishinkai, and logo<br>
+                    Headquarters dojo opened in Shiroishi Ward<br>
+                    Hokkaido’s first female dojo director appointed
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2013</span>
+                    Fukuoka Branch established; expansion into India and other overseas locations<br>
+                    Annual international instructor exchanges began
+                  </li>
+                  <li><span class="about__timeline-date">2014</span> Seishinkan Yamamoto Training Center established</li>
+                  <li><span class="about__timeline-date">2015</span> Official style name adopted as “Seishin-ryu Kenpo Karate”</li>
+                  <li><span class="about__timeline-date">2016</span> Seishinkai Memorial Monument established; Chuo Higashi Dojo opened</li>
+                  <li><span class="about__timeline-date">2017</span> New branches established in Kyogoku and Ishikari Ryokuendai</li>
+                  <li><span class="about__timeline-date">2018</span> Hondori Seishinkan renovated and expanded; new Acacia, Nango, and Chuo South branches opened</li>
+                  <li><span class="about__timeline-date">2019</span> Makomanai and Pakistan branches established</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item5">
+              <span>Succession & Modern Development (2020–Present)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item5">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li>
+                    <span class="about__timeline-date">2020</span>
+                    Full-scale online karate classes launched in response to COVID-19<br>
+                    Bangladesh and Nepal branches established<br>
+                    Tsubasa Okubo succeeded as Head of Headquarters and second-generation ISKF Soke
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2021</span>
+                    Health movement exercise classes launched<br>
+                    Website surpassed 1.5 million visitors<br>
+                    Membership exceeded 7,000
+                  </li>
+                  <li><span class="about__timeline-date">2022</span> Total cumulative membership reached 7,444</li>
+                  <li><span class="about__timeline-date">2023</span> Inoue Dojo completed; Sweden training expedition; Hamatonbetsu Branch established</li>
+                  <li><span class="about__timeline-date">2024</span> Australia Branch established</li>
+                  <li><span class="about__timeline-date">2025</span> Membership surpassed 8,000; Argentina Branch and Toyota Study Group established</li>
+                  <li><span class="about__timeline-date">2026</span> New Zealand Branch established; 62 overseas dojos and approximately 2,700 overseas members</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Organization Information</h2>
+      <table class="about__info-table table">
+        <tr>
+          <th>Organization Name</th>
+          <td>
+            Seishinkai<br />
+            *The name "Seishin-ryu Karate Seishinkai" and its logo are officially
+            trademark registered.
+          </td>
+        </tr>
+        <tr>
+          <th>Style Name</th>
+          <td>Seishin-ryu Kenpo Karate (Okubo Branch)</td>
+        </tr>
+        <tr>
+          <th>Dojo Name</th>
+          <td>
+            Permanent headquarters dojos operate under the name "Seishinkan"
+            (regional branches use "[Region Name] Seishinkan").
+            Headquarters and affiliated dojos include:
+            Sakaedori Seishinkan, Shiroishi Seishinkan, Hondori Seishinkan,
+            Oasa Seishinkan, and Seishinkan Yamamoto Training Center.
+            Authorized dojos:
+            Sumiyoshi-juku, Inoue Dojo, Hokureikai (Misawa Temple Dojo)
+            Affiliated dojos:
+            Seishinkan Takahashi Dojo, Hokushinkai
+            Cooperative partner dojos:
+            Aozorakai, Muryujuku
+            Only dojos listed in our official dojo directory are recognized as
+            official branches, clubs, and affiliated training locations.
+          </td>
+        </tr>
+      </table>
+      <h2>Seishin-ryu Kenpo Karate ISKF</h2>
+      <table class="about__info-table table">
+        <tr>
+          <th>Origins</th>
+          <td>
+            Seishin-ryu Kenpo Karate was developed by Katsumi Okubo, former head of the
+            Seishin-ryu Sapporo Branch, drawing from his experience in traditional dojo
+            training, university karate clubs, Okinawan kobudo, Japan Self-Defense Force
+            hand-to-hand combat, and jujutsu.
+
+            The style was strongly influenced by the late Professor Yoichi Muroki of
+            Hokkaido University, a specialist in developmental science and exercise
+            physiology, with emphasis placed on health-oriented and educational karate.
+          </td>
+        </tr>
+        <tr>
+          <th>Kata</th>
+          <td>
+            Basic Defensive Kata, Ho-kei (4), Taikyoku (3), Pinan (5),
+            Tai Sabaki (3), Naifanchin, Seiryu, Passai, Seisan,
+            Kusanku, Shinpa, Wanshu, and others
+          </td>
+        </tr>
+        <tr>
+          <th>Kumite</th>
+          <td>
+            9 basic pre-arranged sparring forms, single-step kumite,
+            multi-step kumite, bunkai kumite, and Kumite Kata I & II
+          </td>
+        </tr>
+        <tr>
+          <th>Kobudo</th>
+          <td>
+            Sai, Tonfa, Iaido weapon techniques, and self-defense jujutsu
+          </td>
+        </tr>
+        <tr>
+          <th>Competition</th>
+          <td>
+            Official competitions use protective equipment rules.
+            Branches are also free to participate independently in
+            JKF-style point sparring or full-contact competition organizations.
+          </td>
+        </tr>
+        <tr>
+          <th>Emblem</th>
+          <td>
+            <div class="u-col about__images">
+              <div class="about__image-case">
+                <div class="about__image-case-set">
+                  <img src="/seishinkai/assets/images/img_wappen_01.jpg" alt="" />
+                  <small>8cm Diameter Patch</small>
+                </div>
+                <div class="about__image-case-set">
+                  <img src="/seishinkai/assets/images/img_wappen_02.jpg" alt="" />
+                  <small>5cm × 6.5cm Sleeve Patch</small>
+                </div>
+                <div class="about__image-case-set">
+                  <div class="u-row">
+                    <img src="/seishinkai/assets/images/img_wappen_03.jpg" alt="" />
+                    <img src="/seishinkai/assets/images/img_wappen_04.jpg" alt="" />
+                  </div>
+                  <small>Chest Embroidery</small>
+                </div>
+              </div>
+              <small>
+                Some authorized dojos also feature
+                embroidered dojo names.
+              </small>
+              <small>
+                *The logo shown on the left
+                is trademark registered.
+              </small>
+              <p>
+                Some organizations originating from old Seishin-ryu groups may use similar
+                logos, but unless listed in our official branch directory they are separate
+                organizations and not affiliated with us.
+                Our trademark has been officially registered since 2012.
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Karate Uniform</th>
+          <td>
+            Official original-design karate uniform with custom construction
+            distinct from commercially available uniforms.
+
+            Available through Fujido Sports and Toyo Budogu.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
 </BaseLayout>
