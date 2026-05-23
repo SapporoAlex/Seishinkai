@@ -138,14 +138,17 @@
 .header__nav-list li a {
 	color: #000000;
 	text-decoration: none;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	transition: color 0.2s, font-weight 0.2s;
 }
 .header__nav-list li a:hover {
 	color: #0077ff;
 }
 .header__nav-list li a.header__nav-link--active {
-	font-weight: 700;
+	font-weight: 400;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+	text-decoration-thickness: 2px;
 }
 
 .header__lang-desktop {
@@ -167,9 +170,9 @@
 }
 
 .header__lang-link--active {
-	font-weight: 700;
+	font-weight: 600;
 	// color: #fff;
-	color: #222;
+	color: #0f0f0f;
 }
 
 .header__drawer-lang .header__lang-link {
@@ -177,6 +180,11 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0rem 1rem;
+	font-size: 1.5rem;
+}
+.header__drawer-lang-separator {
+	color: #999;
+	font-size: 1.5rem;
 }
 
 .header__drawer-lang .header__lang-link:hover,

@@ -71,6 +71,7 @@ const enHref = activePath.startsWith('/en/') ? activePath : activePath === '/' ?
       </ul>
       <div class="header__drawer-lang" role="group" aria-label="Language switch">
         <a class={"header__lang-link" + (lang === 'ja' ? ' header__lang-link--active' : '')} href={jaHref}>Ja</a>
+        <span class="header__drawer-lang-separator">|</span>
         <a class={"header__lang-link" + (lang === 'en' ? ' header__lang-link--active' : '')} href={enHref}>En</a>
       </div>
     </div>
