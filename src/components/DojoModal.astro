@@ -26,11 +26,11 @@ const categoryNotes: Record<string, string> = {
       ×
     </button>
 
-    <h2 class="dojo-modal__name">{name}</h2>
+    <h2 class="dojo-modal__name" set:html={name}></h2>
 
     <div class="dojo-modal__info">
       <p class="dojo-modal__phone">
-        <strong>電話:</strong>
+        <span>電話:</span>
         {phone}
       </p>
       <p class="dojo-modal__sensei">
@@ -45,17 +45,17 @@ const categoryNotes: Record<string, string> = {
           <h3 class="dojo-modal__locations-title">活動地域</h3>
           <ul class="dojo-modal__locations-list">
             {locations.map((location) => (
-              <li>{location}</li>
+              <li set:html={location}></li>
             ))}
           </ul>
         </div>
       )
     }
 
-    {
+    <!-- {
       categoryNotes[category] && (
         <p class="dojo-modal__note">{categoryNotes[category]}</p>
       )
-    }
+    } -->
   </div>
 </div>

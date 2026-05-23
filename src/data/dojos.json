@@ -8,19 +8,19 @@
     "title": "師範 住吉一徳",
     "subtitle": "(清心会札幌西本部長)",
     "locations": [
-      "新発寒",
-      "西町",
-      "手稲",
-      "宮の沢",
-      "前田",
-      "新川",
-      "新琴似",
-      "星置",
-      "発寒",
-      "西野",
-      "麻生",
-      "屯田",
-      "八軒"
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新発寒</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>西町</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>手稲</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>宮の沢</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>前田</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新川</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新琴似</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>星置</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>発寒</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>西野</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>麻生</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>屯田</a>",
+      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>八軒</a>"
     ]
   },
   {
@@ -32,7 +32,7 @@
     "title": "師範 井上龍一郎",
     "subtitle": "",
     "locations": [
-      "井上道場"
+      "<a href='https://karate13.dokkin.com/' target='_blank'>井上道場</a>"
     ]
   },
   {
@@ -63,7 +63,7 @@
   {
     "id": "aozorakai",
     "category": "affiliated",
-    "name": "青空会",
+    "name": "<a href='https://aozorakai.main.jp/' target='_blank'>青空会</a>",
     "phone": "090-9239-0144",
     "sensei": "青木和也",
     "title": "師範 青木和也",
@@ -80,7 +80,7 @@
   {
     "id": "muryujuku",
     "category": "affiliated",
-    "name": "無流塾",
+    "name": "<a href='https://muryukun.wixsite.com/muryukun' target='_blank'>無流塾</a>",
     "phone": "電話・Fax：043-304-5991",
     "sensei": "鈴木雄三",
     "title": "師範 鈴木雄三",

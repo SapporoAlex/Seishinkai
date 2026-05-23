@@ -135,3 +135,12 @@ html, body, main {
   margin: 0;
   box-sizing: border-box;
 }
+
+a {
+  color: var(--color-seishin-blue);
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: var(--color-seishin-red);
+}

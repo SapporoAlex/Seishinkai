@@ -18,7 +18,7 @@ const categoryLabels: Record<string, string> = {
 
 <div class="dojo-card" data-dojo-id={id}>
   <div class="dojo-card__category">{categoryLabels[category]}</div>
-  <h3 class="dojo-card__name">{name}</h3>
+  <h3 class="dojo-card__name" set:html={name}></h3>
   <p class="dojo-card__sensei">{sensei}</p>
   <button class="dojo-card__button" data-modal-trigger={id}>
     詳細を見る

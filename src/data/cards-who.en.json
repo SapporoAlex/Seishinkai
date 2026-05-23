@@ -9,12 +9,13 @@
             "text": "Gentle full-body exercise and breathing techniques for health"
         },
         "card03": {
-            "title": "For women",
-            "text": "Practical self-defense and awareness training"
-        },
-        "card04": {
             "title": "For everyone",
             "text": "Build strength, resilience, and overall wellbeing"
+
+        },
+        "card04": {
+            "title": "For women",
+            "text": "Practical self-defense and awareness training"
         }
     }
 }
