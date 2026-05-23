@@ -4,7 +4,7 @@
 .cards-who {
     &__container {
         max-width: 1200px;
-        padding: 50px 0 0 0;
+        padding: 80px 0 80px 0;
         margin-inline: auto;
         display: flex;
         flex-direction: column;
@@ -12,12 +12,17 @@
         align-items: center;
         @include mqsp {
             flex-direction: column;
-            padding: 30px 0 0 0;
+            padding: 60px 0 60px 0;
         }
     }
     &__top-img {
         width: 200px;
         height: auto;
+        margin-bottom: 60px;
+        @include mqsp {
+            margin-bottom: 60px;
+        }
+
     }
     &__title {
         padding: 0 var(--side-spacing);
@@ -31,14 +36,14 @@
         text-align: left;
     }
     &__card-box {
-        padding: 100px 0 0 0;
+        padding: 120px 0 0 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
         width: 100%;
         @include mqsp {
             flex-direction: column;
-            padding: 80px 0 0 0;
+            padding: 100px 0 0 0;
         }
     }
     &__card {
@@ -53,7 +58,6 @@
         align-items: flex-end;
         justify-content: center;
         overflow: hidden;
-
         @include mqsp {
             height: 300px;
         }
@@ -78,6 +82,7 @@
             position: relative;
             z-index: 2;
             text-align: center;
+            justify-content: center;
             color: white;
             padding: 20px;
             transition: transform 0.45s ease;
@@ -85,17 +90,19 @@
 
         &-title {
             display: block;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 30px;
+            text-shadow: 1px 1px 10px var(--color-bg-blue);
+            opacity:1;
+            margin-bottom: 0px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: transform 0.45s ease;
+            transition: all 0.45s ease;
+            text-align: center;
         }
 
         &-text {
-            font-size: 16px;
-            font-weight: 700;
+            font-size: 20px;
+            text-shadow: 1px 1px 10px var(--color-bg-blue);
             margin: 0;
             line-height: 1.3;
             opacity: 0;
@@ -110,7 +117,8 @@
             }
 
             .cards-who__card-title {
-                transform: translateY(-10px);
+                transform: translateY(-60px);
+                opacity: 1;
                     @include mqsp {
                         transform: translateY(0px);
                     }
@@ -126,6 +134,11 @@
         @include mqsp {
             .cards-who__card-overlay {
                 height: 100%;
+            }
+
+            .cards-who__card-title {
+                opacity: 1;
+                margin-bottom: 0px;
             }
 
             .cards-who__card-text {

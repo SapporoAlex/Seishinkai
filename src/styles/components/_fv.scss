@@ -71,15 +71,19 @@
     }
   }
   &__title {
-    font-size: calc(120 / 1250 *100vw) !important;
+    font-size: 100px;
+                text-shadow: 1px 1px 10px var(--color-bg-blue);
     @include mqsp {
-      font-size: 50px !important;
+      font-size: calc(100 / 768 *100vw);
+
     }
   }
   &__copy {
-    font-size: calc(40 / 1250 *100vw);
+    font-size: 40px;
+                text-shadow: 1px 1px 10px var(--color-bg-blue);
     @include mqsp {
-      font-size: 20px;
+          font-size: calc(40 / 768 *100vw);
+      
     }
   }
   
@@ -104,7 +108,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(1, 0, 51, 0.705);
+    background-color: rgba(13, 11, 114, 0.322);
     z-index: 2;
   }
 }

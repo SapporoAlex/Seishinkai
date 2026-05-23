@@ -5,22 +5,30 @@
 
     &__section {
         // background: linear-gradient(to bottom, #0028da, #040076);
-        padding: 40px var(--side-spacing);
+        padding: 40px var(--side-spacing) 120px var(--side-spacing);
         @include mqsp {
-            padding: 40px var(--side-spacing);
+            padding: 40px var(--side-spacing) 120px var(--side-spacing);
+        }
+    }
+    &__container {
+        max-width: 1200px;
+        padding: 0 0;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @include mqsp {
+            flex-direction: column;
+            padding: 40px 0;
         }
     }
     &__grid {
-        // display: flex;
-        // flex-direction: row;
-        // gap: 40px;
-        // @include mqsp {
-        //     width: 100%;
-        //     flex-direction: column;
-        // }
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 24px;
+        @include mqsp {
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        }
     }
     &__card {
         padding: 30px;
@@ -35,13 +43,11 @@
         justify-content: flex-start;
         align-items: center;
         text-align: center;
-        font-weight: 700;
         gap: 1rem;
-        min-height: 250px;
+        min-height: 220px;
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
         transition: transform 220ms ease, box-shadow 220ms ease;
         will-change: transform, box-shadow;
-
         &:hover,
         &:focus-visible {
             transform: translateY(-6px) scale(1.02);
@@ -50,16 +56,25 @@
         }
         @include mqsp {
             flex-direction: row;
-            min-height: 150px;
+            min-height: 120px;
             width: 100%;
             margin-inline: auto;
         }
     }
+    &__card {
+        h2 {
+            font-size: 1.5rem;
+            @include mqsp {
+                font-size: 1.5rem;
+                padding-top: 20px;
+            }
+        }
+    }
     &__image {
-        width: 100px;
+        width: 80px;
         height: auto;
         @include mqsp {
-            width: 100px;
+            width: 60px;
         }
     }
 

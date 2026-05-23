@@ -24,14 +24,15 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            margin-left: 5rem;
+            margin-left: 6rem;
             gap: 40px;
             
         }
         &-date {
+            font-size: 1rem;
             position: absolute;
-            margin-left: -5rem;
-            font-weight: 700;
+            margin-left: -6rem;
+            font-weight: 600;
         }
     }
     &__info {

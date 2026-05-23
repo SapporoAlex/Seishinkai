@@ -93,6 +93,11 @@
         margin: 50px 0;
         gap: 20px;
         flex-wrap: wrap;
+        @include mqsp {
+            flex-direction: column;
+            margin: 30px 0;
+            gap: 30px;
+        }
     }
 
     &__contact-info div {
