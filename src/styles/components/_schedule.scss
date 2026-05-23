@@ -15,15 +15,27 @@
         }
     }
     &-dojos__container {
-        padding: 80px var(--side-spacing);
+        padding: 40px var(--side-spacing);
         background: var(--color-bg-blue);
         margin-inline: auto;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // text-align: start;
         @include mqsp {
-            padding: 50px var(--side-spacing);
+            padding: 40px var(--side-spacing);
+        }
+        &-header {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        &-header span {
+            color: #d62828;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        &-header h2 {
+            font-size: 2.4rem;
+            color: var(--color-inverse-text);
+            margin: 10px 0;
         }
     }
     &__introduction {
@@ -85,7 +97,7 @@
 
     // Dojo Cards Section
     &__dojos {
-        margin-top: 60px;
+        margin-top: 0px;
         
         &-title {
             font-size: 1.5rem;
@@ -114,7 +126,7 @@
         &-footer {
             margin-top: 40px;
             font-size: 0.95rem;
-            // font-weight: bold;
+        color: var(--color-inverse-sub-text);
             text-align: center;
         }
     }
