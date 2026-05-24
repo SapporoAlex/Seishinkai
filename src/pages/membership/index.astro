@@ -1,179 +1,103 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import Button from "@components/buttons/Button.astro";
 import ArrowRight from "@components/buttons/ArrowRight.astro";
 ---
 
 <BaseLayout title="Membership" lang="ja" path="/membership/">
-  <section class="membership">
-    <div class="membership__container">
+  <section class="membership__top">
+    <div class="membership__container-top">
       <h1>入会の御案内</h1>
       <p>初心者から経験者まで、年齢・性別を問わず誰でも学べる空手教室</p>
-
-      <h2>こんな方におすすめ</h2>
-
-      <div class="membership__audience">
-        <div class="membership__audience-card">
-          <div class="membership__audience-icon">🧒</div>
-          <h3 class="membership__audience-title">少年部</h3>
-          <p class="membership__audience-text">
-            礼儀・挨拶・作法を学び、心と身体を育てる
-          </p>
-        </div>
-
-        <div class="membership__audience-card">
-          <div class="membership__audience-icon">👩</div>
-          <h3 class="membership__audience-title">女性・一般</h3>
-          <p class="membership__audience-text">
-            シェイプアップ・健康促進・護身
-          </p>
-        </div>
-
-        <div class="membership__audience-card">
-          <div class="membership__audience-icon">👴</div>
-          <h3 class="membership__audience-title">中高年</h3>
-          <p class="membership__audience-text">無理なく体力向上・健康維持</p>
-        </div>
-      </div>
-
-      <h2>features</h2>
-
-      <div class="membership__features">
-        <div class="membership__feature-item">
-          <div class="membership__feature-icon">🎯</div>
-          <p class="membership__feature-text">「体育・健康・護身」を重視</p>
-        </div>
-
-        <div class="membership__feature-item">
-          <div class="membership__feature-icon">🤋</div>
-          <p class="membership__feature-text">
-            試合中心ではなく 基本・型・約束組手が中心
-          </p>
-        </div>
-
-        <div class="membership__feature-item">
-          <div class="membership__feature-icon">👥</div>
-          <p class="membership__feature-text">
-            年齢・性別問わず誰でも取り組める
-          </p>
-        </div>
-
-        <div class="membership__feature-item">
-          <div class="membership__feature-icon">🌏</div>
-          <p class="membership__feature-text">海外との国際交流あり</p>
-        </div>
-
-        <div class="membership__feature-item">
-          <div class="membership__feature-icon">👨‍👩‍👧</div>
-          <p class="membership__feature-text">親子での参加が多い</p>
-        </div>
-
-        <div class="membership__feature-item">
-          <div class="membership__feature-icon">💻</div>
-          <p class="membership__feature-text">オンラインクラス対応</p>
-        </div>
-      </div>
-
-      <h2>コミュニティの魅力</h2>
-
-      <div class="membership__community">
-        <p>社会人会員が多く、異業種交流ができる</p>
-        <p>空手を通じて人とのつながりが広がる</p>
-        <p>指導者の多くが親子で継続しているメンバー</p>
-      </div>
-
-      <h2>通いやすいシステム</h2>
-
-      <div class="membership__training-access">
-        <p>札幌・近郊 約80支部に自由参加</p>
-        <p>何度でも練習参加可能</p>
-        <p>ビジター・チケット制度あり</p>
-        <p class="membership__training-note">※カルチャースクール等は対象外</p>
-      </div>
-
+    </div>
+    <div class="membership__container-info">
       <h2>入会費用</h2>
+    </div>
+  </section>
 
-      <div class="membership__fees">
-        <div class="membership__fees-card">
-          <div class="membership__fees-section">
-            <h3 class="membership__fees-title">入会金</h3>
-            <p class="membership__fees-amount">7,000円</p>
-            <p class="membership__fees-detail">
-              家族割引あり（2人目 3,500円 / 3人目 1,750円）
-            </p>
-          </div>
 
-          <div class="membership__fees-section">
-            <h3 class="membership__fees-title">月会費</h3>
-            <p class="membership__fees-detail">子ども：5,300円</p>
-            <p class="membership__fees-detail">
-              学生・女性・一般：5,800～6,800円
-            </p>
-            <p class="membership__fees-detail">3歳未満：無料</p>
-          </div>
-
-          <p class="membership__fees-note">
-            ※冬季は暖房費あり（1,100～3,000円）
+  <section class="membership__fees">
+    <div class="membership__container-fees">
+      <div class="membership__fees-card">
+        <div class="membership__fees-section">
+          <h3 class="membership__fees-title">入会金</h3>
+          <p class="membership__fees-amount">7,000円</p>
+          <p class="membership__fees-detail">
+            家族割引あり（2人目 3,500円 / 3人目 1,750円）
           </p>
         </div>
 
-        <div class="membership__fees-card">
-          <div class="membership__fees-section">
-            <h3 class="membership__fees-title">その他</h3>
-            <p class="membership__fees-detail">
-              年会費：4,800～6,800円（保険込）
-            </p>
-            <p class="membership__fees-detail">道着：10,500～22,000円</p>
-            <p class="membership__fees-detail">サポーター：6,250～8,250円</p>
-          </div>
+        <div class="membership__fees-section">
+          <h3 class="membership__fees-title">月会費</h3>
+          <p class="membership__fees-detail">子ども：5,300円</p>
+          <p class="membership__fees-detail">
+            学生・女性・一般：5,800～6,800円
+          </p>
+          <p class="membership__fees-detail">3歳未満：無料</p>
+        </div>
+
+        <p class="membership__fees-note">
+          ※冬季は暖房費あり（1,100～3,000円）
+        </p>
+      </div>
+
+      <div class="membership__fees-card">
+        <div class="membership__fees-section">
+          <h3 class="membership__fees-title">その他</h3>
+          <p class="membership__fees-detail">
+            年会費：4,800～6,800円（保険込）
+          </p>
+          <p class="membership__fees-detail">道着：10,500～22,000円</p>
+          <p class="membership__fees-detail">サポーター：6,250～8,250円</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <h2>無料体験について</h2>
+  <section>
+    <h2>無料体験について</h2>
 
-      <div class="membership__trial">
-        <p>直轄教室は無料体験OK</p>
-        <p>初心者歓迎</p>
-        <p>動きやすい服装で参加可能</p>
-      </div>
+    <div class="membership__trial">
+      <p>直轄教室は無料体験OK</p>
+      <p>初心者歓迎</p>
+      <p>動きやすい服装で参加可能</p>
+    </div>
 
-        <a href="#contact">
-          <button class='button-inverse'>
-            <span class="button__label">無料体験</span>
-            <ArrowRight />
-          </button>
-        </a>
+    <a href="#contact">
+      <button class='button-inverse'>
+        <span class="button__label">無料体験</span>
+        <ArrowRight />
+      </button>
+    </a>
 
-      <div class="accordion">
-        <div class="accordion__item">
-          <button class="accordion__button" data-accordion-trigger="notes">
-            <span>Notes / Important Info（注意事項）</span>
-            <svg
-              class="accordion__icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-          <div class="accordion__panel" data-accordion-panel="notes">
-            <div class="accordion__content">
-              <ul class="membership__notes-list">
-                <li>月会費は口座引落</li>
-                <li>NPOのため消費税なし</li>
-                <li>支部ごとに多少異なる場合あり</li>
-                <li>稽古の有無に関係なく会費は発生</li>
-              </ul>
-            </div>
+    <div class="accordion">
+      <div class="accordion__item">
+        <button class="accordion__button" data-accordion-trigger="notes">
+          <span>Notes / Important Info（注意事項）</span>
+          <svg
+            class="accordion__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="accordion__panel" data-accordion-panel="notes">
+          <div class="accordion__content">
+            <ul class="membership__notes-list">
+              <li>月会費は口座引落</li>
+              <li>NPOのため消費税なし</li>
+              <li>支部ごとに多少異なる場合あり</li>
+              <li>稽古の有無に関係なく会費は発生</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
-    <section class="top-contact" id="contact">
 
+  <section class="top-contact" id="contact">
     <div class="layout__container">
       <div class="top-contact__contact-header">
         <span>CONTACT</span>

@@ -2,7 +2,10 @@
 @use "../abstracts/_variables.scss" as *;
 
 .membership {
-    &__container {
+    &__top {
+        
+    }
+    &__container-top {
         padding: 80px var(--side-spacing);
         margin-inline: auto;
         display: flex;
@@ -13,119 +16,18 @@
             padding: 50px var(--side-spacing);
         }
     }
-
-    &__audience {
+    &__container-info {
+        background: var(--color-bg-blue-light);
+        padding: 80px var(--side-spacing);
+        margin-inline: auto;
         display: flex;
-        flex-direction: row;
-        gap: 24px;
-        margin-top: 24px;
-
+        flex-direction: column;
+        max-width: 1050px;
+        text-align: start;
         @include mqsp {
-            flex-direction: column;
+            padding: 50px var(--side-spacing);
         }
     }
-
-    &__audience-card {
-        flex: 1;
-        border: 1px solid #000;
-        border-radius: 8px;
-        padding: 30px 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 12px;
-    }
-
-    &__audience-icon {
-        font-size: 2.5rem;
-        line-height: 1;
-    }
-
-    &__audience-title {
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin: 0;
-    }
-
-    &__audience-text {
-        font-size: 0.95rem;
-        color: #444;
-        margin: 0;
-    }
-
-    &__features {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin-top: 24px;
-
-        @include mqsp {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    &__feature-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 16px;
-        padding: 16px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-    }
-
-    &__feature-icon {
-        font-size: 1.75rem;
-        line-height: 1;
-        flex-shrink: 0;
-    }
-
-    &__feature-text {
-        font-size: 0.95rem;
-        color: #333;
-        margin: 0;
-        line-height: 1.6;
-    }
-
-    &__community {
-        margin-top: 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-
-        p {
-            font-size: 1rem;
-            color: #333;
-            margin: 0;
-            line-height: 1.8;
-        }
-    }
-
-    &__training-access {
-        margin-top: 24px;
-        padding: 24px 30px;
-        border: 3px solid #d32f2f;
-        border-radius: 8px;
-        background: #ffffff;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-
-        p {
-            font-size: 1rem;
-            color: #333;
-            margin: 0;
-            line-height: 1.8;
-        }
-    }
-
-    &__training-note {
-        margin-top: 8px;
-        font-size: 0.9rem;
-        color: #666;
-        font-style: italic;
-    }
-
     &__fees {
         display: flex;
         flex-direction: row;
@@ -156,20 +58,17 @@
 
     &__fees-title {
         font-size: 1.15rem;
-        // font-weight: bold;
         margin: 0 0 8px;
         color: #000;
     }
 
     &__fees-amount {
         font-size: 1.5rem;
-        // font-weight: bold;
         color: #d32f2f;
         margin: 0;
     }
 
     &__fees-detail {
-        font-size: 0.95rem;
         color: #333;
         margin: 0;
         line-height: 1.6;
