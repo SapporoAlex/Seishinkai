@@ -14,7 +14,7 @@
   --space-8: calc(var(--spacing) * 16); // 64px
   --font-jp: "Noto Sans JP", sans-serif;
   --font-en: "arial", "Noto Sans JP", sans-serif;
-  --font-serif: "Cormorant Garamond", "Yuji Syuku";
+  --font-red-title: font-family: 'Bebas Neue', sans-serif;
   --fs-xs: clamp(0.75rem, calc(0.64rem + 0.26vw), 0.875rem);
   --fs-sm: clamp(0.875rem, calc(0.78rem + 0.4vw), 1rem);
   --fs-md: clamp(1rem, calc(0.9rem + 0.7vw), 1.2rem);
@@ -23,6 +23,7 @@
   --lead: clamp(1.125rem, calc(1rem + 0.6vw), 1.375rem);
   --side-spacing: 40px;
   --max-width: 1020px;
+
   --color-seishin-red: #e62119;
   --color-seishin-blue: #1a489e;
   --color-bg-blue: #01042e;
@@ -31,6 +32,19 @@
   --color-inverse-text: rgb(255, 255, 255);
   --color-inverse-sub-text: rgba(255, 255, 255, 0.808);
 
+  --white: #FFFFFF;
+  --off-white: #F8F7F5;
+  --navy: #0D2545;
+  --blue: #1A4A8A;
+  --mid-blue: #2E6DB4;
+  --light-blue: #D6E6F7;
+  --red: #C0202A;
+  --red-light: #F5E0E1;
+  --text: #1A1A1A;
+  --text-mid: #4A4A4A;
+  --text-light: #888;
+  --border: #E0E0E0;
+  --gold: #B8960C;
 }
 
 html[lang="ja"] {
@@ -44,17 +58,10 @@ html[lang="en"] {
 
 body {
   font-family: var(--default-font-family);
-  line-height: calc(33 / 14);
-  background-color: #fcf9f5;
-  background-color: #faf8f4;
-  background-image:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.24), rgba(255,255,255,0.24) 1px, transparent 1px, transparent 6px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.16), rgba(255,255,255,0.16) 1px, transparent 1px, transparent 8px);
-  background-size: auto auto;
-  color: #000000;
+  color: var(--text);
 
   &:not(.is-fv-hidden):has(.fv__slide-full.swiper-slide-active) {
-    --nav-bar-color: #fff;
+    --nav-bar-color: var(--white);
   }
 
   &.is-nav-open {
@@ -65,7 +72,7 @@ body {
 }
 
 body .product-detail {
-  --nav-bar-color: #fff;
+  --nav-bar-color: var(--white);
 }
 
 [tabindex="-1"]:focus-visible {
@@ -119,6 +126,11 @@ h6 {
   font-size: var(--text-xs);
   line-height: var(--text-lg--line-height);
   font-weight: 500;
+}
+
+.section-header .label {
+  font-family: 'Bebas Neue', sans-serif; font-size: 11px;
+  letter-spacing: .25em; color: var(--red); display: block; margin-bottom: 10px;
 }
 
 #main {
