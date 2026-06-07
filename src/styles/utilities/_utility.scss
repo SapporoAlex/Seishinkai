@@ -2,31 +2,48 @@
 @use "../abstracts/_variables.scss" as *;
 
 .u {
-    &-color {
-        &-blue {
-            background: var(--color-blue-chalk);
-        }
-        &-yellow {
-            background: var(--color-yellow-chalk);
-        }
-        &-green {
-            background: var(--color-green-chalk);
-        }
-        &-red {
-            background: var(--color-red-chalk);
-        }
+  &-bg-color {
+    &-white {
+      background: var(--white);
     }
-    &-col-reverse {
-        @include mqsp {
-            flex-direction: column-reverse;
-        }
+    &-navy {
+      background: var(--navy);
     }
-    &-col {
-        display: flex;
-        flex-direction: column;
+    &-red {
+      background: var(--red);
     }
-    &-row {
-        display: flex;
-        flex-direction: row;
+    &-text-light {
+      background: var(--text-light);
     }
+  }
+  &-color {
+    &-white {
+      color: var(--white);
+    }
+    &-navy {
+      color: var(--navy);
+    }
+    &-red {
+      color: var(--red);
+    }
+    &-text-light {
+      color: var(--text-light);
+    }
+    &-text-lightest {
+      color: var(--text-lightest);
+    }
+  }
+  &-col-reverse {
+    @include mqsp {
+      flex-direction: column-reverse;
+    }
+  }
+  &-col {
+    display: flex;
+    flex-direction: column;
+  }
+  &-row {
+    display: flex;
+    flex-direction: row;
+  }
 }

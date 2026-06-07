@@ -4,10 +4,6 @@
 @use "./base/_base.scss";
 @use "./base/_reset.scss";
 
-@use "./utilities/_layout.scss";
-@use "./utilities/_utility.scss";
-@use "./utilities/_visibility.scss";
-
 @use "./components/_table.scss";
 @use "./components/_text.scss";
 
@@ -24,3 +20,7 @@
 @use "./components/_instructors.scss";
 @use "./components/_membership.scss";
 @use "./components/_schedule.scss";
+
+@use "./utilities/_layout.scss";
+@use "./utilities/_utility.scss";
+@use "./utilities/_visibility.scss";

@@ -140,7 +140,7 @@
   }
   &__copy {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.65);
+    color: var(--text-light);
     line-height: 1.8;
     margin-bottom: 20px;
     @include mqpc {
