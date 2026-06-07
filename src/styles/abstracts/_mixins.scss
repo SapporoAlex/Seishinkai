@@ -21,3 +21,7 @@ $base-font-size: 16 !default;
 @function rem($px, $base: $base-font-size) {
   @return #{math.div($px, $base)}rem;
 }
+
+@function vw($px, $base: 375) {
+  @return ($px / $base) * 100vw;
+}
