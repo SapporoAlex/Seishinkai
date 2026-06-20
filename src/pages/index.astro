@@ -1,6 +1,4 @@
 ---
-import Button from "@components/buttons/Button.astro";
-import ArrowRight from "@components/buttons/ArrowRight.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import data from 'src/data/cards-who.json';
 const cards = data.cards;
@@ -49,17 +47,19 @@ const cards = data.cards;
   </section>
 
   <section class="cards-who" id="cards-who">
-      <div class="cards-who__container">
+      <div class="cards-who__container-intro">
         <img class="cards-who__top-img" src="/seishinkai/assets/images/logo.svg" alt="">
-        <div class="section__title-area">
-          <span class="section-label">ABOUT</span>
-          <div class="section-title">清心会</div>
+        <div>
+          <div class="section__title-area">
+            <span class="section-label">ABOUT</span>
+            <div class="section-title">清心会</div>
+            <div class="fv-btn-primary"><a href="/about/">歴史を見る</a></div>
+            <p class="text">清心会は、競技中心ではなく心身の成長と健康を大切にする伝統空手道場です。3歳から83歳まで幅広い年齢層が参加し、50年以上にわたり札幌を中心に活動しています。子どもには発育を促す体育として、大人やシニアには健康維持として、女性には護身術として、それぞれに合わせた指導を行っています。また、不登校生徒向けクラスや外国人の受け入れも行い、誰もが安心して学べる環境を提供しています。</p>
+          </div>
         </div>
-        <p class="text">清心会は、競技中心ではなく心身の成長と健康を大切にする伝統空手道場です。3歳から83歳まで幅広い年齢層が参加し、50年以上にわたり札幌を中心に活動しています。子どもには発育を促す体育として、大人やシニアには健康維持として、女性には護身術として、それぞれに合わせた指導を行っています。また、不登校生徒向けクラスや外国人の受け入れも行い、誰もが安心して学べる環境を提供しています。</p>
-        <a href="/about/"><div class="fv-btn-primary">歴史を見る</div></a>
       </div>
-      <div class="cards-who__container">
 
+      <div class="cards-who__container">
         <div class="section__title-area">
           <span class="section-label">CLASSES</span>
           <div class="section-title">稽古内容</div>
@@ -136,38 +136,48 @@ const cards = data.cards;
         <div class="section-title u-color-white">体験申込・お問い合わせ</div>
         <p class="text u-color-text-lightest">清心会空手体験申込はこちらからご連絡ください</p>
       </div>
+      <div class="cards-contact__card-box">
 
-      <div class="top-contact__contact-grid">
-
-        <!-- Phone -->
-        <div class="top-contact__contact-card highlight">
-          <div class="top-contact__icon">☎</div>
-          <h3>お電話</h3>
-          <p class="top-contact__big">011-300-0048</p>
-          <small>月・木 13:00〜16:00 / 火・木・金 13:00〜15:00</small>
+        <div class="cards-contact__card">
+          <div class="cards-contact__card-top">
+            <div class="top-contact__icon">☎</div>
+            <h3 class="cards-contact__card-title">お電話</h3>
+          </div>
+          <div class="cards-contact__card-bottom">
+            <p class="top-contact__big">011-300-0048</p>
+            <small>月・木 13:00〜16:00 <br class="u-pc-visible" />/ 火・木・金 13:00〜15:00</small>
+          </div>
         </div>
 
-        <!-- Email -->
-        <div class="top-contact__contact-card">
-          <div class="top-contact__icon">✉</div>
-          <h3>メール</h3>
-          <p class="top-contact__email">Karate@seishinkan.ne.jp</p>
-          <small>24時間受付</small>
+        <div class="cards-contact__card">
+          <div class="cards-contact__card-top">
+            <div class="top-contact__icon">✉</div>
+            <h3 class="cards-contact__card-title">メール</h3>
+          </div>
+          <div class="cards-contact__card-bottom">
+            <p class="top-contact__email">Karate@seishinkan.ne.jp</p>
+            <small>24時間受付</small>
+          </div>
         </div>
 
-        <!-- Fax -->
-        <div class="top-contact__contact-card">
-          <div class="top-contact__icon">📠</div>
-          <h3>FAX</h3>
-          <p>011-300-0094</p>
+        <div class="cards-contact__card">
+          <div class="cards-contact__card-top">
+            <div class="top-contact__icon">📠</div>
+            <h3>FAX</h3>
+          </div>
+          <div class="cards-contact__card-bottom">
+            <p>011-300-0094</p>
+          </div>
         </div>
 
-        <!-- QR -->
-        <div class="top-contact__contact-card top-contact__qr-card">
-          <img src="/seishinkai/assets/images/img_qr_volunteer.jpg" alt="お問い合わせQRコード">
-          <p>スマホから簡単お問い合わせ</p>
+        <div class="cards-contact__card">
+          <div class="cards-contact__card-top">
+            <img src="/seishinkai/assets/images/img_qr_volunteer.jpg" alt="お問い合わせQRコード">
+          </div>
+          <div class="cards-contact__card-bottom">
+            <p>スマホから簡単お問い合わせ</p>
+          </div>
         </div>
-
       </div>
 
       <div class="top-contact__contact-info">

@@ -21,10 +21,11 @@
   --fs-lg: clamp(1.25rem, calc(1.05rem + 2vw), 2.5rem);
   --fs-xl: clamp(2rem, calc(1.6rem + 2.5vw), 3rem);
   --lead: clamp(1.125rem, calc(1rem + 0.6vw), 1.375rem);
-  --side-spacing: 40px;
+  --side-spacing: 20px;
   --vertical-spacing: 50px;
+  --side-spacing-pc: 40px;
   --vertical-spacing-pc: 60px;
-  --max-width: 1020px;
+  --max-width: 1300px;
 
   --hover-time: 0.3s;
 
@@ -110,7 +111,10 @@ h3 {
   line-height: 1.3;
   margin-bottom: 10px;
 }
-p {
+p,
+li,
+th,
+td {
   font-size: var(--fs-md);
   line-height: var(--line-height-text);
 }

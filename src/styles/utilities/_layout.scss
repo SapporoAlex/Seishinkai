@@ -2,19 +2,16 @@
 @use "../abstracts/_variables.scss" as *;
 
 .layout {
-
-    &__container {
-        max-width: 1200px;
-        padding: 50px 0;
-        margin-inline: auto;
-        display: flex;
-        flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-        position: relative;
-        @include mqsp {
-            flex-direction: column;
-            padding: 40px 0;
-        }
+  &__container {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding: var(--vertical-spacing-pc) var(--side-spacing-pc);
+    position: relative;
+    @include mqsp {
+      padding: var(--vertical-spacing) 0;
+      flex-direction: column;
     }
+  }
 }

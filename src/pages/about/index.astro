@@ -5,7 +5,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <BaseLayout title="About" lang="ja" path="/about/">
   <section class="about">
     <div class="about__container">
-      <h1>清心会について</h1>
+      <div class="section__title-area">
+        <span class="section-label">ABOUT</span>
+        <h1 class="section-title">清心会について</h1>
+      </div>
       <div class="about__introduction">
         <p>
           清心会は、初代宗家没後の昭和61年に設立された清心館大久保道場(昭和51年発足の旧清心流空手道札幌支部・支部長大久保勝美)を母体に、平成16年2月に北海道知事の認可を得て、法人登記された空手団体として北海道最初のＮＰＯ法人(非営利目的)です。
@@ -18,7 +21,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </p>
       </div>
       <div class="about__timeline">
-        <h2>沿革</h2>
+      <div class="section__title-area">
+        <h2 class="section-title lg">沿革</h2>
+      </div>
         <div class="accordion">
           <div class="accordion__item">
             <button class="accordion__button" data-accordion-trigger="item1">
@@ -282,7 +287,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </div>
       </div>
       <div class="about__info">
-        <h2>団体概要</h2>
+        <div class="section__title-area">
+          <h2 class="section-title lg">団体概要</h2>
+        </div>
         <table class="about__info-table table">
           <tr><th>会派名</th><td>清心会<br>
           ※清心流空手道清心会及びロゴマークは商標登録されています。</td></tr>
@@ -293,7 +300,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             準加盟協力道場:青空会、無流塾
             ※道場一覧に掲載してある道場が当会の正式な公認支部教室、道場、同好会等となります。</td></tr>
         </table>
-        <h2>清心流拳法空手道 ISKF</h2>
+        <div class="section__title-area">
+          <h2 class="section-title lg">清心流拳法空手道 ISKF</h2>
+        </div>
         <table class="about__info-table table">
           <tr><th>創流</th><td>	清心流札幌支部長であった大久保勝美が、経験した町道場、空手部、沖縄古武道、自衛隊徒手格闘術、柔術等を加味して創られた流会派。特に発育発達学、体育生理学を専門とした北海道大学教授であった故室木洋一先生(空手教士、柔道師範、大東流合気柔術幸道会顧問など)の影響を受け、健康と体育の空手に重点を置いているのが特徴。</td></tr>
           <tr><th>制定型</th><td>防御基礎型、法型(4)、太極(3)、ピンアン(5)、体捌き(3)、内歩進、セイリュー、パッサイ、制引戦セーシャン、クーサンクー、シンパ、ワンシュウなど</td></tr>

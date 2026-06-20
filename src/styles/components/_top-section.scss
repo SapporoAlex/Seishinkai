@@ -2,9 +2,14 @@
 @use "../abstracts/_variables.scss" as *;
 
 .top-section {
-  padding-block: 20px;
+  margin-inline: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--vertical-spacing) 0;
   @include mqpc {
-    padding-block: 60px;
+    padding: var(--vertical-spacing-pc) var(--side-spacing-pc);
+    max-width: var(--max-width);
   }
   &__container {
     // overflow-x: hidden;
@@ -20,8 +25,7 @@
     align-items: center;
     @include mqpc {
       flex-direction: row;
-      padding: 60px var(--side-spacing);
-      max-width: 1200px;
+      padding: 60px 0;
       margin-top: 0;
     }
   }
@@ -39,8 +43,8 @@
     @include mqpc {
       gap: 40px;
       flex-direction: row-reverse;
-      padding: 60px var(--side-spacing);
-      max-width: 1200px;
+      padding: 60px 0;
+      max-width: var(--max-width);
       margin-top: 0;
     }
   }
