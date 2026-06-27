@@ -1,179 +1,136 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import DojoCard from "@components/DojoCard.astro";
+import DojoModal from "@components/DojoModal.astro";
+import dojos from "@data/dojos.json";
+
+// Group dojos by category
+const directDojos = dojos.filter((d) => d.category === "direct");
+const participatingDojos = dojos.filter((d) => d.category === "participating");
+const affiliatedDojos = dojos.filter((d) => d.category === "affiliated");
 ---
 
-<BaseLayout title="Dojo List" lang="ja" path="/dojo/">
+<BaseLayout title="Schedule" lang="ja" path="/schedule/">
   <section class="dojo-list">
     <div class="dojo-list__container">
-      <h1>Page Title</h1>
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">空手道場・教室の稽古予定日</h1>
+      </div>
       <p class="dojo-list__introduction">
-        Dummy text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy text.
-        Dummy text. Dummy text. Dummy text. Dummy text.
+        清心会空手道連盟が公認及び加盟している各地域での空手道場・教室です。クリックすると一覧が表示されます。
+        札幌及び近郊で80ヵ所以上で活動しています。(道内・道場一覧PDFダウンロード)(健康体術クラス)
       </p>
+      <p class="dojo-list__introduction">※コロナにより公共施設等急遽の利用停止や制限により会場、日時等の稽古日が変更になることがあります。ワクチン接種が浸透するまでこの状態が続くと思われます。</p>
 
       <div class="dojo-list__card-group">
         <div class="dojo-list__card-left">
           <div class="dojo-list__card">
-            <h2 class="dojo-list__card-title">Main Box</h2>
-            <ul>
+            <div class="cards-list__locations">
+            <h2 class="cards-list__locations-title">札幌</h2>
+            <ul class="cards-list__locations-list">
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate08.nikki.cmaker.jp/" target="_blank">白石区の空手教室</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate98.nikki.cmaker.jp/" target="_blank">厚別区の空手教室</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate2.dokkin.com/" target="_blank">中央区の空手教室</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate99.nikki.cmaker.jp/" target="_blank">豊平区の空手教室</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate3.dokkin.com/" target="_blank">清田区の空手教室</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate00.dokkin.com/" target="_blank">東区の空手教室</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate1.dokkin.com/" target="_blank">北区の空手教室</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate5.dokkin.com/" target="_blank">南区の空手教室</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★総本部一般部★</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★行事予定★</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate15.dokkin.com/" target="_blank">☆札幌居合部☆</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate15.dokkin.com/" target="_blank">★特別クラス★</a>
               </li>
               <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
+                <a class="dojo-list__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★女性限定クラス★</a>
               </li>
             </ul>
+            </div>
           </div>
           <div class="dojo-list__card">
-            <h2 class="dojo-list__card-title">Secondary Box</h2>
-            <ul>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-            </ul>
-          </div>
-          <div class="dojo-list__card">
-            <h2 class="dojo-list__card-title">Secondary Box</h2>
-            <ul>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-            </ul>
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">静岡県・福岡県</h2>
+              <ul class="cards-list__locations-list">
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate12.dokkin.com/" target="_blank">予備2</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="dojo-list__card-right">
           <div class="dojo-list__card">
-            <h2 class="dojo-list__card-title">Secondary Box</h2>
-            <ul>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-            </ul>
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">江別・岩見沢・石狩(花川空手)</h2>
+              <ul class="cards-list__locations-list">
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate10.dokkin.com/" target="_blank">江別市の空手教室</a>
+                </li>
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate10.dokkin.com/" target="_blank">岩見沢市の空手教室</a>
+                </li>
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate14.dokkin.com/" target="_blank">石狩市の空手教室</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="dojo-list__card">
-            <h2 class="dojo-list__card-title">Secondary Box</h2>
-            <ul>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-            </ul>
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">恵庭(島松)・帯広</h2>
+              <ul class="cards-list__locations-list">
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate11.dokkin.com/" target="_blank">帯広市の空手教室</a>
+                </li>
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate9.dokkin.com/" target="_blank">恵庭市の空手教室</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="dojo-list__card">
-            <h2 class="dojo-list__card-title">Secondary Box</h2>
-            <ul>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-            </ul>
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">当別・長沼・喜茂別・京極</h2>
+              <ul class="cards-list__locations-list">
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate14.dokkin.com/" target="_blank">当別町の空手教室</a>
+                </li>
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate9.dokkin.com/" target="_blank">長沼町の空手教室</a>
+                </li>
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate11.dokkin.com/" target="_blank">喜茂別町の空手教室</a>
+                </li>
+                <li class="dojo-list__location">
+                  <a class="dojo-list__location-link" href="https://karate11.dokkin.com/" target="_blank">京極町の空手教室</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="dojo-list__card">
-            <h2 class="dojo-list__card-title">Secondary Box</h2>
-            <ul>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-              <li class="dojo-list__location">
-                <a class="dojo-list__location-link">A location</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="dojo-list__map">
-        <h2 class="dojo-list__map-title">
-          札幌・近郊エリア｜清心会空手連盟 公認支部・関連道場マップ
-        </h2>
-        <div class="dojo-list__map-frame">
-          <iframe
-            src="https://www.google.com/maps/d/embed?mid=1rAno9HwrFRZw9hWdg5c6KHO0BQE"
-            width="100%"
-            height="400"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>

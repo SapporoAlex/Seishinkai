@@ -1,0 +1,9 @@
+---
+const { class: className = "button" } = Astro.props;
+---
+
+<button class={className}>
+  <span class="button__label">
+    <slot />
+  </span>
+</button>

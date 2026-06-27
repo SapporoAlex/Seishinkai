@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lang-en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -11,7 +11,7 @@
     <meta property="og:title" content="Welcome">
     <meta property="og:site_name" content="清心会空手">
     <meta property="og:description" content="清心会空手">
-    <meta property="og:url" content="https://seishinkan.ne.jp//">
+    <meta property="og:url" content="https://seishinkan.ne.jp//en/">
     <meta property="og:image" content="https://seishinkan.ne.jp//seishinkai/assets/images/ogp.png">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
@@ -20,18 +20,17 @@
     <meta name="format-detection" content="telephone=no">
 
     <link type="image/x-icon" rel="shortcut icon" href="/seishinkai/favicon.ico">
-    <link rel="canonical" href="https://seishinkan.ne.jp//">
+    <link rel="canonical" href="https://seishinkan.ne.jp//en/">
     <!-- hreflang alternates -->
-    <link rel="alternate" href="https://seishinkan.ne.jp//" hreflang="en">
-    <link rel="alternate" href="https://seishinkan.ne.jp//en/" hreflang="ja">
+    <link rel="alternate" href="https://seishinkan.ne.jp//en/" hreflang="en">
+    <link rel="alternate" href="https://seishinkan.ne.jp//" hreflang="ja">
     <link rel="alternate" href="https://seishinkan.ne.jp//" hreflang="x-default">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/seishinkai/assets/css/swiper-bundle.min.css">
     <script src="/seishinkai/assets/js/swiper-bundle.min.js"></script>
-<script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DlaX8op9.js"></script>
+    <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.3GgHbPBN.js"></script>
   <link rel="stylesheet" href="/assets/css/style.css"></head>
   <body>
     <header class="header">
@@ -39,11 +38,35 @@
 
     <div class="header__left">
       <img class="header__logo" src="/seishinkai/assets/images/logo.svg" alt="清心会空手のロゴ">
-      <p class="header__brand">清心会</p>
+      <p class="header__brand">Seishinkai</p>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li><a href="/">Home</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/contact/">Contact</a></li><li><a href="/en/joining/">Joining</a></li><li><a href="/en/locations/">Locations</a></li><li><a href="/en/schedule/">Schedule</a></li>
+        <li>
+            <a class="header__nav-link header__nav-link--active" href="/en/" aria-current="page">
+              Home
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/about/">
+              About
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/schedule/">
+              Schedule
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/membership/">
+              Membership
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/instructors/">
+              Instructors
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/dojo/">
+              Dojo List
+            </a>
+          </li>
       </ul>
       <div class="header__lang-desktop" role="group" aria-label="Language switch">
         <a class="header__lang-link" href="/">Ja</a>
@@ -57,10 +80,35 @@
     <div class="header__drawer" id="js-drawer" tabindex="-1" aria-hidden="true">
       <button class="header__drawer-close" aria-label="Close menu" id="js-drawer-close">&times;</button>
       <ul class="header__drawer-list">
-        <li><a href="/">Home</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/contact/">Contact</a></li><li><a href="/en/joining/">Joining</a></li><li><a href="/en/locations/">Locations</a></li><li><a href="/en/schedule/">Schedule</a></li>
+        <li>
+            <a class="header__nav-link header__nav-link--active" href="/en/" aria-current="page">
+              Home
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/about/">
+              About
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/schedule/">
+              Schedule
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/membership/">
+              Membership
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/instructors/">
+              Instructors
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/en/dojo/">
+              Dojo List
+            </a>
+          </li>
       </ul>
       <div class="header__drawer-lang" role="group" aria-label="Language switch">
         <a class="header__lang-link" href="/">Ja</a>
+        <span class="header__drawer-lang-separator">|</span>
         <a class="header__lang-link header__lang-link--active" href="/en/">En</a>
       </div>
     </div>
@@ -101,15 +149,14 @@
       <div class="fv__overlay"></div>
       <div class="fv__text">
         <h1 class="fv__title">Seishinkai</h1>
-        <p class="fv__copy">Karate for Modern Life<br>Health. <br class="u-sp-visible">Discipline. <br class="u-sp-visible">Self-Defense.</p>
+        <p class="fv__copy">Karate for Modern Life:<br> Health,<br> Physical Development,<br> and Self-Defense</p>
         <a href="#contact">
           <button class="button-inverse">
-            <span class="button__label">Free trial</span>
-            <div class="arrow-right" aria-hidden="true">
-    <div class="arrow-right__circle">
-        <span class="arrow-right__chevron"></span>
-    </div>
-</div>
+            <span class="button__label">Free Trial Lesson</span>
+            <svg class="button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M5 12h14"></path>
+  <path d="m13 6 6 6-6 6"></path>
+</svg>
           </button>
         </a>
       </div>
@@ -119,21 +166,14 @@
   <section class="cards-who" id="cards-who">
       <div class="cards-who__container">
         <img class="cards-who__top-img" src="/seishinkai/assets/images/logo.svg" alt="">
-          <h2 class="cards-who__title">Seishinkai</h2>
-          <p class="cards-who__text">Seishinkai is a traditional karate dojo that values personal growth, physical well-being, and health over competition.
-          For more than 50 years, we have been active mainly in Sapporo, welcoming students from ages 3 to 83.
-          For children, karate supports healthy physical development and discipline.
-          For adults and seniors, it provides a way to maintain fitness and overall well-being.
-          For women, it offers practical self-defense skills.
-          We provide instruction tailored to each individual’s age and goals, while also offering classes for students who are not currently attending school and welcoming international participants.
-          Our dojo is a place where everyone can learn and train with confidence in a safe and supportive environment.</p>
-          <a href="https://seishinkan.ne.jp/profile.html"><button class="button">
-    <span class="button__label">Learn more</span>
-    <div class="arrow-right" aria-hidden="true">
-    <div class="arrow-right__circle">
-        <span class="arrow-right__chevron"></span>
-    </div>
-</div>
+          <h2 class="cards-who__title">Seishinkai Karate</h2>
+          <p class="cards-who__text">
+          Seishinkai is a traditional karate dojo that values personal growth, physical well-being, and health over competition-focused training. Students range in age from 3 to 83, and we have been serving the Sapporo community for over 50 years. For children, karate supports healthy physical development; for adults and seniors, it promotes lifelong wellness; and for women, it provides practical self-defense skills through instruction tailored to individual needs. We also offer classes for students who are not currently attending school and welcome international participants, providing a safe and supportive environment where everyone can learn with confidence.
+          </p>
+          <a href="/en/about/"><button class="button">
+  <span class="button__label">
+    Learn More
+  </span>
 </button></a>
           <div class="cards-who__card-box">
             <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_01.png')">
@@ -153,15 +193,15 @@
             <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_03.png')">
                 <div class="cards-who__card-overlay"></div>
                 <div class="cards-who__card-content">
-                    <h2 class="cards-who__card-title">For women</h2>
-                    <p class="cards-who__card-text">Practical self-defense and awareness training</p>
+                    <h2 class="cards-who__card-title">For everyone</h2>
+                    <p class="cards-who__card-text">Build strength, resilience, and overall wellbeing</p>
                 </div>
             </div>
             <div class="cards-who__card" style="background-image: url('/seishinkai/assets/images/img_why_04.png')">
                 <div class="cards-who__card-overlay"></div>
                 <div class="cards-who__card-content">
-                    <h2 class="cards-who__card-title">For everyone</h2>
-                    <p class="cards-who__card-text">Build strength, resilience, and overall wellbeing</p>
+                    <h2 class="cards-who__card-title">For women</h2>
+                    <p class="cards-who__card-text">Practical self-defense and awareness training</p>
                 </div>
             </div>
         </div>
@@ -169,30 +209,30 @@
   </section>
 
   <section class="top-cards__section">
-    <div class="layout__container">
+    <div class="top-cards__container">
       <div class="top-cards__grid">
-        <a class="top-cards__link" href="https://seishinkan.ne.jp/keiko.html">
+        <a class="top-cards__link" href="/en/schedule/">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_schedule.png">
             <h2>Schedule</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="https://seishinkan.ne.jp/schedule.html">
+        <a class="top-cards__link" href="/en/dojo/">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_dojo.png">
-            <h2>Dojos</h2>
+            <h2>Dojo List</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="https://seishinkan.ne.jp/manifesto.html">
+        <a class="top-cards__link" href="/en/instructors/">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_instructors.png">
             <h2>Instructors</h2>
           </div>
         </a>
 
-        <a class="top-cards__link" href="https://seishinkan.ne.jp/schedule2.html">
+        <a class="top-cards__link" href="/en/membership/">
           <div class="top-cards__card">
             <img class="top-cards__image" src="/seishinkai/assets/images/icon_join.png">
             <h2>Membership</h2>
@@ -207,8 +247,8 @@
     <div class="layout__container">
       <div class="top-contact__contact-header">
         <span>CONTACT</span>
-        <h2>Trial Class Registration & Contact</h2>
-        <p>Please contact us here to apply for a trial karate class at Seishinkai.</p>
+        <h2>Trial Class Registration & Inquiries</h2>
+        <p>Please contact us here to register for a trial class or make an inquiry about Seishinkai Karate.</p>
       </div>
 
       <div class="top-contact__contact-grid">
@@ -218,7 +258,7 @@
           <div class="top-contact__icon">☎</div>
           <h3>Phone</h3>
           <p class="top-contact__big">011-300-0048</p>
-          <small>Mon & Thu 1:00–4:00 PM / Tue, Thu & Fri 1:00–3:00 PM</small>
+          <small>Mon & Thu 1:00 PM–4:00 PM / Tue, Thu & Fri 1:00 PM–3:00 PM</small>
         </div>
 
         <!-- Email -->
@@ -238,30 +278,29 @@
 
         <!-- QR -->
         <div class="top-contact__contact-card top-contact__qr-card">
-          <img src="/seishinkai/assets/images/img_qr_volunteer.jpg" alt="お問い合わせQRコード">
-          <p>Easy contact from your smartphone</p>
+          <img src="/seishinkai/assets/images/img_qr_volunteer.jpg" alt="Contact QR Code">
+          <p>Quick and easy contact from your smartphone</p>
         </div>
 
       </div>
 
-
       <div class="top-contact__contact-info">
         <div>
           <h4>Office Hours</h4>
-          <p>Monday–Friday 1:00–3:00 PM</p>
+          <p>Monday–Friday 1:00 PM–3:00 PM</p>
         </div>
 
         <div>
           <h4>Location</h4>
-          <p>2-1-27 Sakaedori, Shiroishi-ku, Sapporo (Along Tohoku-dori)</p>
+          <p>2-1-27 Sakaedori, Shiroishi-ku, Sapporo (along Tohoku-dori)</p>
         </div>
       </div>
 
       <div class="top-contact__notice-box">
         <strong>Please Note</strong>
         <p>
-          Our office is staffed on a rotating schedule, so phone calls may not always be answered during office hours.
-          If you are unable to reach us, please contact us by email.
+          Our office is staffed on a rotating schedule, so we may occasionally be unable to answer phone calls during office hours.
+          In such cases, please contact us by email.
         </p>
       </div>
     </div>
@@ -273,6 +312,6 @@
       <span class="back-to-top__chevron" aria-hidden="true"></span>
     </button>
     <footer class="footer">
-  <p class="footer__text">Copyright© 1995 全日本清心会空手道連盟 All Rights Reserved.</p>
+  <p class="footer__text">Copyright© 1995 All Japan Seishinkai Karate Federation All Rights Reserved.</p>
 </footer>
   </body></html>

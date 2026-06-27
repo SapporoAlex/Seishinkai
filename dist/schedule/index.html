@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="lang-ja">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -27,11 +27,10 @@
     <link rel="alternate" href="https://seishinkan.ne.jp//" hreflang="x-default">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/seishinkai/assets/css/swiper-bundle.min.css">
     <script src="/seishinkai/assets/js/swiper-bundle.min.js"></script>
-<script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.DlaX8op9.js"></script>
+    <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.3GgHbPBN.js"></script>
   <link rel="stylesheet" href="/assets/css/style.css"></head>
   <body>
     <header class="header">
@@ -43,12 +42,36 @@
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li><a href="/">トップ</a></li><li><a href="/about/">概要</a></li><li><a href="/contact/">お問い合わせ</a></li><li><a href="/joining/">参加方法</a></li><li><a href="/locations/">店舗</a></li><li><a href="/schedule/">スケジュール</a></li>
+        <li>
+            <a class="header__nav-link" href="/">
+              トップ
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/about/">
+              概要
+            </a>
+          </li><li>
+            <a class="header__nav-link header__nav-link--active" href="/schedule/" aria-current="page">
+              スケジュール
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/membership/">
+              入会
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/instructors/">
+              インストラクター
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/dojo/">
+              店舗一覧
+            </a>
+          </li>
       </ul>
       <div class="header__lang-desktop" role="group" aria-label="Language switch">
-        <a class="header__lang-link header__lang-link--active" href="/">Ja</a>
+        <a class="header__lang-link header__lang-link--active" href="/schedule/">Ja</a>
         <span class="header__lang-separator">|</span>
-        <a class="header__lang-link" href="/en/">En</a>
+        <a class="header__lang-link" href="/en/schedule/">En</a>
       </div>
     </nav>
     <button class="header__hamburger" aria-label="Open menu" id="js-hamburger">
@@ -57,11 +80,36 @@
     <div class="header__drawer" id="js-drawer" tabindex="-1" aria-hidden="true">
       <button class="header__drawer-close" aria-label="Close menu" id="js-drawer-close">&times;</button>
       <ul class="header__drawer-list">
-        <li><a href="/">トップ</a></li><li><a href="/about/">概要</a></li><li><a href="/contact/">お問い合わせ</a></li><li><a href="/joining/">参加方法</a></li><li><a href="/locations/">店舗</a></li><li><a href="/schedule/">スケジュール</a></li>
+        <li>
+            <a class="header__nav-link" href="/">
+              トップ
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/about/">
+              概要
+            </a>
+          </li><li>
+            <a class="header__nav-link header__nav-link--active" href="/schedule/" aria-current="page">
+              スケジュール
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/membership/">
+              入会
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/instructors/">
+              インストラクター
+            </a>
+          </li><li>
+            <a class="header__nav-link" href="/dojo/">
+              店舗一覧
+            </a>
+          </li>
       </ul>
       <div class="header__drawer-lang" role="group" aria-label="Language switch">
-        <a class="header__lang-link header__lang-link--active" href="/">Ja</a>
-        <a class="header__lang-link" href="/en/">En</a>
+        <a class="header__lang-link header__lang-link--active" href="/schedule/">Ja</a>
+        <span class="header__drawer-lang-separator">|</span>
+        <a class="header__lang-link" href="/en/schedule/">En</a>
       </div>
     </div>
     <div class="header__drawer-backdrop" id="js-drawer-backdrop"></div>
@@ -69,8 +117,412 @@
 </header>
     <main>
       
-    <h1>Schedule Page</h1>
-    <p>This is the schedule page.</p>
+  <section class="schedule">
+    <div class="schedule__container">
+      <div class="section__title-area">
+        <span class="section-label">SCHEDULE</span>
+        <h1 class="section-title">空手道場・教室の稽古予定日</h1>
+      </div>
+      <p class="schedule__introduction">
+        札幌市を中心とする各地区での空手練習予定です。諸事により急遽、稽古がお休みになる場合は右欄の掲示板に案内を出して
+        います(例:風雪害、コロナなど)。コロナの関係で会場の広さにより人数制限をしておりますので出稽古希望者は事前に担当支部
+        長経由で確認後の参加となります。インフルエンザなどで学校閉鎖になった場合はお休みとなります。
+      </p>
+
+      <div class="schedule__card-group">
+        <div class="schedule__card-left">
+          <div class="schedule__card">
+            <div class="cards-list__locations">
+            <h2 class="cards-list__locations-title">札幌</h2>
+            <ul class="cards-list__locations-list">
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate08.nikki.cmaker.jp/" target="_blank">白石区の空手教室</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate98.nikki.cmaker.jp/" target="_blank">厚別区の空手教室</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate2.dokkin.com/" target="_blank">中央区の空手教室</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate99.nikki.cmaker.jp/" target="_blank">豊平区の空手教室</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate3.dokkin.com/" target="_blank">清田区の空手教室</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate00.dokkin.com/" target="_blank">東区の空手教室</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate1.dokkin.com/" target="_blank">北区の空手教室</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate5.dokkin.com/" target="_blank">南区の空手教室</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★総本部一般部★</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★行事予定★</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate15.dokkin.com/" target="_blank">☆札幌居合部☆</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate15.dokkin.com/" target="_blank">★特別クラス★</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★女性限定クラス★</a>
+              </li>
+            </ul>
+            </div>
+          </div>
+          <div class="schedule__card">
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">静岡県・福岡県</h2>
+              <ul class="cards-list__locations-list">
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate12.dokkin.com/" target="_blank">予備2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="schedule__card-right">
+          <div class="schedule__card">
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">江別・岩見沢・石狩(花川空手)</h2>
+              <ul class="cards-list__locations-list">
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate10.dokkin.com/" target="_blank">江別市の空手教室</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate10.dokkin.com/" target="_blank">岩見沢市の空手教室</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate14.dokkin.com/" target="_blank">石狩市の空手教室</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="schedule__card">
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">恵庭(島松)・帯広</h2>
+              <ul class="cards-list__locations-list">
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate11.dokkin.com/" target="_blank">帯広市の空手教室</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate9.dokkin.com/" target="_blank">恵庭市の空手教室</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="schedule__card">
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">当別・長沼・喜茂別・京極</h2>
+              <ul class="cards-list__locations-list">
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate14.dokkin.com/" target="_blank">当別町の空手教室</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate9.dokkin.com/" target="_blank">長沼町の空手教室</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate11.dokkin.com/" target="_blank">喜茂別町の空手教室</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate11.dokkin.com/" target="_blank">京極町の空手教室</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+<!-- Dojo Cards Section -->
+    <div class="schedule-dojos__container">
+      <div class="layout__container">
+        <div class="section__title-area inverse">
+          <span class="section-label">DOJO LIST</span>
+          <h2 class="section-title">清心会・清心流 道場一覧</h2>
+        </div>
+
+        
+        <div class="schedule__dojos">
+          <h2 class="schedule__dojos-title">清心会直系・公認道場/自主管理道場</h2>
+          <p class="schedule__dojos-note">※練習日は下記をクリックして下さい</p>
+          <div class="schedule__dojos-grid">
+            <div class="dojo-card" data-dojo-id="sumiyoshi">
+  <div class="dojo-card__category">清心会直系・公認道場/自主管理道場</div>
+  <h3 class="dojo-card__name">札幌西地区本部・住吉塾</h3>
+  <p class="dojo-card__sensei">住吉一徳</p>
+  <button class="dojo-card__button" data-modal-trigger="sumiyoshi">
+    詳細を見る
+  </button>
+</div><div class="dojo-card" data-dojo-id="inoue">
+  <div class="dojo-card__category">清心会直系・公認道場/自主管理道場</div>
+  <h3 class="dojo-card__name">清心館井上道場</h3>
+  <p class="dojo-card__sensei">井上龍一郎</p>
+  <button class="dojo-card__button" data-modal-trigger="inoue">
+    詳細を見る
+  </button>
+</div>
+          </div>
+
+          <h2 class="schedule__dojos-title">清心流参加道場・加盟道場</h2>
+          <p class="schedule__dojos-note">※練習日時は下記へご確認ください</p>
+          <div class="schedule__dojos-grid">
+            <div class="dojo-card" data-dojo-id="takahashi">
+  <div class="dojo-card__category">清心流参加道場・加盟道場</div>
+  <h3 class="dojo-card__name">清心館髙橋道場</h3>
+  <p class="dojo-card__sensei">髙橋 剛</p>
+  <button class="dojo-card__button" data-modal-trigger="takahashi">
+    詳細を見る
+  </button>
+</div><div class="dojo-card" data-dojo-id="hokushinkai">
+  <div class="dojo-card__category">清心流参加道場・加盟道場</div>
+  <h3 class="dojo-card__name">北新会</h3>
+  <p class="dojo-card__sensei">高野 均</p>
+  <button class="dojo-card__button" data-modal-trigger="hokushinkai">
+    詳細を見る
+  </button>
+</div>
+          </div>
+
+          <h2 class="schedule__dojos-title">準加盟道場・提携協力道場</h2>
+          <p class="schedule__dojos-note">
+            ※練習日時は下記へご確認下さい。運営活動関係等は直接道場へ。
+          </p>
+          <div class="schedule__dojos-grid">
+            <div class="dojo-card" data-dojo-id="aozorakai">
+  <div class="dojo-card__category">準加盟道場・提携協力道場</div>
+  <h3 class="dojo-card__name"><a href='https://aozorakai.main.jp/' target='_blank'>青空会</a></h3>
+  <p class="dojo-card__sensei">青木和也</p>
+  <button class="dojo-card__button" data-modal-trigger="aozorakai">
+    詳細を見る
+  </button>
+</div><div class="dojo-card" data-dojo-id="muryujuku">
+  <div class="dojo-card__category">準加盟道場・提携協力道場</div>
+  <h3 class="dojo-card__name"><a href='https://muryukun.wixsite.com/muryukun' target='_blank'>無流塾</a></h3>
+  <p class="dojo-card__sensei">鈴木雄三</p>
+  <button class="dojo-card__button" data-modal-trigger="muryujuku">
+    詳細を見る
+  </button>
+</div>
+          </div>
+
+          <p class="schedule__dojos-footer">
+            加盟、準加盟道場は直接各団体へ問い合わせ下さい。
+          </p>
+        </div>
+        
+      </div>
+
+      <!-- Modals -->
+      <div class="dojo-modal" id="modal-sumiyoshi" data-modal="sumiyoshi">
+  <div class="dojo-modal__overlay" data-modal-close="sumiyoshi"></div>
+  <div class="dojo-modal__content">
+    <button class="dojo-modal__close" data-modal-close="sumiyoshi" aria-label="閉じる">
+      ×
+    </button>
+
+    <h2 class="dojo-modal__name">札幌西地区本部・住吉塾</h2>
+
+    <div class="dojo-modal__info">
+      <p class="dojo-modal__phone">
+        <span>電話:</span>
+        090-7517-3285
+      </p>
+      <p class="dojo-modal__sensei">
+        師範 住吉一徳
+        <span class="dojo-modal__subtitle">(清心会札幌西本部長)</span>
+      </p>
+    </div>
+
+    <div class="dojo-modal__locations">
+          <h3 class="dojo-modal__locations-title">活動地域</h3>
+          <ul class="dojo-modal__locations-list">
+            <li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新発寒</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>西町</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>手稲</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>宮の沢</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>前田</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新川</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新琴似</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>星置</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>発寒</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>西野</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>麻生</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>屯田</a></li><li><a href='https://sumiyoshijuku.org/schedule/' target='_blank'>八軒</a></li>
+          </ul>
+        </div>
+
+    <!-- {
+      categoryNotes[category] && (
+        <p class="dojo-modal__note">{categoryNotes[category]}</p>
+      )
+    } -->
+  </div>
+</div><div class="dojo-modal" id="modal-inoue" data-modal="inoue">
+  <div class="dojo-modal__overlay" data-modal-close="inoue"></div>
+  <div class="dojo-modal__content">
+    <button class="dojo-modal__close" data-modal-close="inoue" aria-label="閉じる">
+      ×
+    </button>
+
+    <h2 class="dojo-modal__name">清心館井上道場</h2>
+
+    <div class="dojo-modal__info">
+      <p class="dojo-modal__phone">
+        <span>電話:</span>
+        090-7646-9552
+      </p>
+      <p class="dojo-modal__sensei">
+        師範 井上龍一郎
+        
+      </p>
+    </div>
+
+    <div class="dojo-modal__locations">
+          <h3 class="dojo-modal__locations-title">活動地域</h3>
+          <ul class="dojo-modal__locations-list">
+            <li><a href='https://karate13.dokkin.com/' target='_blank'>井上道場</a></li>
+          </ul>
+        </div>
+
+    <!-- {
+      categoryNotes[category] && (
+        <p class="dojo-modal__note">{categoryNotes[category]}</p>
+      )
+    } -->
+  </div>
+</div><div class="dojo-modal" id="modal-takahashi" data-modal="takahashi">
+  <div class="dojo-modal__overlay" data-modal-close="takahashi"></div>
+  <div class="dojo-modal__content">
+    <button class="dojo-modal__close" data-modal-close="takahashi" aria-label="閉じる">
+      ×
+    </button>
+
+    <h2 class="dojo-modal__name">清心館髙橋道場</h2>
+
+    <div class="dojo-modal__info">
+      <p class="dojo-modal__phone">
+        <span>電話:</span>
+        090-3114-7066
+      </p>
+      <p class="dojo-modal__sensei">
+        師範 髙橋 剛
+        
+      </p>
+    </div>
+
+    <div class="dojo-modal__locations">
+          <h3 class="dojo-modal__locations-title">活動地域</h3>
+          <ul class="dojo-modal__locations-list">
+            <li>安平町</li><li>苫小牧市</li>
+          </ul>
+        </div>
+
+    <!-- {
+      categoryNotes[category] && (
+        <p class="dojo-modal__note">{categoryNotes[category]}</p>
+      )
+    } -->
+  </div>
+</div><div class="dojo-modal" id="modal-hokushinkai" data-modal="hokushinkai">
+  <div class="dojo-modal__overlay" data-modal-close="hokushinkai"></div>
+  <div class="dojo-modal__content">
+    <button class="dojo-modal__close" data-modal-close="hokushinkai" aria-label="閉じる">
+      ×
+    </button>
+
+    <h2 class="dojo-modal__name">北新会</h2>
+
+    <div class="dojo-modal__info">
+      <p class="dojo-modal__phone">
+        <span>電話:</span>
+        090-9086-7943
+      </p>
+      <p class="dojo-modal__sensei">
+        師範　高野 均
+        
+      </p>
+    </div>
+
+    <div class="dojo-modal__locations">
+          <h3 class="dojo-modal__locations-title">活動地域</h3>
+          <ul class="dojo-modal__locations-list">
+            <li>新冠町</li>
+          </ul>
+        </div>
+
+    <!-- {
+      categoryNotes[category] && (
+        <p class="dojo-modal__note">{categoryNotes[category]}</p>
+      )
+    } -->
+  </div>
+</div><div class="dojo-modal" id="modal-aozorakai" data-modal="aozorakai">
+  <div class="dojo-modal__overlay" data-modal-close="aozorakai"></div>
+  <div class="dojo-modal__content">
+    <button class="dojo-modal__close" data-modal-close="aozorakai" aria-label="閉じる">
+      ×
+    </button>
+
+    <h2 class="dojo-modal__name"><a href='https://aozorakai.main.jp/' target='_blank'>青空会</a></h2>
+
+    <div class="dojo-modal__info">
+      <p class="dojo-modal__phone">
+        <span>電話:</span>
+        090-9239-0144
+      </p>
+      <p class="dojo-modal__sensei">
+        師範 青木和也
+        
+      </p>
+    </div>
+
+    <div class="dojo-modal__locations">
+          <h3 class="dojo-modal__locations-title">活動地域</h3>
+          <ul class="dojo-modal__locations-list">
+            <li>月寒</li><li>真駒内</li><li>澄川</li><li>福井</li><li>平和</li><li>小樽</li>
+          </ul>
+        </div>
+
+    <!-- {
+      categoryNotes[category] && (
+        <p class="dojo-modal__note">{categoryNotes[category]}</p>
+      )
+    } -->
+  </div>
+</div><div class="dojo-modal" id="modal-muryujuku" data-modal="muryujuku">
+  <div class="dojo-modal__overlay" data-modal-close="muryujuku"></div>
+  <div class="dojo-modal__content">
+    <button class="dojo-modal__close" data-modal-close="muryujuku" aria-label="閉じる">
+      ×
+    </button>
+
+    <h2 class="dojo-modal__name"><a href='https://muryukun.wixsite.com/muryukun' target='_blank'>無流塾</a></h2>
+
+    <div class="dojo-modal__info">
+      <p class="dojo-modal__phone">
+        <span>電話:</span>
+        電話・Fax：043-304-5991
+      </p>
+      <p class="dojo-modal__sensei">
+        師範 鈴木雄三
+        
+      </p>
+    </div>
+
+    <div class="dojo-modal__locations">
+          <h3 class="dojo-modal__locations-title">活動地域</h3>
+          <ul class="dojo-modal__locations-list">
+            <li>千葉市</li>
+          </ul>
+        </div>
+
+    <!-- {
+      categoryNotes[category] && (
+        <p class="dojo-modal__note">{categoryNotes[category]}</p>
+      )
+    } -->
+  </div>
+</div>
+    </div>
+  </section>
 
     </main>
     <button id="js-back-to-top" class="back-to-top" aria-label="Back to top" type="button">
