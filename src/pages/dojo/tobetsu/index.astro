@@ -1,0 +1,95 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "当別町空手クラブ",
+    address: "当別町白樺町2792 当別町総合体育館",
+    schedule: ["土曜18:00(R6.4より)"],
+  },
+  {
+    no: 2,
+    marker: "★",
+    name: "長沼町空手クラブ",
+    address: "長沼町中央南2丁目 長沼スポーツセンター",
+    schedule: ["火曜18:30"],
+  },
+  {
+    no: 3,
+    marker: "★",
+    name: "喜茂別町空手クラブ",
+    address: "虻田郡喜茂別町字喜茂別22　喜茂別町武道館",
+    schedule: ["木曜18:30"],
+  },
+  {
+    no: 4,
+    marker: "★",
+    name: "京極町空手クラブ",
+    address: "虻田郡京極町京極160 京極町公民館",
+    schedule: ["火曜18:15/19:05"],
+  },
+  {
+    no: 5,
+    marker: "★",
+    name: "浜頓別空手クラブ",
+    address: "浜頓別町旭町3丁目15番地 浜頓別小学校",
+    schedule: ["水曜18:30/金曜18:30"],
+  },
+  {
+    name: "南幌町",
+    address: "計画中---参加者が集まれば",
+    schedule: [],
+  },
+  {
+    name: "真狩村",
+    address: "計画中---参加者が集まれば",
+    schedule: [],
+  },
+];
+---
+
+<BaseLayout
+  title="当別・長沼・喜茂別ほかの空手教室"
+  description="当別町・長沼町・喜茂別町・京極町・浜頓別町の清心会空手道場・教室一覧。各支部の稽古日をご案内します。"
+  lang="ja"
+  path="/dojo/tobetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">
+          当別空手道場・長沼空手教室・喜茂別空手道場・京極空手道場の一覧
+        </h1>
+      </div>
+      <p class="detail-page__contact">
+        お問い合わせは　TEL.011-300-0048(平日13:00-16:00)
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>本部直轄教室=お問い合わせは本部事務局へ
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img
+          src="/images/legacy/photo/Image2.jpg"
+          alt="清心会空手の稽古風景"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

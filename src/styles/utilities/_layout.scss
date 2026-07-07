@@ -16,15 +16,38 @@
   }
 }
 
-// &__container {
-//   padding: 80px var(--side-spacing-pc);
-//   margin-inline: auto;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   max-width: var(--max-width);
-//   text-align: start;
-//   @include mqsp {
-//     padding: 50px var(--side-spacing);
-//   }
-// }
+// Standard page wrapper, shared by all content pages (about, schedule,
+// dojo, instructors, membership, news — ja & en).
+.page-container {
+  padding: 80px var(--side-spacing-pc);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: var(--max-width);
+  width: 100%;
+  text-align: start;
+  @include mqsp {
+    padding: 50px var(--side-spacing);
+  }
+}
+
+// Standard page lead paragraph(s) below the title area.
+.page-intro {
+  color: var(--text-mid);
+  line-height: 2;
+  margin-bottom: 40px;
+
+  p {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--red);
+    text-decoration: underline;
+  }
+}

@@ -2,7 +2,10 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import DojoCard from "@components/DojoCard.astro";
 import DojoModal from "@components/DojoModal.astro";
-import dojos from "@data/dojos.json";
+import dojosData from "@data/dojos.json";
+
+// Merge each dojo's English overrides over the Japanese base fields
+const dojos = dojosData.map(({ en, ...base }) => ({ ...base, ...en }));
 
 // Group dojos by category
 const directDojos = dojos.filter((d) => d.category === "direct");
@@ -10,161 +13,200 @@ const participatingDojos = dojos.filter((d) => d.category === "participating");
 const affiliatedDojos = dojos.filter((d) => d.category === "affiliated");
 ---
 
-<BaseLayout title="Schedule" lang="en" path="/en/schedule/">
-  <section class="schedule" id="schedule">
-    <div class="schedule__container">
-      <h1>Page Title</h1>
-      <p class="schedule__introduction">
-        Dummy text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy text.
-        Dummy text. Dummy text. Dummy text. Dummy text.
+<BaseLayout
+  title="Training Schedule"
+  description="Training schedules for Seishinkai Karate dojos and classes — Sapporo, Ebetsu, Iwamizawa, Ishikari, Eniwa, Obihiro, and more across Hokkaido, Japan."
+  lang="en"
+  path="/en/schedule/"
+>
+  <section class="schedule">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">SCHEDULE</span>
+        <h1 class="section-title">Training Schedules by Dojo & Class</h1>
+      </div>
+      <p class="page-intro">
+        Practice schedules for each area, centered on Sapporo. If training is cancelled at short notice (heavy snow, illness outbreaks, etc.), a notice is posted on the bulletin board. Room capacity may be limited, so if you wish to visit another branch for practice, please confirm through your branch chief in advance. Classes are cancelled when schools close due to influenza or similar.
       </p>
 
       <div class="schedule__card-group">
-        <div class="schedule__card">
-          <h2 class="schedule__card-title">Main Box</h2>
-          <ul>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-            <li class="schedule__location">
-              <a class="schedule__location-link">A location</a>
-            </li>
-          </ul>
+        <div class="schedule__card-left">
+          <div class="schedule__card">
+            <div class="cards-list__locations">
+            <h2 class="cards-list__locations-title">Sapporo</h2>
+            <ul class="cards-list__locations-list">
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate08.nikki.cmaker.jp/" target="_blank">Shiroishi Ward</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate98.nikki.cmaker.jp/" target="_blank">Atsubetsu Ward</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate2.dokkin.com/" target="_blank">Chuo Ward</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate99.nikki.cmaker.jp/" target="_blank">Toyohira Ward</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate3.dokkin.com/" target="_blank">Kiyota Ward</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate00.dokkin.com/" target="_blank">Higashi Ward</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate1.dokkin.com/" target="_blank">Kita Ward</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate5.dokkin.com/" target="_blank">Minami Ward</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★HQ General Class★</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★Events★</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate15.dokkin.com/" target="_blank">☆Sapporo Iaido☆</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate15.dokkin.com/" target="_blank">★Special Class★</a>
+              </li>
+              <li class="schedule__location">
+                <a class="schedule__location-link" href="https://karate100.nikki.cmaker.jp/" target="_blank">★Women-only Class★</a>
+              </li>
+            </ul>
+            </div>
+          </div>
+          <div class="schedule__card">
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">Shizuoka & Fukuoka</h2>
+              <ul class="cards-list__locations-list">
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate12.dokkin.com/" target="_blank">Reserve 2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="schedule__card-right">
           <div class="schedule__card">
-            <h2 class="schedule__card-title">Secondary Box</h2>
-            <ul>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-            </ul>
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">Ebetsu / Iwamizawa / Ishikari (Hanakawa)</h2>
+              <ul class="cards-list__locations-list">
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate10.dokkin.com/" target="_blank">Ebetsu City</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate10.dokkin.com/" target="_blank">Iwamizawa City</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate14.dokkin.com/" target="_blank">Ishikari City</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="schedule__card">
-            <h2 class="schedule__card-title">Secondary Box</h2>
-            <ul>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-            </ul>
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">Eniwa (Shimamatsu) / Obihiro</h2>
+              <ul class="cards-list__locations-list">
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate11.dokkin.com/" target="_blank">Obihiro City</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate9.dokkin.com/" target="_blank">Eniwa City</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="schedule__card">
-            <h2 class="schedule__card-title">Secondary Box</h2>
-            <ul>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-              <li class="schedule__location">
-                <a class="schedule__location-link">A location</a>
-              </li>
-            </ul>
+            <div class="cards-list__locations">
+              <h2 class="cards-list__locations-title">Tobetsu / Naganuma / Kimobetsu / Kyogoku</h2>
+              <ul class="cards-list__locations-list">
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate14.dokkin.com/" target="_blank">Tobetsu Town</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate9.dokkin.com/" target="_blank">Naganuma Town</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate11.dokkin.com/" target="_blank">Kimobetsu Town</a>
+                </li>
+                <li class="schedule__location">
+                  <a class="schedule__location-link" href="https://karate11.dokkin.com/" target="_blank">Kyogoku Town</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Dojo Cards Section -->
-      <div class="schedule__dojos">
-        <h2 class="schedule__dojos-title">清心会直系・公認道場/自主管理道場</h2>
-        <p class="schedule__dojos-note">※練習日は下記をクリックして下さい</p>
-        <div class="schedule__dojos-grid">
-          {
-            directDojos.map((dojo) => (
-              <DojoCard
-                id={dojo.id}
-                name={dojo.name}
-                sensei={dojo.sensei}
-                category={dojo.category}
-              />
-            ))
-          }
+
+<!-- Dojo Cards Section -->
+    <div class="schedule-dojos__container">
+      <div class="layout__container">
+        <div class="section__title-area inverse">
+          <span class="section-label">DOJO LIST</span>
+          <h2 class="section-title">Seishinkai & Seishin-ryu Dojos</h2>
         </div>
 
-        <h2 class="schedule__dojos-title">清心流参加道場・加盟道場</h2>
-        <p class="schedule__dojos-note">※練習日時は下記へご確認ください</p>
-        <div class="schedule__dojos-grid">
-          {
-            participatingDojos.map((dojo) => (
-              <DojoCard
-                id={dojo.id}
-                name={dojo.name}
-                sensei={dojo.sensei}
-                category={dojo.category}
-              />
-            ))
-          }
+
+        <div class="schedule__dojos">
+          <h2 class="schedule__dojos-title">Seishinkai Direct & Certified Dojos / Self-managed Dojos</h2>
+          <p class="schedule__dojos-note">※ Click below for practice days</p>
+          <div class="schedule__dojos-grid">
+            {
+              directDojos.map((dojo) => (
+                <DojoCard
+                  id={dojo.id}
+                  name={dojo.name}
+                  sensei={dojo.sensei}
+                  category={dojo.category}
+                  lang="en"
+                />
+              ))
+            }
+          </div>
+
+          <h2 class="schedule__dojos-title">Participating & Member Dojos</h2>
+          <p class="schedule__dojos-note">※ Please confirm practice days with each dojo below</p>
+          <div class="schedule__dojos-grid">
+            {
+              participatingDojos.map((dojo) => (
+                <DojoCard
+                  id={dojo.id}
+                  name={dojo.name}
+                  sensei={dojo.sensei}
+                  category={dojo.category}
+                  lang="en"
+                />
+              ))
+            }
+          </div>
+
+          <h2 class="schedule__dojos-title">Associate & Partner Dojos</h2>
+          <p class="schedule__dojos-note">
+            ※ Please confirm practice days with each dojo below. For matters of administration, contact the dojo directly.
+          </p>
+          <div class="schedule__dojos-grid">
+            {
+              affiliatedDojos.map((dojo) => (
+                <DojoCard
+                  id={dojo.id}
+                  name={dojo.name}
+                  sensei={dojo.sensei}
+                  category={dojo.category}
+                  lang="en"
+                />
+              ))
+            }
+          </div>
+
+          <p class="schedule__dojos-footer">
+            For member and associate dojos, please contact each organization directly.
+          </p>
         </div>
 
-        <h2 class="schedule__dojos-title">準加盟道場・提携協力道場</h2>
-        <p class="schedule__dojos-note">
-          ※練習日時は下記へご確認下さい。運営活動関係等は直接道場へ。
-        </p>
-        <div class="schedule__dojos-grid">
-          {
-            affiliatedDojos.map((dojo) => (
-              <DojoCard
-                id={dojo.id}
-                name={dojo.name}
-                sensei={dojo.sensei}
-                category={dojo.category}
-              />
-            ))
-          }
-        </div>
-
-        <p class="schedule__dojos-footer">
-          加盟、準加盟道場は直接各団体へ問い合わせ下さい。
-        </p>
       </div>
 
       <!-- Modals -->
@@ -178,6 +220,7 @@ const affiliatedDojos = dojos.filter((d) => d.category === "affiliated");
             subtitle={dojo.subtitle}
             locations={dojo.locations}
             category={dojo.category}
+            lang="en"
           />
         ))
       }

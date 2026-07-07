@@ -1,6 +1,21 @@
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+  site: "https://seishinkan.ne.jp",
+
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: "ja",
+        locales: {
+          ja: "ja-JP",
+          en: "en-US",
+        },
+      },
+    }),
+  ],
+
   compressHTML: false,
 
   build: {

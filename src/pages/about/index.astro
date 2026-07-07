@@ -2,14 +2,19 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="About" lang="ja" path="/about/">
+<BaseLayout
+  title="清心会について"
+  description="全日本清心会空手道連盟（清心会空手）の概要と沿革のご紹介。設立からの歩み、理念、活動内容をご覧いただけます。"
+  lang="ja"
+  path="/about/"
+>
   <section class="about">
-    <div class="about__container">
+    <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">ABOUT</span>
         <h1 class="section-title">清心会について</h1>
       </div>
-      <div class="about__introduction">
+      <div class="page-intro">
         <p>
           清心会は、初代宗家没後の昭和61年に設立された清心館大久保道場(昭和51年発足の旧清心流空手道札幌支部・支部長大久保勝美)を母体に、平成16年2月に北海道知事の認可を得て、法人登記された空手団体として北海道最初のＮＰＯ法人(非営利目的)です。
         </p>
@@ -59,6 +64,20 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     後援会長渡辺良彦氏の協力で、清心館大久保道場(清心流大久保派)設立
                   </li>
                 </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure">
+                    <a href="https://ja.wikipedia.org/wiki/菊地和雄" target="_blank" rel="noopener">
+                      <img src="/seishinkai/assets/images/about/kikuchi.jpg" alt="清心流流祖・菊地和雄先生" loading="lazy" />
+                    </a>
+                    <figcaption>清心流流祖・菊地和雄先生<br>(1957年、東京三田にて清心流を創流)</figcaption>
+                  </figure>
+                  <figure class="about__timeline-figure">
+                    <a href="https://ja.wikipedia.org/wiki/本部朝基" target="_blank" rel="noopener">
+                      <img src="/seishinkai/assets/images/about/motobu.jpg" alt="本部拳法開祖・本部朝基先生" loading="lazy" />
+                    </a>
+                    <figcaption>本部拳法開祖・本部朝基先生<br>(清心会が先達の師と仰ぐ先師)</figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
@@ -113,6 +132,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     20支部を越え、北海道知事へ特定非営利活動法人としての認証申請を提出
                   </li>
                 </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure">
+                    <a href="https://ja.wikipedia.org/wiki/室木洋一" target="_blank" rel="noopener">
+                      <img src="/seishinkai/assets/images/about/muro.jpg" alt="北海道大学・室木洋一先生" loading="lazy" />
+                    </a>
+                    <figcaption>北海道大学・室木洋一先生<br>(清心会技術顧問 1927-2003)</figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
@@ -167,6 +194,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     初の海外としてスリランカ支部発足、常設道場･本通清心館設立
                   </li>
                 </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure">
+                    <a href="/about/okubo/">
+                      <img src="/seishinkai/assets/images/about/okubo.jpg" alt="清心流拳法空手道創始者・ISKF会長宗家 大久保勝美" loading="lazy" />
+                    </a>
+                    <figcaption>清心流拳法空手道創始者･ISKF会長宗家<br>大久保勝美</figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
@@ -225,6 +260,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     真駒内支部、パキスタン支部発足
                   </li>
                 </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure -wide">
+                    <img src="/seishinkai/assets/images/about/honbu.jpg" alt="総本部道場全景" loading="lazy" />
+                    <figcaption>総本部道場全景(2012年オープン)<br>総建坪200坪、常設道場としては道内最大規模</figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
@@ -281,6 +322,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     ニュージーランド支部発足、インド国内4支部となり海外62道場(約2700名突破)。
                   </li>
                 </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure">
+                    <a href="/about/tubasa/">
+                      <img src="/seishinkai/assets/images/about/at16.jpg" alt="総本部館長・二代目宗家 大久保翼" loading="lazy" />
+                    </a>
+                    <figcaption>総本部･館長(ISKF会長代行/二代目宗家)<br>大久保 翼(2020年襲名)</figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
@@ -316,17 +365,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
               <div class="u-col about__images">
                 <div class="about__image-case">
                   <div class="about__image-case-set">
-                    <img src="/seishinkai/assets/images/img_wappen_01.jpg" alt="" />
+                    <img src="/seishinkai/assets/images/img_wappen_01.jpg" alt="清心流空手の丸型刺繍ワッペン" />
                     <small>直径8cmワッペン</small>
                   </div>
                   <div class="about__image-case-set">
-                    <img src="/seishinkai/assets/images/img_wappen_02.jpg" alt="" />
+                    <img src="/seishinkai/assets/images/img_wappen_02.jpg" alt="清心流空手の角型ワッペン" />
                     <small>5cmx6.5cm袖ワッペン</small>
                   </div>
                   <div class="about__image-case-set">
                     <div class="u-row">
-                      <img src="/seishinkai/assets/images/img_wappen_03.jpg" alt="" />
-                      <img src="/seishinkai/assets/images/img_wappen_04.jpg" alt="" />
+                      <img src="/seishinkai/assets/images/img_wappen_03.jpg" alt="「清心流」の書" />
+                      <img src="/seishinkai/assets/images/img_wappen_04.jpg" alt="「清心会」の書" />
                     </div>
                     <small>胸刺繍</small>
                   </div>

@@ -4,17 +4,15 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import siteData from "@data/site.json";
 
-const siteTitle = siteData.title;
-const siteDescription = siteData.description;
-const siteDomain = siteData.url;
-const siteOgImage = siteData.ogImage;
+// Domain without trailing slash so URL joins never produce "//"
+const siteDomain = siteData.url.replace(/\/+$/, "");
 
 interface ListItem {
   path: string;
   name: string;
 }
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
   keywords?: string;
   ogImage?: string;
@@ -25,8 +23,6 @@ interface Props {
 const props = Astro.props;
 
 const lang = props.lang ?? "ja";
-const title = props.title && props.title !== "" ? props.title : siteData.title;
-const description = props.description ?? siteData.description;
 const keywords = props.keywords ?? undefined;
 const path = props.path ?? '/';
 const currentPath = path;
@@ -42,6 +38,7 @@ const ogLocaleMap: Record<string, string> = {
   en: "en_US",
 };
 const ogLocale = ogLocaleMap[lang] ?? "ja_JP";
+const ogLocaleAlternate = lang === "ja" ? "en_US" : "ja_JP";
 // Load localized strings from JSON under src/data/locales/{lang}.json
 let localeData = null;
 try {
@@ -52,6 +49,37 @@ try {
   localeData = (await import(`../data/locales/ja.json`)).default;
 }
 
+const localeSite = localeData?.site ?? {
+  name: siteData.title,
+  fullName: siteData.title,
+  defaultTitle: siteData.title,
+  description: siteData.description,
+  logoAlt: `${siteData.title}のロゴ`,
+  titleSeparator: "｜",
+  areaServed: "北海道",
+};
+
+// <title>: "Page Title｜Site Name", or the branded default title on the home page
+const fullTitle = props.title
+  ? `${props.title}${localeSite.titleSeparator}${localeSite.name}`
+  : localeSite.defaultTitle;
+const description = props.description ?? localeSite.description;
+
+const canonicalUrl = siteDomain + path;
+const alternateUrl = siteDomain + alternatePath;
+const ogImageUrl = siteDomain + ogImage;
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  name: localeSite.fullName,
+  alternateName: localeSite.name,
+  url: siteDomain + (lang === "en" ? "/en/" : "/"),
+  logo: siteDomain + siteData.logo,
+  sport: "Karate",
+  areaServed: localeSite.areaServed,
+};
+
 const headerProps = localeData?.header ?? {
   brand: siteData.title,
   nav: [
@@ -61,6 +89,7 @@ const headerProps = localeData?.header ?? {
     { label: '入会', href: '/membership/' },
     { label: 'インストラクター', href: '/instructors/' },
     { label: '道場一覧', href: '/dojo/' },
+    { label: 'ニュース・SNS', href: '/news/' },
   ],
 };
 
@@ -71,29 +100,31 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
 <html lang={lang} class={lang === 'en' ? 'lang-en' : 'lang-ja'}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{siteTitle}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
     <!-- <GtmHeader /> -->
-    {description ? <meta name="description" content={description} /> : <meta name="description" content="" />}
-    {keywords ? <meta name="keywords" content={keywords} /> : <meta name="keywords" content="" />}
+    <meta name="description" content={description} />
+    {keywords && <meta name="keywords" content={keywords} />}
 
-    <meta property="og:title" content={title} />
-    <meta property="og:site_name" content={siteTitle} />
-    <meta property="og:description" content={description ? description : siteDescription} />
-    <meta property="og:url" content={path ? siteDomain + path : siteDomain} />
-    <meta property="og:image" content={ogImage ? siteDomain + ogImage : siteOgImage} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:site_name" content={localeSite.name} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={ogLocale} />
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:locale:alternate" content={ogLocaleAlternate} />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <meta name="format-detection" content="telephone=no" />
 
     <link type="image/x-icon" rel="shortcut icon" href="/seishinkai/favicon.ico" />
-    <link rel="canonical" href={path ? siteDomain + path : siteDomain} />
+    <link rel="canonical" href={canonicalUrl} />
     <!-- hreflang alternates -->
-    <link rel="alternate" href={`${siteDomain}${path}`} hreflang={lang === 'ja' ? 'ja' : 'en'} />
-    <link rel="alternate" href={`${siteDomain}${alternatePath}`} hreflang={lang === 'ja' ? 'en' : 'ja'} />
+    <link rel="alternate" href={canonicalUrl} hreflang={lang === 'ja' ? 'ja' : 'en'} />
+    <link rel="alternate" href={alternateUrl} hreflang={lang === 'ja' ? 'en' : 'ja'} />
     <link rel="alternate" href={`${siteDomain}/`} hreflang="x-default" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -102,7 +133,7 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
     <script src="../scripts/main.js"></script>
   </head>
   <body>
-    <Header {...headerProps} lang={lang} currentPath={path} />
+    <Header {...headerProps} logoAlt={localeSite.logoAlt} lang={lang} currentPath={path} />
     <main>
       <slot />
     </main>

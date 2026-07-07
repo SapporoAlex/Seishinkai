@@ -1,14 +1,16 @@
 ---
 // Props:
 // - brand: string or html for the logo/brand link
+// - logoAlt: localized alt text for the logo image
 // - nav: array of { label, href } items for the main nav
-const { brand = 'Seishinkai', nav = [
+const { brand = 'Seishinkai', logoAlt = '清心会空手のロゴ', nav = [
   { label: 'Home', href: '/en/' },
   { label: 'About', href: '/en/about/' },
   { label: 'Schedule', href: '/en/schedule/' },
   { label: 'Membership', href: '/en/membership/' },
   { label: 'Instructors', href: '/en/instructors/' },
   { label: 'Dojo List', href: '/en/dojo/' },
+  { label: 'News & SNS', href: '/en/news/' },
 
 ], lang = 'ja', currentPath = '/' } = Astro.props;
 
@@ -28,7 +30,7 @@ const enHref = activePath.startsWith('/en/') ? activePath : activePath === '/' ?
   <div class="header__inner">
 
     <div class="header__left">
-      <img class="header__logo" src="/seishinkai/assets/images/logo.svg" alt="清心会空手のロゴ">
+      <img class="header__logo" src="/seishinkai/assets/images/logo.svg" alt={logoAlt}>
       <p class="header__brand">{brand}</p>
     </div>
     <nav class="header__nav">

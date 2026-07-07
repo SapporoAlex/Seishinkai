@@ -7,9 +7,15 @@ interface Props {
   subtitle: string;
   locations: string[];
   category: string;
+  lang?: string;
 }
 
-const { id, name, phone, title, subtitle, locations, category } = Astro.props;
+const { id, name, phone, title, subtitle, locations, category, lang = "ja" } =
+  Astro.props;
+
+const phoneLabel = lang === "en" ? "Phone:" : "電話:";
+const locationsLabel = lang === "en" ? "Locations" : "活動地域";
+const closeLabel = lang === "en" ? "Close" : "閉じる";
 
 // Category labels and notes
 const categoryNotes: Record<string, string> = {
@@ -22,7 +28,7 @@ const categoryNotes: Record<string, string> = {
 <div class="dojo-modal" id={`modal-${id}`} data-modal={id}>
   <div class="dojo-modal__overlay" data-modal-close={id}></div>
   <div class="dojo-modal__content">
-    <button class="dojo-modal__close" data-modal-close={id} aria-label="閉じる">
+    <button class="dojo-modal__close" data-modal-close={id} aria-label={closeLabel}>
       ×
     </button>
 
@@ -30,7 +36,7 @@ const categoryNotes: Record<string, string> = {
 
     <div class="dojo-modal__info">
       <p class="dojo-modal__phone">
-        <span>電話:</span>
+        <span>{phoneLabel}</span>
         {phone}
       </p>
       <p class="dojo-modal__sensei">
@@ -42,7 +48,7 @@ const categoryNotes: Record<string, string> = {
     {
       locations.length > 0 && (
         <div class="dojo-modal__locations">
-          <h3 class="dojo-modal__locations-title">活動地域</h3>
+          <h3 class="dojo-modal__locations-title">{locationsLabel}</h3>
           <ul class="dojo-modal__locations-list">
             {locations.map((location) => (
               <li set:html={location}></li>

@@ -1,19 +1,10 @@
 @use "../abstracts/_mixins.scss" as *;
 @use "../abstracts/_variables.scss" as *;
 
-.dojo-list {
-  &__container {
-    padding: 80px var(--side-spacing-pc);
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: var(--max-width);
-    text-align: start;
-    @include mqsp {
-      padding: 50px var(--side-spacing);
-    }
-  }
+// Shared styles for the /dojo/ and /schedule/ pages (ja & en).
+// Page wrappers use the .page-container / .page-intro utilities from utilities/_layout.scss.
+.dojo-list,
+.schedule {
   &-dojos__container {
     padding: 40px var(--side-spacing);
     background: linear-gradient(var(--navy), var(--blue));
@@ -38,15 +29,33 @@
       margin: 10px 0;
     }
   }
-  &__introduction {
-    margin-bottom: 60px;
 
-    color: var(--text-mid);
+  &__contact {
+    font-weight: 700;
+    color: var(--navy);
     margin-bottom: 32px;
     @include mqsp {
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
   }
+
+  &__map-link {
+    margin-top: 40px;
+    color: var(--text-mid);
+
+    a {
+      color: var(--red);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+
+  &__note {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    margin-top: 8px;
+  }
+
   &__card-group {
     display: flex;
     flex-direction: row;
@@ -60,19 +69,13 @@
       gap: 20px;
     }
   }
+
   &__card {
     width: 100%;
     border: 1px solid var(--border);
     padding: 30px 30px;
     background: #fff;
-    &-title {
-      @include mqsp {
-      }
-    }
-    &-text {
-      @include mqsp {
-      }
-    }
+
     &-left {
       width: 100%;
       display: flex;
@@ -150,7 +153,6 @@
 
   &__name {
     font-size: 1.25rem;
-    // font-weight: bold;
     margin: 0;
   }
 
@@ -254,7 +256,8 @@
   &__phone {
     margin: 0 0 12px;
     font-size: 1rem;
-    f strong {
+
+    span {
       display: inline-block;
       min-width: 60px;
     }

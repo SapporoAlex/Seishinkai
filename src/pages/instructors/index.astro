@@ -1,51 +1,60 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ProfileCard from "@components/ProfileCard.astro";
-import instructors from "@data/instructors.json";
+import sections from "@data/instructors.json";
 import beltLevels from "@data/belt-levels.json";
-
-// Group instructors by category
-const categories = ["1", "2", "3", "4"];
-const instructorsByCategory = categories.map((cat) => ({
-  category: cat,
-  instructors: instructors.filter((i) => i.category === cat),
-}));
-
-// Category labels
-const categoryLabels: Record<string, string> = {
-  "1": "カテゴリー1",
-  "2": "カテゴリー2",
-  "3": "カテゴリー3",
-  "4": "カテゴリー4",
-};
 ---
 
-<BaseLayout title="Instructors" lang="ja" path="/instructors/">
+<BaseLayout
+  title="師範・指導員紹介"
+  description="清心会空手の師範・支部長・指導員のご紹介。各道場を指導する指導陣の一覧です。"
+  lang="ja"
+  path="/instructors/"
+>
   <section class="instructors">
-    <div class="instructors__container">
-      <h1>インストラクター一覧</h1>
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">INSTRUCTORS</span>
+        <h1 class="section-title">師範・支部長</h1>
+      </div>
 
       {
-        instructorsByCategory.map((group) => (
+        sections.map((section) => (
           <div class="instructors__category">
             <h2 class="instructors__category-title">
-              {categoryLabels[group.category]}
+              {section.title}
+              {section.subtitle && (
+                <span class="instructors__category-subtitle">
+                  {section.subtitle}
+                </span>
+              )}
             </h2>
 
-            <div class="instructors__grid">
-              {group.instructors.map((instructor) => (
-                <ProfileCard
-                  id={instructor.id}
-                  image={instructor.image}
-                  name={instructor.name}
-                  date={instructor.date}
-                  prefecture={instructor.prefecture}
-                  position={instructor.position}
-                  profession={instructor.profession}
-                  tags={instructor.tags}
-                />
-              ))}
-            </div>
+            {section.groups.map((group) => (
+              <div class="instructors__group">
+                {group.title && (
+                  <h3 class="instructors__subsection-title">{group.title}</h3>
+                )}
+                {group.note && <p class="instructors__note">{group.note}</p>}
+
+                <div class="instructors__grid">
+                  {group.members.map((member) => (
+                    <ProfileCard
+                      id={member.id}
+                      image={member.image}
+                      name={member.name}
+                      role={member.role}
+                      position={member.position}
+                      date={member.date}
+                      prefecture={member.prefecture}
+                      profession={member.profession}
+                      details={member.details}
+                      tags={member.tags}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         ))
       }
@@ -55,16 +64,14 @@ const categoryLabels: Record<string, string> = {
           登録段位保持者 (※{beltLevels.lastUpdated}現在)
         </h2>
 
-        <table class="table">
+        <table class="instructors__dan-table">
           <tbody>
-            {
-              beltLevels.danRanks.map((rank) => (
-                <tr>
-                  <th>{rank.rank}</th>
-                  <td>{rank.count}名</td>
-                </tr>
-              ))
-            }
+            <tr>
+              {beltLevels.danRanks.map((rank) => <th>{rank.rank}</th>)}
+            </tr>
+            <tr>
+              {beltLevels.danRanks.map((rank) => <td>{rank.count}名</td>)}
+            </tr>
           </tbody>
         </table>
 

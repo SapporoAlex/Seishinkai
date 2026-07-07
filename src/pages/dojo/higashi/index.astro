@@ -1,0 +1,108 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "伏古空手クラブ",
+    address: "東区伏古7条2丁目 伏古記念会館",
+    schedule: ["土曜10:00"],
+  },
+  {
+    no: 2,
+    marker: "★",
+    name: "札苗空手クラブ",
+    address: "東区東苗穂7条2丁目 札苗モエレ交流センター",
+    schedule: ["水曜18:30"],
+  },
+  {
+    no: 3,
+    marker: "★",
+    name: "丘珠空手クラブ",
+    address: "東区北35条東23丁目7-11 丘珠たから児童会館(R5.5〜)",
+    schedule: ["月曜18:30"],
+  },
+  {
+    no: 4,
+    marker: "★",
+    name: "栄町空手クラブ",
+    address: "東区北42条東19丁目 三愛自動車ビル3F会議室",
+    schedule: ["日曜9:30"],
+  },
+  {
+    no: 5,
+    marker: "★",
+    name: "光星空手クラブ",
+    address: "東区北８条東7丁目1-3 新生児童会館体育室",
+    schedule: ["木曜18:25/19:35"],
+  },
+  {
+    no: 6,
+    marker: "★",
+    name: "東雁来空手クラブ",
+    address: "東区東雁来14条2丁目1-1 東雁来児童会館",
+    schedule: ["木曜18:30"],
+  },
+  {
+    no: 7,
+    marker: "★",
+    name: "札幌東空手クラブ",
+    address: "東区北36条東8丁目 栄地区センター2F",
+    schedule: ["火曜18:30/19:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="東区の空手教室"
+  description="札幌市東区の清心会空手道場・教室一覧。伏古・札苗・丘珠・栄町・光星・東雁来・札幌東の各クラブの稽古日をご案内します。"
+  lang="ja"
+  path="/dojo/higashi/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">札幌市東区空手道場・教室の一覧</h1>
+      </div>
+      <div class="detail-page__lead">
+        <p>
+          コロナの影響で市の管理施設は状況により使えない場合は近隣支部にての出稽古となります
+        </p>
+      </div>
+      <p class="detail-page__contact">
+        お問い合わせは　TEL.011-300-0048(平日13:00-16:00)
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>本部直轄教室=お問い合わせは本部事務局へ
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>講師派遣教室=お問い合わせは主催文化教室・スポーツクラブへ
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>自主管理道場=事務局又は直接、管理担当者へ
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img
+          src="/images/legacy/photo/Image2.jpg"
+          alt="清心会空手 稽古の様子"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

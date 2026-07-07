@@ -1,8 +1,127 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+
+const snsLinks = [
+  {
+    id: "facebook",
+    name: "Facebook グループ",
+    description: "清心会空手道場の公式Facebookグループ。日々の活動の様子をお届けします。",
+    href: "https://www.facebook.com/seishinkai.karate.dojo",
+  },
+  {
+    id: "x",
+    name: "X (Twitter)",
+    description: "清心会公式アカウント。最新のお知らせを発信しています。",
+    href: "https://twitter.com/Seishinkai2",
+  },
+  {
+    id: "blog",
+    name: "公式ブログ",
+    description: "稽古や行事の様子を綴る清心会道場の公式ブログです。",
+    href: "https://seishinkan-dojo.hateblo.jp/",
+  },
+  {
+    id: "youtube",
+    name: "YouTube チャンネル",
+    description: "演武・稽古・メディア出演などの動画を公開しています。",
+    href: "https://www.youtube.com/channel/UClIx3Srenlu1ddf5coow83A/playlists",
+  },
+  {
+    id: "bbs",
+    name: "掲示板・連絡事項",
+    description: "休講情報や連絡事項を掲載しています。悪天候時などはこちらをご確認ください。",
+    href: "https://seishinkan-dojo.bbs.fc2.com/",
+  },
+  {
+    id: "members",
+    name: "会員ブログ・Facebook",
+    description: "各支部・会員によるブログやFacebookページの一覧です。",
+    href: "/news/blogs/",
+  },
+  {
+    id: "events",
+    name: "清心会空手行事予定",
+    description: "大会・審査会・合宿など、年間の行事予定を掲載しています。",
+    href: "/news/archive/",
+  },
+];
 ---
 
-<BaseLayout title="Schedule" lang="ja" path="/news/">
-  <h1>Schedule</h1>
-  <p>View our schedule and classes.</p>
+<BaseLayout
+  title="ニュース・SNS"
+  description="清心会空手の最新ニュースとSNS・動画のご紹介。活動の様子やお知らせをご覧いただけます。"
+  lang="ja"
+  path="/news/"
+>
+  <section class="news">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">NEWS</span>
+        <h1 class="section-title">ニュース・SNS</h1>
+      </div>
+      <p class="page-intro">
+        清心会の最新情報は、SNS・ブログ・掲示板で随時発信しています。行事予定や稽古の様子、休講のお知らせなどは下記の各メディアからご覧ください。
+      </p>
+
+      <div class="news__grid">
+        {
+          snsLinks.map((sns) => (
+            <a class="news__card" href={sns.href} target="_blank" rel="noopener">
+              <span class={`news__icon news__icon--${sns.id}`} aria-hidden="true">
+                {sns.id === "facebook" && (
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+                  </svg>
+                )}
+                {sns.id === "x" && (
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.8 4h2.7l-6 6.8L21.5 20h-5.5l-4.3-5.6L6.7 20H4l6.4-7.3L3.7 4h5.7l3.9 5.1L17.8 4zm-1 14.4h1.5L8.6 5.5H7L16.8 18.4z" />
+                  </svg>
+                )}
+                {sns.id === "blog" && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20h9" />
+                    <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                  </svg>
+                )}
+                {sns.id === "youtube" && (
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
+                  </svg>
+                )}
+                {sns.id === "bbs" && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                  </svg>
+                )}
+                {sns.id === "members" && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                )}
+                {sns.id === "events" && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                )}
+              </span>
+              <span class="news__card-body">
+                <span class="news__card-name">{sns.name}</span>
+                <span class="news__card-desc">{sns.description}</span>
+              </span>
+              <span class="news__card-arrow" aria-hidden="true">→</span>
+            </a>
+          ))
+        }
+      </div>
+
+      <p class="news__note">※各リンクは外部サイトが開きます。</p>
+    </div>
+  </section>
 </BaseLayout>

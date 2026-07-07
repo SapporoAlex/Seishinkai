@@ -1,0 +1,65 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "恵庭市空手クラブ",
+    address: "恵庭市南島松389-3 島松体育館",
+    schedule: ["金曜16:00(R4.2より)"],
+  },
+  {
+    no: 2,
+    marker: "□",
+    name: "帯広市空手クラブ",
+    address: "帯広市西2条南24丁目　鉄南地区",
+    schedule: ["土曜18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="帯広・恵庭・旭川の空手教室"
+  description="恵庭市(島松)・帯広市の清心会空手道場・教室一覧。各支部の稽古日をご案内します。"
+  lang="ja"
+  path="/dojo/kitahiro/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">恵庭市空手道場・帯広市空手教室の一覧</h1>
+      </div>
+      <p class="detail-page__contact">
+        お問い合わせは　TEL.011-300-0048(平日13:00-16:00)
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>本部直轄教室=お問い合わせは本部事務局へ
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>自主管理道場=事務局又は直接、管理担当者へ
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img
+          src="/images/legacy/photo/Image2.jpg"
+          alt="清心会空手の稽古風景"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

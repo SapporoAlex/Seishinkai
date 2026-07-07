@@ -21,7 +21,28 @@
       "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>麻生</a>",
       "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>屯田</a>",
       "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>八軒</a>"
-    ]
+    ],
+    "en": {
+      "name": "Sapporo West District HQ / Sumiyoshi-juku",
+      "sensei": "Shihan Sumiyoshi",
+      "title": "Shihan Sumiyoshi",
+      "subtitle": "(Seishinkai Sapporo West Branch Chief)",
+      "locations": [
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Shin-Hassamu</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Nishimachi</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Teine</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Miyanosawa</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Maeda</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Shinkawa</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Shinkotoni</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Hoshioki</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Hassamu</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Nishino</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Asabu</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Tonden</a>",
+        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Hachiken</a>"
+      ]
+    }
   },
   {
     "id": "inoue",
@@ -33,7 +54,16 @@
     "subtitle": "",
     "locations": [
       "<a href='https://karate13.dokkin.com/' target='_blank'>井上道場</a>"
-    ]
+    ],
+    "en": {
+      "name": "Seishinkan Inoue Dojo",
+      "sensei": "Shihan Ryuichiro Inoue",
+      "title": "Shihan Ryuichiro Inoue",
+      "subtitle": "",
+      "locations": [
+        "<a href='https://karate13.dokkin.com/' target='_blank'>Inoue Dojo</a>"
+      ]
+    }
   },
   {
     "id": "takahashi",
@@ -46,7 +76,17 @@
     "locations": [
       "安平町",
       "苫小牧市"
-    ]
+    ],
+    "en": {
+      "name": "Seishinkan Takahashi Dojo",
+      "sensei": "Shihan Takahashi",
+      "title": "Shihan Takahashi",
+      "subtitle": "",
+      "locations": [
+        "Abira Town",
+        "Tomakomai City"
+      ]
+    }
   },
   {
     "id": "hokushinkai",
@@ -58,7 +98,16 @@
     "subtitle": "",
     "locations": [
       "新冠町"
-    ]
+    ],
+    "en": {
+      "name": "Hokushinkai",
+      "sensei": "Shihan Hitoshi Takano",
+      "title": "Shihan Hitoshi Takano",
+      "subtitle": "",
+      "locations": [
+        "Niikappu Town"
+      ]
+    }
   },
   {
     "id": "aozorakai",
@@ -75,7 +124,21 @@
       "福井",
       "平和",
       "小樽"
-    ]
+    ],
+    "en": {
+      "name": "<a href='https://aozorakai.main.jp/' target='_blank'>Aozorakai</a>",
+      "sensei": "Shihan Kazuya Aoki",
+      "title": "Shihan Kazuya Aoki",
+      "subtitle": "",
+      "locations": [
+        "Tsukisamu",
+        "Makomanai",
+        "Sumikawa",
+        "Fukui",
+        "Heiwa",
+        "Otaru"
+      ]
+    }
   },
   {
     "id": "muryujuku",
@@ -87,6 +150,16 @@
     "subtitle": "",
     "locations": [
       "千葉市"
-    ]
+    ],
+    "en": {
+      "name": "<a href='https://muryukun.wixsite.com/muryukun' target='_blank'>Muryu-juku</a>",
+      "phone": "Tel/Fax: 043-304-5991",
+      "sensei": "Shihan Yuzo Suzuki",
+      "title": "Shihan Yuzo Suzuki",
+      "subtitle": "",
+      "locations": [
+        "Chiba City"
+      ]
+    }
   }
 ]
