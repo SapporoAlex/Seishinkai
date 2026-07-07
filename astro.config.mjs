@@ -1,8 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
-const isGithubPages = process.env.GITHUB_ACTIONS === "true";
-const basePath = isGithubPages ? "/seishinkai/" : "/";
+const basePath = process.env.BASE_PATH || "/";
 
 export default defineConfig({
   site: process.env.PUBLIC_SITE_URL || "https://seishinkan.ne.jp",
