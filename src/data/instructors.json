@@ -11,7 +11,7 @@
         "members": [
           {
             "id": "mimura",
-            "image": "/seishinkai/assets/images/instructors/mimu2.jpg",
+            "image": "/assets/images/instructors/mimu2.jpg",
             "name": "故・三村佳代子",
             "role": "",
             "position": "",
@@ -23,7 +23,7 @@
           },
           {
             "id": "shinozaki",
-            "image": "/seishinkai/assets/images/instructors/sinozaki.jpg",
+            "image": "/assets/images/instructors/sinozaki.jpg",
             "name": "故・篠崎太郎",
             "role": "",
             "position": "",
@@ -35,7 +35,7 @@
           },
           {
             "id": "muroki-yoichi",
-            "image": "/seishinkai/assets/images/instructors/muroki-yoichi.jpg",
+            "image": "/assets/images/instructors/muroki-yoichi.jpg",
             "name": "故・室木洋一",
             "role": "",
             "position": "",
@@ -47,7 +47,7 @@
           },
           {
             "id": "tamas",
-            "image": "/seishinkai/assets/images/instructors/tamas.jpg",
+            "image": "/assets/images/instructors/tamas.jpg",
             "name": "タマス",
             "role": "",
             "position": "範士",
@@ -64,7 +64,7 @@
           },
           {
             "id": "alfonso",
-            "image": "/seishinkai/assets/images/instructors/alfo.jpg",
+            "image": "/assets/images/instructors/alfo.jpg",
             "name": "アルフォンソ",
             "role": "",
             "position": "師範",
@@ -95,7 +95,7 @@
         "members": [
           {
             "id": "okubo-tsubasa",
-            "image": "/seishinkai/assets/images/instructors/tsubasa.jpg",
+            "image": "/assets/images/instructors/tsubasa.jpg",
             "name": "大久保翼",
             "role": "総本部館長",
             "position": "首席師範",
@@ -107,7 +107,7 @@
           },
           {
             "id": "sumiyoshi",
-            "image": "/seishinkai/assets/images/instructors/sumiyoshi.jpg",
+            "image": "/assets/images/instructors/sumiyoshi.jpg",
             "name": "住吉一徳",
             "role": "統括本部長",
             "position": "教士",
@@ -119,7 +119,7 @@
           },
           {
             "id": "muroki-takushi",
-            "image": "/seishinkai/assets/images/instructors/muroki.jpg",
+            "image": "/assets/images/instructors/muroki.jpg",
             "name": "室木拓士",
             "role": "居合部長",
             "position": "師範",
@@ -131,7 +131,7 @@
           },
           {
             "id": "maekawa",
-            "image": "/seishinkai/assets/images/instructors/maekawa.jpg",
+            "image": "/assets/images/instructors/maekawa.jpg",
             "name": "前川信孝",
             "role": "古武術部長/広報部長",
             "position": "師範",
@@ -150,7 +150,7 @@
         "members": [
           {
             "id": "takashima",
-            "image": "/seishinkai/assets/images/instructors/takashima.jpg",
+            "image": "/assets/images/instructors/takashima.jpg",
             "name": "髙嶋",
             "role": "",
             "position": "師範代",
@@ -162,7 +162,7 @@
           },
           {
             "id": "okimura",
-            "image": "/seishinkai/assets/images/instructors/oki.jpg",
+            "image": "/assets/images/instructors/oki.jpg",
             "name": "沖村さおり",
             "role": "",
             "position": "三段",
@@ -174,7 +174,7 @@
           },
           {
             "id": "shima",
-            "image": "/seishinkai/assets/images/instructors/shima.jpg",
+            "image": "/assets/images/instructors/shima.jpg",
             "name": "島",
             "role": "",
             "position": "二段",
@@ -193,7 +193,7 @@
         "members": [
           {
             "id": "masuda",
-            "image": "/seishinkai/assets/images/instructors/masuda.jpg",
+            "image": "/assets/images/instructors/masuda.jpg",
             "name": "増田",
             "role": "",
             "position": "準指導員",
@@ -205,7 +205,7 @@
           },
           {
             "id": "noro",
-            "image": "/seishinkai/assets/images/instructors/noro.jpg",
+            "image": "/assets/images/instructors/noro.jpg",
             "name": "野呂",
             "role": "",
             "position": "",
@@ -217,7 +217,7 @@
           },
           {
             "id": "rui",
-            "image": "/seishinkai/assets/images/instructors/rui.jpg",
+            "image": "/assets/images/instructors/rui.jpg",
             "name": "瑠唯",
             "role": "",
             "position": "",
@@ -236,7 +236,7 @@
         "members": [
           {
             "id": "inoue",
-            "image": "/seishinkai/assets/images/instructors/inoue.jpg",
+            "image": "/assets/images/instructors/inoue.jpg",
             "name": "井上龍一郎",
             "role": "",
             "position": "師範",
@@ -248,7 +248,7 @@
           },
           {
             "id": "inuura",
-            "image": "/seishinkai/assets/images/instructors/inuura.jpg",
+            "image": "/assets/images/instructors/inuura.jpg",
             "name": "犬浦壽信",
             "role": "",
             "position": "師範",
@@ -260,7 +260,7 @@
           },
           {
             "id": "ishimori",
-            "image": "/seishinkai/assets/images/instructors/ishimori.jpg",
+            "image": "/assets/images/instructors/ishimori.jpg",
             "name": "石森忠之",
             "role": "",
             "position": "師範",
@@ -272,7 +272,7 @@
           },
           {
             "id": "namikawa",
-            "image": "/seishinkai/assets/images/instructors/namikawa.jpg",
+            "image": "/assets/images/instructors/namikawa.jpg",
             "name": "波川和明",
             "role": "",
             "position": "師範",
@@ -284,7 +284,7 @@
           },
           {
             "id": "inomata",
-            "image": "/seishinkai/assets/images/instructors/inomata.jpg",
+            "image": "/assets/images/instructors/inomata.jpg",
             "name": "猪又敬之",
             "role": "",
             "position": "師範",
@@ -296,7 +296,7 @@
           },
           {
             "id": "kudo",
-            "image": "/seishinkai/assets/images/instructors/kudo.jpg",
+            "image": "/assets/images/instructors/kudo.jpg",
             "name": "工藤哲弘",
             "role": "",
             "position": "師範代",
@@ -308,7 +308,7 @@
           },
           {
             "id": "kudo-hiromi",
-            "image": "/seishinkai/assets/images/instructors/hiromi.jpg",
+            "image": "/assets/images/instructors/hiromi.jpg",
             "name": "工藤博美",
             "role": "",
             "position": "師範",
@@ -320,7 +320,7 @@
           },
           {
             "id": "wakabayashi",
-            "image": "/seishinkai/assets/images/instructors/wakabayashi.jpg",
+            "image": "/assets/images/instructors/wakabayashi.jpg",
             "name": "若林敬司",
             "role": "",
             "position": "師範代",
@@ -332,7 +332,7 @@
           },
           {
             "id": "mikami",
-            "image": "/seishinkai/assets/images/instructors/mikami.jpg",
+            "image": "/assets/images/instructors/mikami.jpg",
             "name": "三上 淳",
             "role": "",
             "position": "指導員",
@@ -344,7 +344,7 @@
           },
           {
             "id": "yoshida",
-            "image": "/seishinkai/assets/images/instructors/yoshida.jpg",
+            "image": "/assets/images/instructors/yoshida.jpg",
             "name": "吉田ますみ",
             "role": "",
             "position": "三段",
@@ -356,7 +356,7 @@
           },
           {
             "id": "kimura",
-            "image": "/seishinkai/assets/images/instructors/kimura.jpg",
+            "image": "/assets/images/instructors/kimura.jpg",
             "name": "木村孝雄",
             "role": "",
             "position": "三段",
@@ -368,7 +368,7 @@
           },
           {
             "id": "oikawa",
-            "image": "/seishinkai/assets/images/instructors/oikawa.jpg",
+            "image": "/assets/images/instructors/oikawa.jpg",
             "name": "及川義彦",
             "role": "",
             "position": "指導員",
@@ -380,7 +380,7 @@
           },
           {
             "id": "yamazaki",
-            "image": "/seishinkai/assets/images/instructors/asami.jpg",
+            "image": "/assets/images/instructors/asami.jpg",
             "name": "山崎麻美",
             "role": "",
             "position": "三段",
@@ -392,7 +392,7 @@
           },
           {
             "id": "komada",
-            "image": "/seishinkai/assets/images/instructors/komada.jpg",
+            "image": "/assets/images/instructors/komada.jpg",
             "name": "駒田拓朗",
             "role": "",
             "position": "準指導員",
@@ -404,7 +404,7 @@
           },
           {
             "id": "matsuoka",
-            "image": "/seishinkai/assets/images/instructors/matsuoka.jpg",
+            "image": "/assets/images/instructors/matsuoka.jpg",
             "name": "松岡昌哉",
             "role": "",
             "position": "貳段",
@@ -416,7 +416,7 @@
           },
           {
             "id": "takahashi-katsunori",
-            "image": "/seishinkai/assets/images/instructors/takahashi.jpg",
+            "image": "/assets/images/instructors/takahashi.jpg",
             "name": "髙橋克典",
             "role": "",
             "position": "師範代",
@@ -428,7 +428,7 @@
           },
           {
             "id": "yamane",
-            "image": "/seishinkai/assets/images/instructors/yamane.jpg",
+            "image": "/assets/images/instructors/yamane.jpg",
             "name": "山根 豊",
             "role": "",
             "position": "二段",
@@ -440,7 +440,7 @@
           },
           {
             "id": "ito",
-            "image": "/seishinkai/assets/images/instructors/ito.jpg",
+            "image": "/assets/images/instructors/ito.jpg",
             "name": "伊藤紀章",
             "role": "",
             "position": "指導員",
@@ -452,7 +452,7 @@
           },
           {
             "id": "michael",
-            "image": "/seishinkai/assets/images/instructors/mih.jpg",
+            "image": "/assets/images/instructors/mih.jpg",
             "name": "ミヒャエル",
             "role": "",
             "position": "準指導員",
@@ -464,7 +464,7 @@
           },
           {
             "id": "sueyoshi",
-            "image": "/seishinkai/assets/images/instructors/sueyoshi.jpg",
+            "image": "/assets/images/instructors/sueyoshi.jpg",
             "name": "末吉弘一",
             "role": "",
             "position": "師範代",
@@ -476,7 +476,7 @@
           },
           {
             "id": "suda",
-            "image": "/seishinkai/assets/images/instructors/suda.jpg",
+            "image": "/assets/images/instructors/suda.jpg",
             "name": "須田まきこ",
             "role": "",
             "position": "師範",
@@ -488,7 +488,7 @@
           },
           {
             "id": "harada",
-            "image": "/seishinkai/assets/images/instructors/harada.jpg",
+            "image": "/assets/images/instructors/harada.jpg",
             "name": "原田哲郎",
             "role": "",
             "position": "師範補",
@@ -500,7 +500,7 @@
           },
           {
             "id": "shirokawa",
-            "image": "/seishinkai/assets/images/instructors/shirokawa.jpg",
+            "image": "/assets/images/instructors/shirokawa.jpg",
             "name": "城川義明",
             "role": "",
             "position": "師範補",
@@ -512,7 +512,7 @@
           },
           {
             "id": "shirakawa",
-            "image": "/seishinkai/assets/images/instructors/shirakawa.jpg",
+            "image": "/assets/images/instructors/shirakawa.jpg",
             "name": "白川祥之",
             "role": "",
             "position": "二段",
@@ -524,7 +524,7 @@
           },
           {
             "id": "imai",
-            "image": "/seishinkai/assets/images/instructors/imai.jpg",
+            "image": "/assets/images/instructors/imai.jpg",
             "name": "今井直也",
             "role": "",
             "position": "二段",
@@ -536,7 +536,7 @@
           },
           {
             "id": "miura",
-            "image": "/seishinkai/assets/images/instructors/miura.jpg",
+            "image": "/assets/images/instructors/miura.jpg",
             "name": "三浦としえ",
             "role": "",
             "position": "二段",
@@ -548,7 +548,7 @@
           },
           {
             "id": "sugimoto",
-            "image": "/seishinkai/assets/images/instructors/sugimoto.jpg",
+            "image": "/assets/images/instructors/sugimoto.jpg",
             "name": "杉本冬弥",
             "role": "",
             "position": "初段",
@@ -560,7 +560,7 @@
           },
           {
             "id": "tashiro",
-            "image": "/seishinkai/assets/images/instructors/tashiro2.jpg",
+            "image": "/assets/images/instructors/tashiro2.jpg",
             "name": "田代昭男",
             "role": "",
             "position": "二段",
@@ -572,7 +572,7 @@
           },
           {
             "id": "sato-tsuyoshi",
-            "image": "/seishinkai/assets/images/instructors/sato2.jpg",
+            "image": "/assets/images/instructors/sato2.jpg",
             "name": "佐藤 剛",
             "role": "",
             "position": "初段",
@@ -584,7 +584,7 @@
           },
           {
             "id": "ineda",
-            "image": "/seishinkai/assets/images/instructors/ineda.jpg",
+            "image": "/assets/images/instructors/ineda.jpg",
             "name": "稲田育夫",
             "role": "",
             "position": "指導員",
@@ -596,7 +596,7 @@
           },
           {
             "id": "maejima",
-            "image": "/seishinkai/assets/images/instructors/maejima.jpg",
+            "image": "/assets/images/instructors/maejima.jpg",
             "name": "前嶋 智",
             "role": "",
             "position": "師範代",
@@ -608,7 +608,7 @@
           },
           {
             "id": "sakai",
-            "image": "/seishinkai/assets/images/instructors/sakai.jpg",
+            "image": "/assets/images/instructors/sakai.jpg",
             "name": "坂井陽人",
             "role": "",
             "position": "助教",
@@ -620,7 +620,7 @@
           },
           {
             "id": "hirabayashi",
-            "image": "/seishinkai/assets/images/instructors/hirabayashi.jpg",
+            "image": "/assets/images/instructors/hirabayashi.jpg",
             "name": "平林学",
             "role": "",
             "position": "助教",
@@ -632,7 +632,7 @@
           },
           {
             "id": "abe",
-            "image": "/seishinkai/assets/images/instructors/abe.jpg",
+            "image": "/assets/images/instructors/abe.jpg",
             "name": "阿部みわ",
             "role": "",
             "position": "初段",
@@ -644,7 +644,7 @@
           },
           {
             "id": "sato-saki",
-            "image": "/seishinkai/assets/images/instructors/satosaki.jpg",
+            "image": "/assets/images/instructors/satosaki.jpg",
             "name": "佐藤咲姫",
             "role": "",
             "position": "助教",
@@ -656,7 +656,7 @@
           },
           {
             "id": "nagomi",
-            "image": "/seishinkai/assets/images/instructors/nagomi.jpg",
+            "image": "/assets/images/instructors/nagomi.jpg",
             "name": "別途屋敷和",
             "role": "",
             "position": "助教",
@@ -668,7 +668,7 @@
           },
           {
             "id": "takigami",
-            "image": "/seishinkai/assets/images/instructors/taki.jpg",
+            "image": "/assets/images/instructors/taki.jpg",
             "name": "滝上由佳",
             "role": "",
             "position": "指導員",
@@ -680,7 +680,7 @@
           },
           {
             "id": "saito-manaya",
-            "image": "/seishinkai/assets/images/instructors/manaya.jpg",
+            "image": "/assets/images/instructors/manaya.jpg",
             "name": "斎藤愛弥",
             "role": "",
             "position": "初段",
@@ -699,7 +699,7 @@
         "members": [
           {
             "id": "takahashi-tsuyoshi",
-            "image": "/seishinkai/assets/images/instructors/takafashiabira.jpg",
+            "image": "/assets/images/instructors/takafashiabira.jpg",
             "name": "髙橋 剛",
             "role": "",
             "position": "師範",
@@ -711,7 +711,7 @@
           },
           {
             "id": "takano",
-            "image": "/seishinkai/assets/images/instructors/takano.jpg",
+            "image": "/assets/images/instructors/takano.jpg",
             "name": "高野 均",
             "role": "",
             "position": "師範",
@@ -723,7 +723,7 @@
           },
           {
             "id": "takahashi-rumiko",
-            "image": "/seishinkai/assets/images/instructors/takano2.jpg",
+            "image": "/assets/images/instructors/takano2.jpg",
             "name": "高橋るみこ",
             "role": "",
             "position": "",
@@ -735,7 +735,7 @@
           },
           {
             "id": "sasarashin",
-            "image": "/seishinkai/assets/images/instructors/kkpp.jpg",
+            "image": "/assets/images/instructors/kkpp.jpg",
             "name": "ササラシン",
             "role": "",
             "position": "師範",
