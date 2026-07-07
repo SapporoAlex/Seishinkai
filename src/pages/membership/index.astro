@@ -1,0 +1,301 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ContactSection from "@components/ContactSection.astro";
+
+const SITE = "https://seishinkan.ne.jp/";
+const IMG = "/seishinkai/assets/images/membership/";
+
+const mediaItems = [
+  {
+    label: "UHBテレビ",
+    image: `${IMG}uhb.jpg`,
+    href: "https://www.youtube.com/watch?v=WMv2SNBHM-8",
+    extra: [{ label: "2", href: "https://www.youtube.com/watch?v=8G2fHgsRqHA" }],
+  },
+  {
+    label: "北海道米TV-CM",
+    image: `${IMG}Image9.jpg`,
+    href: "https://www.youtube.com/watch?v=s89eelnq5wg",
+    extra: [],
+  },
+  {
+    label: "HBC",
+    image: `${IMG}hbc2.jpg`,
+    href: "https://www.youtube.com/watch?v=Hh9bA9CcvxI",
+    extra: [{ label: "2", href: "https://www.youtube.com/watch?v=7IjFIsgiLsE" }],
+  },
+  {
+    label: "スカイパーフェクトTV",
+    image: `${IMG}DSCN2803.jpg`,
+    href: "https://www.youtube.com/watch?v=o32LFD-pjbY",
+    extra: [],
+  },
+  {
+    label: "Air-G FMラジオ",
+    image: `${IMG}airg.jpg`,
+    href: "https://www.youtube.com/watch?v=-8DsF4va25g",
+    extra: [],
+  },
+  {
+    label: "JcomケーブルTV",
+    image: `${IMG}jcom.jpg`,
+    href: "https://www.youtube.com/watch?v=1T1QT6syLfM",
+    extra: [],
+  },
+  {
+    label: "JcomケーブルTV",
+    image: `${IMG}Jcom1.jpg`,
+    href: "https://www.youtube.com/watch?v=4wmEG9HwZxw",
+    extra: [],
+  },
+  {
+    label: "ホンマルラジオ",
+    image: `${IMG}bb.jpg`,
+    href: "https://www.youtube.com/watch?v=jIXSM86flsU",
+    extra: [],
+  },
+  {
+    label: "テレビ北海道",
+    image: `${IMG}Image6.jpg`,
+    href: "",
+    extra: [],
+  },
+];
+
+const studentConditions = [
+  "18 to 30 years old",
+  "Training period from 3 years up to 10 years",
+  "Shodan or higher",
+  "Driver's licence",
+  "Japanese language test grade 4",
+  "Target is Sandan–Godan, Shihan qualification",
+  "Please open a branch dojo of Seishinryu Karate when you return home",
+];
+---
+
+<BaseLayout
+  title="入会のご案内"
+  description="清心会空手の入会案内。見学・体験や入会の流れについてご案内します。初心者・お子様から大人まで歓迎します。"
+  lang="ja"
+  path="/membership/"
+>
+  <section class="membership">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">MEMBERSHIP</span>
+        <h1 class="section-title">入会の御案内</h1>
+      </div>
+
+      <div class="page-intro">
+        <p>
+          清心会空手は、「体育」「健康」「護身」を主眼に活動している空手・<a
+            href="/dojo/iai/">居合</a
+          >・護身術教室です。競技スポーツ(試合)中心の空手教室が多い中、基本と型、約束組手を中心としているため、年齢、性別にかかわらず、どなたでも気軽に取り組める空手となっています。
+        </p>
+        <p>
+          少年部は、礼法(挨拶、礼儀、作法など)を身につけ、成長期には欠かせない「心と身体」を強くすることを目標とし、女性、社会人、中高齢者の方はシェイプアップ、体力向上、健康促進と護身を目的としています。
+        </p>
+        <p>
+          北海道では珍しく海外との<a href="/membership/intern2/"
+            >国際交流</a
+          >にも力を入れており、<a href="/membership/intern/"
+            >空手留学生</a
+          >や毎年、海外から空手を学んでいる方々が本部道場を訪れます。社会人も多く在籍しているため、異業種交流などの機会も多く、清心流空手を通じて友達の輪を広げることができます。親子で学ばれる方も多く、現在の指導員、支部長の半数以上が親子で始められた方々が中核となって活動しています。又、オンライン空手教室も実施しています。
+        </p>
+      </div>
+
+      <div class="membership__points">
+        <div class="membership__point">
+          <h3 class="membership__point-title">80支部へ出稽古自由</h3>
+          <p>
+            本部直轄の札幌及び周辺の80支部へ自由に何度でも練習に参加できます(運営母体の異なるカルチャースクール及び会場の狭いところを除きます)。ビジターの回数チケット制もあります。
+          </p>
+        </div>
+        <div class="membership__point">
+          <h3 class="membership__point-title">無料体験できます</h3>
+          <p>
+            直轄教室は、無料体験ができます(カルチャーや文化教室は運営母体が異なるため除きます)。※冬季間は暖房費がかかります。
+          </p>
+        </div>
+        <div class="membership__point">
+          <h3 class="membership__point-title">事務局受付</h3>
+          <p>
+            電話対応は平日の月曜から金曜13:00-16:00となります。時間外、土日祭日はメールでお問合せをお願いします。時間内でも個別稽古等で電話に出れない場合がありますことを御了承下さい。
+          </p>
+        </div>
+      </div>
+
+      <div class="membership__cta-banner">
+        <h2 class="membership__cta-title">まずは無料体験から</h2>
+        <p>
+          直轄教室は無料体験ができます。動きやすい服装で、お気軽にお越しください。
+        </p>
+        <a href="#contact"><div class="fv-btn-primary">無料体験を申込む</div></a>
+      </div>
+
+      <div class="membership__fees" id="fees">
+        <div class="section__title-area">
+          <h2 class="section-title lg">入会費用について御案内</h2>
+          <p class="section-desc">本部道場及び常設道場の例です。</p>
+        </div>
+
+        <div class="membership__fees-grid">
+          <div class="membership__fees-card">
+            <h3 class="membership__fees-title">入会金</h3>
+            <p class="membership__fees-amount">7,000円</p>
+            <ul class="membership__fees-list">
+              <li>家族2人目 3,500円</li>
+              <li>家族3人目 1,750円</li>
+            </ul>
+          </div>
+
+          <div class="membership__fees-card">
+            <h3 class="membership__fees-title">月会費 <small>※札幌市及び近隣地区の例</small></h3>
+            <p class="membership__fees-amount">5,300円〜</p>
+            <ul class="membership__fees-list">
+              <li>5,300円(中学生以下/直轄教室である他支部へ出稽古自由)</li>
+              <li>5,800〜6,800円(学生/女性/勤労者)</li>
+              <li>3才未満は会費なし</li>
+            </ul>
+            <p class="membership__fees-note">
+              ※冬期間は暖房費がかかります。1シーズン1,100〜3,000円(時価により変動)
+            </p>
+          </div>
+
+          <div class="membership__fees-card">
+            <h3 class="membership__fees-title">年度会費・用具</h3>
+            <ul class="membership__fees-list">
+              <li>年度会費 4,800〜6,800円(保険含)</li>
+              <li>専用空手衣 10,500〜22,000円(サイズとタイプ等により)</li>
+              <li>手足サポーター 6,250〜8,250円</li>
+            </ul>
+            <p class="membership__fees-note">
+              ※特注縫製専用空手衣及びadidasは別途ご確認下さい。準会員/チケット制、個別指導クラスもあります。
+            </p>
+          </div>
+
+          <div class="membership__fees-aside">
+            <figure class="membership__fees-figure">
+              <img
+                src={`${IMG}karategi.jpg`}
+                alt="清心流オリジナル特注縫製の専用空手衣"
+                loading="lazy"
+              />
+              <figcaption>専用空手衣(清心流オリジナル特注縫製)</figcaption>
+            </figure>
+            <figure class="membership__fees-figure">
+              <a href="/dojo/iai/">
+                <img src={`${IMG}iai.jpg`} alt="居合部" loading="lazy" />
+              </a>
+              <figcaption>居合部</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <ul class="membership__notes-list">
+          <li>月会費はゆうちょ銀行口座引落となります。</li>
+          <li>
+            当会は特定非営利活動法人で会費等に消費税はかけておりません(非課税事業)。
+          </li>
+          <li>
+            支部教室等により若干異なることがありますので体験教室で詳細を確認下さい。
+          </li>
+          <li>
+            会員は本部直轄支部へ参加できますが、カルチャー等運営母体の異なる教室へは参加できません。カルチャー会員はチケット購入で直轄支部へ参加できます。
+          </li>
+        </ul>
+
+        <div class="membership__pdf-links">
+          <a href="/pdf/newkai.pdf" target="_blank">入会申込書(PDF)</a>
+          <a href="/pdf/hiyo.pdf" target="_blank">費用説明(PDF)</a>
+          <a href="/pdf/panfu.pdf" target="_blank">パンフレット(PDF)</a>
+        </div>
+      </div>
+
+      <div class="membership__related">
+        <a class="membership__related-card" href="http://seishinryu.info/" target="_blank">
+          オンライン空手クラス(ネットスクール)会員も募集しています
+        </a>
+        <a class="membership__related-card" href="/membership/kamei/">
+          文化教室及び支部認定、セミナー希望の方へ
+        </a>
+      </div>
+
+      <div class="membership__npo-note">
+        <strong>運営について</strong>
+        <p>
+          各道場・支部の指導担当者は本会社会人会員が就労後の余暇を活用して、ボランティアとして携わっています。本会は特定非営利活動法人としての認証を得て活動しており、道場練習生会員の月会費は組織の維持運営費に充当されており、稽古がなくてもかかりますことを御理解下さい。また逆に月に直轄各支部に参加して10回、20回稽古されても月会費の変動はありません(カルチャースクールは除く)。
+        </p>
+        <p>
+          チケット制会員(個別クラス、準会員など)、所属支部限定会員の回数制も併用していますので個人の都合に合わせて選択できます(基本会費を除く)。
+        </p>
+      </div>
+
+      <div class="membership__media" id="media">
+        <div class="section__title-area">
+          <h2 class="section-title lg">メディア取材</h2>
+          <p class="section-desc">
+            清心会空手を取材したテレビ、ラジオ等の一部です。
+          </p>
+        </div>
+
+        <div class="membership__media-grid">
+          {
+            mediaItems.map((item) => (
+              <div class="membership__media-card">
+                {item.href ? (
+                  <a href={item.href} target="_blank">
+                    <img src={item.image} alt={item.label} loading="lazy" />
+                  </a>
+                ) : (
+                  <img src={item.image} alt={item.label} loading="lazy" />
+                )}
+                <p class="membership__media-label">
+                  {item.href ? (
+                    <a href={item.href} target="_blank">
+                      {item.label}
+                    </a>
+                  ) : (
+                    item.label
+                  )}
+                  {item.extra.map((link) => (
+                    <a href={link.href} target="_blank">
+                      {link.label}
+                    </a>
+                  ))}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+
+        <p class="membership__media-more">
+          <a href="https://red.ap.teacup.com/karatenews/" target="_blank"
+            >清心会取材関係で紹介掲載されたものの紹介 &gt;&gt;</a
+          >
+        </p>
+      </div>
+
+      <div class="membership__students">
+        <div class="section__title-area">
+          <span class="section-label">INTERNATIONAL</span>
+          <h2 class="section-title lg">Karate International Students</h2>
+        </div>
+        <p>
+          Recruiting karate international students (Uchideshi) in Japan.
+          International students study karate in Japan long-term with a karate
+          culture visa.
+        </p>
+        <h3 class="membership__students-subtitle">Student conditions</h3>
+        <ul class="membership__students-list">
+          {studentConditions.map((condition) => <li>{condition}</li>)}
+        </ul>
+        <p>
+          Please <a href="#contact">contact us</a> if you are interested.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <ContactSection />
+</BaseLayout>

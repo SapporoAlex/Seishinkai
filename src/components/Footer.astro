@@ -1,0 +1,126 @@
+---
+const { text = "Copyright© 1995 全日本清心会空手道連盟 All Rights Reserved.", lang = "ja" } =
+  Astro.props;
+
+const isEn = lang === "en";
+const p = isEn ? "/en" : "";
+
+const brand = isEn ? "Seishinkai" : "清心会";
+const org = isEn
+  ? "NPO All Japan Seishinkai Karate Federation"
+  : "特定非営利活動法人 全日本清心会空手道連盟";
+const address = isEn
+  ? "2-1-27 Sakaedori, Shiroishi-ku, Sapporo"
+  : "札幌市白石区栄通2丁目1-27（東北通沿）";
+const hours = isEn ? "Mon–Fri 13:00–16:00" : "月〜金 13:00〜16:00";
+
+const columns = [
+  {
+    title: isEn ? "Menu" : "メニュー",
+    links: [
+      { label: isEn ? "Home" : "トップ", href: `${p}/` },
+      { label: isEn ? "About" : "清心会について", href: `${p}/about/` },
+      { label: isEn ? "Schedule" : "スケジュール", href: `${p}/schedule/` },
+      { label: isEn ? "Membership" : "入会案内", href: `${p}/membership/` },
+      { label: isEn ? "Instructors" : "師範・支部長", href: `${p}/instructors/` },
+      { label: isEn ? "Dojo List" : "道場一覧", href: `${p}/dojo/` },
+      { label: isEn ? "News & SNS" : "ニュース・SNS", href: `${p}/news/` },
+    ],
+  },
+  {
+    title: isEn ? "Join & Visit" : "入会・体験",
+    links: [
+      { label: isEn ? "Fees" : "入会費用", href: `${p}/membership/#fees` },
+      {
+        label: isEn ? "Trial & Contact" : "体験申込・お問い合わせ",
+        href: `${p}/membership/#contact`,
+      },
+      { label: isEn ? "Media Coverage" : "メディア取材", href: `${p}/membership/#media` },
+      {
+        label: isEn ? "Application Form (PDF)" : "入会申込書(PDF)",
+        href: "/pdf/newkai.pdf",
+        external: true,
+      },
+      {
+        label: isEn ? "Online Karate School" : "オンライン空手教室",
+        href: "http://seishinryu.info/",
+        external: true,
+      },
+    ],
+  },
+  {
+    title: isEn ? "Related Links" : "関連リンク",
+    links: [
+      {
+        label: isEn ? "Official Site" : "清心会公式サイト",
+        href: "https://seishinkan.ne.jp/",
+        external: true,
+      },
+      {
+        label: isEn ? "ISKF Overseas Branches" : "ISKF海外支部",
+        href: "https://seishinryu.info/iskf/schedule.html",
+        external: true,
+      },
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/ISKF.Seishinryu.karate/",
+        external: true,
+      },
+      {
+        label: isEn ? "Bulletin Board" : "掲示板・連絡事項",
+        href: "https://seishinkan-dojo.bbs.fc2.com/",
+        external: true,
+      },
+    ],
+  },
+];
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__brand-row">
+        <img
+          class="footer__logo"
+          src="/seishinkai/assets/images/logo.svg"
+          alt={`${brand}のロゴ`}
+        />
+        <span class="footer__brand-name">{brand}</span>
+      </div>
+      <p class="footer__org">{org}</p>
+      <ul class="footer__contact">
+        <li>{address}</li>
+        <li>TEL 011-300-0048（{hours}）</li>
+        <li>FAX 011-300-0094</li>
+        <li>Karate@seishinkan.ne.jp</li>
+      </ul>
+    </div>
+
+    <nav class="footer__nav" aria-label="Footer navigation">
+      {
+        columns.map((column) => (
+          <div class="footer__col">
+            <p class="footer__heading">{column.title}</p>
+            <ul class="footer__links">
+              {column.links.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener" : undefined}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </nav>
+  </div>
+
+  <div class="footer__bottom">
+    <p class="footer__text">{text}</p>
+  </div>
+</footer>

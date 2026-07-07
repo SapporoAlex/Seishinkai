@@ -1,0 +1,278 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+// Shared styles for the content pages migrated from the old site
+// (dojo area pages, iai/kobetsu/kenko classes, profiles, intern, kamei, news archive).
+
+.detail-page {
+  &__back {
+    margin-top: 40px;
+
+    a {
+      color: var(--red);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+
+  &__contact {
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 32px;
+
+    @include mqsp {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__lead {
+    color: var(--text-mid);
+    line-height: 2;
+    margin-bottom: 32px;
+
+    p {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    strong {
+      color: var(--navy);
+    }
+  }
+
+  &__heading {
+    font-size: 1.25rem;
+    color: var(--navy);
+    border-left: 4px solid var(--red);
+    padding-left: 12px;
+    margin: 48px 0 20px;
+  }
+
+  &__note {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    margin-top: 8px;
+  }
+}
+
+// Branch / practice-schedule table
+.branch-table {
+  &__wrap {
+    overflow-x: auto;
+    margin-bottom: 24px;
+  }
+
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  background: #fff;
+
+  th {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: top;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    line-height: 1.8;
+  }
+
+  &__no {
+    width: 2.5rem;
+    text-align: center;
+    color: var(--text-mid);
+  }
+
+  td.branch-table__no {
+    vertical-align: middle;
+  }
+
+  &__name {
+    font-weight: 700;
+    color: var(--navy);
+    min-width: 11rem;
+  }
+
+  &__name-sub {
+    display: block;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text-mid);
+  }
+
+  &__marker {
+    color: var(--red);
+    margin-right: 2px;
+  }
+
+  &__line {
+    display: block;
+  }
+}
+
+// Legend under branch tables (★●□)
+.detail-legend {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  font-size: 0.95rem;
+  color: var(--text-mid);
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  &__marker {
+    color: var(--red);
+    font-weight: 700;
+    margin-right: 4px;
+  }
+}
+
+// Photo gallery grid with optional captions
+.detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 32px 0;
+
+  @include mqsp {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
+  }
+
+  figcaption {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+}
+
+// Single prominent image (e.g. video thumbnail link)
+.detail-media {
+  margin: 32px 0;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
+  }
+
+  &__caption {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    margin-top: 6px;
+  }
+}
+
+// Profile pages (okubo / tubasa)
+.profile-detail {
+  &__role {
+    color: var(--red);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  &__body {
+    color: var(--text-mid);
+    line-height: 2;
+
+    p {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+// Link-hub lists (diary / news blog links)
+.detail-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+
+  li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--navy);
+    font-weight: 500;
+
+    &::after {
+      content: "→";
+      color: var(--red);
+    }
+
+    &:hover {
+      border-color: var(--blue);
+    }
+  }
+}
+
+// Timeline-style news archive (news.html)
+.detail-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+
+  li {
+    display: flex;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.8;
+
+    @include mqsp {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  &__date {
+    flex: 0 0 9rem;
+    font-weight: 700;
+    color: var(--navy);
+    white-space: nowrap;
+  }
+
+  &__body {
+    color: var(--text-mid);
+
+    img {
+      display: block;
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      margin-top: 8px;
+      border: 1px solid var(--border);
+    }
+  }
+}

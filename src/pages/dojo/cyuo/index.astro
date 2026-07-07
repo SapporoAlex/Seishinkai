@@ -1,0 +1,88 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "札幌中央東支部",
+    address: "中央区南2条東4丁目 三上ビル3F",
+    schedule: ["水曜18:30/19:30"],
+  },
+  {
+    no: 2,
+    marker: "★",
+    name: "伏見支部",
+    address: "中央区南14条西18丁目　伏見会館",
+    schedule: ["土曜13:00"],
+  },
+  {
+    no: 3,
+    marker: "★",
+    name: "札幌中央支部",
+    address: "中央区南2条西15丁目二条はるにれ児童会館(二条小内)",
+    schedule: ["火曜18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="中央区の空手教室"
+  description="札幌市中央区の清心会空手道場・教室一覧。札幌中央東・伏見・札幌中央の各支部の稽古日をご案内します。"
+  lang="ja"
+  path="/dojo/cyuo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">中央区空手道場・教室の一覧</h1>
+      </div>
+      <p class="detail-page__contact">
+        お問い合わせは　TEL.011-300-0048(平日13:00-16:00)
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>本部直轄教室=お問い合わせは本部事務局へ
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>講師派遣教室=お問い合わせは主催文化教室・スポーツクラブへ
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>自主管理道場=事務局又は直接、管理担当者へ
+        </li>
+      </ul>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/images/legacy/photo/shinsa.jpg"
+            alt="年4回開かれる審査会の様子"
+            width="259"
+            height="157"
+            loading="lazy"
+          />
+          <figcaption>年4回開かれる審査会の様子</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/images/legacy/photo/goshin.jpg"
+            alt="護身術セミナーの様子"
+            width="278"
+            height="153"
+            loading="lazy"
+          />
+          <figcaption>護身術セミナーの様子</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

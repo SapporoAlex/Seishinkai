@@ -1,0 +1,26 @@
+{
+  "site": {
+    "name": "清心会空手",
+    "fullName": "全日本清心会空手道連盟",
+    "defaultTitle": "清心会空手｜札幌・北海道の空手道場【全日本清心会空手道連盟】",
+    "description": "札幌を中心に北海道各地で活動する全日本清心会空手道連盟（清心会空手）の公式サイト。子どもから大人まで学べる各道場の練習スケジュール、入会案内、道場一覧、指導員紹介をご覧いただけます。",
+    "logoAlt": "清心会空手のロゴ",
+    "titleSeparator": "｜",
+    "areaServed": "北海道"
+  },
+  "header": {
+    "brand": "清心会",
+    "nav": [
+      { "label": "トップ", "href": "/" },
+      { "label": "概要", "href": "/about/" },
+      { "label": "スケジュール", "href": "/schedule/" },
+      { "label": "入会", "href": "/membership/" },
+      { "label": "インストラクター", "href": "/instructors/" },
+      { "label": "道場一覧", "href": "/dojo/" },
+      { "label": "ニュース・SNS", "href": "/news/" }
+    ]
+  },
+  "footer": {
+    "text": "Copyright© 1995 全日本清心会空手道連盟 All Rights Reserved."
+  }
+}

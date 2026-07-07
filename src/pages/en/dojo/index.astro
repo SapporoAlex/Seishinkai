@@ -1,0 +1,151 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const leftGroups = [
+  {
+    title: "Karate Dojos & Classes in Sapporo",
+    locations: [
+      { label: "Shiroishi Ward", href: "/dojo/shiroishi/" },
+      { label: "Atsubetsu Ward", href: "/dojo/atsubetsu/" },
+      { label: "Chuo Ward", href: "/dojo/cyuo/" },
+      { label: "Toyohira Ward", href: "/dojo/toyohira/" },
+      { label: "Kiyota Ward", href: "/dojo/minami-kiyota/" },
+      { label: "Higashi Ward", href: "/dojo/higashi/" },
+      { label: "Kita Ward", href: "/dojo/kita/" },
+      { label: "Minami Ward", href: "/dojo/minami-kiyota/" },
+      { label: "Teine Ward", href: "/dojo/teine/" },
+      { label: "Nishi Ward", href: "/dojo/teine/" },
+      { label: "Private Special Class", href: "/dojo/kobetsu/" },
+      { label: "Iaido Division", href: "/dojo/iai/" },
+      { label: "Online Karate School", href: "http://seishinryu.info/" },
+      { label: "Taijutsu Health Class", href: "/dojo/kenko/" },
+    ],
+  },
+  {
+    title: "Overseas Dojos",
+    locations: [
+      { label: "Sri Lanka", href: "https://seishinryu.info/iskf/schedule.html" },
+      { label: "India", href: "https://seishinryu.info/iskf/schedule.html" },
+      { label: "Sweden", href: "https://seishinryu.info/iskf/schedule.html" },
+      { label: "Australia", href: "https://seishinryu.info/iskf/schedule.html" },
+      { label: "Argentina", href: "https://seishinryu.info/iskf/schedule.html" },
+    ],
+  },
+];
+
+const rightGroups = [
+  {
+    title: "Ebetsu / Iwamizawa / Ishikari (Hanakawa)",
+    locations: [
+      { label: "Ebetsu City", href: "/dojo/ebetsu/" },
+      { label: "Iwamizawa City", href: "/dojo/ebetsu/" },
+      { label: "Ishikari City", href: "/dojo/ebetsu/" },
+    ],
+  },
+  {
+    title: "Eniwa (Shimamatsu) / Obihiro",
+    locations: [
+      { label: "Obihiro City", href: "/dojo/kitahiro/" },
+      { label: "Eniwa City", href: "/dojo/kitahiro/" },
+      { label: "Asahikawa City", href: "/dojo/kitahiro/" },
+    ],
+  },
+  {
+    title: "Tobetsu / Naganuma / Kimobetsu / Kyogoku / Hamatonbetsu / Kutchan",
+    locations: [
+      { label: "Tobetsu Town", href: "/dojo/tobetsu/" },
+      { label: "Naganuma Town", href: "/dojo/tobetsu/" },
+      { label: "Kimobetsu Town", href: "/dojo/tobetsu/" },
+      { label: "Kyogoku Town", href: "/dojo/tobetsu/" },
+      { label: "Hamatonbetsu Town", href: "/dojo/tobetsu/" },
+      { label: "Nanporo / Makkari", href: "/dojo/tobetsu/" },
+    ],
+  },
+  {
+    title: "Abira / Niikappu / Shizuoka",
+    locations: [
+      { label: "Abira Town", href: "/dojo/abira/" },
+      { label: "Niikappu Town", href: "/dojo/abira/" },
+      { label: "Shizuoka & Aichi", href: "/dojo/naichi/" },
+    ],
+  },
+  {
+    title: "Associate & Partner Dojos",
+    locations: [
+      { label: "Aozorakai", href: "http://aozorakai.main.jp/" },
+      { label: "Muryu-juku (Chiba)", href: "/dojo/naichi/" },
+    ],
+  },
+];
+
+const columns = [leftGroups, rightGroups];
+---
+
+<BaseLayout
+  title="Dojo List"
+  description="Directory of Seishinkai Karate dojos and classes in Sapporo, across Hokkaido, and in Chiba, Japan. Find a dojo near you."
+  lang="en"
+  path="/en/dojo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Karate Dojos & Classes</h1>
+      </div>
+      <p class="page-intro">
+        These are the karate dojos and classes in each area certified by or affiliated with the Seishinkai Karate Federation. Click an entry to see the list. We are active at more than 80 locations in and around Sapporo. (<a
+          href="/pdf/dojo.pdf"
+          target="_blank">Hokkaido dojo list PDF</a
+        >) (<a href="/pdf/kenko2021.pdf" target="_blank">Taijutsu health class</a>)
+      </p>
+      <p class="page-intro">
+        ※ Venues and practice days may change at short notice when public facilities close or restrict use.
+      </p>
+      <p class="dojo-list__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <div class="dojo-list__card-group">
+        {
+          columns.map((groups, i) => (
+            <div class={i === 0 ? "dojo-list__card-left" : "dojo-list__card-right"}>
+              {groups.map((group) => (
+                <div class="dojo-list__card">
+                  <div class="cards-list__locations">
+                    <h2 class="cards-list__locations-title">{group.title}</h2>
+                    <ul class="cards-list__locations-list">
+                      {group.locations.map((location) => (
+                        <li class="dojo-list__location">
+                          <a
+                            class="dojo-list__location-link"
+                            href={location.href}
+                            target={location.href.startsWith("http") ? "_blank" : undefined}
+                            rel={location.href.startsWith("http") ? "noopener" : undefined}
+                          >
+                            {location.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+
+      <p class="dojo-list__map-link">
+        ★ View karate dojos in and around Sapporo on a map:
+        <a
+          href="https://www.google.com/maps/d/viewer?mid=zpHbVH31fZoE.kGi6pjhC8oAs"
+          target="_blank">Branch Map</a
+        >
+      </p>
+      <p class="dojo-list__note">
+        ※ The dojos listed above are the officially certified branches and related dojos of the Seishinkai Karate Federation.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

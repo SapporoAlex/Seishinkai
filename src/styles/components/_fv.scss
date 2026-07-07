@@ -1,0 +1,167 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+// Keyframe Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes sliderFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fv {
+  position: relative;
+  overflow: hidden;
+  .swiper-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    @include mqpc {
+      height: 800px;
+    }
+  }
+  .swiper-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .swiper-slide {
+    position: relative;
+  }
+
+  &-btn-primary {
+    background: var(--red);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 13px 28px;
+    border-radius: 2px;
+    letter-spacing: 0.08em;
+    max-width: 200px;
+    cursor: pointer;
+    font-family: "Noto Sans JP", sans-serif;
+    transition: all var(--hover-time) ease;
+    &:hover {
+      background: #ff1323;
+      scale: 1.01;
+    }
+  }
+  &__text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10%;
+    margin-bottom: 120px;
+    gap: 10px;
+    top: 50%;
+    left: 0%;
+    background: linear-gradient(var(--navy), var(--blue));
+    z-index: 3;
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    pointer-events: none;
+    color: var(--white);
+    a {
+      pointer-events: auto;
+    }
+    @include mqpc {
+      top: 0%;
+      left: 0%;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  &-eyebrow {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: var(--fs-sm);
+    letter-spacing: 0.35em;
+    color: var(--red);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--red);
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    @include mqpc {
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.35;
+      margin-bottom: 18px;
+    }
+  }
+  &__copy {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    @include mqpc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__slide {
+    &-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 44, 219, 0.11);
+    z-index: 2;
+  }
+}

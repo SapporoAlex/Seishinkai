@@ -1,0 +1,82 @@
+---
+// Props:
+// - brand: string or html for the logo/brand link
+// - logoAlt: localized alt text for the logo image
+// - nav: array of { label, href } items for the main nav
+const { brand = 'Seishinkai', logoAlt = '清心会空手のロゴ', nav = [
+  { label: 'Home', href: '/en/' },
+  { label: 'About', href: '/en/about/' },
+  { label: 'Schedule', href: '/en/schedule/' },
+  { label: 'Membership', href: '/en/membership/' },
+  { label: 'Instructors', href: '/en/instructors/' },
+  { label: 'Dojo List', href: '/en/dojo/' },
+  { label: 'News & SNS', href: '/en/news/' },
+
+], lang = 'ja', currentPath = '/' } = Astro.props;
+
+const normalizePath = (value: unknown) => {
+  const raw = typeof value === 'string' ? value.trim() : '/';
+  let pathname = raw.startsWith('/') ? raw : `/${raw}`;
+  if (!pathname.endsWith('/')) pathname += '/';
+  return pathname === '//' ? '/' : pathname;
+};
+
+const activePath = normalizePath(currentPath);
+const jaHref = activePath.startsWith('/en/') ? activePath.replace(/^\/en/, '') || '/' : activePath;
+const enHref = activePath.startsWith('/en/') ? activePath : activePath === '/' ? '/en/' : `/en${activePath}`;
+---
+
+<header class="header">
+  <div class="header__inner">
+
+    <div class="header__left">
+      <img class="header__logo" src="/seishinkai/assets/images/logo.svg" alt={logoAlt}>
+      <p class="header__brand">{brand}</p>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        {nav.map((item: any) => (
+          <li>
+            <a
+              class={"header__nav-link" + (item.href === activePath ? ' header__nav-link--active' : '')}
+              href={item.href}
+              aria-current={item.href === activePath ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="header__lang-desktop" role="group" aria-label="Language switch">
+        <a class={"header__lang-link" + (lang === 'ja' ? ' header__lang-link--active' : '')} href={jaHref}>Ja</a>
+        <span class="header__lang-separator">|</span>
+        <a class={"header__lang-link" + (lang === 'en' ? ' header__lang-link--active' : '')} href={enHref}>En</a>
+      </div>
+    </nav>
+    <button class="header__hamburger" aria-label="Open menu" id="js-hamburger">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header__drawer" id="js-drawer" tabindex="-1" aria-hidden="true">
+      <button class="header__drawer-close" aria-label="Close menu" id="js-drawer-close">&times;</button>
+      <ul class="header__drawer-list">
+        {nav.map((item: any) => (
+          <li>
+            <a
+              class={"header__nav-link" + (item.href === activePath ? ' header__nav-link--active' : '')}
+              href={item.href}
+              aria-current={item.href === activePath ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="header__drawer-lang" role="group" aria-label="Language switch">
+        <a class={"header__lang-link" + (lang === 'ja' ? ' header__lang-link--active' : '')} href={jaHref}>Ja</a>
+        <span class="header__drawer-lang-separator">|</span>
+        <a class={"header__lang-link" + (lang === 'en' ? ' header__lang-link--active' : '')} href={enHref}>En</a>
+      </div>
+    </div>
+    <div class="header__drawer-backdrop" id="js-drawer-backdrop"></div>
+  </div>
+</header>

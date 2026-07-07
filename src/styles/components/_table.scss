@@ -1,0 +1,67 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  margin-bottom: 60px;
+
+  th,
+  td {
+    text-align: left;
+    padding: 30px 30px;
+    border: 1px solid var(--border);
+    background: #fff;
+  }
+  th {
+    background: var(--navy);
+    color: var(--white);
+    border-right: 1px solid #ddd;
+    min-width: 10rem;
+  }
+
+  @include mqsp {
+    display: block;
+    border: 1px solid var(--border);
+
+    tbody,
+    tr {
+      width: 100%;
+    }
+
+    tr {
+      margin-bottom: 20px;
+      // border: 1px solid #000;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child th {
+        border-top: none;
+      }
+    }
+
+    th,
+    td {
+      display: block;
+      width: 100%;
+      border: none;
+      padding: 30px 30px;
+      overflow: hidden;
+    }
+
+    th {
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #000;
+    }
+
+    td {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

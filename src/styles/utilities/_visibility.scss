@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// visibility utility placeholder
+
+$visibilities: (
+  "visible": visible,
+  "invisible": hidden,
+);
+
+@each $class, $visible in $visibilities {
+  .#{$class} {
+    visibility: $visible !important;
+  }
+
+  @each $bp, $size in $cssbreakpoints {
+    @include mqpc($bp) {
+      .#{$bp}-#{$class} {
+        visibility: $visible !important;
+      }
+    }
+  }
+}
+
+.u-sp-visible {
+  display: none !important;
+  
+  @include mqsp {
+    display: block !important;
+  }
+}
+
+.u-sp-invisible {
+  display: block !important;
+  
+  @include mqsp {
+    display: none !important;
+  }
+}
+
+.js-is-visible {
+  display: block !important;
+}

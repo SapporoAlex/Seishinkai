@@ -1,0 +1,51 @@
+---
+// Practice-schedule table for the dojo area pages migrated from the old site.
+// Each entry is one branch; schedule lines render as stacked rows in one cell.
+interface Entry {
+  no?: string | number;
+  marker?: string; // ★ 本部直轄 / ● 講師派遣 / □ 自主管理 / ☆
+  name: string;
+  sub?: string; // secondary name line
+  address: string;
+  schedule: string[];
+}
+interface Props {
+  entries: Entry[];
+  headers?: [string, string, string];
+}
+const { entries, headers = ["道場・支部名", "住 所/会場施設名", "稽古日"] } =
+  Astro.props as Props;
+---
+
+<div class="branch-table__wrap">
+  <table class="branch-table">
+    <thead>
+      <tr>
+        <th class="branch-table__no"></th>
+        <th>{headers[0]}</th>
+        <th>{headers[1]}</th>
+        <th>{headers[2]}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        entries.map((e) => (
+          <tr>
+            <td class="branch-table__no">{e.no ?? ""}</td>
+            <td class="branch-table__name">
+              {e.marker && <span class="branch-table__marker">{e.marker}</span>}
+              {e.name}
+              {e.sub && <span class="branch-table__name-sub">{e.sub}</span>}
+            </td>
+            <td>{e.address}</td>
+            <td>
+              {e.schedule.map((line) => (
+                <span class="branch-table__line">{line}</span>
+              ))}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

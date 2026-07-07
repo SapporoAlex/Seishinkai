@@ -1,0 +1,20 @@
+{
+  "lastUpdated": "2022年5月8日",
+  "danRanks": [
+    { "rank": "初段", "count": 158 },
+    { "rank": "弐段", "count": 25 },
+    { "rank": "参段", "count": 14 },
+    { "rank": "四段", "count": 7 },
+    { "rank": "五段", "count": 3 },
+    { "rank": "六段", "count": 4 },
+    { "rank": "七段", "count": 6 },
+    { "rank": "八段", "count": 1 }
+  ],
+  "associateDojos": [
+    {
+      "name": "清空会空手",
+      "location": "千葉県",
+      "dojo": "無流塾"
+    }
+  ]
+}
