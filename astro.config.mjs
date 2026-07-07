@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
-const basePath = process.env.BASE_PATH || "/";
+const basePath = process.env.BASE_PATH || "/Seishinkai/";
 
 export default defineConfig({
   site: process.env.PUBLIC_SITE_URL || "https://seishinkan.ne.jp",
