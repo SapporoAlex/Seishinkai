@@ -1,0 +1,151 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "General Headquarters Dojo",
+    sub: "Seishinkan Okubo Dojo",
+    address:
+      "2-1-27 Sakaedori, Shiroishi-ku, Sapporo (along Tohoku-dori), General Headquarters / Seishinkan",
+    schedule: [
+      "Day class: Mon & Wed 14:30",
+      "Monday class 18:30 / special kata session 19:30",
+      "Wednesday class 18:30 / general 19:30",
+      "Thursday (preschool & lower elementary) 15:00",
+      "Saturday class ① 13:00 (summer) 13:30 (winter) ② 15:30",
+      "General 19:00",
+      "Support class for students not attending school: Tuesday",
+      "Women's class: Friday 18:30",
+    ],
+  },
+  {
+    marker: "☆",
+    name: "Seishinkai Iaido Division",
+    address:
+      "2-1-27 Sakaedori, Shiroishi-ku, Sapporo (along Tohoku-dori), General Headquarters / Seishinkan",
+    schedule: ["Sunday 14:00 (Iaido)", "Short-staff (tanbo) class 15:15 (Sundays, biweekly)"],
+  },
+  {
+    no: 2,
+    marker: "★",
+    name: "Seishinkan Shiroishi Dojo",
+    address: "Chuo 1-jo 4-chome 3-72, Shiroishi-ku, Sapporo, Shiroishi Seishinkan (1F)",
+    schedule: [
+      "Wednesday class 20:00",
+      "Thursday class 18:30 / winter 18:50",
+      "Saturday class 13:00 ⇒ held at the General Headquarters Dojo",
+    ],
+  },
+  {
+    no: 3,
+    marker: "★",
+    name: "Seishinkan Hondori Dojo",
+    address:
+      "16-chome-kita Hondori, Shiroishi-ku, Sapporo (along National Route 12), Hondori Seishinkan",
+    schedule: ["Wednesday class 16:30", "Friday class 19:00", "Sunday class 17:00"],
+  },
+  {
+    no: 4,
+    marker: "★",
+    name: "Kikusui-Motomachi Branch",
+    address:
+      "Kikusui-Motomachi 7-jo 2-chome, Shiroishi-ku, Sapporo, Kikusui-Motomachi Minami Community Hall",
+    schedule: ["Tuesday 18:30 (winter hours from 18:50)"],
+  },
+  {
+    no: 5,
+    marker: "★",
+    name: "Heiwadori Branch",
+    address: "Heiwadori 3-chome-kita, Shiroishi-ku, Sapporo, Super Arcs Shiroishi Store 2F",
+    schedule: ["Thursday 16:00"],
+  },
+  {
+    no: 6,
+    marker: "★",
+    name: "Kikusui Branch",
+    address: "Kikusui 3-jo 5-chome, Shiroishi-ku, Sapporo, Arcs Kikusui Store 2F",
+    schedule: ["Wednesday class 17:45", "Thursday class 18:45", "Saturday class 13:00"],
+  },
+  {
+    no: 7,
+    marker: "★",
+    name: "Kita-Shiroishi Branch (Kitago)",
+    address: "Kitago 3-jo 7-chome, Shiroishi-ku, Sapporo, Kita-Shiroishi District Center",
+    schedule: ["Tuesday class 18:30", "Friday class 15:30"],
+  },
+  {
+    no: 8,
+    marker: "★",
+    name: "Kawashimo Branch",
+    address: "Kawashimo 3-jo 4-chome 1-1, Shiroishi-ku, Sapporo, Coop Sapporo Kawashimo Store",
+    schedule: ["Saturday 10:30"],
+  },
+  {
+    no: 9,
+    marker: "●",
+    name: "Lucy Nango Branch Wednesday Class",
+    address: "Sakaedori 18-chome, Shiroishi-ku, Sapporo, Coop Sapporo (Lucy Cultural School)",
+    schedule: ["Wednesday 16:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Shiroishi Ward"
+  description="A directory of Seishinkai Karate dojos and classes in Shiroishi Ward, Sapporo, including the General Headquarters Dojo and the training schedules of each branch in the ward."
+  lang="en"
+  path="/en/dojo/shiroishi/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Karate Dojos & Classes in Shiroishi Ward, Sapporo</h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Instructor-dispatch class — inquiries to the hosting cultural center / sports club
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — inquiries to the office or directly to the dojo manager
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <a
+          href="https://www.youtube.com/watch?v=yTxLbmtNGG4"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/news/Image1.jpg"
+            alt="Seishinkai Karate introduction video"
+            width="598"
+            height="331"
+            loading="lazy"
+          />
+        </a>
+        <p class="detail-media__caption">Introduction video (YouTube)</p>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to the list of dojos & classes</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

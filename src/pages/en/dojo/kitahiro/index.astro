@@ -1,0 +1,65 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "Eniwa City Karate Club",
+    address: "389-3 Minami-Shimamatsu, Eniwa City (Shimamatsu Gymnasium)",
+    schedule: ["Friday 16:00 (since Feb. 2022)"],
+  },
+  {
+    no: 2,
+    marker: "□",
+    name: "Obihiro City Karate Club",
+    address: "Nishi 2-jo Minami 24-chome, Obihiro City (Tetsunan area)",
+    schedule: ["Saturday 18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Obihiro, Eniwa & Asahikawa"
+  description="Directory of Seishinkai Karate dojos and classes in Eniwa (Shimamatsu) and Obihiro City. Find training days for each branch."
+  lang="en"
+  path="/en/dojo/kitahiro/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Karate Dojos in Eniwa City & Karate Classes in Obihiro City</h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — inquiries to the office or directly to the dojo manager
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/photo/Image2.jpg"
+          alt="Seishinkai Karate training session"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

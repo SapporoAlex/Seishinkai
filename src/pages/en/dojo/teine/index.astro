@@ -1,0 +1,150 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "□",
+    name: "Sumiyoshi-juku Nishimachi Class",
+    address: "Nishimachi-kita 10-chome, Nishi-ku, Sapporo — Teine Higashi Children's Hall",
+    schedule: ["Tuesday 19:00"],
+  },
+  {
+    no: 2,
+    marker: "□",
+    name: "Sumiyoshi-juku Miyanosawa Class",
+    address: "Nishimachi-minami 21-chome, Nishi-ku, Sapporo — Teine Memorial Hall",
+    schedule: ["Saturday 13:00"],
+  },
+  {
+    no: 3,
+    marker: "□",
+    name: "Sumiyoshi-juku Hassamu Class",
+    address: "Miyanosawa 1-jo 5-chome, Nishi-ku, Sapporo — Miyanosawa Children's Hall",
+    schedule: ["Friday 19:00"],
+  },
+  {
+    no: 4,
+    marker: "□",
+    name: "Sumiyoshi-juku Hachiken Class",
+    address: "Hachiken 3-jo Higashi 4-chome, Nishi-ku, Sapporo — Hachiken Higashi Hall",
+    schedule: ["Saturday 17:00"],
+  },
+  {
+    no: 5,
+    marker: "□",
+    name: "Sumiyoshi-juku Shin-Hassamu Dojo",
+    address: "Shin-Hassamu 6-jo 4-chome, Teine-ku, Sapporo — Shin-Hassamu Children's Hall",
+    schedule: ["Wednesday 19:00"],
+  },
+  {
+    no: 6,
+    marker: "□",
+    name: "Sumiyoshi-juku Teine Class",
+    address: "Teine-honcho 3-jo 1-chome, Teine-ku, Sapporo — Teine Community Center",
+    schedule: ["Thursday 19:00"],
+  },
+  {
+    no: 7,
+    marker: "□",
+    name: "Sumiyoshi-juku Hoshioki-Asubukaze Class",
+    address: "Hoshioki 2-jo 3-chome, Teine-ku, Sapporo — Hoshioki District Center",
+    schedule: ["Monday 19:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Teine Ward & Nishi Ward"
+  description="Directory of Seishinkai Karate dojos and classes in Teine Ward and Nishi Ward, Sapporo. Training days for Sumiyoshi-juku's Nishimachi, Miyanosawa, Hassamu, Hachiken, Shin-Hassamu, Teine, and Hoshioki-Asubukaze classes."
+  lang="en"
+  path="/en/dojo/teine/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">
+          Karate Dojos & Classes in Teine Ward and Nishi Ward
+        </h1>
+      </div>
+      <div class="detail-page__lead">
+        <p>The karate classes in Nishi Ward and Teine Ward are self-managed dojos.</p>
+      </div>
+      <p class="detail-page__contact">□ Sumiyoshi-juku direct line: 090-7517-3285</p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Instructor-dispatch class — inquiries to the hosting cultural center / sports club
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — office 011-300-0048 (weekdays 13:00–16:00),
+          or directly to the dojo manager
+        </li>
+      </ul>
+
+      <h2 class="detail-page__heading">Sumiyoshi-juku Class Introduction Pages</h2>
+      <ul class="detail-links">
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/nishimachi/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Nishimachi Class</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/miyanosawa/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Miyanosawa Class</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/hassamu/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Hassamu Class</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/hachiken/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Hachiken Class</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/shinhassamu/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Shin-Hassamu Dojo</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/teine/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Teine Class</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/hoshioki/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Hoshioki-Asubukaze Class</a
+          >
+        </li>
+      </ul>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to Karate Dojos & Classes list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

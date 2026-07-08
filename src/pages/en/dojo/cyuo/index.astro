@@ -1,0 +1,88 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "Sapporo Chuo-Higashi Branch",
+    address: "Mikami Bldg. 3F, Minami 2-jo Higashi 4-chome, Chuo-ku",
+    schedule: ["Wednesday 18:30/19:30"],
+  },
+  {
+    no: 2,
+    marker: "★",
+    name: "Fushimi Branch",
+    address: "Fushimi Kaikan, Minami 14-jo Nishi 18-chome, Chuo-ku",
+    schedule: ["Saturday 13:00"],
+  },
+  {
+    no: 3,
+    marker: "★",
+    name: "Sapporo Chuo Branch",
+    address: "Nijo Harunire Jido Kaikan (inside Nijo Elementary School), Minami 2-jo Nishi 15-chome, Chuo-ku",
+    schedule: ["Tuesday 18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Chuo Ward"
+  description="Directory of Seishinkai Karate dojos and classes in Chuo Ward, Sapporo. Training schedules for the Sapporo Chuo-Higashi, Fushimi, and Sapporo Chuo branches."
+  lang="en"
+  path="/en/dojo/cyuo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Karate Dojos & Classes in Chuo Ward</h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Instructor-dispatch class — inquiries to the hosting cultural center / sports club
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — inquiries to the office or directly to the dojo manager
+        </li>
+      </ul>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/shinsa.jpg"
+            alt="Grading examination held four times a year"
+            width="259"
+            height="157"
+            loading="lazy"
+          />
+          <figcaption>Grading examination held four times a year</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/goshin.jpg"
+            alt="Self-defense seminar in progress"
+            width="278"
+            height="153"
+            loading="lazy"
+          />
+          <figcaption>Self-defense seminar in progress</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to the dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

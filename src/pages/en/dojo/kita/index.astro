@@ -1,0 +1,131 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "ARCS Kita Karate Club",
+    address: "ARCS Kita 24-jo Store 2F, Kita 24-jo Nishi 9-chome, Kita-ku, Sapporo",
+    schedule: ["Thursday 15:45", "Saturday 15:30"],
+  },
+  {
+    no: 2,
+    marker: "★",
+    name: "Shinoro Karate Club",
+    address: "Shinoro Community Center 2F, Shinoro 3-jo 8-chome, Kita-ku, Sapporo",
+    schedule: ["Saturday 13:30", "Thursday 15:50"],
+  },
+  {
+    no: 3,
+    marker: "★",
+    name: "Ainosato Karate Club",
+    address: "Takuhoku Kaikan, Ainosato 4-jo 6-chome, Kita-ku, Sapporo",
+    schedule: ["Thursday 18:30"],
+  },
+  {
+    no: 4,
+    marker: "★",
+    name: "Minami-Ainosato Karate Club",
+    address: "Takuhoku Ainosato District Center, Ainosato 1-jo 6-chome, Kita-ku, Sapporo",
+    schedule: ["Sunday 10:00 (10:30 in winter)"],
+  },
+  {
+    no: 5,
+    marker: "□",
+    name: "Sumiyoshi-juku Azabu Dojo",
+    address: "Azabu Children's Hall, Kita 39-jo Nishi 5-chome, Kita-ku, Sapporo",
+    schedule: ["Saturday 19:00"],
+  },
+  {
+    no: 6,
+    marker: "□",
+    name: "Sumiyoshi-juku Shinkotoni / Shinkawa Class",
+    address: "Shinkotoni-Shinkawa District Center, Shinkotoni 2-8, Kita-ku, Sapporo",
+    schedule: ["Sunday 10:00"],
+  },
+  {
+    no: 7,
+    marker: "□",
+    name: "Sumiyoshi-juku Tonden Class",
+    address: "Tonden District Center, Tonden 5-jo 6-chome, Kita-ku, Sapporo",
+    schedule: ["Sunday 10:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Kita Ward"
+  description="Directory of Seishinkai Karate dojos and classes in Kita Ward, Sapporo. Training schedules for the ARCS Kita, Shinoro, Ainosato, and Minami-Ainosato clubs, plus each Sumiyoshi-juku class."
+  lang="en"
+  path="/en/dojo/kita/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Karate Dojos & Classes in Kita Ward, Sapporo</h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Instructor-dispatch class — inquiries to the hosting cultural center / sports club
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — inquiries to the office or directly to the dojo manager
+        </li>
+      </ul>
+
+      <h2 class="detail-page__heading">Sumiyoshi-juku Class Introduction Pages</h2>
+      <ul class="detail-links">
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/azabu/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Azabu Dojo</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/shinkotoni/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Shinkotoni / Shinkawa Class</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://sumiyoshijuku.org/class/tonden/"
+            target="_blank"
+            rel="noopener">Sumiyoshi-juku Tonden Class</a
+          >
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/photo/Image2.jpg"
+          alt="Seishinkai Karate training session"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

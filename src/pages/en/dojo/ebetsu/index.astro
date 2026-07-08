@@ -1,0 +1,130 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "#",
+    name: "Seishinkan Oasa Dojo",
+    sub: "(Ebetsu Area Headquarters Dojo)",
+    address: "6-9 Oasa-sawacho, Ebetsu, Seishinkan, Park Hills 1F (along Niban-dori)",
+    schedule: [
+      "Monday 16:00",
+      "Thursday 18:30",
+      "Friday 16:00",
+      "Friday 18:45 (reservation required)",
+      "Saturday 10:00",
+    ],
+  },
+  {
+    no: 2,
+    marker: "#",
+    name: "Nopporo Karate Club",
+    address: "23-6 Nopporo-tondencho, Ebetsu, Morinodai Memorial Hall",
+    schedule: ["Wednesday 18:30"],
+  },
+  {
+    no: 3,
+    marker: "#",
+    name: "Ebetsu Karate Club",
+    address: "3-jo 5-chome 11-1, Ebetsu, Ebetsu Central Community Center",
+    schedule: ["Friday 18:30"],
+  },
+  {
+    no: 4,
+    marker: "●",
+    name: "AEON Ebetsu Karate Club",
+    address: "34 Saiwaicho, Ebetsu, AEON Ebetsu 3F",
+    schedule: ["Sunday 10:00", "Sunday 13:00 (in preparation)"],
+  },
+  {
+    no: 5,
+    marker: "#",
+    name: "Iwamizawa Karate Club",
+    address: "4-jo Nishi 1-chome, Iwamizawa, Iwamizawa Lifelong Learning Center",
+    schedule: ["Monday 18:30"],
+  },
+  {
+    no: 6,
+    marker: "#",
+    name: "Ishikari Hanakawa Karate Club",
+    address: "Hanakawa Minami 6-5, Ishikari, Hanakawa Minami Community Center",
+    schedule: ["Tuesday 16:30"],
+  },
+  {
+    no: 7,
+    marker: "#",
+    name: "Ishikari Ryokuentai Karate Club",
+    address: "Ryokuentai Higashi 2-jo 1-chome, Ishikari, Ryokuentai Green Hall",
+    schedule: ["Saturday 15:30"],
+  },
+  {
+    no: 8,
+    marker: "★",
+    name: "Ishikari Hanakawa-Kita Karate Club",
+    address: "※ As of November 2022, merged with the Ryokuentai branch",
+    schedule: [],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Ebetsu, Iwamizawa & Ishikari"
+  description="A directory of Seishinkai Karate dojos and classes in Ebetsu, Iwamizawa, and Ishikari cities, including Oasa Dojo and the training schedules of each branch."
+  lang="en"
+  path="/en/dojo/ebetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">
+          Karate Dojos & Classes in Ebetsu City, Ishikari City & Iwamizawa City
+        </h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Instructor-dispatch class — inquiries to the hosting cultural center / sports club
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — inquiries to the office or directly to the dojo manager
+        </li>
+      </ul>
+
+      <p class="detail-page__note">
+        Related link:<a
+          href="https://www.ebe-2.net/楽しみながらできる！キッズ空手倶楽部/"
+          target="_blank"
+          rel="noopener">AEON Ebetsu Karate Club (Kids Karate Club)</a
+        >
+      </p>
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/photo/Image2.jpg"
+          alt="Seishinkai Karate training scene"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to the list of dojos & classes</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

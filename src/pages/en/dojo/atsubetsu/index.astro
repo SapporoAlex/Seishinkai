@@ -1,0 +1,135 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "Atsubetsu Branch / Friday Class",
+    address: "Atsubetsu-nishi 4-jo 4-chome, Atsubetsu-ku, Sapporo — Atsubetsu-nishi District Center, 2F",
+    schedule: ["Friday 18:00/19:05"],
+  },
+  {
+    no: 2,
+    marker: "★",
+    name: "Atsubetsu Branch / Sunday Class",
+    address: "Atsubetsu-nishi 4-jo 4-chome, Atsubetsu-ku, Sapporo — Atsubetsu-nishi District Center, 2F",
+    schedule: ["Sunday 9:30/10:30"],
+  },
+  {
+    no: 3,
+    marker: "★",
+    name: "Shin-Sapporo Branch",
+    address: "Chuo 1-jo 5-chome, Atsubetsu-ku, Sapporo — Atsubetsu Ward Citizens' Center, Meeting Room",
+    schedule: ["Monday 19:00 (from July 2025)"],
+  },
+  {
+    no: 4,
+    marker: "★",
+    name: "Atsubetsu-minami Branch",
+    address: "Atsubetsu-minami 7-chome 9-1, Atsubetsu-ku, Sapporo — Atsubetsu-minami District Center (since March 2021)",
+    schedule: ["Thursday 18:00/19:00"],
+  },
+  {
+    no: 5,
+    marker: "★",
+    name: "Momijidai Branch",
+    address: "Momijidai-kita 7-chome, Atsubetsu-ku, Sapporo — Momijidai Management Center",
+    schedule: ["Saturday 10:00"],
+  },
+  {
+    no: 6,
+    marker: "●",
+    name: "Duo Junior Karate Class",
+    address: "Atsubetsu-chuo 2-jo 5-chome, Atsubetsu-ku, Sapporo, Duo II 5F — Duo Culture Center",
+    schedule: ["Wednesday 16:45"],
+  },
+  {
+    no: 7,
+    marker: "●",
+    name: "Duo Women's Self-Defense Karate Class",
+    address: "Atsubetsu-chuo 2-jo 5-chome, Atsubetsu-ku, Sapporo, Duo II 5F — Duo Culture Center",
+    schedule: ["Wednesday 19:30"],
+  },
+  {
+    marker: "★",
+    name: "Aoba-minami Branch (in planning)",
+    address: "Aoba-cho 6-chome 3-10, Atsubetsu-ku, Sapporo — Aoba-minami Community Hall (to begin once 5 members have joined)",
+    schedule: [],
+  },
+  {
+    no: 8,
+    marker: "□",
+    name: "Seishinkai Inoue Dojo",
+    address: "Atsubetsu-nishi 4-jo 4-chome 13-23, Atsubetsu-ku, Sapporo",
+    schedule: ["Saturday/Tuesday 19:00"],
+  },
+  {
+    marker: "★",
+    name: "Seishinkan Yamamoto Storage",
+    address: "Atsubetsu-cho Yamamoto, Atsubetsu-ku, Sapporo — former Seishinkan Yamamoto",
+    schedule: [],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Atsubetsu Ward"
+  description="Directory of Seishinkai Karate dojos and classes in Atsubetsu Ward, Sapporo. Find training days for the Atsubetsu-nishi, Shin-Sapporo, Atsubetsu-minami, Momijidai and other branches."
+  lang="en"
+  path="/en/dojo/atsubetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Karate Dojos & Classes in Atsubetsu Ward</h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Instructor-dispatch class — inquiries to the hosting cultural center / sports club
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — inquiries to the office or directly to the dojo manager
+        </li>
+      </ul>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/ani.jpg"
+            alt="Demonstration at the Atsubetsu-nishi District Center cultural festival"
+            width="301"
+            height="166"
+            loading="lazy"
+          />
+          <figcaption>Demonstration at the Atsubetsu-nishi District Center cultural festival</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/DSCN5656.jpg"
+            alt="Yakiniku party after volunteer cleanup at the Yamamoto training center"
+            width="288"
+            height="160"
+            loading="lazy"
+          />
+          <figcaption>After the volunteer cleanup at the Yamamoto training center, a yakiniku party</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to Karate Dojos & Classes list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
