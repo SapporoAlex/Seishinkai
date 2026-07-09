@@ -271,6 +271,7 @@ a:hover {
 
 :where(html) {
   -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
   color-scheme: dark light;
   tab-size: 2;
   scrollbar-gutter: stable;
@@ -926,7 +927,7 @@ a:hover {
 .fv .swiper-container {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 }
 @media (min-width: 48rem) {
   .fv .swiper-container {
@@ -2183,7 +2184,7 @@ a:hover {
   font-family: var(--font-jp);
   font-size: 0.75rem;
   font-weight: 400;
-  color: var(--text-light);
+  color: var(--text-mid);
 }
 .membership__fees-amount {
   font-size: 1.75rem;
@@ -2216,7 +2217,7 @@ a:hover {
   padding-top: 12px;
   border-top: 1px solid var(--border);
   font-size: 0.8rem;
-  color: var(--text-light);
+  color: var(--text-mid);
   line-height: 1.6;
   margin-bottom: 0;
 }
