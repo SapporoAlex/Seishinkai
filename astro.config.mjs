@@ -2,7 +2,9 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://seishinkan.ne.jp",
+  // site: "https://seishinkan.ne.jp",
+  site: "https://sapporoalex.github.io",
+  base: "/Seishinkai/",
 
   integrations: [
     sitemap({
