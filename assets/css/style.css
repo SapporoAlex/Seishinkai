@@ -486,7 +486,6 @@ a:hover {
 }
 
 .text {
-  font-family: "Noto Serif JP", serif;
   line-height: 2.1;
   color: var(--text-mid);
 }
@@ -504,9 +503,8 @@ a:hover {
   position: fixed;
   top: 0;
   right: 0;
-  width: 80vw;
-  max-width: 70%;
-  height: 100vh;
+  width: 100vw;
+  height: 100dvh;
   background: var(--white);
   box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
   transform: translateX(100%);
@@ -515,7 +513,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1.5rem 7rem 1.5rem;
 }
 
 .header__drawer--open {
@@ -579,7 +579,7 @@ a:hover {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.2);
   z-index: 1000;
   opacity: 0;
@@ -636,7 +636,7 @@ a:hover {
   padding-top: 0px;
   font-size: 30px;
   font-weight: 600;
-  font-family: "noto serif jp";
+  font-family: "noto serif jp", "Times New Roman", Times, serif;
 }
 
 .header__nav {
