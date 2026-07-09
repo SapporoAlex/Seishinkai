@@ -66,7 +66,7 @@ const snsLinks = [
       <div class="news__grid">
         {
           snsLinks.map((sns) => (
-            <a class="news__card" href={sns.href} target="_blank" rel="noopener">
+            <a class="news__card fade-up-in" href={sns.href} target="_blank" rel="noopener">
               <span class={`news__icon news__icon--${sns.id}`} aria-hidden="true">
                 {sns.id === "facebook" && (
                   <svg viewBox="0 0 24 24" fill="currentColor">

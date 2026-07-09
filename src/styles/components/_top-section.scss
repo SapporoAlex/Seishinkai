@@ -25,7 +25,7 @@
     align-items: center;
     @include mqpc {
       flex-direction: row;
-      padding: 60px 0;
+      padding: 80px 0;
       margin-top: 0;
     }
   }
@@ -52,8 +52,6 @@
     position: absolute;
     min-width: 100dvw;
     min-height: vw(130, 375);
-    max-height: vw(130, 375);
-
     top: vw(-130, 375);
     left: 0;
     @include mqpc {

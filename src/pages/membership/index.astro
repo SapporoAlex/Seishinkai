@@ -140,7 +140,7 @@ const studentConditions = [
         </div>
 
         <div class="membership__fees-grid">
-          <div class="membership__fees-card">
+          <div class="membership__fees-card fade-up-in">
             <h3 class="membership__fees-title">入会金</h3>
             <p class="membership__fees-amount">7,000円</p>
             <ul class="membership__fees-list">
@@ -149,7 +149,7 @@ const studentConditions = [
             </ul>
           </div>
 
-          <div class="membership__fees-card">
+          <div class="membership__fees-card fade-up-in">
             <h3 class="membership__fees-title">月会費 <small>※札幌市及び近隣地区の例</small></h3>
             <p class="membership__fees-amount">5,300円〜</p>
             <ul class="membership__fees-list">
@@ -157,12 +157,12 @@ const studentConditions = [
               <li>5,800〜6,800円(学生/女性/勤労者)</li>
               <li>3才未満は会費なし</li>
             </ul>
-            <p class="membership__fees-note">
+            <p class="membership__fees-note fade-in">
               ※冬期間は暖房費がかかります。1シーズン1,100〜3,000円(時価により変動)
             </p>
           </div>
 
-          <div class="membership__fees-card">
+          <div class="membership__fees-card fade-up-in">
             <h3 class="membership__fees-title">年度会費・用具</h3>
             <ul class="membership__fees-list">
               <li>年度会費 4,800〜6,800円(保険含)</li>
@@ -175,7 +175,7 @@ const studentConditions = [
           </div>
 
           <div class="membership__fees-aside">
-            <figure class="membership__fees-figure">
+            <figure class="membership__fees-figure fade-up-in">
               <img
                 src={`${IMG}karategi.jpg`}
                 alt="清心流オリジナル特注縫製の専用空手衣"
@@ -183,7 +183,7 @@ const studentConditions = [
               />
               <figcaption>専用空手衣(清心流オリジナル特注縫製)</figcaption>
             </figure>
-            <figure class="membership__fees-figure">
+            <figure class="membership__fees-figure fade-up-in">
               <a href="/dojo/iai/">
                 <img src={`${IMG}iai.jpg`} alt="居合部" loading="lazy" />
               </a>
@@ -213,15 +213,15 @@ const studentConditions = [
       </div>
 
       <div class="membership__related">
-        <a class="membership__related-card" href="http://seishinryu.info/" target="_blank">
+        <a class="membership__related-card fade-up-in" href="http://seishinryu.info/" target="_blank">
           オンライン空手クラス(ネットスクール)会員も募集しています
         </a>
-        <a class="membership__related-card" href="/membership/kamei/">
+        <a class="membership__related-card fade-up-in" href="/membership/kamei/">
           文化教室及び支部認定、セミナー希望の方へ
         </a>
       </div>
 
-      <div class="membership__npo-note">
+      <div class="membership__npo-note fade-up-in">
         <strong>運営について</strong>
         <p>
           各道場・支部の指導担当者は本会社会人会員が就労後の余暇を活用して、ボランティアとして携わっています。本会は特定非営利活動法人としての認証を得て活動しており、道場練習生会員の月会費は組織の維持運営費に充当されており、稽古がなくてもかかりますことを御理解下さい。また逆に月に直轄各支部に参加して10回、20回稽古されても月会費の変動はありません(カルチャースクールは除く)。
@@ -242,7 +242,7 @@ const studentConditions = [
         <div class="membership__media-grid">
           {
             mediaItems.map((item) => (
-              <div class="membership__media-card">
+              <div class="membership__media-card fade-up-in">
                 {item.href ? (
                   <a href={item.href} target="_blank">
                     <img src={item.image} alt={item.label} loading="lazy" />

@@ -22,7 +22,7 @@
   }
 
   @include mqsp {
-    display: block;
+    // display: block;
     border: 1px solid var(--border);
 
     tbody,
@@ -53,7 +53,6 @@
     }
 
     th {
-      font-weight: bold;
       border-bottom: 1px solid #ddd;
       border-top: 1px solid #000;
     }

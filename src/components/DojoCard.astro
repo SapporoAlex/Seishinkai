@@ -27,7 +27,7 @@ const labels = categoryLabels[lang] ?? categoryLabels.ja;
 const buttonLabel = lang === "en" ? "Details" : "詳細を見る";
 ---
 
-<div class="dojo-card" data-dojo-id={id}>
+<div class="dojo-card fade-up-in" data-dojo-id={id}>
   <div class="dojo-card__category">{labels[category]}</div>
   <h3 class="dojo-card__name" set:html={name}></h3>
   <p class="dojo-card__sensei">{sensei}</p>

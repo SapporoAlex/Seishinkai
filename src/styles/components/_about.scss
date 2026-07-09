@@ -40,16 +40,25 @@
       padding-top: 24px;
       border-top: 1px solid var(--border);
       @include mqsp {
-        margin-left: 0;
+        margin-inline: auto;
+        justify-content: center;
         gap: 16px;
       }
     }
     &-figure {
       margin: 0;
       width: 180px;
+      @include mqsp {
+        width: 100%;
+        max-width: 280px;
+      }
 
       &.-wide {
         width: 280px;
+        @include mqsp {
+          width: 100%;
+          max-width: 280px;
+        }
       }
 
       img {

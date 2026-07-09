@@ -106,19 +106,19 @@ const studentConditions = [
       </div>
 
       <div class="membership__points">
-        <div class="membership__point">
+        <div class="membership__point fade-up-in">
           <h3 class="membership__point-title">Train at 80 Branches</h3>
           <p>
             Members may freely join practice, as often as they like, at the 80 headquarters-affiliated branches in and around Sapporo (excluding culture-school classes run by other organizations and small venues). A visitor ticket system is also available.
           </p>
         </div>
-        <div class="membership__point">
+        <div class="membership__point fade-up-in">
           <h3 class="membership__point-title">Free Trial Lessons</h3>
           <p>
             Direct-affiliated classes offer free trial lessons (culture-school classes are excluded as they are run by other organizations). ※ A heating fee applies in winter.
           </p>
         </div>
-        <div class="membership__point">
+        <div class="membership__point fade-up-in">
           <h3 class="membership__point-title">Office Hours</h3>
           <p>
             Phone reception is on weekdays, Monday to Friday, 1:00 PM–4:00 PM. Outside these hours and on weekends/holidays, please contact us by email. Please note we may be unable to answer during private lessons even within office hours.
@@ -141,7 +141,7 @@ const studentConditions = [
         </div>
 
         <div class="membership__fees-grid">
-          <div class="membership__fees-card">
+          <div class="membership__fees-card fade-up-in">
             <h3 class="membership__fees-title">Enrollment Fee</h3>
             <p class="membership__fees-amount">¥7,000</p>
             <ul class="membership__fees-list">
@@ -150,7 +150,7 @@ const studentConditions = [
             </ul>
           </div>
 
-          <div class="membership__fees-card">
+          <div class="membership__fees-card fade-up-in">
             <h3 class="membership__fees-title">Monthly Fee <small>※ Sapporo & nearby areas</small></h3>
             <p class="membership__fees-amount">from ¥5,300</p>
             <ul class="membership__fees-list">
@@ -163,7 +163,7 @@ const studentConditions = [
             </p>
           </div>
 
-          <div class="membership__fees-card">
+          <div class="membership__fees-card fade-up-in">
             <h3 class="membership__fees-title">Annual Fee & Equipment</h3>
             <ul class="membership__fees-list">
               <li>Annual fee ¥4,800–6,800 (insurance included)</li>
@@ -176,7 +176,7 @@ const studentConditions = [
           </div>
 
           <div class="membership__fees-aside">
-            <figure class="membership__fees-figure">
+            <figure class="membership__fees-figure fade-up-in">
               <img
                 src={`${IMG}karategi.jpg`}
                 alt="Seishin-ryu original made-to-order karate-gi"
@@ -184,7 +184,7 @@ const studentConditions = [
               />
               <figcaption>Official karate-gi (Seishin-ryu original, made to order)</figcaption>
             </figure>
-            <figure class="membership__fees-figure">
+            <figure class="membership__fees-figure fade-up-in">
               <a href={`${SITE}dojo/iai/index.html`} target="_blank">
                 <img src={`${IMG}iai.jpg`} alt="Iaido division" loading="lazy" />
               </a>
@@ -243,7 +243,7 @@ const studentConditions = [
         <div class="membership__media-grid">
           {
             mediaItems.map((item) => (
-              <div class="membership__media-card">
+              <div class="membership__media-card fade-up-in">
                 {item.href ? (
                   <a href={item.href} target="_blank">
                     <img src={item.image} alt={item.label} loading="lazy" />
