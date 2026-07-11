@@ -946,6 +946,12 @@ body.is-menu-open {
 .fv {
   position: relative;
   overflow: hidden;
+  padding-top: 74px;
+}
+@media (min-width: 48rem) {
+  .fv {
+    padding-top: 84px;
+  }
 }
 .fv .swiper-container {
   position: relative;
