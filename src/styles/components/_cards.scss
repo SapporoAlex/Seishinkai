@@ -55,6 +55,9 @@
     border: 1px var(--border) solid;
     display: flex;
     flex-direction: column;
+    @include mqpc {
+      width: 250px;
+    }
   }
   &__card-top {
     padding: 10px;
@@ -66,13 +69,14 @@
     background: var(--navy);
     border-right: 1px var(--border) solid;
     gap: 20px;
+    padding-right: 30px;
     @include mqpc {
-      justify-content: flex-start;
+      justify-content: center;
       padding: 20px;
       flex-direction: column;
       align-items: center;
-      width: 100%;
-      height: 200px;
+      width: auto;
+      min-height: 250px;
       gap: 10px;
       border-right: none;
       border-bottom: 1px var(--border) solid;
@@ -84,13 +88,12 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     background: var(--white);
     border-right: 1px var(--border) solid;
     @include mqpc {
       flex-direction: column;
       min-width: 200px;
-      height: 100%;
       border-right: none;
       border-bottom: 1px var(--border) solid;
     }
@@ -109,6 +112,9 @@
     font-weight: 600;
     color: var(--off-white);
     text-align: center;
+    width: 100%;
+    @include mqpc {
+    }
   }
 }
 

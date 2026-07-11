@@ -10,6 +10,7 @@ interface Props {
   profession?: string;
   details?: string[];
   tags?: string[];
+  link?: string;
   lang?: string;
 }
 
@@ -23,6 +24,7 @@ const {
   profession,
   details = [],
   tags = [],
+  link,
   lang = "ja",
 } = Astro.props;
 
@@ -30,6 +32,8 @@ const labels =
   lang === "en"
     ? { date: "Life:", prefecture: "Region:", profession: "Occupation:" }
     : { date: "生没年:", prefecture: "地域:", profession: "職業:" };
+
+const linkLabel = lang === "en" ? "Learn more" : "もっと見る";
 ---
 
 <div class="profile-card fade-up-in">
@@ -82,5 +86,14 @@ const labels =
         </div>
       )
     }
-  </div>
+    {link && (
+      <a
+        class="profile-card__link"
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {linkLabel}
+      </a>
+    )}  </div>
 </div>

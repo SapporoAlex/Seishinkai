@@ -11,6 +11,7 @@
         "members": [
           {
             "id": "mimura",
+            "link": "https://seishinkan.ne.jp/mimu.html",
             "image": "/assets/images/instructors/mimu2.jpg",
             "name": "故・三村佳代子",
             "role": "",
@@ -23,6 +24,7 @@
           },
           {
             "id": "shinozaki",
+            "link": "https://muryukun.wixsite.com/muryukun/about-us",
             "image": "/assets/images/instructors/sinozaki.jpg",
             "name": "故・篠崎太郎",
             "role": "",
@@ -35,6 +37,7 @@
           },
           {
             "id": "muroki-yoichi",
+            "link": "https://ja.wikipedia.org/wiki/%E5%AE%A4%E6%9C%A8%E6%B4%8B%E4%B8%80",
             "image": "/assets/images/instructors/muroki-yoichi.jpg",
             "name": "故・室木洋一",
             "role": "",
@@ -47,6 +50,7 @@
           },
           {
             "id": "tamas",
+            "link": "https://www.facebook.com/tamas.weber.144",
             "image": "/assets/images/instructors/tamas.jpg",
             "name": "タマス",
             "role": "",
@@ -64,6 +68,7 @@
           },
           {
             "id": "alfonso",
+            "link": "https://www.alfonsotorregrossa.it/",
             "image": "/assets/images/instructors/alfo.jpg",
             "name": "アルフォンソ",
             "role": "",
@@ -95,6 +100,7 @@
         "members": [
           {
             "id": "okubo-tsubasa",
+            "link": "https://seishinkan.ne.jp/tubasa.html",
             "image": "/assets/images/instructors/tsubasa.jpg",
             "name": "大久保翼",
             "role": "総本部館長",
@@ -107,6 +113,7 @@
           },
           {
             "id": "sumiyoshi",
+            "link": "https://sumiyoshijuku.org/jukucho/",
             "image": "/assets/images/instructors/sumiyoshi.jpg",
             "name": "住吉一徳",
             "role": "統括本部長",
@@ -119,6 +126,7 @@
           },
           {
             "id": "muroki-takushi",
+            "link": "https://www.facebook.com/profile.php?id=100014649318764",
             "image": "/assets/images/instructors/muroki.jpg",
             "name": "室木拓士",
             "role": "居合部長",
@@ -131,6 +139,7 @@
           },
           {
             "id": "maekawa",
+            "link": "https://seishinkan.ne.jp/dojo/m-atsubetsu/",
             "image": "/assets/images/instructors/maekawa.jpg",
             "name": "前川信孝",
             "role": "古武術部長/広報部長",
@@ -236,6 +245,7 @@
         "members": [
           {
             "id": "inoue",
+            "link": "https://seishinkan.ne.jp/dojo/inouedojo/",
             "image": "/assets/images/instructors/inoue.jpg",
             "name": "井上龍一郎",
             "role": "",
@@ -248,6 +258,7 @@
           },
           {
             "id": "inuura",
+            "link": "https://www.facebook.com/jushin.inuura.3",
             "image": "/assets/images/instructors/inuura.jpg",
             "name": "犬浦壽信",
             "role": "",
@@ -260,6 +271,7 @@
           },
           {
             "id": "ishimori",
+            "link": "https://seishinkan.ne.jp/dojo/iwamizawa/",
             "image": "/assets/images/instructors/ishimori.jpg",
             "name": "石森忠之",
             "role": "",
@@ -272,6 +284,7 @@
           },
           {
             "id": "namikawa",
+            "link": "https://www.facebook.com/kazuaki.namikawa",
             "image": "/assets/images/instructors/namikawa.jpg",
             "name": "波川和明",
             "role": "",
@@ -284,6 +297,7 @@
           },
           {
             "id": "inomata",
+            "link": "https://seishinkan.ne.jp/dojo/higashikariki/index.html",
             "image": "/assets/images/instructors/inomata.jpg",
             "name": "猪又敬之",
             "role": "",
@@ -296,6 +310,7 @@
           },
           {
             "id": "kudo",
+            "link": "https://seishinkan.ne.jp/dojo/obihiro/",
             "image": "/assets/images/instructors/kudo.jpg",
             "name": "工藤哲弘",
             "role": "",
@@ -308,6 +323,7 @@
           },
           {
             "id": "kudo-hiromi",
+            "link": "https://www.facebook.com/profile.php?id=100004385984913",
             "image": "/assets/images/instructors/hiromi.jpg",
             "name": "工藤博美",
             "role": "",
@@ -320,6 +336,7 @@
           },
           {
             "id": "wakabayashi",
+            "link": "https://seishinkan.ne.jp/dojo/atsubetsu/",
             "image": "/assets/images/instructors/wakabayashi.jpg",
             "name": "若林敬司",
             "role": "",
@@ -332,6 +349,7 @@
           },
           {
             "id": "mikami",
+            "link": "https://seishinkan.ne.jp/dojo/mikami/",
             "image": "/assets/images/instructors/mikami.jpg",
             "name": "三上 淳",
             "role": "",
@@ -344,6 +362,7 @@
           },
           {
             "id": "yoshida",
+            "link": "https://seishinkan.ne.jp/dojo/kikusui2/",
             "image": "/assets/images/instructors/yoshida.jpg",
             "name": "吉田ますみ",
             "role": "",
@@ -392,6 +411,7 @@
           },
           {
             "id": "komada",
+            "link": "https://seishinkan.ne.jp/dojo/kyogoku/",
             "image": "/assets/images/instructors/komada.jpg",
             "name": "駒田拓朗",
             "role": "",
@@ -416,6 +436,7 @@
           },
           {
             "id": "takahashi-katsunori",
+            "link": "http://la-piece.com/",
             "image": "/assets/images/instructors/takahashi.jpg",
             "name": "髙橋克典",
             "role": "",
@@ -452,6 +473,7 @@
           },
           {
             "id": "michael",
+            "link": "https://www.facebook.com/michael.widmer.165/",
             "image": "/assets/images/instructors/mih.jpg",
             "name": "ミヒャエル",
             "role": "",
@@ -476,6 +498,7 @@
           },
           {
             "id": "suda",
+            "link": "https://sumiyoshijuku.org/",
             "image": "/assets/images/instructors/suda.jpg",
             "name": "須田まきこ",
             "role": "",
@@ -500,6 +523,7 @@
           },
           {
             "id": "shirokawa",
+            "link": "https://sumiyoshijuku.org/class/shinkotoni/",
             "image": "/assets/images/instructors/shirokawa.jpg",
             "name": "城川義明",
             "role": "",
@@ -512,6 +536,7 @@
           },
           {
             "id": "shirakawa",
+            "link": "https://sumiyoshijuku.org/",
             "image": "/assets/images/instructors/shirakawa.jpg",
             "name": "白川祥之",
             "role": "",
@@ -524,6 +549,7 @@
           },
           {
             "id": "imai",
+            "link": "https://seishinkan.ne.jp/dojo/fushiko/",
             "image": "/assets/images/instructors/imai.jpg",
             "name": "今井直也",
             "role": "",
@@ -584,6 +610,7 @@
           },
           {
             "id": "ineda",
+            "link": "https://sumiyoshijuku.org/",
             "image": "/assets/images/instructors/ineda.jpg",
             "name": "稲田育夫",
             "role": "",
@@ -596,6 +623,7 @@
           },
           {
             "id": "maejima",
+            "link": "https://www.facebook.com/satoshi.maejima.9",
             "image": "/assets/images/instructors/maejima.jpg",
             "name": "前嶋 智",
             "role": "",
@@ -711,6 +739,7 @@
           },
           {
             "id": "takano",
+            "link": "https://www.facebook.com/profile.php?id=100034261714273",
             "image": "/assets/images/instructors/takano.jpg",
             "name": "高野 均",
             "role": "",
