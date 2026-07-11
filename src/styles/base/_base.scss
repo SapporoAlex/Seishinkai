@@ -144,6 +144,7 @@ html[lang="en"] {
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--default-font-family);
   color: var(--text);
   background: var(--off-white);
