@@ -2822,7 +2822,7 @@ body.is-menu-open {
 }
 
 .page-container {
-  padding: 80px var(--side-spacing-pc);
+  padding: 164px var(--side-spacing-pc);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -2833,7 +2833,7 @@ body.is-menu-open {
 }
 @media (max-width: 47.98rem) {
   .page-container {
-    padding: 50px var(--side-spacing);
+    padding: 124px var(--side-spacing);
   }
 }
 
