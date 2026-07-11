@@ -35,6 +35,10 @@
 .fv {
   position: relative;
   overflow: hidden;
+  padding-top: 74px;
+  @include mqpc {
+    padding-top: 84px;
+  }
   .swiper-container {
     position: relative;
     width: 100%;
