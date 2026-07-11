@@ -19,7 +19,7 @@
 // Standard page wrapper, shared by all content pages (about, schedule,
 // dojo, instructors, membership, news — ja & en).
 .page-container {
-  padding: 80px var(--side-spacing-pc);
+  padding: 164px var(--side-spacing-pc);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   width: 100%;
   text-align: start;
   @include mqsp {
-    padding: 50px var(--side-spacing);
+    padding: 124px var(--side-spacing);
   }
 }
 
