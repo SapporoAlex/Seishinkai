@@ -138,6 +138,7 @@ body {
   font-family: var(--default-font-family);
   color: var(--text);
   background: var(--off-white);
+  position: relative;
 }
 body:not(.is-fv-hidden):has(.fv__slide-full.swiper-slide-active) {
   --nav-bar-color: var(--white);
@@ -512,6 +513,9 @@ a:hover {
   min-height: 100dvh;
   height: 100svh;
   min-height: 100svh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: var(--white);
   box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
   transform: translateX(100%);
@@ -614,7 +618,7 @@ a:hover {
 .header {
   width: 100%;
   top: 0;
-  position: sticky;
+  position: fixed;
   background: var(--white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   z-index: 900;
@@ -785,6 +789,11 @@ a:hover {
   background: #222;
   border-radius: 2px;
   transition: all 0.3s;
+}
+
+body.is-menu-open {
+  overflow: hidden;
+  touch-action: none;
 }
 
 @media (max-width: 1024px) {
