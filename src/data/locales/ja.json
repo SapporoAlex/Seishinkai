@@ -17,10 +17,11 @@
       { "label": "入会", "href": "/membership/" },
       { "label": "インストラクター", "href": "/instructors/" },
       { "label": "道場一覧", "href": "/dojo/" },
-      { "label": "ニュース・SNS", "href": "/news/" }
+      { "label": "ニュース・SNS", "href": "/news/" },
+      { "label": "リンク・パートナー", "href": "/links-partners/" }
     ]
   },
   "footer": {
-    "text": "Copyright© 1995 全日本清心会空手道連盟 All Rights Reserved."
+    "text": "Copyright© 1995-2026 全日本清心会空手道連盟 All Rights Reserved."
   }
 }

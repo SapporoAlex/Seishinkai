@@ -17,10 +17,11 @@
       { "label": "Membership", "href": "/en/membership/" },
       { "label": "Instructors", "href": "/en/instructors/" },
       { "label": "Dojo List", "href": "/en/dojo/" },
-      { "label": "News & SNS", "href": "/en/news/" }
+      { "label": "News & SNS", "href": "/en/news/" },
+      { "label": "Links & Partners", "href": "/en/links-partners/" }
     ]
   },
   "footer": {
-    "text": "Copyright© 1995 All Japan Seishinkai Karate Federation All Rights Reserved."
+    "text": "Copyright© 1995-2026 All Japan Seishinkai Karate Federation All Rights Reserved."
   }
 }

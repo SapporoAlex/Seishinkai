@@ -1,5 +1,5 @@
 ---
-const { text = "Copyright© 1995 全日本清心会空手道連盟 All Rights Reserved.", lang = "ja" } =
+const { text = "Copyright© 1995-2026 全日本清心会空手道連盟 All Rights Reserved.", lang = "ja" } =
   Astro.props;
 
 const isEn = lang === "en";
@@ -25,6 +25,7 @@ const columns = [
       { label: isEn ? "Instructors" : "師範・支部長", href: `${p}/instructors/` },
       { label: isEn ? "Dojo List" : "道場一覧", href: `${p}/dojo/` },
       { label: isEn ? "News & SNS" : "ニュース・SNS", href: `${p}/news/` },
+      { label: isEn ? "Links & Partners" : "リンク・パートナー", href: `${p}/links-partners/` },
     ],
   },
   {
