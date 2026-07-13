@@ -389,6 +389,8 @@ a:hover {
 
 .table {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   border-collapse: collapse;
   border: 1px solid var(--border);
   margin-bottom: 60px;
@@ -396,7 +398,7 @@ a:hover {
 .table th,
 .table td {
   text-align: left;
-  padding: 30px 30px;
+  padding: 25px 25px;
   border: 1px solid var(--border);
   background: #fff;
 }
@@ -404,7 +406,12 @@ a:hover {
   background: var(--navy);
   color: var(--white);
   border-right: 1px solid #ddd;
-  min-width: 10rem;
+  min-width: 8rem;
+}
+@media (max-width: 47.98rem) {
+  .table th {
+    min-width: 5rem;
+  }
 }
 @media (max-width: 47.98rem) {
   .table {
@@ -1409,6 +1416,11 @@ body.is-menu-open {
   font-weight: 700;
   color: #d62828;
 }
+@media (min-width: 48rem) {
+  .top-contact__big {
+    cursor: default;
+  }
+}
 .top-contact__email {
   font-size: 1.2rem;
   word-break: break-all;
@@ -1584,7 +1596,7 @@ body.is-menu-open {
 }
 .accordion__button {
   width: 100%;
-  padding: 30px 30px;
+  padding: 25px 25px;
   background: var(--navy);
   color: var(--white);
   border: none;
@@ -1604,6 +1616,7 @@ body.is-menu-open {
 }
 .accordion__button.is-active {
   background-color: #f0f0f0;
+  color: var(--navy);
 }
 .accordion__icon {
   width: 24px;
@@ -2626,8 +2639,12 @@ body.is-menu-open {
 }
 
 .branch-table__wrap {
-  overflow-x: auto;
   margin-bottom: 24px;
+}
+@media (max-width: 47.98rem) {
+  .branch-table__wrap {
+    overflow-x: auto;
+  }
 }
 .branch-table {
   width: 100%;
