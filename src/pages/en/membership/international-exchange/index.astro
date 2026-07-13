@@ -1,0 +1,140 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const visits = [
+  { year: "2026", place: "Australia", image: "/assets/images/legacy/news/2026/dallen202607.jpg" },
+  { year: "2026", place: "Sweden", image: "/assets/images/legacy/news/2026/sweden.jpg" },
+  { year: "2025", place: "Norway", image: "/assets/images/legacy/news/2026/nolway.jpg" },
+  { year: "2025", place: "Sweden", image: "/assets/images/legacy/news/2025/erica.jpg" },
+  { year: "2025", place: "Sri Lanka", image: "/assets/images/legacy/news/2025/kkpp.jpg" },
+  { year: "2024", place: "Argentina", image: "/assets/images/legacy/news/2024gon.jpg" },
+  { year: "2024", place: "Russia", image: "/assets/images/legacy/news/2024ro.jpg" },
+  { year: "2023", place: "Visit to Sweden", image: "/assets/images/legacy/news/2023sweden.jpg" },
+  { year: "2024", place: "Sri Lanka", image: "/assets/images/legacy/news/2024kk.jpg" },
+  { year: "2019", place: "Italy / Argentina", image: "/assets/images/legacy/news/2019b.jpg" },
+  { year: "2019", place: "Italy / Argentina", image: "/assets/images/legacy/news/2019a.jpg" },
+  { year: "2018", place: "Italy / Pakistan / Argentina", image: "/assets/images/legacy/intern/2018.jpg", href: "https://red.ap.teacup.com/applet/karate-news/201809/archive" },
+  { year: "2018", place: "India", image: "/assets/images/legacy/intern/2018b.jpg", href: "https://red.ap.teacup.com/applet/karate-news/201805/archive" },
+  { year: "2017", place: "Australia", image: "/assets/images/legacy/intern/2017.1.jpg", href: "https://www.youtube.com/watch?v=xYKuv0V5Y7o" },
+  { year: "2017", place: "Italy / Pakistan / France", image: "/assets/images/legacy/intern/2017b.jpg", href: "https://www.youtube.com/watch?v=mEdD0fOIVaA" },
+  { year: "2015", place: "Sweden", image: "/assets/images/legacy/intern/2015.jpg", href: "https://red.ap.teacup.com/karate-news/311.html" },
+  { year: "2016", place: "Italy / Argentina", image: "/assets/images/legacy/intern/tamas.jpg", href: "https://www.youtube.com/watch?v=JnYL0ukfJcU" },
+  { year: "2013", place: "Sweden", image: "/assets/images/legacy/intern/Image9.jpg", href: "https://www.youtube.com/watch?v=UR9dPqzvwEQ" },
+  { year: "2014", place: "Italy / Argentina / Egypt", image: "/assets/images/legacy/intern/P9020012.jpg", href: "https://red.ap.teacup.com/karate-news/180.html" },
+];
+---
+
+<BaseLayout
+  title="International Karate & Kobudo Exchange"
+  description="A record of international exchange with foreign karate instructors who visit the Seishinkai Headquarters Dojo from abroad. Discover our exchanges with countries around the world, including Sweden, Italy, and Sri Lanka."
+  lang="en"
+  path="/en/membership/international-exchange/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">INTERNATIONAL</span>
+        <h1 class="section-title">International Karate & Kobudo Exchange</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Foreign masters and karate instructors visit Seishinkai Karate from abroad]<br />
+        Every year, foreign karate instructors from overseas visit the Seishinkai Headquarters Dojo.<br />
+        Many of them come to Seishinkai in Hokkaido in search of karate as a traditional culture rather than a competitive sport, and then go on to Okinawa (and, conversely, some come to Sapporo, Hokkaido after first visiting Okinawa).<br />
+        Many foreign masters, having come up through competitive karate, arrive at classical (koryu) karate as they seek out the roots of karate to make up for what training alone could not provide.
+      </p>
+
+      <h2 class="detail-page__heading">◆International Karate & Kobudo Exchange</h2>
+      <div class="detail-gallery">
+        {
+          visits.map((v) =>
+            v.href ? (
+              <figure>
+                <a href={v.href} target="_blank" rel="noopener">
+                  <img src={v.image} alt={`${v.year} ${v.place}`} loading="lazy" />
+                </a>
+                <figcaption>{v.year} {v.place}</figcaption>
+              </figure>
+            ) : (
+              <figure>
+                <img src={v.image} alt={`${v.year} ${v.place}`} loading="lazy" />
+                <figcaption>{v.year} {v.place}</figcaption>
+              </figure>
+            )
+          )
+        }
+      </div>
+
+      <p class="detail-page__note">
+        Visitors have come from countries including Sweden, Italy, Pakistan, Egypt, Australia, France, Argentina, Sri Lanka, India, Kuwait, Ireland, and the United States.
+      </p>
+
+      <h2 class="detail-page__heading">Training Sessions</h2>
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/intern/P4030057.jpg"
+            alt="Sensei Tamas (WKF 10th Dan)"
+            loading="lazy"
+          />
+          <figcaption>Sensei Tamas (WKF 10th Dan)</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/intern/scaba.jpg"
+            alt="Sensei Sakaba (Okinawa Shorin-ryu 10th Dan)"
+            loading="lazy"
+          />
+          <figcaption>Sensei Sakaba (Okinawa Shorin-ryu 10th Dan)</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/intern/DSC_0182.jpg"
+            alt="Sensei Darren (Kyan-ha Shorin-ryu 9th Dan)"
+            loading="lazy"
+          />
+          <figcaption>Sensei Darren (Kyan-ha Shorin-ryu 9th Dan)</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Inquiry by message</h2>
+      <p class="detail-page__note">
+        Please use email or messenger. Other people are Japanese only.
+      </p>
+      <div class="detail-gallery">
+        <figure>
+          <a
+            href="https://www.facebook.com/katsumi.okubo.9"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/assets/images/legacy/images/okubos.jpg"
+              alt="Soke Okubo"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>Soke Okubo</figcaption>
+        </figure>
+        <figure>
+          <a
+            href="https://www.facebook.com/nobutaka.maekawa"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/assets/images/legacy/images/maekawa.jpg"
+              alt="Master Maekawa"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>Master Maekawa</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/membership/">← Back to Membership Information</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -2,7 +2,6 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ContactSection from "@components/ContactSection.astro";
 
-const SITE = "https://seishinkan.ne.jp/";
 const IMG = "/assets/images/membership/";
 
 const mediaItems = [
@@ -89,17 +88,16 @@ const studentConditions = [
       <div class="page-intro">
         <p>
           Seishinkai karate is a karate, <a
-            href={`${SITE}dojo/iai/index.html`}
-            target="_blank">iaido</a
+            href="/dojo/iai/">iaido</a
           >, and self-defense school focused on physical education, health, and self-defense. While many karate schools center on competitive sport, our training centers on fundamentals, kata, and yakusoku kumite — so anyone can take part comfortably, regardless of age or gender.
         </p>
         <p>
           The children's division aims to instill courtesy (greetings, manners, etiquette) and to strengthen the mind and body during the crucial years of growth. For women, working adults, and seniors, the goals are fitness, improved stamina, health, and self-defense.
         </p>
         <p>
-          Unusually for Hokkaido, we are also active in <a href="https://seishinkan.ne.jp/intern2.html" target="_blank"
+          Unusually for Hokkaido, we are also active in <a href="/en/membership/international-exchange/"
             >international exchange</a
-          >: <a href=href="https://seishinkan.ne.jp/intern.html" target="_blank"
+          >: <a href="/en/membership/international-students/"
             >karate exchange students</a
           > and overseas practitioners visit the headquarters dojo every year. With many working adults enrolled, there are plenty of opportunities to meet people from other fields and widen your circle of friends through Seishin-ryu karate. Many members train as parent and child — more than half of today's instructors and branch chiefs started that way. Online karate classes are also available.
         </p>
@@ -185,7 +183,7 @@ const studentConditions = [
               <figcaption>Official karate-gi (Seishin-ryu original, made to order)</figcaption>
             </figure>
             <figure class="membership__fees-figure fade-up-in">
-              <a href={`${SITE}dojo/iai/index.html`} target="_blank">
+              <a href="/dojo/iai/">
                 <img src={`${IMG}iai.jpg`} alt="Iaido division" loading="lazy" />
               </a>
               <figcaption>Iaido division</figcaption>
@@ -217,7 +215,7 @@ const studentConditions = [
         <a class="membership__related-card" href="http://seishinryu.info/" target="_blank">
           We are also recruiting members for the online karate class (net school)
         </a>
-        <a class="membership__related-card" href="https://seishinkan.ne.jp/kamei.html" target="_blank">
+        <a class="membership__related-card" href="/en/membership/affiliation/">
           For culture schools, branch certification, and seminar requests
         </a>
       </div>
@@ -292,7 +290,12 @@ const studentConditions = [
           {studentConditions.map((condition) => <li>{condition}</li>)}
         </ul>
         <p>
-          Please <a href="#contact">contact us</a> if you are interested.
+          Please <a href="#contact">contact us</a> if you are interested.<br />
+          See our past <a href="/en/membership/international-students/"
+            >long-term &amp; short-term students</a
+          > and <a href="/en/membership/international-exchange/"
+            >international exchange with visiting instructors</a
+          >.
         </p>
       </div>
     </div>

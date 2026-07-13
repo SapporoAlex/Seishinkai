@@ -8,6 +8,8 @@ interface Entry {
   sub?: string; // secondary name line
   address: string;
   schedule: string[];
+  pdfText?: string;
+  pdf?: string;
 }
 interface Props {
   entries: Entry[];
@@ -37,7 +39,20 @@ const { entries, headers = ["道場・支部名", "住 所/会場施設名", "�
               {e.name}
               {e.sub && <span class="branch-table__name-sub">{e.sub}</span>}
             </td>
-            <td>{e.address}</td>
+            <td>{e.address}
+              {e.pdf && (
+                <>
+                  <br />
+                  <a
+                    href={e.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="branch-table__pdf"
+                  >
+                    {e.pdfText}
+                  </a>
+                </>
+              )}</td>
             <td>
               {e.schedule.map((line) => (
                 <span class="branch-table__line">{line}</span>

@@ -4,7 +4,6 @@ export function initAccordion() {
 
   accordions.forEach((acc) => {
     const triggers = Array.from(acc.querySelectorAll('[data-accordion-trigger]'));
-    const panels = Array.from(acc.querySelectorAll('[data-accordion-panel]'));
 
     triggers.forEach((btn) => {
       const key = btn.getAttribute('data-accordion-trigger');
@@ -21,41 +20,21 @@ export function initAccordion() {
       // set initial aria state
       const opened = panel.classList.contains('is-open');
       btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+      btn.classList.toggle('is-active', opened);
       panel.setAttribute('aria-hidden', opened ? 'false' : 'true');
-
-      const onClick = () => {
-        const isOpen = panel.classList.contains('is-open');
-
-        // close all other panels in this accordion
-        panels.forEach((p) => {
-          if (p === panel) return;
-          p.classList.remove('is-open');
-          p.setAttribute('aria-hidden', 'true');
-        });
-
-        // toggle this panel
-        if (isOpen) {
-          panel.classList.remove('is-open');
-          panel.setAttribute('aria-hidden', 'true');
-        } else {
-          panel.classList.add('is-open');
-          panel.setAttribute('aria-hidden', 'false');
-        }
-
-        // update trigger states
-        triggers.forEach((t) => {
-          const k = t.getAttribute('data-accordion-trigger');
-          const p = acc.querySelector(`[data-accordion-panel="${k}"]`);
-          const openedNow = p && p.classList.contains('is-open');
-          t.classList.toggle('is-active', openedNow);
-          t.setAttribute('aria-expanded', openedNow ? 'true' : 'false');
-        });
-      };
 
       // remove existing click listeners by cloning the button
       const newBtn = btn.cloneNode(true);
       btn.parentNode.replaceChild(newBtn, btn);
-      newBtn.addEventListener('click', onClick);
+
+      // each trigger only toggles its own panel, so any number can be open at once
+      newBtn.addEventListener('click', () => {
+        const isOpen = panel.classList.contains('is-open');
+        panel.classList.toggle('is-open', !isOpen);
+        panel.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+        newBtn.classList.toggle('is-active', !isOpen);
+        newBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      });
     });
   });
 

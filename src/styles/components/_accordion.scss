@@ -19,7 +19,7 @@
 
   &__button {
     width: 100%;
-    padding: 30px 30px;
+    padding: 25px 25px;
     background: var(--navy);
     color: var(--white);
     border: none;
@@ -41,6 +41,7 @@
 
     &.is-active {
       background-color: #f0f0f0;
+      color: var(--navy);
     }
 
     // span {

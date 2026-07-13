@@ -183,6 +183,11 @@ const DAN_RANKS: Record<string, string> = {
 
 const t = (dict: Record<string, string>, value: string) =>
   value ? (dict[value] ?? value) : value;
+
+// Internal links (e.g. the Mimura memorial page) must point at their /en/ counterpart;
+// external links (Facebook, other dojo sites) are used as-is.
+const localizeLink = (link?: string) =>
+  link && link.startsWith("/") ? `/en${link}` : link;
 ---
 
 <BaseLayout
@@ -229,7 +234,7 @@ const t = (dict: Record<string, string>, value: string) =>
                       profession={t(PROFESSIONS, member.profession)}
                       details={member.details.map((d) => t(DETAILS, d))}
                       tags={member.tags.map((tag) => t(TAGS, tag))}
-                      link={member.link}
+                      link={localizeLink(member.link)}
                       lang="en"
                     />
                   ))}

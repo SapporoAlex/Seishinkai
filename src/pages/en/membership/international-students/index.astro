@@ -1,0 +1,170 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const longTerm = [
+  { name: "Hashini / Sri Lanka", years: "2011-2021", rank: "4th Dan", image: "hashini.jpg", href: "https://www.youtube.com/watch?v=UpRmPGwuNNM" },
+  { name: "Erica / Sweden", years: "2025-2026", rank: "", image: "erica2.jpg", href: "https://www.facebook.com/erica.bokelius" },
+  { name: "Alex / Australia", years: "2007-2013", rank: "2nd Dan", image: "alex.jpg" },
+  { name: "Emmet / Ireland", years: "2009-2013", rank: "", image: "emet.jpg" },
+  { name: "Daniela / Italy", years: "2016-2019", rank: "2nd Dan", image: "dani.jpg" },
+  { name: "Sahan / Sri Lanka", years: "2018-2021", rank: "2nd Dan", image: "sahan.jpg", href: "https://www.youtube.com/watch?v=UpRmPGwuNNM" },
+];
+
+const shortTerm = [
+  { name: "Mario / Spain", years: "2007 / 2008", image: "mario.jpg" },
+  { name: "Silvia / Italy", years: "2016", image: "silvia.jpg" },
+  { name: "Erica / Sweden", years: "2015 / 2016 / 2025", image: "erica.jpg" },
+  { name: "Josephine / Sweden", years: "2016", image: "josefin.jpg" },
+];
+
+const IMG = "/assets/images/legacy/intern/";
+---
+
+<BaseLayout
+  title="Karate International Students"
+  description="Introducing the international students and uchideshi (live-in trainees) who have studied karate at Seishinkai Headquarters. Information on our long-term karate culture visa program, accommodation, and short-term student intake."
+  lang="en"
+  path="/en/membership/international-students/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">INTERNATIONAL</span>
+        <h1 class="section-title">Karate International Students</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [JAPAN Old style karate "Seishinkai dojo"]<br />
+        Foreign nationals wishing to study karate at Seishinkai can obtain a karate culture visa and stay for a long time to learn karate.<br />
+        The following are long-term trainees (international students) who
+        studied at Seishinkai Headquarters.
+      </p>
+
+      <p class="detail-page__note">
+        Accommodation is available for foreign trainees of Seishinryu
+        Karate.<br />
+        <a href="https://youtu.be/Q6q0g7h7f0A" target="_blank" rel="noopener"
+          >Watch an introduction video of the accommodation (YouTube)</a
+        >
+      </p>
+
+      <h2 class="detail-page__heading">
+        ◆Special Long-Term Foreign Students (Instructor Training Course) / Uchideshi<br />
+        <small>Long-term foreign student, leader training course</small>
+      </h2>
+
+      <div class="detail-gallery">
+        {
+          longTerm.map((student) =>
+            student.href ? (
+              <figure>
+                <a href={student.href} target="_blank" rel="noopener">
+                  <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
+                </a>
+                <figcaption>
+                  {student.name}
+                  <br />
+                  {student.years}
+                  {student.rank && ` ${student.rank}`}
+                </figcaption>
+              </figure>
+            ) : (
+              <figure>
+                <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
+                <figcaption>
+                  {student.name}
+                  <br />
+                  {student.years}
+                  {student.rank && ` ${student.rank}`}
+                </figcaption>
+              </figure>
+            )
+          )
+        }
+      </div>
+
+      <h2 class="detail-page__heading">
+        ◆Short-Term Foreign Students (Graduates)<br />
+        <small>Foreign short-term students (Graduates)</small>
+      </h2>
+
+      <div class="detail-gallery">
+        {
+          shortTerm.map((student) => (
+            <figure>
+              <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
+              <figcaption>
+                {student.name}
+                <br />
+                {student.years}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+
+      <h2 class="detail-page__heading">Training Scenes</h2>
+      <div class="detail-gallery">
+        <figure>
+          <a
+            href="https://www.youtube.com/watch?v=UpRmPGwuNNM"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src={`${IMG}DSC_4462.jpg`} alt="International students training" loading="lazy" />
+          </a>
+        </figure>
+        <figure>
+          <img src={`${IMG}DSC_4138.jpg`} alt="International students training" loading="lazy" />
+        </figure>
+        <figure>
+          <img src={`${IMG}DSC_3105.jpg`} alt="International students training" loading="lazy" />
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        Foreigners residing in Japan will be charged the same enrollment
+        and fees as Japanese.<br />
+        <a href="/assets/pdf/kis.pdf" target="_blank"
+          >About karate study abroad expenses(PDF)</a
+        >
+      </p>
+
+      <h2 class="detail-page__heading">Inquiry by message</h2>
+      <div class="detail-gallery">
+        <figure>
+          <a
+            href="https://www.facebook.com/katsumi.okubo.9"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/assets/images/legacy/images/okubos.jpg"
+              alt="Soke Okubo"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>Soke Okubo</figcaption>
+        </figure>
+        <figure>
+          <a
+            href="https://www.facebook.com/nobutaka.maekawa"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/assets/images/legacy/images/maekawa.jpg"
+              alt="Master Maekawa"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>Master Maekawa</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/membership/">← Back to Membership Information</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

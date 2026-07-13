@@ -11,7 +11,7 @@
         "members": [
           {
             "id": "mimura",
-            "link": "https://seishinkan.ne.jp/mimu.html",
+            "link": "/instructors/mimura/",
             "image": "/assets/images/instructors/mimu2.jpg",
             "name": "故・三村佳代子",
             "role": "",
@@ -245,7 +245,7 @@
         "members": [
           {
             "id": "inoue",
-            "link": "https://seishinkan.ne.jp/dojo/inouedojo/",
+            "link": "/dojo/inoue/",
             "image": "/assets/images/instructors/inoue.jpg",
             "name": "井上龍一郎",
             "role": "",

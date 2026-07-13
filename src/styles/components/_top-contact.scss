@@ -60,6 +60,9 @@
     font-size: 2rem;
     font-weight: 700;
     color: #d62828;
+    @include mqpc {
+      cursor: default;
+    }
   }
 
   &__email {

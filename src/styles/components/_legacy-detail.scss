@@ -68,8 +68,10 @@
 // Branch / practice-schedule table
 .branch-table {
   &__wrap {
-    overflow-x: auto;
     margin-bottom: 24px;
+    @include mqsp {
+      overflow-x: auto;
+    }
   }
 
   width: 100%;

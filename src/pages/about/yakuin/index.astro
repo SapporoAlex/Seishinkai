@@ -1,0 +1,296 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const IMG = "/assets/images/legacy/komon/";
+const CLUBU = "/assets/images/legacy/clubu/";
+
+const advisors = [
+  { name: "宮川敬浩", role: "北海道毎日文化協会理事長", image: `${IMG}miyakawa.jpg`, href: "https://www.facebook.com/profile.php?id=100015617839109" },
+  { name: "森 成之", role: "北海道議会議員", image: `${IMG}miri-g.jpg`, href: "https://www.facebook.com/profile.php?id=100010477867334" },
+  { name: "小林ゆうじ", role: "北海道議会議員", image: `${IMG}koba.jpg`, href: "https://www.facebook.com/yuji.kobayashi.71868" },
+];
+
+const advisors2 = [
+  { title: "特別顧問", name: "野村和宏", role: "江別市議会議員", image: `${IMG}nomura.jpg`, href: "https://www.facebook.com/kazuhiro.nomura.5220" },
+  { title: "顧問", name: "丸山秀樹", role: "札幌市議会議員", image: `${IMG}maru-g.jpg`, href: "http://www.komei.or.jp/km/sapporo-maruyama-hideki/" },
+  { title: "顧問", name: "五十嵐信子", role: "当別町議会議員", image: `${IMG}igarashi.jpg` },
+];
+
+const medicalAdvisors = [
+  { title: "医学博士", name: "長尾和彦 三段", role: "ながお内科循環器クリニック院長", image: `${IMG}nagao.jpg`, roleHref: "http://www.nagao-naika.com/index.html" },
+  { title: "歯学博士", name: "井上龍一郎 六段", role: "北10条デンタルオフィス院長", image: `${IMG}inoue.jpg`, href: "https://www.facebook.com/profile.php?id=100011334952601", roleHref: "https://kita10jyou.chitosedori.com/" },
+];
+
+const koenkai = [
+  { title: "理事長:荒 光弘", org: "（株）ロジェ", orgHref: "https://www.loger.co.jp/index.html", role: "代表取締役", image: `${IMG}ara.jpg` },
+  { title: "会長:渡辺良彦", org: "ナベックス", orgHref: "http://www.sjnk-ag.com/a/nabex/", role: "代表取締役会長", image: `${IMG}watanabe.jpg`, href: "https://nabex.insag.jp/" },
+  { title: "理事:丸山ゆうこ", org: "日本スタイリスト協会", orgHref: "http://r.goope.jp/ams-style", role: "理事長", image: `${IMG}maruyuko.jpg`, href: "https://www.facebook.com/yuuko.maruyama.908" },
+];
+
+const obKai = [
+  { title: "会長:小谷野政美", org: "ひかり工務店", orgHref: "http://hikari.geo.jp/", role: "代表取締役(草創期メンバー)", image: `${IMG}koya.jpg`, href: "https://www.facebook.com/masami.koyano" },
+  { title: "理事長:三枝正樹", org: "サエグサ薬品", role: "代表取締役(元伏古支部指導員)", image: `${CLUBU}saegusa3.jpg`, href: "https://www.facebook.com/masaki.saegusa.9" },
+  { title: "副会長:島崎広隆", org: "イーエスオフィス", orgHref: "http://www.japan-agency.com/", role: "代表取締役(草創期メンバー)", image: `${IMG}shima.jpg`, href: "https://www.facebook.com/hirotaka.shimazaki.7?ref=br_rs" },
+  { title: "副会長:三枝篤史", org: "サエグサ薬品九州", orgHref: "http://www.saegusayakuhin-q.co.jp/", role: "代表取締役(元福岡支部長)", image: `${CLUBU}saegusa2.jpg`, href: "https://www.facebook.com/atsushi.saegusa1" },
+];
+
+const koenkaicho = [{ no: 1, years: "1985-現在", name: "渡辺良彦", role: "ﾅﾍﾞｯｸｽ取締役会長" }];
+const koenrijicho = [{ no: 1, years: "2012-現在", name: "荒 光弘", role: "ロジェ代表取締役" }];
+
+const shihandai = [
+  { no: 1, years: "1985-1985", name: "中島敦嗣", role: "本部師範代" },
+  { no: 2, years: "1986-1989", name: "茅野寿弘", role: "本部師範代" },
+  { no: 3, years: "1994-1996", name: "住吉一徳", role: "本部師範代", href: "https://sumiyoshijuku.org/jukucho/" },
+  { no: 4, years: "1996-1999", name: "末吉弘一", role: "本部師範代" },
+  { no: 5, years: "1999-2002", name: "犬浦壽信", role: "本部師範代", href: "https://www.facebook.com/jushin.inuura.3" },
+  { no: 6, years: "2002-2003", name: "青木和也", role: "本部師範代" },
+  { no: 7, years: "2004-2005", name: "三村佳代子", role: "本部師範代", href: "/instructors/mimura/" },
+  { no: 8, years: "2006-2007", name: "波川和明", role: "本部師範代", href: "https://www.facebook.com/kazuaki.namikawa" },
+  { no: 9, years: "2008-2010", name: "石森忠之", role: "本部師範代" },
+  { no: 10, years: "2010-2012", name: "大久保 翼", role: "本部師範代", href: "/about/tubasa/" },
+  { no: 11, years: "2015-2016", name: "二森 翼", role: "本部師範代" },
+  { no: 12, years: "2018-2021", name: "室木拓士", role: "本部師範代" },
+  { no: 13, years: "2022-現在", name: "嶋和也", role: "本部師範代", href: "https://www.facebook.com/profile.php?id=100010931403991" },
+  { no: 14, years: "2026-現在", name: "島 冬樹", role: "本部師範代" },
+  { no: 15, years: "2026-現在", name: "沖村沙織", role: "本部師範代" },
+  { no: 16, years: "2026-現在", name: "木村孝雄", role: "本部師範代" },
+];
+
+const shihan = [
+  { no: 1, years: "2002-2003", name: "住吉一徳", role: "本部筆頭師範" },
+  { no: 2, years: "2006-2012", name: "三村佳代子", role: "本部筆頭師範、館長代理", href: "/instructors/mimura/" },
+  { no: 3, years: "2012-2015", name: "大久保 翼", role: "館長補佐、本部師範", href: "/about/tubasa/" },
+  { no: 4, years: "2015-2016", name: "二森 翼", role: "館長代理" },
+  { no: 5, years: "2016-2026", name: "大久保 翼", role: "本部首席師範", href: "/about/tubasa/" },
+  { no: 6, years: "2026-現在", name: "前川信孝", role: "本部師範", href: "https://www.facebook.com/nobutaka.maekawa" },
+];
+
+const obKaicho = [{ no: 1, years: "1999-現在", name: "小谷野政美", role: "初代OB会長" }];
+
+const kancho = [
+  { no: 1, years: "1986-2012", name: "大久保勝美", role: "初代・創設者", href: "/about/okubo/" },
+  { no: 2, years: "2012-2015", name: "三村佳代子", role: "二代目", href: "/instructors/mimura/" },
+  { no: 3, years: "2016-2020", name: "二森 翼", role: "三代目" },
+  { no: 4, years: "2020-現在", name: "大久保 翼", role: "四代目", href: "/about/tubasa/" },
+];
+---
+
+<BaseLayout
+  title="連盟顧問・相談役"
+  description="全日本清心会空手道連盟の相談役・顧問・医学顧問、後援会、清心館道場OB会のご紹介と、歴代師範代・師範・館長の一覧です。"
+  lang="ja"
+  path="/about/yakuin/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">ADVISORS</span>
+        <h1 class="section-title">連盟顧問・相談役</h1>
+      </div>
+
+      <h2 class="detail-page__heading">全日本清心会空手道連盟・相談役</h2>
+      <div class="detail-gallery">
+        {
+          advisors.map((p) => (
+            <figure>
+              <a href={p.href} target="_blank" rel="noopener">
+                <img src={p.image} alt={p.name} loading="lazy" />
+              </a>
+              <figcaption>
+                {p.name}
+                <br />
+                {p.role}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+
+      <h2 class="detail-page__heading">全日本清心会空手道連盟・顧問</h2>
+      <div class="detail-gallery">
+        {
+          advisors2.map((p) => (
+            <figure>
+              {p.href ? (
+                <a href={p.href} target="_blank" rel="noopener">
+                  <img src={p.image} alt={p.name} loading="lazy" />
+                </a>
+              ) : (
+                <img src={p.image} alt={p.name} loading="lazy" />
+              )}
+              <figcaption>
+                {p.title}
+                <br />
+                {p.name}
+                <br />
+                {p.role}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+
+      <h2 class="detail-page__heading">全日本清心会空手道連盟・医学顧問</h2>
+      <div class="detail-gallery">
+        {
+          medicalAdvisors.map((p) => (
+            <figure>
+              {p.href ? (
+                <a href={p.href} target="_blank" rel="noopener">
+                  <img src={p.image} alt={p.name} loading="lazy" />
+                </a>
+              ) : (
+                <img src={p.image} alt={p.name} loading="lazy" />
+              )}
+              <figcaption>
+                {p.title}
+                <br />
+                {p.name}
+                <br />
+                <a href={p.roleHref} target="_blank" rel="noopener">
+                  {p.role}
+                </a>
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+
+      <h2 class="detail-page__heading">清心会後援会</h2>
+      <div class="detail-gallery">
+        {
+          koenkai.map((p) => (
+            <figure>
+              {p.href ? (
+                <a href={p.href} target="_blank" rel="noopener">
+                  <img src={p.image} alt={p.title} loading="lazy" />
+                </a>
+              ) : (
+                <img src={p.image} alt={p.title} loading="lazy" />
+              )}
+              <figcaption>
+                {p.title}
+                <br />
+                <a href={p.orgHref} target="_blank" rel="noopener">
+                  {p.org}
+                </a>
+                <br />
+                {p.role}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+
+      <h2 class="detail-page__heading">清心館道場OB会</h2>
+      <div class="detail-gallery">
+        {
+          obKai.map((p) => (
+            <figure>
+              <a href={p.href} target="_blank" rel="noopener">
+                <img src={p.image} alt={p.title} loading="lazy" />
+              </a>
+              <figcaption>
+                {p.title}
+                <br />
+                {p.orgHref ? (
+                  <a href={p.orgHref} target="_blank" rel="noopener">
+                    {p.org}
+                  </a>
+                ) : (
+                  p.org
+                )}
+                <br />
+                {p.role}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+
+      <h2 class="detail-page__heading">清心会歴代後援会長</h2>
+      <table class="table">
+        <tbody>
+          {koenkaicho.map((r) => (
+            <tr><th>{r.no}</th><td>{r.years}</td><td>{r.name}</td><td>{r.role}</td></tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2 class="detail-page__heading">清心会歴代後援理事長</h2>
+      <table class="table">
+        <tbody>
+          {koenrijicho.map((r) => (
+            <tr><th>{r.no}</th><td>{r.years}</td><td>{r.name}</td><td>{r.role}</td></tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2 class="detail-page__heading">総本部・清心館道場 歴代師範代</h2>
+      <table class="table">
+        <tbody>
+          {shihandai.map((r) => (
+            <tr>
+              <th>{r.no}</th>
+              <td>{r.years}</td>
+              <td>{r.href ? <a href={r.href} target={r.href.startsWith("/") ? undefined : "_blank"} rel={r.href.startsWith("/") ? undefined : "noopener"}>{r.name}</a> : r.name}</td>
+              <td>{r.role}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2 class="detail-page__heading">総本部・清心館道場 歴代師範(指導長)</h2>
+      <table class="table">
+        <tbody>
+          {shihan.map((r) => (
+            <tr>
+              <th>{r.no}</th>
+              <td>{r.years}</td>
+              <td>{r.href ? <a href={r.href} target={r.href.startsWith("/") ? undefined : "_blank"} rel={r.href.startsWith("/") ? undefined : "noopener"}>{r.name}</a> : r.name}</td>
+              <td>{r.role}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2 class="detail-page__heading">清心会・清心館道場 歴代OB会長</h2>
+      <table class="table">
+        <tbody>
+          {obKaicho.map((r) => (
+            <tr><th>{r.no}</th><td>{r.years}</td><td>{r.name}</td><td>{r.role}</td></tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2 class="detail-page__heading">総本部・清心館大久保道場 歴代館長</h2>
+      <table class="table">
+        <tbody>
+          {kancho.map((r) => (
+            <tr>
+              <th>{r.no}</th>
+              <td>{r.years}</td>
+              <td>{r.href ? <a href={r.href} target={r.href.startsWith("/") ? undefined : "_blank"} rel={r.href.startsWith("/") ? undefined : "noopener"}>{r.name}</a> : r.name}</td>
+              <td>{r.role}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/images/DSC_0287.jpg"
+            alt="清心会空手演武大会"
+            loading="lazy"
+          />
+          <figcaption>清心会空手演武大会</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/links-partners/">← お勧めリンク・パートナーへ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

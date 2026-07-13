@@ -134,7 +134,7 @@ const quickLinks = [
   },
   {
     title: "連盟顧問・相談役",
-    href: "https://seishinkan.ne.jp/yakuin.html",
+    href: "/about/yakuin/",
   },
 ];
 const featuredPhotos = [
@@ -157,7 +157,11 @@ const youtubeArchives = [
     image: "/assets/images/youtube/img_backup-2013.jpg",
   },
   {
-    year: "2014",
+    year: "2013",
+    image: "/assets/images/youtube/img_backup-2013b.jpg",
+  },
+  {
+    year: "2014（動画）",
     image: "/assets/images/youtube/img_backup-2014.jpg",
     href: "https://www.youtube.com/watch?v=MICYPkxtO6w",
   },
@@ -166,18 +170,14 @@ const youtubeArchives = [
     image: "/assets/images/youtube/img_backup-2015.jpg",
   },
   {
-    year: "2016",
+    year: "2016（動画）",
     image: "/assets/images/youtube/img_backup-2016.jpg",
     href: "https://www.youtube.com/watch?v=JnYL0ukfJcU",
   },
   {
-    year: "2017",
+    year: "2017（動画）",
     image: "/assets/images/youtube/img_backup-2017.jpg",
     href: "https://www.youtube.com/watch?v=xYKuv0V5Y7o",
-  },
-  {
-    year: "2013",
-    image: "/assets/images/youtube/img_backup-2013b.jpg",
   },
 ];
 ---
@@ -281,11 +281,19 @@ const youtubeArchives = [
         <h2 class="detail-page__heading">関連ページ</h2>
 
         <div class="quick-links">
-          {quickLinks.map((link) => (
-            <a class="quick-link" href={link.href} target="_blank" rel="noopener noreferrer">
-              {link.title}
-            </a>
-          ))}
+          {quickLinks.map((link) => {
+            const isExternal = /^https?:\/\//.test(link.href);
+            return (
+              <a
+                class="quick-link"
+                href={link.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+              >
+                {link.title}
+              </a>
+            );
+          })}
         </div>
       </section>
 
