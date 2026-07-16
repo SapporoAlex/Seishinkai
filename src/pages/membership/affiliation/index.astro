@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ContactSection from "@components/ContactSection.astro";
 ---
 
 <BaseLayout
@@ -15,59 +16,58 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         <h1 class="section-title">清心会空手道連盟への加盟方法</h1>
       </div>
 
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/base/kameikanban.jpg"
-            alt="清心会空手道連盟への加盟方法"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <p class="detail-page__lead">
         清心会への参加希望をされる学校クラブ、同好会、地域サークルやカルチャースクール、文化教室等で新規講座を開講を計画されている方は御相談下さい。<br />
         通常の教室活動の他、企業や学校、サークルなどに対しても御要望に応じてセミナーを実施しています。
       </p>
 
-      <h2 class="detail-page__heading">▼加盟を希望するクラブ・サークルなど</h2>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/base/Image3.jpg"
-            alt="加盟クラブ・サークルの活動風景"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-      <p>
-        どこの流派にも所属せず活動されているサークルや学校クラブ、同好会ですと段級が発行されず、又、自己流になりがちとなります。<br />
-        以前は指導者がいて流派に所属していたが転勤や諸事で不在となり、同好会的になってしまったところなどで現在は清心会の正規支部として活動しているところもあります。<br />
-        清心会は組織としては競技中心ではありませんが、寸止め、フルコンなど他の大会への参加は制限しておりません。<br />
-        会員の中には他流派※で段位を取得され転向した人が多数在籍しております。<br />
-        是非、一度、御相談下さい。
-      </p>
-      <p class="detail-page__note">
-        ※和道流、松濤館系、剛柔流、糸東流、少林寺流、極真系、正道会館、芦原会館、少林寺拳法など
-      </p>
+      <h2 class="detail-page__heading">加盟を希望するクラブ・サークルなど</h2>
+      <div class="detail-page__img-text-pair--reverse">
+        <div class="detail-media--big">
+          <figure>
+            <img
+              src="/assets/images/legacy/base/Image3.jpg"
+              alt="加盟クラブ・サークルの活動風景"
+              loading="lazy"
+            />
+          </figure>
+        </div>
 
-      <h2 class="detail-page__heading">▼カルチャースクール・文化教室など</h2>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/base/Image4.jpg"
-            alt="カルチャースクール・文化教室での指導風景"
-            loading="lazy"
-          />
-        </figure>
+        <div>
+          <p>
+            どこの流派にも所属せず活動されているサークルや学校クラブ、同好会ですと段級が発行されず、又、自己流になりがちとなります。<br />
+            以前は指導者がいて流派に所属していたが転勤や諸事で不在となり、同好会的になってしまったところなどで現在は清心会の正規支部として活動しているところもあります。<br />
+            清心会は組織としては競技中心ではありませんが、寸止め、フルコンなど他の大会への参加は制限しておりません。<br />
+            会員の中には他流派※で段位を取得され転向した人が多数在籍しております。<br />
+            是非、一度、御相談下さい。
+          </p>
+          <p class="detail-page__note">
+            ※和道流、松濤館系、剛柔流、糸東流、少林寺流、極真系、正道会館、芦原会館、少林寺拳法など
+          </p>
+        </div>
       </div>
-      <p>
-        新規で開講や増設を検討されているカルチャー教室は是非、一度ご相談下さい。<br />
-        清心会空手を現在、いくつかのカルチャー教室で実施しておりますが、各種教室の中では生徒数がトップクラスと言えます。<br />
-        丁寧な対応と楽しい練習は生徒数UPには欠かせない重要な要件のひとつと言えます。
-      </p>
 
-      <h2 class="detail-page__heading">◆セミナーについて</h2>
+      <h2 class="detail-page__heading">カルチャースクール・文化教室など</h2>
+      <div class="detail-page__img-text-pair">
+        <div class="detail-media--big">
+          <figure>
+            <img
+              src="/assets/images/legacy/base/Image4.jpg"
+              alt="カルチャースクール・文化教室での指導風景"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+
+        <p>
+          新規で開講や増設を検討されているカルチャー教室は是非、一度ご相談下さい。<br />
+          清心会空手を現在、いくつかのカルチャー教室で実施しておりますが、各種教室の中では生徒数がトップクラスと言えます。<br />
+          丁寧な対応と楽しい練習は生徒数UPには欠かせない重要な要件のひとつと言えます。
+        </p>
+      </div>
+
+      <h2 class="detail-page__heading">セミナーについて</h2>
       <p>
         希望者が５名以上集まりましたら、「健康空手セミナー」「女性の為の防犯・護身術セミナー」や企業や学校等へのセミナーを承ります。<br />
         メンタル面強化としての新人研修にも活用ください。又、外国人観光客等の体験セミナーも行っています。<br />
@@ -77,18 +77,11 @@ import BaseLayout from "@layouts/BaseLayout.astro";
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/base/top3.jpg"
-            alt="セミナー・行事の様子"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/base/Image5.jpg"
             alt="段免状の授与の様子"
             loading="lazy"
           />
-          <figcaption>▲段免状の授与の様子</figcaption>
+          <figcaption>段免状の授与の様子</figcaption>
         </figure>
         <figure>
           <img
@@ -96,7 +89,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
             alt="支部長任命証"
             loading="lazy"
           />
-          <figcaption>▲支部長任命証</figcaption>
+          <figcaption>支部長任命証</figcaption>
         </figure>
         <figure>
           <img
@@ -104,7 +97,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
             alt="静岡支部への遠征指導"
             loading="lazy"
           />
-          <figcaption>▲静岡支部への遠征指導</figcaption>
+          <figcaption>静岡支部への遠征指導</figcaption>
         </figure>
         <figure>
           <img
@@ -120,5 +113,6 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         <a href="/membership/">← 入会の御案内へ戻る</a>
       </p>
     </div>
+        <ContactSection/>
   </section>
 </BaseLayout>

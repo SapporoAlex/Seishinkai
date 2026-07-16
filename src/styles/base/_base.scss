@@ -262,3 +262,21 @@ a {
 a:hover {
   color: var(--red);
 }
+
+a figure {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+a figure:hover {
+  opacity: 0.8;
+}
+
+a img {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+a img:hover {
+  opacity: 0.8;
+}

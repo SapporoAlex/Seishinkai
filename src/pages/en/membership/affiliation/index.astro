@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ContactSection from "@components/ContactSection.astro";
 ---
 
 <BaseLayout
@@ -15,59 +16,57 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         <h1 class="section-title">How to Affiliate with the Seishinkai Karate-do Federation</h1>
       </div>
 
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/base/kameikanban.jpg"
-            alt="How to affiliate with the Seishinkai Karate-do Federation"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <p class="detail-page__lead">
         If you represent a school club, hobby group, community circle, culture school, or other organization that wishes to join Seishinkai, or if you are planning to open a new class, please contact us.<br />
         In addition to our regular class activities, we also offer seminars for companies, schools, and circles upon request.
       </p>
 
-      <h2 class="detail-page__heading">▼ Clubs & Circles Wishing to Affiliate</h2>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/base/Image3.jpg"
-            alt="Activities of an affiliated club or circle"
-            loading="lazy"
-          />
-        </figure>
+      <h2 class="detail-page__heading">Clubs & Circles Wishing to Affiliate</h2>
+      <div class="detail-page__img-text-pair--reverse">
+        <div class="detail-media--big">
+          <figure>
+            <img
+              src="/assets/images/legacy/base/Image3.jpg"
+              alt="Activities of an affiliated club or circle"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+          
+        <div>
+          <p>
+            Circles, school clubs, and hobby groups that don't belong to any particular style often find that no formal rank certificates can be issued, and practice tends to become self-taught.<br />
+            There are also cases where a group once had an instructor affiliated with a style, but lost that connection due to a transfer or other circumstances and became more of an informal hobby group — some of these groups are now operating as official branches of Seishinkai.<br />
+            Seishinkai as an organization is not primarily competition-focused, but we place no restriction on members entering other tournaments, including sun-dome (non-contact) or full-contact events.<br />
+            Many of our members hold ranks earned in other styles before transferring to Seishinkai.<br />
+            Please feel free to contact us for a consultation.
+          </p>
+          <p class="detail-page__note">
+            ※Wado-ryu, Shotokan-related styles, Goju-ryu, Shito-ryu, Shorinji-ryu, Kyokushin-related styles, Seidokaikan, Ashihara Kaikan, Shorinji Kempo, and others
+          </p>
+        </div>
       </div>
-      <p>
-        Circles, school clubs, and hobby groups that don't belong to any particular style often find that no formal rank certificates can be issued, and practice tends to become self-taught.<br />
-        There are also cases where a group once had an instructor affiliated with a style, but lost that connection due to a transfer or other circumstances and became more of an informal hobby group — some of these groups are now operating as official branches of Seishinkai.<br />
-        Seishinkai as an organization is not primarily competition-focused, but we place no restriction on members entering other tournaments, including sun-dome (non-contact) or full-contact events.<br />
-        Many of our members hold ranks earned in other styles※ before transferring to Seishinkai.<br />
-        Please feel free to contact us for a consultation.
-      </p>
-      <p class="detail-page__note">
-        ※Wado-ryu, Shotokan-related styles, Goju-ryu, Shito-ryu, Shorinji-ryu, Kyokushin-related styles, Seidokaikan, Ashihara Kaikan, Shorinji Kempo, and others
-      </p>
 
-      <h2 class="detail-page__heading">▼ Culture Schools & Community Classes</h2>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/base/Image4.jpg"
-            alt="Instruction at a culture school or community class"
-            loading="lazy"
-          />
-        </figure>
+      <h2 class="detail-page__heading">Culture Schools & Community Classes</h2>
+      <div class="detail-page__img-text-pair">
+        <div class="detail-media--big">
+          <figure>
+            <img
+              src="/assets/images/legacy/base/Image4.jpg"
+              alt="Instruction at a culture school or community class"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+        <p>
+          If your culture school is considering opening a new class or adding an additional one, please contact us for a consultation.<br />
+          Seishinkai Karate is currently taught at several culture schools, and our classes rank among the top in terms of enrollment.<br />
+          Courteous, attentive instruction combined with enjoyable practice is one of the key factors behind this growth in student numbers.
+        </p>
       </div>
-      <p>
-        If your culture school is considering opening a new class or adding an additional one, please contact us for a consultation.<br />
-        Seishinkai Karate is currently taught at several culture schools, and our classes rank among the top in terms of enrollment.<br />
-        Courteous, attentive instruction combined with enjoyable practice is one of the key factors behind this growth in student numbers.
-      </p>
 
-      <h2 class="detail-page__heading">◆ About Our Seminars</h2>
+      <h2 class="detail-page__heading">About Our Seminars</h2>
       <p>
         If you can gather 5 or more participants, we can arrange a "Health Karate Seminar," a "Women's Self-Defense Seminar," or a seminar for companies, schools, and other organizations.<br />
         These seminars can also be used as new-employee training to strengthen mental resilience. We also offer trial/experience seminars for international tourists.<br />
@@ -77,18 +76,11 @@ import BaseLayout from "@layouts/BaseLayout.astro";
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/base/top3.jpg"
-            alt="Scenes from seminars and events"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/base/Image5.jpg"
             alt="Presentation of a rank certificate"
             loading="lazy"
           />
-          <figcaption>▲Presentation of a rank certificate</figcaption>
+          <figcaption>Presentation of a rank certificate</figcaption>
         </figure>
         <figure>
           <img
@@ -96,7 +88,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
             alt="Branch head appointment certificate"
             loading="lazy"
           />
-          <figcaption>▲Branch head appointment certificate</figcaption>
+          <figcaption>Branch head appointment certificate</figcaption>
         </figure>
         <figure>
           <img
@@ -104,7 +96,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
             alt="Instructional visit to the Shizuoka branch"
             loading="lazy"
           />
-          <figcaption>▲Instructional visit to the Shizuoka branch</figcaption>
+          <figcaption>Instructional visit to the Shizuoka branch</figcaption>
         </figure>
         <figure>
           <img
@@ -119,6 +111,8 @@ import BaseLayout from "@layouts/BaseLayout.astro";
       <p class="detail-page__back">
         <a href="/en/membership/">← Back to Membership Information</a>
       </p>
+
     </div>
+    <ContactSection lang="en" />
   </section>
 </BaseLayout>

@@ -47,6 +47,42 @@
             "profession": "",
             "details": ["清心会技術顧問", "北海道大学名誉教授"],
             "tags": []
+          },
+          {
+            "id": "tamas",
+            "link": "https://www.facebook.com/tamas.weber.144",
+            "image": "/assets/images/instructors/tamas.jpg",
+            "name": "タマス",
+            "role": "",
+            "position": "範士",
+            "date": "",
+            "prefecture": "スウェーデン",
+            "profession": "",
+            "details": [
+              "国際三身館道場宗家",
+              "IKMA執行役員・殿堂入",
+              "WKF公認十段、本部派糸東流十段",
+              "清心流十段"
+            ],
+            "tags": []
+          },
+          {
+            "id": "alfonso",
+            "link": "https://www.alfonsotorregrossa.it/",
+            "image": "/assets/images/instructors/alfo.jpg",
+            "name": "アルフォンソ",
+            "role": "",
+            "position": "師範",
+            "date": "",
+            "prefecture": "シチリア",
+            "profession": "",
+            "details": [
+              "イタリア侍道場館長",
+              "イスラエルクラヴマガチーフインストラクター",
+              "世界武術師範協会会長",
+              "清心流柔術九段、大東流八段、他"
+            ],
+            "tags": []
           }
         ]
       }
@@ -113,25 +149,12 @@
             "profession": "定年/毎日新聞社",
             "details": [],
             "tags": ["英語"]
-          },
-          {
-            "id": "ishimori",
-            "link": "https://seishinkan.ne.jp/dojo/iwamizawa/",
-            "image": "/assets/images/instructors/ishimori.jpg",
-            "name": "石森忠之",
-            "role": "古武術部長/広報部長",
-            "position": "師範",
-            "date": "",
-            "prefecture": "",
-            "profession": "定年/岩見沢市役所",
-            "details": [],
-            "tags": []
           }
         ]
       },
       {
-        "id": "honbushidoin",
-        "title": "本部指導員",
+        "id": "shidoin",
+        "title": "指導員",
         "note": "※各師範・支部長は就労後、ボランティア指導員として清心会活動に参加しています(順不同)",
         "members": [
           {
@@ -177,6 +200,18 @@
         "title": "内弟子・内弟子見習い",
         "note": "※各師範・支部長は就労後、ボランティアとして清心会活動に参加しています(順不同)",
         "members": [
+          {
+            "id": "masuda",
+            "image": "/assets/images/instructors/masuda.jpg",
+            "name": "増田",
+            "role": "",
+            "position": "準指導員",
+            "date": "",
+            "prefecture": "",
+            "profession": "",
+            "details": [],
+            "tags": []
+          },
           {
             "id": "noro",
             "image": "/assets/images/instructors/noro.jpg",
@@ -231,6 +266,19 @@
             "date": "",
             "prefecture": "",
             "profession": "僧侶/住職",
+            "details": [],
+            "tags": []
+          },
+          {
+            "id": "ishimori",
+            "link": "https://seishinkan.ne.jp/dojo/iwamizawa/",
+            "image": "/assets/images/instructors/ishimori.jpg",
+            "name": "石森忠之",
+            "role": "",
+            "position": "師範",
+            "date": "",
+            "prefecture": "",
+            "profession": "定年/岩見沢市役所",
             "details": [],
             "tags": []
           },
@@ -669,19 +717,6 @@
             "profession": "",
             "details": [],
             "tags": []
-          },
-          {
-            "id": "ishimori",
-            "link": "https://seishinkan.ne.jp/dojo/iwamizawa/",
-            "image": "/assets/images/instructors/ishimori.jpg",
-            "name": "石森忠之",
-            "role": "",
-            "position": "師範",
-            "date": "",
-            "prefecture": "",
-            "profession": "定年/岩見沢市役所",
-            "details": [],
-            "tags": []
           }
         ]
       },
@@ -723,6 +758,18 @@
             "position": "",
             "date": "",
             "prefecture": "新冠町",
+            "profession": "",
+            "details": [],
+            "tags": []
+          },
+          {
+            "id": "sasarashin",
+            "image": "/assets/images/instructors/kkpp.jpg",
+            "name": "ササラシン",
+            "role": "",
+            "position": "師範",
+            "date": "",
+            "prefecture": "",
             "profession": "",
             "details": [],
             "tags": []
