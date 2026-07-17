@@ -170,11 +170,27 @@
     margin: 0;
     text-align: center;
 
+    a {
+      display: block;
+      border-radius: 10px;
+      overflow: hidden;
+      transition:
+        box-shadow var(--hover-time),
+        transform var(--hover-time);
+
+      &:hover {
+        box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
+        transform: translateY(-4px) !important; // see .membership__media-card note on fade-up-in + animation
+      }
+    }
+
     img {
       width: 100%;
       max-width: 180px;
       height: auto;
       border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
     }
 
     figcaption {
@@ -243,19 +259,37 @@
   }
 
   &__related-card {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     padding: 24px;
     background: #fff;
     border: 1px solid var(--border);
     border-left: 3px solid var(--red);
     font-weight: 600;
     color: var(--navy);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     transition: all var(--hover-time);
 
     &:hover {
       background: var(--off-white);
       border-left-color: var(--navy);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+
+      .membership__related-arrow {
+        transform: translateX(4px);
+        color: var(--red);
+      }
     }
+  }
+
+  &__related-arrow {
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    color: var(--navy);
+    transition: transform var(--hover-time), color var(--hover-time);
   }
 
   &__npo-note {
@@ -308,14 +342,38 @@
   &__media-card {
     background: #fff;
     border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+    transition:
+      border-color var(--hover-time),
+      box-shadow var(--hover-time),
+      transform var(--hover-time);
+
+    // !important on transform only: this card also carries the sitewide
+    // .fade-up-in class, whose @keyframes animation (fill-mode: forwards)
+    // otherwise keeps "owning" transform after it finishes and silently
+    // eats the hover lift (CSS animations sit below author !important
+    // in the cascade, so this reliably wins without touching the shared
+    // fade-up-in mechanism used elsewhere on the site).
+    &:has(a):hover {
+      border-color: var(--blue);
+      box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
+      transform: translateY(-4px) !important;
+    }
 
     img {
       width: 100%;
       height: 130px;
       object-fit: cover;
       display: block;
+      transition: transform var(--hover-time);
+    }
+
+    &:has(a):hover img {
+      transform: scale(1.04);
     }
   }
 

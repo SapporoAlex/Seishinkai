@@ -1,0 +1,219 @@
+[
+  {
+    "id": "komada",
+    "link": "/dojo/tobetsu/",
+    "image": "/assets/images/instructors/komada.jpg",
+    "name": "駒田拓朗",
+    "role": "",
+    "position": "準指導員",
+    "date": "",
+    "prefecture": "",
+    "profession": "団体職員",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "matsuoka",
+    "image": "/assets/images/instructors/matsuoka.jpg",
+    "name": "松岡昌哉",
+    "role": "",
+    "position": "貳段",
+    "date": "",
+    "prefecture": "",
+    "profession": "会社員",
+    "details": [],
+    "tags": [
+      "英語"
+    ]
+  },
+  {
+    "id": "yamane",
+    "image": "/assets/images/instructors/yamane.jpg",
+    "name": "山根 豊",
+    "role": "",
+    "position": "二段",
+    "date": "",
+    "prefecture": "",
+    "profession": "団体職員",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "ito",
+    "image": "/assets/images/instructors/ito.jpg",
+    "name": "伊藤紀章",
+    "role": "",
+    "position": "指導員",
+    "date": "",
+    "prefecture": "",
+    "profession": "教師",
+    "details": [],
+    "tags": [
+      "英語"
+    ]
+  },
+  {
+    "id": "sueyoshi",
+    "image": "/assets/images/instructors/sueyoshi.jpg",
+    "name": "末吉弘一",
+    "role": "",
+    "position": "師範代",
+    "date": "",
+    "prefecture": "",
+    "profession": "会社員",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "shirakawa",
+    "link": "https://sumiyoshijuku.org/",
+    "image": "/assets/images/instructors/shirakawa.jpg",
+    "name": "白川祥之",
+    "role": "",
+    "position": "二段",
+    "date": "",
+    "prefecture": "",
+    "profession": "会社員",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "miura",
+    "image": "/assets/images/instructors/miura.jpg",
+    "name": "三浦としえ",
+    "role": "",
+    "position": "二段",
+    "date": "",
+    "prefecture": "",
+    "profession": "会社員",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "tashiro",
+    "image": "/assets/images/instructors/tashiro2.jpg",
+    "name": "田代昭男",
+    "role": "",
+    "position": "二段",
+    "date": "",
+    "prefecture": "",
+    "profession": "会社員",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "ineda",
+    "link": "https://sumiyoshijuku.org/",
+    "image": "/assets/images/instructors/ineda.jpg",
+    "name": "稲田育夫",
+    "role": "",
+    "position": "指導員",
+    "date": "",
+    "prefecture": "",
+    "profession": "",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "maejima",
+    "link": "https://www.facebook.com/satoshi.maejima.9",
+    "image": "/assets/images/instructors/maejima.jpg",
+    "name": "前嶋 智",
+    "role": "",
+    "position": "師範代",
+    "date": "",
+    "prefecture": "",
+    "profession": "団体職員",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "hirabayashi",
+    "image": "/assets/images/instructors/hirabayashi.jpg",
+    "name": "平林学",
+    "role": "",
+    "position": "助教",
+    "date": "",
+    "prefecture": "",
+    "profession": "会社員",
+    "details": [],
+    "tags": [
+      "英語"
+    ]
+  },
+  {
+    "id": "abe",
+    "image": "/assets/images/instructors/abe.jpg",
+    "name": "阿部みわ",
+    "role": "",
+    "position": "初段",
+    "date": "",
+    "prefecture": "",
+    "profession": "",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "sato-saki",
+    "image": "/assets/images/instructors/satosaki.jpg",
+    "name": "佐藤咲姫",
+    "role": "",
+    "position": "助教",
+    "date": "",
+    "prefecture": "",
+    "profession": "学生",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "nagomi",
+    "image": "/assets/images/instructors/nagomi.jpg",
+    "name": "別途屋敷和",
+    "role": "",
+    "position": "助教",
+    "date": "",
+    "prefecture": "",
+    "profession": "学生",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "takigami",
+    "image": "/assets/images/instructors/taki.jpg",
+    "name": "滝上由佳",
+    "role": "",
+    "position": "指導員",
+    "date": "",
+    "prefecture": "",
+    "profession": "",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "takahashi-rumiko",
+    "image": "/assets/images/instructors/takano2.jpg",
+    "name": "高橋るみこ",
+    "role": "",
+    "position": "",
+    "date": "",
+    "prefecture": "新冠町",
+    "profession": "",
+    "details": [],
+    "tags": []
+  },
+  {
+    "id": "michael",
+    "link": "https://www.facebook.com/michael.widmer.165/",
+    "image": "/assets/images/instructors/mih.jpg",
+    "name": "ミヒャエル",
+    "role": "",
+    "position": "準指導員",
+    "date": "",
+    "prefecture": "",
+    "profession": "神学教師",
+    "details": [],
+    "tags": [
+      "帰国中"
+    ]
+  }
+]

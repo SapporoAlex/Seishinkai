@@ -1,0 +1,73 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+.visitor-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 24px var(--side-spacing) 0;
+  padding: 20px 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+
+  @include mqpc {
+    margin: 24px auto 0;
+    max-width: var(--max-width);
+  }
+
+  @include mqsp {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--red);
+  }
+
+  &__title {
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  &__desc {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    margin: 0;
+  }
+
+  &__link {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--navy);
+    white-space: nowrap;
+    transition: all var(--hover-time);
+
+    &:hover {
+      color: var(--red);
+
+      .visitor-banner__arrow {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  &__arrow {
+    transition: transform var(--hover-time);
+  }
+}

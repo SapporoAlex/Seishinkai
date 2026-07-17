@@ -1,0 +1,123 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const memberBlogs = [
+  {
+    name: "大久保翼",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/tsubasa.ohkubo" },
+      { label: "個人ブログ", href: "http://liveisaction.tumblr.com/" },
+    ],
+  },
+  {
+    name: "髙嶋",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100010931403991" }],
+  },
+  {
+    name: "Hashini（スリランカ）",
+    links: [{ label: "ブログ", href: "https://ameblo.jp/hashitharu/entrylist.html" }],
+  },
+  {
+    name: "室木拓士",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100014649318764" }],
+  },
+];
+
+const officialBlogs = [
+  {
+    name: "会長ブログ",
+    href: "https://okubo-dojo.hatenablog.com/",
+    legacy: "https://blog.goo.ne.jp/okubo-seishinryu",
+  },
+  {
+    name: "清心会行事ブログ",
+    href: "https://seishinryu.hatenablog.com/",
+    legacy: "https://blog.goo.ne.jp/seishinryu",
+  },
+  {
+    name: "メディア・ニュース関連",
+    href: "https://seishinkan-news.hatenablog.com/",
+    legacy: "https://blog.goo.ne.jp/seishinkan",
+  },
+  {
+    name: "清心会全体ブログ",
+    href: "https://seishinkan-dojo.hateblo.jp/",
+  },
+];
+
+const legacyArchives = [
+  { name: "旧ブログ(2005-2006)", href: "http://www.phoenix-c.or.jp/~okubo/blog/ms.cgi?blogid=" },
+  { name: "旧・取材関係ブログ", href: "https://red.ap.teacup.com/karatenews/" },
+  { name: "旧・行事ブログ", href: "https://red.ap.teacup.com/karate-news/" },
+  { name: "旧・会長ブログ", href: "https://red.ap.teacup.com/seishinkan2009/" },
+];
+---
+
+<BaseLayout
+  title="会員ブログ・Facebook"
+  description="清心会の執行部・会員によるブログ、Facebookページの一覧です。"
+  lang="ja"
+  path="/news/blogs/"
+>
+  <section class="detail-page">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">BLOGS</span>
+        <h1 class="section-title">執行部ブログ・Facebook</h1>
+      </div>
+
+      <p class="detail-page__intro">
+        清心会の執行部・会員が発信しているブログ、Facebookページのご紹介です。
+      </p>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">公式ブログ</h2>
+        <ul class="partner-section__list">
+          {officialBlogs.map((b) => (
+            <li class="partner-section__item">
+              <a href={b.href} target="_blank" rel="noopener noreferrer">
+                {b.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">個人ブログ・Facebook</h2>
+        <ul class="partner-section__list">
+          {memberBlogs.map((m) => (
+            <li class="partner-section__item">
+              <span>
+                {m.name}
+                {m.links.map((l, i) => (
+                  <>
+                    {i > 0 && "・"}
+                    <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>
+                  </>
+                ))}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">旧ブログ・アーカイブ</h2>
+        <ul class="partner-section__list">
+          {legacyArchives.map((b) => (
+            <li class="partner-section__item">
+              <a href={b.href} target="_blank" rel="noopener noreferrer">
+                {b.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <p class="detail-page__back">
+        <a href="/news/">← ニュース・SNSへ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

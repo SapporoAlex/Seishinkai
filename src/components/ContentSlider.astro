@@ -1,0 +1,82 @@
+---
+// Reusable content slider (built on the Swiper instance already loaded
+// globally via BaseLayout for the homepage hero). Drop it inside any
+// width-constrained wrapper (e.g. .page-container) and it fills that width.
+//
+// Each slide can be image-only, image+text, or the whole thing wrapped in
+// a link — pass `href` on a slide to make it clickable.
+interface Slide {
+  image: string;
+  alt: string;
+  title?: string;
+  text?: string;
+  href?: string;
+  target?: "_blank";
+}
+
+interface Props {
+  slides: Slide[];
+  id?: string;
+  ratio?: string;
+  slidesPerView?: number;
+  spaceBetween?: number;
+  lang?: string;
+}
+
+const {
+  slides,
+  id = `content-slider-${Math.random().toString(36).slice(2, 9)}`,
+  ratio = "16 / 9",
+  slidesPerView = 1,
+  spaceBetween = 20,
+  lang = "ja",
+} = Astro.props;
+
+const prevLabel = lang === "en" ? "Previous slide" : "前のスライド";
+const nextLabel = lang === "en" ? "Next slide" : "次のスライド";
+---
+
+<div
+  class="content-slider"
+  id={id}
+  data-content-slider
+  data-slides-per-view={slidesPerView}
+  data-space-between={spaceBetween}
+>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {
+        slides.map((slide) => {
+          const Tag = slide.href ? "a" : "div";
+          const isExternal = slide.target === "_blank";
+          const linkAttrs = slide.href
+            ? {
+                href: slide.href,
+                target: isExternal ? "_blank" : undefined,
+                rel: isExternal ? "noopener noreferrer" : undefined,
+              }
+            : {};
+          return (
+            <div class="swiper-slide">
+              <Tag class="content-slider__slide" {...linkAttrs}>
+                <div class="content-slider__media" style={`aspect-ratio: ${ratio}`}>
+                  <img src={slide.image} alt={slide.alt} loading="lazy" />
+                </div>
+                {(slide.title || slide.text) && (
+                  <div class="content-slider__body">
+                    {slide.title && <h3 class="content-slider__title">{slide.title}</h3>}
+                    {slide.text && <p class="content-slider__text">{slide.text}</p>}
+                  </div>
+                )}
+              </Tag>
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <button type="button" class="swiper-button-prev" aria-label={prevLabel}></button>
+    <button type="button" class="swiper-button-next" aria-label={nextLabel}></button>
+  </div>
+</div>

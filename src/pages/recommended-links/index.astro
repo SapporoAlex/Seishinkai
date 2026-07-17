@@ -1,0 +1,49 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const links = [
+  { name: "波動門北海道", href: "http://hado.dpcnp.info/" },
+  { name: "普門会空手道連盟", href: "https://fumonkaikawasaki.wixsite.com/fumonkai-karate" },
+  { name: "医療法人 渓和会江別病院", href: "http://keiwakai-ebetsu.or.jp/" },
+  { name: "空手道誠志会館", href: "http://karate-seishikaikan.info/" },
+  { name: "沖縄遊YOU塾", href: "http://okinawayouyoujuku.bex.jp/" },
+  { name: "国際三身館", href: "https://www.sanshinkarate.se/" },
+  { name: "なび北海道", href: "https://navihokkaido.com/" },
+  { name: "WRBBOF", href: "http://thewrbbof.com/index.html" },
+  { name: "武道道場ナビ", href: "https://www.budo-dojo-navi.com/" },
+];
+---
+
+<BaseLayout
+  title="お勧めリンク"
+  description="清心会空手がお勧めする関連サイトのご紹介です。"
+  lang="ja"
+  path="/recommended-links/"
+>
+  <section class="detail-page">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">LINKS</span>
+        <h1 class="section-title">お勧めリンク</h1>
+      </div>
+
+      <p class="detail-page__intro">清心会お勧めサイトのご紹介です。</p>
+
+      <section class="partner-section">
+        <ul class="partner-section__list">
+          {links.map((link) => (
+            <li class="partner-section__item">
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <p class="detail-page__back">
+        <a href="/links-partners/">← 友好団体・企業へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -19,7 +19,9 @@
             "date": "1974-2015",
             "prefecture": "北海道",
             "profession": "",
-            "details": ["清心館総本部二代目館長"],
+            "details": [
+              "清心館総本部二代目館長"
+            ],
             "tags": []
           },
           {
@@ -32,7 +34,9 @@
             "date": "1940-2012",
             "prefecture": "千葉県",
             "profession": "",
-            "details": ["無琉塾初代塾長"],
+            "details": [
+              "無琉塾初代塾長"
+            ],
             "tags": []
           },
           {
@@ -45,7 +49,10 @@
             "date": "1927-2003",
             "prefecture": "北海道",
             "profession": "",
-            "details": ["清心会技術顧問", "北海道大学名誉教授"],
+            "details": [
+              "清心会技術顧問",
+              "北海道大学名誉教授"
+            ],
             "tags": []
           }
         ]
@@ -64,7 +71,7 @@
         "members": [
           {
             "id": "okubo-tsubasa",
-            "link": "https://seishinkan.ne.jp/tubasa.html",
+            "link": "/about/tubasa/",
             "image": "/assets/images/instructors/tsubasa.jpg",
             "name": "大久保翼",
             "role": "総本部館長",
@@ -97,13 +104,16 @@
             "position": "師範",
             "date": "",
             "prefecture": "",
-            "profession": "",
+            "profession": "定年/広告会社",
             "details": [],
-            "tags": ["英語", "イタリア語"]
+            "tags": [
+              "英語",
+              "イタリア語"
+            ]
           },
           {
             "id": "maekawa",
-            "link": "https://seishinkan.ne.jp/dojo/m-atsubetsu/",
+            "link": "/dojo/atsubetsu/",
             "image": "/assets/images/instructors/maekawa.jpg",
             "name": "前川信孝",
             "role": "古武術部長/広報部長",
@@ -112,14 +122,16 @@
             "prefecture": "",
             "profession": "定年/毎日新聞社",
             "details": [],
-            "tags": ["英語"]
+            "tags": [
+              "英語"
+            ]
           },
           {
             "id": "ishimori",
-            "link": "https://seishinkan.ne.jp/dojo/iwamizawa/",
+            "link": "/dojo/ebetsu/",
             "image": "/assets/images/instructors/ishimori.jpg",
             "name": "石森忠之",
-            "role": "古武術部長/広報部長",
+            "role": "",
             "position": "師範",
             "date": "",
             "prefecture": "",
@@ -132,17 +144,17 @@
       {
         "id": "honbushidoin",
         "title": "本部指導員",
-        "note": "※各師範・支部長は就労後、ボランティア指導員として清心会活動に参加しています(順不同)",
+        "note": "※各師範・支部長は就労後、ボランティア指導員として交代で清心会本部・支部活動に参加しています(順不同)",
         "members": [
           {
             "id": "takashima",
             "image": "/assets/images/instructors/takashima.jpg",
             "name": "髙嶋",
             "role": "",
-            "position": "師範代",
+            "position": "師範補",
             "date": "",
             "prefecture": "",
-            "profession": "事務局長",
+            "profession": "団体職員",
             "details": [],
             "tags": []
           },
@@ -151,10 +163,10 @@
             "image": "/assets/images/instructors/oki.jpg",
             "name": "沖村さおり",
             "role": "",
-            "position": "三段",
+            "position": "師範補",
             "date": "",
             "prefecture": "",
-            "profession": "武道具+パート",
+            "profession": "団体職員",
             "details": [],
             "tags": []
           },
@@ -163,10 +175,34 @@
             "image": "/assets/images/instructors/shima.jpg",
             "name": "島",
             "role": "",
-            "position": "二段",
+            "position": "師範代",
             "date": "",
             "prefecture": "",
-            "profession": "",
+            "profession": "団体職員",
+            "details": [],
+            "tags": []
+          },
+          {
+            "id": "kimura",
+            "image": "/assets/images/instructors/kimura.jpg",
+            "name": "木村孝雄",
+            "role": "",
+            "position": "師範補",
+            "date": "",
+            "prefecture": "",
+            "profession": "定年/司法書士",
+            "details": [],
+            "tags": []
+          },
+          {
+            "id": "yamazaki",
+            "image": "/assets/images/instructors/asami.jpg",
+            "name": "山崎麻美",
+            "role": "",
+            "position": "師範代",
+            "date": "",
+            "prefecture": "",
+            "profession": "主婦",
             "details": [],
             "tags": []
           }
@@ -249,20 +285,20 @@
           },
           {
             "id": "inomata",
-            "link": "https://seishinkan.ne.jp/dojo/higashikariki/index.html",
+            "link": "/dojo/higashi/",
             "image": "/assets/images/instructors/inomata.jpg",
             "name": "猪又敬之",
             "role": "",
             "position": "師範",
             "date": "",
             "prefecture": "",
-            "profession": "会社員",
+            "profession": "公務員",
             "details": [],
             "tags": []
           },
           {
             "id": "kudo",
-            "link": "https://seishinkan.ne.jp/dojo/obihiro/",
+            "link": "/dojo/kitahiro/",
             "image": "/assets/images/instructors/kudo.jpg",
             "name": "工藤哲弘",
             "role": "",
@@ -301,39 +337,29 @@
           },
           {
             "id": "mikami",
-            "link": "https://seishinkan.ne.jp/dojo/mikami/",
+            "link": "/dojo/cyuo/",
             "image": "/assets/images/instructors/mikami.jpg",
             "name": "三上 淳",
             "role": "",
-            "position": "指導員",
+            "position": "師範代",
             "date": "",
             "prefecture": "",
-            "profession": "コンサルタント",
+            "profession": "客員教授",
             "details": [],
-            "tags": ["英語"]
+            "tags": [
+              "英語"
+            ]
           },
           {
             "id": "yoshida",
-            "link": "https://seishinkan.ne.jp/dojo/kikusui2/",
+            "link": "/dojo/shiroishi/",
             "image": "/assets/images/instructors/yoshida.jpg",
             "name": "吉田ますみ",
             "role": "",
-            "position": "三段",
+            "position": "師範代",
             "date": "",
             "prefecture": "",
             "profession": "会社員",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "kimura",
-            "image": "/assets/images/instructors/kimura.jpg",
-            "name": "木村孝雄",
-            "role": "",
-            "position": "三段",
-            "date": "",
-            "prefecture": "",
-            "profession": "定年/司法書士",
             "details": [],
             "tags": []
           },
@@ -342,49 +368,12 @@
             "image": "/assets/images/instructors/oikawa.jpg",
             "name": "及川義彦",
             "role": "",
-            "position": "指導員",
+            "position": "二段",
             "date": "",
             "prefecture": "",
             "profession": "及川写真事務所",
             "details": [],
             "tags": []
-          },
-          {
-            "id": "yamazaki",
-            "image": "/assets/images/instructors/asami.jpg",
-            "name": "山崎麻美",
-            "role": "",
-            "position": "三段",
-            "date": "",
-            "prefecture": "",
-            "profession": "主婦",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "komada",
-            "link": "https://seishinkan.ne.jp/dojo/kyogoku/",
-            "image": "/assets/images/instructors/komada.jpg",
-            "name": "駒田拓朗",
-            "role": "",
-            "position": "準指導員",
-            "date": "",
-            "prefecture": "",
-            "profession": "団体職員",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "matsuoka",
-            "image": "/assets/images/instructors/matsuoka.jpg",
-            "name": "松岡昌哉",
-            "role": "",
-            "position": "貳段",
-            "date": "",
-            "prefecture": "",
-            "profession": "会社員",
-            "details": [],
-            "tags": ["英語"]
           },
           {
             "id": "takahashi-katsunori",
@@ -397,56 +386,9 @@
             "prefecture": "",
             "profession": "ラ･ビエス",
             "details": [],
-            "tags": ["英語"]
-          },
-          {
-            "id": "yamane",
-            "image": "/assets/images/instructors/yamane.jpg",
-            "name": "山根 豊",
-            "role": "",
-            "position": "二段",
-            "date": "",
-            "prefecture": "",
-            "profession": "団体職員",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "ito",
-            "image": "/assets/images/instructors/ito.jpg",
-            "name": "伊藤紀章",
-            "role": "",
-            "position": "指導員",
-            "date": "",
-            "prefecture": "",
-            "profession": "教師",
-            "details": [],
-            "tags": ["英語"]
-          },
-          {
-            "id": "michael",
-            "link": "https://www.facebook.com/michael.widmer.165/",
-            "image": "/assets/images/instructors/mih.jpg",
-            "name": "ミヒャエル",
-            "role": "",
-            "position": "準指導員",
-            "date": "",
-            "prefecture": "",
-            "profession": "神学教師",
-            "details": [],
-            "tags": ["帰国中"]
-          },
-          {
-            "id": "sueyoshi",
-            "image": "/assets/images/instructors/sueyoshi.jpg",
-            "name": "末吉弘一",
-            "role": "",
-            "position": "師範代",
-            "date": "",
-            "prefecture": "",
-            "profession": "会社員",
-            "details": [],
-            "tags": []
+            "tags": [
+              "英語"
+            ]
           },
           {
             "id": "suda",
@@ -487,35 +429,10 @@
             "tags": []
           },
           {
-            "id": "shirakawa",
-            "link": "https://sumiyoshijuku.org/",
-            "image": "/assets/images/instructors/shirakawa.jpg",
-            "name": "白川祥之",
-            "role": "",
-            "position": "二段",
-            "date": "",
-            "prefecture": "",
-            "profession": "会社員",
-            "details": [],
-            "tags": []
-          },
-          {
             "id": "imai",
-            "link": "https://seishinkan.ne.jp/dojo/fushiko/",
+            "link": "/dojo/higashi/",
             "image": "/assets/images/instructors/imai.jpg",
             "name": "今井直也",
-            "role": "",
-            "position": "二段",
-            "date": "",
-            "prefecture": "",
-            "profession": "会社員",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "miura",
-            "image": "/assets/images/instructors/miura.jpg",
-            "name": "三浦としえ",
             "role": "",
             "position": "二段",
             "date": "",
@@ -537,18 +454,6 @@
             "tags": []
           },
           {
-            "id": "tashiro",
-            "image": "/assets/images/instructors/tashiro2.jpg",
-            "name": "田代昭男",
-            "role": "",
-            "position": "二段",
-            "date": "",
-            "prefecture": "",
-            "profession": "会社員",
-            "details": [],
-            "tags": []
-          },
-          {
             "id": "sato-tsuyoshi",
             "image": "/assets/images/instructors/sato2.jpg",
             "name": "佐藤 剛",
@@ -561,100 +466,14 @@
             "tags": []
           },
           {
-            "id": "ineda",
-            "link": "https://sumiyoshijuku.org/",
-            "image": "/assets/images/instructors/ineda.jpg",
-            "name": "稲田育夫",
-            "role": "",
-            "position": "指導員",
-            "date": "",
-            "prefecture": "",
-            "profession": "",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "maejima",
-            "link": "https://www.facebook.com/satoshi.maejima.9",
-            "image": "/assets/images/instructors/maejima.jpg",
-            "name": "前嶋 智",
-            "role": "",
-            "position": "師範代",
-            "date": "",
-            "prefecture": "",
-            "profession": "団体職員",
-            "details": [],
-            "tags": []
-          },
-          {
             "id": "sakai",
             "image": "/assets/images/instructors/sakai.jpg",
             "name": "坂井陽人",
             "role": "",
-            "position": "助教",
-            "date": "",
-            "prefecture": "",
-            "profession": "会社員",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "hirabayashi",
-            "image": "/assets/images/instructors/hirabayashi.jpg",
-            "name": "平林学",
-            "role": "",
-            "position": "助教",
-            "date": "",
-            "prefecture": "",
-            "profession": "会社員",
-            "details": [],
-            "tags": ["英語"]
-          },
-          {
-            "id": "abe",
-            "image": "/assets/images/instructors/abe.jpg",
-            "name": "阿部みわ",
-            "role": "",
             "position": "初段",
             "date": "",
             "prefecture": "",
-            "profession": "",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "sato-saki",
-            "image": "/assets/images/instructors/satosaki.jpg",
-            "name": "佐藤咲姫",
-            "role": "",
-            "position": "助教",
-            "date": "",
-            "prefecture": "",
-            "profession": "学生",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "nagomi",
-            "image": "/assets/images/instructors/nagomi.jpg",
-            "name": "別途屋敷和",
-            "role": "",
-            "position": "助教",
-            "date": "",
-            "prefecture": "",
-            "profession": "学生",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "takigami",
-            "image": "/assets/images/instructors/taki.jpg",
-            "name": "滝上由佳",
-            "role": "",
-            "position": "指導員",
-            "date": "",
-            "prefecture": "",
-            "profession": "",
+            "profession": "会社員",
             "details": [],
             "tags": []
           },
@@ -666,20 +485,31 @@
             "position": "初段",
             "date": "",
             "prefecture": "",
-            "profession": "",
+            "profession": "保育士",
             "details": [],
             "tags": []
           },
           {
-            "id": "ishimori",
-            "link": "https://seishinkan.ne.jp/dojo/iwamizawa/",
-            "image": "/assets/images/instructors/ishimori.jpg",
-            "name": "石森忠之",
+            "id": "kurahashi",
+            "image": "/assets/images/instructors/kurahashi.jpg",
+            "name": "倉橋伸直",
             "role": "",
-            "position": "師範",
+            "position": "二段",
+            "date": "",
+            "prefecture": "愛知県",
+            "profession": "会社員",
+            "details": [],
+            "tags": []
+          },
+          {
+            "id": "masuda",
+            "image": "/assets/images/instructors/masuda.jpg",
+            "name": "増田宇倫",
+            "role": "",
+            "position": "二段",
             "date": "",
             "prefecture": "",
-            "profession": "定年/岩見沢市役所",
+            "profession": "エンジニア",
             "details": [],
             "tags": []
           }
@@ -712,18 +542,6 @@
             "date": "",
             "prefecture": "新冠町",
             "profession": "会社員",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "takahashi-rumiko",
-            "image": "/assets/images/instructors/takano2.jpg",
-            "name": "高橋るみこ",
-            "role": "",
-            "position": "",
-            "date": "",
-            "prefecture": "新冠町",
-            "profession": "",
             "details": [],
             "tags": []
           }

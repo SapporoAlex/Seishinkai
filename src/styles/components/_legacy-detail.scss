@@ -187,21 +187,75 @@
     gap: 12px;
   }
 
+  // NOTE: opacity/transform here double as the scroll-reveal entrance state
+  // (see main.js IntersectionObserver, which toggles .is-visible) AND as the
+  // resting state for the hover-lift below. Both are declared in ONE
+  // transition list so hover isn't clobbered by a competing rule — a plain
+  // @keyframes animation with fill-mode:forwards would otherwise keep
+  // "owning" transform after it finishes and silently eat the hover lift.
   figure {
     margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color var(--hover-time),
+      box-shadow var(--hover-time);
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    // Every figure here is clickable — either it's a real link (video,
+    // profile, page) or a plain image that opens the lightbox — so both
+    // get the same lift/shadow feedback. Only the cursor differs (see
+    // _image-lightbox.scss for the zoom-in cursor on non-link figures).
+    &.is-visible:hover {
+      border-color: var(--blue);
+      box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
+      transform: translateY(-4px);
+    }
+  }
+
+  a {
+    display: block;
+    overflow: hidden;
   }
 
   img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     display: block;
-    border: 1px solid var(--border);
+    transition: transform var(--hover-time);
+
+    // opt out of cropping for document/table screenshots
+    &.u-object-contain {
+      object-fit: contain;
+      background: var(--off-white);
+      padding: 10px;
+    }
+  }
+
+  figure.is-visible:hover img {
+    transform: scale(1.04);
+  }
+
+  figure.is-visible:hover img.u-object-contain {
+    transform: none;
   }
 
   figcaption {
+    padding: 10px 14px;
     font-size: 0.85rem;
     color: var(--text-mid);
-    margin-top: 6px;
     line-height: 1.6;
   }
 }
@@ -215,6 +269,26 @@
     height: auto;
     display: block;
     border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color var(--hover-time),
+      box-shadow var(--hover-time);
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  a:hover img.is-visible {
+    border-color: var(--blue);
+    box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
+    transform: translateY(-4px);
   }
 
   &__caption {
@@ -234,11 +308,35 @@
   figure {
     width: 100%;
     height: auto;
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color var(--hover-time),
+      box-shadow var(--hover-time);
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &.is-visible:has(a):hover {
+      border-color: var(--blue);
+      box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
+      transform: translateY(-4px);
+    }
+
     img {
       width: 100%;
       height: auto;
       display: block;
-      border: 1px solid var(--border);
       @include mqsp {
         height: auto;
         width: 100%;
@@ -389,16 +487,25 @@
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+  opacity: 0;
+  transform: translateY(20px);
   transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
     border-color var(--hover-time),
-    box-shadow var(--hover-time),
-    transform var(--hover-time);
+    box-shadow var(--hover-time);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   img {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    transition: transform var(--hover-time);
   }
 
   span {
@@ -408,10 +515,14 @@
     color: var(--navy);
   }
 
-  &:hover {
+  &.is-visible:hover {
     border-color: var(--blue);
     box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+  }
+
+  &.is-visible:hover img {
+    transform: scale(1.04);
   }
 }
 
@@ -427,6 +538,24 @@
     overflow: hidden;
     background: #fff;
     box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color var(--hover-time),
+      box-shadow var(--hover-time);
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &.is-visible:hover {
+      border-color: var(--blue);
+      box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
+      transform: translateY(-4px);
+    }
   }
 
   img {
@@ -434,6 +563,11 @@
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    transition: transform var(--hover-time);
+  }
+
+  figure.is-visible:hover img {
+    transform: scale(1.04);
   }
 
   figcaption {

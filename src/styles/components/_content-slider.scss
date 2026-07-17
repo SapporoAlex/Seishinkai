@@ -1,0 +1,150 @@
+@use "sass:math";
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+// Reusable content slider (image / image+text / linked-card slides).
+// Drop inside any width-constrained wrapper (e.g. .page-container) —
+// it fills 100% of that width, it does not impose its own max-width.
+.content-slider {
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+
+  --swiper-theme-color: var(--navy);
+  --swiper-pagination-bullet-inactive-color: var(--border);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 9px;
+  --swiper-pagination-bullet-horizontal-gap: 5px;
+
+  .swiper {
+    width: 100%;
+    padding-bottom: 44px; // room for pagination dots below the slides
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      border-color var(--hover-time),
+      box-shadow var(--hover-time),
+      transform var(--hover-time);
+  }
+
+  // hover/press affordance only applies to slides that are actually links
+  a.content-slider__slide:hover {
+    border-color: var(--blue);
+    box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
+    transform: translateY(-4px);
+  }
+
+  &__media {
+    width: 100%;
+    overflow: hidden;
+    background: var(--off-white);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform var(--hover-time);
+    }
+  }
+
+  a.content-slider__slide:hover &__media img {
+    transform: scale(1.04);
+  }
+
+  &__body {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-mid);
+    margin: 0;
+  }
+
+  // Arrows
+  // .swiper has 44px of padding-bottom reserved for the pagination dots below
+  // the slides, so "center of the swiper element" != "center of the slide
+  // area". Offsetting top by half the arrow's own height re-centers it
+  // against the slide area instead (see the accompanying comment below).
+  $arrow-size: 44px;
+  $pagination-space: 44px;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    // slide-area-center = (100% - $pagination-space) / 2
+    // arrow-top = slide-area-center - $arrow-size / 2
+    top: calc((100% - #{$pagination-space}) / 2 - #{math.div($arrow-size, 2)});
+    width: $arrow-size;
+    height: $arrow-size;
+    margin-top: 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(13, 37, 69, 0.08);
+    transition:
+      border-color var(--hover-time),
+      box-shadow var(--hover-time),
+      transform var(--hover-time);
+
+    &::after {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    &:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 37, 69, 0.12);
+      transform: translateY(-2px);
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.35;
+    }
+
+    @include mqsp {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -6px;
+  }
+
+  .swiper-button-next {
+    right: -6px;
+  }
+
+  // Pagination
+  .swiper-pagination {
+    bottom: 0;
+  }
+}

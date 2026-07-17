@@ -1,6 +1,19 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
+// Placeholder entries — replace href with the real PDF path once supplied,
+// e.g. /assets/pdf/newsletter/newsletter-12.pdf
+const newsletters = [
+  { title: "清心会だより 第12号（2026年7月）", href: "/assets/pdf/newsletter/newsletter-12.pdf" },
+  { title: "清心会だより 第11号（2026年4月）", href: "/assets/pdf/newsletter/newsletter-11.pdf" },
+  { title: "清心会だより 第10号（2026年1月）", href: "/assets/pdf/newsletter/newsletter-10.pdf" },
+  { title: "清心会だより 第9号（2025年10月）", href: "/assets/pdf/newsletter/newsletter-09.pdf" },
+  { title: "清心会だより 第8号（2025年7月）", href: "/assets/pdf/newsletter/newsletter-08.pdf" },
+  { title: "清心会だより 第7号（2025年4月）", href: "/assets/pdf/newsletter/newsletter-07.pdf" },
+  { title: "清心会だより 第6号（2025年1月）", href: "/assets/pdf/newsletter/newsletter-06.pdf" },
+  { title: "清心会だより 第5号（2024年10月）", href: "/assets/pdf/newsletter/newsletter-05.pdf" },
+];
+
 const snsLinks = [
   {
     id: "facebook",
@@ -57,12 +70,17 @@ const snsLinks = [
     href: "https://seishinkan-dojo.bbs.fc2.com/",
   },
   {
+    id: "members",
+    name: "会員ブログ・Facebook",
+    description: "支部・会員が運営するブログ、Facebookページの一覧です。",
+    href: "/news/blogs/",
+  },
+  {
     id: "events",
     name: "清心会空手行事予定",
     description: "大会・審査会・合宿など、年間の行事予定を掲載しています。",
-    href: "https://seishinkan.ne.jp/news.html",
+    href: "/news/archive/",
   },
-
 ];
 ---
 
@@ -81,6 +99,28 @@ const snsLinks = [
       <p class="page-intro">
         清心会の最新情報は、SNS・ブログ・掲示板で随時発信しています。行事予定や稽古の様子、休講のお知らせなどは下記の各メディアからご覧ください。
       </p>
+
+      <h2 class="detail-page__heading">ニュースレター</h2>
+      <div class="newsletter-list" data-show-more data-batch-size="3">
+        <ul class="newsletter-list__items">
+          {
+            newsletters.map((n, i) => (
+              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
+                <a href={n.href} target="_blank" rel="noopener">
+                  {n.title}（PDF）
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          newsletters.length > 3 && (
+            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
+              もっと見る
+            </button>
+          )
+        }
+      </div>
 
       <div class="news__grid">
         {

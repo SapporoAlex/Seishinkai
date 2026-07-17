@@ -1,0 +1,98 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px 40px;
+
+  &.is-active {
+    display: flex;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 16, 36, 0.88); // dark, slightly blue overlay
+  }
+
+  &__close {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 2.25rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity var(--hover-time);
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.7;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 90vw;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    max-width: 90vw;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  &__caption {
+    margin: 16px 0 0;
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 70ch;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+}
+
+// Gallery images that open the lightbox (i.e. not wrapped in a link) get
+// their own hover affordance — same lift/shadow language as linked figures,
+// but a zoom-in cursor to signal "enlarge" rather than "navigate".
+.detail-gallery,
+.photo-grid {
+  figure:not(:has(a)) {
+    cursor: zoom-in;
+  }
+}
+
+.about__image-case-set img.is-lightbox-trigger {
+  cursor: zoom-in;
+  transition: opacity var(--hover-time);
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

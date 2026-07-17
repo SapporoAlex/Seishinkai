@@ -1,0 +1,49 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const links = [
+  { name: "Hado-mon Hokkaido", href: "http://hado.dpcnp.info/" },
+  { name: "Fumonkai Karate-do Federation", href: "https://fumonkaikawasaki.wixsite.com/fumonkai-karate" },
+  { name: "Keiwakai Ebetsu Hospital", href: "http://keiwakai-ebetsu.or.jp/" },
+  { name: "Karate-do Seishikaikan", href: "http://karate-seishikaikan.info/" },
+  { name: "Okinawa Yu-You-Juku", href: "http://okinawayouyoujuku.bex.jp/" },
+  { name: "Kokusai Sanshinkan", href: "https://www.sanshinkarate.se/" },
+  { name: "Navi Hokkaido", href: "https://navihokkaido.com/" },
+  { name: "WRBBOF", href: "http://thewrbbof.com/index.html" },
+  { name: "Budo Dojo Navi", href: "https://www.budo-dojo-navi.com/" },
+];
+---
+
+<BaseLayout
+  title="Recommended Links"
+  description="A list of sites recommended by Seishinkai Karate."
+  lang="en"
+  path="/en/recommended-links/"
+>
+  <section class="detail-page">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">LINKS</span>
+        <h1 class="section-title">Recommended Links</h1>
+      </div>
+
+      <p class="detail-page__intro">Sites recommended by Seishinkai Karate.</p>
+
+      <section class="partner-section">
+        <ul class="partner-section__list">
+          {links.map((link) => (
+            <li class="partner-section__item">
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <p class="detail-page__back">
+        <a href="/en/links-partners/">← Back to Links & Partners</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

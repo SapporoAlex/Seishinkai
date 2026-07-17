@@ -1,6 +1,19 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
+// Placeholder entries — replace href with the real PDF path once supplied,
+// e.g. /assets/pdf/newsletter/newsletter-12.pdf. Newsletters are Japanese-only.
+const newsletters = [
+  { title: "Seishinkai Newsletter Issue 12 (July 2026)", href: "/assets/pdf/newsletter/newsletter-12.pdf" },
+  { title: "Seishinkai Newsletter Issue 11 (April 2026)", href: "/assets/pdf/newsletter/newsletter-11.pdf" },
+  { title: "Seishinkai Newsletter Issue 10 (January 2026)", href: "/assets/pdf/newsletter/newsletter-10.pdf" },
+  { title: "Seishinkai Newsletter Issue 9 (October 2025)", href: "/assets/pdf/newsletter/newsletter-09.pdf" },
+  { title: "Seishinkai Newsletter Issue 8 (July 2025)", href: "/assets/pdf/newsletter/newsletter-08.pdf" },
+  { title: "Seishinkai Newsletter Issue 7 (April 2025)", href: "/assets/pdf/newsletter/newsletter-07.pdf" },
+  { title: "Seishinkai Newsletter Issue 6 (January 2025)", href: "/assets/pdf/newsletter/newsletter-06.pdf" },
+  { title: "Seishinkai Newsletter Issue 5 (October 2024)", href: "/assets/pdf/newsletter/newsletter-05.pdf" },
+];
+
 const snsLinks = [
   {
     id: "facebook",
@@ -86,6 +99,28 @@ const snsLinks = [
       <p class="page-intro">
         Seishinkai publishes its latest updates on social media, blogs, and the bulletin board. For event schedules, training reports, and class cancellation notices, please visit the channels below.
       </p>
+
+      <h2 class="detail-page__heading">Newsletter</h2>
+      <div class="newsletter-list" data-show-more data-batch-size="3">
+        <ul class="newsletter-list__items">
+          {
+            newsletters.map((n, i) => (
+              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
+                <a href={n.href} target="_blank" rel="noopener">
+                  {n.title} (Japanese, PDF)
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          newsletters.length > 3 && (
+            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
+              Show more
+            </button>
+          )
+        }
+      </div>
 
       <div class="news__grid">
         {
