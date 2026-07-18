@@ -29,16 +29,43 @@ import BaseLayout from "@layouts/BaseLayout.astro";
       </p>
 
       <h2 class="detail-page__heading">Personal Training Fees (Base Rates)</h2>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/exe/img8.jpg"
-            alt="Personal training fee schedule"
-            class="u-object-contain"
-            loading="lazy"
-          />
-        </figure>
-      </div>
+      <table class="table u-sp-invisible">
+        <thead>
+          <tr>
+            <th></th><th>30 mins</th><th>45 mins</th><th>60 mins</th><th>90 mins</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Visitor</th><td>¥6,000 per session</td><td>¥7,500 per session</td><td>¥10,000 per session</td><td>¥15,000 per session</td>
+          </tr>
+          <tr>
+            <th>Personal<br>Member</th><td>¥3,000 per session</td><td>¥4,500 per session</td><td>¥6,000 per session</td><td>¥9,000 per session</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table u-sp-visible">
+        <thead>
+          <tr>
+            <th></th><th>Visitor</th><th>Personal<br>Member</th>
+          </tr>
+        </thead>
+        </tbody>
+          <tr>
+            <th>30 mins</th><td>¥6,000 per session</td><td>¥3,000 per session</td>
+          </tr>
+          <tr>
+            <th>45 mins</th><td>¥7,500 per session</td><td>¥4,500 per session</td>
+          </tr>
+          <tr>
+            <th>60 mins</th><td>¥10,000 per session</td><td>¥6,000 per session</td>
+          </tr>
+          <tr>
+            <th>90 mins</th><td>¥15,000 per session</td><td>¥9,000 per session</td>
+          </tr>
+        </tbody>
+      </table>
       <p class="detail-page__note">
         Since various equipment is used during karate conditioning exercises, you will first need to purchase hand and foot supporters.<br
         />

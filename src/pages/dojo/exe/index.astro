@@ -29,16 +29,43 @@ import BaseLayout from "@layouts/BaseLayout.astro";
       </p>
 
       <h2 class="detail-page__heading">パーソナルトレーニング料金(基本金額)</h2>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/exe/img8.jpg"
-            alt="パーソナルトレーニング料金表"
-            class="u-object-contain"
-            loading="lazy"
-          />
-        </figure>
-      </div>
+      <table class="table u-sp-invisible">
+        <thead>
+          <tr>
+            <th></th><th>30分</th><th>45分</th><th>60分</th><th>90分</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Visitor</th><td>6,000円/回</td><td>7,500円/回</td><td>10,000円/回</td><td>15,000円/回</td>
+          </tr>
+          <tr>
+            <th>パーソナル<br>メンバー</th><td>3,000円/回</td><td>4,500円/回</td><td>6,000円/回</td><td>9,000円/回</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table u-sp-visible">
+        <thead>
+          <tr>
+            <th></th><th>Visitor</th><th>パーソナル<br>メンバー</th>
+          </tr>
+        </thead>
+        </tbody>
+          <tr>
+            <th>30分</th><td>6,000円/回</td><td>3,000円/回</td>
+          </tr>
+          <tr>
+            <th>45分</th><td>7,500円/回</td><td>4,500円/回</td>
+          </tr>
+          <tr>
+            <th>60分</th><td>10,000円/回</td><td>6,000円/回</td>
+          </tr>
+          <tr>
+            <th>90分</th><td>15,000円/回</td><td>9,000円/回</td>
+          </tr>
+        </tbody>
+      </table>
       <p class="detail-page__note">
         空手の整理運動の各種用具も使用しますので手足サポーターを最初に購入して頂きます。<br
         />

@@ -23,16 +23,12 @@ $visibilities: (
 }
 
 .u-sp-visible {
-  display: none !important;
-  
-  @include mqsp {
-    display: block !important;
+  @include mqpc {
+    display: none !important;
   }
 }
 
 .u-sp-invisible {
-  display: block !important;
-  
   @include mqsp {
     display: none !important;
   }
