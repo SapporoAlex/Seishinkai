@@ -411,7 +411,8 @@ a img:hover {
   box-sizing: border-box;
   border-collapse: collapse;
   border: 1px solid var(--border);
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  table-layout: auto;
 }
 .table th,
 .table td {
@@ -428,7 +429,7 @@ a img:hover {
 }
 @media (max-width: 47.98rem) {
   .table th {
-    min-width: 5rem;
+    min-width: 4rem;
   }
 }
 @media (max-width: 47.98rem) {
@@ -450,11 +451,11 @@ a img:hover {
   }
   .table th,
   .table td {
-    display: block;
-    width: 100%;
+    width: auto;
     border: none;
-    padding: 30px 30px;
+    padding: 10px 10px;
     overflow: hidden;
+    border: 1px solid var(--border);
   }
   .table th {
     border-bottom: 1px solid #ddd;
@@ -694,7 +695,7 @@ a img:hover {
 }
 
 .header__nav-list li a {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--text-mid);
   text-decoration: none;
   letter-spacing: 0.05em;
@@ -2038,8 +2039,17 @@ a.content-slider__slide:hover .content-slider__media img {
 .schedule__map-embed {
   margin-top: 16px;
   width: 100%;
+  height: 100%;
+  min-height: 600px;
   aspect-ratio: 16/9;
   border: 1px solid var(--border);
+}
+@media (max-width: 47.98rem) {
+  .dojo-list__map-embed,
+  .schedule__map-embed {
+    height: auto;
+    min-height: 400px;
+  }
 }
 .dojo-list__map-embed iframe,
 .schedule__map-embed iframe {
@@ -3694,18 +3704,12 @@ a.content-slider__slide:hover .content-slider__media img {
     visibility: hidden !important;
   }
 }
-.u-sp-visible {
-  display: none !important;
-}
-@media (max-width: 47.98rem) {
+@media (min-width: 48rem) {
   .u-sp-visible {
-    display: block !important;
+    display: none !important;
   }
 }
 
-.u-sp-invisible {
-  display: block !important;
-}
 @media (max-width: 47.98rem) {
   .u-sp-invisible {
     display: none !important;
