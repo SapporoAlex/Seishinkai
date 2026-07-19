@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Seishinkai/assets/css/swiper-bundle.min.css">
     <script src="/Seishinkai/assets/js/swiper-bundle.min.js"></script>
-    <script type="module" src="/Seishinkai/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Dg3usCX_.js"></script>
+    <script type="module" src="/Seishinkai/_astro/BaseLayout.astro_astro_type_script_index_0_lang.D4Vhw5mA.js"></script>
   <link rel="stylesheet" href="/Seishinkai/assets/css/style.css"></head>
   <body>
     <header class="header">
@@ -144,32 +144,6 @@
       <p class="page-intro">
         Seishinkai publishes its latest updates on social media, blogs, and the bulletin board. For event schedules, training reports, and class cancellation notices, please visit the channels below.
       </p>
-
-      <h2 class="detail-page__heading">Seishinkai Newsletter</h2>
-      <div class="newsletter-list" data-show-more data-batch-size="3">
-        <ul class="newsletter-list__items">
-          <li class="newsletter-list__item" data-show-more-item>
-                <a href="/Seishinkai/assets/pdf/newsletter/会報516-2026.7.1.pdf" target="_blank" rel="noopener">
-                  Seishinkai Newsletter Issue:516 (June, 2026) (Japanese, PDF)
-                </a>
-              </li><li class="newsletter-list__item" data-show-more-item>
-                <a href="/Seishinkai/assets/pdf/newsletter/会報515-2026.6.1.pdf" target="_blank" rel="noopener">
-                  Seishinkai Newsletter Issue:515 (May, 2026) (Japanese, PDF)
-                </a>
-              </li><li class="newsletter-list__item" data-show-more-item>
-                <a href="/Seishinkai/assets/pdf/newsletter/会報514-2026.5.1.pdf" target="_blank" rel="noopener">
-                  Seishinkai Newsletter Issue:514 (April, 2026) (Japanese, PDF)
-                </a>
-              </li><li class="newsletter-list__item is-hidden" data-show-more-item>
-                <a href="/Seishinkai/assets/pdf/newsletter/会報513-2026.4.1s.pdf" target="_blank" rel="noopener">
-                  Seishinkai Newsletter Issue:513 (March, 2026) (Japanese, PDF)
-                </a>
-              </li>
-        </ul>
-        <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
-              Show more
-            </button>
-      </div>
 
       <div class="news__grid">
         <a class="news__card fade-up-in" href="https://www.facebook.com/seishinkai.karate.dojo" target="_blank" rel="noopener">
@@ -423,6 +397,41 @@
       </div>
 
       <p class="news__note">※ All links open external sites. Most content is in Japanese.</p>
+      
+      <h2 class="detail-page__heading">Seishinkai Newsletter</h2>
+      <!-- <div class="newsletter-list" data-show-more data-batch-size="3">
+        <ul class="newsletter-list__items">
+          {
+            newsletters.map((n, i) => (
+              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
+                <a href={n.href} target="_blank" rel="noopener">
+                  {n.title} (Japanese, PDF)
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          newsletters.length > 3 && (
+            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
+              Show more
+            </button>
+          )
+        }
+      </div> -->
+
+      <p>The PDF newsletter is available exclusively to members.</p>
+
+      <p>
+        If you would like to receive a copy, please contact the Head Office Secretariat by email. A PDF copy of the newsletter will be sent to you as an email attachment.
+      </p>
+
+      <p><a href="mailto:Karate@seishinkan.ne.jp">Karate@seishinkan.ne.jp</a></p>
+
+      <p>
+        Please include your branch affiliation, membership number, and full name when making your request.
+      </p>
+
     </div>
   </section>
 
