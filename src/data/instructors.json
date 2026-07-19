@@ -19,9 +19,7 @@
             "date": "1974-2015",
             "prefecture": "北海道",
             "profession": "",
-            "details": [
-              "清心館総本部二代目館長"
-            ],
+            "details": ["清心館総本部二代目館長"],
             "tags": []
           },
           {
@@ -34,9 +32,7 @@
             "date": "1940-2012",
             "prefecture": "千葉県",
             "profession": "",
-            "details": [
-              "無琉塾初代塾長"
-            ],
+            "details": ["無琉塾初代塾長"],
             "tags": []
           },
           {
@@ -49,10 +45,7 @@
             "date": "1927-2003",
             "prefecture": "北海道",
             "profession": "",
-            "details": [
-              "清心会技術顧問",
-              "北海道大学名誉教授"
-            ],
+            "details": ["清心会技術顧問", "北海道大学名誉教授"],
             "tags": []
           }
         ]
@@ -78,8 +71,8 @@
             "position": "首席師範",
             "date": "",
             "prefecture": "",
-            "profession": "二代目宗家",
-            "details": [],
+            "profession": "自営 / 富士堂スポーツ",
+            "details": ["二代目宗家"],
             "tags": []
           },
           {
@@ -106,10 +99,7 @@
             "prefecture": "",
             "profession": "定年/広告会社",
             "details": [],
-            "tags": [
-              "英語",
-              "イタリア語"
-            ]
+            "tags": ["英語", "イタリア語"]
           },
           {
             "id": "maekawa",
@@ -122,9 +112,7 @@
             "prefecture": "",
             "profession": "定年/毎日新聞社",
             "details": [],
-            "tags": [
-              "英語"
-            ]
+            "tags": ["英語"]
           },
           {
             "id": "ishimori",
@@ -346,9 +334,7 @@
             "prefecture": "",
             "profession": "客員教授",
             "details": [],
-            "tags": [
-              "英語"
-            ]
+            "tags": ["英語"]
           },
           {
             "id": "yoshida",
@@ -386,9 +372,7 @@
             "prefecture": "",
             "profession": "ラ･ビエス",
             "details": [],
-            "tags": [
-              "英語"
-            ]
+            "tags": ["英語"]
           },
           {
             "id": "suda",

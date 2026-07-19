@@ -145,32 +145,6 @@
         清心会の最新情報は、SNS・ブログ・掲示板で随時発信しています。行事予定や稽古の様子、休講のお知らせなどは下記の各メディアからご覧ください。
       </p>
 
-      <h2 class="detail-page__heading">ニュースレター</h2>
-      <div class="newsletter-list" data-show-more data-batch-size="3">
-        <ul class="newsletter-list__items">
-          <li class="newsletter-list__item" data-show-more-item>
-                <a href="/Seishinkai/assets/pdf/newsletter/会報516-2026.7.1.pdf" target="_blank" rel="noopener">
-                  会報 第516号（2026年7月）（PDF）
-                </a>
-              </li><li class="newsletter-list__item" data-show-more-item>
-                <a href="/Seishinkai/assets/pdf/newsletter/会報515-2026.6.1.pdf" target="_blank" rel="noopener">
-                  会報 第515号（2026年6月）（PDF）
-                </a>
-              </li><li class="newsletter-list__item" data-show-more-item>
-                <a href="/Seishinkai/assets/pdf/newsletter/会報514-2026.5.1.pdf" target="_blank" rel="noopener">
-                  会報 第514号（2026年5月）（PDF）
-                </a>
-              </li><li class="newsletter-list__item is-hidden" data-show-more-item>
-                <a href="/Seishinkai/assets/pdf/newsletter/会報513-2026.4.1s.pdf" target="_blank" rel="noopener">
-                  会報 第513号（2026年4月）（PDF）
-                </a>
-              </li>
-        </ul>
-        <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
-              もっと見る
-            </button>
-      </div>
-
       <div class="news__grid">
         <a class="news__card fade-up-in" href="https://www.facebook.com/seishinkai.karate.dojo" target="_blank" rel="noopener">
               <span class="news__icon news__icon--facebook" aria-hidden="true">
@@ -423,6 +397,41 @@
       </div>
 
       <p class="news__note">※各リンクは外部サイトが開きます。</p>
+
+      <h2 class="detail-page__heading">ニュースレター</h2>
+      <!-- <div class="newsletter-list" data-show-more data-batch-size="3">
+        <ul class="newsletter-list__items">
+          {
+            newsletters.map((n, i) => (
+              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
+                <a href={n.href} target="_blank" rel="noopener">
+                  {n.title}（PDF）
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          newsletters.length > 3 && (
+            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
+              もっと見る
+            </button>
+          )
+        }
+      </div> -->
+
+      <p>PDF会報をご希望の会員の方は、本部事務局までお問い合わせください。</p>
+
+      <p>
+        <a href="mailto:Karate@seishinkan.ne.jp">Karate@seishinkan.ne.jp</a>
+      </p>
+
+      <p>
+        お問い合わせの際は、所属支部・会員番号・会員氏名をご記載ください。
+      </p>
+
+      <p>確認後、PDF会報をメール添付にてお送りします。</p>
+
     </div>
   </section>
 
