@@ -96,28 +96,6 @@ const snsLinks = [
         Seishinkai publishes its latest updates on social media, blogs, and the bulletin board. For event schedules, training reports, and class cancellation notices, please visit the channels below.
       </p>
 
-      <h2 class="detail-page__heading">Seishinkai Newsletter</h2>
-      <div class="newsletter-list" data-show-more data-batch-size="3">
-        <ul class="newsletter-list__items">
-          {
-            newsletters.map((n, i) => (
-              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
-                <a href={n.href} target="_blank" rel="noopener">
-                  {n.title} (Japanese, PDF)
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-        {
-          newsletters.length > 3 && (
-            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
-              Show more
-            </button>
-          )
-        }
-      </div>
-
       <div class="news__grid">
         {
           snsLinks.map((sns) => (
@@ -206,6 +184,41 @@ const snsLinks = [
       </div>
 
       <p class="news__note">※ All links open external sites. Most content is in Japanese.</p>
+      
+      <h2 class="detail-page__heading">Seishinkai Newsletter</h2>
+      <!-- <div class="newsletter-list" data-show-more data-batch-size="3">
+        <ul class="newsletter-list__items">
+          {
+            newsletters.map((n, i) => (
+              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
+                <a href={n.href} target="_blank" rel="noopener">
+                  {n.title} (Japanese, PDF)
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          newsletters.length > 3 && (
+            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
+              Show more
+            </button>
+          )
+        }
+      </div> -->
+
+      <p>The PDF newsletter is available exclusively to members.</p>
+
+      <p>
+        If you would like to receive a copy, please contact the Head Office Secretariat by email. A PDF copy of the newsletter will be sent to you as an email attachment.
+      </p>
+
+      <p><a href="mailto:Karate@seishinkan.ne.jp">Karate@seishinkan.ne.jp</a></p>
+
+      <p>
+        Please include your branch affiliation, membership number, and full name when making your request.
+      </p>
+
     </div>
   </section>
 </BaseLayout>

@@ -96,28 +96,6 @@ const snsLinks = [
         清心会の最新情報は、SNS・ブログ・掲示板で随時発信しています。行事予定や稽古の様子、休講のお知らせなどは下記の各メディアからご覧ください。
       </p>
 
-      <h2 class="detail-page__heading">ニュースレター</h2>
-      <div class="newsletter-list" data-show-more data-batch-size="3">
-        <ul class="newsletter-list__items">
-          {
-            newsletters.map((n, i) => (
-              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
-                <a href={n.href} target="_blank" rel="noopener">
-                  {n.title}（PDF）
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-        {
-          newsletters.length > 3 && (
-            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
-              もっと見る
-            </button>
-          )
-        }
-      </div>
-
       <div class="news__grid">
         {
           snsLinks.map((sns) => (
@@ -206,6 +184,41 @@ const snsLinks = [
       </div>
 
       <p class="news__note">※各リンクは外部サイトが開きます。</p>
+
+      <h2 class="detail-page__heading">ニュースレター</h2>
+      <!-- <div class="newsletter-list" data-show-more data-batch-size="3">
+        <ul class="newsletter-list__items">
+          {
+            newsletters.map((n, i) => (
+              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
+                <a href={n.href} target="_blank" rel="noopener">
+                  {n.title}（PDF）
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          newsletters.length > 3 && (
+            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
+              もっと見る
+            </button>
+          )
+        }
+      </div> -->
+
+      <p>PDF会報をご希望の会員の方は、本部事務局までお問い合わせください。</p>
+
+      <p>
+        <a href="mailto:Karate@seishinkan.ne.jp">Karate@seishinkan.ne.jp</a>
+      </p>
+
+      <p>
+        お問い合わせの際は、所属支部・会員番号・会員氏名をご記載ください。
+      </p>
+
+      <p>確認後、PDF会報をメール添付にてお送りします。</p>
+
     </div>
   </section>
 </BaseLayout>
