@@ -10,6 +10,7 @@ interface Entry {
   schedule: string[];
   pdfText?: string;
   pdf?: string;
+  link?: string;
 }
 interface Props {
   entries: Entry[];
@@ -36,7 +37,13 @@ const { entries, headers = ["道場・支部名", "住 所/会場施設名", "�
             <td class="branch-table__no">{e.no ?? ""}</td>
             <td class="branch-table__name">
               {e.marker && <span class="branch-table__marker">{e.marker}</span>}
-              {e.name}
+              {e.link ? (
+                <a href={e.link} class="branch-table__pdf">
+                  {e.name}
+                </a>
+              ) : (
+                e.name
+              )}
               {e.sub && <span class="branch-table__name-sub">{e.sub}</span>}
             </td>
             <td>{e.address}

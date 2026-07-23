@@ -13,6 +13,7 @@ const NAMES: Record<string, string> = {
   "故・室木洋一": "Yoichi Muroki",
   "タマス": "Tamas",
   "アルフォンソ": "Alfonso",
+  "大久保勝美": "Tsubasa Masami",
   "大久保翼": "Tsubasa Okubo",
   "住吉一徳": "Kazunori Sumiyoshi",
   "室木拓士": "Takushi Muroki",
@@ -80,15 +81,19 @@ const POSITIONS: Record<string, string> = {
   助教: "Teaching Assistant",
   初段: "1st Dan",
   二段: "2nd Dan",
-  貳段: "2nd Dan",
   三段: "3rd Dan",
 };
 
 const ROLES: Record<string, string> = {
+  "ISKF 会長/宗家": "ISKF Chairman / Sōke",
+  "総本部道長/第二代宗家": "Head of the Headquarters Dojo / Second-Generation Sōke",
   総本部館長: "Headquarters Director (Kancho)",
-  統括本部長: "General Director",
+  統括本部長: "General Headquarters Director",
   居合部長: "Head of Iaido Division",
   "古武術部長/広報部長": "Head of Kobujutsu & PR",
+  "居合部長/広報部長": "Head of the Iaido Division / Public Relations Director",
+  "古武術部長/国際部長": "Head of the Kobujutsu Division / International Affairs Director",
+  "支部長会議長": "Chairman of the Branch Chiefs Council",
 };
 
 const PREFECTURES: Record<string, string> = {
@@ -104,6 +109,8 @@ const PROFESSIONS: Record<string, string> = {
   二代目宗家: "2nd-generation Soke",
   自営: "Self-employed",
   "定年/毎日新聞社": "Retired (Mainichi Newspapers)",
+  "定年/小松会社": "Retired / Komatsu Company",
+  "定年/広告会社": "Retired / Advertising Company",
   事務局長: "Secretary General",
   "武道具+パート": "Budo equipment shop / part-time",
   歯科医師: "Dentist",
@@ -121,6 +128,7 @@ const PROFESSIONS: Record<string, string> = {
   神学教師: "Theology teacher",
   "定年/北電": "Retired (Hokkaido Electric)",
   学生: "Student",
+  エンジニア: "Engineer",
 };
 
 const TAGS: Record<string, string> = {
@@ -174,8 +182,8 @@ const NOTES: Record<string, string> = {
 
 const DAN_RANKS: Record<string, string> = {
   初段: "1st Dan",
-  弐段: "2nd Dan",
-  参段: "3rd Dan",
+  二段: "2nd Dan",
+  三段: "3rd Dan",
   四段: "4th Dan",
   五段: "5th Dan",
   六段: "6th Dan",
@@ -247,13 +255,10 @@ const localizeLink = (link?: string) =>
         ))
       }
 
-      <p class="instructors__note">
-        ※ Instructor names without a verified English spelling are shown in Japanese.
-      </p>
 
       <div class="instructors__belt-levels">
         <h2 class="instructors__category-title">
-          Registered Dan Holders (as of May 8, 2022)
+          Domestic Dan-Ranked Members (as of December 10, 2025)
         </h2>
 
         <table class="instructors__dan-table">

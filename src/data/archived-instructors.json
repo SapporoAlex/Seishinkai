@@ -13,6 +13,19 @@
     "tags": []
   },
   {
+    "id": "shirokawa",
+    "link": "https://sumiyoshijuku.org/class/shinkotoni/",
+    "image": "/assets/images/instructors/shirokawa.jpg",
+    "name": "城川義明",
+    "role": "",
+    "position": "師範補",
+    "date": "",
+    "prefecture": "",
+    "profession": "定年/北電",
+    "details": [],
+    "tags": []
+  },
+  {
     "id": "matsuoka",
     "image": "/assets/images/instructors/matsuoka.jpg",
     "name": "松岡昌哉",
@@ -22,9 +35,7 @@
     "prefecture": "",
     "profession": "会社員",
     "details": [],
-    "tags": [
-      "英語"
-    ]
+    "tags": ["英語"]
   },
   {
     "id": "yamane",
@@ -48,9 +59,7 @@
     "prefecture": "",
     "profession": "教師",
     "details": [],
-    "tags": [
-      "英語"
-    ]
+    "tags": ["英語"]
   },
   {
     "id": "sueyoshi",
@@ -137,9 +146,7 @@
     "prefecture": "",
     "profession": "会社員",
     "details": [],
-    "tags": [
-      "英語"
-    ]
+    "tags": ["英語"]
   },
   {
     "id": "abe",
@@ -212,8 +219,38 @@
     "prefecture": "",
     "profession": "神学教師",
     "details": [],
-    "tags": [
-      "帰国中"
-    ]
+    "tags": ["帰国中"]
   }
 ]
+      {
+        "id": "regional",
+        "title": "",
+        "note": "※すべての有段者、指導員等を掲載しているわけではありません。掲載は順不同です。",
+        "members": [
+          {
+            "id": "takahashi-tsuyoshi",
+            "image": "/assets/images/instructors/takafashiabira.jpg",
+            "name": "髙橋 剛",
+            "role": "",
+            "position": "師範",
+            "date": "",
+            "prefecture": "安平町",
+            "profession": "会社員",
+            "details": [],
+            "tags": []
+          },
+          {
+            "id": "takano",
+            "link": "https://www.facebook.com/profile.php?id=100034261714273",
+            "image": "/assets/images/instructors/takano.jpg",
+            "name": "高野 均",
+            "role": "",
+            "position": "師範",
+            "date": "",
+            "prefecture": "新冠町",
+            "profession": "会社員",
+            "details": [],
+            "tags": []
+          }
+        ]
+      }

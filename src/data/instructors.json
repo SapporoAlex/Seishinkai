@@ -63,16 +63,29 @@
         "note": "",
         "members": [
           {
+            "id": "okubo-masami",
+            "link": "/about/tubasa/",
+            "image": "/assets/images/instructors/masami.jpg",
+            "name": "大久保勝美",
+            "role": "ISKF 会長/宗家",
+            "position": "範士",
+            "date": "",
+            "prefecture": "",
+            "profession": "",
+            "details": [],
+            "tags": []
+          },
+          {
             "id": "okubo-tsubasa",
             "link": "/about/tubasa/",
             "image": "/assets/images/instructors/tsubasa.jpg",
             "name": "大久保翼",
-            "role": "総本部館長",
+            "role": "総本部道長/第二代宗家",
             "position": "首席師範",
             "date": "",
             "prefecture": "",
             "profession": "自営 / 富士堂スポーツ",
-            "details": ["二代目宗家"],
+            "details": [],
             "tags": []
           },
           {
@@ -93,7 +106,7 @@
             "link": "https://www.facebook.com/profile.php?id=100014649318764",
             "image": "/assets/images/instructors/muroki.jpg",
             "name": "室木拓士",
-            "role": "居合部長",
+            "role": "居合部長/広報部長",
             "position": "師範",
             "date": "",
             "prefecture": "",
@@ -106,7 +119,7 @@
             "link": "/dojo/atsubetsu/",
             "image": "/assets/images/instructors/maekawa.jpg",
             "name": "前川信孝",
-            "role": "古武術部長/広報部長",
+            "role": "古武術部長/国際部長",
             "position": "師範",
             "date": "",
             "prefecture": "",
@@ -119,7 +132,7 @@
             "link": "/dojo/ebetsu/",
             "image": "/assets/images/instructors/ishimori.jpg",
             "name": "石森忠之",
-            "role": "",
+            "role": "支部長会議長",
             "position": "師範",
             "date": "",
             "prefecture": "",
@@ -290,7 +303,7 @@
             "image": "/assets/images/instructors/kudo.jpg",
             "name": "工藤哲弘",
             "role": "",
-            "position": "師範代",
+            "position": "師範",
             "date": "",
             "prefecture": "",
             "profession": "会社員",
@@ -307,6 +320,31 @@
             "date": "",
             "prefecture": "",
             "profession": "",
+            "details": [],
+            "tags": []
+          },
+          {
+            "id": "takahashi-tsuyoshi",
+            "image": "/assets/images/instructors/takafashiabira.jpg",
+            "name": "髙橋 剛",
+            "role": "",
+            "position": "師範",
+            "date": "",
+            "prefecture": "安平町",
+            "profession": "会社員",
+            "details": [],
+            "tags": []
+          },
+          {
+            "id": "takano",
+            "link": "https://www.facebook.com/profile.php?id=100034261714273",
+            "image": "/assets/images/instructors/takano.jpg",
+            "name": "高野 均",
+            "role": "",
+            "position": "師範",
+            "date": "",
+            "prefecture": "新冠町",
+            "profession": "会社員",
             "details": [],
             "tags": []
           },
@@ -494,38 +532,6 @@
             "date": "",
             "prefecture": "",
             "profession": "エンジニア",
-            "details": [],
-            "tags": []
-          }
-        ]
-      },
-      {
-        "id": "regional",
-        "title": "",
-        "note": "※すべての有段者、指導員等を掲載しているわけではありません。掲載は順不同です。",
-        "members": [
-          {
-            "id": "takahashi-tsuyoshi",
-            "image": "/assets/images/instructors/takafashiabira.jpg",
-            "name": "髙橋 剛",
-            "role": "",
-            "position": "師範",
-            "date": "",
-            "prefecture": "安平町",
-            "profession": "会社員",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "takano",
-            "link": "https://www.facebook.com/profile.php?id=100034261714273",
-            "image": "/assets/images/instructors/takano.jpg",
-            "name": "高野 均",
-            "role": "",
-            "position": "師範",
-            "date": "",
-            "prefecture": "新冠町",
-            "profession": "会社員",
             "details": [],
             "tags": []
           }
