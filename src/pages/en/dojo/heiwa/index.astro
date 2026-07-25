@@ -1,0 +1,111 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Heiwadori Branch",
+    address: "Heiwadori 3-chome-kita, Shiroishi-ku, Sapporo, Super Arcs Shiroishi Store 2F",
+    schedule: ["Thursday 16:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Heiwadori Branch, Shiroishi Ward"
+  description="Information on the Seishinkai karate dojo/class at Heiwadori, Shiroishi Ward, Sapporo. A Junior Karate class held on the 2nd floor of the Super Arcs Shiroishi Store."
+  lang="en"
+  path="/en/dojo/heiwa/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Heiwadori Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Heiwadori Karate Class, Shiroishi Ward / Seishinkai Heiwadori Branch]<br />
+        The Heiwadori Karate Class began activities in March 2010 (Heisei 22), using the 2nd-floor community space at the Big House Heiwadori store.<br />
+        Since its founding, it has run as a Junior Karate class, focused mainly on preschoolers through junior high school students.<br />
+        Because it's inside the Big House store, parents can go shopping while their children practice, which is very convenient.<br />
+        We also welcome parent-child participants and members of our Senior Class.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.<br />
+        ※Since June 2023 (Reiwa 5), the Big House Shiroishi store has been renamed the "Super Arcs Shiroishi Store."
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Heiwadori Trial Lesson Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/heiwa/Image2.jpg"
+            alt="Heiwadori Branch practice session"
+            width="335"
+            height="203"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Heiwadori Branch / Heiwadori Karate Club</h2>
+      <p>
+        ◆ Founded: March 2010 (Heisei 22)<br />
+        ◆ Founder: Kayoko Mimura (2010–2015)<br />
+        ◆ Past instructors: Hashini (2015–2018)<br />
+        ◆ Instructors: Kazuya Shima (2019–), Nobutaka Maekawa (2026–)
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/ビッグハウス+白石店/@43.0514733,141.4108608,17z/data=!4m12!1m6!3m5!1s0x0:0x1e4ad42edd7757dc!2z44Ot44O844K944OzIOacreW5jOW5s-WSjOmAmu-8k-S4geebruW6lw!8m2!3d43.054403!4d141.412858!3m4!1s0x5f0b2beabe8e7a11:0xfbbe7e25dacb240d!8m2!3d43.0523841!4d141.4118193"
+          target="_blank"
+          rel="noopener">3-1-1 Heiwadori 3-chome-kita, Shiroishi-ku, Sapporo, Super Arcs Shiroishi Store 2F</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/ビッグハウス+白石店/@43.0514733,141.4108608,17z/data=!4m12!1m6!3m5!1s0x0:0x1e4ad42edd7757dc!2z44Ot44O844K944OzIOacreW5jOW5s-WSjOmAmu-8k-S4geebruW6lw!8m2!3d43.054403!4d141.412858!3m4!1s0x5f0b2beabe8e7a11:0xfbbe7e25dacb240d!8m2!3d43.0523841!4d141.4118193"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/heiwa/2.jpg"
+            alt="Super Arcs Shiroishi Store"
+            width="306"
+            height="183"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Heiwadori Trial Lesson Application">
+          <img
+            src="/assets/images/legacy/dojo/heiwa/img12.jpg"
+            alt="Apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

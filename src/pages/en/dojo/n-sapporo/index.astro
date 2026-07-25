@@ -1,0 +1,99 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Shin-Sapporo Branch",
+    address: "Chuo 1-jo 5-chome, Atsubetsu-ku, Sapporo — Atsubetsu Ward Citizens' Center, Meeting Room",
+    schedule: ["Monday 19:00 (from July 2025)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Shin-Sapporo Branch"
+  description="Introducing the Seishinkai Karate dojo and classes at the Shin-Sapporo Branch in Atsubetsu-ku, Sapporo. Details on the Monday class schedule and venue."
+  lang="en"
+  path="/en/dojo/n-sapporo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Shin-Sapporo Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Shin-Sapporo Karate Class, Atsubetsu-ku / Seishinkai Shin-Sapporo Branch]<br />
+        The Shin-Sapporo Karate Class began its activities at the Atsubetsu Ward Citizens' Center in April 1997 (Heisei 9), making it one of the longest-running branches in Seishinkai.<br />
+        Since its founding, it started as Kids Karate and Junior Karate, and now welcomes a wide range of participants, from preschoolers to adults (parent and child).<br />
+        Parent-and-child participation is especially welcome.<br />
+        While many dojos feel like an extension of school sports-club culture, we aim for karate as health and fitness — practiced and learned with the relaxed enjoyment of a community club.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※From July 2025 (Reiwa 7), the training day changed to Monday 19:00–20:30.<br />
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Shin-Sapporo Trial Lesson & Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/n-sapporo/Image1.jpg"
+            alt="Practice session at the Shin-Sapporo Branch"
+            width="346"
+            height="155"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/n-sapporo/2.jpg"
+            alt="Atsubetsu Ward Citizens' Center"
+            width="290"
+            height="206"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Shin-Sapporo Branch</h2>
+      <p>
+        ◆Founded: April 1997 (Heisei 9)<br />
+        ◆In charge: Namikawa, Maekawa
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市+厚別区民センター/@43.036652,141.474159,15z/data=!4m2!3m1!1s0x0:0x2eeb48db85d54c24?sa=X&ved=2ahUKEwi-kKuTlaXhAhUOUN4KHZo-B5UQ_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener">Chuo 1-jo 5-chome, Atsubetsu-ku, Sapporo — Atsubetsu Ward Citizens' Center, Meeting Room</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Shin-Sapporo Trial Lesson & Enrollment Inquiry">
+          <img
+            src="/assets/images/legacy/dojo/n-sapporo/img8.jpg"
+            alt="Click here for a trial lesson"
+            width="645"
+            height="260"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/atsubetsu/">← Back to Karate Dojos & Classes in Atsubetsu Ward</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

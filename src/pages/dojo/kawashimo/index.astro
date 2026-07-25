@@ -1,0 +1,145 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "川下支部",
+    address: "白石区川下3条4丁目1-1 コープさっぽろ川下店2F",
+    pdfText: "➜ 入り口案内（PDF）",
+    pdf: "/assets/pdf/kawashimo.pdf",
+    schedule: ["土曜 10:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="白石区川下支部の空手教室"
+  description="札幌市白石区川下、コープさっぽろ川下店を会場にした清心会空手道場・教室のご案内。園児から大人までのジュニア・親子空手クラスです。"
+  lang="ja"
+  path="/dojo/kawashimo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・川下支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [川下空手教室・清心会川下支部]<br />
+        川下空手教室は、平成23年6月より東川下集会所で活動を始めました。<br />
+        令和3年2月よりコープさっぽろ川下店のサークル室に会場を変更しました。<br />
+        設立以来、ジュニア空手、親子空手として開始し、園児から大人まで幅広く活動中です。<br />
+        特に親子での参加を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は公共施設を借りていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=川下体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/images/muro.jpg"
+            alt="川下支部 設立者 室木"
+            width="124"
+            height="124"
+            loading="lazy"
+          />
+          <figcaption>設立者・室木</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kawashimo/Image1.jpg"
+            alt="川下支部の稽古風景"
+            width="270"
+            height="115"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">川下支部/川下空手倶楽部</h2>
+      <p>
+        ◆設立　平成23年(2011)6月<br />
+        ◆設立者　室木拓士(2011-)
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/コープさっぽろ+川下店/@43.0492478,141.4447141,15z/data=!4m5!3m4!1s0x0:0x1c36db1f9721dd41!8m2!3d43.0492478!4d141.4447141"
+          target="_blank"
+          rel="noopener">札幌市白石区川下3条4丁目1-1 コープさっぽろ川下店2Fサークル室</a
+        ><br />
+        建物横手に入口があります。わからない場合はコープ店内のサービスカウンターでサークル室をお聞き下さい。
+      </p>
+      <div class="detail-gallery">
+        <figure>
+          <a
+            href="/assets/pdf/kawashimo.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/images/legacy/dojo/kawashimo/img3.jpg"
+              alt="コープさっぽろ川下店(北13条通り沿い)"
+              width="253"
+              height="143"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>北13条通りに面してます</figcaption>
+        </figure>
+        <figure>
+          <a
+            href="/assets/pdf/kawashimo.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/images/legacy/dojo/kawashimo/img4.jpg"
+              alt="側面搬入口の入口"
+              width="254"
+              height="147"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>側面搬入口の横、左端のドア(店内からも入れます)</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        (R3.1まではこちらが会場でした)　<a
+          href="https://www.google.com/maps/place/札幌市役所+都市局東川下集会所/@43.049026,141.4492294,16.5z/data=!4m5!3m4!1s0x0:0x8e098462b59e971e!8m2!3d43.049414!4d141.44758"
+          target="_blank"
+          rel="noopener">札幌市白石区川下3条5丁目2-9 東川下集会所</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=川下体験申込">
+          <img
+            src="/assets/images/legacy/dojo/kawashimo/img20.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,122 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "Iwamizawa Karate Club",
+    address: "4-jo Nishi 1-chome, Iwamizawa, Iwamizawa Lifelong Learning Center",
+    schedule: ["Monday 18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Iwamizawa City"
+  description="Information on the Seishinkai karate dojo/class in Iwamizawa City. A junior-focused karate club held at the Iwamizawa Lifelong Learning Center — details on training days and venue."
+  lang="en"
+  path="/en/dojo/iwamizawa/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Iwamizawa Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Iwamizawa Karate Class / Seishinkai Iwamizawa Branch]<br />
+        The Iwamizawa Karate Class was founded in March 2005 (Heisei 17) by Shihan Ishimori, upon his retirement from Iwamizawa City Hall.<br />
+        It is a karate club focused mainly on the Junior Class.<br />
+        We especially welcome parent-child participants and members of our Senior Class.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Iwamizawa Trial Lesson Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/images/ishimori.jpg"
+            alt="Founder: Tadayuki Ishimori"
+            width="142"
+            height="142"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <a
+            href="https://www.youtube.com/watch?v=JVp0_WWPIQs"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/assets/images/legacy/dojo/iwamizawa/Image1.jpg"
+              alt="Iwamizawa Branch practice session"
+              width="256"
+              height="140"
+              loading="lazy"
+            />
+          </a>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Iwamizawa Branch / Iwamizawa Karate Club</h2>
+      <p>
+        ◆ Founded: March 2005 (Heisei 17)<br />
+        ◆ Founder: Tadayuki Ishimori
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/岩見沢市+生涯学習センターいわなび/@43.2028905,141.7662754,15z/data=!4m5!3m4!1s0x0:0x43bfeebd5643c2e9!8m2!3d43.2028905!4d141.7662754"
+          target="_blank"
+          rel="noopener">4-jo Nishi 1-chome, Iwamizawa, Iwamizawa Lifelong Learning Center</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/岩見沢市+生涯学習センターいわなび/@43.2028905,141.7662754,15z/data=!4m5!3m4!1s0x0:0x43bfeebd5643c2e9!8m2!3d43.2028905!4d141.7662754"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/iwamizawa/2.jpg"
+            alt="Iwamizawa Lifelong Learning Center"
+            width="270"
+            height="190"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Iwamizawa Trial Lesson Application">
+          <img
+            src="/assets/images/legacy/dojo/iwamizawa/img2.jpg"
+            alt="Apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/ebetsu/">← Back to the list of dojos & classes in Ebetsu, Iwamizawa & Ishikari</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,112 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Minami-Ainosato Karate Club",
+    address: "Takuhoku Ainosato District Center, Ainosato 1-jo 6-chome, Kita-ku, Sapporo",
+    schedule: ["Sunday 10:00 (10:30 in winter)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Minami-Ainosato Branch, Kita Ward"
+  description="Introducing the Minami-Ainosato Branch of Seishinkai Karate at Takuhoku Ainosato District Center in Kita Ward, Sapporo. A Headquarters-run class meeting Sundays at 10:00 AM — see training days and venue information."
+  lang="en"
+  path="/en/dojo/m-ainosato/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Minami-Ainosato Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Kita Ward Minami-Ainosato Karate Club - Seishinkai Minami-Ainosato Branch]<br />
+        The Minami-Ainosato karate class began its activities in May 2010 (Heisei 22) at Takuhoku Ainosato District Center.<br />
+        It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
+        Participation by parents and children together, as well as senior class members, is especially welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Minami-Ainosato Trial Lesson Application"
+          >office</a
+        >.<br />
+        ※As this is a Headquarters-run class, general members (black belts and brown belts) take turns leading practice.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-ainosato/Image1.jpg"
+            alt="Training session at the Minami-Ainosato Branch"
+            width="432"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-ainosato/2.jpg"
+            alt="Takuhoku Ainosato District Center"
+            width="345"
+            height="226"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-ainosato/img2.jpg"
+            alt="Co-op Sapporo Ainosato Store"
+            width="262"
+            height="163"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Minami-Ainosato Branch</h2>
+      <p>
+        ◆Founded: May 2010 (Heisei 22)<br />
+        ◆Headquarters-run class
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/拓北・あいの里地区センター/@43.155447,141.399294,15z/data=!4m2!3m1!1s0x0:0x78b61eb45497db44?sa=X&ved=2ahUKEwigkNm_3LHhAhXDdHAKHTGtA3YQ_BIwDHoECAsQCA"
+          target="_blank"
+          rel="noopener">1-1 Ainosato 1-jo 6-chome, Kita-ku, Sapporo, Takuhoku Ainosato District Center</a
+        ><br />
+        ※When the district center is unavailable: <a
+          href="https://www.google.com/maps/place/コープさっぽろ+あいの里店/@43.1576295,141.3986342,15z/data=!4m2!3m1!1s0x0:0xc9b4786745542e81?sa=X&ved=2ahUKEwjUwuXRvMHxAhVkNKYKHT-dA5oQ_BIwEnoECD8QBQ"
+          target="_blank"
+          rel="noopener">Co-op Sapporo Ainosato Store, 2F Circle Room</a
+        >
+      </p>
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Minami-Ainosato Trial Lesson Application">
+          <img
+            src="/assets/images/legacy/dojo/m-ainosato/img7.jpg"
+            alt="Apply for a Minami-Ainosato trial lesson here"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,96 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "旭川外国人限定空手クラブ",
+    address: "旭川市内(会場準備中)",
+    schedule: ["未定(メンバー募集中)"],
+  },
+];
+---
+
+<BaseLayout
+  title="旭川市外国人空手教室"
+  description="旭川在住の外国人限定の清心会空手クラブ。メンバー募集中、準備が整い次第開始予定です。Karate club for foreigners living in Asahikawa."
+  lang="ja"
+  path="/dojo/asahikawa/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・旭川外国人限定空手クラブ</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [旭川外国人限定空手教室・清心会旭川支部]　準備中<br />
+        旭川在住の外国人限定の空手クラブを準備中です。<br />
+        We are preparing a karate club for foreigners living in Asahikawa. If
+        you are interested, please let me know.<br />
+        メンバーが集まり次第、開始します。<br />
+        It will start as soon as the members get together.
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa karate"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <a href="https://www.facebook.com/profile.php?id=100004664102435">
+            <img
+              src="/assets/images/legacy/clubu/inoueshogo.jpg"
+              alt="設立者 Inoue Shogo (facebook)"
+              width="148"
+              height="148"
+              loading="lazy"
+            />
+          </a>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/asahikawa/Image2.jpg"
+            alt="旭川外国人限定空手クラブ"
+            width="353"
+            height="276"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">旭川外国人限定空手クラブ</h2>
+      <p>
+        ◆設立者　Inoue Shogo<br />
+        ◆facebook　<a
+          href="https://www.facebook.com/profile.php?id=100004664102435"
+          target="_blank"
+          rel="noopener">Inoue Shogo</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa karate">
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="体験申込・お問い合わせはこちら"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/kitahiro/">← 帯広・恵庭・旭川の空手教室一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

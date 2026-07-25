@@ -1,0 +1,120 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "澄川支部",
+    address: "豊平区平岸1条22丁目 ビックハウスエクストラ店2F",
+    schedule: ["金曜18:30(R3.4より)"],
+  },
+];
+---
+
+<BaseLayout
+  title="澄川支部(澄川西支部)の空手教室"
+  description="札幌市豊平区平岸のビックハウスエクストラ店2Fを会場とする清心会空手道場・教室のご案内。本部直轄教室、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/sumikawa-n/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・澄川西支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [澄川空手教室・清心会澄川支部]<br />
+        澄川空手教室は、平成22年9月に、ビックハウスエクストラ店2Fのコミュニティースペースを会場にして設立されました。<br />
+        ジュニアクラス中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br />
+        大型店舗の中にありますので、お子様が練習している時にお買い物ができますので、とても便利です。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        本部直轄教室のため、稽古日は金曜18:30-19:25(基本・相対/少年部・一般部)、19:30-20:00(型、他/一般及び3級以上)です。<br
+        />
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=澄川体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/sumikawa-n/Image1.jpg"
+            alt="澄川支部の稽古風景"
+            width="286"
+            height="170"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="指導 嶋"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="増田"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">澄川支部</h2>
+      <p>
+        ◆設立　平成22年(2010)9月<br />
+        ◆担当者　本部直轄
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/%E3%83%93%E3%83%83%E3%82%AF%E3%83%8F%E3%82%A6%E3%82%B9+%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E5%BA%97/@43.0147543,141.3584402,17z"
+          target="_blank"
+          rel="noopener"
+          >札幌市豊平区平岸1条22丁目2-15　ビックハウスエクストラ店2F</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/sumikawa-n/2.jpg"
+          alt="ビックハウスエクストラ店"
+          width="243"
+          height="174"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=澄川体験申込">
+          <img
+            src="/assets/images/legacy/dojo/sumikawa-n/img2.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

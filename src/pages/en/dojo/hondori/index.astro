@@ -1,0 +1,115 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Seishinkan Hondori Dojo",
+    address: "16-chome-kita Hondori, Shiroishi-ku, Sapporo (along National Route 12), Hondori Seishinkan",
+    schedule: ["Wednesday class 16:30", "Friday class 19:00", "Sunday class 17:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Hondori Branch (Seishinkan Hondori Dojo), Shiroishi Ward"
+  description="Information on the Seishinkan Hondori Dojo, along National Route 12 in Hondori, Shiroishi Ward, Sapporo. Training days and venue details for the Kids and Junior Karate classes."
+  lang="en"
+  path="/en/dojo/hondori/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Hondori Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Hondori Karate Class, Shiroishi Ward / Seishinkan Hondori Dojo]<br />
+        The Hondori Karate Class began activities in September 2011 (Heisei 23) at the Hondori Seishinkan dojo, facing National Route 12.<br />
+        It's in an easy-to-find location — next to the "Tokuju" yakiniku restaurant, with Round1 just across the street.<br />
+        Since its founding, it has run as a Kids Karate / Junior Karate class, focused mainly on preschoolers through junior high school students.<br />
+        The Wednesday and Friday classes are each capped at 15 students, and the venue is fully air-conditioned.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Hondori Trial Lesson Application"
+          >office</a
+        >.<br />
+        Start times etc. may vary slightly, so those attending a trial lesson should confirm in advance.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/hondori/2.jpg"
+            alt="Exterior of the Hondori Seishinkan"
+            width="234"
+            height="144"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/hondori/img5.jpg"
+            alt="Hondori Seishinkan (next to the Tokuju yakiniku restaurant)"
+            width="253"
+            height="144"
+            loading="lazy"
+          />
+          <figcaption>Located next to Tokuju</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Hondori Seishinkan Karate Dojo</h2>
+      <p>
+        ◆ Founded: April 2011 (Heisei 23)<br />
+        ◆ Founder: Kayoko Mimura (2011–2015)<br />
+        　Past instructors: Hashini (2015–2020), Yuka Takigami (2020–2021)<br />
+        ◆ Instructors: Kazuya Takashima (2021–), Keiji Wakabayashi (2020–), Urin Masuda (2024–)
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
+          target="_blank"
+          rel="noopener">12-41 Hondori 16-chome-kita, Shiroishi-ku, Sapporo (along National Route 12), Hondori Seishinkan</a
+        ><br />
+        About 11 min (850m) on foot from Exit 2 of Nangou 18-chome Subway Station<br />
+        3 min on foot from the JR Bus "Shimo-Shiroishi" stop; 2 min on foot from the Chuo Bus "Hondori 16-chome" stop
+      </p>
+      <p class="detail-page__note">
+        There is no parking lot on site, so please use a nearby coin-operated parking lot. There is a <a
+          href="https://www.google.com/maps/place/三井のリパーク+札幌本通１６丁目北駐車場/@43.0368883,141.433396,20.75z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.0462046!4d141.3794742!3m4!1s0x5f0b2b325dd7151b:0x67984f5e45181e18!8m2!3d43.0370477!4d141.4334782"
+          target="_blank"
+          rel="noopener">Mitsui Repark</a
+        > lot across from the outdoor parking area at Round1 (140m / about 2 min on foot from Hondori Seishinkan).
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Hondori Trial Lesson Application">
+          <img
+            src="/assets/images/legacy/dojo/hondori/img1E.jpg"
+            alt="Apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

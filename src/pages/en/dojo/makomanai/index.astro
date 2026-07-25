@@ -1,0 +1,111 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "Minami-ku Makomanai Karate Class (Seishinkai Makomanai Branch)",
+    sub: "Makomanai Karate Club",
+    address: "3-chome 1-6 Makomanai Izumimachi, Minami-ku, Sapporo, Makomanai Gorin Children's Hall",
+    schedule: ["Monday 6:30-7:30 PM"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Minami-ku Makomanai Branch"
+  description="Introducing the Seishinkai karate class at the Makomanai Gorin Children's Hall in Minami-ku, Sapporo. Focused on kids and junior karate, with training days and venue information."
+  lang="en"
+  path="/en/dojo/makomanai/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Makomanai Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Minami-ku Makomanai Karate Class - Seishinkai Makomanai Branch]<br />
+        The Makomanai Karate Class started at the Makomanai Gorin Children's Hall in 2007 (Heisei 19). In 2017 (Heisei 29), membership had declined and the class merged with the Moiwa and Tokiwa Branches, but it resumed independently in September 2019 (Reiwa 1).<br />
+        As a kids' and junior karate class, we would like to focus mainly on children from preschool age through junior high school. We are currently recruiting trial students!<br />
+        Participation by parents and children together, and by senior members, is also welcome.<br />
+        While many dojos feel like an extension of school sports clubs, we aim for members to practice and learn in a relaxed, club-like atmosphere as health-oriented, physical-education-style karate.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Makomanai Trial Lesson Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/images/oki.jpg"
+            alt="Instructor Okimura"
+            width="110"
+            height="115"
+            loading="lazy"
+          />
+          <figcaption>Instructor Okimura</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/makomanai/acs1.jpg"
+            alt="Makomanai Branch practice session"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Minami-ku Makomanai Branch / Makomanai Karate Club</h2>
+      <p>
+        ◆Founded: April 2007 (Heisei 19) (~2017)<br />
+        ◆Resumed: September 2019 (Reiwa 1)<br />
+        ◆Founder: Takushi Muroki (2007-2017)<br />
+        ◆Lead: Okimura (2019-)
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/真駒内五輪児童会館/@42.988268,141.355716,15z/data=!4m5!3m4!1s0x0:0xfab4d39ee1b5a423!8m2!3d42.988268!4d141.355716"
+          target="_blank"
+          rel="noopener">3-chome 1-6 Makomanai Izumimachi, Minami-ku, Sapporo, Makomanai Gorin Children's Hall</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/makomanai/img2.jpg"
+          alt="Makomanai Gorin Children's Hall"
+          width="254"
+          height="194"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Makomanai Trial Lesson Inquiry">
+          <img
+            src="/assets/images/legacy/dojo/makomanai/img9.jpg"
+            alt="Click here to apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/minami-kiyota/">← Back to the Kiyota Ward & Minami Ward Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

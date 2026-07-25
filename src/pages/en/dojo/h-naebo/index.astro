@@ -1,0 +1,113 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Sapponai Karate Club",
+    address: "Sapponai-Moere Community Center, Higashi-Naebo 7-jo 2-chome 2-30, Higashi-ku, Sapporo",
+    schedule: ["Wednesday 18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Sapponai Branch, Higashi Ward"
+  description="Introducing the Sapponai Karate Club, a Seishinkai Karate dojo in Higashi-Naebo, Higashi Ward, Sapporo. Training is held on Wednesdays at the Sapponai-Moere Community Center."
+  lang="en"
+  path="/en/dojo/h-naebo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-do Federation — Sapponai Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Sapponai Karate Class, Seishinkai Sapponai Branch, Higashi Ward]<br />
+        The Sapponai Karate Class has been active since July 2010 (Heisei 22), using the Sapponai-Moere Community Center as its venue.<br />
+        As a Kids Karate and Junior Karate class, we focus on students from preschool through junior high school age. We are currently recruiting trial participants!<br />
+        We also welcome participation from parents and children together, and from the Senior Class.<br />
+        While many dojos feel like an extension of school sports clubs, we aim to make karate an enjoyable, club-like experience centered on health and fitness.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※Since the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Sapponai Trial Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/h-naebo/acs1.jpg"
+            alt="Practice session at the Sapponai Branch"
+            width="315"
+            height="141"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/oikawa.jpg"
+            alt="Founder Yoshihiko Oikawa"
+            width="111"
+            height="110"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Higashi Ward — Sapponai Branch</h2>
+      <p>
+        ◆ Founded: July 2010 (Heisei 22)<br />
+        ◆ Founder: Yoshihiko Oikawa
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市東区札苗まちづくりセンター/@43.093113,141.4112141,15z/data=!4m2!3m1!1s0x0:0xa7db2c47df5aaf59?sa=X&ved=2ahUKEwjBv9Kwp7HhAhUwEqYKHS_gANUQ_BIwCnoECAoQCA"
+          target="_blank"
+          rel="noopener">Sapponai-Moere Community Center, Higashi-Naebo 7-jo 2-chome 2-30, Higashi-ku, Sapporo</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/札幌市東区札苗まちづくりセンター/@43.093113,141.4112141,15z/data=!4m2!3m1!1s0x0:0xa7db2c47df5aaf59?sa=X&ved=2ahUKEwjBv9Kwp7HhAhUwEqYKHS_gANUQ_BIwCnoECAoQCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/h-naebo/2.jpg"
+            alt="Sapponai-Moere Community Center"
+            width="176"
+            height="118"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Sapponai Trial Application">
+          <img
+            src="/assets/images/legacy/dojo/h-naebo/img1C.jpg"
+            alt="Click here to apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,121 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "丘珠空手クラブ",
+    address: "東区北35条東23丁目7-11 丘珠たから児童会館(R5.5〜)",
+    schedule: ["月曜18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="東区丘珠支部の空手教室"
+  description="札幌市東区丘珠の清心会空手道場・丘珠空手クラブのご案内。丘珠たから児童会館での月曜稽古日をご紹介します。"
+  lang="ja"
+  path="/dojo/okadama/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・丘珠支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [東区丘珠空手教室・清心会丘珠支部]<br />
+        丘珠空手教室は、平成21年3月に、丘珠たから児童会館でスタートしました。<br />
+        キッズ空手、ジュニア空手中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <p class="detail-page__note">
+        ※コロナの関係で令和2年5月より、児童会館より丘珠みなみ会館へ会場が移転しましたが、マスク自由化に伴い令和5年5月より以前の丘珠たから児童会館で活動しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=丘珠 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/okadama/Image1.jpg"
+            alt="丘珠支部の稽古風景"
+            width="272"
+            height="175"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/shima.jpg"
+            alt="指導 嶋"
+            width="100"
+            height="102"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/ooba.jpg"
+            alt="指導 大場"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">東区丘珠支部</h2>
+      <p>
+        ◆設立　平成21年(2009)3月<br />
+        ◆設立者　三村佳代子〜ハシニ<br />
+        ◆担当者　本部直轄・指導員は交代で複数名参加します
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒007-0835+北海道札幌市東区北３５条東２３丁目７−１０+札幌市丘珠たから児童会館/data=!4m2!3m1!1s0x5f0b2f2842249775:0x7e275989d3915e44?sa=X&ved=2ahUKEwiTiPCZqLHhAhXlFqYKHXuoByMQ8gEwAHoECAoQAQ"
+          target="_blank"
+          rel="noopener">札幌市東区北35条東23丁目7-10　丘珠たから児童会館</a
+        >(R5.5より)
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/okadama/2.jpg"
+          alt="丘珠たから児童会館"
+          width="272"
+          height="202"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=丘珠 体験・入会問い合わせ">
+          <img
+            src="/assets/images/legacy/images/Image2.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="260"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

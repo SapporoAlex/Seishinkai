@@ -1,0 +1,110 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "厚別南支部",
+    address: "厚別区厚別南7丁目9-1　厚別南地区センター(R3.3より)",
+    schedule: ["木曜18:00/19:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="厚別南支部の空手教室"
+  description="札幌市厚別区厚別南の清心会空手道場・教室のご案内。木曜クラスの稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/m-atsubetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・厚別南支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [厚別南空手教室・清心会厚別南支部]<br />
+        厚別南空手教室は、平成22年3月より厚別南地区センターで活動を始めました。<br />
+        設立以来、キッズ空手、ジュニア空手を中心に活動しています。<br />
+        特に親子での参加を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br />
+        また空手稽古の後、古武術健康体操クラスとなります。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※令和3年3月より会場を厚別南地区センターに変更しました(2月までは上野幌会館で活動)。<br />
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=厚別南体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-atsubetsu/Image1.jpg"
+            alt="厚別南支部の稽古風景"
+            width="346"
+            height="155"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-atsubetsu/2.jpg"
+            alt="厚別南地区センター"
+            width="346"
+            height="239"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/maekawa2.jpg"
+            alt="指導　前川信孝"
+            width="142"
+            height="142"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">厚別南支部</h2>
+      <p>
+        ◆設立　平成22年(2010)3月<br />
+        ◆歴代　大久保翼(2010-2018)、若林ゆうこ(2018-2019)、室木拓士(2019-2021)<br />
+        ◆指導　前川信孝(2021-)
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/厚別南地区センター/@43.0224987,141.4768789,17z/data=!4m8!1m2!2m1!1z5pyt5bmM5biCIOWOmuWIpeWNl-WcsOWMuuOCu-ODs-OCv-ODvA!3m4!1s0x5f0b2b51c16b22a1:0x6bc576097912517a!8m2!3d43.0223777!4d141.4790925"
+          target="_blank"
+          rel="noopener">厚別区厚別南7丁目9-1　厚別南地区センター集会室</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=厚別南体験申込">
+          <img
+            src="/assets/images/legacy/dojo/m-atsubetsu/imgB.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/atsubetsu/">← 厚別区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

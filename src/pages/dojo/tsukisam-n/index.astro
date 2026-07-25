@@ -1,0 +1,125 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "月寒支部",
+    address: "月寒西1条6丁目3-21 月寒児童会館",
+    schedule: ["土曜18:25"],
+  },
+];
+---
+
+<BaseLayout
+  title="豊平区月寒支部の空手教室"
+  description="札幌市豊平区月寒の清心会空手道場・教室のご案内。清心会でも古参の支部教室のひとつ、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/tsukisam-n/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・月寒支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [豊平区月寒空手教室・清心会月寒支部]<br />
+        月寒西空手教室は、月寒児童会館をお借りして平成22年3月より活動をしていますが、母体となる最初の月寒支部教室は月寒五区会館で1993年より開始した、清心会でも古い支部教室のひとつです。<br
+        />
+        設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
+        また親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=月寒 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/tsukisam-n/acs1.jpg"
+            alt="月寒支部の稽古風景"
+            width="315"
+            height="141"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="増田"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/sakai.jpg"
+            alt="坂井"
+            width="105"
+            height="106"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">月寒支部</h2>
+      <p>
+        ◆創設　平成5年(1993年)<br />
+        ◆設立　平成22年(2010)3月<br />
+        ◆歴代　大久保 翼<br />
+        ◆担当　本部直轄/坂井、増田
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/月寒児童会館/@43.031183,141.3936968,15z/data=!4m2!3m1!1s0x0:0xc25e49e9c2bfeaaf"
+          target="_blank"
+          rel="noopener">札幌市豊平区月寒西1条6丁目3-21　月寒児童会館</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/月寒児童会館/@43.031183,141.3936968,15z/data=!4m2!3m1!1s0x0:0xc25e49e9c2bfeaaf"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/tsukisam-n/2.jpg"
+            alt="月寒児童会館"
+            width="226"
+            height="162"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=月寒 体験・入会問い合わせ">
+          <img
+            src="/assets/images/legacy/dojo/tsukisam-n/img2.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

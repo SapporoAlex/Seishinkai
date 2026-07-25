@@ -1,0 +1,119 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Nishioka Branch",
+    address: "Sumikawa 6-jo 4-chome, Minami-ku, Co-op Nishioka 2F",
+    schedule: ["Saturday 13:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Nishioka Branch, Minami Ward"
+  description="Introducing the Seishinkai Karate dojo and class in Nishioka, Minami Ward, Sapporo. A junior-centered karate club — see training days and venue information."
+  lang="en"
+  path="/en/dojo/nishioka/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Nishioka Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Toyohira Ward Nishioka Karate Club - Seishinkai Nishioka Branch]<br />
+        The Nishioka karate class got its start in September 2010 (Heisei 22), borrowing space at the Nishioka-Fukuzumi District Center.<br />
+        Since September 2021 (Reiwa 3), the class has continued its activities at the circle room (or studio) on the 2nd floor of Co-op Sapporo Nishioka Store.<br />
+        The venue offers ample parking, and it's very convenient since children can shop while practicing.<br />
+        Since its founding, the class has centered on Junior Karate, with members ranging from preschoolers to junior high schoolers.<br />
+        Participation by parents and children together, as well as senior class members, is also welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Nishioka Trial Lesson & Enrollment Inquiry"
+          >office</a
+        >.<br />
+        Temporary venue: Nishioka-Minami Neighborhood Hall, 12-10 Nishioka 4-jo 14-chome
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/nishioka/acs1.jpg"
+            alt="Training session at the Nishioka Branch"
+            width="301"
+            height="179"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/oki.jpg"
+            alt="Okimura"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/sakai.jpg"
+            alt="Assistant Instructor Sakai"
+            width="104"
+            height="104"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Nishioka Branch</h2>
+      <p>
+        ◆Founded: September 2010 (Heisei 22)<br />
+        ◆Instructor: Okimura
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/コープさっぽろ+西岡店/@43.01181,141.374177,15z/data=!4m5!3m4!1s0x0:0xb3f5fd33efd84ec0!8m2!3d43.01181!4d141.374177"
+          target="_blank"
+          rel="noopener">1-1 Sumikawa 6-jo 4-chome, Minami-ku, Sapporo, Co-op Nishioka 2F Circle Room / Studio</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/nishioka/img3.jpg"
+          alt="Co-op Sapporo Nishioka Store"
+          width="257"
+          height="129"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Nishioka Trial Lesson & Enrollment Inquiry">
+          <img
+            src="/assets/images/legacy/dojo/nishioka/img2.jpg"
+            alt="Apply for a trial lesson here"
+            width="645"
+            height="260"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

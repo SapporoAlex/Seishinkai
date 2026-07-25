@@ -1,0 +1,99 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Ishikari Hanakawa-Kita Karate Club",
+    address: "※Merged into the Ryokuentai Branch as of November 2022 (Reiwa 4)",
+    schedule: [],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Hanakawa-Kita, Ishikari City (Merged)"
+  description="History of the Seishinkai karate class in Hanakawa-Kita, Ishikari City. In November 2022 (Reiwa 4), it was merged into the Ryokuentai Branch (Ishikari Ryokuentai Karate Club)."
+  lang="en"
+  path="/en/dojo/hana-k/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Hanakawa Branch (Hanakawa-Kita)</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Ishikari Hanakawa Karate Class / Seishinkai Hanakawa Branch]<br />
+        The Hanakawa-Kita Karate Class was founded in November 2011 (Heisei 23), using the Hanakawa-Kita Community Center as its venue.<br />
+        It is a karate club focused mainly on the Junior Class.<br />
+        We especially welcome parent-child participants and members of our Senior Class.<br />
+        As of November 2022 (Reiwa 4), it has been merged into the Ryokuentai Branch.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ※Since November 2022 (Reiwa 4), the training venue and schedule have been merged into the <a
+          href="/en/dojo/ryoku/">Ishikari Ryokuentai Karate Club (Hanakawa-Higashi & Ryokuentai Branch)</a
+        >. Classes are now held Saturdays from 15:30, at the Ryokuentai Green Hall.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/hana-k/Image1.jpg"
+            alt="Hanakawa-Kita Branch practice session (before the merger)"
+            width="236"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="Instructor: Masuda"
+            width="87"
+            height="87"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/takashima.jpg"
+            alt="Lead Instructor: Shima"
+            width="123"
+            height="123"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Hanakawa-Kita Branch (History)</h2>
+      <p>
+        ◆ Founded: November 2011 (Heisei 23)<br />
+        ◆ Instructors: Masuda, Shima (Lead Instructor)<br />
+        ◆ Merger: Merged into the Ryokuentai Branch (Ishikari Ryokuentai Karate Club) in November 2022 (Reiwa 4)
+      </p>
+
+      <h2 class="detail-page__heading">Former Venue: Hanakawa-Kita Community Center</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/石狩市立花川北コミュニティセンター/@43.1645776,141.3090072,15z/data=!4m2!3m1!1s0x0:0x85c55b058693cc05?sa=X&ved=2ahUKEwiF6uat0a7hAhVGjLwKHWchCFcQ_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener">3-2 Hanakawa-Kita, Ishikari, Hanakawa-Kita Community Center</a
+        >
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/ebetsu/">← Back to the list of dojos & classes in Ebetsu, Iwamizawa & Ishikari</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

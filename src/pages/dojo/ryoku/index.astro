@@ -1,0 +1,104 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "石狩緑苑台空手クラブ",
+    address: "石狩市緑苑台東2条1丁目 緑苑台グリーン会館",
+    schedule: ["土曜15:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="石狩市緑苑台空手教室"
+  description="石狩市緑苑台の清心会空手道場・教室のご案内。緑苑台グリーン会館を会場にしたジュニア空手・親子空手中心の空手クラブ、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/ryoku/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・花川東・緑苑台支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [石狩市花川東空手教室・清心会緑苑台支部]<br />
+        花川東・緑苑台空手教室は、平成30年3月に、緑苑台グリーン会館を会場にして設立されました。<br />
+        ジュニア空手と親子空手中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=緑苑台体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/ryoku/Image1.jpg"
+            alt="緑苑台支部の稽古風景"
+            width="288"
+            height="170"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">花川東・緑苑台支部</h2>
+      <p>
+        ◆設立　平成30年(2018)3月<br />
+        ◆設立者　室木拓士
+      </p>
+
+      <h2 class="detail-page__heading">会場　緑苑台グリーン会館</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
+          target="_blank"
+          rel="noopener">石狩市緑苑台東2条1丁目 緑苑台グリーン会館</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/ryoku/2.jpg"
+            alt="緑苑台グリーン会館"
+            width="257"
+            height="182"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=緑苑台体験申込">
+          <img
+            src="/assets/images/legacy/dojo/ryoku/img5.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

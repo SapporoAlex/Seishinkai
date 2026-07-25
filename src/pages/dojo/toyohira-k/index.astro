@@ -1,0 +1,111 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "豊平公園支部",
+    address: "豊平区豊平8条11丁目 豊平若者活動センター",
+    schedule: ["金曜16:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="豊平区豊平公園支部の空手教室"
+  description="札幌市豊平区の豊平若者活動センターを会場とする清心会空手道場・教室のご案内。ジュニアクラス中心の空手クラブ、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/toyohira-k/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・豊平公園支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [豊平公園空手教室・清心会豊平公園支部]<br />
+        豊平公園空手教室は、豊平若者活動センターをお借りして平成27年6月より活動を始めました。<br />
+        設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
+        また親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br />
+        ※令和7年7月〜10月末まで若者活動センターが改装工事で休館となるため、その期間は<a
+          href="/dojo/hq/">本部</a
+        >道場で稽古を実施します。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=豊平公園支部 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/toyohira-k/img8.jpg"
+            alt="豊平公園支部の稽古風景"
+            width="282"
+            height="162"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/oki.jpg"
+            alt="担当 島"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">豊平公園支部</h2>
+      <p>
+        ◆設立　平成27年(2015)6月<br />
+        ◆設立者　沖村小織(2015-2022)<br />
+        ◆担当　島 冬樹(2022-)
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市豊平若者活動センター/@43.0430538,141.3731148,15z/data=!4m2!3m1!1s0x0:0x8c7de2009ed78c7a"
+          target="_blank"
+          rel="noopener">豊平8条11丁目3-5　豊平若者活動センター</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/toyohira-k/imgC.jpg"
+          alt="豊平若者活動センター"
+          width="236"
+          height="176"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=豊平公園支部 体験・入会問い合わせ">
+          <img
+            src="/assets/images/legacy/dojo/toyohira-k/img4.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="271"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

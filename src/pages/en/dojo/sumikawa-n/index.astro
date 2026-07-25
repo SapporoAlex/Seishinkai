@@ -1,0 +1,119 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Sumikawa Branch",
+    address: "Hiragishi 1-jo 22-chome, Toyohira-ku, Big House Extra Store 2F",
+    schedule: ["Friday 18:30 (from April 2021)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Sumikawa Branch (Sumikawa-Nishi Branch)"
+  description="Introducing the Seishinkai Karate dojo and class held at Big House Extra Store 2F in Hiragishi, Toyohira Ward, Sapporo. A headquarters-run class — see training days and venue information."
+  lang="en"
+  path="/en/dojo/sumikawa-n/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Sumikawa-Nishi Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Sumikawa Karate Club - Seishinkai Sumikawa Branch]<br />
+        The Sumikawa karate class was founded in September 2010 (Heisei 22), at the community space on the 2nd floor of Big House Extra Store.<br />
+        It is a junior-centered karate club.<br />
+        Participation by parents and children together, as well as senior class members, is especially welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.<br />
+        Since it's located inside a large retail store, it's very convenient — you can shop while your child practices.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        As this is a headquarters-run class, training is held on Fridays from 18:30–19:25 (basics & pair drills / Youth & General Divisions) and 19:30–20:00 (kata and other training / General Division and 3rd kyu and above).<br />
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Sumikawa Trial Lesson Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/sumikawa-n/Image1.jpg"
+            alt="Training session at the Sumikawa Branch"
+            width="286"
+            height="170"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="Instructor Shima"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="Masuda"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Sumikawa Branch</h2>
+      <p>
+        ◆Founded: September 2010 (Heisei 22)<br />
+        ◆Instructor: Headquarters-run (directly supervised by HQ)
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/%E3%83%93%E3%83%83%E3%82%AF%E3%83%8F%E3%82%A6%E3%82%B9+%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E5%BA%97/@43.0147543,141.3584402,17z"
+          target="_blank"
+          rel="noopener"
+          >2-15 Hiragishi 1-jo 22-chome, Toyohira-ku, Sapporo, Big House Extra Store 2F</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/sumikawa-n/2.jpg"
+          alt="Big House Extra Store"
+          width="243"
+          height="174"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Sumikawa Trial Lesson Application">
+          <img
+            src="/assets/images/legacy/dojo/sumikawa-n/img2.jpg"
+            alt="Apply for a trial lesson here"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

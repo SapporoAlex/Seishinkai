@@ -1,0 +1,116 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "野幌空手クラブ",
+    address: "江別市野幌屯田町23-6 杜の台記念会館",
+    schedule: ["水曜18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="江別市野幌空手教室"
+  description="江別市野幌の清心会空手道場・教室のご案内。杜の台記念会館を会場にしたジュニアクラス中心の空手クラブ、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/nop/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・野幌支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [江別市野幌空手教室・清心会野幌支部]<br />
+        野幌空手教室は、平成19年10月に、江別市三番通りに杜の台記念会館でスタートしました。<br />
+        ジュニアクラス中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=野幌体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/shima.jpg"
+            alt="指導 島"
+            width="126"
+            height="126"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/nop/Image1.jpg"
+            alt="野幌支部の稽古風景"
+            width="243"
+            height="122"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">江別市野幌支部</h2>
+      <p>
+        ◆設立　平成19年(2007)10月<br />
+        ◆設立者　猪又敬之<br />
+        ◆歴代　大久保翼、嶋和也、他、沖村小織<br />
+        ◆担当者　島 冬樹
+      </p>
+
+      <h2 class="detail-page__heading">会場　江別市野幌空手道場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒069-0803+北海道江別市野幌屯田町２３−６/@43.0969071,141.5075755,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2dee41c4efab:0x240f6398f59169be!8m2!3d43.0969071!4d141.5097642"
+          target="_blank"
+          rel="noopener">江別市野幌屯田町23-6　杜の台記念会館2F</a
+        ><br />
+        三番通に面しています
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/〒069-0803+北海道江別市野幌屯田町２３−６/@43.0969071,141.5075755,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2dee41c4efab:0x240f6398f59169be!8m2!3d43.0969071!4d141.5097642"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/nop/2.jpg"
+            alt="杜の台記念会館"
+            width="192"
+            height="100"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=野幌体験申込">
+          <img
+            src="/assets/images/legacy/dojo/nop/img3.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

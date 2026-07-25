@@ -1,0 +1,133 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Kiyota-ku Satozuka Karate Class (Seishinkai Satozuka Branch)",
+    address: "10-chome 4-17 Satozuka Midorigaoka, Kiyota-ku, Sapporo, Satozuka Midorigaoka Neighborhood Hall",
+    schedule: ["Friday 6:30 PM (winter 6:45 PM)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Kiyota-ku Satozuka Branch"
+  description="Introducing the Seishinkai karate class at the Satozuka Midorigaoka Neighborhood Hall in Kiyota-ku, Sapporo. Focused on kids and junior karate, with training days and venue information."
+  lang="en"
+  path="/en/dojo/satozuka/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Satozuka Karate Class</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Kiyota-ku Satozuka Karate Class - Seishinkai Satozuka Branch]<br />
+        The Satozuka Karate Class started on the 2nd floor of the Daiho-yu Satozuka store in February 1999 (Heisei 11).<br />
+        It later moved through the Satozuka Hall and the Satozuka District Center before settling at its current venue, the Midorigaoka Neighborhood Hall.<br />
+        The class is centered on the kids' and junior classes. Participation by parents and children together, and by senior members, is also welcome.<br />
+        While many dojos feel like an extension of school sports clubs, we aim for members to practice and learn in a relaxed, club-like atmosphere as health-oriented, physical-education-style karate.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Satozuka Trial Lesson Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/satozuka/Image1.jpg"
+            alt="Satozuka Karate Class practice session"
+            width="247"
+            height="149"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="Satozuka Karate Class practice session"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Satozuka Karate Class (Satozuka Branch)</h2>
+      <p>
+        ◆Founded: February 1999 (Heisei 11)<br />
+        ◆Founder: Katsumi Okubo<br />
+        ◆Lead: Directly run by Headquarters<br />
+        ※Multiple instructors take turns leading the class
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/shima.jpg"
+            alt="Instructor Shima"
+            width="103"
+            height="104"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="Instructor Masuda"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/noro.jpg"
+            alt="Instructor Noro"
+            width="105"
+            height="106"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/里塚緑ヶ丘町内会館/@42.9895177,141.4727112,15z/data=!4m2!3m1!1s0x0:0x56db9b692a940c94?sa=X&ved=2ahUKEwjps-jkmLHhAhUQBKYKHZFyDqEQ_BIwCnoECAsQCA"
+          target="_blank"
+          rel="noopener">10-chome 4-17 Satozuka Midorigaoka, Kiyota-ku, Sapporo, Satozuka Midorigaoka Neighborhood Hall</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/里塚緑ヶ丘町内会館/@42.9895177,141.4727112,15z/data=!4m2!3m1!1s0x0:0x56db9b692a940c94?sa=X&ved=2ahUKEwjps-jkmLHhAhUQBKYKHZFyDqEQ_BIwCnoECAsQCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/satozuka/2.jpg"
+            alt="Satozuka Midorigaoka Neighborhood Hall"
+            width="258"
+            height="192"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/minami-kiyota/">← Back to the Kiyota Ward & Minami Ward Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

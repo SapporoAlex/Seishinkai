@@ -1,0 +1,110 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Atsubetsu-minami Branch",
+    address: "Atsubetsu-minami 7-chome 9-1, Atsubetsu-ku, Sapporo — Atsubetsu-minami District Center (since March 2021)",
+    schedule: ["Thursday 18:00/19:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Atsubetsu-minami Branch"
+  description="Introducing the Seishinkai Karate dojo and classes in Atsubetsu-minami, Atsubetsu-ku, Sapporo. Details on the Thursday class schedule and venue."
+  lang="en"
+  path="/en/dojo/m-atsubetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Atsubetsu-minami Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Atsubetsu-minami Karate Class / Seishinkai Atsubetsu-minami Branch]<br />
+        The Atsubetsu-minami Karate Class began its activities at the Atsubetsu-minami District Center in March 2010 (Heisei 22).<br />
+        Since its founding, it has centered on Kids Karate and Junior Karate.<br />
+        Parent-and-child participation is especially welcome.<br />
+        While many dojos feel like an extension of school sports-club culture, we aim for karate as health and fitness — practiced and learned with the relaxed enjoyment of a community club.<br />
+        A traditional martial arts health exercise class also follows karate practice.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※From March 2021 (Reiwa 3), the venue changed to the Atsubetsu-minami District Center (through February, activities were held at the Kaminopporo Hall).<br />
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Atsubetsu-minami Trial Lesson Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-atsubetsu/Image1.jpg"
+            alt="Practice session at the Atsubetsu-minami Branch"
+            width="346"
+            height="155"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-atsubetsu/2.jpg"
+            alt="Atsubetsu-minami District Center"
+            width="346"
+            height="239"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/maekawa2.jpg"
+            alt="Instructor: Nobutaka Maekawa"
+            width="142"
+            height="142"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Atsubetsu-minami Branch</h2>
+      <p>
+        ◆Founded: March 2010 (Heisei 22)<br />
+        ◆Past instructors: Tsubasa Okubo (2010–2018), Yuko Wakabayashi (2018–2019), Takushi Muroki (2019–2021)<br />
+        ◆Instructor: Nobutaka Maekawa (2021–)
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/厚別南地区センター/@43.0224987,141.4768789,17z/data=!4m8!1m2!2m1!1z5pyt5bmM5biCIOWOmuWIpeWNl-WcsOWMuuOCu-ODs-OCv-ODvA!3m4!1s0x5f0b2b51c16b22a1:0x6bc576097912517a!8m2!3d43.0223777!4d141.4790925"
+          target="_blank"
+          rel="noopener">Atsubetsu-minami 7-chome 9-1, Atsubetsu-ku, Sapporo — Atsubetsu-minami District Center, Meeting Room</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Atsubetsu-minami Trial Lesson Application">
+          <img
+            src="/assets/images/legacy/dojo/m-atsubetsu/imgB.jpg"
+            alt="Click here for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/atsubetsu/">← Back to Karate Dojos & Classes in Atsubetsu Ward</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

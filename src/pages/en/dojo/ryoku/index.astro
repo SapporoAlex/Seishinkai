@@ -1,0 +1,107 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "Ishikari Ryokuentai Karate Club",
+    address: "Ryokuentai Higashi 2-jo 1-chome, Ishikari, Ryokuentai Green Hall",
+    schedule: ["Saturday 15:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Ryokuentai, Ishikari City"
+  description="Information on the Seishinkai karate dojo/class in Ryokuentai, Ishikari City. A karate club focused on Junior Karate and Parent-Child Karate, held at the Ryokuentai Green Hall — details on training days and venue."
+  lang="en"
+  path="/en/dojo/ryoku/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Hanakawa-Higashi & Ryokuentai Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Ishikari Hanakawa-Higashi Karate Class / Seishinkai Ryokuentai Branch]<br />
+        The Hanakawa-Higashi & Ryokuentai Karate Class was founded in March 2018 (Heisei 30), using the Ryokuentai Green Hall as its venue.<br />
+        It is a karate club focused mainly on Junior Karate and Parent-Child Karate.<br />
+        We especially welcome parent-child participants and members of our Senior Class.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Ryokuentai Trial Lesson Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/ryoku/Image1.jpg"
+            alt="Ryokuentai Branch practice session"
+            width="288"
+            height="170"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Hanakawa-Higashi & Ryokuentai Branch</h2>
+      <p>
+        ◆ Founded: March 2018 (Heisei 30)<br />
+        ◆ Founder: Takushi Muroki
+      </p>
+
+      <h2 class="detail-page__heading">Venue: Ryokuentai Green Hall</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
+          target="_blank"
+          rel="noopener">Ryokuentai Higashi 2-jo 1-chome, Ishikari, Ryokuentai Green Hall</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/ryoku/2.jpg"
+            alt="Ryokuentai Green Hall"
+            width="257"
+            height="182"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Ryokuentai Trial Lesson Application">
+          <img
+            src="/assets/images/legacy/dojo/ryoku/img5.jpg"
+            alt="Apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/ebetsu/">← Back to the list of dojos & classes in Ebetsu, Iwamizawa & Ishikari</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,113 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "篠路空手クラブ",
+    address: "北区篠路3条8丁目 篠路コミニティセンター2F",
+    schedule: ["土曜13:30", "木曜15:50"],
+  },
+];
+---
+
+<BaseLayout
+  title="札幌市北区篠路支部の空手教室"
+  description="札幌市北区篠路の清心会空手道場・教室のご案内。篠路コミニティセンターを会場に土曜・木曜稽古を行うキッズ・ジュニア空手クラブです。"
+  lang="ja"
+  path="/dojo/shinoro/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・篠路支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [北区篠路空手教室・清心会篠路支部]<br />
+        篠路空手教室は、平成20年7月に篠路コミニティセンターをお借りしてスタートした支部です。<br />
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br />
+        令和7年4月より、木曜夕方よりキッズクラスを新設しました。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※木曜クラス15:50-16:50、土曜クラス13:30-14:30。<br />
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=篠路支部 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/shinoro/Image1.jpg"
+            alt="篠路支部の稽古風景"
+            width="353"
+            height="191"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="土曜日指導担当"
+            width="1147"
+            height="1147"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/manaya.jpg"
+            alt="木曜日指導担当"
+            width="142"
+            height="142"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">篠路支部</h2>
+      <p>
+        ◆設立　平成20年(2008)7月<br />
+        ◆設立者　室木拓士<br />
+        ◆担当　本部直轄-嶋
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
+          target="_blank"
+          rel="noopener">札幌市北区篠路3条8丁目11-1　篠路コミニティセンター2F</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/shinoro/2.jpg"
+            alt="篠路コミニティセンター"
+            width="282"
+            height="245"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

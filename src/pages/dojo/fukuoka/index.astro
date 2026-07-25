@@ -1,0 +1,142 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "福岡空手教室(清心会福岡支部)",
+    address: "福岡県福岡市　笹丘公民館",
+    schedule: ["稽古日は要問合せ"],
+  },
+];
+---
+
+<BaseLayout
+  title="福岡支部の空手教室(活動終了)"
+  description="福岡県福岡市・笹丘公民館を会場とした清心会福岡支部のご案内。平成25年4月開設、令和3年3月に活動終了しました。"
+  lang="ja"
+  path="/dojo/fukuoka/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・福岡支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [福岡空手教室・清心会福岡支部]<br />
+        福岡空手教室は、平成25年4月に、笹丘公民館を会場としてスタートしました。<br />
+        長らく皆様の御協力に感謝致します。<br />
+        令和3年3月を持ちまして活動が終了となります。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※日中は仕事中なので電話に出れない場合があります。Facebookメッセンジャーなどをご利用下さい。<br />
+        ※本ページは活動終了時点の情報を旧サイトより移設したものです。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <a href="https://www.facebook.com/atsushi.saegusa1" target="_blank" rel="noopener">
+            <img
+              src="/assets/images/legacy/images/sae.jpg"
+              alt="設立者 三枝篤史"
+              width="111"
+              height="108"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>設立者 三枝篤史</figcaption>
+        </figure>
+        <figure>
+          <a
+            href="http://gakushu.city.fukuoka.lg.jp/circle/detail.php?login_id=00002296"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/assets/images/legacy/dojo/fukuoka/Image1.jpg"
+              alt="福岡支部の稽古風景"
+              width="334"
+              height="191"
+              loading="lazy"
+            />
+          </a>
+        </figure>
+      </div>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fukuoka/Image5.jpg"
+            alt="福岡支部の稽古風景"
+            width="169"
+            height="137"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fukuoka/Image6.jpg"
+            alt="福岡支部の稽古風景"
+            width="187"
+            height="131"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fukuoka/Image7.jpg"
+            alt="福岡支部の稽古風景"
+            width="197"
+            height="132"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">清心流福岡支部</h2>
+      <p>
+        ◆設立　平成25年(2013)4月<br />
+        ◆設立者　三枝篤史<br />
+        　　　　　(勤務先：<a
+          href="http://www.saegusayakuhin-q.co.jp/"
+          target="_blank"
+          rel="noopener">サエグサ薬品九州</a
+        >)
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener">福岡県福岡市　笹丘公民館</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/fukuoka/2.jpg"
+            alt="笹丘公民館"
+            width="250"
+            height="126"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/naichi/">← 静岡県・愛知県・千葉県の空手道場の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

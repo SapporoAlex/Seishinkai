@@ -1,0 +1,120 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Kita-Shiroishi Branch (Kitago)",
+    address: "Kitago 3-jo 7-chome, Shiroishi-ku, Sapporo, Kita-Shiroishi District Center",
+    schedule: ["Tuesday class 18:30", "Friday class 15:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Kita-Shiroishi Branch (Kitago), Shiroishi Ward"
+  description="Information on the Seishinkai karate dojo/class at Kitago, Shiroishi Ward, Sapporo, held at the Kita-Shiroishi District Center. Training days for the Junior Karate class."
+  lang="en"
+  path="/en/dojo/kitashiroishi/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Kita-Shiroishi Branch (Kitago)</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Kita-Shiroishi Karate Class, Shiroishi Ward / Seishinkai Kita-Shiroishi / Kitago Branch]<br />
+        The Kita-Shiroishi Karate Class started in June 1998 (Heisei 10) as the Kitago Branch, at the Kitago Community Hall.<br />
+        It later moved its venue to the current Kita-Shiroishi District Center, where it continues its activities today.<br />
+        Since its founding, it has run as a Junior Karate class, focused mainly on preschoolers through junior high school students.<br />
+        We also welcome parent-child participants and members of our Senior Class.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        Tuesday class 18:30–19:30 (Instructor: Namikawa) — elementary school through adult<br />
+        Friday class 15:30–16:30 (Instructors: Takashima, Saito) — preschool, elementary school, and parent-child<br />
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Kitago Trial Lesson & Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kitashiroishi/Image1.jpg"
+            alt="Kita-Shiroishi Branch practice session (Tuesday class)"
+            width="276"
+            height="101"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kitashiroishi/Image2.jpg"
+            alt="Kita-Shiroishi Branch practice session (Friday class)"
+            width="271"
+            height="103"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Kitago Branch</h2>
+      <p>
+        ◆ Founded: June 1998 (Heisei 10)<br />
+        ◆ Founders: Katsumi Okubo, Toshinobu Inuura<br />
+        ◆ Instructors: Namikawa, Shima, and several others teaching on a rotating basis
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
+          target="_blank"
+          rel="noopener">9-20 Kitago 3-jo 7-chome, Shiroishi-ku, Sapporo, Kita-Shiroishi District Center</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/kitashiroishi/2.jpg"
+            alt="Kita-Shiroishi District Center"
+            width="247"
+            height="130"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Kitago Trial Lesson & Enrollment Inquiry">
+          <img
+            src="/assets/images/legacy/dojo/kitashiroishi/img4.jpg"
+            alt="Apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

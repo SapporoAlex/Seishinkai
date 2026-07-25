@@ -1,0 +1,92 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "□",
+    name: "三澤寺道場",
+    address: "静岡県富士宮市大鹿窪332　三澤寺",
+    schedule: ["水曜日"],
+    link: "/dojo/shizuoka/",
+  },
+  {
+    no: 2,
+    marker: "□",
+    name: "福岡支部",
+    address: "福岡市(R3.3を持ちまして活動を終了しました)",
+    schedule: [],
+    link: "/dojo/fukuoka/",
+  },
+  {
+    no: 3,
+    marker: "◇",
+    name: "千葉無琉塾",
+    address: "千葉市稲毛区小中台3-9-4",
+    schedule: ["TEL/FAX.043-304-5991"],
+    link: "https://muryukun.wixsite.com/muryukun/about-us",
+  },
+  {
+    no: 4,
+    marker: "□",
+    name: "豊田同好会",
+    address: "愛知県",
+    schedule: ["居合/杖術/護身術"],
+    link: "http://www.nobunao9584.shop/",
+  },
+];
+---
+
+<BaseLayout
+  title="静岡県・愛知県・千葉県の空手道場"
+  description="静岡県富士宮市・愛知県・千葉県の清心会加盟・提携道場一覧。三澤寺道場(静岡)、千葉無琉塾、豊田同好会(愛知)のご案内です。"
+  lang="ja"
+  path="/dojo/naichi/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">静岡県・愛知県・千葉県の空手道場の一覧</h1>
+      </div>
+      <p class="detail-page__contact">
+        お問い合わせは　TEL.011-300-0048(平日13:00-16:00)
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        □自主管理道場=直接、管理担当者へ<br />
+        ◇加盟道場
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/DSCN1929.jpg"
+            alt="三澤寺道場-遠征2017"
+            width="284"
+            height="213"
+            loading="lazy"
+          />
+          <figcaption>三澤寺道場-遠征2017</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/DSC_4961.jpg"
+            alt="三澤寺道場-遠征2016"
+            width="292"
+            height="212"
+            loading="lazy"
+          />
+          <figcaption>三澤寺道場-遠征2016</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

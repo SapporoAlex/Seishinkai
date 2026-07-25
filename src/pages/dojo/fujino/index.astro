@@ -1,0 +1,129 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "南区藤野空手教室(清心会藤野支部)",
+    sub: "藤野空手倶楽部",
+    address: "札幌市南区藤野2条7丁目2-1　藤野地区センター",
+    schedule: ["土曜10:00-11:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="南区藤野支部の空手教室"
+  description="札幌市南区藤野地区センターの清心会空手教室のご案内。キッズ・ジュニア空手中心、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/fujino/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・藤野支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [南区藤野空手教室・清心会藤野支部]<br />
+        藤野空手教室は、藤野地区センターをお借りして平成23年3月より活動しています。<br />
+        キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと思います。体験者募集中です!<br />
+        また親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=藤野 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fujino/acs1.jpg"
+            alt="藤野支部の稽古風景"
+            width="319"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">南区藤野支部/藤野空手倶楽部</h2>
+      <p>
+        ◆設立　平成23年(2011)3月<br />
+        ◆歴代　小谷野(2011-2015)<br />
+        　　　　ハシニ(2015-2016)<br />
+        　　　　嶋和也(2016-2019)<br />
+        　　　　兵藤伸之(2019-2022)
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="指導 増田"
+            width="96"
+            height="97"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/okimura.jpg"
+            alt="指導 沖村"
+            width="96"
+            height="96"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
+          target="_blank"
+          rel="noopener">札幌市南区藤野2条7丁目2-1　藤野地区センター</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/fujino/2.jpg"
+            alt="藤野地区センター"
+            width="243"
+            height="192"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=藤野 体験・入会問い合わせ">
+          <img
+            src="/assets/images/legacy/images/Image2.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="260"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

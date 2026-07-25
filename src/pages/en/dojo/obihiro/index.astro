@@ -1,0 +1,110 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "□",
+    name: "Obihiro City Karate Club",
+    address: "Nishi 2-jo Minami 24-chome, Obihiro City (Tetsunan area)",
+    schedule: ["Saturday 18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Obihiro City"
+  description="Information about the Seishinkai Karate dojo/class held at the Tetsunan District Community Center, Nishi 2-jo Minami 24-chome, Obihiro City. A kids- and junior-focused karate club — find training days and venue details here."
+  lang="en"
+  path="/en/dojo/obihiro/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Obihiro Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Obihiro City Karate Class — Seishinkai Obihiro Branch]<br />
+        The Obihiro karate class began in earnest in April 2017 (Heisei 29).<br />
+        The venue is the Tetsunan District Community Center.<br />
+        The class focuses mainly on Kids and Junior classes. Parent-child participation and Senior Class members are also welcome.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ● Training days: Saturday 18:45–20:00<br />
+        090-6692-6573 (Kudo) — please call after 5:00 PM, as we work during the day.<br />
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Obihiro Trial Lesson & Membership Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/images/kudo.jpg"
+            alt="In charge: Kudo"
+            width="328"
+            height="328"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/obihiro/Image1.jpg"
+            alt="Obihiro Branch practice session"
+            width="352"
+            height="159"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/obihiro/2.jpg"
+            alt="Tetsunan District Community Center"
+            width="180"
+            height="135"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Obihiro Branch</h2>
+      <p>
+        ◆ Founded: April 2017 (Heisei 29)<br />
+        ◆ Founder: Tetsuhiro Kudo
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/d/viewer?hl=ja&ll=42.906342976232445%2C143.20808862938247&z=16&mid=1mNwLkO77ohCM0yk0rd14mWCBM33D_ais"
+          target="_blank"
+          rel="noopener">Nishi 2-jo Minami 24-chome, Obihiro City, Tetsunan District Community Center</a
+        >
+      </p>
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/images/Image1.jpg"
+          alt="Practice session at the Tetsunan District Community Center"
+          width="649"
+          height="196"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/kitahiro/">← Back to the list of dojos & classes in Obihiro, Eniwa & Asahikawa</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

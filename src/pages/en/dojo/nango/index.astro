@@ -1,0 +1,98 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "●",
+    name: "Nango Branch (Lucy Cultural School)",
+    address: "Sakaedori 18-chome, Shiroishi-ku, Sapporo, Coop Sapporo (Lucy Cultural School)",
+    schedule: ["Wednesday 16:00–17:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Nango Branch (Lucy Cultural School), Shiroishi Ward"
+  description="Information on the Seishinkai Nango Branch Junior and Parent-Child Karate class, held inside the Coop Sapporo Lucy Cultural School in Sakaedori, Shiroishi Ward, Sapporo."
+  lang="en"
+  path="/en/dojo/nango/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Nango Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Nango LUCY Karate Class, Shiroishi Ward / Seishinkai Nango Branch]<br />
+        The Nango LUCY Karate Class held trial sessions starting in June 2018 (Heisei 30), and began full-scale activities in July of the same year.<br />
+        The Nango Branch is a Junior Karate / Parent-Child Karate class held inside the Coop Sapporo "Lucy Cultural School."<br />
+        Because it's inside Coop Sapporo, parents can shop while their children practice, which is very convenient.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ● As this is an instructor-dispatch class, please direct inquiries to the Lucy Cultural School (TEL 011-851-8760 / FAX 011-851-8765) or the Seishinkai office (TEL 011-300-0048).
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/nango/Image1.jpg"
+            alt="Nango Branch practice session"
+            width="282"
+            height="180"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Seishinkai Lucy Nango Branch</h2>
+      <p>
+        ◆ Founded: June 2018 (Heisei 30)<br />
+        ◆ Past instructors: Muroki, Takigami, Wakabayashi<br />
+        ◆ Instructor: Muroki
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/コープさっぽろ+ルーシー文化教室/@43.028082,141.434141,15z/data=!4m2!3m1!1s0x0:0x1164e7b39eeedaf9"
+          target="_blank"
+          rel="noopener">5-35 Sakaedori 18-chome, Shiroishi-ku, Sapporo, Coop Sapporo Lucy Cultural School</a
+        > (near Nangou Subway Station)<br />
+        For details and to register for the class, please see the <a
+          href="https://life-culture.sapporo.coop/culture/course/detail.html/?course_id=795"
+          target="_blank"
+          rel="noopener">Coop Sapporo Lucy Cultural School website</a
+        >.
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/コープさっぽろ+ルーシー文化教室/@43.028082,141.434141,15z/data=!4m2!3m1!1s0x0:0x1164e7b39eeedaf9"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/nango/2.jpg"
+            alt="Coop Sapporo Lucy Cultural School"
+            width="651"
+            height="287"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

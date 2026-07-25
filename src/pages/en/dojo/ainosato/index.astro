@@ -1,0 +1,106 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Ainosato Karate Club",
+    address: "Takuhoku Kaikan, Ainosato 4-jo 6-chome, Kita-ku, Sapporo",
+    schedule: ["Thursday 18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Ainosato Branch, Kita Ward"
+  description="Introducing the Ainosato Branch of Seishinkai Karate at Takuhoku Kaikan in Kita Ward, Sapporo. A Kids & Junior karate class meeting Thursdays at 6:30 PM — see training days and venue information."
+  lang="en"
+  path="/en/dojo/ainosato/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Ainosato Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Kita Ward Ainosato Karate Club - Seishinkai Ainosato Branch]<br />
+        The Ainosato karate class has been active since March 2009 (Heisei 21).<br />
+        It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
+        Participation by parents and children together, as well as senior class members, is especially welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.<br />
+        It originally began its activities at the Ainosato Children's Hall, and is now based at Takuhoku Kaikan in Ainosato.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Ainosato Branch Trial Lesson / Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/ainosato/Image1.jpg"
+            alt="Training session at the Ainosato Branch"
+            width="426"
+            height="248"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/ainosato/img4.jpg"
+            alt="Takuhoku Kaikan"
+            width="455"
+            height="305"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/shima.jpg"
+            alt="Instructor Shima"
+            width="1254"
+            height="1254"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/tuba.jpg"
+            alt="Occasionally helps out as an assistant instructor"
+            width="118"
+            height="118"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Ainosato Branch</h2>
+      <p>
+        ◆Founded: March 2009 (Heisei 21)<br />
+        ◆Founder: Takushi Muroki<br />
+        ◆Instructors: Tsubasa Okubo, Shima
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
+          target="_blank"
+          rel="noopener">Ainosato 4-jo 6-chome, Kita-ku, Sapporo, Takuhoku Kaikan</a
+        >
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

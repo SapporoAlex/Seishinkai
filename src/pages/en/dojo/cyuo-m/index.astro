@@ -1,0 +1,125 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Fushimi Branch",
+    address: "Fushimi Kaikan, Minami 14-jo Nishi 18-chome, Chuo-ku",
+    schedule: ["Saturday 13:00–14:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Chuo Ward Fushimi Karate Class (Heiwadori Branch)"
+  description="Introducing the Fushimi Branch (Heiwadori Branch) of Seishinkai Karate at Fushimi Kaikan in Chuo Ward, Sapporo. A class centered on Junior Karate and Parent-Child Karate — see training days and venue information."
+  lang="en"
+  path="/en/dojo/cyuo-m/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Fushimi Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Chuo Ward Fushimi Karate Class - Seishinkai Fushimi Branch]<br />
+        The Fushimi karate class got its start in April 2012 (Heisei 24), borrowing meeting-room space from a supporting company thanks to their cooperation.<br />
+        Due to security considerations, the venue was moved the following year to its current location, Fushimi Kaikan, where it has been active ever since.<br />
+        Since its founding, the class has centered on Junior Karate and Parent-Child Karate.<br />
+        Participation by parents and children together, as well as senior class members, is especially welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Fushimi Trial Lesson Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/cyuo-m/Image1.jpg"
+            alt="Training session at the Fushimi Branch"
+            width="292"
+            height="182"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/tuba.jpg"
+            alt="Instructor Tsubasa Okubo"
+            width="128"
+            height="125"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Heiwadori Branch</h2>
+      <p>
+        ◆Founded: April 2012 (Heisei 24)<br />
+        ◆Instructor: Tsubasa Okubo<br />
+        ◆I also come by to teach from time to time - Yuko Wakabayashi
+      </p>
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/images/yuko1.jpg"
+          alt="Yuko Wakabayashi"
+          width="136"
+          height="136"
+          loading="lazy"
+        />
+      </div>
+
+      <h2 class="detail-page__heading">Venue: Fushimi Kaikan</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
+          target="_blank"
+          rel="noopener">6-10 Minami 14-jo Nishi 18-chome, Chuo-ku, Sapporo, Fushimi Kaikan</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/cyuo-m/2.jpg"
+            alt="Fushimi Kaikan"
+            width="293"
+            height="200"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Fushimi Trial Lesson Application">
+          <img
+            src="/assets/images/legacy/dojo/cyuo-m/imgC.jpg"
+            alt="Apply for a trial lesson here"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/cyuo/">← Back to the Chuo Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

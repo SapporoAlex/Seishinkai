@@ -1,0 +1,124 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "札幌中央東支部",
+    address: "中央区南2条東4丁目 三上ビル3F",
+    schedule: ["水曜18:30/19:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="中央区中央東支部の空手教室"
+  description="札幌市中央区・三上ビル(かもめアカデミー)の清心会空手道場・中央東支部(通称かもめ支部)のご案内。稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/mikami/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・中央東支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [札幌中央東空手教室・清心会中央東支部]<br />
+        中央東空手教室、通称名「かもめ支部」は平成27年6月に設立されました。<br />
+        ジュニアクラスと一般部(社会人、学生)があり、中央区に位置していることもあり大人と子供のバランスのとれた教室です。<br />
+        地下鉄バスセンター駅そばと交通の便もよく、会社帰りストレス発散など健康目的で通われる方が多いです。<br />
+        また女性のための護身術セミナーも不定期ですが開催しています。当支部社会人クラスは女性が６割です！<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br />
+        ※外国人歓迎します(英語対応OK)！現在、ドイツ人女性、イギリス人女性が在籍しています！
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ◆稽古日/水曜日　18:30-19:30　ジュニア　／　19:30-20:30　社会人
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/mikami/Image2.jpg"
+            alt="中央東支部の稽古風景"
+            width="313"
+            height="198"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/mikami/img5.jpg"
+            alt="ジュニアクラス"
+            width="278"
+            height="178"
+            loading="lazy"
+          />
+          <figcaption>ジュニアクラス</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/mikami/Image3.jpg"
+            alt="女性護身術セミナーの様子"
+            width="326"
+            height="192"
+            loading="lazy"
+          />
+          <figcaption>女性護身術</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">中央東支部</h2>
+      <p>
+        ◆設立　平成27年(2015)6月<br />
+        ◆設立者　三上 淳
+      </p>
+
+      <div class="detail-media">
+        <a href="https://www.facebook.com/jun.mikami.7" target="_blank" rel="noopener">
+          <img
+            src="/assets/images/legacy/images/mikami.jpg"
+            alt="設立者 三上淳"
+            width="147"
+            height="141"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <h2 class="detail-page__heading">会場　三上ビル3F</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0593031,141.3601062,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
+          target="_blank"
+          rel="noopener">札幌市中央区南2条東4丁目1-10　三上ビル3F</a
+        ><br />
+        地下鉄バスセンター駅より徒歩4分(300m)です。駐車場はありませんので、お車の場合は近隣のパーキングをご利用ください。
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0591797,141.3622588,21z/data=!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/mikami/2.jpg"
+            alt="三上ビル(かもめアカデミー)"
+            width="230"
+            height="203"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/cyuo/">← 中央区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

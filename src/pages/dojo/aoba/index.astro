@@ -1,0 +1,99 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "青葉南支部(計画中)",
+    address: "厚別区青葉町6丁目3-10　青葉南集会所(5名集まれば開始予定)",
+    schedule: ["土曜又は日曜(予定)"],
+  },
+];
+---
+
+<BaseLayout
+  title="青葉支部の空手教室(準備中)"
+  description="札幌市厚別区青葉の清心会空手道場・青葉支部のご案内。現在、再開に向けて参加者を募集中です。"
+  lang="ja"
+  path="/dojo/aoba/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・青葉支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [厚別区青葉空手教室・清心会青葉支部]<br />
+        青葉空手教室は、平成23年12月にキッズ空手、ジュニア空手として開始しました。<br />
+        その後、会場等の関係で厚別南支部(厚別南地区センター)で活動していましたが、青葉支部としての再開を準備中です。<br />
+        キッズ空手、ジュニア空手、そして親子空手を中心とするため、土曜又は日曜での再開を計画しています。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br />
+        現在、参加者を募集しています。5名集まれば開始したいと考えています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りする予定です。参加をご希望の方は<a
+          href="mailto:karate@seishinkan.ne.jp?subject=青葉支部再開・参加希望"
+          >事務局</a
+        >までお問い合わせください。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/aoba/Image1.jpg"
+            alt="青葉支部の稽古風景"
+            width="287"
+            height="123"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/aoba/img4.jpg"
+            alt="青葉南集会所"
+            width="299"
+            height="154"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">青葉支部</h2>
+      <p>
+        ◆設立　平成23年(2011)11月<br />
+        ◆担当　(募集中)
+      </p>
+
+      <h2 class="detail-page__heading">練習会場(予定)</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/青葉南集会所/@43.0282951,141.4771169,15z/data=!4m6!3m5!1s0x5f0b2b5bd1e99d37:0xb28a71c0f3efd5a9!8m2!3d43.0282951!4d141.4771169!16s/g/1tgdnbw1?entry=ttu"
+          target="_blank"
+          rel="noopener">厚別区青葉6丁目1-10　青葉南集会所(予定会場)</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=青葉支部再開・参加希望">
+          <img
+            src="/assets/images/legacy/dojo/aoba/imgA.jpg"
+            alt="参加お問い合わせはこちら"
+            width="645"
+            height="271"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/atsubetsu/">← 厚別区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

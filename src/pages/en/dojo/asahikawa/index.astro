@@ -1,0 +1,97 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "Asahikawa Karate Club for Foreign Residents",
+    address: "Asahikawa City (venue being arranged)",
+    schedule: ["TBD (currently recruiting members)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes for Foreign Residents in Asahikawa City"
+  description="A Seishinkai Karate club exclusively for foreign residents living in Asahikawa. Currently recruiting members — classes will begin once preparations are complete."
+  lang="en"
+  path="/en/dojo/asahikawa/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Asahikawa Karate Club for Foreign Residents</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Asahikawa Karate Class for Foreign Residents — Seishinkai Asahikawa Branch] In preparation<br />
+        We are preparing a karate club exclusively for foreign residents living in Asahikawa.<br />
+        If you are interested, please let us know.<br />
+        It will start as soon as enough members have gathered.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ※As the venue will be a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa Karate Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <a href="https://www.facebook.com/profile.php?id=100004664102435">
+            <img
+              src="/assets/images/legacy/clubu/inoueshogo.jpg"
+              alt="Founder: Shogo Inoue (Facebook)"
+              width="148"
+              height="148"
+              loading="lazy"
+            />
+          </a>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/asahikawa/Image2.jpg"
+            alt="Asahikawa Karate Club for Foreign Residents"
+            width="353"
+            height="276"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Asahikawa Karate Club for Foreign Residents</h2>
+      <p>
+        ◆ Founder: Shogo Inoue<br />
+        ◆ Facebook: <a
+          href="https://www.facebook.com/profile.php?id=100004664102435"
+          target="_blank"
+          rel="noopener">Shogo Inoue</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa Karate Inquiry">
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="Apply for a trial lesson or inquire here"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/kitahiro/">← Back to the list of dojos & classes in Obihiro, Eniwa & Asahikawa</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

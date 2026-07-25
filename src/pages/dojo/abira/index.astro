@@ -1,0 +1,120 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    name: "清心館高橋道場安平教室",
+    address: "安平町安平　安平小体育館",
+    schedule: ["火曜　※0145-23-2604(高橋)"],
+  },
+  {
+    no: 2,
+    name: "高橋道場苫小牧教室",
+    address: "苫小牧市しらかば町5　総合福祉会館",
+    schedule: ["水曜　※0145-23-2604(高橋)"],
+  },
+  {
+    no: 3,
+    name: "高橋道場追分教室",
+    address: "安平町追分　追分労働会館",
+    schedule: ["木曜　※0145-23-2604(高橋)"],
+  },
+  {
+    no: 4,
+    name: "高橋道場早来教室",
+    address: "安平町早来　早来町民センター",
+    schedule: ["金曜　※0145-23-2604(高橋)"],
+  },
+  {
+    no: 5,
+    name: "高橋道場遠浅教室",
+    address: "安平町遠浅　遠浅公民館",
+    schedule: ["月曜　※0145-23-2604(高橋)"],
+  },
+  {
+    no: 6,
+    name: "北新会新冠道場",
+    address: "新冠町",
+    schedule: ["※090-9086-7943(高野)"],
+    link: "https://www.facebook.com/profile.php?id=100007777158191",
+  },
+  {
+    no: 7,
+    name: "朝日スポーツ少年団",
+    address: "新冠町",
+    schedule: ["※090-9086-7943(高野)"],
+    link: "https://www.facebook.com/profile.php?id=100007777158191",
+  },
+  {
+    no: 8,
+    name: "静内農業高校空手部",
+    address: "静内町",
+    schedule: ["※090-9086-7943(高野)"],
+  },
+];
+---
+
+<BaseLayout
+  title="安平町・苫小牧・新冠の空手教室"
+  description="安平町・苫小牧市・新冠町の清心会加盟道場一覧。清心館高橋道場(安平・苫小牧・追分・早来・遠浅)と北新会新冠道場のご案内です。"
+  lang="ja"
+  path="/dojo/abira/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">
+          安平町空手道場・苫小牧空手教室・新冠空手道場の一覧
+        </h1>
+      </div>
+      <p class="detail-page__contact">お問い合わせは　各道場へ</p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ◇加盟道場　清心会･高橋道場、清心会･北新会道場は、苫小牧地区空手道連盟(道空連/全空連)加盟しています。上記の各教室は、全空連に準じた形の指導体系となります。<br />
+        ※昼間は仕事中ですので、電話に出れない場合があります。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/Image8.jpg"
+            alt="北新会"
+            width="256"
+            height="173"
+            loading="lazy"
+          />
+          <figcaption>北新会</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/Image9.jpg"
+            alt="高橋道場"
+            width="246"
+            height="184"
+            loading="lazy"
+          />
+          <figcaption>高橋道場</figcaption>
+        </figure>
+      </div>
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/photo/Image2.jpg"
+          alt="清心会空手 稽古の様子"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

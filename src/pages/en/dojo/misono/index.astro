@@ -1,0 +1,114 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Misono Branch",
+    address: "Misono 6-jo 7-chome, Toyohira-ku, Co-op Misono Circle Room",
+    schedule: ["Sunday 13:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Misono Branch, Toyohira Ward"
+  description="Introducing the Seishinkai Karate dojo and class in Misono, Toyohira Ward, Sapporo — renamed from the former Hiragishi Branch. A junior-centered karate club — see training days and venue information."
+  lang="en"
+  path="/en/dojo/misono/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Misono Branch (formerly Hiragishi Branch)</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Toyohira Ward Misono Branch - Misono Karate Club] (formerly the Hiragishi Karate Club / Seishinkai Hiragishi Branch)<br />
+        The Hiragishi karate class got its start in April 2009 (Heisei 21), borrowing space at the Toyohira Ward Citizens' Center.<br />
+        Since March 2021 (Reiwa 3), the venue has moved to the 2nd-floor circle room at Co-op Misono, and the class was renamed the Misono Karate Club (Misono Branch).<br />
+        Since the venue is a co-op store, it's convenient to be able to shop while training.<br />
+        Since its founding, the class has centered on Junior Karate, with members ranging from preschoolers to junior high schoolers.<br />
+        Participation by parents and children together, as well as senior class members, is also welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Misono Trial Lesson Application"
+          >office</a
+        >.<br />
+        ※Please enter from the 2nd-floor parking lot entrance. If you're unsure, please ask at the co-op service counter.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/misono/acs1.jpg"
+            alt="Training session at the Misono Branch"
+            width="336"
+            height="185"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/wakabayashi.jpg"
+            alt="Instructor Wakabayashi"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Hiragishi Branch</h2>
+      <p>
+        ◆Founded: April 2009 (Heisei 21)<br />
+        ◆Instructor: Wakabayashi
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/コープさっぽろ+美園店/@43.0373071,141.3874316,15z/data=!4m5!3m4!1s0x0:0x72d3e70b77425ccb!8m2!3d43.0373849!4d141.3872843"
+          target="_blank"
+          rel="noopener">Misono 6-jo 7-chome, Toyohira-ku, Sapporo, Co-op Sapporo Misono 2F Circle Room</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/コープさっぽろ+美園店/@43.0373071,141.3874316,15z/data=!4m5!3m4!1s0x0:0x72d3e70b77425ccb!8m2!3d43.0373849!4d141.3872843"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/misono/img4.jpg"
+            alt="Co-op Sapporo Misono Store"
+            width="240"
+            height="168"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <img
+          src="/assets/images/legacy/dojo/misono/img18.jpg"
+          alt="Misono Branch"
+          width="645"
+          height="293"
+          loading="lazy"
+        />
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

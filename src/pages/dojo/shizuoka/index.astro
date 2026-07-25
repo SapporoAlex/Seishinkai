@@ -1,0 +1,128 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "三澤寺空手道場(清心会静岡県支部)",
+    sub: "北嶺会",
+    address: "静岡県富士宮市大鹿窪332　三澤寺",
+    schedule: ["水曜　夜間"],
+  },
+];
+---
+
+<BaseLayout
+  title="静岡県支部の空手教室(三澤寺道場)"
+  description="静岡県富士宮市・三澤寺を会場とする清心会静岡県支部のご案内。北嶺会・三澤寺空手道場の沿革と稽古日、アクセスをご紹介します。"
+  lang="ja"
+  path="/dojo/shizuoka/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・静岡県支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [北嶺会・三澤寺空手道場・清心会静岡支部]<br />
+        三澤寺道場は、清心会本部で修行し北郷支部長・犬浦壽信(現・三澤寺住職)が平成13年に山梨県・身延山大学空手部を創設。<br />
+        静岡県三澤寺にて平成17年6月より三澤寺道場をスタートさせました。<br />
+        子供からシニアまで幅広く参加しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※日中、仕事中は電話にでれない場合があります。稽古日/水曜日夜間　TEL/FAX.01544-29-3500
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <a href="https://www.facebook.com/jushin.inuura.3" target="_blank" rel="noopener">
+            <img
+              src="/assets/images/legacy/images/inu.jpg"
+              alt="設立者 犬浦壽信"
+              width="109"
+              height="109"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>設立者 犬浦壽信</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/shizuoka/Image1.jpg"
+            alt="三澤寺道場の稽古風景"
+            width="336"
+            height="167"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">静岡県支部</h2>
+      <p>
+        ◆創設　平成13年(2001)10月-山梨支部<br />
+        　　　　平成17年(2005)6月-静岡支部<br />
+        ◆設立者　犬浦壽信
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <a href="https://www.santakuji.com/" target="_blank" rel="noopener">
+            <img
+              src="/assets/images/legacy/dojo/shizuoka/DSC_4851.jpg"
+              alt="三澤寺"
+              width="314"
+              height="209"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>鎌倉時代に開創された700年以上の伝統あるお寺</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/shizuoka/DSC_4900.jpg"
+            alt="敷地内の専有道場"
+            width="311"
+            height="204"
+            loading="lazy"
+          />
+          <figcaption>敷地内の専有道場</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒419-0303+静岡県富士宮市大鹿窪３３２/@35.2507663,138.5611994,17z/data=!3m1!4b1!4m5!3m4!1s0x601bd01f37b31da9:0xc2111aeb55d23bb5!8m2!3d35.2507663!4d138.5633881"
+          target="_blank"
+          rel="noopener">静岡県富士宮市大鹿窪332　三澤寺</a
+        ><br />
+        お寺の敷地内に道場があります
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/〒419-0303+静岡県富士宮市大鹿窪３３２/@35.2507663,138.5611994,17z/data=!3m1!4b1!4m5!3m4!1s0x601bd01f37b31da9:0xc2111aeb55d23bb5!8m2!3d35.2507663!4d138.5633881"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/shizuoka/2.jpg"
+            alt="三澤寺道場"
+            width="258"
+            height="175"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/naichi/">← 静岡県・愛知県・千葉県の空手道場の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

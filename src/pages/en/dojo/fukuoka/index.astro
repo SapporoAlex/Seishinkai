@@ -1,0 +1,142 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "Fukuoka Karate Class (Seishinkai Fukuoka Branch)",
+    address: "Sasaoka Community Hall, Fukuoka City, Fukuoka Prefecture",
+    schedule: ["Please inquire for training days"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Fukuoka Branch (Activity Concluded)"
+  description="Introducing the Seishinkai Fukuoka Branch, based at the Sasaoka Community Hall in Fukuoka City. Established April 2013, activity concluded March 2021."
+  lang="en"
+  path="/en/dojo/fukuoka/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Fukuoka Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Fukuoka Karate Class - Seishinkai Fukuoka Branch]<br />
+        The Fukuoka Karate Class started in April 2013 (Heisei 25), using the Sasaoka Community Hall as its venue.<br />
+        We are grateful for everyone's cooperation over the years.<br />
+        Activity concluded as of March 2021 (Reiwa 3).
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※During the day we may be at work and unable to answer the phone. Please use Facebook Messenger or similar.<br />
+        ※This page carries information from the time activity concluded, migrated from the former site.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <a href="https://www.facebook.com/atsushi.saegusa1" target="_blank" rel="noopener">
+            <img
+              src="/assets/images/legacy/images/sae.jpg"
+              alt="Founder Atsushi Saegusa"
+              width="111"
+              height="108"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>Founder Atsushi Saegusa</figcaption>
+        </figure>
+        <figure>
+          <a
+            href="http://gakushu.city.fukuoka.lg.jp/circle/detail.php?login_id=00002296"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/assets/images/legacy/dojo/fukuoka/Image1.jpg"
+              alt="Fukuoka Branch practice session"
+              width="334"
+              height="191"
+              loading="lazy"
+            />
+          </a>
+        </figure>
+      </div>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fukuoka/Image5.jpg"
+            alt="Fukuoka Branch practice session"
+            width="169"
+            height="137"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fukuoka/Image6.jpg"
+            alt="Fukuoka Branch practice session"
+            width="187"
+            height="131"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fukuoka/Image7.jpg"
+            alt="Fukuoka Branch practice session"
+            width="197"
+            height="132"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Seishinryu Fukuoka Branch</h2>
+      <p>
+        ◆Founded: April 2013 (Heisei 25)<br />
+        ◆Founder: Atsushi Saegusa<br />
+        　　　　　(Employer: <a
+          href="http://www.saegusayakuhin-q.co.jp/"
+          target="_blank"
+          rel="noopener">Saegusa Yakuhin Kyushu</a
+        >)
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener">Sasaoka Community Hall, Fukuoka City, Fukuoka Prefecture</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/fukuoka/2.jpg"
+            alt="Sasaoka Community Hall"
+            width="250"
+            height="126"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/naichi/">← Back to the Shizuoka, Aichi & Chiba Dojo List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

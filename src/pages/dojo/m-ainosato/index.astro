@@ -1,0 +1,112 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "南あいの里空手クラブ",
+    address: "北区あいの里1条6丁目拓北あいの里地区センター",
+    schedule: ["日曜10:00(冬10:30)"],
+  },
+];
+---
+
+<BaseLayout
+  title="札幌市北区南あいの里支部の空手教室"
+  description="札幌市北区南あいの里の清心会空手道場・教室のご案内。拓北あいの里地区センターを会場に日曜10:00より稽古を行う本部直轄教室です。"
+  lang="ja"
+  path="/dojo/m-ainosato/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・南あいの里支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [北区南あいの里空手教室・清心会南あいの里支部]<br />
+        南あいの里空手教室は、平成22年5月に拓北あいの里地区センターで活動を開始しました。<br />
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=南あいの里体験申込"
+          >事務局</a
+        >までお願いします。<br />
+        ※本部直轄教室のため一般部員(黒帯、茶帯)が交代で練習を行います。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-ainosato/Image1.jpg"
+            alt="南あいの里支部の稽古風景"
+            width="432"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-ainosato/2.jpg"
+            alt="拓北あいの里地区センター"
+            width="345"
+            height="226"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/m-ainosato/img2.jpg"
+            alt="コープあいの里"
+            width="262"
+            height="163"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">南あいの里支部</h2>
+      <p>
+        ◆設立　平成22年(2010)5月<br />
+        ◆本部直轄教室
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/拓北・あいの里地区センター/@43.155447,141.399294,15z/data=!4m2!3m1!1s0x0:0x78b61eb45497db44?sa=X&ved=2ahUKEwigkNm_3LHhAhXDdHAKHTGtA3YQ_BIwDHoECAsQCA"
+          target="_blank"
+          rel="noopener">札幌市北区あいの里1条6丁目1-1　拓北あいの里地区センター</a
+        ><br />
+        ※地区センターが使えないときは<a
+          href="https://www.google.com/maps/place/コープさっぽろ+あいの里店/@43.1576295,141.3986342,15z/data=!4m2!3m1!1s0x0:0xc9b4786745542e81?sa=X&ved=2ahUKEwjUwuXRvMHxAhVkNKYKHT-dA5oQ_BIwEnoECD8QBQ"
+          target="_blank"
+          rel="noopener">コープさっぽろ あいの里店　2Fサークル室</a
+        >
+      </p>
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=南あいの里体験申込">
+          <img
+            src="/assets/images/legacy/dojo/m-ainosato/img7.jpg"
+            alt="南あいの里体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

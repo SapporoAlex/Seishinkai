@@ -1,0 +1,111 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Toyohira Park Branch",
+    address: "Toyohira 8-jo 11-chome, Toyohira-ku, Toyohira Youth Activity Center",
+    schedule: ["Friday 16:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Toyohira Park Branch, Toyohira Ward"
+  description="Introducing the Seishinkai Karate dojo and class held at the Toyohira Youth Activity Center in Toyohira Ward, Sapporo. A junior-centered karate club — see training days and venue information."
+  lang="en"
+  path="/en/dojo/toyohira-k/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Toyohira Park Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Toyohira Park Karate Club - Seishinkai Toyohira Park Branch]<br />
+        The Toyohira Park karate class got its start in June 2015 (Heisei 27), borrowing space at the Toyohira Youth Activity Center.<br />
+        Since its founding, the class has centered on Junior Karate, with members ranging from preschoolers to junior high schoolers.<br />
+        Participation by parents and children together, as well as senior class members, is also welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.<br />
+        ※The Youth Activity Center will be closed for renovation work from July through the end of October 2025 (Reiwa 7); during that period, training will be held at the <a
+          href="/en/dojo/hq/">Headquarters</a
+        > Dojo.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Toyohira Park Branch Trial Lesson & Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/toyohira-k/img8.jpg"
+            alt="Training session at the Toyohira Park Branch"
+            width="282"
+            height="162"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/oki.jpg"
+            alt="Instructor Shima"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Toyohira Park Branch</h2>
+      <p>
+        ◆Founded: June 2015 (Heisei 27)<br />
+        ◆Founder: Saori Okimura (2015-2022)<br />
+        ◆Instructor: Fuyuki Shima (2022-)
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市豊平若者活動センター/@43.0430538,141.3731148,15z/data=!4m2!3m1!1s0x0:0x8c7de2009ed78c7a"
+          target="_blank"
+          rel="noopener">3-5 Toyohira 8-jo 11-chome, Toyohira Youth Activity Center</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/toyohira-k/imgC.jpg"
+          alt="Toyohira Youth Activity Center"
+          width="236"
+          height="176"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Toyohira Park Branch Trial Lesson & Enrollment Inquiry">
+          <img
+            src="/assets/images/legacy/dojo/toyohira-k/img4.jpg"
+            alt="Apply for a trial lesson here"
+            width="645"
+            height="271"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

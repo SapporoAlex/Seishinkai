@@ -1,0 +1,116 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    marker: "★",
+    name: "Makomanai Karate Club",
+    address: "Makomanai-Izumimachi 3-chome 1-6, Minami-ku, Makomanai Gorin Children's Hall",
+    schedule: ["Monday 18:30"],
+    link: "/en/dojo/makomanai/",
+  },
+  {
+    no: 2,
+    marker: "★",
+    name: "Fujino Karate Club",
+    address: "Fujino 2-jo 7-chome, Minami-ku, Fujino District Center",
+    schedule: ["Saturday 10:00"],
+    link: "/en/dojo/fujino/",
+  },
+  {
+    no: 3,
+    marker: "★",
+    name: "Tokiwa Karate Club",
+    address: "Tokiwa 1-jo 1-chome 3-1, Minami-ku, Tokiwa Danchi Kaikan",
+    schedule: ["Monday 16:30"],
+    link: "/en/dojo/tokiwa/",
+  },
+  {
+    no: 4,
+    marker: "★",
+    name: "Sumikawa-Nishi Karate Club",
+    address: "Hiragishi 1-jo 22-chome, Toyohira-ku, Big House Extra Store 2F",
+    schedule: ["Friday 18:30"],
+    link: "/en/dojo/sumikawa-n/",
+  },
+  {
+    no: 5,
+    marker: "★",
+    name: "Satozuka Karate Club",
+    address: "Satozuka-Midorigaoka 10-chome, Kiyota-ku, Satozuka-Midorigaoka Neighborhood Hall",
+    schedule: ["Friday 18:30 (from February 2022)"],
+    link: "/en/dojo/satozuka/",
+  },
+  {
+    no: 6,
+    marker: "★",
+    name: "Hiraoka Karate Club",
+    address: "Hiraoka 5-jo 1-chome 1-40, Kiyota-ku, Clubhouse Platz",
+    schedule: ["Tuesday 16:00", "Thursday 19:00"],
+    link: "/en/dojo/hiraoka-c/",
+  },
+  {
+    no: 7,
+    marker: "●",
+    name: "SC Hiraoka Karate Club",
+    address: "Hiraoka 3-jo 5-chome, Kiyota-ku, Aeon Hiraoka Store 2F (Sapporo Culture)",
+    schedule: ["Saturday 9:15"],
+    link: "https://www.culture.gr.jp/detail/sapporo/itemview_42_42000723.html",
+  },
+  {
+    marker: "★",
+    name: "Minamisawa Karate Club (Planned)",
+    address: "Minamisawa (recruiting participants)",
+    schedule: ["Wednesday (planned)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Kiyota Ward & Minami Ward"
+  description="Directory of Seishinkai Karate dojos and classes in Kiyota Ward and Minami Ward, Sapporo. Training days for the Makomanai, Fujino, Tokiwa, Sumikawa-Nishi, Satozuka, and Hiraoka clubs."
+  lang="en"
+  path="/en/dojo/minami-kiyota/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Kiyota Ward & Minami Ward Karate Dojos & Classes</h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Instructor-dispatch class — inquiries to the hosting cultural center / sports club
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — inquiries to the office or directly to the dojo manager
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/photo/Image2.jpg"
+          alt="Seishinkai Karate training session"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to Dojo List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

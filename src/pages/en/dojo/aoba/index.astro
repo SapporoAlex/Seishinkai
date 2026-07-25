@@ -1,0 +1,99 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Aoba-minami Branch (in planning)",
+    address: "Aoba-cho 6-chome 3-10, Atsubetsu-ku, Sapporo — Aoba-minami Community Hall (to begin once 5 members have joined)",
+    schedule: ["Saturday or Sunday (planned)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Aoba Branch (In Preparation)"
+  description="Introducing the Seishinkai Karate dojo — Aoba Branch — in Aoba, Atsubetsu-ku, Sapporo. We are currently recruiting participants toward its relaunch."
+  lang="en"
+  path="/en/dojo/aoba/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Aoba Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Aoba Karate Class, Atsubetsu-ku / Seishinkai Aoba Branch]<br />
+        The Aoba Karate Class began in December 2011 (Heisei 23) as Kids Karate and Junior Karate.<br />
+        Afterward, due to venue circumstances, activities were held under the Atsubetsu-minami Branch (Atsubetsu-minami District Center), but we are now preparing to relaunch as the Aoba Branch.<br />
+        As the class centers on Kids Karate, Junior Karate, and parent-and-child karate, we are planning to relaunch on Saturdays or Sundays.<br />
+        While many dojos feel like an extension of school sports-club culture, we aim for karate as health and fitness — practiced and learned with the relaxed enjoyment of a community club.<br />
+        We are currently recruiting participants, and hope to begin once 5 people have joined.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※The venue is expected to be a rented facility. If you would like to participate, please contact the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Aoba Branch Relaunch & Participation Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/aoba/Image1.jpg"
+            alt="Practice session at the Aoba Branch"
+            width="287"
+            height="123"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/aoba/img4.jpg"
+            alt="Aoba-minami Community Hall"
+            width="299"
+            height="154"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Aoba Branch</h2>
+      <p>
+        ◆Founded: November 2011 (Heisei 23)<br />
+        ◆In charge: (recruiting)
+      </p>
+
+      <h2 class="detail-page__heading">Training Venue (Planned)</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/青葉南集会所/@43.0282951,141.4771169,15z/data=!4m6!3m5!1s0x5f0b2b5bd1e99d37:0xb28a71c0f3efd5a9!8m2!3d43.0282951!4d141.4771169!16s/g/1tgdnbw1?entry=ttu"
+          target="_blank"
+          rel="noopener">Aoba 6-chome 1-10, Atsubetsu-ku, Sapporo — Aoba-minami Community Hall (planned venue)</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Aoba Branch Relaunch & Participation Inquiry">
+          <img
+            src="/assets/images/legacy/dojo/aoba/imgA.jpg"
+            alt="Click here to inquire about participating"
+            width="645"
+            height="271"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/atsubetsu/">← Back to Karate Dojos & Classes in Atsubetsu Ward</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

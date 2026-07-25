@@ -1,0 +1,123 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "長沼町空手クラブ",
+    address: "長沼町中央南2丁目 長沼スポーツセンター",
+    schedule: ["火曜18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="長沼町の空手教室"
+  description="北海道長沼町の清心会空手道場・長沼支部のご案内。稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/naganuma/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・長沼支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [長沼町空手教室・清心会長沼支部]<br />
+        長沼空手教室は、長沼町にお住まいで北広島支部に通われていた会員がメンバーを集め、平成23年8月よりスタートしました。<br
+        />
+        会場は、長沼スポーツセンターです。<br />
+        キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br
+        />
+        ※園児3才は親子参加で月会費は無料です
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=長沼体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/naganuma/Image1.jpg"
+            alt="長沼支部の稽古風景"
+            width="237"
+            height="124"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="清心会空手の稽古風景"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/shima.jpg"
+            alt="指導員 島"
+            width="1254"
+            height="1254"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/taki.jpg"
+            alt="指導員 坂本"
+            width="167"
+            height="167"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">長沼支部</h2>
+      <p>
+        ◆設立　平成23年(2011)8月<br />
+        ◇設立者　古館暁子<br />
+        ◆担当指導　直轄-島、坂本
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/長沼町スポーツセンター/@43.007859,141.69233,15z/data=!4m2!3m1!1s0x0:0xc6cede9b78bc4cf5"
+          target="_blank"
+          rel="noopener">長沼町中央南2丁目　長沼スポーツセンター</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/長沼町スポーツセンター/@43.007859,141.69233,15z/data=!4m2!3m1!1s0x0:0xc6cede9b78bc4cf5"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/naganuma/2.jpg"
+            alt="長沼町スポーツセンター"
+            width="200"
+            height="131"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

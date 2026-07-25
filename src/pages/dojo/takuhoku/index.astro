@@ -1,0 +1,124 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "拓北空手クラブ(拓北支部)",
+    address: "北区拓北3条4丁目1-6 拓北パレス会館",
+    schedule: ["木曜18:30(2月より水曜から変更)"],
+  },
+];
+---
+
+<BaseLayout
+  title="札幌市北区拓北支部の空手教室"
+  description="札幌市北区拓北の清心会空手道場・教室のご案内。拓北パレス会館を会場に木曜18:30より稽古を行うキッズ・ジュニア空手クラブです。"
+  lang="ja"
+  path="/dojo/takuhoku/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・拓北支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [北区拓北空手教室・清心会拓北支部]<br />
+        拓北空手教室は、平成23年10月より活動しています。<br />
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※練習日はもともと水曜日でしたが、2月より拓北会館の都合により木曜18:30へ変更となりました。<br />
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=拓北支部 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/takuhoku/Image1.jpg"
+            alt="拓北支部の稽古風景"
+            width="276"
+            height="150"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/yamane.jpg"
+            alt="指導 山根"
+            width="239"
+            height="239"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/takashima.jpg"
+            alt="指導 嶋"
+            width="123"
+            height="123"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">拓北支部</h2>
+      <p>
+        ◆設立　平成23年(2011)10月<br />
+        ◆設立者　二森 翼<br />
+        ◆指導　山根、嶋
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
+          target="_blank"
+          rel="noopener">札幌市北区拓北3条4丁目1-6　拓北パレス会館</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/takuhoku/2.jpg"
+            alt="拓北パレス会館"
+            width="282"
+            height="216"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=拓北支部 体験・入会問い合わせ">
+          <img
+            src="/assets/images/legacy/dojo/takuhoku/imgC.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

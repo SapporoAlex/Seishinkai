@@ -1,0 +1,103 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Sakaemachi Karate Club",
+    address: "San-ai Motors Building 3F Meeting Room, Kita 42-jo Higashi 19-chome, Higashi-ku, Sapporo",
+    schedule: ["Sunday 9:30-10:30", "Extended class 10:30-11:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Sakaemachi Branch, Higashi Ward"
+  description="Introducing the Sakaemachi Karate Club, a Seishinkai Karate dojo in Kita 42-jo, Higashi Ward, Sapporo. Training is held on Sundays at the San-ai Motors Building meeting room."
+  lang="en"
+  path="/en/dojo/sakaemachi/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-do Federation — Sakaemachi Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Sakaemachi Karate Class, Seishinkai Sakaemachi Branch, Higashi Ward]<br />
+        The Sakaemachi Karate Class started in September 2003 (Heisei 15), using a meeting room at San-ai Motors as its venue.<br />
+        It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
+        We especially welcome participation from parents and children together, and from the Senior Class.<br />
+        While many dojos feel like an extension of school sports clubs, we aim to make karate an enjoyable, club-like experience centered on health and fitness.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※Session 1, for beginners and elementary school students, runs 9:30-10:30; the Extended session, for intermediate level and above, runs Session 1 plus 10:30-11:00.<br />
+        The venue is provided through the kind courtesy of San-ai Motors. Please ask an instructor where to park, and please do not enter areas outside the meeting room.<br />
+        For inquiries, please contact the <a href="mailto:karate@seishinkan.ne.jp?subject=Sakaemachi Trial Application">office</a>.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/sakaemachi/Image1.jpg"
+            alt="Practice session at the Sakaemachi Branch"
+            width="336"
+            height="189"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/nami.jpg"
+            alt="Shihan Namikawa"
+            width="100"
+            height="98"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="Instructor Masuda"
+            width="94"
+            height="97"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Higashi Ward — Sakaemachi Branch</h2>
+      <p>
+        ◆ Founded: September 2003 (Heisei 15)<br />
+        ◆ Founders: Kayoko Mimura, Kazuaki Namikawa<br />
+        ◆ Past Instructors: Hashini<br />
+        ◆ Person in Charge: Namikawa
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a href="http://yahoo.jp/JbqUqo" target="_blank" rel="noopener"
+          >San-ai Motors, Kita 42-jo Higashi 19-chome 1-1, Higashi-ku, Sapporo</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/sakaemachi/2.jpg"
+          alt="San-ai Motors Building"
+          width="521"
+          height="225"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

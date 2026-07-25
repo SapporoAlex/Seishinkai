@@ -1,0 +1,113 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Kikusui-Motomachi Branch",
+    address: "Kikusui-Motomachi 7-jo 2-chome, Shiroishi-ku, Sapporo, Kikusui-Motomachi Minami Community Hall",
+    schedule: ["Tuesday 18:30 (winter hours from 18:50)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Kikusui-Motomachi Branch, Shiroishi Ward"
+  description="Information on the Seishinkai karate dojo/class at Kikusui-Motomachi, Shiroishi Ward, Sapporo, held at the Kikusui-Motomachi Minami Community Hall. Training days for the Junior Karate class."
+  lang="en"
+  path="/en/dojo/kikusui2/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Kikusui-Motomachi Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Kikusui-Motomachi Karate Class, Shiroishi Ward / Seishinkai Kikusui-Motomachi Branch]<br />
+        The Kikusui-Motomachi Karate Class began activities in April 2010 (Heisei 22) at the Kikusui-Motomachi Children's Center.<br />
+        From April 2020 (Reiwa 2), the venue moved to the hall at the Kikusui-Motomachi Minami Community Hall, where members have been enjoying a good workout every Tuesday from 18:30.<br />
+        Since its founding, it has run as a Junior Karate class, focused mainly on preschoolers through junior high school students.<br />
+        We also welcome parent-child participants.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ※As the venue is a public facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Kikusui-Motomachi Trial Lesson & Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kikusui2/img4.jpg"
+            alt="Kikusui-Motomachi Branch practice session"
+            width="250"
+            height="130"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kikusui2/img2.jpg"
+            alt="Kikusui-Motomachi Minami Community Hall"
+            width="247"
+            height="157"
+            loading="lazy"
+          />
+          <figcaption>Parking available</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Kikusui-Motomachi Branch / Kikusui-Motomachi Karate Club</h2>
+      <p>
+        ◆ Founded: April 2010 (Heisei 22)<br />
+        ◆ Past instructors: Tsubasa Okubo (2012–2017), Takushi Muroki (2017–2019)<br />
+        ◆ Instructor: Masumi Yoshida (2019–)
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
+          target="_blank"
+          rel="noopener">6-5 Kikusui-Motomachi 7-jo 2-chome, Shiroishi-ku, Sapporo, Kikusui-Motomachi Minami Community Hall</a
+        >
+      </p>
+      <p class="detail-page__note">
+        ※Former venue: <a
+          href="https://www.google.com/maps/place/〒003-0828+北海道札幌市白石区菊水元町８条２丁目１５&#8722;５/@43.072506,141.4103447,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29557d8003c3:0x32457e679d7720d5!8m2!3d43.072506!4d141.4125334"
+          target="_blank"
+          rel="noopener">15-5 Kikusui-Motomachi 8-jo 2-chome, Shiroishi-ku, Sapporo, Kikusui-Motomachi Children's Center Gymnasium</a
+        > (until March 2020, Reiwa 2)
+      </p>
+
+      <p class="detail-page__note">
+        <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Kikusui-Motomachi Trial Lesson & Enrollment Inquiry"
+        >
+          <img
+            src="/assets/images/legacy/dojo/kikusui2/img3.jpg"
+            alt="Apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

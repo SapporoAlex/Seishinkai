@@ -1,0 +1,106 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "あいの里空手クラブ",
+    address: "北区あいの里４条６丁目 拓北会館",
+    schedule: ["木曜18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="札幌市北区あいの里支部の空手教室"
+  description="札幌市北区あいの里の清心会空手道場・教室のご案内。拓北会館を会場に木曜18:30より稽古を行うキッズ・ジュニア空手クラブです。"
+  lang="ja"
+  path="/dojo/ainosato/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・あいの里支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [北区あいの里空手教室・清心会あいの里支部]<br />
+        あいの里空手教室は、平成21年3月より活動しています。<br />
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br />
+        当初はあいの里児童会館で活動を開始し、現在はあいの里にある拓北会館で活動しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=あいの里支部 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/ainosato/Image1.jpg"
+            alt="あいの里支部の稽古風景"
+            width="426"
+            height="248"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/ainosato/img4.jpg"
+            alt="拓北会館"
+            width="455"
+            height="305"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/shima.jpg"
+            alt="担当 島"
+            width="1254"
+            height="1254"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/tuba.jpg"
+            alt="不定期に参加助手で参加"
+            width="118"
+            height="118"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">あいの里支部</h2>
+      <p>
+        ◆設立　平成21年(2009)3月<br />
+        ◆設立者　室木拓士<br />
+        ◆担当　大久保 翼、島
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
+          target="_blank"
+          rel="noopener">札幌市北区あいの里４条６丁目　拓北会館</a
+        >
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

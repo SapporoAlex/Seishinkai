@@ -1,0 +1,113 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "札苗空手クラブ",
+    address: "東区東苗穂7条2丁目2-30 札苗モエレ交流センター",
+    schedule: ["水曜18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="東区札苗支部の空手教室"
+  description="札幌市東区東苗穂の清心会空手道場・札苗空手クラブのご案内。札苗モエレ交流センターでの水曜稽古日をご紹介します。"
+  lang="ja"
+  path="/dojo/h-naebo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・札苗支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [東区札苗空手教室・清心会札苗支部]<br />
+        札苗空手教室は、札苗モエレ交流センターをお借りして平成22年7月より活動しています。<br />
+        キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと思います。体験者募集中です!<br />
+        また親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=札苗体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/h-naebo/acs1.jpg"
+            alt="札苗支部の稽古風景"
+            width="315"
+            height="141"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/oikawa.jpg"
+            alt="設立者 及川"
+            width="111"
+            height="110"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">東区札苗支部</h2>
+      <p>
+        ◆設立　平成22年(2010)7月<br />
+        ◆設立者　及川義彦
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市東区札苗まちづくりセンター/@43.093113,141.4112141,15z/data=!4m2!3m1!1s0x0:0xa7db2c47df5aaf59?sa=X&ved=2ahUKEwjBv9Kwp7HhAhUwEqYKHS_gANUQ_BIwCnoECAoQCA"
+          target="_blank"
+          rel="noopener">札幌市東区東苗穂7条2丁目2-30　札苗モエレ交流センター</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/札幌市東区札苗まちづくりセンター/@43.093113,141.4112141,15z/data=!4m2!3m1!1s0x0:0xa7db2c47df5aaf59?sa=X&ved=2ahUKEwjBv9Kwp7HhAhUwEqYKHS_gANUQ_BIwCnoECAoQCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/h-naebo/2.jpg"
+            alt="札苗モエレ交流センター"
+            width="176"
+            height="118"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=札苗体験申込">
+          <img
+            src="/assets/images/legacy/dojo/h-naebo/img1C.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

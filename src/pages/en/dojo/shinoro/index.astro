@@ -1,0 +1,113 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Shinoro Karate Club",
+    address: "Shinoro Community Center 2F, Shinoro 3-jo 8-chome, Kita-ku, Sapporo",
+    schedule: ["Saturday 13:30", "Thursday 15:50"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Shinoro Branch, Kita Ward"
+  description="Introducing the Shinoro Branch of Seishinkai Karate at Shinoro Community Center in Kita Ward, Sapporo. A Kids & Junior karate class training on Saturdays and Thursdays — see training days and venue information."
+  lang="en"
+  path="/en/dojo/shinoro/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Shinoro Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Kita Ward Shinoro Karate Club - Seishinkai Shinoro Branch]<br />
+        The Shinoro karate class got its start in July 2008 (Heisei 20), borrowing space at Shinoro Community Center.<br />
+        It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
+        Participation by parents and children together, as well as senior class members, is especially welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.<br />
+        Since April 2025 (Reiwa 7), a new Kids Class has been added on Thursday evenings.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※Thursday class 15:50–16:50, Saturday class 13:30–14:30.<br />
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Shinoro Branch Trial Lesson / Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/shinoro/Image1.jpg"
+            alt="Training session at the Shinoro Branch"
+            width="353"
+            height="191"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="Saturday instructor"
+            width="1147"
+            height="1147"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/manaya.jpg"
+            alt="Thursday instructor"
+            width="142"
+            height="142"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Shinoro Branch</h2>
+      <p>
+        ◆Founded: July 2008 (Heisei 20)<br />
+        ◆Founder: Takushi Muroki<br />
+        ◆Instructor: Headquarters-run - Shima
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
+          target="_blank"
+          rel="noopener">11-1 Shinoro 3-jo 8-chome, Kita-ku, Sapporo, Shinoro Community Center 2F</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/shinoro/2.jpg"
+            alt="Shinoro Community Center"
+            width="282"
+            height="245"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

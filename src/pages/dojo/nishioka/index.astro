@@ -1,0 +1,119 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "西岡支部",
+    address: "南区澄川6条4丁目 コープ西岡2F",
+    schedule: ["土曜13:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="南区西岡支部の空手教室"
+  description="札幌市南区西岡の清心会空手道場・教室のご案内。ジュニアクラス中心の空手クラブ、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/nishioka/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・西岡支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [豊平区西岡空手教室・清心会西岡支部]<br />
+        西岡空手教室は、西岡福住地区センターをお借りして平成22年9月より活動を始めました。<br />
+        令和3年9月よりコープさっぽろ西岡店2Fのサークル室(又はスタジオ)に会場を移して活動を継続しています。<br />
+        駐車場も広く利用できますし、お子様が練習中にお買い物ができるのでとても便利です。<br />
+        設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
+        また親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=西岡体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。<br />
+        臨時会場　西岡南町内会館　西岡4条14丁目12-10
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/nishioka/acs1.jpg"
+            alt="西岡支部の稽古風景"
+            width="301"
+            height="179"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/oki.jpg"
+            alt="沖村"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/sakai.jpg"
+            alt="指導補佐 坂井"
+            width="104"
+            height="104"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">西岡支部</h2>
+      <p>
+        ◆設立　平成22年(2010)9月<br />
+        ◆担当　沖村
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/コープさっぽろ+西岡店/@43.01181,141.374177,15z/data=!4m5!3m4!1s0x0:0xb3f5fd33efd84ec0!8m2!3d43.01181!4d141.374177"
+          target="_blank"
+          rel="noopener">南区澄川6条4丁目1-1　コープ西岡2Fサークル室/スタジオ</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/nishioka/img3.jpg"
+          alt="コープさっぽろ西岡店"
+          width="257"
+          height="129"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=西岡体験・入会問い合わせ">
+          <img
+            src="/assets/images/legacy/dojo/nishioka/img2.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="260"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

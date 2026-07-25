@@ -1,0 +1,120 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    no: 1,
+    name: "Seishinkan Takahashi Dojo — Abira Class",
+    address: "Abira, Abira Town, Abira Elementary School Gymnasium",
+    schedule: ["Tuesday　※0145-23-2604 (Takahashi)"],
+  },
+  {
+    no: 2,
+    name: "Takahashi Dojo — Tomakomai Class",
+    address: "Shirakabacho 5, Tomakomai City, General Welfare Hall",
+    schedule: ["Wednesday　※0145-23-2604 (Takahashi)"],
+  },
+  {
+    no: 3,
+    name: "Takahashi Dojo — Oiwake Class",
+    address: "Oiwake, Abira Town, Oiwake Labor Hall",
+    schedule: ["Thursday　※0145-23-2604 (Takahashi)"],
+  },
+  {
+    no: 4,
+    name: "Takahashi Dojo — Hayakita Class",
+    address: "Hayakita, Abira Town, Hayakita Town Center",
+    schedule: ["Friday　※0145-23-2604 (Takahashi)"],
+  },
+  {
+    no: 5,
+    name: "Takahashi Dojo — Toasa Class",
+    address: "Toasa, Abira Town, Toasa Public Hall",
+    schedule: ["Monday　※0145-23-2604 (Takahashi)"],
+  },
+  {
+    no: 6,
+    name: "Hokushinkai Niikappu Dojo",
+    address: "Niikappu Town",
+    schedule: ["※090-9086-7943 (Takano)"],
+    link: "https://www.facebook.com/profile.php?id=100007777158191",
+  },
+  {
+    no: 7,
+    name: "Asahi Sports Youth Club",
+    address: "Niikappu Town",
+    schedule: ["※090-9086-7943 (Takano)"],
+    link: "https://www.facebook.com/profile.php?id=100007777158191",
+  },
+  {
+    no: 8,
+    name: "Shizunai Agricultural High School Karate Club",
+    address: "Shizunai Town",
+    schedule: ["※090-9086-7943 (Takano)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Abira, Tomakomai & Niikappu"
+  description="Directory of Seishinkai-affiliated dojos in Abira Town, Tomakomai City, and Niikappu Town — the Seishinkan Takahashi Dojo (Abira, Tomakomai, Oiwake, Hayakita, Toasa) and the Hokushinkai Niikappu Dojo."
+  lang="en"
+  path="/en/dojo/abira/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">
+          Karate Dojos in Abira Town, Tomakomai City & Niikappu Town
+        </h1>
+      </div>
+      <p class="detail-page__contact">Inquiries: please contact each dojo directly</p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ◇ Affiliated dojos: the Seishinkai Takahashi Dojo and Seishinkai Hokushinkai Dojo are members of the Tomakomai Area Karate-do Federation (Do-Kuren / Zen Nihon Karatedo Renmei). Each class listed above follows an instructional system aligned with that federation.<br />
+        ※As instructors are at work during the day, they may not always be able to answer the phone.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/Image8.jpg"
+            alt="Hokushinkai"
+            width="256"
+            height="173"
+            loading="lazy"
+          />
+          <figcaption>Hokushinkai</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/Image9.jpg"
+            alt="Takahashi Dojo"
+            width="246"
+            height="184"
+            loading="lazy"
+          />
+          <figcaption>Takahashi Dojo</figcaption>
+        </figure>
+      </div>
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/photo/Image2.jpg"
+          alt="Seishinkai Karate training session"
+          width="570"
+          height="340"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to Dojo List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

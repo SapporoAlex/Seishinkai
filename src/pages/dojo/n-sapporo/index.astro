@@ -1,0 +1,99 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "新札幌支部",
+    address: "厚別区中央1条5丁目　厚別区民センター会議室",
+    schedule: ["月曜19:00(R7.7より)"],
+  },
+];
+---
+
+<BaseLayout
+  title="新札幌支部の空手教室"
+  description="札幌市厚別区の清心会空手道場・新札幌支部のご案内。月曜クラスの稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/n-sapporo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・新札幌支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [厚別区新さっぽろ空手教室・清心会新札幌支部]<br />
+        新札幌空手教室は、平成9年4月より厚別区民センターで活動を始めた、清心会でも古くから活動している支部です。<br />
+        設立以来、キッズ空手、ジュニア空手として開始し、園児から大人(親子)まで幅広く参加しています。<br />
+        特に親子での参加を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※令和7年7月より練習日を月曜19:00-20:30に変更しました。<br />
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=新札幌体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/n-sapporo/Image1.jpg"
+            alt="新札幌支部の稽古風景"
+            width="346"
+            height="155"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/n-sapporo/2.jpg"
+            alt="厚別区民センター"
+            width="290"
+            height="206"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">新札幌支部</h2>
+      <p>
+        ◆設立　平成9年(1997)4月<br />
+        ◆担当　波川、前川
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市+厚別区民センター/@43.036652,141.474159,15z/data=!4m2!3m1!1s0x0:0x2eeb48db85d54c24?sa=X&ved=2ahUKEwi-kKuTlaXhAhUOUN4KHZo-B5UQ_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener">厚別区中央1条5丁目　厚別区民センター会議室</a
+        >
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=新札幌体験・入会問い合わせ">
+          <img
+            src="/assets/images/legacy/dojo/n-sapporo/img8.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="260"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/atsubetsu/">← 厚別区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

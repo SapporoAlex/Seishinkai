@@ -1,0 +1,110 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "菊水元町支部",
+    address: "白石区菊水元町7条2丁目 菊水元町南町内会館",
+    schedule: ["火曜18:30(冬時間18:50-)"],
+  },
+];
+---
+
+<BaseLayout
+  title="白石区菊水元町支部の空手教室"
+  description="札幌市白石区菊水元町、菊水元町南町内会館を会場にした清心会空手道場・教室のご案内。ジュニア空手クラスの稽古日をご紹介します。"
+  lang="ja"
+  path="/dojo/kikusui2/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・菊水元町支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [菊水元町空手教室・清心会菊水元町支部]<br />
+        菊水元町空手教室は、平成22年4月より菊水元町児童会館で活動を始めました。<br />
+        令和2年4月より菊水元町南町内会館ホールに会場を移転し、火曜18:30より楽しい汗を流しています。<br />
+        設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
+        また親子での参加を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は公共施設を借りていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=菊水元町 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kikusui2/img4.jpg"
+            alt="菊水元町支部の稽古風景"
+            width="250"
+            height="130"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kikusui2/img2.jpg"
+            alt="菊水元町南町内会館"
+            width="247"
+            height="157"
+            loading="lazy"
+          />
+          <figcaption>駐車場あります</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">菊水元町支部/菊水元町空手倶楽部</h2>
+      <p>
+        ◆設立　平成22年(2010)4月<br />
+        ◆歴代　大久保翼(2012-2017)、室木拓士(2017-2019)<br />
+        ◆指導　吉田真純(2019-)
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
+          target="_blank"
+          rel="noopener">札幌市白石区菊水元町7条2丁目6-5 菊水元町南町内会館</a
+        >
+      </p>
+      <p class="detail-page__note">
+        ※旧会場：<a
+          href="https://www.google.com/maps/place/〒003-0828+北海道札幌市白石区菊水元町８条２丁目１５&#8722;５/@43.072506,141.4103447,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29557d8003c3:0x32457e679d7720d5!8m2!3d43.072506!4d141.4125334"
+          target="_blank"
+          rel="noopener">札幌市白石区菊水元町8条2丁目15-5 菊水元町児童会館体育室</a
+        >(令和2年3月まで)
+      </p>
+
+      <p class="detail-page__note">
+        <a
+          href="mailto:karate@seishinkan.ne.jp?subject=菊水元町 体験・入会問い合わせ"
+        >
+          <img
+            src="/assets/images/legacy/dojo/kikusui2/img3.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

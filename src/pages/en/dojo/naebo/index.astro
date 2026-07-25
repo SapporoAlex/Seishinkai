@@ -1,0 +1,122 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "Honmachi Karate Club (Honmachi Branch / formerly Naebo Branch)",
+    address:
+      "Naebo-Honmachi Children's Hall (inside Honmachi Elementary School), Honmachi 2-jo 7-chome 1, Higashi-ku, Sapporo",
+    schedule: ["Currently suspended (since May 2024)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Honmachi Branch (formerly Naebo Branch), Higashi Ward"
+  description="Introducing the Seishinkai Honmachi Branch (formerly the Naebo Branch) karate class in Higashi Ward, Sapporo. Previously held at the Naebo-Honmachi Children's Hall; currently suspended."
+  lang="en"
+  path="/en/dojo/naebo/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-do Federation — Honmachi Branch (formerly Naebo Branch)</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Honmachi Karate Class, Higashi Ward, Seishinkai Honmachi Branch]<br />
+        <strong>This class is currently suspended.</strong><br />
+        The Naebo Karate Class started in October 2010 (Heisei 22) at the Naebo Children's Hall. From 2023 (Reiwa 5), the Naebo Children's Hall relocated inside Honmachi Elementary School and became the "Naebo-Honmachi Children's Hall," and the class relaunched as the Honmachi Karate Class.<br />
+        A karate club centered on Kids and Junior classes.<br />
+        We especially welcome participation from parents and children together, and from the Senior Class.<br />
+        While many dojos feel like an extension of school sports clubs, we aim to make karate an enjoyable, club-like experience centered on health and fitness.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※Temporarily suspended since May 2024 (Reiwa 6). Active from 2010, activity at this venue paused at the end of April 2024. We would like to resume once around 5 or more members have gathered, so please get in touch if you're interested.<br />
+        Since the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Naebo Trial & Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/naebo/Image1.jpg"
+            alt="Practice session at the Honmachi Branch (formerly Naebo Branch)"
+            width="1022"
+            height="546"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/maekawa2.jpg"
+            alt="Instructor Maekawa"
+            width="108"
+            height="100"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="Person in charge: Masuda"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Higashi Ward — Naebo Branch</h2>
+      <p>
+        ◆ Founded: October 2010 (Heisei 22)<br />
+        ◆ Founder: Kayoko Mimura<br />
+        ◆ Past instructors: Hashini, Takigami, Maekawa<br />
+        ◆ Person in Charge: Masuda
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        From April 2023 (Reiwa 5), the Naebo Children's Hall relocated inside Honmachi Elementary School. 〒065-0042<br />
+        <a
+          href="https://www.google.com/maps/place/札幌市立本町小学校/@43.0754469,141.3902726,18z/data=!4m23!1m16!4m15!1m6!1m2!1s0x5f0b294feae3439b:0x613a14a89c37ed46!2z5pyt5bmM5biC56uL5pys55S65bCP5a2m5qCh44CB44CSMDY1LTAwNDIg5YyX5rW36YGT5pyt5bmM5biC5p2x5Yy65pys55S677yS5p2h77yX5LiB55uu77yR!2m2!1d141.3934231!2d43.0763174!1m6!1m2!1s0x5f0b29451b852511:0x21d072c862c501d5!2z44CSMDY1LTAwNDMg5YyX5rW36YGT5pyt5bmM5biC6IuX56mC55S677yV5LiB55uu77yX4oiS77yRIOacreW5jOW4guiLl-epguWFkOerpeS8mumkqA!2m2!1d141.3886617!2d43.0751405!3e2!3m5!1s0x5f0b294feae3439b:0x613a14a89c37ed46!8m2!3d43.0763316!4d141.3931049!16s/g/1tkp4s8_"
+          target="_blank"
+          rel="noopener">Naebo-Honmachi Children's Hall (inside Honmachi Elementary School), Honmachi 2-jo 7-chome 1, Higashi-ku, Sapporo</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/naebo/img3.jpg"
+          alt="Naebo-Honmachi Children's Hall"
+          width="244"
+          height="138"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Naebo Trial & Enrollment Inquiry">
+          <img
+            src="/assets/images/legacy/images/Image2.jpg"
+            alt="Apply for a trial lesson here"
+            width="645"
+            height="260"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

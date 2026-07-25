@@ -1,0 +1,114 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "石狩花川空手クラブ(花川支部)",
+    address: "石狩市花川北コミュニティセンター(旧:花川南コミュニティセンター)",
+    schedule: ["火曜16:30-17:30(R6.4より)"],
+  },
+];
+---
+
+<BaseLayout
+  title="石狩市花川支部の空手教室"
+  description="石狩市花川南・花川北の清心会空手道場・教室のご案内。ジュニアクラス中心の空手クラブ、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/hana-m/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・花川支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [石狩市花川空手クラブ・清心会花川支部]<br />
+        花川南空手教室は、平成26年6月に、花川南コミュニティセンターを会場にして設立されました。<br />
+        ※令和3年7月より南コメセンがワクチン接種会場で使えない為、花川北コミュニティセンターへ会場を変更。<br />
+        ジュニアクラス中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=花川南体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/hana-m/Image1.jpg"
+            alt="花川支部の稽古風景"
+            width="271"
+            height="152"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/takashima.jpg"
+            alt="指導リーダー 嶋"
+            width="123"
+            height="123"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">花川支部</h2>
+      <p>
+        ◆設立　平成26年(2014)6月<br />
+        ◆担当　嶋(指導リーダー)
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒061-3206+北海道石狩市花川南６条５丁目２７−２/@43.1406157,141.291549,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b267a656101db:0xeda52c8f8822b8eb!8m2!3d43.1406157!4d141.2937377"
+          target="_blank"
+          rel="noopener">石狩市花川南6-5　花川南コミュニティセンター</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/〒061-3206+北海道石狩市花川南６条５丁目２７−２/@43.1406157,141.291549,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b267a656101db:0xeda52c8f8822b8eb!8m2!3d43.1406157!4d141.2937377"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/hana-m/2.jpg"
+            alt="花川南コミュニティセンター"
+            width="251"
+            height="198"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=花川南体験申込">
+          <img
+            src="/assets/images/legacy/dojo/hana-m/img10.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

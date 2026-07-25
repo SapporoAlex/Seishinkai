@@ -1,0 +1,133 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "清田区里塚空手教室(清心会里塚支部)",
+    address: "札幌市清田区里塚緑ヶ丘10丁目4-17　里塚緑ヶ丘町内会館",
+    schedule: ["金曜18:30(冬季18:45)"],
+  },
+];
+---
+
+<BaseLayout
+  title="清田区里塚支部の空手教室"
+  description="札幌市清田区里塚緑ヶ丘町内会館の清心会空手教室のご案内。キッズ・ジュニア空手中心、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/satozuka/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・里塚空手教室</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [清田区里塚空手教室・清心会里塚支部]<br />
+        里塚空手教室は、平成11年2月に大豊湯里塚店2Fでスタートしました。<br />
+        その後、里塚会館、里塚地区センターなどを経て現在の緑ヶ丘町内会館で活動しています。<br />
+        キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=里塚体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/satozuka/Image1.jpg"
+            alt="里塚空手教室の稽古風景"
+            width="247"
+            height="149"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="里塚空手教室の稽古風景"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">里塚空手教室(里塚支部)</h2>
+      <p>
+        ◆設立　平成11年(1999)2月<br />
+        ◆設立者　大久保勝美<br />
+        ◆担当者　本部直轄<br />
+        ※複数指導員が交代で担当します
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/shima.jpg"
+            alt="指導 嶋"
+            width="103"
+            height="104"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="指導 増田"
+            width="105"
+            height="105"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/noro.jpg"
+            alt="指導 野呂"
+            width="105"
+            height="106"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/里塚緑ヶ丘町内会館/@42.9895177,141.4727112,15z/data=!4m2!3m1!1s0x0:0x56db9b692a940c94?sa=X&ved=2ahUKEwjps-jkmLHhAhUQBKYKHZFyDqEQ_BIwCnoECAsQCA"
+          target="_blank"
+          rel="noopener">札幌市清田区里塚緑ヶ丘10丁目4-17　里塚緑ヶ丘町内会館</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/里塚緑ヶ丘町内会館/@42.9895177,141.4727112,15z/data=!4m2!3m1!1s0x0:0x56db9b692a940c94?sa=X&ved=2ahUKEwjps-jkmLHhAhUQBKYKHZFyDqEQ_BIwCnoECAsQCA"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/satozuka/2.jpg"
+            alt="里塚緑ヶ丘町内会館"
+            width="258"
+            height="192"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

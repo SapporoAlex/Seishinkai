@@ -1,0 +1,124 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Takuhoku Karate Club (Takuhoku Branch)",
+    address: "Takuhoku Palace Kaikan, Takuhoku 3-jo 4-chome 1-6, Kita-ku, Sapporo",
+    schedule: ["Thursday 18:30 (changed from Wednesday since February)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Takuhoku Branch, Kita Ward"
+  description="Introducing the Takuhoku Branch of Seishinkai Karate at Takuhoku Palace Kaikan in Kita Ward, Sapporo. A Kids & Junior karate class meeting Thursdays at 6:30 PM — see training days and venue information."
+  lang="en"
+  path="/en/dojo/takuhoku/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Takuhoku Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Kita Ward Takuhoku Karate Club - Seishinkai Takuhoku Branch]<br />
+        The Takuhoku karate class has been active since October 2011 (Heisei 23).<br />
+        It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
+        Participation by parents and children together, as well as senior class members, is especially welcome.<br />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※Training was originally held on Wednesdays, but changed to Thursday 18:30 in February due to scheduling at Takuhoku Kaikan.<br />
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Takuhoku Branch Trial Lesson / Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/takuhoku/Image1.jpg"
+            alt="Training session at the Takuhoku Branch"
+            width="276"
+            height="150"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/yamane.jpg"
+            alt="Instructor Yamane"
+            width="239"
+            height="239"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/takashima.jpg"
+            alt="Instructor Shima"
+            width="123"
+            height="123"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Takuhoku Branch</h2>
+      <p>
+        ◆Founded: October 2011 (Heisei 23)<br />
+        ◆Founder: Tsubasa Nimori<br />
+        ◆Instructors: Yamane, Shima
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
+          target="_blank"
+          rel="noopener">1-6 Takuhoku 3-jo 4-chome, Kita-ku, Sapporo, Takuhoku Palace Kaikan</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/takuhoku/2.jpg"
+            alt="Takuhoku Palace Kaikan"
+            width="282"
+            height="216"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Takuhoku Branch Trial Lesson / Enrollment Inquiry">
+          <img
+            src="/assets/images/legacy/dojo/takuhoku/imgC.jpg"
+            alt="Apply for a trial lesson here"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

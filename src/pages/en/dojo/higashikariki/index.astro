@@ -1,0 +1,109 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Higashi-Kaerai Karate Club",
+    address: "Higashi-Kaerai Children's Hall, Higashi-Kaerai 14-jo 2-chome 1-1, Higashi-ku, Sapporo",
+    schedule: ["Thursday 18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Higashi-Kaerai Branch, Higashi Ward"
+  description="Introducing the Higashi-Kaerai Karate Club, a Seishinkai Karate dojo in Higashi-Kaerai, Higashi Ward, Sapporo. Training is held on Thursdays at the Higashi-Kaerai Children's Hall."
+  lang="en"
+  path="/en/dojo/higashikariki/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-do Federation — Higashi-Kaerai Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Higashi-Kaerai Karate Class, Seishinkai Higashi-Kaerai Branch]<br />
+        The Higashi-Kaerai Karate Class started in February 2021 (Reiwa 3).<br />
+        It's karate that everyone from children to adults can enjoy learning.<br />
+        We especially welcome participation from parents and children together, and from the Senior Class.<br />
+        While many dojos feel like an extension of school sports clubs, we aim to make karate an enjoyable, club-like experience centered on health and fitness.<br />
+        The instructor in charge has experience working at a kindergarten (and holds a kindergarten teaching license), so preschoolers and younger elementary students can be brought with confidence.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※Since the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Higashi-Kaerai Trial Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/higashikariki/img7.jpg"
+            alt="Practice session at the Higashi-Kaerai Branch"
+            width="611"
+            height="216"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/manaya.jpg"
+            alt="Instructor"
+            width="142"
+            height="142"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Sapporo Higashi Ward — Higashi-Kaerai Branch</h2>
+      <p>
+        ◆ Founded: February 2021 (Reiwa 3)<br />
+        ◆ Founder: Inomata<br />
+        ◇ Under direct Headquarters management: Saito
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/札幌市東雁来児童会館+かりたま/@43.105653,141.4308999,15z/data=!4m5!3m4!1s0x0:0xeb5bbea1f521e82b!8m2!3d43.1056214!4d141.4308765"
+          target="_blank"
+          rel="noopener">Higashi-Kaerai Children's Hall, Higashi-Kaerai 14-jo 2-chome 1-1, Higashi-ku, Sapporo</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/higashikariki/img3.jpg"
+          alt="Higashi-Kaerai Children's Hall"
+          width="437"
+          height="239"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Higashi-Kaerai Trial Application">
+          <img
+            src="/assets/images/legacy/dojo/higashikariki/img16.jpg"
+            alt="Click here to apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

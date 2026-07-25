@@ -1,0 +1,125 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "アカシア空手クラブ(アカシア支部)",
+    address: "東区北22条東1丁目1-20 アカシア若者活動センター",
+    schedule: ["木曜16:00-17:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="東区アカシア支部の空手教室"
+  description="札幌市東区北22条の清心会空手道場・アカシア支部のご案内。アカシア若者活動センターでの木曜稽古日をご紹介します。"
+  lang="ja"
+  path="/dojo/akashia/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・アカシア支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [東区アカシア空手教室・清心会アカシア支部]<br />
+        札幌東アカシア空手教室は、平成30年6月にアカシア若者活動者センターでスタートしました。<br />
+        東区と北区の境である石狩街道に近く、両方の地域の方が来場しやすい場所にあります。<br />
+        キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=アカシア体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/akashia/Image1.jpg"
+            alt="アカシア支部の稽古風景"
+            width="327"
+            height="207"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/oki.jpg"
+            alt="指導 沖村"
+            width="116"
+            height="119"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/sahan.jpg"
+            alt="サハン"
+            width="102"
+            height="99"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/muro.jpg"
+            alt="室木"
+            width="102"
+            height="102"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">東区アカシア支部</h2>
+      <p>
+        ◆設立　平成30年(2018)6月<br />
+        ◆設立者　室木拓士<br />
+        ◆担当者　沖村さおり<br />
+        ※室木、サハンが不定期で指導参加しています
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a href="http://yahoo.jp/-j3unj" target="_blank" rel="noopener"
+          >札幌市東区北22条東1丁目1-20　アカシア若者活動者センター</a
+        >
+      </p>
+      <div class="detail-media">
+        <a href="http://yahoo.jp/-j3unj" target="_blank" rel="noopener">
+          <img
+            src="/assets/images/legacy/dojo/akashia/2.jpg"
+            alt="アカシア若者活動者センター"
+            width="224"
+            height="168"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__note">
+        <img
+          src="/assets/images/legacy/images/Image1_akashia_wide.jpg"
+          alt="アカシア若者活動者センター"
+          width="649"
+          height="196"
+          loading="lazy"
+        />
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,111 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "南区真駒内空手教室(清心会真駒内支部)",
+    sub: "真駒内空手倶楽部",
+    address: "札幌市南区真駒内泉町3丁目1-6　真駒内五輪児童会館",
+    schedule: ["月曜18:30-19:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="南区真駒内支部の空手教室"
+  description="札幌市南区真駒内五輪児童会館の清心会空手教室のご案内。キッズ・ジュニア空手中心、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/makomanai/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・真駒内支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [南区真駒内空手教室・清心会真駒内支部]<br />
+        真駒内空手教室は平成19年に真駒内五輪児童会館でスタートしましたが、平成29年に所属員が減り藻岩、常盤支部と統合しましたが、令和元年9月より再開しました。<br />
+        キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと思います。体験者募集中です!<br />
+        また親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=真駒内体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/images/oki.jpg"
+            alt="指導 沖村"
+            width="110"
+            height="115"
+            loading="lazy"
+          />
+          <figcaption>指導 沖村</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/makomanai/acs1.jpg"
+            alt="真駒内支部の稽古風景"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">南区真駒内支部/真駒内空手倶楽部</h2>
+      <p>
+        ◆設立　平成19年(2007)4月(〜2017)<br />
+        ◆再開　令和元年(2019)9月<br />
+        ◆設立者　室木拓士(2007-2017)<br />
+        ◆担当者　沖村(2019-)
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/真駒内五輪児童会館/@42.988268,141.355716,15z/data=!4m5!3m4!1s0x0:0xfab4d39ee1b5a423!8m2!3d42.988268!4d141.355716"
+          target="_blank"
+          rel="noopener">札幌市南区真駒内泉町3丁目1-6　真駒内五輪児童会館</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/makomanai/img2.jpg"
+          alt="真駒内五輪児童会館"
+          width="254"
+          height="194"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=真駒内体験申込">
+          <img
+            src="/assets/images/legacy/dojo/makomanai/img9.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
