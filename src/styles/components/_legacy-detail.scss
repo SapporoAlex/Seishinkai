@@ -43,6 +43,7 @@
   &__img-text-pair--reverse {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     gap: 40px;
     @include mqsp {
       flex-direction: column;
@@ -355,6 +356,52 @@
 .detail-media--big {
   height: auto;
   width: 70%;
+  min-width: 300px;
+  @include mqsp {
+    width: 100%;
+  }
+  figure {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color var(--hover-time),
+      box-shadow var(--hover-time);
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &.is-visible:has(a):hover {
+      border-color: var(--blue);
+      box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
+      transform: translateY(-4px);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      @include mqsp {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.detail-media--med {
+  height: auto;
+  width: 50%;
   min-width: 300px;
   @include mqsp {
     width: 100%;

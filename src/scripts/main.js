@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const animatedElements = document.querySelectorAll(
     ".fade-in, .fade-up-in, .fade-left-in, .fade-right-in, " +
-      ".detail-gallery figure, .detail-img-pair figure, .detail-media img, .detail-media--big figure, .youtube-card, .photo-grid figure, " +
+      ".detail-gallery figure, .detail-img-pair figure, .detail-media img, .detail-media--big figure, .detail-media--med figure, .youtube-card, .photo-grid figure, " +
       ".about__timeline-figure a",
   );
 
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
       {
-        rootMargin: "0px 0px -10% 0px",
-        threshold: 0.2,
+        rootMargin: "0px 0px -20% 0px",
+        threshold: 0,
       },
     );
 
