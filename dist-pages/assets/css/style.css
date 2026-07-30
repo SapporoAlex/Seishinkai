@@ -3005,6 +3005,9 @@ a.content-slider__slide:hover .content-slider__media img {
   width: 24px;
   height: 24px;
 }
+.news__icon--members {
+  background: var(--red);
+}
 .news__card-body {
   display: flex;
   flex-direction: column;

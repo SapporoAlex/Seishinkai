@@ -12,70 +12,81 @@ const newsletters = [
 
 const snsLinks = [
   {
+    id: "members",
+    name: "会員ブログ・Facebook",
+    description: "支部・会員が運営するブログ、Facebookページの一覧です。",
+    href: "/news/blogs/",
+    target: "",
+  },
+  {
     id: "facebook",
     name: "Facebook グループ",
     description: "清心会空手道場の公式Facebookグループ。日々の活動の様子をお届けします。",
     href: "https://www.facebook.com/seishinkai.karate.dojo",
+    target: "_blank",
   },
   {
     id: "x",
     name: "X (Twitter)",
     description: "清心会公式アカウント。最新のお知らせを発信しています。",
     href: "https://twitter.com/Seishinkai2",
+    target: "_blank",
   },
   {
     id: "tiktok",
     name: "TikTok",
     description: "演武や稽古風景、大会の様子などを動画で紹介しています。",
     href: "https://www.tiktok.com/@seishinryu.karate",
+    target: "_blank",
   },
   {
     id: "youtube",
     name: "YouTube チャンネル",
     description: "演武・稽古・メディア出演などの動画を公開しています。",
     href: "https://www.youtube.com/channel/UClIx3Srenlu1ddf5coow83A/playlists",
+    target: "_blank",
   },
   {
     id: "blog",
     name: "公式ブログ",
     description: "稽古や行事の様子を綴る清心会道場の公式ブログです。",
     href: "https://seishinkan-dojo.hateblo.jp/",
+    target: "_blank",
   },
   {
     id: "events-blog",
     name: "行事ブログ",
     description: "大会や審査会、合宿などの行事の様子を掲載しています。",
     href: "https://seishinryu.hatenablog.com/",
+    target: "_blank",
   },
   {
     id: "news-blog",
     name: "ニュースブログ",
     description: "清心会からのお知らせや最新情報を掲載しています。",
     href: "https://seishinkan-news.hatenablog.com/",
+    target: "_blank",
   },
   {
     id: "okubo-blog",
     name: "大久保道場ブログ",
     description: "大久保道場の活動や稽古の様子などを紹介しています。",
     href: "https://okubo-dojo.hatenablog.com/",
+    target: "_blank",
   },
   {
     id: "bbs",
     name: "掲示板・連絡事項",
     description: "休講情報や連絡事項を掲載しています。悪天候時などはこちらをご確認ください。",
     href: "https://seishinkan-dojo.bbs.fc2.com/",
-  },
-  {
-    id: "members",
-    name: "会員ブログ・Facebook",
-    description: "支部・会員が運営するブログ、Facebookページの一覧です。",
-    href: "/news/blogs/",
+    target: "_blank",
   },
   {
     id: "events",
     name: "清心会空手行事予定",
     description: "大会・審査会・合宿など、年間の行事予定を掲載しています。",
     href: "/news/archive/",
+    target: "",
   },
 ];
 ---
@@ -99,8 +110,16 @@ const snsLinks = [
       <div class="news__grid">
         {
           snsLinks.map((sns) => (
-            <a class="news__card fade-up-in" href={sns.href} target="_blank" rel="noopener">
+            <a class="news__card fade-up-in" href={sns.href} target={sns.target} rel="noopener">
               <span class={`news__icon news__icon--${sns.id}`} aria-hidden="true">
+                {sns.id === "members" && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                )}
                 {sns.id === "facebook" && (
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
@@ -154,14 +173,6 @@ const snsLinks = [
                 {sns.id === "bbs" && (
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                )}
-                {sns.id === "members" && (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                 )}
                 {sns.id === "events" && (

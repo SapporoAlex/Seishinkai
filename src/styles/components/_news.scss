@@ -104,6 +104,9 @@
       width: 24px;
       height: 24px;
     }
+    &--members {
+      background: var(--red);
+    }
   }
 
   &__card-body {
