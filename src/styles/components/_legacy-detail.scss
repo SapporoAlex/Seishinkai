@@ -17,13 +17,13 @@
 
     a {
       color: var(--red);
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: underline;
     }
   }
 
   &__contact {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--navy);
     margin-bottom: 32px;
 
@@ -111,7 +111,7 @@
   th {
     background: var(--navy);
     color: var(--white);
-    font-weight: 700;
+    font-weight: 600;
     white-space: nowrap;
   }
 
@@ -135,7 +135,7 @@
   }
 
   &__name {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--navy);
     min-width: 11rem;
   }
@@ -143,7 +143,7 @@
   &__name-sub {
     display: block;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-mid);
   }
 
@@ -171,7 +171,7 @@
 
   &__marker {
     color: var(--red);
-    font-weight: 700;
+    font-weight: 600;
     margin-right: 4px;
   }
 }
@@ -456,7 +456,7 @@
 .profile-detail {
   &__role {
     color: var(--red);
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 8px;
   }
@@ -612,7 +612,7 @@
   span {
     display: block;
     padding: 10px 12px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--navy);
   }
 
@@ -731,7 +731,7 @@
 
   &__date {
     flex: 0 0 9rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--navy);
     white-space: nowrap;
   }

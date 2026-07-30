@@ -15,7 +15,7 @@
 
   &__contact-header span {
     color: #d62828;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 2px;
   }
 
@@ -58,7 +58,7 @@
 
   &__big {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #d62828;
     @include mqpc {
       cursor: default;

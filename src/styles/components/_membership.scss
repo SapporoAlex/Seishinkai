@@ -32,8 +32,8 @@
 
   &__point-title {
     font-family: "Noto Serif JP", serif;
-    font-size: 1.05rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--navy);
     margin: 0 0 12px;
   }
@@ -65,7 +65,7 @@
   &__cta-title {
     font-family: "Noto Serif JP", serif;
     font-size: var(--fs-lg);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--white);
     margin: 0;
   }
@@ -101,7 +101,7 @@
   &__fees-title {
     font-family: "Noto Serif JP", serif;
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--navy);
     margin: 0;
     padding-bottom: 10px;
@@ -117,7 +117,7 @@
 
   &__fees-amount {
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--red);
     margin: 0;
   }
@@ -180,7 +180,9 @@
 
       &:hover {
         box-shadow: 0 6px 14px rgba(13, 37, 69, 0.08);
-        transform: translateY(-4px) !important; // see .membership__media-card note on fade-up-in + animation
+        transform: translateY(
+          -4px
+        ) !important; // see .membership__media-card note on fade-up-in + animation
       }
     }
 
@@ -289,7 +291,9 @@
     flex-shrink: 0;
     font-size: 1.2rem;
     color: var(--navy);
-    transition: transform var(--hover-time), color var(--hover-time);
+    transition:
+      transform var(--hover-time),
+      color var(--hover-time);
   }
 
   &__npo-note {
