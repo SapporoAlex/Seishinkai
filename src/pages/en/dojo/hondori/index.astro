@@ -1,13 +1,59 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import ClassScheduleCard from "@components/ClassScheduleCard.astro";
 
 const entries = [
   {
     marker: "★",
     name: "Seishinkan Hondori Dojo",
     address: "16-chome-kita Hondori, Shiroishi-ku, Sapporo (along National Route 12), Hondori Seishinkan",
-    schedule: ["Wednesday class 16:30", "Friday class 19:00", "Sunday class 17:00"],
+    schedule: [
+      "Wednesday class 16:30-17:30",
+      "Friday class 19:00-20:00",
+      "Sunday special class (currently accepting new members; starts once 3 sign up)",
+    ],
+  },
+];
+
+const classes = [
+  {
+    title: "Wednesday Class",
+    schedule: ["16:30-17:30"],
+    instructors: [
+      {
+        name: "Rui",
+        position: "Live-in Disciple",
+        image: "/assets/images/instructors/rui.jpg",
+      },
+      {
+        name: "Takashima",
+        position: "Assistant Instructor",
+        image: "/assets/images/instructors/takashima.jpg",
+      },
+    ],
+  },
+  {
+    title: "Friday Class",
+    schedule: ["19:00-20:00"],
+    instructors: [
+      {
+        name: "Keiji Wakabayashi",
+        position: "Deputy Shihan",
+        image: "/assets/images/instructors/wakabayashi.jpg",
+      },
+    ],
+  },
+  {
+    title: "Sunday Special Class",
+    schedule: ["Currently accepting new members / starts once 3 sign up"],
+    instructors: [
+      {
+        name: "Takashima",
+        position: "Assistant Instructor",
+        image: "/assets/images/instructors/takashima.jpg",
+      },
+    ],
   },
 ];
 ---
@@ -47,6 +93,18 @@ const entries = [
         Start times etc. may vary slightly, so those attending a trial lesson should confirm in advance.
       </p>
 
+      <div class="class-schedule-grid">
+        {
+          classes.map((c) => (
+            <ClassScheduleCard
+              title={c.title}
+              schedule={c.schedule}
+              instructors={c.instructors}
+            />
+          ))
+        }
+      </div>
+
       <div class="detail-gallery">
         <figure>
           <img
@@ -73,8 +131,9 @@ const entries = [
       <p>
         ◆ Founded: April 2011 (Heisei 23)<br />
         ◆ Founder: Kayoko Mimura (2011–2015)<br />
-        　Past instructors: Hashini (2015–2020), Yuka Takigami (2020–2021)<br />
-        ◆ Instructors: Kazuya Takashima (2021–), Keiji Wakabayashi (2020–), Urin Masuda (2024–)
+        　Past instructors: Hashini (2015–2020), Yuka Takigami (2020–2021), Urin
+        Masuda (2024–2026)<br />
+        ◆ Instructors: Kazuya Takashima (2021–), Keiji Wakabayashi (2020–), Rui (2026–)
       </p>
 
       <h2 class="detail-page__heading">Venue</h2>

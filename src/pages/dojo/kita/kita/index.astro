@@ -1,0 +1,126 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "ARCS北空手クラブ",
+    address: "北区北24条西9丁目1-1 アークス北24条店2F",
+    schedule: ["木曜クラス16:00-17:00", "土曜クラス15:30-17:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="札幌市北区ARCS北支部の空手教室"
+  description="札幌市北区、アークス北24条店2Fの清心会空手道場・ARCS北空手クラブのご案内。木曜・土曜稽古を行うキッズ・ジュニア空手クラブです。"
+  lang="ja"
+  path="/dojo/kita/kita/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・札幌北・ARCS北支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [アークス北空手教室・清心会ARCS北支部(札幌北)]<br />
+        ARCS北空手教室は、平成22年4月に、アークス北24条店のコミニティスペースをお借りしてスタートした支部です。<br
+        />
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
+        平成25年5月には土曜クラスを追加しました。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        アークスの中にありますのでお子様が稽古中にお買い物などもできて便利な立地にあります。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=北 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kita/Image1.jpg"
+            alt="木曜クラスの稽古風景"
+            width="374"
+            height="203"
+            loading="lazy"
+          />
+          <figcaption>木曜クラス</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kita/Image2.jpg"
+            alt="土曜クラスの稽古風景"
+            width="341"
+            height="174"
+            loading="lazy"
+          />
+          <figcaption>土曜クラス</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/maekawa.jpg"
+            alt="担当 前川"
+            width="106"
+            height="106"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="担当 髙嶋"
+            width="1147"
+            height="1147"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">札幌北支部</h2>
+      <p>
+        ◆設立　平成22年(2010)4月<br />
+        ◆設立者　三村佳代子<br />
+        ◆歴代　ハシニ、沖村、島<br />
+        ◆担当者　髙嶋、前川、他交代で
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
+          target="_blank"
+          rel="noopener">札幌市北区北24条西9丁目1-1　アークス北24条店2F</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/kita/2.jpg"
+            alt="アークス北24条店2F"
+            width="286"
+            height="178"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

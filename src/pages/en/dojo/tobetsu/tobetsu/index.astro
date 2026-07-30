@@ -1,0 +1,117 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Tobetsu Karate Club",
+    address: "2792 Shirakaba-cho, Tobetsu Town (Tobetsu Town General Gymnasium)",
+    schedule: ["Saturday 18:00 (since April 2024)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Tobetsu Town"
+  description="Information on the Seishinkai Karate dojo — Tobetsu Branch — in Tobetsu Town, Hokkaido. Training days and venue details."
+  lang="en"
+  path="/en/dojo/tobetsu/tobetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Tobetsu Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Tobetsu Karate Class / Seishinkai Tobetsu Branch]<br />
+        The Tobetsu karate class started in October 2008 (Heisei 20).<br />
+        The venue is the Tobetsu Town General Gymnasium.<br />
+        The class is centered on Kids and Junior classes. Parent-child participation and Senior Class members
+        are also welcome.<br />
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health
+        and fitness training — practicing and learning together in a relaxed, club-like atmosphere.<br />
+        ※For 3-year-old preschoolers attending with a parent, the monthly fee is free.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Tobetsu Trial Lesson & Membership Inquiry"
+          >office</a
+        >.<br />
+        When the Tobetsu Town General Gymnasium is unavailable, practice sometimes takes place at the
+        Shirakaba Community Center instead. Please check the <a
+          href="https://karate14.dokkin.com/"
+          target="_blank"
+          rel="noopener">Tobetsu Branch schedule page</a
+        > for the current training venue.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="In charge: Takashima"
+            width="1147"
+            height="1147"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="Seishinkai Karate training session"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Tobetsu Branch (Headquarters-run)</h2>
+      <p>
+        ◆ Founded: October 2008 (Heisei 20)<br />
+        ◆ In charge: Takashima
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/当別町立当別町+総合体育館/@43.223059,141.5131699,15z/data=!4m2!3m1!1s0x0:0x42d9adf5ac1b5e0?sa=X&ved=2ahUKEwid7uW7ya_hAhVDFYgKHW7eAj0Q_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener">2792 Shirakaba-cho, Tobetsu Town, Tobetsu Town General Gymnasium</a
+        >
+      </p>
+      <p class="detail-page__note">
+        ※Alternate venue: <a
+          href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"
+          target="_blank"
+          rel="noopener">2792-1 Shirakaba, Tobetsu Town, Shirakaba Community Center</a
+        >
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="Instructor"
+            width="161"
+            height="161"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/tobetsu/">← Back to the Dojo List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

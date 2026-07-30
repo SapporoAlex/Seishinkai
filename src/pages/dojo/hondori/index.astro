@@ -1,13 +1,59 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import ClassScheduleCard from "@components/ClassScheduleCard.astro";
 
 const entries = [
   {
     marker: "★",
     name: "清心館本通道場",
     address: "白石区本通16丁目北(国道12号線沿) 本通清心館",
-    schedule: ["水曜クラス16:30", "金曜クラス19:00", "日曜クラス17:00"],
+    schedule: [
+      "水曜クラス16:30-17:30",
+      "金曜クラス19:00-20:00",
+      "日曜特設クラス(新規受付中/3名集まり次第開始)",
+    ],
+  },
+];
+
+const classes = [
+  {
+    title: "水曜クラス",
+    schedule: ["16:30-17:30"],
+    instructors: [
+      {
+        name: "瑠唯",
+        position: "内弟子",
+        image: "/assets/images/instructors/rui.jpg",
+      },
+      {
+        name: "髙嶋",
+        position: "師範補",
+        image: "/assets/images/instructors/takashima.jpg",
+      },
+    ],
+  },
+  {
+    title: "金曜クラス",
+    schedule: ["19:00-20:00"],
+    instructors: [
+      {
+        name: "若林 敬司",
+        position: "師範代",
+        image: "/assets/images/instructors/wakabayashi.jpg",
+      },
+    ],
+  },
+  {
+    title: "日曜特設クラス",
+    schedule: ["新規受付中／3名集まり次第開始"],
+    instructors: [
+      {
+        name: "髙嶋",
+        position: "師範補",
+        image: "/assets/images/instructors/takashima.jpg",
+      },
+    ],
   },
 ];
 ---
@@ -44,6 +90,18 @@ const entries = [
         開始時刻等若干変動する場合がありますので体験の方は事前にご確認下さい。
       </p>
 
+      <div class="class-schedule-grid">
+        {
+          classes.map((c) => (
+            <ClassScheduleCard
+              title={c.title}
+              schedule={c.schedule}
+              instructors={c.instructors}
+            />
+          ))
+        }
+      </div>
+
       <div class="detail-gallery">
         <figure>
           <img
@@ -70,8 +128,8 @@ const entries = [
       <p>
         ◆設立　平成23年(2011)4月<br />
         ◆設立者　三村佳代子(2011-2015)<br />
-        　歴代　ハシニ(2015-2020)、滝上由佳(2020-2021)<br />
-        ◆指導　高嶋和也(2021-)、若林敬司(2020-)、増田宇倫(2024-)
+        　歴代　ハシニ(2015-2020)、滝上由佳(2020-2021)、増田宇倫(2024-2026)<br />
+        ◆指導　高嶋和也(2021-)、若林敬司(2020-)、瑠唯(2026-)
       </p>
 
       <h2 class="detail-page__heading">会場</h2>

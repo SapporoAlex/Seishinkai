@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import SocialLinkCard from "@components/SocialLinkCard.astro";
 
 const memberBlogs = [
   {
     name: "Tsubasa Okubo",
+    image: "/assets/images/instructors/tsubasa.jpg",
     links: [
       { label: "Facebook", href: "https://www.facebook.com/tsubasa.ohkubo" },
       { label: "Personal Blog", href: "http://liveisaction.tumblr.com/" },
@@ -11,17 +13,126 @@ const memberBlogs = [
   },
   {
     name: "Takashima",
+    image: "/assets/images/instructors/takashima.jpg",
     links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100010931403991" }],
   },
   {
     name: "Hashini (Sri Lanka)",
-    links: [{ label: "Blog", href: "https://ameblo.jp/hashitharu/entrylist.html" }],
+    image: "/assets/images/legacy/clubu/hashini.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/kkht.hashi" },
+      { label: "Blog", href: "https://ameblo.jp/hashitharu/entrylist.html" },
+    ],
   },
   {
     name: "Takushi Muroki",
+    image: "/assets/images/instructors/muroki.jpg",
     links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100014649318764" }],
   },
 ];
+
+const branchChiefBlogs = [
+  {
+    name: "Nobutaka Maekawa",
+    image: "/assets/images/instructors/maekawa.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/nobutaka.maekawa" },
+      { label: "Blog", href: "https://sky.ap.teacup.com/reimeishiya/" },
+    ],
+  },
+  {
+    name: "Kazunori Sumiyoshi",
+    image: "/assets/images/instructors/sumiyoshi.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/sjuku7" },
+      { label: "Blog", href: "https://sjuku.exblog.jp/" },
+    ],
+  },
+  {
+    name: "Jushin Inuura",
+    image: "/assets/images/instructors/inuura.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/jushin.inuura.3" },
+      { label: "Blog", href: "http://santakuji.cocolog-nifty.com/blog/" },
+    ],
+  },
+  {
+    name: "Ryuichiro Inoue",
+    image: "/assets/images/instructors/inoue.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/ryuichirou.inoue" },
+      { label: "Blog", href: "https://blog.goo.ne.jp/hazakuranohimawari" },
+    ],
+  },
+  {
+    name: "Kazuya Aoki",
+    image: "/assets/images/legacy/images/aoki.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/kazuya.aoki.180" },
+      { label: "Blog", href: "https://blog.goo.ne.jp/mokunyan" },
+    ],
+  },
+  {
+    name: "Kazuaki Namikawa",
+    image: "/assets/images/instructors/namikawa.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/kazuaki.namikawa" },
+      { label: "Blog", href: "https://angel.ap.teacup.com/spock/" },
+    ],
+  },
+  {
+    name: "Tetsuhiro Kudo",
+    image: "/assets/images/instructors/kudo.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/tetsuhiro.kudou" }],
+  },
+  {
+    name: "Hiromi Kudo",
+    image: "/assets/images/instructors/hiromi.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100004385984913" }],
+  },
+  {
+    name: "Jun Mikami",
+    image: "/assets/images/instructors/mikami.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/jun.mikami.7" }],
+  },
+  {
+    name: "Yoshihiko Oikawa",
+    image: "/assets/images/instructors/oikawa.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100010667766864" }],
+  },
+  {
+    name: "Atsushi Saegusa (Fukuoka Branch)",
+    image: "/assets/images/legacy/images/sae.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/atsushi.saegusa1" }],
+  },
+  {
+    name: "Saegusa Masaki (Fukuoka Branch)",
+    image: "/assets/images/legacy/images/masaki.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/masaki.saegusa.9" }],
+  },
+];
+
+const overseasBlogs = [
+  {
+    name: "Sri Lanka Branch Chief",
+    image: "/assets/images/instructors/kkpp.jpg",
+    links: [
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/kkpps.satharasinghe/",
+      },
+    ],
+  },
+];
+
+const mimuraBlog = {
+  name: "The Late Kayoko Mimura",
+  image: "/assets/images/instructors/mimu2.jpg",
+  links: [
+    { label: "Mimu Blog", href: "https://yaplog.jp/happpykarate/1" },
+    { label: "Legacy Mimu Blog", href: "https://music.ap.teacup.com/kimagure/" },
+  ],
+};
 
 const officialBlogs = [
   {
@@ -86,25 +197,40 @@ const legacyArchives = [
 
       <section class="partner-section">
         <h2 class="detail-page__heading">Member Blogs & Facebook</h2>
-
-        <ul class="partner-section__list">
+        <div class="social-link-grid">
           {memberBlogs.map((m) => (
-            <li class="partner-section__item">
-              <span>
-                {m.name}
-                {" — "}
-                {m.links.map((l, i) => (
-                  <>
-                    {i > 0 && " • "}
-                    <a href={l.href} target="_blank" rel="noopener noreferrer">
-                      {l.label}
-                    </a>
-                  </>
-                ))}
-              </span>
-            </li>
+            <SocialLinkCard name={m.name} image={m.image} links={m.links} />
           ))}
-        </ul>
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">Shihan, Branch Chiefs & Instructors</h2>
+        <div class="social-link-grid">
+          {branchChiefBlogs.map((m) => (
+            <SocialLinkCard name={m.name} image={m.image} links={m.links} />
+          ))}
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">Overseas Branches & Members</h2>
+        <div class="social-link-grid">
+          {overseasBlogs.map((m) => (
+            <SocialLinkCard name={m.name} image={m.image} links={m.links} />
+          ))}
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">The Late Kayoko Mimura, Former Director</h2>
+        <div class="social-link-grid">
+          <SocialLinkCard
+            name={mimuraBlog.name}
+            image={mimuraBlog.image}
+            links={mimuraBlog.links}
+          />
+        </div>
       </section>
 
       <section class="partner-section">

@@ -1,5 +1,37 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ClassScheduleCard from "@components/ClassScheduleCard.astro";
+
+const classes = [
+  {
+    title: "Friday Class",
+    schedule: ["① 6:00 pm – 7:00 pm", "② 7:10 pm – 8:10 pm (hall until 8:30 pm)"],
+    instructors: [
+      {
+        name: "Tsubasa Okubo",
+        position: "Chief Shihan",
+        image: "/assets/images/instructors/tsubasa.jpg",
+      },
+    ],
+    note: "Directly operated by Headquarters　※Class ① is for beginners",
+  },
+  {
+    title: "Sunday Class",
+    schedule: [
+      "① 9:30 am – 10:30 am",
+      "② 10:40 am – 11:50 am",
+      "Winter (Dec–Mar) ① 10:00–10:50 am ② 11:00–11:55 am",
+    ],
+    instructors: [
+      {
+        name: "Keiji Wakabayashi",
+        position: "Deputy Shihan",
+        image: "/assets/images/instructors/wakabayashi.jpg",
+      },
+    ],
+    note: "※Class ① is for beginners",
+  },
+];
 ---
 
 <BaseLayout
@@ -46,80 +78,42 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         </p>
       </div>
 
-      <h2 class="detail-page__heading">Friday Classes</h2>
-
-      <div class="detail-page__img-text-pair--reverse">
-        <div class="detail-media--big">
-          <figure>
-            <img
-              src="/assets/images/dojo/img_atsubetsu_1.jpg"
-              alt="Friday karate class"
-              width="234"
-              height="144"
-              loading="lazy"
-            />
-          </figure>
-        </div>
-
-        <div>
-          <div class="detail-media">
-            <figure>
-              <img
-                src="/assets/images/instructors/tsubasa.jpg"
-                alt="Instructor Tsubasa Okubo"
-                width="234"
-                height="144"
-                loading="lazy"
-              />
-            </figure>
-            <figcaption>Directly Operated by Headquarters</figcaption>
-          </div>
-
-          <p>
-            ① 6:00 pm – 7:00 pm<br />
-            ② 7:10 pm – 8:10 pm<br />
-            (Hall available until 8:30 pm)
-          </p>
-        </div>
+      <h2 class="detail-page__heading">Classes in Session</h2>
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/dojo/img_atsubetsu_1.jpg"
+            alt="Friday karate class"
+            width="234"
+            height="144"
+            loading="lazy"
+          />
+          <figcaption>Friday Class</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/dojo/img_atsubetsu_2.jpg"
+            alt="Sunday karate class"
+            width="234"
+            height="144"
+            loading="lazy"
+          />
+          <figcaption>Sunday Class</figcaption>
+        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Sunday Classes</h2>
-
-      <div class="detail-page__img-text-pair--reverse">
-        <div class="detail-media--big">
-          <figure>
-            <img
-              src="/assets/images/dojo/img_atsubetsu_2.jpg"
-              alt="Sunday karate class"
-              width="234"
-              height="144"
-              loading="lazy"
+      <h2 class="detail-page__heading">Class Schedule</h2>
+      <div class="class-schedule-grid">
+        {
+          classes.map((c) => (
+            <ClassScheduleCard
+              title={c.title}
+              schedule={c.schedule}
+              instructors={c.instructors}
+              note={c.note}
             />
-          </figure>
-        </div>
-
-        <div>
-          <div class="detail-media">
-            <figure>
-              <img
-                src="/assets/images/instructors/wakabayashi.jpg"
-                alt="Branch Chief Wakabayashi"
-                width="234"
-                height="144"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-
-          <p>
-            ① 9:30 am – 10:30 am<br />
-            ② 10:40 am – 11:50 am<br />
-            <br />
-            <strong>Winter Schedule (December–March)</strong><br />
-            ① 10:00 am – 10:50 am<br />
-            ② 11:00 am – 11:55 am
-          </p>
-        </div>
+          ))
+        }
       </div>
 
       <h2 class="detail-page__heading">Atsubetsu Branch Information</h2>

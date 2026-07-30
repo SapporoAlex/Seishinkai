@@ -8,19 +8,19 @@
     "title": "師範 住吉一徳",
     "subtitle": "(清心会札幌西本部長)",
     "locations": [
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新発寒</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>西町</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>手稲</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>宮の沢</a>",
+      "<a href='https://sumiyoshijuku.org/class/shinhassamu/' target='_blank'>新発寒</a>",
+      "<a href='https://sumiyoshijuku.org/class/nishimachi/' target='_blank'>西町</a>",
+      "<a href='https://sumiyoshijuku.org/class/teine/' target='_blank'>手稲</a>",
+      "<a href='https://sumiyoshijuku.org/class/miyanosawa/' target='_blank'>宮の沢</a>",
       "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>前田</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新川</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>新琴似</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>星置</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>発寒</a>",
+      "<a href='https://sumiyoshijuku.org/class/shinkotoni/' target='_blank'>新川</a>",
+      "<a href='https://sumiyoshijuku.org/class/shinkotoni/' target='_blank'>新琴似</a>",
+      "<a href='https://sumiyoshijuku.org/class/hoshioki/' target='_blank'>星置</a>",
+      "<a href='https://sumiyoshijuku.org/class/hassamu/' target='_blank'>発寒</a>",
       "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>西野</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>麻生</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>屯田</a>",
-      "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>八軒</a>"
+      "<a href='https://sumiyoshijuku.org/class/azabu/' target='_blank'>麻生</a>",
+      "<a href='https://sumiyoshijuku.org/class/tonden/' target='_blank'>屯田</a>",
+      "<a href='https://sumiyoshijuku.org/class/hachiken/' target='_blank'>八軒</a>"
     ],
     "en": {
       "name": "Sapporo West District HQ / Sumiyoshi-juku",
@@ -28,19 +28,19 @@
       "title": "Shihan Sumiyoshi",
       "subtitle": "(Seishinkai Sapporo West Branch Chief)",
       "locations": [
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Shin-Hassamu</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Nishimachi</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Teine</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Miyanosawa</a>",
+        "<a href='https://sumiyoshijuku.org/class/shinhassamu/' target='_blank'>Shin-Hassamu</a>",
+        "<a href='https://sumiyoshijuku.org/class/nishimachi/' target='_blank'>Nishimachi</a>",
+        "<a href='https://sumiyoshijuku.org/class/teine/' target='_blank'>Teine</a>",
+        "<a href='https://sumiyoshijuku.org/class/miyanosawa/' target='_blank'>Miyanosawa</a>",
         "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Maeda</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Shinkawa</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Shinkotoni</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Hoshioki</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Hassamu</a>",
+        "<a href='https://sumiyoshijuku.org/class/shinkotoni/' target='_blank'>Shinkawa</a>",
+        "<a href='https://sumiyoshijuku.org/class/shinkotoni/' target='_blank'>Shinkotoni</a>",
+        "<a href='https://sumiyoshijuku.org/class/hoshioki/' target='_blank'>Hoshioki</a>",
+        "<a href='https://sumiyoshijuku.org/class/hassamu/' target='_blank'>Hassamu</a>",
         "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Nishino</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Asabu</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Tonden</a>",
-        "<a href='https://sumiyoshijuku.org/schedule/' target='_blank'>Hachiken</a>"
+        "<a href='https://sumiyoshijuku.org/class/azabu/' target='_blank'>Asabu</a>",
+        "<a href='https://sumiyoshijuku.org/class/tonden/' target='_blank'>Tonden</a>",
+        "<a href='https://sumiyoshijuku.org/class/hachiken/' target='_blank'>Hachiken</a>"
       ]
     }
   },
@@ -74,8 +74,11 @@
     "title": "師範 髙橋 剛",
     "subtitle": "",
     "locations": [
-      "安平町",
-      "苫小牧市"
+      "安平町（安平教室・火曜）",
+      "苫小牧市（苫小牧教室・水曜）",
+      "安平町（追分教室・木曜）",
+      "安平町（早来教室・金曜）",
+      "安平町（遠浅教室・月曜）"
     ],
     "en": {
       "name": "Seishinkan Takahashi Dojo",
@@ -83,8 +86,11 @@
       "title": "Shihan Takahashi",
       "subtitle": "",
       "locations": [
-        "Abira Town",
-        "Tomakomai City"
+        "Abira Town (Abira Class, Tue)",
+        "Tomakomai City (Tomakomai Class, Wed)",
+        "Abira Town (Oiwake Class, Thu)",
+        "Abira Town (Hayakita Class, Fri)",
+        "Abira Town (Toasa Class, Mon)"
       ]
     }
   },
@@ -97,7 +103,9 @@
     "title": "師範　高野 均",
     "subtitle": "",
     "locations": [
-      "新冠町"
+      "<a href='https://www.facebook.com/profile.php?id=100007777158191' target='_blank'>新冠町（北新会新冠道場）</a>",
+      "<a href='https://www.facebook.com/profile.php?id=100007777158191' target='_blank'>新冠町（朝日スポーツ少年団）</a>",
+      "静内町（静内農業高校空手部）"
     ],
     "en": {
       "name": "Hokushinkai",
@@ -105,7 +113,9 @@
       "title": "Shihan Hitoshi Takano",
       "subtitle": "",
       "locations": [
-        "Niikappu Town"
+        "<a href='https://www.facebook.com/profile.php?id=100007777158191' target='_blank'>Niikappu Town (Hokushinkai Niikappu Dojo)</a>",
+        "<a href='https://www.facebook.com/profile.php?id=100007777158191' target='_blank'>Niikappu Town (Asahi Sports Youth Club)</a>",
+        "Shizunai Town (Shizunai Agricultural High School Karate Club)"
       ]
     }
   },

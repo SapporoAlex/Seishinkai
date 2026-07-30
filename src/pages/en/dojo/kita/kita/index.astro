@@ -1,0 +1,130 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "ARCS Kita Karate Club",
+    address: "ARCS Kita 24-jo Store 2F, 1-1 Kita 24-jo Nishi 9-chome, Kita-ku, Sapporo",
+    schedule: ["Thursday class 16:00-17:00", "Saturday class 15:30-17:00"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the ARCS Kita Branch, Kita Ward"
+  description="Introducing the ARCS Kita Branch of Seishinkai Karate at ARCS Kita 24-jo Store in Kita Ward, Sapporo. A Kids & Junior karate class training on Thursdays and Saturdays."
+  lang="en"
+  path="/en/dojo/kita/kita/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Sapporo Kita / ARCS Kita Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [ARCS Kita Karate Club - Seishinkai ARCS Kita Branch (Sapporo Kita)]<br
+        />
+        The ARCS Kita karate class got its start in April 2010 (Heisei 22), borrowing community space at the ARCS Kita 24-jo Store.<br
+        />
+        It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br
+        />
+        A Saturday class was added in May 2013 (Heisei 25).<br />
+        Participation by parents and children together, as well as senior class members, is especially welcome.<br
+        />
+        Being located inside the ARCS store makes it a convenient spot — families can shop while children train.<br
+        />
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Kita Branch Trial Lesson / Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kita/Image1.jpg"
+            alt="Thursday class training session"
+            width="374"
+            height="203"
+            loading="lazy"
+          />
+          <figcaption>Thursday class</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kita/Image2.jpg"
+            alt="Saturday class training session"
+            width="341"
+            height="174"
+            loading="lazy"
+          />
+          <figcaption>Saturday class</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/maekawa.jpg"
+            alt="Instructor Maekawa"
+            width="106"
+            height="106"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="Instructor Takashima"
+            width="1147"
+            height="1147"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Sapporo Kita Branch</h2>
+      <p>
+        ◆Founded: April 2010 (Heisei 22)<br />
+        ◆Founder: Kayoko Mimura<br />
+        ◆Past instructors: Hashini, Okimura, Shima<br />
+        ◆Instructors: Takashima, Maekawa, and others on rotation
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
+          target="_blank"
+          rel="noopener">1-1 Kita 24-jo Nishi 9-chome, Kita-ku, Sapporo, ARCS Kita 24-jo Store 2F</a
+        >
+      </p>
+      <div class="detail-media">
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/assets/images/legacy/dojo/kita/2.jpg"
+            alt="ARCS Kita 24-jo Store 2F"
+            width="286"
+            height="178"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

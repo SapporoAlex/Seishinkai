@@ -1,0 +1,47 @@
+---
+// Class-schedule card: lesson name -> day/time -> instructor(s).
+// Built for scanning by class/time first, unlike ProfileCard which leads with the instructor.
+interface Instructor {
+  image?: string;
+  name: string;
+  position?: string;
+}
+interface Props {
+  title: string;
+  schedule: string[];
+  instructors?: Instructor[];
+  note?: string;
+}
+const { title, schedule, instructors = [], note } = Astro.props as Props;
+---
+
+<article class="class-schedule-card fade-up-in">
+  <header class="class-schedule-card__header">
+    <h3 class="class-schedule-card__title">{title}</h3>
+  </header>
+  <div class="class-schedule-card__body">
+    <ul class="class-schedule-card__times">
+      {schedule.map((time) => <li>{time}</li>)}
+    </ul>
+    {note && <p class="class-schedule-card__note">{note}</p>}
+    {
+      instructors.length > 0 && (
+        <div class="class-schedule-card__instructors">
+          {instructors.map((ins) => (
+            <div class="class-schedule-card__instructor">
+              {ins.image && (
+                <img src={ins.image} alt={ins.name} loading="lazy" />
+              )}
+              <div class="class-schedule-card__instructor-info">
+                <p class="class-schedule-card__name">{ins.name}</p>
+                {ins.position && (
+                  <p class="class-schedule-card__position">{ins.position}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</article>

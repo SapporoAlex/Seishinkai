@@ -1,0 +1,115 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "Ebetsu Karate Club",
+    address: "3-jo 5-chome 11-1, Ebetsu, Ebetsu Central Community Center",
+    schedule: ["Friday 18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes in Ebetsu City — Ebetsu Karate Club"
+  description="Information about the Seishinkai Ebetsu Karate Club in Ebetsu City. View the class schedule and venue at the Ebetsu Central Community Center."
+  lang="en"
+  path="/en/dojo/ebetsu/ebetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation Ebetsu Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Ebetsu Karate Class — Seishinkai Ebetsu Karate Club]<br />
+        The Ebetsu Karate Class began in February 2006 as Seishinkai's first karate
+        class in Ebetsu, starting at the Kami-Ebetsu Community Hall.<br />
+        From February 2021 the class split between the meeting room at Co-op Ebetsu 1F
+        (winter, as the community hall was old and cold) and a summer venue, and since
+        June 2022 it has trained at the Ebetsu Central Community Center near JR Ebetsu
+        Station.<br />
+        This is primarily a junior karate class.<br />
+        Families and senior participants are especially welcome.<br />
+        While many dojos focus on a highly competitive sports-club atmosphere, our goal
+        is to provide enjoyable karate training that promotes health, fitness, and
+        lifelong learning in a friendly club environment.
+      </p>
+
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
+      />
+
+      <p class="detail-page__note">
+        As this is a public facility, please contact the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Ebetsu%20Trial%20Lesson%20Enquiry"
+          >Seishinkai office</a
+        > for enquiries.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/instructors/muroki.jpg"
+            alt="Instructor Takushi Muroki"
+            width="142"
+            height="142"
+            loading="lazy"
+          />
+          <figcaption>Instructor Takushi Muroki</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Ebetsu Branch Information</h2>
+      <p>
+        <strong>Established:</strong> February 2006<br />
+        <strong>Instructor:</strong> Takushi Muroki
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒067-0013+北海道江別市３条５丁目１１−１/@43.1121242,141.5546939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b32393aa80e4b:0x2c02dec343b7a562!8m2!3d43.1121242!4d141.5568826"
+          target="_blank"
+          rel="noopener">3-jo 5-chome 11-1, Ebetsu — Ebetsu Central Community Center</a
+        ><br />
+        Near JR Ebetsu Station.
+      </p>
+
+      <p class="detail-page__note">
+        Occasional volunteer instructors:
+      </p>
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/instructors/tashiro2.jpg"
+            alt="Tashiro"
+            width="123"
+            height="123"
+            loading="lazy"
+          />
+          <figcaption>Tashiro</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/instructors/miura.jpg"
+            alt="Miura"
+            width="123"
+            height="123"
+            loading="lazy"
+          />
+          <figcaption>Miura</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/ebetsu/">← Back to Ebetsu, Iwamizawa & Ishikari Dojos</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,106 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "#",
+    name: "江別空手クラブ",
+    address: "江別市3条5丁目11-1 江別中央公民館",
+    schedule: ["金曜18:30"],
+  },
+];
+---
+
+<BaseLayout
+  title="江別市空手教室・江別空手クラブ"
+  description="江別市の清心会空手道場・江別空手クラブのご案内。江別中央公民館を会場にしたジュニアクラス中心の空手クラブ、稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/ebetsu/ebetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・江別支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [江別市空手教室・清心会江別空手倶楽部]<br />
+        江別空手教室は、平成18年2月に、清心会で最初の江別での空手教室として上江別自治会館でスタートしました。<br />
+        令和3年2月よりコープえべつ1Fの会議室(冬期間、自治会館が古く寒い為)と夏期間の2会場に分けて活動していましたが、令和4年6月よりJR江別駅そばの江別中央公民館に会場を移して活動しています。<br />
+        ジュニアクラス中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=江別体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/instructors/muroki.jpg"
+            alt="担当 室木拓士"
+            width="142"
+            height="142"
+            loading="lazy"
+          />
+          <figcaption>担当 室木拓士</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">江別支部</h2>
+      <p>
+        ◆設立　平成18年(2006)2月<br />
+        ◆担当者　室木拓士
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/〒067-0013+北海道江別市３条５丁目１１−１/@43.1121242,141.5546939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b32393aa80e4b:0x2c02dec343b7a562!8m2!3d43.1121242!4d141.5568826"
+          target="_blank"
+          rel="noopener">江別市3条5丁目11-1　江別中央公民館</a
+        ><br />
+        JR江別駅そばです。
+      </p>
+
+      <p class="detail-page__note">
+        *私も不定期参加します*
+      </p>
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/instructors/tashiro2.jpg"
+            alt="田代"
+            width="123"
+            height="123"
+            loading="lazy"
+          />
+          <figcaption>田代</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/instructors/miura.jpg"
+            alt="三浦"
+            width="123"
+            height="123"
+            loading="lazy"
+          />
+          <figcaption>三浦</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

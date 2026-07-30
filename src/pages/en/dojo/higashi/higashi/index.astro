@@ -1,0 +1,112 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Sapporo Higashi Karate Club",
+    address: "Sakae District Center, Kita 36-jo Higashi 8-chome 1-25, Higashi-ku, Sapporo",
+    schedule: ["Tuesday 18:30-19:30 (session 1)", "19:30-20:30 (session 2)"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Sapporo Higashi Branch, Higashi Ward"
+  description="Introducing the Sapporo Higashi Karate Club, a Seishinkai Karate dojo in Higashi Ward, Sapporo. Training is held on Tuesdays at the Sakae District Center."
+  lang="en"
+  path="/en/dojo/higashi/higashi/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-do Federation — Sapporo Higashi Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Sapporo Higashi Karate Class, Seishinkai Sapporo Higashi Branch]<br />
+        The Sapporo Higashi Karate Class began in May 2009 (Heisei 21) at the meeting room of the Sakae District Center, Higashi Ward.<br />
+        It is a karate club centered on Kids Karate, the Junior Class, and Parent-Child Karate.<br />
+        We especially welcome participation from parents and children together, and from the Senior Class.<br />
+        While many dojos feel like an extension of school sports clubs, we aim to make karate an enjoyable, club-like experience centered on health and fitness.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※Since the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Sapporo Higashi Trial Application"
+          >office</a
+        >.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="Instructor Takashima"
+            width="100"
+            height="100"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/higashi/Image1.jpg"
+            alt="Practice session at the Sapporo Higashi Branch"
+            width="295"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">Sapporo Higashi Branch</h2>
+      <p>
+        ◆ Founded: May 2009 (Heisei 21)<br />
+        ◆ Founder: Kayoko Mimura<br />
+        ◆ Past instructors: Hashini, Okimura<br />
+        ◆ Instructor in charge: Takashima
+      </p>
+
+      <h2 class="detail-page__heading">Venue</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/栄地区センター/@43.106046,141.358107,15z/data=!4m2!3m1!1s0x0:0x1e9105febde56acb?sa=X&ved=2ahUKEwiu4-KXt7HhAhUDD6YKHRvZCmwQ_BIwC3oECAoQCA"
+          target="_blank"
+          rel="noopener">Sakae District Center, Kita 36-jo Higashi 8-chome 1-25, Higashi-ku, Sapporo</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/higashi/2.jpg"
+          alt="Sakae District Center"
+          width="652"
+          height="302"
+          loading="lazy"
+        />
+      </div>
+      <p class="detail-page__note">
+        ※The Higashi Branch has many members, so Kids and Junior classes train in two sessions.
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Sapporo Higashi Trial Application">
+          <img
+            src="/assets/images/legacy/dojo/higashi/img14.jpg"
+            alt="Click here to apply for a trial lesson"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

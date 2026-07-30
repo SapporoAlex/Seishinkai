@@ -1,5 +1,37 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ClassScheduleCard from "@components/ClassScheduleCard.astro";
+
+const classes = [
+  {
+    title: "金曜クラス",
+    schedule: ["①18:00-19:00", "②19:10-20:10(20:30)"],
+    instructors: [
+      {
+        name: "大久保 翼",
+        position: "首席師範",
+        image: "/assets/images/instructors/tsubasa.jpg",
+      },
+    ],
+    note: "本部直轄　※①は初級者対象時間",
+  },
+  {
+    title: "日曜クラス",
+    schedule: [
+      "①9:30-10:30",
+      "②10:40-11:50",
+      "冬時間(12-3月) ①10:00-10:50 ②11:00-11:55",
+    ],
+    instructors: [
+      {
+        name: "若林 敬司",
+        position: "師範代",
+        image: "/assets/images/instructors/wakabayashi.jpg",
+      },
+    ],
+    note: "※①は初級者対象時間",
+  },
+];
 ---
 
 <BaseLayout
@@ -39,76 +71,42 @@ import BaseLayout from "@layouts/BaseLayout.astro";
             </p>
         </div>
 
-        <h2 class="detail-page__heading">金曜クラス</h2>
-        <div class="detail-page__img-text-pair--reverse">
-            <div class="detail-media--big">
-                <figure>
-                    <img
-                    src="/assets/images/dojo/img_atsubetsu_1.jpg"
-                    alt=""
-                    width="234"
-                    height="144"
-                    loading="lazy"
-                    />
-                </figure>
-            </div>
-
-            <div>
-                <div class="detail-media">
-                    <figure>
-                        <img
-                        src="/assets/images/instructors/tsubasa.jpg"
-                        alt=""
-                        width="234"
-                        height="144"
-                        loading="lazy"
-                        />
-                    </figure>
-                    <figcaption>本部直轄</figcaption>
-                </div>
-
-                <p>
-                    ①18:00-19:00<br>
-                    ②19:10-20:10<br>
-                    (20:30)
-                </p>
-            </div>
+        <h2 class="detail-page__heading">稽古風景</h2>
+        <div class="detail-gallery">
+            <figure>
+                <img
+                src="/assets/images/dojo/img_atsubetsu_1.jpg"
+                alt="厚別支部 金曜クラスの稽古風景"
+                width="234"
+                height="144"
+                loading="lazy"
+                />
+                <figcaption>金曜クラス</figcaption>
+            </figure>
+            <figure>
+                <img
+                src="/assets/images/dojo/img_atsubetsu_2.jpg"
+                alt="厚別支部 日曜クラスの稽古風景"
+                width="234"
+                height="144"
+                loading="lazy"
+                />
+                <figcaption>日曜クラス</figcaption>
+            </figure>
         </div>
 
-        <h2 class="detail-page__heading">日曜クラス</h2>
-        <div class="detail-page__img-text-pair--reverse">
-            <div class="detail-media--big">
-                <figure>
-                    <img
-                    src="/assets/images/dojo/img_atsubetsu_2.jpg"
-                    alt=""
-                    width="234"
-                    height="144"
-                    loading="lazy"
-                    />
-                </figure>
-            </div>
-
-            <div>
-                <div class="detail-media">
-                    <figure>
-                        <img
-                        src="/assets/images/instructors/wakabayashi.jpg"
-                        alt=""
-                        width="234"
-                        height="144"
-                        loading="lazy"
-                        />
-                    </figure>
-                </div>
-
-                <p>
-                    ①9:30-10:30<br>
-                    ②10:40-11:50<br>
-                    ※冬時間12-3月 ①10:00-10:50<br>
-                    ②11:00-11:55
-                </p>
-            </div>
+        <h2 class="detail-page__heading">クラス案内</h2>
+        <div class="class-schedule-grid">
+          {
+            classes.map((c) => (
+              <ClassScheduleCard
+                title={c.title}
+                schedule={c.schedule}
+                instructors={c.instructors}
+                note={c.note}
+              />
+            ))
+          }
         </div>
 
         <h2 class="detail-page__heading">厚別支部</h2>

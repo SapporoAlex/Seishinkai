@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import SocialLinkCard from "@components/SocialLinkCard.astro";
 
 const memberBlogs = [
   {
     name: "大久保翼",
+    image: "/assets/images/instructors/tsubasa.jpg",
     links: [
       { label: "Facebook", href: "https://www.facebook.com/tsubasa.ohkubo" },
       { label: "個人ブログ", href: "http://liveisaction.tumblr.com/" },
@@ -11,17 +13,126 @@ const memberBlogs = [
   },
   {
     name: "髙嶋",
+    image: "/assets/images/instructors/takashima.jpg",
     links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100010931403991" }],
   },
   {
     name: "Hashini（スリランカ）",
-    links: [{ label: "ブログ", href: "https://ameblo.jp/hashitharu/entrylist.html" }],
+    image: "/assets/images/legacy/clubu/hashini.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/kkht.hashi" },
+      { label: "ブログ", href: "https://ameblo.jp/hashitharu/entrylist.html" },
+    ],
   },
   {
     name: "室木拓士",
+    image: "/assets/images/instructors/muroki.jpg",
     links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100014649318764" }],
   },
 ];
+
+const branchChiefBlogs = [
+  {
+    name: "前川信孝",
+    image: "/assets/images/instructors/maekawa.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/nobutaka.maekawa" },
+      { label: "ブログ", href: "https://sky.ap.teacup.com/reimeishiya/" },
+    ],
+  },
+  {
+    name: "住吉一徳",
+    image: "/assets/images/instructors/sumiyoshi.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/sjuku7" },
+      { label: "ブログ", href: "https://sjuku.exblog.jp/" },
+    ],
+  },
+  {
+    name: "犬浦壽信",
+    image: "/assets/images/instructors/inuura.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/jushin.inuura.3" },
+      { label: "ブログ", href: "http://santakuji.cocolog-nifty.com/blog/" },
+    ],
+  },
+  {
+    name: "井上龍一郎",
+    image: "/assets/images/instructors/inoue.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/ryuichirou.inoue" },
+      { label: "ブログ", href: "https://blog.goo.ne.jp/hazakuranohimawari" },
+    ],
+  },
+  {
+    name: "青木和也",
+    image: "/assets/images/legacy/images/aoki.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/kazuya.aoki.180" },
+      { label: "ブログ", href: "https://blog.goo.ne.jp/mokunyan" },
+    ],
+  },
+  {
+    name: "波川和明",
+    image: "/assets/images/instructors/namikawa.jpg",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/kazuaki.namikawa" },
+      { label: "ブログ", href: "https://angel.ap.teacup.com/spock/" },
+    ],
+  },
+  {
+    name: "工藤哲弘",
+    image: "/assets/images/instructors/kudo.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/tetsuhiro.kudou" }],
+  },
+  {
+    name: "工藤博美",
+    image: "/assets/images/instructors/hiromi.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100004385984913" }],
+  },
+  {
+    name: "三上淳",
+    image: "/assets/images/instructors/mikami.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/jun.mikami.7" }],
+  },
+  {
+    name: "及川義彦",
+    image: "/assets/images/instructors/oikawa.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100010667766864" }],
+  },
+  {
+    name: "三枝篤史（福岡支部）",
+    image: "/assets/images/legacy/images/sae.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/atsushi.saegusa1" }],
+  },
+  {
+    name: "Saegusa Masaki（福岡支部）",
+    image: "/assets/images/legacy/images/masaki.jpg",
+    links: [{ label: "Facebook", href: "https://www.facebook.com/masaki.saegusa.9" }],
+  },
+];
+
+const overseasBlogs = [
+  {
+    name: "スリランカ支部長",
+    image: "/assets/images/instructors/kkpp.jpg",
+    links: [
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/kkpps.satharasinghe/",
+      },
+    ],
+  },
+];
+
+const mimuraBlog = {
+  name: "故・三村佳代子",
+  image: "/assets/images/instructors/mimu2.jpg",
+  links: [
+    { label: "Mimuブログ", href: "https://yaplog.jp/happpykarate/1" },
+    { label: "旧Mimuブログ", href: "https://music.ap.teacup.com/kimagure/" },
+  ],
+};
 
 const officialBlogs = [
   {
@@ -85,21 +196,40 @@ const legacyArchives = [
 
       <section class="partner-section">
         <h2 class="detail-page__heading">個人ブログ・Facebook</h2>
-        <ul class="partner-section__list">
+        <div class="social-link-grid">
           {memberBlogs.map((m) => (
-            <li class="partner-section__item">
-              <span>
-                {m.name}
-                {m.links.map((l, i) => (
-                  <>
-                    {i > 0 && "・"}
-                    <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>
-                  </>
-                ))}
-              </span>
-            </li>
+            <SocialLinkCard name={m.name} image={m.image} links={m.links} />
           ))}
-        </ul>
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">師範・支部長・指導員ブログ・Facebook</h2>
+        <div class="social-link-grid">
+          {branchChiefBlogs.map((m) => (
+            <SocialLinkCard name={m.name} image={m.image} links={m.links} />
+          ))}
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">海外支部・メンバーFacebook</h2>
+        <div class="social-link-grid">
+          {overseasBlogs.map((m) => (
+            <SocialLinkCard name={m.name} image={m.image} links={m.links} />
+          ))}
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">故・三村佳代子 前館長ブログ</h2>
+        <div class="social-link-grid">
+          <SocialLinkCard
+            name={mimuraBlog.name}
+            image={mimuraBlog.image}
+            links={mimuraBlog.links}
+          />
+        </div>
       </section>
 
       <section class="partner-section">

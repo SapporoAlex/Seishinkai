@@ -1,5 +1,122 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ClassScheduleCard from "@components/ClassScheduleCard.astro";
+
+const classes = [
+  {
+    title: "ジュニアクラス／親子クラス",
+    schedule: [
+      "月曜クラス 18:30-19:30",
+      "水曜クラス 18:30-19:30",
+      "月曜19:30 特設・型",
+    ],
+    instructors: [
+      {
+        name: "大久保 翼",
+        position: "首席師範",
+        image: "/assets/images/instructors/tsubasa.jpg",
+      },
+    ],
+  },
+  {
+    title: "土曜健康クラス",
+    schedule: ["土曜 13:30-14:30"],
+    instructors: [
+      {
+        name: "室木 拓士",
+        position: "師範",
+        image: "/assets/images/instructors/muroki.jpg",
+      },
+    ],
+  },
+  {
+    title: "土曜クラス",
+    schedule: ["土曜 15:30-16:30"],
+    instructors: [
+      {
+        name: "島",
+        position: "師範代",
+        image: "/assets/images/instructors/shima.jpg",
+      },
+    ],
+  },
+  {
+    title: "園児・低学年クラス NEW！／白帯クラス(少人数制)",
+    schedule: ["木曜ちびっ子クラス 15:00-15:45"],
+    instructors: [
+      {
+        name: "沖村 さおり",
+        position: "師範補",
+        image: "/assets/images/instructors/okimura.jpg",
+      },
+      {
+        name: "瑠唯",
+        position: "内弟子",
+        image: "/assets/images/instructors/rui.jpg",
+      },
+    ],
+  },
+  {
+    title: "シニアクラス／主婦クラス(昼の部・自主練)",
+    schedule: ["月曜・水曜 14:30-15:30"],
+    instructors: [
+      {
+        name: "木村 孝雄",
+        position: "師範補",
+        image: "/assets/images/instructors/kimura.jpg",
+      },
+    ],
+  },
+  {
+    title: "不登校学生専門クラス(個別体験実施中)",
+    schedule: ["火曜 15:00／17:00", "木曜 15:00〜"],
+    instructors: [
+      {
+        name: "前川 信孝",
+        position: "師範",
+        image: "/assets/images/instructors/maekawa.jpg",
+      },
+    ],
+  },
+  {
+    title: "女性クラス",
+    schedule: ["金曜 18:30-19:30"],
+    instructors: [
+      {
+        name: "山崎 麻美",
+        position: "師範代",
+        image: "/assets/images/instructors/asami.jpg",
+      },
+    ],
+  },
+  {
+    title: "一般部(学生・社会人)",
+    schedule: ["水曜 19:30-21:00", "土曜 19:00-21:00"],
+    instructors: [
+      {
+        name: "大久保 翼",
+        position: "首席師範",
+        image: "/assets/images/instructors/tsubasa.jpg",
+      },
+      {
+        name: "大久保 勝美",
+        position: "宗家",
+        image: "/assets/images/instructors/masami.jpg",
+      },
+    ],
+  },
+  {
+    title: "居合部",
+    schedule: ["日曜 14:00-15:00"],
+    instructors: [
+      {
+        name: "室木 拓士",
+        position: "師範",
+        image: "/assets/images/instructors/muroki.jpg",
+      },
+    ],
+  },
+];
 ---
 
 <BaseLayout
@@ -23,8 +140,24 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         下は3才から上は84才まで楽しい汗を流しています。本部道場は中学生以下のジュニアクラス(月・水)、高校生以上の一般部(水・土)、園児･低学年向けキッズクラス(木)、女性クラス(金)、ジュニア＆親子クラス(土)、主婦･シニア向けの昼の部(月・水)、居合部(日)などがあります。<br />
         ※不登校生徒のための特別クラスも新設しました。
       </p>
+      <h2 class="detail-page__heading">クラス案内</h2>
+      <div class="class-schedule-grid">
+        {
+          classes.map((c) => (
+            <ClassScheduleCard
+              title={c.title}
+              schedule={c.schedule}
+              instructors={c.instructors}
+            />
+          ))
+        }
+      </div>
       <p class="detail-page__note">
-        ※各クラスの曜日・時間の詳細は<a href="/dojo/shiroishi/">白石区の空手教室一覧</a>をご覧ください。
+        ●特設(短棒・双節棍) 日曜夕方(<a
+          href="http://karate15.dokkin.com/"
+          target="_blank"
+          rel="noopener">不定期</a
+        >・事前申込必要です)
       </p>
 
       <div class="detail-gallery">

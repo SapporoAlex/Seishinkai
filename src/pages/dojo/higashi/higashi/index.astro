@@ -1,0 +1,112 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "札幌東空手クラブ",
+    address: "東区北36条東8丁目1-25 栄地区センター",
+    schedule: ["火曜18:30-19:30 一部", "19:30-20:30 二部"],
+  },
+];
+---
+
+<BaseLayout
+  title="東区札幌東支部の空手教室"
+  description="札幌市東区北36条の清心会空手道場・札幌東空手クラブのご案内。栄地区センターでの火曜稽古日をご紹介します。"
+  lang="ja"
+  path="/dojo/higashi/higashi/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・札幌東支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [札幌東空手教室・清心会札幌東支部]<br />
+        札幌東空手教室は、平成21年5月に、東区栄地区センターの会議室をお借りしてスタートした支部です。<br />
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=札幌東体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="指導 髙嶋"
+            width="100"
+            height="100"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/higashi/Image1.jpg"
+            alt="札幌東支部の稽古風景"
+            width="295"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">札幌東支部</h2>
+      <p>
+        ◆設立　平成21年(2009)5月<br />
+        ◆設立者　三村佳代子<br />
+        ◆歴代　ハシニ、沖村<br />
+        ◆担当　髙嶋
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/栄地区センター/@43.106046,141.358107,15z/data=!4m2!3m1!1s0x0:0x1e9105febde56acb?sa=X&ved=2ahUKEwiu4-KXt7HhAhUDD6YKHRvZCmwQ_BIwC3oECAoQCA"
+          target="_blank"
+          rel="noopener">札幌市東区北36条東8丁目1-25　栄地区センター</a
+        >
+      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/higashi/2.jpg"
+          alt="栄地区センター"
+          width="652"
+          height="302"
+          loading="lazy"
+        />
+      </div>
+      <p class="detail-page__note">
+        ※東支部は、所属員が多くキッズ、ジュニア二部体制で稽古をしています。
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=札幌東体験申込">
+          <img
+            src="/assets/images/legacy/dojo/higashi/img14.jpg"
+            alt="体験申込はこちら"
+            width="645"
+            height="293"
+            loading="lazy"
+          />
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

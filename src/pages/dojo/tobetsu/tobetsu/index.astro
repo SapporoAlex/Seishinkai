@@ -1,0 +1,112 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "当別町空手クラブ",
+    address: "当別町白樺町2792 当別町総合体育館",
+    schedule: ["土曜18:00(R6.4より)"],
+  },
+];
+---
+
+<BaseLayout
+  title="当別町の空手教室"
+  description="北海道当別町の清心会空手道場・当別支部のご案内。稽古日と会場情報をご紹介します。"
+  lang="ja"
+  path="/dojo/tobetsu/tobetsu/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・当別支部</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [当別町空手教室・清心会当別支部]<br />
+        当別空手教室は、平成20年(2008年)10月よりスタートしました。<br />
+        会場は、当別町総合体育館です。<br />
+        キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br
+        />
+        ※3才園児は親子参加で月会費は無料となります
+      </p>
+
+      <BranchTable entries={entries} />
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=当別支部 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。<br />
+        当別町総合体育館が使用できないときは白樺コミュニティセンターで稽古する場合もあります。稽古予定は<a
+          href="https://karate14.dokkin.com/"
+          target="_blank"
+          rel="noopener">当別支部の稽古予定ページ</a
+        >でご確認下さい。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/takashima.jpg"
+            alt="担当 髙嶋"
+            width="1147"
+            height="1147"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="清心会空手の稽古風景"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">当別支部(本部直轄)</h2>
+      <p>
+        ◆設立　平成20年(2008)10月<br />
+        ◆担当者　髙嶋
+      </p>
+
+      <h2 class="detail-page__heading">会場</h2>
+      <p>
+        <a
+          href="https://www.google.com/maps/place/当別町立当別町+総合体育館/@43.223059,141.5131699,15z/data=!4m2!3m1!1s0x0:0x42d9adf5ac1b5e0?sa=X&ved=2ahUKEwid7uW7ya_hAhVDFYgKHW7eAj0Q_BIwCnoECA8QCA"
+          target="_blank"
+          rel="noopener">当別町白樺町2792　当別町総合体育館</a
+        >
+      </p>
+      <p class="detail-page__note">
+        ※代替会場：<a
+          href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"
+          target="_blank"
+          rel="noopener">当別町白樺2792-1　白樺コミュニティセンター</a
+        >
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/clubu/masuda.jpg"
+            alt="指導員"
+            width="161"
+            height="161"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
