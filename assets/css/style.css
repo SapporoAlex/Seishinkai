@@ -166,7 +166,7 @@ h5,
 h6,
 nav,
 header {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h1 {
@@ -208,7 +208,7 @@ small {
 h4 {
   font-size: 1.0625rem;
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h5 {
@@ -501,7 +501,7 @@ a img:hover {
 
 .section-title {
   font-family: "Noto Serif JP", serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--fs-xl);
   line-height: 1.1;
   margin-bottom: 10px;
@@ -520,7 +520,7 @@ a img:hover {
 
 .section-title.lg {
   font-family: "Noto Serif JP", serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--fs-lg);
   line-height: 1.1;
   margin-bottom: 10px;
@@ -873,7 +873,7 @@ body.is-menu-open {
 .footer__brand-name {
   font-family: "Noto Serif JP", serif;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--white);
 }
 .footer__org {
@@ -906,8 +906,8 @@ body.is-menu-open {
   }
 }
 .footer__heading {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--white);
   margin: 0 0 16px;
   padding-bottom: 8px;
@@ -1077,7 +1077,7 @@ body.is-menu-open {
 }
 .fv__title {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   line-height: 1.4;
   margin-bottom: 12px;
@@ -1085,7 +1085,7 @@ body.is-menu-open {
 @media (min-width: 48rem) {
   .fv__title {
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     line-height: 1.35;
     margin-bottom: 18px;
@@ -1396,7 +1396,7 @@ body.is-menu-open {
 }
 .top-contact__contact-header span {
   color: #d62828;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 .top-contact__contact-header h2 {
@@ -1432,7 +1432,7 @@ body.is-menu-open {
 }
 .top-contact__big {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #d62828;
 }
 @media (min-width: 48rem) {
@@ -1511,12 +1511,12 @@ body.is-menu-open {
 }
 .visitor-banner__eyebrow {
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
   color: var(--red);
 }
 .visitor-banner__title {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
   margin: 0;
 }
@@ -1642,7 +1642,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .content-slider__title {
   font-family: "Noto Serif JP", serif;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
   margin: 0;
 }
@@ -1667,7 +1667,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .content-slider .swiper-button-prev::after,
 .content-slider .swiper-button-next::after {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
 }
 .content-slider .swiper-button-prev:hover,
@@ -2545,8 +2545,8 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .membership__point-title {
   font-family: "Noto Serif JP", serif;
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--navy);
   margin: 0 0 12px;
 }
@@ -2576,7 +2576,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .membership__cta-title {
   font-family: "Noto Serif JP", serif;
   font-size: var(--fs-lg);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--white);
   margin: 0;
 }
@@ -2610,7 +2610,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .membership__fees-title {
   font-family: "Noto Serif JP", serif;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
   margin: 0;
   padding-bottom: 10px;
@@ -2624,7 +2624,7 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .membership__fees-amount {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--red);
   margin: 0;
 }
@@ -3017,7 +3017,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .news__card-name {
   font-family: "Noto Serif JP", serif;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
 }
 .news__card-desc {
@@ -3048,11 +3048,11 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .detail-page__back a {
   color: var(--red);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline;
 }
 .detail-page__contact {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
   margin-bottom: 32px;
 }
@@ -3139,7 +3139,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .branch-table th {
   background: var(--navy);
   color: var(--white);
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
 }
 .branch-table th,
@@ -3159,14 +3159,14 @@ a.content-slider__slide:hover .content-slider__media img {
   vertical-align: middle;
 }
 .branch-table__name {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
   min-width: 11rem;
 }
 .branch-table__name-sub {
   display: block;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-mid);
 }
 .branch-table__marker {
@@ -3189,7 +3189,7 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .detail-legend__marker {
   color: var(--red);
-  font-weight: 700;
+  font-weight: 600;
   margin-right: 4px;
 }
 
@@ -3437,7 +3437,7 @@ a.content-slider__slide:hover .content-slider__media img {
 
 .profile-detail__role {
   color: var(--red);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
@@ -3571,7 +3571,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .youtube-card span {
   display: block;
   padding: 10px 12px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
 }
 .youtube-card.is-visible:hover {
@@ -3672,7 +3672,7 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .detail-timeline__date {
   flex: 0 0 9rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
   white-space: nowrap;
 }
@@ -3726,7 +3726,7 @@ a.content-slider__slide:hover .content-slider__media img {
   margin: 0;
   color: var(--white);
   font-size: 1.02rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.45;
 }
 .class-schedule-card__body {
@@ -3745,7 +3745,7 @@ a.content-slider__slide:hover .content-slider__media img {
   gap: 8px;
 }
 .class-schedule-card__times li {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.98rem;
   color: var(--navy);
   line-height: 1.5;
@@ -3797,7 +3797,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .class-schedule-card__name {
   margin: 0;
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--navy);
   letter-spacing: 0.01em;
 }
@@ -3874,8 +3874,8 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .social-link-card__name {
   margin: 0;
-  font-size: 0.92rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--navy);
   line-height: 1.3;
 }
@@ -3884,7 +3884,7 @@ a.content-slider__slide:hover .content-slider__media img {
   flex-wrap: wrap;
   align-items: center;
   gap: 4px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.4;
 }
 .social-link-card__links a {
