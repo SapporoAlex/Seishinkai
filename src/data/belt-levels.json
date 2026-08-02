@@ -9,12 +9,5 @@
     { "rank": "六段", "count": 4 },
     { "rank": "七段", "count": 6 },
     { "rank": "八段", "count": 3 }
-  ],
-  "associateDojos": [
-    {
-      "name": "清空会空手",
-      "location": "千葉県",
-      "dojo": "無流塾"
-    }
   ]
 }

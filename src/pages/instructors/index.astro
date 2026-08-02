@@ -76,19 +76,18 @@ import beltLevels from "@data/belt-levels.json";
           </tbody>
         </table>
 
-        <h3 class="instructors__subsection-title">準加盟・提携道場</h3>
+        <h3 class="instructors__subsection-title">準加盟・提携協力道場</h3>
         <table class="table">
           <tbody>
-            {
-              beltLevels.associateDojos.map((dojo) => (
-                <tr>
-                  <th>{dojo.name}</th>
-                  <td>
-                    {dojo.location} / {dojo.dojo}
-                  </td>
-                </tr>
-              ))
-            }
+            <tr class="u-sp-invisible">
+              <td><a href="https://aozorakai.main.jp/index.html" target="_blank">千葉県/無琉塾</a></td><td><a href="https://muryukun.wixsite.com/muryukun/about-us" target="_blank">空手道青空会</a></td>
+            </tr>
+            <tr class="u-sp-visible">
+              <td><a href="https://aozorakai.main.jp/index.html" target="_blank">千葉県/無琉塾</a></td>
+            </tr>
+            <tr class="u-sp-visible">
+              <td><a href="https://muryukun.wixsite.com/muryukun/about-us" target="_blank">空手道青空会</a></td>
+            </tr>
           </tbody>
         </table>
       </div>
