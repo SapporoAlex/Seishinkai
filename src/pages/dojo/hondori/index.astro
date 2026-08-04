@@ -73,10 +73,11 @@ const classes = [
 
       <p class="detail-page__lead">
         [白石区本通空手教室・清心館本通空手道場]<br />
-        本通空手教室は、国道12号線沿いに面する本通清心館道場で平成23年9月より活動を始めました。<br />
+        本通空手教室は、国道12号線沿いに面する本通清心館道場で平成23年9月(2011)より活動を始めました。<br />
         隣に焼肉の徳寿様、反対隣りにラウンドワンとわかりやすい場所にあります。<br />
-        設立以来、キッズ空手、ジュニア空手として開始し、園児から中学生を中心としています。<br />
-        水曜、金曜各クラス定員枠15名としています。会場はエアコンを完備しています。<br />
+        設立以来、キッズ空手、ジュニア空手を中心として開始し、親子での参加も歓迎しています。<br />
+        専有道場ですが広くはないので各クラス定員枠15名としています。<br />
+        会場はエアコンを完備しています。<br />
         体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
       </p>
 
@@ -90,19 +91,37 @@ const classes = [
         開始時刻等若干変動する場合がありますので体験の方は事前にご確認下さい。
       </p>
 
-      <div class="class-schedule-grid">
-        {
-          classes.map((c) => (
-            <ClassScheduleCard
-              title={c.title}
-              schedule={c.schedule}
-              instructors={c.instructors}
-            />
-          ))
-        }
-      </div>
+
 
       <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/dojo/img_hondori_05.jpg"
+            alt="本通清心館の内観"
+            width="234"
+            height="144"
+            loading="lazy"
+          />
+          <figcaption>玄関で靴を脱いで正面ドアを開けると階段を下りて下さい。地下に道場があります。</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/dojo/img_hondori_01.jpg"
+            alt="本通清心館の内観"
+            width="234"
+            height="144"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/dojo/img_hondori_02.jpg"
+            alt="本通清心館の内観"
+            width="253"
+            height="144"
+            loading="lazy"
+          />
+        </figure>
         <figure>
           <img
             src="/assets/images/legacy/dojo/hondori/2.jpg"
@@ -127,9 +146,10 @@ const classes = [
       <h2 class="detail-page__heading">本通清心館空手道場</h2>
       <p>
         ◆設立　平成23年(2011)4月<br />
-        ◆設立者　三村佳代子(2011-2015)<br />
-        　歴代　ハシニ(2015-2020)、滝上由佳(2020-2021)、増田宇倫(2024-2026)<br />
-        ◆指導　高嶋和也(2021-)、若林敬司(2020-)、瑠唯(2026-)
+        ◆設立者　三村佳代子<br />
+        　歴代　ハシニ、滝上由佳、高嶋、増田<br />
+        ◆指導　若林、瑠唯<br />
+        ※不定期で一般部員有段者が参加します
       </p>
 
       <h2 class="detail-page__heading">会場</h2>
