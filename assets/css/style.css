@@ -3139,7 +3139,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .branch-table th {
   background: var(--navy);
   color: var(--white);
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
 }
 .branch-table th,
@@ -3159,7 +3159,7 @@ a.content-slider__slide:hover .content-slider__media img {
   vertical-align: middle;
 }
 .branch-table__name {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--navy);
   min-width: 11rem;
 }
