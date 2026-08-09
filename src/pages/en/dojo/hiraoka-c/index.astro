@@ -1,13 +1,17 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
     marker: "★",
-    name: "Kiyota-ku Hiraoka Karate Class (Seishinkai Hiraoka Branch)",
-    address: "5-jo 1-chome 1-40 Hiraoka, Kiyota-ku, Sapporo, Clubhouse Plaz",
-    schedule: ["Tuesday 4:00-5:00 PM", "Thursday 7:00-8:00 PM"],
+    name: "Hiraoka Karate Class, Kiyota Ward (Seishinkai Hiraoka Branch)",
+    address: "Clubhouse Platz, 1-1-40 Hiraoka 5-jo, Kiyota-ku, Sapporo",
+    schedule: [
+      "Tuesday 16:00-17:00 ※A time slot suitable for preschool and younger elementary school children",
+      "Thursday 19:00-20:00 ※Preschool children are welcome to enroll together with a parent",
+    ],
   },
 ];
 ---
@@ -24,19 +28,25 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">Seishinkai Karate Federation - Hiraoka Branch</h1>
       </div>
-
+      <h2 class="detail-page__heading">Kiyota-ku Hiraoka Karate Class - Seishinkai Hiraoka Branch</h2>
       <p class="detail-page__lead">
-        [Kiyota-ku Hiraoka Karate Class - Seishinkai Hiraoka Branch]<br />
-        The Thursday class began at the Hiraoka Children's Hall in March 2010 (Heisei 22), and the Tuesday class started at the request of the neighborhood association at the neighborhood hall in September 2016 (Heisei 28), later moving to its current venue, Clubhouse Plaz.<br />
-        The two classes were held at two separate venues, but in April 2020 (Reiwa 2), with the venues close by and the children's hall closing to outside groups due to the COVID-19 situation, the Thursday class was also moved to Plaz, so the two now operate from the same venue on different days.<br />
-        Both days are centered on the junior class, but the Tuesday session is held a little earlier to make it easier for preschoolers and young elementary schoolers to attend.<br />
-        Participation by parents and children together, and by senior members, is especially welcome.<br />
-        While many dojos feel like an extension of school sports clubs, we aim for members to practice and learn in a relaxed, club-like atmosphere as health-oriented, physical-education-style karate.
+        The Thursday class began at Hiraoka Children's Hall in March 2010, while the Tuesday class started at the local community hall in September 2016 at the request of the neighborhood association. The Tuesday class later moved to its current location at Clubhouse Platz.
+        In April 2020, the classes were held at two separate venues. However, because the venues are next to each other and the children's hall was no longer available for rental due to the COVID-19 situation, the Thursday class was moved to the same Platz location, and the classes have since been held there on separate days.
+        Both days primarily focus on junior classes, while the Tuesday class is scheduled earlier to make it easier for preschool children and younger elementary school students to participate.
+        We especially welcome parents and children who wish to participate together, as well as participants in the senior class.
+        While many dojos operate more like traditional athletic clubs, our goal is to provide a friendly, enjoyable environment where students can learn and practice karate as a form of health and physical fitness.
       </p>
+
+      <div class="detail-page__highlight-box">
+
+        <p class="detail-page__highlight-text">Seishinkai Karate – Building a heart that never gives up</p>
+
+      </div>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
       <p class="detail-page__note">
+        ※ In some classes, preschool children are asked to participate together with a parent.<br>
         ※As the venue is a rented facility, please direct inquiries to the <a
           href="mailto:karate@seishinkan.ne.jp?subject=Hiraoka Trial Lesson Inquiry"
           >office</a
@@ -66,77 +76,39 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Kiyota-ku Hiraoka Branch</h2>
-      <p>
-        ◆Founded: March 2010 (Heisei 22) (Thursday class)<br />
-        　　　　September 2016 (Heisei 28) (Tuesday class)<br />
-        ◆Founder: Tsubasa Okubo<br />
-        ◆Lead instructors: Shima, Wakabayashi, Sato<br />
-        ■Directly run by Headquarters / instructors rotate
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/maekawa2.jpg"
-            alt="Instructor Maekawa"
-            width="103"
-            height="103"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/wakabayashi.jpg"
-            alt="Instructor Wakabayashi"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/sato2.jpg"
-            alt="Instructor Sato"
-            width="107"
-            height="99"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/noro.jpg"
-            alt="Instructor Noro"
-            width="101"
-            height="101"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087955,141.4478467,18z/data=!3m1!4b1!4m6!3m5!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619!16s/g/12hpr3l9l?entry=ttu"
-          target="_blank"
-          rel="noopener">5-jo 1-chome 1-40 Hiraoka, Kiyota-ku, Sapporo, Clubhouse Plaz</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087955,141.4478467,18z/data=!3m1!4b1!4m6!3m5!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619!16s/g/12hpr3l9l?entry=ttu"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/hiraoka-c/img3.jpg"
-            alt="Clubhouse Plaz"
-            width="266"
-            height="155"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Hiraoka Branch"
+        facts={[
+          {
+            label: "Founded",
+            value: [
+              "March 2010 (Heisei 22, Thursday class)",
+              "September 2016 (Heisei 28, Tuesday class)",
+            ],
+          },
+          { label: "Founder", value: "Tsubasa Okubo" },
+          { label: "Past instructors", value: "Daniela, Okimura, Shima" },
+          {
+            label: "Instructors",
+            value: "Wakabayashi, Rui, Maekawa, plus adult black belt members joining occasionally",
+          },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/hiraoka-c/img3.jpg",
+          alt: "Clubhouse Plaz",
+          width: 266,
+          height: 155,
+        }}
+        instructors={[
+          { src: "/assets/images/legacy/clubu/maekawa2.jpg", alt: "Instructor Maekawa", name: "Maekawa" },
+          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "Instructor Wakabayashi", name: "Wakabayashi" },
+          { src: "/assets/images/instructors/sato2.jpg", alt: "Instructor Sato", name: "Sato" },
+          { src: "/assets/images/instructors/noro.jpg", alt: "Instructor Noro", name: "Noro" },
+        ]}
+        address="5-jo 1-chome 1-40 Hiraoka, Kiyota-ku, Sapporo, Clubhouse Plaz"
+        mapHref="https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087955,141.4478467,18z/data=!3m1!4b1!4m6!3m5!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619!16s/g/12hpr3l9l?entry=ttu"
+        mapQuery="43.0087955,141.4478467"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Hiraoka Trial Lesson Inquiry">

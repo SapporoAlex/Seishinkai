@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -64,20 +65,23 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">新札幌支部</h2>
-      <p>
-        ◆設立　平成9年(1997)4月<br />
-        ◆担当　波川、前川
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/札幌市+厚別区民センター/@43.036652,141.474159,15z/data=!4m2!3m1!1s0x0:0x2eeb48db85d54c24?sa=X&ved=2ahUKEwi-kKuTlaXhAhUOUN4KHZo-B5UQ_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">厚別区中央1条5丁目　厚別区民センター会議室</a
-        >
-      </p>
+      <BranchInfoCard
+        name="新札幌支部"
+        facts={[
+          { label: "設立", value: "平成9年(1997)4月" },
+          { label: "担当", value: "波川、前川" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/n-sapporo/2.jpg",
+          alt: "厚別区民センター",
+          width: 290,
+          height: 206,
+        }}
+        address="厚別区中央1条5丁目　厚別区民センター会議室"
+        mapHref="https://www.google.com/maps/place/札幌市+厚別区民センター/@43.036652,141.474159,15z/data=!4m2!3m1!1s0x0:0x2eeb48db85d54c24?sa=X&ved=2ahUKEwi-kKuTlaXhAhUOUN4KHZo-B5UQ_BIwCnoECA8QCA"
+        mapQuery="43.036652,141.474159"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=新札幌体験・入会問い合わせ">

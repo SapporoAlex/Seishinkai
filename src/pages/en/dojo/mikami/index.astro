@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -73,12 +74,6 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Chuo-Higashi Branch</h2>
-      <p>
-        ◆Founded: June 2015 (Heisei 27)<br />
-        ◆Founder: Jun Mikami
-      </p>
-
       <div class="detail-media">
         <a href="https://www.facebook.com/jun.mikami.7" target="_blank" rel="noopener">
           <img
@@ -91,30 +86,23 @@ const entries = [
         </a>
       </div>
 
-      <h2 class="detail-page__heading">Venue: Mikami Bldg. 3F</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0593031,141.3601062,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
-          target="_blank"
-          rel="noopener">1-10 Minami 2-jo Higashi 4-chome, Chuo-ku, Sapporo, Mikami Bldg. 3F</a
-        ><br />
-        About a 4-minute walk (300m) from the subway Bus Center Station. There is no on-site parking, so if driving please use a nearby paid parking lot.
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0591797,141.3622588,21z/data=!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/mikami/2.jpg"
-            alt="Mikami Bldg. (Kamome Academy)"
-            width="230"
-            height="203"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Chuo-Higashi Branch"
+        facts={[
+          { label: "Founded", value: "June 2015 (Heisei 27)" },
+          { label: "Founder", value: "Jun Mikami" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/mikami/2.jpg",
+          alt: "Mikami Bldg. (Kamome Academy)",
+          width: 230,
+          height: 203,
+        }}
+        address="1-10 Minami 2-jo Higashi 4-chome, Chuo-ku, Sapporo, Mikami Bldg. 3F"
+        addressNote="About a 4-minute walk (300m) from the subway Bus Center Station. There is no on-site parking, so if driving please use a nearby paid parking lot."
+        mapHref="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0593031,141.3601062,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
+        mapQuery="43.0593031,141.3601062"
+      />
 
       <div class="detail-media">
         <img

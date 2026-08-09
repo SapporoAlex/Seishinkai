@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -99,35 +100,24 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Oasa Branch, Ebetsu City / Oasa Karate Club</h2>
-      <p>
-        ◆ Founded: April 2008 (Heisei 20)<br />
-        ◆ Instructors: Namikawa, Saito, Shima, Masuda, Maekawa, Noro
-      </p>
-
-      <h2 class="detail-page__heading">Venue: Seishinkan Oasa Karate Dojo</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/dir/43.0720251,141.4873424/43.071927,141.48733/@43.071403,141.4865876,18.5z"
-          target="_blank"
-          rel="noopener">6 Oasa-sawacho, Ebetsu, Park Hills 1F Seishinkan Oasa Karate Dojo</a
-        ><br />
-        Located along Niban-dori, next to Oasa Nishi Park.
-      </p>
+      <BranchInfoCard
+        name="Oasa Branch, Ebetsu City / Oasa Karate Club"
+        facts={[
+          { label: "Founded", value: "April 2008 (Heisei 20)" },
+          { label: "Instructors", value: "Namikawa, Saito, Shima, Masuda, Maekawa, Noro" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/oasa/2.jpg",
+          alt: "Seishinkan Oasa Karate Dojo",
+          width: 342,
+          height: 273,
+        }}
+        address="6 Oasa-sawacho, Ebetsu, Park Hills 1F Seishinkan Oasa Karate Dojo"
+        addressNote="Located along Niban-dori, next to Oasa Nishi Park."
+        mapHref="https://www.google.com/maps/dir/43.0720251,141.4873424/43.071927,141.48733/@43.071403,141.4865876,18.5z"
+        mapQuery="43.071403,141.4865876"
+      />
       <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/dir/43.0720251,141.4873424/43.071927,141.48733/@43.071403,141.4865876,18.5z"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/oasa/2.jpg"
-            alt="Seishinkan Oasa Karate Dojo"
-            width="342"
-            height="273"
-            loading="lazy"
-          />
-        </a>
         <img
           src="/assets/images/legacy/base/iqi.jpg"
           alt="Exterior of Park Hills"

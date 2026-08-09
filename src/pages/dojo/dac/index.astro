@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -55,15 +56,6 @@ const entries = [
         </figure>
         <figure>
           <img
-            src="/assets/images/legacy/images/muro.jpg"
-            alt="室木"
-            width="102"
-            height="102"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/dojo/dac/img2.jpg"
             alt="ダックスポーツクラブ"
             width="117"
@@ -73,36 +65,27 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">東区ダック支部</h2>
-      <p>
-        ◆設立　平成20年(2008)10月<br />
-        ◆担当者　室木拓士
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/パーソナルトレーニングジム+ダック/@43.088374,141.373362,15z/data=!4m5!3m4!1s0x0:0x198f5c6210f706a6!8m2!3d43.088374!4d141.373362"
-          target="_blank"
-          rel="noopener">札幌市東区北20条東16丁目1-2　ダックスポーツクラブ</a
-        ><br />
-        〒065-0020 札幌市東区北20条東16丁目1-2 DAC.BLD.3F　TEL.011-398-4842
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/パーソナルトレーニングジム+ダック/@43.088374,141.373362,15z/data=!4m5!3m4!1s0x0:0x198f5c6210f706a6!8m2!3d43.088374!4d141.373362"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/dac/2.jpg"
-            alt="ダックスポーツクラブ"
-            width="208"
-            height="201"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="東区ダック支部"
+        facts={[
+          { label: "設立", value: "平成20年(2008)10月" },
+          { label: "担当者", value: "室木拓士" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/dac/2.jpg",
+          alt: "ダックスポーツクラブ",
+          width: 208,
+          height: 201,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/muroki.jpg", alt: "室木", name: "室木" },
+        ]}
+        address="札幌市東区北20条東16丁目1-2　ダックスポーツクラブ"
+        addressNote="〒065-0020 札幌市東区北20条東16丁目1-2 DAC.BLD.3F　TEL.011-398-4842"
+        mapHref="https://www.google.com/maps/place/パーソナルトレーニングジム+ダック/@43.088374,141.373362,15z/data=!4m5!3m4!1s0x0:0x198f5c6210f706a6!8m2!3d43.088374!4d141.373362"
+        mapQuery="43.088374,141.373362"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__back">
         <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,60 +53,26 @@ const entries = [
         > for enquiries.
       </p>
 
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/instructors/muroki.jpg"
-            alt="Instructor Takushi Muroki"
-            width="142"
-            height="142"
-            loading="lazy"
-          />
-          <figcaption>Instructor Takushi Muroki</figcaption>
-        </figure>
-      </div>
-
-      <h2 class="detail-page__heading">Ebetsu Branch Information</h2>
-      <p>
-        <strong>Established:</strong> February 2006<br />
-        <strong>Instructor:</strong> Takushi Muroki
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒067-0013+北海道江別市３条５丁目１１−１/@43.1121242,141.5546939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b32393aa80e4b:0x2c02dec343b7a562!8m2!3d43.1121242!4d141.5568826"
-          target="_blank"
-          rel="noopener">3-jo 5-chome 11-1, Ebetsu — Ebetsu Central Community Center</a
-        ><br />
-        Near JR Ebetsu Station.
-      </p>
+      <BranchInfoCard
+        name="Ebetsu Branch Information"
+        facts={[
+          { label: "Established", value: "February 2006" },
+          { label: "Instructor", value: "Takushi Muroki" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/muroki.jpg", alt: "Instructor Takushi Muroki", name: "Takushi Muroki" },
+          { src: "/assets/images/instructors/tashiro2.jpg", alt: "Tashiro", name: "Tashiro" },
+          { src: "/assets/images/instructors/miura.jpg", alt: "Miura", name: "Miura" },
+        ]}
+        address="3-jo 5-chome 11-1, Ebetsu — Ebetsu Central Community Center"
+        addressNote="Near JR Ebetsu Station."
+        mapHref="https://www.google.com/maps/place/〒067-0013+北海道江別市３条５丁目１１−１/@43.1121242,141.5546939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b32393aa80e4b:0x2c02dec343b7a562!8m2!3d43.1121242!4d141.5568826"
+        mapQuery="43.1121242,141.5546939"
+      />
 
       <p class="detail-page__note">
         Occasional volunteer instructors:
       </p>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/instructors/tashiro2.jpg"
-            alt="Tashiro"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-          <figcaption>Tashiro</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/instructors/miura.jpg"
-            alt="Miura"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-          <figcaption>Miura</figcaption>
-        </figure>
-      </div>
 
       <p class="detail-page__back">
         <a href="/en/dojo/ebetsu/">← Back to Ebetsu, Iwamizawa & Ishikari Dojos</a>

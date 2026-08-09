@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,58 +53,31 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/masuda.jpg"
-            alt="Masuda"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/sakai.jpg"
-            alt="Sakai"
-            width="105"
-            height="106"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Tsukisamu Branch</h2>
-      <p>
-        ◆Founded: 1993<br />
-        ◆Established: March 2010<br />
-        ◆Founder: Katsumi Okubo<br />
-        ◆Former Instructors: Aoki, Tsubasa Okubo, Takigami, Yamane, Masuda<br />
-        ◆Current Instructors: Headquarters Staff / Sakai, assisted by adult black belt members
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/月寒児童会館/@43.031183,141.3936968,15z/data=!4m2!3m1!1s0x0:0xc25e49e9c2bfeaaf"
-          target="_blank"
-          rel="noopener">3-21 Tsukisamu-nishi 1-jo 6-chome, Toyohira-ku, Sapporo, Tsukisamu Children's Hall</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/月寒児童会館/@43.031183,141.3936968,15z/data=!4m2!3m1!1s0x0:0xc25e49e9c2bfeaaf"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/tsukisam-n/2.jpg"
-            alt="Tsukisamu Children's Hall"
-            width="226"
-            height="162"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Tsukisamu Branch"
+        facts={[
+          { label: "Founded", value: "1993" },
+          { label: "Established", value: "March 2010" },
+          { label: "Founder", value: "Katsumi Okubo" },
+          { label: "Former Instructors", value: "Aoki, Tsubasa Okubo, Takigami, Yamane, Masuda" },
+          { label: "Current Instructors", value: "Headquarters Staff / Sakai, assisted by adult black belt members" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/tsukisam-n/2.jpg",
+          alt: "Tsukisamu Children's Hall",
+          width: 226,
+          height: 162,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/masuda.jpg", alt: "Masuda", name: "Masuda" },
+          { src: "/assets/images/instructors/sakai.jpg", alt: "Sakai", name: "Sakai" },
+        ]}
+        address="3-21 Tsukisamu-nishi 1-jo 6-chome, Toyohira-ku, Sapporo, Tsukisamu Children's Hall"
+        mapHref="https://www.google.com/maps/place/月寒児童会館/@43.031183,141.3936968,15z/data=!4m2!3m1!1s0x0:0xc25e49e9c2bfeaaf"
+        mapQuery="43.031183,141.3936968"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Tsukisamu Trial Lesson & Enrollment Inquiry">

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -66,86 +67,37 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Kiyota-ku Hiraoka Branch</h2>
-      <p>
-        ◆Founded: March 2010 (Heisei 22) (Thursday class)<br />
-        　　　　September 2016 (Heisei 28) (Tuesday class)<br />
-        ◆Founder: Tsubasa Okubo<br />
-        ◆Lead instructors: Takigami, Wakabayashi<br />
+      <p class="detail-page__note">
         ■Directly run by Headquarters / instructors rotate
       </p>
 
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/wakabayashi.jpg"
-            alt="Instructor Wakabayashi"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/sato2.jpg"
-            alt="Instructor Sato"
-            width="107"
-            height="99"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/shima.jpg"
-            alt="Instructor Shima"
-            width="102"
-            height="104"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/ooba.jpg"
-            alt="Instructor Ooba"
-            width="104"
-            height="106"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/masuda.jpg"
-            alt="Instructor Masuda"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087937,141.4468732,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619"
-          target="_blank"
-          rel="noopener">5-jo 1-chome 1-40 Hiraoka, Kiyota-ku, Sapporo, Clubhouse Plaz</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087937,141.4468732,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/hiraoka-c/2.jpg"
-            alt="Clubhouse Plaz"
-            width="250"
-            height="192"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Kiyota-ku Hiraoka Branch"
+        facts={[
+          {
+            label: "Founded",
+            value: ["March 2010 (Heisei 22) (Thursday class)", "September 2016 (Heisei 28) (Tuesday class)"],
+          },
+          { label: "Founder", value: "Tsubasa Okubo" },
+          { label: "Lead instructors", value: "Takigami, Wakabayashi" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "Instructor Wakabayashi", name: "Wakabayashi" },
+          { src: "/assets/images/instructors/sato2.jpg", alt: "Instructor Sato", name: "Sato" },
+          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
+          { src: "/assets/images/legacy/clubu/ooba.jpg", alt: "Instructor Ooba", name: "Ooba" },
+          { src: "/assets/images/instructors/masuda.jpg", alt: "Instructor Masuda", name: "Masuda" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/hiraoka-c/2.jpg",
+          alt: "Clubhouse Plaz",
+          width: 250,
+          height: 192,
+        }}
+        address="5-jo 1-chome 1-40 Hiraoka, Kiyota-ku, Sapporo, Clubhouse Plaz"
+        mapHref="https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087937,141.4468732,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619"
+        mapQuery="43.0087937,141.4468732"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Hiraoka Trial Lesson Inquiry">

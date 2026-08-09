@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -55,41 +56,28 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/oki.jpg"
-            alt="Instructor Shima"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Toyohira Park Branch</h2>
-      <p>
-        ◆Established: June 2015<br />
-        ◆Former Instructors: Oikawa, Shima<br />
-        ◆Current Instructors: Okimura, assisted by rotating adult black belt members
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/札幌市豊平若者活動センター/@43.0430538,141.3731148,15z/data=!4m2!3m1!1s0x0:0x8c7de2009ed78c7a"
-          target="_blank"
-          rel="noopener">3-5 Toyohira 8-jo 11-chome, Toyohira Youth Activity Center</a
-        >
-      </p>
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/toyohira-k/imgC.jpg"
-          alt="Toyohira Youth Activity Center"
-          width="236"
-          height="176"
-          loading="lazy"
-        />
-      </div>
+      <BranchInfoCard
+        name="Toyohira Park Branch"
+        facts={[
+          { label: "Established", value: "June 2015" },
+          { label: "Former Instructors", value: "Oikawa, Shima" },
+          { label: "Current Instructors", value: "Okimura, assisted by rotating adult black belt members" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/toyohira-k/imgC.jpg",
+          alt: "Toyohira Youth Activity Center",
+          width: 236,
+          height: 176,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/oki.jpg", alt: "Instructor Shima", name: "Shima" },
+        ]}
+        address="3-5 Toyohira 8-jo 11-chome, Toyohira Youth Activity Center"
+        mapHref="https://www.google.com/maps/place/札幌市豊平若者活動センター/@43.0430538,141.3731148,15z/data=!4m2!3m1!1s0x0:0x8c7de2009ed78c7a"
+        mapQuery="43.0430538,141.3731148"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Toyohira Park Branch Trial Lesson & Enrollment Inquiry">

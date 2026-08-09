@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -64,20 +65,23 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">青葉支部</h2>
-      <p>
-        ◆設立　平成23年(2011)11月<br />
-        ◆担当　(募集中)
-      </p>
-
-      <h2 class="detail-page__heading">練習会場(予定)</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/青葉南集会所/@43.0282951,141.4771169,15z/data=!4m6!3m5!1s0x5f0b2b5bd1e99d37:0xb28a71c0f3efd5a9!8m2!3d43.0282951!4d141.4771169!16s/g/1tgdnbw1?entry=ttu"
-          target="_blank"
-          rel="noopener">厚別区青葉6丁目1-10　青葉南集会所(予定会場)</a
-        >
-      </p>
+      <BranchInfoCard
+        name="青葉支部"
+        facts={[
+          { label: "設立", value: "平成23年(2011)11月" },
+          { label: "担当", value: "(募集中)" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/aoba/img4.jpg",
+          alt: "青葉南集会所",
+          width: 299,
+          height: 154,
+        }}
+        address="厚別区青葉6丁目1-10　青葉南集会所(予定会場)"
+        mapHref="https://www.google.com/maps/place/青葉南集会所/@43.0282951,141.4771169,15z/data=!4m6!3m5!1s0x5f0b2b5bd1e99d37:0xb28a71c0f3efd5a9!8m2!3d43.0282951!4d141.4771169!16s/g/1tgdnbw1?entry=ttu"
+        mapQuery="43.0282951,141.4771169"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=青葉支部再開・参加希望">

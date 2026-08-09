@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -51,16 +52,6 @@ const entries = [
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/images/muro.jpg"
-            alt="Kawashimo Branch founder, Muroki"
-            width="124"
-            height="124"
-            loading="lazy"
-          />
-          <figcaption>Founder: Muroki</figcaption>
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/dojo/kawashimo/Image1.jpg"
             alt="Kawashimo Branch practice session"
             width="270"
@@ -70,21 +61,27 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Kawashimo Branch / Kawashimo Karate Club</h2>
-      <p>
-        ◆ Founded: June 2011 (Heisei 23)<br />
-        ◆ Founder: Takushi Muroki (2011–)
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/コープさっぽろ+川下店/@43.0492478,141.4447141,15z/data=!4m5!3m4!1s0x0:0x1c36db1f9721dd41!8m2!3d43.0492478!4d141.4447141"
-          target="_blank"
-          rel="noopener">1-1 Kawashimo 3-jo 4-chome, Shiroishi-ku, Sapporo, Coop Sapporo Kawashimo Store 2F Circle Room</a
-        ><br />
-        The entrance is on the side of the building. If you're not sure, please ask at the service counter inside the Coop store for directions to the circle room.
-      </p>
+      <BranchInfoCard
+        name="Seishinkai Kawashimo Branch / Kawashimo Karate Club"
+        facts={[
+          { label: "Founded", value: "June 2011 (Heisei 23)" },
+          { label: "Founder", value: "Takushi Muroki" },
+          { label: "Instructor", value: "Muroki, plus adult black belt members joining occasionally" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kawashimo/img3.jpg",
+          alt: "Coop Sapporo Kawashimo Store (facing Kita-13-jo-dori)",
+          width: 253,
+          height: 143,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/muroki.jpg", alt: "Kawashimo Branch founder, Muroki", name: "Muroki" },
+        ]}
+        address="1-1 Kawashimo 3-jo 4-chome, Shiroishi-ku, Sapporo, Coop Sapporo Kawashimo Store 2F Circle Room"
+        addressNote="The entrance is on the side of the building. If you're not sure, please ask at the service counter inside the Coop store for directions to the circle room."
+        mapHref="https://www.google.com/maps/place/コープさっぽろ+川下店/@43.0492478,141.4447141,15z/data=!4m5!3m4!1s0x0:0x1c36db1f9721dd41!8m2!3d43.0492478!4d141.4447141"
+        mapQuery="43.0492478,141.4447141"
+      />
       <div class="detail-gallery">
         <figure>
           <a

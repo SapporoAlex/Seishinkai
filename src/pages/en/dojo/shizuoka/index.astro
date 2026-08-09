@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -63,13 +64,6 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Shizuoka Branch</h2>
-      <p>
-        ◆Founded: October 2001 (Heisei 13) - Yamanashi Branch<br />
-        　　　　June 2005 (Heisei 17) - Shizuoka Branch<br />
-        ◆Founder: Hisanobu Inuura
-      </p>
-
       <div class="detail-gallery">
         <figure>
           <a href="https://www.santakuji.com/" target="_blank" rel="noopener">
@@ -95,30 +89,23 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒419-0303+静岡県富士宮市大鹿窪３３２/@35.2507663,138.5611994,17z/data=!3m1!4b1!4m5!3m4!1s0x601bd01f37b31da9:0xc2111aeb55d23bb5!8m2!3d35.2507663!4d138.5633881"
-          target="_blank"
-          rel="noopener">332 Oshikakubo, Fujinomiya City, Shizuoka Prefecture, Sansenji Temple</a
-        ><br />
-        The dojo is located on the temple grounds
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒419-0303+静岡県富士宮市大鹿窪３３２/@35.2507663,138.5611994,17z/data=!3m1!4b1!4m5!3m4!1s0x601bd01f37b31da9:0xc2111aeb55d23bb5!8m2!3d35.2507663!4d138.5633881"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/shizuoka/2.jpg"
-            alt="Sansenji Dojo"
-            width="258"
-            height="175"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Shizuoka Branch"
+        facts={[
+          { label: "Founded", value: ["October 2001 (Heisei 13) - Yamanashi Branch", "June 2005 (Heisei 17) - Shizuoka Branch"] },
+          { label: "Founder", value: "Hisanobu Inuura" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/shizuoka/2.jpg",
+          alt: "Sansenji Dojo",
+          width: 258,
+          height: 175,
+        }}
+        address="332 Oshikakubo, Fujinomiya City, Shizuoka Prefecture, Sansenji Temple"
+        addressNote="The dojo is located on the temple grounds"
+        mapHref="https://www.google.com/maps/place/〒419-0303+静岡県富士宮市大鹿窪３３２/@35.2507663,138.5611994,17z/data=!3m1!4b1!4m5!3m4!1s0x601bd01f37b31da9:0xc2111aeb55d23bb5!8m2!3d35.2507663!4d138.5633881"
+        mapQuery="35.2507663,138.5611994"
+      />
 
       <p class="detail-page__back">
         <a href="/en/dojo/naichi/">← Back to the Shizuoka, Aichi & Chiba Dojo List</a>

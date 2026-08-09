@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -53,56 +54,28 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/yamane.jpg"
-            alt="Instructor Yamane"
-            width="239"
-            height="239"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/takashima.jpg"
-            alt="Instructor Shima"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Takuhoku Branch</h2>
-      <p>
-        ◆Founded: October 2011 (Heisei 23)<br />
-        ◆Founder: Tsubasa Nimori<br />
-        ◆Instructors: Yamane, Shima
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
-          target="_blank"
-          rel="noopener">1-6 Takuhoku 3-jo 4-chome, Kita-ku, Sapporo, Takuhoku Palace Kaikan</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/takuhoku/2.jpg"
-            alt="Takuhoku Palace Kaikan"
-            width="282"
-            height="216"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Takuhoku Branch"
+        facts={[
+          { label: "Founded", value: "October 2011 (Heisei 23)" },
+          { label: "Founder", value: "Tsubasa Nimori" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/yamane.jpg", alt: "Instructor Yamane", name: "Yamane" },
+          { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Shima", name: "Shima" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/takuhoku/2.jpg",
+          alt: "Takuhoku Palace Kaikan",
+          width: 282,
+          height: 216,
+        }}
+        address="1-6 Takuhoku 3-jo 4-chome, Kita-ku, Sapporo, Takuhoku Palace Kaikan"
+        mapHref="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
+        mapQuery="Takuhoku Palace Kaikan, 1-6 Takuhoku 3-jo 4-chome, Kita-ku, Sapporo"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Takuhoku Branch Trial Lesson / Enrollment Inquiry">

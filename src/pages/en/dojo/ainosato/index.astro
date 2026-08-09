@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -64,15 +65,6 @@ const entries = [
         </figure>
         <figure>
           <img
-            src="/assets/images/legacy/clubu/shima.jpg"
-            alt="Instructor Shima"
-            width="1254"
-            height="1254"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/images/tuba.jpg"
             alt="Occasionally helps out as an assistant instructor"
             width="118"
@@ -82,21 +74,26 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Ainosato Branch</h2>
-      <p>
-        ◆Founded: March 2009 (Heisei 21)<br />
-        ◆Founder: Takushi Muroki<br />
-        ◆Instructors: Tsubasa Okubo, Shima
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
-          target="_blank"
-          rel="noopener">Ainosato 4-jo 6-chome, Kita-ku, Sapporo, Takuhoku Kaikan</a
-        >
-      </p>
+      <BranchInfoCard
+        name="Ainosato Branch"
+        facts={[
+          { label: "Founded", value: "March 2009 (Heisei 21)" },
+          { label: "Founder", value: "Takushi Muroki" },
+          { label: "Instructors", value: "Tsubasa Okubo, Shima" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/ainosato/img4.jpg",
+          alt: "Takuhoku Kaikan",
+          width: 455,
+          height: 305,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
+        ]}
+        address="Ainosato 4-jo 6-chome, Kita-ku, Sapporo, Takuhoku Kaikan"
+        mapHref="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
+        mapQuery="43.164024,141.403793"
+      />
 
       <p class="detail-page__back">
         <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>

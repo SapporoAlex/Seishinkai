@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -54,56 +55,29 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/takashima.jpg"
-            alt="Saturday instructor"
-            width="1147"
-            height="1147"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/manaya.jpg"
-            alt="Thursday instructor"
-            width="142"
-            height="142"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Shinoro Branch</h2>
-      <p>
-        ◆Founded: July 2008 (Heisei 20)<br />
-        ◆Founder: Takushi Muroki<br />
-        ◆Instructor: Headquarters-run - Shima
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
-          target="_blank"
-          rel="noopener">11-1 Shinoro 3-jo 8-chome, Kita-ku, Sapporo, Shinoro Community Center 2F</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/shinoro/2.jpg"
-            alt="Shinoro Community Center"
-            width="282"
-            height="245"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Shinoro Branch"
+        facts={[
+          { label: "Founded", value: "July 2008 (Heisei 20)" },
+          { label: "Founder", value: "Takushi Muroki" },
+          { label: "Instructor", value: "Headquarters-run - Shima" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/shinoro/2.jpg",
+          alt: "Shinoro Community Center",
+          width: 282,
+          height: 245,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/takashima.jpg", alt: "Saturday instructor", name: "Takashima" },
+          { src: "/assets/images/instructors/manaya.jpg", alt: "Thursday instructor", name: "Manaya" },
+        ]}
+        address="11-1 Shinoro 3-jo 8-chome, Kita-ku, Sapporo, Shinoro Community Center 2F"
+        mapHref="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
+        mapQuery="43.1431773,141.367712"
+      />
 
       <p class="detail-page__back">
         <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>

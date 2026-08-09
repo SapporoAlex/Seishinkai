@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 ---
 
 <BaseLayout
@@ -72,11 +73,17 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Seishinkai — Inoue Dojo</h2>
-      <p>
-        ◆ Founded: April 2001 (Heisei 13)<br />
-        ◆ Founder: Shihan Ryuichiro Inoue (dentist)
-      </p>
+      <BranchInfoCard
+        name="Seishinkai — Inoue Dojo"
+        facts={[
+          { label: "Founded", value: "April 2001 (Heisei 13)" },
+          { label: "Founder", value: "Shihan Ryuichiro Inoue (dentist)" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/inoue.jpg", alt: "Shihan Inoue (dentist)", name: "Inoue" },
+          { src: "/assets/images/instructors/ito.jpg", alt: "Ito, 2nd Dan (school teacher)", name: "Ito" },
+        ]}
+      />
       <div class="detail-media">
         <a href="https://youtu.be/bqi8972NRXE" target="_blank" rel="noopener">
           <img
@@ -103,30 +110,6 @@ import BaseLayout from "@layouts/BaseLayout.astro";
       </div>
 
       <h2 class="detail-page__heading">Instructors</h2>
-      <div class="detail-gallery">
-        <figure>
-          <a
-            href="https://www.facebook.com/ryuichirou.inoue"
-            target="_blank"
-            rel="noopener"
-          >
-            <img
-              src="/assets/images/legacy/images/inoue.jpg"
-              alt="Shihan Inoue (dentist)"
-              loading="lazy"
-            />
-          </a>
-          <figcaption>Shihan Inoue (dentist)</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/ito.jpg"
-            alt="Ito, 2nd Dan (school teacher)"
-            loading="lazy"
-          />
-          <figcaption>Ito, 2nd Dan (school teacher)</figcaption>
-        </figure>
-      </div>
       <p class="detail-page__note">
         ※Instructors volunteer their time outside their regular jobs.
       </p>

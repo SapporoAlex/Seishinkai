@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -73,41 +74,28 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">喜茂別町支部</h2>
-      <p>
-        ◆設立　平成19年(2007)12月<br />
-        ◇設立者　大久保勝美<br />
-        ◆担当者　本部直轄
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/喜茂別武道館/@42.7988387,140.9335731,15z/data=!4m5!3m4!1s0x0:0x81f4a8b87c2dd038!8m2!3d42.7988387!4d140.9335731"
-          target="_blank"
-          rel="noopener">虻田郡喜茂別町字喜茂別22　喜茂別町武道館</a
-        >
-      </p>
+      <BranchInfoCard
+        name="喜茂別町支部"
+        facts={[
+          { label: "設立", value: "平成19年(2007)12月" },
+          { label: "設立者", value: "大久保勝美" },
+          { label: "担当者", value: "本部直轄" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kimobetsu/2.jpg",
+          alt: "喜茂別町武道館",
+          width: 286,
+          height: 211,
+        }}
+        address="虻田郡喜茂別町字喜茂別22　喜茂別町武道館"
+        mapHref="https://www.google.com/maps/place/喜茂別武道館/@42.7988387,140.9335731,15z/data=!4m5!3m4!1s0x0:0x81f4a8b87c2dd038!8m2!3d42.7988387!4d140.9335731"
+        mapQuery="42.7988387,140.9335731"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         ※会費等：月会費2,500円～(喜茂別町民)。別途年会費等。
       </p>
-
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/喜茂別武道館/@42.7988387,140.9335731,15z/data=!4m5!3m4!1s0x0:0x81f4a8b87c2dd038!8m2!3d42.7988387!4d140.9335731"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kimobetsu/2.jpg"
-            alt="喜茂別町武道館"
-            width="286"
-            height="211"
-            loading="lazy"
-          />
-        </a>
-      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/tobetsu/">← 一覧へ戻る</a>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -54,41 +55,32 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Seishinkai Lucy Nango Branch</h2>
-      <p>
-        ◆ Founded: June 2018 (Heisei 30)<br />
-        ◆ Past instructors: Muroki, Takigami, Wakabayashi<br />
-        ◆ Instructor: Muroki
-      </p>
+      <BranchInfoCard
+        name="Seishinkai Lucy Nango Branch"
+        facts={[
+          { label: "Founded", value: "June 2018 (Heisei 30)" },
+          { label: "Past instructors", value: "Muroki, Takigami, Yuko Wakabayashi" },
+          { label: "Instructor", value: "Maekawa, plus rotating adult black belt members" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/nango/2.jpg",
+          alt: "Coop Sapporo Lucy Cultural School",
+          width: 651,
+          height: 287,
+        }}
+        address="5-35 Sakaedori 18-chome, Shiroishi-ku, Sapporo, Coop Sapporo Lucy Cultural School"
+        addressNote="Near Nangou Subway Station"
+        mapHref="https://www.google.com/maps/place/コープさっぽろ+ルーシー文化教室/@43.028082,141.434141,15z/data=!4m2!3m1!1s0x0:0x1164e7b39eeedaf9"
+        mapQuery="43.028082,141.434141"
+      />
 
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/コープさっぽろ+ルーシー文化教室/@43.028082,141.434141,15z/data=!4m2!3m1!1s0x0:0x1164e7b39eeedaf9"
-          target="_blank"
-          rel="noopener">5-35 Sakaedori 18-chome, Shiroishi-ku, Sapporo, Coop Sapporo Lucy Cultural School</a
-        > (near Nangou Subway Station)<br />
+      <p class="detail-page__note">
         For details and to register for the class, please see the <a
           href="https://life-culture.sapporo.coop/culture/course/detail.html/?course_id=795"
           target="_blank"
           rel="noopener">Coop Sapporo Lucy Cultural School website</a
         >.
       </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/コープさっぽろ+ルーシー文化教室/@43.028082,141.434141,15z/data=!4m2!3m1!1s0x0:0x1164e7b39eeedaf9"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/nango/2.jpg"
-            alt="Coop Sapporo Lucy Cultural School"
-            width="651"
-            height="287"
-            loading="lazy"
-          />
-        </a>
-      </div>
 
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>

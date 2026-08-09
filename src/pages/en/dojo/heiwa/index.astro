@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -59,37 +60,24 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Heiwadori Branch / Heiwadori Karate Club</h2>
-      <p>
-        ◆ Founded: March 2010 (Heisei 22)<br />
-        ◆ Founder: Kayoko Mimura (2010–2015)<br />
-        ◆ Past instructors: Hashini (2015–2018)<br />
-        ◆ Instructors: Kazuya Takashima (2019–), Nobutaka Maekawa (2026–)
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/ビッグハウス+白石店/@43.0514733,141.4108608,17z/data=!4m12!1m6!3m5!1s0x0:0x1e4ad42edd7757dc!2z44Ot44O844K944OzIOacreW5jOW5s-WSjOmAmu-8k-S4geebruW6lw!8m2!3d43.054403!4d141.412858!3m4!1s0x5f0b2beabe8e7a11:0xfbbe7e25dacb240d!8m2!3d43.0523841!4d141.4118193"
-          target="_blank"
-          rel="noopener">3-1-1 Heiwadori 3-chome-kita, Shiroishi-ku, Sapporo, Super Arcs Shiroishi Store 2F</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/ビッグハウス+白石店/@43.0514733,141.4108608,17z/data=!4m12!1m6!3m5!1s0x0:0x1e4ad42edd7757dc!2z44Ot44O844K944OzIOacreW5jOW5s-WSjOmAmu-8k-S4geebruW6lw!8m2!3d43.054403!4d141.412858!3m4!1s0x5f0b2beabe8e7a11:0xfbbe7e25dacb240d!8m2!3d43.0523841!4d141.4118193"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/heiwa/2.jpg"
-            alt="Super Arcs Shiroishi Store"
-            width="306"
-            height="183"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Heiwadori Branch / Heiwadori Karate Club"
+        facts={[
+          { label: "Founded", value: "March 2010 (Heisei 22)" },
+          { label: "Founder", value: "Kayoko Mimura" },
+          { label: "Past instructors", value: "Hashini, Daniela, Yuka Takigami, Takashima" },
+          { label: "Instructor", value: "Maekawa, plus rotating adult black belt members" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/heiwa/2.jpg",
+          alt: "Super Arcs Shiroishi Store",
+          width: 306,
+          height: 183,
+        }}
+        address="3-1-1 Heiwadori 3-chome-kita, Shiroishi-ku, Sapporo, Super Arcs Shiroishi Store 2F"
+        mapHref="https://www.google.com/maps/place/ビッグハウス+白石店/@43.0514733,141.4108608,17z/data=!4m12!1m6!3m5!1s0x0:0x1e4ad42edd7757dc!2z44Ot44O844K944OzIOacreW5jOW5s-WSjOmAmu-8k-S4geebruW6lw!8m2!3d43.054403!4d141.412858!3m4!1s0x5f0b2beabe8e7a11:0xfbbe7e25dacb240d!8m2!3d43.0523841!4d141.4118193"
+        mapQuery="43.0514733,141.4108608"
+      />
 
       <p class="detail-page__note">We also drop by from time to time</p>
       <div class="detail-media">

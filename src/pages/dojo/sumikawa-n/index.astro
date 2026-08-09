@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -55,50 +56,30 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/takashima.jpg"
-            alt="指導 嶋"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/masuda.jpg"
-            alt="増田"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">澄川支部</h2>
-      <p>
-        ◆設立　平成22年(2010)9月<br />
-        ◆担当者　本部直轄
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/%E3%83%93%E3%83%83%E3%82%AF%E3%83%8F%E3%82%A6%E3%82%B9+%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E5%BA%97/@43.0147543,141.3584402,17z"
-          target="_blank"
-          rel="noopener"
-          >札幌市豊平区平岸1条22丁目2-15　ビックハウスエクストラ店2F</a
-        >
-      </p>
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/sumikawa-n/2.jpg"
-          alt="ビックハウスエクストラ店"
-          width="243"
-          height="174"
-          loading="lazy"
-        />
-      </div>
+      <BranchInfoCard
+        name="清心会澄川西支部"
+        facts={[
+          { label: "設立", value: "平成22年(2010)9月" },
+          { label: "歴代", value: "大久保翼、髙嶋" },
+          { label: "担当", value: "沖村、他一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/sumikawa-n/2.jpg",
+          alt: "ビックハウスエクストラ店",
+          width: 243,
+          height: 174,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/takashima.jpg", alt: "指導 嶋", name: "嶋" },
+          { src: "/assets/images/instructors/masuda.jpg", alt: "増田", name: "増田" },
+        ]}
+        address="札幌市豊平区平岸1条22丁目2-15　ビックハウスエクストラ店2F"
+        mapHref="https://www.google.com/maps/place/%E3%83%93%E3%83%83%E3%82%AF%E3%83%8F%E3%82%A6%E3%82%B9+%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E5%BA%97/@43.0147543,141.3584402,17z"
+        mapQuery="43.0147543,141.3584402"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=澄川体験申込">

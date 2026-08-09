@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -54,35 +55,23 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">花川東・緑苑台支部</h2>
-      <p>
-        ◆設立　平成30年(2018)3月<br />
-        ◆設立者　室木拓士
-      </p>
-
-      <h2 class="detail-page__heading">会場　緑苑台グリーン会館</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
-          target="_blank"
-          rel="noopener">石狩市緑苑台東2条1丁目 緑苑台グリーン会館</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/ryoku/2.jpg"
-            alt="緑苑台グリーン会館"
-            width="257"
-            height="182"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="花川東・緑苑台支部"
+        facts={[
+          { label: "設立", value: "平成30年(2018)3月" },
+          { label: "設立者", value: "室木拓士" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/ryoku/2.jpg",
+          alt: "緑苑台グリーン会館",
+          width: 257,
+          height: 182,
+        }}
+        address="石狩市緑苑台東2条1丁目 緑苑台グリーン会館"
+        mapHref="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
+        mapQuery="43.163705,141.342457"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=緑苑台体験申込">

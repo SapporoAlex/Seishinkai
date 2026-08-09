@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -57,50 +58,34 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/shima.jpg"
-            alt="Instructor Shima"
-            width="100"
-            height="102"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/ooba.jpg"
-            alt="Instructor Ooba"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Higashi Ward — Okadama Branch</h2>
-      <p>
-        ◆ Founded: March 2009 (Heisei 21)<br />
-        ◆ Founder: Kayoko Mimura → Hashini<br />
-        ◆ Person in Charge: Under direct Headquarters management — multiple instructors take turns leading
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒007-0835+北海道札幌市東区北３５条東２３丁目７−１０+札幌市丘珠たから児童会館/data=!4m2!3m1!1s0x5f0b2f2842249775:0x7e275989d3915e44?sa=X&ved=2ahUKEwiTiPCZqLHhAhXlFqYKHXuoByMQ8gEwAHoECAoQAQ"
-          target="_blank"
-          rel="noopener">Okadama Takara Children's Hall, Kita 35-jo Higashi 23-chome 7-10, Higashi-ku, Sapporo</a
-        > (from May 2023)
-      </p>
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/okadama/2.jpg"
-          alt="Okadama Takara Children's Hall"
-          width="272"
-          height="202"
-          loading="lazy"
-        />
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Okadama Branch"
+        facts={[
+          { label: "Founded", value: "March 2009 (Heisei 21)" },
+          { label: "Founder", value: "Kayoko Mimura" },
+          { label: "Past instructors", value: "Hashini, Yuka Takigami" },
+          {
+            label: "Instructor",
+            value: "Shima, plus adult black belt members joining occasionally",
+          },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/okadama/2.jpg",
+          alt: "Okadama Takara Children's Hall",
+          width: 272,
+          height: 202,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
+          { src: "/assets/images/legacy/clubu/ooba.jpg", alt: "Instructor Ooba", name: "Ooba" },
+        ]}
+        address="Okadama Takara Children's Hall, Kita 35-jo Higashi 23-chome 7-10, Higashi-ku, Sapporo"
+        addressNote="(from May 2023)"
+        mapHref="https://www.google.com/maps/place/〒007-0835+北海道札幌市東区北３５条東２３丁目７−１０+札幌市丘珠たから児童会館/data=!4m2!3m1!1s0x5f0b2f2842249775:0x7e275989d3915e44?sa=X&ved=2ahUKEwiTiPCZqLHhAhXlFqYKHXuoByMQ8gEwAHoECAoQAQ"
+        mapQuery="Okadama Takara Children's Hall, Kita 35-jo Higashi 23-chome 7-10, Higashi-ku, Sapporo"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Okadama Trial & Enrollment Inquiry">

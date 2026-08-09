@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,15 +53,6 @@ const entries = [
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/clubu/takashima.jpg"
-            alt="担当 髙嶋"
-            width="1147"
-            height="1147"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/images/Image1.jpg"
             alt="清心会空手の稽古風景"
             width="649"
@@ -70,20 +62,21 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">当別支部(本部直轄)</h2>
-      <p>
-        ◆設立　平成20年(2008)10月<br />
-        ◆担当者　髙嶋
-      </p>
+      <BranchInfoCard
+        name="当別支部(本部直轄)"
+        facts={[
+          { label: "設立", value: "平成20年(2008)10月" },
+          { label: "担当者", value: "髙嶋" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/takashima.jpg", alt: "担当 髙嶋", name: "髙嶋" },
+        ]}
+        address="当別町白樺町2792　当別町総合体育館"
+        mapHref="https://www.google.com/maps/place/当別町立当別町+総合体育館/@43.223059,141.5131699,15z/data=!4m2!3m1!1s0x0:0x42d9adf5ac1b5e0?sa=X&ved=2ahUKEwid7uW7ya_hAhVDFYgKHW7eAj0Q_BIwCnoECA8QCA"
+        mapQuery="43.223059,141.5131699"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/当別町立当別町+総合体育館/@43.223059,141.5131699,15z/data=!4m2!3m1!1s0x0:0x42d9adf5ac1b5e0?sa=X&ved=2ahUKEwid7uW7ya_hAhVDFYgKHW7eAj0Q_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">当別町白樺町2792　当別町総合体育館</a
-        >
-      </p>
       <p class="detail-page__note">
         ※代替会場：<a
           href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"

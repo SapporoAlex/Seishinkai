@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -55,51 +56,27 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Minami-ku Fujino Branch / Fujino Karate Club</h2>
-      <p>
-        ◆Founded: March 2011 (Heisei 23)<br />
-        ◆Past leads: Koyano (2011-2015)<br />
-        　　　　Hashini (2015-2016)<br />
-        　　　　Kazuya Takashima (2016-2019)<br />
-        　　　　Nobuyuki Hyodo (2019-2022)<br />
-        ◆Lead: Okimura (2022-)
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/okimura.jpg"
-            alt="Instructor Okimura"
-            width="96"
-            height="96"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
-          target="_blank"
-          rel="noopener">2-jo 7-chome 2-1 Fujino, Minami-ku, Sapporo, Fujino District Center</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/fujino/2.jpg"
-            alt="Fujino District Center"
-            width="243"
-            height="192"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Fujino Branch / Fujino Karate Club"
+        facts={[
+          { label: "Founded", value: "March 2011 (Heisei 23)" },
+          { label: "Founder", value: "Yusuke Koyano" },
+          { label: "Past instructors", value: "Hashini, Takashima, Hyodo" },
+          { label: "Instructor", value: "Okimura (2022-), plus adult black belt members joining occasionally" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fujino/2.jpg",
+          alt: "Fujino District Center",
+          width: 243,
+          height: 192,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/okimura.jpg", alt: "Instructor Okimura", name: "Okimura" },
+        ]}
+        address="2-jo 7-chome 2-1 Fujino, Minami-ku, Sapporo, Fujino District Center"
+        mapHref="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
+        mapQuery="2-jo 7-chome 2-1 Fujino, Minami-ku, Sapporo, Fujino District Center"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Fujino Trial Lesson / Enrollment Inquiry">

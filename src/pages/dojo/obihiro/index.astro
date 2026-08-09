@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -49,15 +50,6 @@ const entries = [
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/images/kudo.jpg"
-            alt="担当 工藤"
-            width="328"
-            height="328"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/dojo/obihiro/Image1.jpg"
             alt="帯広支部の稽古風景"
             width="352"
@@ -76,30 +68,26 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">帯広支部</h2>
-      <p>
-        ◆設立　平成29年(2017)4月<br />
-        ◆設立者　工藤哲弘
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/d/viewer?hl=ja&ll=42.906342976232445%2C143.20808862938247&z=16&mid=1mNwLkO77ohCM0yk0rd14mWCBM33D_ais"
-          target="_blank"
-          rel="noopener">帯広市西2条南24丁目　鉄南地区コミュニティセンター</a
-        >
-      </p>
-
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/images/Image1.jpg"
-          alt="鉄南地区コミュニティセンターでの稽古風景"
-          width="649"
-          height="196"
-          loading="lazy"
-        />
-      </div>
+      <BranchInfoCard
+        name="帯広支部"
+        facts={[
+          { label: "設立", value: "平成29年(2017)4月" },
+          { label: "設立者", value: "工藤哲弘" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/images/Image1.jpg",
+          alt: "鉄南地区コミュニティセンターでの稽古風景",
+          width: 649,
+          height: 196,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/kudo.jpg", alt: "担当 工藤", name: "工藤" },
+        ]}
+        address="帯広市西2条南24丁目　鉄南地区コミュニティセンター"
+        mapHref="https://www.google.com/maps/d/viewer?hl=ja&ll=42.906342976232445%2C143.20808862938247&z=16&mid=1mNwLkO77ohCM0yk0rd14mWCBM33D_ais"
+        mapQuery="帯広市西2条南24丁目　鉄南地区コミュニティセンター"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__back">
         <a href="/dojo/kitahiro/">← 帯広・恵庭・旭川の空手教室一覧へ戻る</a>

@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ClassScheduleCard from "@components/ClassScheduleCard.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const classes = [
   {
-    title: "金曜クラス",
+    title: "金曜クラス(厚別北支部)",
     schedule: ["①18:00-19:00", "②19:10-20:10(20:30)"],
     instructors: [
       {
@@ -13,14 +14,14 @@ const classes = [
         image: "/assets/images/instructors/tsubasa.jpg",
       },
     ],
-    note: "本部直轄　※①は初級者対象時間",
+    note: "",
   },
   {
-    title: "日曜クラス",
+    title: "日曜クラス(厚別支部)",
     schedule: [
       "①9:30-10:30",
       "②10:40-11:50",
-      "冬時間(12-3月) ①10:00-10:50 ②11:00-11:55",
+      "冬時間12-3月 ①10:00-10:50 ②11:00-11:55",
     ],
     instructors: [
       {
@@ -29,7 +30,7 @@ const classes = [
         image: "/assets/images/instructors/wakabayashi.jpg",
       },
     ],
-    note: "※①は初級者対象時間",
+    note: "",
   },
 ];
 ---
@@ -47,7 +48,7 @@ const classes = [
             <h1 class="section-title">清心会空手道連盟 厚別支部</h1>
         </div>
 
-        <h2 class="detail-page__heading">厚別空手教室・清心会厚別支部</h2>
+        <h2 class="detail-page__heading">厚別空手倶楽部・清心会厚別支部</h2>
         <div class="detail-page__img-text-pair--reverse">
             <div class="detail-media--med">
                 <figure>
@@ -61,14 +62,20 @@ const classes = [
                 </figure>
             </div>
             <p>
-                厚別空手教室は、平成5年4月より厚別西地区センターで活動を始めました。<br>
-                設立以来、キッズ空手、ジュニア空手として開始し、園児から大人(親子)まで幅広く参加しています。<br>
-                特に親子での参加を歓迎します。<br>
-                指導を担当している若林親子も親子で入会し、現在は支部長として活動しています。<br>
-                体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指<br>
-                しています。
-                ※各クラス①は初級者対象時間となります
+                厚別空手クラブは、平成5年4月より厚別西地区センターで活動を始めました。
+                設立以来、キッズ空手、ジュニア空手として開始し、園児から大人(親子)まで幅広く参加しています。
+                特に親子での参加を歓迎します。
+                指導を担当している若林親子も親子で入会し、現在は支部長として活動しています。
+                体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指
+                しています。<br>
+                ※各クラス①は初級者対象時間となります<br>
+
             </p>
+        </div>
+        <div class="detail-page__highlight-box">
+          <p class="detail-page__highlight-text">★★</p>
+          <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
+          <p class="detail-page__highlight-text">★★</p>
         </div>
 
         <h2 class="detail-page__heading">稽古風景</h2>
@@ -76,7 +83,7 @@ const classes = [
             <figure>
                 <img
                 src="/assets/images/dojo/img_atsubetsu_1.jpg"
-                alt="厚別支部 金曜クラスの稽古風景"
+                alt="厚別北支部 金曜クラスの稽古風景"
                 width="234"
                 height="144"
                 loading="lazy"
@@ -109,21 +116,23 @@ const classes = [
           }
         </div>
 
-        <h2 class="detail-page__heading">厚別支部</h2>
-        <p class="detail-page__note">
-        ◆設  立　平成5年(1993) 4月<br>
-        ◆開設者　大久保勝美<br>
-        ◆担　当　若林(敬司)、大久保(翼)<br>
-        他、一般部会員有段者
-        </p>
+        <BranchInfoCard
+          name="厚別支部"
+          facts={[
+            { label: "設立", value: "平成5年(1993) 4月" },
+            { label: "開設者", value: "大久保勝美" },
+            { label: "歴代", value: "大久保、藤原、他" },
+            { label: "師範", value: "大久保翼"},
+            { label: "師範代", value: "若林"},
+          ]}
+          address="練習会場/厚別区厚別西4条4丁目10-1　厚別西地区センター2F集会室"
+          mapQuery="43.052996,141.465722"
+          viewOnMapLabel="Google Mapsで見る"
+        />
 
-        <h2 class="detail-page__heading">練習会場　厚別西地区センター</h2>
-        <p>練習会場/厚別区厚別西4条4丁目10-1　厚別西地区センター2F集会室</p>
-        <div class="dojo-list__map-embed">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.450311471158!2d141.46572229999998!3d43.05299579999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2c7d48b71893%3A0x7e0fefb1cdf04351!2z44CSMDA0LTAwNjQgSG9ra2FpZG8sIFNhcHBvcm8sIEF0c3ViZXRzdSBXYXJkLCBBdHN1YmV0c3UgTmlzaGkgNCBKxY0sIDQtY2jFjW1l4oiSMTDiiJIxIOacreW5jOW4guWOmuWIpeilv-WcsOWMuuOCu-ODs-OCv-ODvA!5e0!3m2!1sen!2sjp!4v1785048971458!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-
         <p class="detail-page__note">
+        ※クラスにより、園児は親子参加でお願いします。<br>
+        ※不定期で一般部員有段者が参加します。<br>
         ※会場は公共施設を借りていますので、お問い合わせは事務局までお願いします。
         </p>
         <p class="detail-page__note">

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -63,32 +64,22 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/maekawa2.jpg"
-            alt="Instructor: Nobutaka Maekawa"
-            width="142"
-            height="142"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Atsubetsu-minami Branch</h2>
-      <p>
-        ◆Founded: March 2010 (Heisei 22)<br />
-        ◆Past instructors: Tsubasa Okubo (2010–2018), Yuko Wakabayashi (2018–2019), Takushi Muroki (2019–2021)<br />
-        ◆Instructor: Nobutaka Maekawa (2021–)
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/厚別南地区センター/@43.0224987,141.4768789,17z/data=!4m8!1m2!2m1!1z5pyt5bmM5biCIOWOmuWIpeWNl-WcsOWMuuOCu-ODs-OCv-ODvA!3m4!1s0x5f0b2b51c16b22a1:0x6bc576097912517a!8m2!3d43.0223777!4d141.4790925"
-          target="_blank"
-          rel="noopener">Atsubetsu-minami 7-chome 9-1, Atsubetsu-ku, Sapporo — Atsubetsu-minami District Center, Meeting Room</a
-        >
-      </p>
+      <BranchInfoCard
+        name="Atsubetsu-minami Branch"
+        facts={[
+          { label: "Founded", value: "March 2010 (Heisei 22)" },
+          { label: "Past instructors", value: "Tsubasa Okubo (2010–2018), Yuko Wakabayashi (2018–2019), Takushi Muroki (2019–2021)" },
+          { label: "Instructor", value: "Nobutaka Maekawa (2021–)" },
+        ]}
+        instructors={[
+          { src: "/assets/images/legacy/clubu/maekawa2.jpg", alt: "Instructor: Nobutaka Maekawa", name: "Nobutaka Maekawa" },
+        ]}
+        address="Atsubetsu-minami 7-chome 9-1, Atsubetsu-ku, Sapporo — Atsubetsu-minami District Center, Meeting Room"
+        mapHref="https://www.google.com/maps/place/厚別南地区センター/@43.0224987,141.4768789,17z/data=!4m8!1m2!2m1!1z5pyt5bmM5biCIOWOmuWIpeWNl-WcsOWMuuOCu-ODs-OCv-ODvA!3m4!1s0x5f0b2b51c16b22a1:0x6bc576097912517a!8m2!3d43.0223777!4d141.4790925"
+        mapQuery="43.0224987,141.4768789"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Atsubetsu-minami Trial Lesson Application">

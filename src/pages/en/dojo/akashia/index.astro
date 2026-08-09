@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,60 +53,33 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/oki.jpg"
-            alt="Instructor Saori Okimura"
-            width="116"
-            height="119"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/sahan.jpg"
-            alt="Sahan"
-            width="102"
-            height="99"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/muro.jpg"
-            alt="Muroki"
-            width="102"
-            height="102"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Higashi Ward — Akashia Branch</h2>
-      <p>
-        ◆ Founded: June 2018 (Heisei 30)<br />
-        ◆ Founder: Taku Muroki<br />
-        ◆ Person in Charge: Saori Okimura<br />
-        ※Muroki and Sahan also help with instruction on an irregular basis
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a href="http://yahoo.jp/-j3unj" target="_blank" rel="noopener"
-          >Akashia Youth Activity Center, Kita 22-jo Higashi 1-chome 1-20, Higashi-ku, Sapporo</a
-        >
-      </p>
-      <div class="detail-media">
-        <a href="http://yahoo.jp/-j3unj" target="_blank" rel="noopener">
-          <img
-            src="/assets/images/legacy/dojo/akashia/2.jpg"
-            alt="Akashia Youth Activity Center"
-            width="224"
-            height="168"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Higashi Ward — Akashia Branch"
+        facts={[
+          { label: "Founded", value: "June 2018 (Heisei 30)" },
+          { label: "Founder", value: "Taku Muroki" },
+          {
+            label: "Person in Charge",
+            value: ["Saori Okimura", "※Muroki and Sahan also help with instruction on an irregular basis"],
+          },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/akashia/2.jpg",
+          alt: "Akashia Youth Activity Center",
+          width: 224,
+          height: 168,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/oki.jpg", alt: "Instructor Saori Okimura", name: "Saori Okimura" },
+          { src: "/assets/images/legacy/images/sahan.jpg", alt: "Sahan", name: "Sahan" },
+          { src: "/assets/images/instructors/muroki.jpg", alt: "Muroki", name: "Muroki" },
+        ]}
+        address="Akashia Youth Activity Center, Kita 22-jo Higashi 1-chome 1-20, Higashi-ku, Sapporo"
+        mapHref="http://yahoo.jp/-j3unj"
+        mapQuery="Akashia Youth Activity Center, Kita 22-jo Higashi 1-chome 1-20, Higashi-ku, Sapporo"
+      />
 
       <p class="detail-page__note">
         <img

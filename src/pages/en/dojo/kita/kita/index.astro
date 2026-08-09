@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -70,57 +71,30 @@ const entries = [
           />
           <figcaption>Saturday class</figcaption>
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/maekawa.jpg"
-            alt="Instructor Maekawa"
-            width="106"
-            height="106"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/takashima.jpg"
-            alt="Instructor Takashima"
-            width="1147"
-            height="1147"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Sapporo Kita Branch</h2>
-      <p>
-        ◆Founded: April 2010 (Heisei 22)<br />
-        ◆Founder: Kayoko Mimura<br />
-        ◆Past instructors: Hashini, Okimura, Shima<br />
-        ◆Instructors: Takashima, Maekawa, and others on rotation
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
-          target="_blank"
-          rel="noopener">1-1 Kita 24-jo Nishi 9-chome, Kita-ku, Sapporo, ARCS Kita 24-jo Store 2F</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kita/2.jpg"
-            alt="ARCS Kita 24-jo Store 2F"
-            width="286"
-            height="178"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Sapporo Kita / ARCS Kita Branch"
+        facts={[
+          { label: "Founded", value: "April 2010 (Heisei 22)" },
+          { label: "Founder", value: "Kayoko Mimura" },
+          { label: "Past instructors", value: "Hashini, Daniela, Shima, Okimura" },
+          { label: "Instructors", value: "Takashima, Maekawa, plus adult black belt members joining occasionally" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kita/2.jpg",
+          alt: "ARCS Kita 24-jo Store 2F",
+          width: 286,
+          height: 178,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/maekawa.jpg", alt: "Instructor Maekawa", name: "Maekawa" },
+          { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Takashima", name: "Takashima" },
+        ]}
+        address="1-1 Kita 24-jo Nishi 9-chome, Kita-ku, Sapporo, ARCS Kita 24-jo Store 2F"
+        mapHref="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
+        mapQuery="札幌市北区北24条西9丁目1-1 アークス北24条店"
+      />
 
       <p class="detail-page__back">
         <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>

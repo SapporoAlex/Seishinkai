@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -99,10 +100,7 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Seishinryu Fukuoka Branch</h2>
-      <p>
-        ◆Founded: April 2013 (Heisei 25)<br />
-        ◆Founder: Atsushi Saegusa<br />
+      <p class="detail-page__note">
         　　　　　(Employer: <a
           href="http://www.saegusayakuhin-q.co.jp/"
           target="_blank"
@@ -110,29 +108,22 @@ const entries = [
         >)
       </p>
 
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">Sasaoka Community Hall, Fukuoka City, Fukuoka Prefecture</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/fukuoka/2.jpg"
-            alt="Sasaoka Community Hall"
-            width="250"
-            height="126"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Seishinryu Fukuoka Branch"
+        facts={[
+          { label: "Founded", value: "April 2013 (Heisei 25)" },
+          { label: "Founder", value: "Atsushi Saegusa" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fukuoka/2.jpg",
+          alt: "Sasaoka Community Hall",
+          width: 250,
+          height: 126,
+        }}
+        address="Sasaoka Community Hall, Fukuoka City, Fukuoka Prefecture"
+        mapHref="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
+        mapQuery="33.567146,130.378501"
+      />
 
       <p class="detail-page__back">
         <a href="/en/dojo/naichi/">← Back to the Shizuoka, Aichi & Chiba Dojo List</a>

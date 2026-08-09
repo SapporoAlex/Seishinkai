@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -67,15 +68,13 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Asahikawa Karate Club for Foreign Residents</h2>
-      <p>
-        ◆ Founder: Shogo Inoue<br />
-        ◆ Facebook: <a
-          href="https://www.facebook.com/profile.php?id=100004664102435"
-          target="_blank"
-          rel="noopener">Shogo Inoue</a
-        >
-      </p>
+      <BranchInfoCard
+        name="Asahikawa Karate Club for Foreign Residents"
+        facts={[
+          { label: "Founder", value: "Shogo Inoue" },
+          { label: "Facebook", value: "Shogo Inoue" },
+        ]}
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa Karate Inquiry">

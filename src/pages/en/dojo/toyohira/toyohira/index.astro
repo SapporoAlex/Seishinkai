@@ -1,0 +1,62 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Toyohira Branch",
+    address: "6-7-1-12 Toyohira 6-jo, Toyohira Children's Hall",
+    schedule: ["Saturday 18:20"],
+  },
+];
+---
+
+<BaseLayout
+  title="Karate Classes at the Toyohira Branch, Toyohira Ward"
+  description="Introducing the Seishinkai Karate dojo and class in Toyohira, Toyohira Ward, Sapporo. A headquarters-run class — see training days and venue information."
+  lang="en"
+  path="/en/dojo/toyohira/toyohira/"
+>
+  <section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Toyohira Branch</h1>
+      </div>
+
+      <p class="detail-page__lead">
+        [Toyohira Ward Toyohira Karate Class - Seishinkai Toyohira Branch]<br />
+        The Toyohira Branch is a headquarters-run class held at the Toyohira Children's Hall.<br />
+        Instructors from the adult general division take turns leading the class.
+      </p>
+
+      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+
+      <p class="detail-page__note">
+        ※As the venue is a rented facility, please direct inquiries to the <a
+          href="mailto:karate@seishinkan.ne.jp?subject=Toyohira Trial Lesson Application"
+          >office</a
+        >.
+      </p>
+
+      <BranchInfoCard
+        name="Seishinkai Toyohira Branch"
+        facts={[
+          { label: "Founded", value: "June 2011 (Heisei 23)" },
+          { label: "Past instructors", value: "Koyano, Takashima, Masuda" },
+          { label: "Instructor", value: "Directly overseen by Headquarters" },
+          { label: "Note", value: "Instructors from the adult general division take turns leading the class" },
+        ]}
+        address="6-7-1-12 Toyohira 6-jo, Toyohira-ku, Sapporo, Toyohira Children's Hall"
+        mapHref="https://www.google.com/maps/search/?api=1&query=札幌市豊平区豊平6条7丁目1-12+豊平児童会館"
+        mapQuery="札幌市豊平区豊平6条7丁目1-12 豊平児童会館"
+      />
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,46 +53,28 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/oikawa.jpg"
-            alt="Founder Yoshihiko Oikawa"
-            width="111"
-            height="110"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Higashi Ward — Sapponai Branch</h2>
-      <p>
-        ◆ Founded: July 2010 (Heisei 22)<br />
-        ◆ Founder: Yoshihiko Oikawa
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/札幌市東区札苗まちづくりセンター/@43.093113,141.4112141,15z/data=!4m2!3m1!1s0x0:0xa7db2c47df5aaf59?sa=X&ved=2ahUKEwjBv9Kwp7HhAhUwEqYKHS_gANUQ_BIwCnoECAoQCA"
-          target="_blank"
-          rel="noopener">Sapponai-Moere Community Center, Higashi-Naebo 7-jo 2-chome 2-30, Higashi-ku, Sapporo</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/札幌市東区札苗まちづくりセンター/@43.093113,141.4112141,15z/data=!4m2!3m1!1s0x0:0xa7db2c47df5aaf59?sa=X&ved=2ahUKEwjBv9Kwp7HhAhUwEqYKHS_gANUQ_BIwCnoECAoQCA"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/h-naebo/2.jpg"
-            alt="Sapponai-Moere Community Center"
-            width="176"
-            height="118"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Sapponai Branch"
+        facts={[
+          { label: "Founded", value: "July 2010 (Heisei 22)" },
+          { label: "Founder", value: "Takayuki Inomata" },
+          { label: "Instructor", value: "Oikawa" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/h-naebo/2.jpg",
+          alt: "Sapponai-Moere Community Center",
+          width: 176,
+          height: 118,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/oikawa.jpg", alt: "Founder Yoshihiko Oikawa", name: "Yoshihiko Oikawa" },
+        ]}
+        address="Sapponai-Moere Community Center, Higashi-Naebo 7-jo 2-chome 2-30, Higashi-ku, Sapporo"
+        mapHref="https://www.google.com/maps/place/札幌市東区札苗まちづくりセンター/@43.093113,141.4112141,15z/data=!4m2!3m1!1s0x0:0xa7db2c47df5aaf59?sa=X&ved=2ahUKEwjBv9Kwp7HhAhUwEqYKHS_gANUQ_BIwCnoECAoQCA"
+        mapQuery="43.093113,141.4112141"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Sapponai Trial Application">

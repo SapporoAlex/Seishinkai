@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -45,15 +46,6 @@ const entries = [
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/clubu/takashima.jpg"
-            alt="指導 髙嶋"
-            width="100"
-            height="100"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/dojo/higashi/Image1.jpg"
             alt="札幌東支部の稽古風景"
             width="295"
@@ -63,31 +55,29 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">札幌東支部</h2>
-      <p>
-        ◆設立　平成21年(2009)5月<br />
-        ◆設立者　三村佳代子<br />
-        ◆歴代　ハシニ、沖村<br />
-        ◆担当　髙嶋
-      </p>
+      <BranchInfoCard
+        name="清心会札幌東支部"
+        facts={[
+          { label: "設立", value: "平成21年(2009)5月" },
+          { label: "設立者", value: "三村佳代子" },
+          { label: "歴代", value: "ハシニ、ダニエラ、沖村、高嶋" },
+          { label: "担当", value: "沖村、他、不定期で一般部員有段者が参加します" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/takashima.jpg", alt: "指導 髙嶋", name: "髙嶋" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/higashi/2.jpg",
+          alt: "栄地区センター",
+          width: 652,
+          height: 302,
+        }}
+        address="札幌市東区北36条東8丁目1-25　栄地区センター"
+        mapHref="https://www.google.com/maps/place/栄地区センター/@43.106046,141.358107,15z/data=!4m2!3m1!1s0x0:0x1e9105febde56acb?sa=X&ved=2ahUKEwiu4-KXt7HhAhUDD6YKHRvZCmwQ_BIwC3oECAoQCA"
+        mapQuery="43.106046,141.358107"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/栄地区センター/@43.106046,141.358107,15z/data=!4m2!3m1!1s0x0:0x1e9105febde56acb?sa=X&ved=2ahUKEwiu4-KXt7HhAhUDD6YKHRvZCmwQ_BIwC3oECAoQCA"
-          target="_blank"
-          rel="noopener">札幌市東区北36条東8丁目1-25　栄地区センター</a
-        >
-      </p>
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/higashi/2.jpg"
-          alt="栄地区センター"
-          width="652"
-          height="302"
-          loading="lazy"
-        />
-      </div>
       <p class="detail-page__note">
         ※東支部は、所属員が多くキッズ、ジュニア二部体制で稽古をしています。
       </p>

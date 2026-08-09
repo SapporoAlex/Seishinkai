@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -48,15 +49,6 @@ const entries = [
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/clubu/shima.jpg"
-            alt="Instructor: Shima"
-            width="126"
-            height="126"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/dojo/nop/Image1.jpg"
             alt="Nopporo Branch practice session"
             width="243"
@@ -66,38 +58,28 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Nopporo Branch, Ebetsu City</h2>
-      <p>
-        ◆ Founded: October 2007 (Heisei 19)<br />
-        ◆ Founder: Takayuki Inomata<br />
-        ◆ Past instructors: Tsubasa Okubo, Kazuya Shima, and others, Saori Okimura<br />
-        ◆ Instructor: Fuyuki Shima
-      </p>
-
-      <h2 class="detail-page__heading">Venue: Ebetsu Nopporo Karate Dojo</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒069-0803+北海道江別市野幌屯田町２３−６/@43.0969071,141.5075755,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2dee41c4efab:0x240f6398f59169be!8m2!3d43.0969071!4d141.5097642"
-          target="_blank"
-          rel="noopener">23-6 Nopporo-tondencho, Ebetsu, Morinodai Memorial Hall 2F</a
-        ><br />
-        Located along Sanban-dori.
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒069-0803+北海道江別市野幌屯田町２３−６/@43.0969071,141.5075755,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2dee41c4efab:0x240f6398f59169be!8m2!3d43.0969071!4d141.5097642"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/nop/2.jpg"
-            alt="Morinodai Memorial Hall"
-            width="192"
-            height="100"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Nopporo Branch, Ebetsu City"
+        facts={[
+          { label: "Founded", value: "October 2007 (Heisei 19)" },
+          { label: "Founder", value: "Takayuki Inomata" },
+          { label: "Past instructors", value: "Tsubasa Okubo, Kazuya Shima, and others, Saori Okimura" },
+          { label: "Instructor", value: "Fuyuki Shima" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/nop/2.jpg",
+          alt: "Morinodai Memorial Hall",
+          width: 192,
+          height: 100,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor: Shima", name: "Shima" },
+        ]}
+        address="23-6 Nopporo-tondencho, Ebetsu, Morinodai Memorial Hall 2F"
+        addressNote="Located along Sanban-dori."
+        mapHref="https://www.google.com/maps/place/〒069-0803+北海道江別市野幌屯田町２３−６/@43.0969071,141.5075755,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2dee41c4efab:0x240f6398f59169be!8m2!3d43.0969071!4d141.5097642"
+        mapQuery="43.0969071,141.5075755"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Nopporo Trial Lesson Application">

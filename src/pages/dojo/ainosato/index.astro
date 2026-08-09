@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -64,15 +65,6 @@ const entries = [
         </figure>
         <figure>
           <img
-            src="/assets/images/legacy/clubu/shima.jpg"
-            alt="担当 島"
-            width="1254"
-            height="1254"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/images/tuba.jpg"
             alt="不定期に参加助手で参加"
             width="118"
@@ -82,21 +74,27 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">あいの里支部</h2>
-      <p>
-        ◆設立　平成21年(2009)3月<br />
-        ◆設立者　室木拓士<br />
-        ◆担当　大久保 翼、島
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
-          target="_blank"
-          rel="noopener">札幌市北区あいの里４条６丁目　拓北会館</a
-        >
-      </p>
+      <BranchInfoCard
+        name="あいの里支部"
+        facts={[
+          { label: "設立", value: "平成21年(2009)3月" },
+          { label: "設立者", value: "室木拓士" },
+          { label: "担当", value: "大久保 翼、島" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/ainosato/img4.jpg",
+          alt: "拓北会館",
+          width: 455,
+          height: 305,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "担当 島", name: "島" },
+        ]}
+        address="札幌市北区あいの里４条６丁目　拓北会館"
+        mapHref="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
+        mapQuery="43.164024,141.403793"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__back">
         <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>

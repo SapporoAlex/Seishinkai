@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -69,20 +70,23 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">道北地区・浜頓別支部</h2>
-      <p>
-        ◆設立　令和5年(2023)4月<br />
-        ◆設立者　猪又(いのまた)　090-9759-3959まで
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1"
-          target="_blank"
-          rel="noopener">浜頓別町旭町3丁目15番地　浜頓別小学校体育館</a
-        >
-      </p>
+      <BranchInfoCard
+        name="道北地区・浜頓別支部"
+        facts={[
+          { label: "設立", value: "令和5年(2023)4月" },
+          { label: "設立者", value: "猪又(いのまた)　090-9759-3959まで" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/hamaton/img4.jpg",
+          alt: "浜頓別小学校体育館",
+          width: 340,
+          height: 169,
+        }}
+        address="浜頓別町旭町3丁目15番地　浜頓別小学校体育館"
+        mapHref="https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1"
+        mapQuery="45.1220392,142.3559264"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <img

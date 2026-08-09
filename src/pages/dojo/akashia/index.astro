@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,60 +53,34 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/oki.jpg"
-            alt="指導 沖村"
-            width="116"
-            height="119"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/sahan.jpg"
-            alt="サハン"
-            width="102"
-            height="99"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/muro.jpg"
-            alt="室木"
-            width="102"
-            height="102"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">東区アカシア支部</h2>
-      <p>
-        ◆設立　平成30年(2018)6月<br />
-        ◆設立者　室木拓士<br />
-        ◆担当者　沖村さおり<br />
-        ※室木、サハンが不定期で指導参加しています
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a href="http://yahoo.jp/-j3unj" target="_blank" rel="noopener"
-          >札幌市東区北22条東1丁目1-20　アカシア若者活動者センター</a
-        >
-      </p>
-      <div class="detail-media">
-        <a href="http://yahoo.jp/-j3unj" target="_blank" rel="noopener">
-          <img
-            src="/assets/images/legacy/dojo/akashia/2.jpg"
-            alt="アカシア若者活動者センター"
-            width="224"
-            height="168"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="東区アカシア支部"
+        facts={[
+          { label: "設立", value: "平成30年(2018)6月" },
+          { label: "設立者", value: "室木拓士" },
+          {
+            label: "担当者",
+            value: ["沖村さおり", "※室木、サハンが不定期で指導参加しています"],
+          },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/akashia/2.jpg",
+          alt: "アカシア若者活動者センター",
+          width: 224,
+          height: 168,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/oki.jpg", alt: "指導 沖村", name: "沖村" },
+          { src: "/assets/images/legacy/images/sahan.jpg", alt: "サハン", name: "サハン" },
+          { src: "/assets/images/instructors/muroki.jpg", alt: "室木", name: "室木" },
+        ]}
+        address="札幌市東区北22条東1丁目1-20　アカシア若者活動者センター"
+        mapHref="http://yahoo.jp/-j3unj"
+        mapQuery="札幌市東区北22条東1丁目1-20　アカシア若者活動者センター"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <img

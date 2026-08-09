@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,48 +53,36 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/nami.jpg"
-            alt="波川師範"
-            width="100"
-            height="98"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/masuda.jpg"
-            alt="指導 ますだ"
-            width="94"
-            height="97"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">東区栄町支部</h2>
-      <p>
-        ◆設立　平成15年(2003)9月<br />
-        ◆設立者　三村佳代子、波川和明<br />
-        ◆歴代　ハシニ<br />
-        ◆担当者　波川
-      </p>
+      <BranchInfoCard
+        name="東区栄町支部"
+        facts={[
+          { label: "設立", value: "平成15年(2003)9月" },
+          { label: "設立者", value: "三村佳代子、波川和明" },
+          { label: "歴代", value: "ハシニ" },
+          { label: "担当者", value: "波川" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/namikawa.jpg", alt: "波川師範", name: "波川" },
+          { src: "/assets/images/instructors/masuda.jpg", alt: "指導 ますだ", name: "ますだ" },
+        ]}
+        address="札幌市東区北42条東19丁目1-1　三愛自動車"
+        mapHref="http://yahoo.jp/JbqUqo"
+        mapQuery="札幌市東区北42条東19丁目1-1　三愛自動車"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a href="http://yahoo.jp/JbqUqo" target="_blank" rel="noopener"
-          >札幌市東区北42条東19丁目1-1　三愛自動車</a
-        >
-      </p>
       <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/sakaemachi/2.jpg"
-          alt="三愛自動車ビル"
-          width="521"
-          height="225"
-          loading="lazy"
-        />
+        <a href="https://www.san-ai-jikou.co.jp/" target="_blank" rel="noopener">
+          <img
+            src="/assets/images/legacy/dojo/sakaemachi/2.jpg"
+            alt="三愛自動車ビル"
+            width="521"
+            height="225"
+            loading="lazy"
+          />
+        </a>
       </div>
 
       <p class="detail-page__back">

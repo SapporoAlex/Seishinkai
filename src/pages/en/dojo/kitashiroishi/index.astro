@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -13,7 +14,7 @@ const entries = [
 ---
 
 <BaseLayout
-  title="Karate Classes at the Kita-Shiroishi Branch (Kitago), Shiroishi Ward"
+  title="Karate Classes at the Kitago Branch, Shiroishi Ward"
   description="Information on the Seishinkai karate dojo/class at Kitago, Shiroishi Ward, Sapporo, held at the Kita-Shiroishi District Center. Training days for the Junior Karate class."
   lang="en"
   path="/en/dojo/kitashiroishi/"
@@ -67,36 +68,24 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Kitago Branch</h2>
-      <p>
-        ◆ Founded: June 1998 (Heisei 10)<br />
-        ◆ Founders: Katsumi Okubo, Toshinobu Inuura<br />
-        ◆ Instructors: Namikawa, Takashima, and several others teaching on a rotating basis
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
-          target="_blank"
-          rel="noopener">9-20 Kitago 3-jo 7-chome, Shiroishi-ku, Sapporo, Kita-Shiroishi District Center</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kitashiroishi/2.jpg"
-            alt="Kita-Shiroishi District Center"
-            width="247"
-            height="130"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Kitago Branch"
+        facts={[
+          { label: "Founded", value: "June 1998 (Heisei 10)" },
+          { label: "Founder", value: "Katsumi Okubo" },
+          { label: "Past instructors", value: "Toshinobu Inuura, Namikawa, Arisa Sato" },
+          { label: "Instructors", value: "Namikawa, Takashima, plus adult black belt members joining occasionally" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kitashiroishi/2.jpg",
+          alt: "Kita-Shiroishi District Center",
+          width: 247,
+          height: 130,
+        }}
+        address="9-20 Kitago 3-jo 7-chome, Shiroishi-ku, Sapporo, Kita-Shiroishi District Center"
+        mapHref="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
+        mapQuery="43.053449,141.424351"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Kitago Trial Lesson & Enrollment Inquiry">

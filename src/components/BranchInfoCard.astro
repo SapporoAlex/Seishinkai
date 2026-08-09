@@ -1,0 +1,133 @@
+---
+// Combined "branch facts + venue + map" card used on dojo branch detail pages.
+// Replaces the old pattern of a bare <h2 class="detail-page__heading"> + <p> facts list
+// followed by a separate venue heading/paragraph/static map screenshot.
+interface Fact {
+  label: string;
+  value: string | string[];
+}
+interface InstructorPhoto {
+  src: string;
+  alt: string;
+  name: string;
+}
+interface Props {
+  name: string;
+  facts: Fact[];
+  image?: { src: string; alt: string; width?: number; height?: number };
+  instructors?: InstructorPhoto[];
+  address?: string;
+  addressNote?: string;
+  mapHref?: string;
+  mapQuery?: string; // "lat,lng" (preferred) or a place name/address, used to build the embed src
+  mapTitle?: string;
+  viewOnMapLabel?: string;
+}
+
+const {
+  name,
+  facts,
+  image,
+  instructors,
+  address,
+  addressNote,
+  mapHref,
+  mapQuery,
+  mapTitle = name,
+  viewOnMapLabel = "Google Maps",
+} = Astro.props as Props;
+
+const mapEmbedSrc = mapQuery
+  ? `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=17&output=embed`
+  : undefined;
+---
+
+<div class="branch-card fade-up-in">
+  <div class="branch-card__top">
+    {
+      image && (
+        <div class="branch-card__media">
+          <img
+            src={image.src}
+            alt={image.alt}
+            width={image.width ?? 480}
+            height={image.height ?? 360}
+            loading="lazy"
+          />
+        </div>
+      )
+    }
+
+    <div class="branch-card__body">
+      <h2 class="branch-card__name">{name}</h2>
+
+      <dl class="branch-card__facts">
+        {
+          facts.map((fact) => (
+            <div class="branch-card__fact">
+              <dt>{fact.label}</dt>
+              <dd>
+                {Array.isArray(fact.value) ? (
+                  fact.value.map((line) => <span class="branch-card__fact-line">{line}</span>)
+                ) : (
+                  fact.value
+                )}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+
+      {
+        address && (
+          <p class="branch-card__address">
+            {mapHref ? (
+              <a href={mapHref} target="_blank" rel="noopener">
+                {address}
+              </a>
+            ) : (
+              address
+            )}
+            {addressNote && (
+              <>
+                <br />
+                <span class="branch-card__address-note">{addressNote}</span>
+              </>
+            )}
+          </p>
+        )
+      }
+    </div>
+  </div>
+
+  {
+    instructors && instructors.length > 0 && (
+      <div class="branch-card__instructors">
+        {instructors.map((instructor) => (
+          <figure class="branch-card__instructor">
+            <img src={instructor.src} alt={instructor.alt} loading="lazy" />
+            <figcaption>{instructor.name}</figcaption>
+          </figure>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    mapEmbedSrc && (
+      <div class="branch-card__map">
+        <iframe
+          src={mapEmbedSrc}
+          title={mapTitle}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        />
+        {mapHref && (
+          <a class="branch-card__map-link" href={mapHref} target="_blank" rel="noopener">
+            {viewOnMapLabel} →
+          </a>
+        )}
+      </div>
+    )
+  }
+</div>

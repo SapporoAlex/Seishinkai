@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -43,60 +44,27 @@ const entries = [
         >までお願いします。
       </p>
 
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/instructors/muroki.jpg"
-            alt="担当 室木拓士"
-            width="142"
-            height="142"
-            loading="lazy"
-          />
-          <figcaption>担当 室木拓士</figcaption>
-        </figure>
-      </div>
-
-      <h2 class="detail-page__heading">江別支部</h2>
-      <p>
-        ◆設立　平成18年(2006)2月<br />
-        ◆担当者　室木拓士
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒067-0013+北海道江別市３条５丁目１１−１/@43.1121242,141.5546939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b32393aa80e4b:0x2c02dec343b7a562!8m2!3d43.1121242!4d141.5568826"
-          target="_blank"
-          rel="noopener">江別市3条5丁目11-1　江別中央公民館</a
-        ><br />
-        JR江別駅そばです。
-      </p>
+      <BranchInfoCard
+        name="江別支部"
+        facts={[
+          { label: "設立", value: "平成18年(2006)2月" },
+          { label: "担当者", value: "室木拓士" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/muroki.jpg", alt: "担当 室木拓士", name: "室木拓士" },
+          { src: "/assets/images/instructors/tashiro2.jpg", alt: "田代", name: "田代" },
+          { src: "/assets/images/instructors/miura.jpg", alt: "三浦", name: "三浦" },
+        ]}
+        address="江別市3条5丁目11-1　江別中央公民館"
+        addressNote="JR江別駅そばです。"
+        mapHref="https://www.google.com/maps/place/〒067-0013+北海道江別市３条５丁目１１−１/@43.1121242,141.5546939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b32393aa80e4b:0x2c02dec343b7a562!8m2!3d43.1121242!4d141.5568826"
+        mapQuery="43.1121242,141.5546939"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         *私も不定期参加します*
       </p>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/instructors/tashiro2.jpg"
-            alt="田代"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-          <figcaption>田代</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/instructors/miura.jpg"
-            alt="三浦"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-          <figcaption>三浦</figcaption>
-        </figure>
-      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>

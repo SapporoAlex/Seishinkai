@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -53,46 +54,28 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/takashima.jpg"
-            alt="指導リーダー 嶋"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">花川支部</h2>
-      <p>
-        ◆設立　平成26年(2014)6月<br />
-        ◆担当　嶋(指導リーダー)
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒061-3206+北海道石狩市花川南６条５丁目２７−２/@43.1406157,141.291549,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b267a656101db:0xeda52c8f8822b8eb!8m2!3d43.1406157!4d141.2937377"
-          target="_blank"
-          rel="noopener">石狩市花川南6-5　花川南コミュニティセンター</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒061-3206+北海道石狩市花川南６条５丁目２７−２/@43.1406157,141.291549,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b267a656101db:0xeda52c8f8822b8eb!8m2!3d43.1406157!4d141.2937377"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/hana-m/2.jpg"
-            alt="花川南コミュニティセンター"
-            width="251"
-            height="198"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="花川支部"
+        facts={[
+          { label: "設立", value: "平成26年(2014)6月" },
+          { label: "担当", value: "嶋(指導リーダー)" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/takashima.jpg", alt: "指導リーダー 嶋", name: "嶋" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/hana-m/2.jpg",
+          alt: "花川南コミュニティセンター",
+          width: 251,
+          height: 198,
+        }}
+        address="石狩市花川南6-5　花川南コミュニティセンター"
+        mapHref="https://www.google.com/maps/place/〒061-3206+北海道石狩市花川南６条５丁目２７−２/@43.1406157,141.291549,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b267a656101db:0xeda52c8f8822b8eb!8m2!3d43.1406157!4d141.2937377"
+        mapQuery="43.1406157,141.291549"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=花川南体験申込">

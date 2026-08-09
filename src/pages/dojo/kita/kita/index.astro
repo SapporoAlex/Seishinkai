@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -66,57 +67,31 @@ const entries = [
           />
           <figcaption>土曜クラス</figcaption>
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/maekawa.jpg"
-            alt="担当 前川"
-            width="106"
-            height="106"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/takashima.jpg"
-            alt="担当 髙嶋"
-            width="1147"
-            height="1147"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">札幌北支部</h2>
-      <p>
-        ◆設立　平成22年(2010)4月<br />
-        ◆設立者　三村佳代子<br />
-        ◆歴代　ハシニ、沖村、島<br />
-        ◆担当者　髙嶋、前川、他交代で
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
-          target="_blank"
-          rel="noopener">札幌市北区北24条西9丁目1-1　アークス北24条店2F</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kita/2.jpg"
-            alt="アークス北24条店2F"
-            width="286"
-            height="178"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="清心会札幌北・ARCS北支部"
+        facts={[
+          { label: "設立", value: "平成22年(2010)4月" },
+          { label: "設立者", value: "三村佳代子" },
+          { label: "歴代", value: "ハシニ、ダニエラ、島、沖村" },
+          { label: "担当", value: "高嶋、前川、他、一般部員有段者が不定期で参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kita/2.jpg",
+          alt: "アークス北24条店2F",
+          width: 286,
+          height: 178,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/maekawa.jpg", alt: "担当 前川", name: "前川" },
+          { src: "/assets/images/instructors/takashima.jpg", alt: "担当 髙嶋", name: "髙嶋" },
+        ]}
+        address="札幌市北区北24条西9丁目1-1　アークス北24条店2F"
+        mapHref="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
+        mapQuery="札幌市北区北24条西9丁目1-1 アークス北24条店"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__back">
         <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>

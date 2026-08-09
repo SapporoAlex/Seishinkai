@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -99,10 +100,7 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">清心流福岡支部</h2>
-      <p>
-        ◆設立　平成25年(2013)4月<br />
-        ◆設立者　三枝篤史<br />
+      <p class="detail-page__note">
         　　　　　(勤務先：<a
           href="http://www.saegusayakuhin-q.co.jp/"
           target="_blank"
@@ -110,29 +108,23 @@ const entries = [
         >)
       </p>
 
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">福岡県福岡市　笹丘公民館</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/fukuoka/2.jpg"
-            alt="笹丘公民館"
-            width="250"
-            height="126"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="清心流福岡支部"
+        facts={[
+          { label: "設立", value: "平成25年(2013)4月" },
+          { label: "設立者", value: "三枝篤史" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fukuoka/2.jpg",
+          alt: "笹丘公民館",
+          width: 250,
+          height: 126,
+        }}
+        address="福岡県福岡市　笹丘公民館"
+        mapHref="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
+        mapQuery="33.567146,130.378501"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__back">
         <a href="/dojo/naichi/">← 静岡県・愛知県・千葉県の空手道場の一覧へ戻る</a>

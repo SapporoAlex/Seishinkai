@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -64,20 +65,22 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Aoba Branch</h2>
-      <p>
-        ◆Founded: November 2011 (Heisei 23)<br />
-        ◆In charge: (recruiting)
-      </p>
-
-      <h2 class="detail-page__heading">Training Venue (Planned)</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/青葉南集会所/@43.0282951,141.4771169,15z/data=!4m6!3m5!1s0x5f0b2b5bd1e99d37:0xb28a71c0f3efd5a9!8m2!3d43.0282951!4d141.4771169!16s/g/1tgdnbw1?entry=ttu"
-          target="_blank"
-          rel="noopener">Aoba 6-chome 1-10, Atsubetsu-ku, Sapporo — Aoba-minami Community Hall (planned venue)</a
-        >
-      </p>
+      <BranchInfoCard
+        name="Aoba Branch"
+        facts={[
+          { label: "Founded", value: "November 2011 (Heisei 23)" },
+          { label: "In charge", value: "(recruiting)" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/aoba/img4.jpg",
+          alt: "Aoba-minami Community Hall",
+          width: 299,
+          height: 154,
+        }}
+        address="Aoba 6-chome 1-10, Atsubetsu-ku, Sapporo — Aoba-minami Community Hall (planned venue)"
+        mapHref="https://www.google.com/maps/place/青葉南集会所/@43.0282951,141.4771169,15z/data=!4m6!3m5!1s0x5f0b2b5bd1e99d37:0xb28a71c0f3efd5a9!8m2!3d43.0282951!4d141.4771169!16s/g/1tgdnbw1?entry=ttu"
+        mapQuery="43.0282951,141.4771169"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Aoba Branch Relaunch & Participation Inquiry">

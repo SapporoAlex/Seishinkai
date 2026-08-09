@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -51,41 +52,33 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">清心会ルーシー南郷支部</h2>
-      <p>
-        ◆設立　平成30年(2018)6月<br />
-        ◆歴代　室木、滝上、若林<br />
-        ◆担当　室木
-      </p>
+      <BranchInfoCard
+        name="清心会ルーシー南郷支部"
+        facts={[
+          { label: "設立", value: "平成30年(2018)6月" },
+          { label: "歴代", value: "室木、滝上、若林ゆうこ" },
+          { label: "担当", value: "前川、他、交代で一般部員有段者が担当します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/nango/2.jpg",
+          alt: "コープさっぽろ ルーシー文化教室",
+          width: 651,
+          height: 287,
+        }}
+        address="札幌市白石区栄通18丁目5-35 コープさっぽろ・ルーシー文化教室"
+        addressNote="地下鉄南郷駅そば"
+        mapHref="https://www.google.com/maps/place/コープさっぽろ+ルーシー文化教室/@43.028082,141.434141,15z/data=!4m2!3m1!1s0x0:0x1164e7b39eeedaf9"
+        mapQuery="43.028082,141.434141"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/コープさっぽろ+ルーシー文化教室/@43.028082,141.434141,15z/data=!4m2!3m1!1s0x0:0x1164e7b39eeedaf9"
-          target="_blank"
-          rel="noopener">札幌市白石区栄通18丁目5-35 コープさっぽろ・ルーシー文化教室</a
-        >(地下鉄南郷駅そば)<br />
+      <p class="detail-page__note">
         主催教室の詳細・お申し込みは<a
           href="https://life-culture.sapporo.coop/culture/course/detail.html/?course_id=795"
           target="_blank"
           rel="noopener">コープさっぽろ ルーシー文化教室のサイト</a
         >をご覧ください。
       </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/コープさっぽろ+ルーシー文化教室/@43.028082,141.434141,15z/data=!4m2!3m1!1s0x0:0x1164e7b39eeedaf9"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/nango/2.jpg"
-            alt="コープさっぽろ ルーシー文化教室"
-            width="651"
-            height="287"
-            loading="lazy"
-          />
-        </a>
-      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -53,56 +54,29 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/yamane.jpg"
-            alt="指導 山根"
-            width="239"
-            height="239"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/takashima.jpg"
-            alt="指導 嶋"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">拓北支部</h2>
-      <p>
-        ◆設立　平成23年(2011)10月<br />
-        ◆設立者　二森 翼<br />
-        ◆指導　山根、嶋
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
-          target="_blank"
-          rel="noopener">札幌市北区拓北3条4丁目1-6　拓北パレス会館</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/takuhoku/2.jpg"
-            alt="拓北パレス会館"
-            width="282"
-            height="216"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="清心会拓北支部"
+        facts={[
+          { label: "設立", value: "平成23年(2011)10月" },
+          { label: "設立者", value: "二森 翼" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/yamane.jpg", alt: "指導 山根", name: "山根" },
+          { src: "/assets/images/instructors/takashima.jpg", alt: "指導 嶋", name: "嶋" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/takuhoku/2.jpg",
+          alt: "拓北パレス会館",
+          width: 282,
+          height: 216,
+        }}
+        address="札幌市北区拓北3条4丁目1-6　拓北パレス会館"
+        mapHref="https://www.google.com/maps/place/〒002-8063+北海道札幌市北区拓北３条４丁目１-６+拓北パレス会館/data=!4m2!3m1!1s0x5f0b257b99a36f59:0x21b6e335d1d712a5?sa=X&ved=2ahUKEwjcw-7h4LHhAhXFMN4KHVbxAM4Q8gEwAHoECAYQAQ"
+        mapQuery="札幌市北区拓北3条4丁目1-6 拓北パレス会館"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=拓北支部 体験・入会問い合わせ">

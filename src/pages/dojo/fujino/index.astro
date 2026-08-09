@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -55,51 +56,28 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">南区藤野支部/藤野空手倶楽部</h2>
-      <p>
-        ◆設立　平成23年(2011)3月<br />
-        ◆歴代　小谷野(2011-2015)<br />
-        　　　　ハシニ(2015-2016)<br />
-        　　　　髙嶋和也(2016-2019)<br />
-        　　　　兵藤伸之(2019-2022)<br />
-        ◆担当　沖村(2022-)
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/okimura.jpg"
-            alt="指導 沖村"
-            width="96"
-            height="96"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
-          target="_blank"
-          rel="noopener">札幌市南区藤野2条7丁目2-1　藤野地区センター</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/fujino/2.jpg"
-            alt="藤野地区センター"
-            width="243"
-            height="192"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="清心会藤野支部/藤野空手倶楽部"
+        facts={[
+          { label: "設立", value: "平成23年(2011)3月" },
+          { label: "設立者", value: "小谷野雄介" },
+          { label: "歴代", value: "ハシニ、高嶋、兵頭" },
+          { label: "担当", value: "沖村(2022-)、他、不定期で一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fujino/2.jpg",
+          alt: "藤野地区センター",
+          width: 243,
+          height: 192,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/okimura.jpg", alt: "指導 沖村", name: "沖村" },
+        ]}
+        address="札幌市南区藤野2条7丁目2-1　藤野地区センター"
+        mapHref="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
+        mapQuery="札幌市南区藤野2条7丁目2-1　藤野地区センター"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=藤野 体験・入会問い合わせ">

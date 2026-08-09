@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -65,13 +66,6 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">菊水元町支部/菊水元町空手倶楽部</h2>
-      <p>
-        ◆設立　平成22年(2010)4月<br />
-        ◆歴代　大久保翼(2012-2017)、室木拓士(2017-2019)<br />
-        ◆指導　吉田真純(2019-)、若林敬司
-      </p>
-
       <div class="detail-media">
         <figure>
           <img
@@ -94,14 +88,24 @@ const entries = [
         <figcaption>指導員</figcaption>
       </div>
 
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
-          target="_blank"
-          rel="noopener">札幌市白石区菊水元町7条2丁目6-5 菊水元町南町内会館</a
-        >
-      </p>
+      <BranchInfoCard
+        name="清心会菊水元町支部/菊水元町空手倶楽部"
+        facts={[
+          { label: "設立", value: "平成22年(2010)4月" },
+          { label: "歴代", value: "大久保翼、室木" },
+          { label: "担当", value: "吉田真純、他、不定期で一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kikusui2/img2.jpg",
+          alt: "菊水元町南町内会館",
+          width: 247,
+          height: 157,
+        }}
+        address="札幌市白石区菊水元町7条2丁目6-5 菊水元町南町内会館"
+        mapHref="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
+        mapQuery="43.071849,141.410593"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a

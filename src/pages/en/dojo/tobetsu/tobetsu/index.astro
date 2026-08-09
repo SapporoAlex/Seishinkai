@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -57,15 +58,6 @@ const entries = [
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/clubu/takashima.jpg"
-            alt="In charge: Takashima"
-            width="1147"
-            height="1147"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/images/Image1.jpg"
             alt="Seishinkai Karate training session"
             width="649"
@@ -75,20 +67,20 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Tobetsu Branch (Headquarters-run)</h2>
-      <p>
-        ◆ Founded: October 2008 (Heisei 20)<br />
-        ◆ In charge: Takashima
-      </p>
+      <BranchInfoCard
+        name="Tobetsu Branch (Headquarters-run)"
+        facts={[
+          { label: "Founded", value: "October 2008 (Heisei 20)" },
+          { label: "In charge", value: "Takashima" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/takashima.jpg", alt: "In charge: Takashima", name: "Takashima" },
+        ]}
+        address="2792 Shirakaba-cho, Tobetsu Town, Tobetsu Town General Gymnasium"
+        mapHref="https://www.google.com/maps/place/当別町立当別町+総合体育館/@43.223059,141.5131699,15z/data=!4m2!3m1!1s0x0:0x42d9adf5ac1b5e0?sa=X&ved=2ahUKEwid7uW7ya_hAhVDFYgKHW7eAj0Q_BIwCnoECA8QCA"
+        mapQuery="43.223059,141.5131699"
+      />
 
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/当別町立当別町+総合体育館/@43.223059,141.5131699,15z/data=!4m2!3m1!1s0x0:0x42d9adf5ac1b5e0?sa=X&ved=2ahUKEwid7uW7ya_hAhVDFYgKHW7eAj0Q_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">2792 Shirakaba-cho, Tobetsu Town, Tobetsu Town General Gymnasium</a
-        >
-      </p>
       <p class="detail-page__note">
         ※Alternate venue: <a
           href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"

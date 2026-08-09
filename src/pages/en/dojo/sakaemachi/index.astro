@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -51,48 +52,35 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/nami.jpg"
-            alt="Shihan Namikawa"
-            width="100"
-            height="98"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/masuda.jpg"
-            alt="Instructor Masuda"
-            width="94"
-            height="97"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Higashi Ward — Sakaemachi Branch</h2>
-      <p>
-        ◆ Founded: September 2003 (Heisei 15)<br />
-        ◆ Founders: Kayoko Mimura, Kazuaki Namikawa<br />
-        ◆ Past Instructors: Hashini<br />
-        ◆ Person in Charge: Namikawa
-      </p>
+      <BranchInfoCard
+        name="Higashi Ward — Sakaemachi Branch"
+        facts={[
+          { label: "Founded", value: "September 2003 (Heisei 15)" },
+          { label: "Founders", value: "Kayoko Mimura, Kazuaki Namikawa" },
+          { label: "Past Instructors", value: "Hashini" },
+          { label: "Person in Charge", value: "Namikawa" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/namikawa.jpg", alt: "Shihan Namikawa", name: "Namikawa" },
+          { src: "/assets/images/instructors/masuda.jpg", alt: "Instructor Masuda", name: "Masuda" },
+        ]}
+        address="San-ai Motors, Kita 42-jo Higashi 19-chome 1-1, Higashi-ku, Sapporo"
+        mapHref="http://yahoo.jp/JbqUqo"
+        mapQuery="San-ai Motors, Kita 42-jo Higashi 19-chome 1-1, Higashi-ku, Sapporo"
+      />
 
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a href="http://yahoo.jp/JbqUqo" target="_blank" rel="noopener"
-          >San-ai Motors, Kita 42-jo Higashi 19-chome 1-1, Higashi-ku, Sapporo</a
-        >
-      </p>
       <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/sakaemachi/2.jpg"
-          alt="San-ai Motors Building"
-          width="521"
-          height="225"
-          loading="lazy"
-        />
+        <a href="https://www.san-ai-jikou.co.jp/" target="_blank" rel="noopener">
+          <img
+            src="/assets/images/legacy/dojo/sakaemachi/2.jpg"
+            alt="San-ai Motors Building"
+            width="521"
+            height="225"
+            loading="lazy"
+          />
+        </a>
       </div>
 
       <p class="detail-page__back">

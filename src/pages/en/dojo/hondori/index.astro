@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import ClassScheduleCard from "@components/ClassScheduleCard.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -157,34 +158,24 @@ const classes = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Seishinkan Hondori Dojo</h2>
-
-      <p>
-        ◆Established: April 2011<br />
-        ◆Founder: Kayoko Mimura<br />
-        ◆Former Instructors: Hashini, Yuka Takigami, Takashima, Masuda<br />
-        ◆Current Instructors: Wakabayashi, Rui<br />
+      <p class="detail-page__note">
         *Adult black belt members also participate in instruction on an
         occasional basis.
       </p>
 
-      <h2 class="detail-page__heading">Venue</h2>
-
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
-          target="_blank"
-          rel="noopener"
-        >
-          Hondori Seishinkan<br />
-          12-41 Hondori 16-kita, Shiroishi-ku, Sapporo
-          (along National Route 12)
-        </a><br />
-        Approximately 11 minutes on foot (850 m) from Exit 2 of Nango 18-chome
-        Subway Station.<br />
-        3 minutes on foot from the JR Bus stop "Shimo-Shiroishi," or 2 minutes
-        from the Chuo Bus stop "Hondori 16-chome."
-      </p>
+      <BranchInfoCard
+        name="Seishinkan Hondori Dojo"
+        facts={[
+          { label: "Established", value: "April 2011" },
+          { label: "Founder", value: "Kayoko Mimura" },
+          { label: "Former Instructors", value: "Hashini, Yuka Takigami, Takashima, Masuda" },
+          { label: "Current Instructors", value: "Wakabayashi, Rui" },
+        ]}
+        address="Hondori Seishinkan 12-41 Hondori 16-kita, Shiroishi-ku, Sapporo (along National Route 12)"
+        addressNote="Approximately 11 minutes on foot (850 m) from Exit 2 of Nango 18-chome Subway Station. 3 minutes on foot from the JR Bus stop &quot;Shimo-Shiroishi,&quot; or 2 minutes from the Chuo Bus stop &quot;Hondori 16-chome.&quot;"
+        mapHref="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
+        mapQuery="43.0360142,141.4332405"
+      />
 
       <p class="detail-page__note">
         Parking is not available at the dojo. Please use a nearby paid parking

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,15 +53,6 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/instructors/oikawa.jpg"
-            alt="担当 及川義彦"
-            width="117"
-            height="118"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
       <h2 class="detail-page__heading">中央支部の変遷</h2>
@@ -97,38 +89,29 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">札幌中央支部</h2>
-      <p>
-        ◆設立　平成14年(2002)4月<br />
-        ◆設立者　大久保勝美<br />
-        ◆歴　代　室木、前川<br />
-        ◆担当者　及川義彦
-      </p>
-
-      <h2 class="detail-page__heading">会場　二条はるにれ児童会館</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527"
-          target="_blank"
-          rel="noopener">札幌市中央区南2条西15丁目　二条小学校内(二条はるにれ児童会館)</a
-        ><br />
-        二条小学校の中にあります。
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/cyuomainichi/2.jpg"
-            alt="二条はるにれ児童会館"
-            width="251"
-            height="193"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="札幌中央支部"
+        facts={[
+          { label: "設立", value: "平成14年(2002)4月" },
+          { label: "設立者", value: "大久保勝美" },
+          { label: "歴代", value: "室木、前川" },
+          { label: "担当者", value: "及川義彦" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/cyuomainichi/2.jpg",
+          alt: "二条はるにれ児童会館",
+          width: 251,
+          height: 193,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/oikawa.jpg", alt: "担当 及川義彦", name: "及川義彦" },
+        ]}
+        address="札幌市中央区南2条西15丁目　二条小学校内(二条はるにれ児童会館)"
+        addressNote="二条小学校の中にあります。"
+        mapHref="https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527"
+        mapQuery="43.0546877,141.3355023"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=中央支部体験申込">

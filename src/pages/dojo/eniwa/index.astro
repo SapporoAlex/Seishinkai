@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -65,22 +66,25 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">恵庭支部</h2>
-      <p>
-        ◆設立　平成25年(2013)3月<br />
-        ◆師範代　髙嶋和也<br />
-        ◆指導員　本部直轄<br />
-        ◆担当師範　前川(複数名が交代で担当します)
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/島松体育館/@42.917452,141.5843139,15z/data=!4m2!3m1!1s0x0:0x800612839adc2133?sa=X&ved=2ahUKEwito5C8wK_hAhXaM94KHU4BD9wQ_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">恵庭市南島松389-3　島松体育館</a
-        >
-      </p>
+      <BranchInfoCard
+        name="恵庭支部"
+        facts={[
+          { label: "設立", value: "平成25年(2013)3月" },
+          { label: "師範代", value: "髙嶋和也" },
+          { label: "指導員", value: "本部直轄" },
+          { label: "担当師範", value: "前川(複数名が交代で担当します)" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/eniwa/2.jpg",
+          alt: "島松体育館",
+          width: 254,
+          height: 160,
+        }}
+        address="恵庭市南島松389-3　島松体育館"
+        mapHref="https://www.google.com/maps/place/島松体育館/@42.917452,141.5843139,15z/data=!4m2!3m1!1s0x0:0x800612839adc2133?sa=X&ved=2ahUKEwito5C8wK_hAhXaM94KHU4BD9wQ_BIwCnoECA8QCA"
+        mapQuery="42.917452,141.5843139"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         月会費3,800円<br />

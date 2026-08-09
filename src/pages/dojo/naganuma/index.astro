@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -64,60 +65,34 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/shima.jpg"
-            alt="指導員 島"
-            width="1254"
-            height="1254"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/taki.jpg"
-            alt="指導員 坂本"
-            width="167"
-            height="167"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">長沼支部</h2>
-      <p>
-        ◆設立　平成23年(2011)8月<br />
-        ◇設立者　古館暁子<br />
-        ◆担当指導　直轄-島、坂本
-      </p>
+      <BranchInfoCard
+        name="長沼支部"
+        facts={[
+          { label: "設立", value: "平成23年(2011)8月" },
+          { label: "設立者", value: "古館暁子" },
+          { label: "担当指導", value: "直轄-島、坂本" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "指導員 島", name: "島" },
+          { src: "/assets/images/instructors/taki.jpg", alt: "指導員 坂本", name: "坂本" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/naganuma/2.jpg",
+          alt: "長沼町スポーツセンター",
+          width: 200,
+          height: 131,
+        }}
+        address="長沼町中央南2丁目　長沼スポーツセンター"
+        mapHref="https://www.google.com/maps/place/長沼町スポーツセンター/@43.007859,141.69233,15z/data=!4m2!3m1!1s0x0:0xc6cede9b78bc4cf5"
+        mapQuery="43.007859,141.69233"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         ※本部直轄につき指導員は交代で複数名が参加します。
       </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/長沼町スポーツセンター/@43.007859,141.69233,15z/data=!4m2!3m1!1s0x0:0xc6cede9b78bc4cf5"
-          target="_blank"
-          rel="noopener">長沼町中央南2丁目　長沼スポーツセンター</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/長沼町スポーツセンター/@43.007859,141.69233,15z/data=!4m2!3m1!1s0x0:0xc6cede9b78bc4cf5"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/naganuma/2.jpg"
-            alt="長沼町スポーツセンター"
-            width="200"
-            height="131"
-            loading="lazy"
-          />
-        </a>
-      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/tobetsu/">← 一覧へ戻る</a>

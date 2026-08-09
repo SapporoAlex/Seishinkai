@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -53,58 +54,34 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/tuba.jpg"
-            alt="担当 大久保翼"
-            width="128"
-            height="125"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">伏見支部</h2>
-      <p>
-        ◆設立　平成24年(2012)4月<br />
-        ◆担当　大久保 翼<br />
-        ◆私も不定期で指導に行きます　若林ゆうこ<br />
+      <p class="detail-page__note">
         ※不定期で一般部有段者会員が参加します
       </p>
 
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/images/yuko1.jpg"
-          alt="若林ゆうこ"
-          width="136"
-          height="136"
-          loading="lazy"
-        />
-      </div>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
-          target="_blank"
-          rel="noopener">札幌市中央区南14条西18丁目6-10　伏見会館</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/fushimi/2.jpg"
-            alt="伏見会館"
-            width="293"
-            height="200"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="伏見支部"
+        facts={[
+          { label: "設立", value: "平成24年(2012)4月" },
+          { label: "担当", value: "大久保 翼" },
+          { label: "私も不定期で指導に行きます", value: "若林ゆうこ" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fushimi/2.jpg",
+          alt: "伏見会館",
+          width: 293,
+          height: 200,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/tsubasa.jpg", alt: "担当 大久保翼", name: "大久保翼" },
+          { src: "/assets/images/legacy/images/yuko1.jpg", alt: "若林ゆうこ", name: "若林ゆうこ" },
+        ]}
+        address="札幌市中央区南14条西18丁目6-10　伏見会館"
+        mapHref="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
+        mapQuery="43.0410241,141.3303314"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=伏見体験申込">

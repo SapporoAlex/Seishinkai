@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import ClassScheduleCard from "@components/ClassScheduleCard.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -143,25 +144,25 @@ const classes = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">本通清心館空手道場</h2>
-      <p>
-        ◆設立　平成23年(2011)4月<br />
-        ◆設立者　三村佳代子<br />
-        　歴代　ハシニ、滝上由佳、高嶋、増田<br />
-        ◆指導　若林、瑠唯<br />
+      <p class="detail-page__note">
         ※不定期で一般部員有段者が参加します
       </p>
 
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
-          target="_blank"
-          rel="noopener">札幌市白石区本通16丁目北12-41(国道12号線沿) 本通清心館</a
-        ><br />
-        地下鉄南郷18丁目駅2番出口 徒歩約11分(850m)<br />
-        JRバス「下白石駅」下車徒歩3分、中央バス「本通16丁目」徒歩2分
-      </p>
+      <BranchInfoCard
+        name="本通清心館空手道場"
+        facts={[
+          { label: "設立", value: "平成23年(2011)4月" },
+          { label: "設立者", value: "三村佳代子" },
+          { label: "歴代", value: "ハシニ、滝上由佳、高嶋、増田" },
+          { label: "指導", value: "若林、瑠唯" },
+        ]}
+        address="札幌市白石区本通16丁目北12-41(国道12号線沿) 本通清心館"
+        addressNote="地下鉄南郷18丁目駅2番出口 徒歩約11分(850m) JRバス「下白石駅」下車徒歩3分、中央バス「本通16丁目」徒歩2分"
+        mapHref="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
+        mapQuery="43.0360142,141.4332405"
+        viewOnMapLabel="Google Mapsで見る"
+      />
+
       <p class="detail-page__note">
         駐車場はありませんので近隣コインパーキングをご利用ください。ラウンド1外駐車場向かいに<a
           href="https://www.google.com/maps/place/三井のリパーク+札幌本通１６丁目北駐車場/@43.0368883,141.433396,20.75z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.0462046!4d141.3794742!3m4!1s0x5f0b2b325dd7151b:0x67984f5e45181e18!8m2!3d43.0370477!4d141.4334782"

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -98,36 +99,23 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Kyogoku Branch</h2>
-      <p>
-        ◆ Founded: November 2017 (Heisei 29)<br />
-        ◇ Founder: Takuro Komada<br />
-        ◆ In charge: Tsubasa Okubo
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
-          target="_blank"
-          rel="noopener">160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kyogoku/img3.jpg"
-            alt="Kyogoku Town Community Hall"
-            width="350"
-            height="184"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Kyogoku Branch"
+        facts={[
+          { label: "Founded", value: "November 2017 (Heisei 29)" },
+          { label: "Founder", value: "Takuro Komada" },
+          { label: "In charge", value: "Tsubasa Okubo" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kyogoku/img3.jpg",
+          alt: "Kyogoku Town Community Hall",
+          width: 350,
+          height: 184,
+        }}
+        address="160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall"
+        mapHref="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
+        mapQuery="160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall"
+      />
 
       <p class="detail-page__note">
         ※Former venues: <a

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -45,15 +46,6 @@ const entries = [
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/clubu/shima.jpg"
-            alt="指導 島"
-            width="126"
-            height="126"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/dojo/nop/Image1.jpg"
             alt="野幌支部の稽古風景"
             width="243"
@@ -63,38 +55,29 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">江別市野幌支部</h2>
-      <p>
-        ◆設立　平成19年(2007)10月<br />
-        ◆設立者　猪又敬之<br />
-        ◆歴代　大久保翼、嶋和也、他、沖村小織<br />
-        ◆担当者　島 冬樹
-      </p>
-
-      <h2 class="detail-page__heading">会場　江別市野幌空手道場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒069-0803+北海道江別市野幌屯田町２３−６/@43.0969071,141.5075755,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2dee41c4efab:0x240f6398f59169be!8m2!3d43.0969071!4d141.5097642"
-          target="_blank"
-          rel="noopener">江別市野幌屯田町23-6　杜の台記念会館2F</a
-        ><br />
-        三番通に面しています
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒069-0803+北海道江別市野幌屯田町２３−６/@43.0969071,141.5075755,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2dee41c4efab:0x240f6398f59169be!8m2!3d43.0969071!4d141.5097642"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/nop/2.jpg"
-            alt="杜の台記念会館"
-            width="192"
-            height="100"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="江別市野幌支部"
+        facts={[
+          { label: "設立", value: "平成19年(2007)10月" },
+          { label: "設立者", value: "猪又敬之" },
+          { label: "歴代", value: "大久保翼、嶋和也、他、沖村小織" },
+          { label: "担当者", value: "島 冬樹" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/nop/2.jpg",
+          alt: "杜の台記念会館",
+          width: 192,
+          height: 100,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "指導 島", name: "島" },
+        ]}
+        address="江別市野幌屯田町23-6　杜の台記念会館2F"
+        addressNote="三番通に面しています"
+        mapHref="https://www.google.com/maps/place/〒069-0803+北海道江別市野幌屯田町２３−６/@43.0969071,141.5075755,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2dee41c4efab:0x240f6398f59169be!8m2!3d43.0969071!4d141.5097642"
+        mapQuery="43.0969071,141.5075755"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=野幌体験申込">

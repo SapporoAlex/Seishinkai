@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -63,12 +64,6 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">菊水支部</h2>
-      <p>
-        ◆設立　平成23年(2011)3月<br />
-        ■指導　複数指導員(一般部員)が交代で指導
-      </p>
-
       <p class="detail-page__note">交代で指導する一般部メンバー</p>
       <div class="detail-media">
         <figure>
@@ -127,29 +122,23 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒003-0803+北海道札幌市白石区菊水３条５丁目２&#8722;２５+アークス/@43.0529182,141.3763685,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bd3eb0399f1:0xf3795c85cd820460!8m2!3d43.0529182!4d141.3785572"
-          target="_blank"
-          rel="noopener">札幌市白石区菊水3条5丁目2-25 アークス菊水店</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/〒003-0803+北海道札幌市白石区菊水３条５丁目２&#8722;２５+アークス/@43.0529182,141.3763685,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bd3eb0399f1:0xf3795c85cd820460!8m2!3d43.0529182!4d141.3785572"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kikusui/acs1.jpg"
-            alt="アークス菊水店"
-            width="248"
-            height="138"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="清心会菊水支部"
+        facts={[
+          { label: "設立", value: "平成23年(2011)3月" },
+          { label: "担当", value: "島、及川、瑠唯、他、不定期で一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kikusui/acs1.jpg",
+          alt: "アークス菊水店",
+          width: 248,
+          height: 138,
+        }}
+        address="札幌市白石区菊水3条5丁目2-25 アークス菊水店"
+        mapHref="https://www.google.com/maps/place/〒003-0803+北海道札幌市白石区菊水３条５丁目２&#8722;２５+アークス/@43.0529182,141.3763685,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bd3eb0399f1:0xf3795c85cd820460!8m2!3d43.0529182!4d141.3785572"
+        mapQuery="43.0529182,141.3763685"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=菊水体験申込">

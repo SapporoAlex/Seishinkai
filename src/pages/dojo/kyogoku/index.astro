@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -91,36 +92,24 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">京極町支部</h2>
-      <p>
-        ◆設立　平成29年(2017)11月<br />
-        ◇設立者　駒田拓朗<br />
-        ◆担当者　大久保翼
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
-          target="_blank"
-          rel="noopener">虻田郡京極町京極160　京極町公民館</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kyogoku/img3.jpg"
-            alt="京極町公民館"
-            width="350"
-            height="184"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="京極町支部"
+        facts={[
+          { label: "設立", value: "平成29年(2017)11月" },
+          { label: "設立者", value: "駒田拓朗" },
+          { label: "担当者", value: "大久保翼" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kyogoku/img3.jpg",
+          alt: "京極町公民館",
+          width: 350,
+          height: 184,
+        }}
+        address="虻田郡京極町京極160　京極町公民館"
+        mapHref="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
+        mapQuery="虻田郡京極町京極160　京極町公民館"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         ※旧会場：<a

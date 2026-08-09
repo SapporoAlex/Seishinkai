@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -53,52 +54,29 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/sugimoto.jpg"
-            alt="Instructor Sugimoto"
-            width="107"
-            height="110"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/ooba.jpg"
-            alt="Ooba"
-            width="106"
-            height="106"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Fukuzumi Branch / Fukuzumi Karate Club</h2>
-      <p>
-        ◆Founded: September 2010 (Heisei 22)<br />
-        ◆Past instructors: Furin (2010-2018)<br />
-        　　　　Muroki (2018-2021)<br />
-        　　　　Shima (2021-2024)<br />
-        ◆Instructor: Sugimoto (2024-)
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/福住児童会館/@43.020565,141.402402,15z/data=!4m5!3m4!1s0x0:0x749365fd7c50d1bf!8m2!3d43.020565!4d141.402402"
-          target="_blank"
-          rel="noopener">5-5 Fukuzumi 1-jo 1-chome, Toyohira-ku, Sapporo, Fukuzumi Children's Hall</a
-        >
-      </p>
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/fukuzumi/2.jpg"
-          alt="Fukuzumi Children's Hall"
-          width="262"
-          height="174"
-          loading="lazy"
-        />
-      </div>
+      <BranchInfoCard
+        name="Seishinkai Fukuzumi Branch / Fukuzumi Karate Club"
+        facts={[
+          { label: "Founded", value: "September 2010 (Heisei 22)" },
+          { label: "Past instructors", value: "Koyano, Muroki, Takashima" },
+          { label: "Instructor", value: "Sugimoto (2024-), plus rotating adult black belt members" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fukuzumi/2.jpg",
+          alt: "Fukuzumi Children's Hall",
+          width: 262,
+          height: 174,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/sugimoto.jpg", alt: "Instructor Sugimoto", name: "Sugimoto" },
+          { src: "/assets/images/legacy/clubu/ooba.jpg", alt: "Ooba", name: "Ooba" },
+        ]}
+        address="5-5 Fukuzumi 1-jo 1-chome, Toyohira-ku, Sapporo, Fukuzumi Children's Hall"
+        mapHref="https://www.google.com/maps/place/福住児童会館/@43.020565,141.402402,15z/data=!4m5!3m4!1s0x0:0x749365fd7c50d1bf!8m2!3d43.020565!4d141.402402"
+        mapQuery="43.020565,141.402402"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Fukuzumi Trial Lesson Application">

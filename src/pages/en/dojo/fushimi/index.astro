@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -53,58 +54,33 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/tuba.jpg"
-            alt="Instructor Tsubasa Okubo"
-            width="128"
-            height="125"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Fushimi Branch</h2>
-      <p>
-        ◆Founded: April 2012 (Heisei 24)<br />
-        ◆Instructor: Tsubasa Okubo<br />
-        ◆I also come by to teach from time to time - Yuko Wakabayashi<br />
+      <p class="detail-page__note">
         Note: Adult black belt members participate on an irregular basis.
       </p>
 
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/images/yuko1.jpg"
-          alt="Yuko Wakabayashi"
-          width="136"
-          height="136"
-          loading="lazy"
-        />
-      </div>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
-          target="_blank"
-          rel="noopener">6-10 Minami 14-jo Nishi 18-chome, Chuo-ku, Sapporo, Fushimi Kaikan</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/fushimi/2.jpg"
-            alt="Fushimi Kaikan"
-            width="293"
-            height="200"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Fushimi Branch"
+        facts={[
+          { label: "Founded", value: "April 2012 (Heisei 24)" },
+          { label: "Instructor", value: "Tsubasa Okubo" },
+          { label: "I also come by to teach from time to time", value: "Yuko Wakabayashi" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fushimi/2.jpg",
+          alt: "Fushimi Kaikan",
+          width: 293,
+          height: 200,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/tsubasa.jpg", alt: "Instructor Tsubasa Okubo", name: "Tsubasa Okubo" },
+          { src: "/assets/images/legacy/images/yuko1.jpg", alt: "Yuko Wakabayashi", name: "Yuko Wakabayashi" },
+        ]}
+        address="6-10 Minami 14-jo Nishi 18-chome, Chuo-ku, Sapporo, Fushimi Kaikan"
+        mapHref="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
+        mapQuery="43.0410241,141.3303314"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Fushimi Trial Lesson Application">

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -50,15 +51,6 @@ const entries = [
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/images/kudo.jpg"
-            alt="In charge: Kudo"
-            width="328"
-            height="328"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
             src="/assets/images/legacy/dojo/obihiro/Image1.jpg"
             alt="Obihiro Branch practice session"
             width="352"
@@ -77,30 +69,25 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Obihiro Branch</h2>
-      <p>
-        ◆ Founded: April 2017 (Heisei 29)<br />
-        ◆ Founder: Tetsuhiro Kudo
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/d/viewer?hl=ja&ll=42.906342976232445%2C143.20808862938247&z=16&mid=1mNwLkO77ohCM0yk0rd14mWCBM33D_ais"
-          target="_blank"
-          rel="noopener">Nishi 2-jo Minami 24-chome, Obihiro City, Tetsunan District Community Center</a
-        >
-      </p>
-
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/images/Image1.jpg"
-          alt="Practice session at the Tetsunan District Community Center"
-          width="649"
-          height="196"
-          loading="lazy"
-        />
-      </div>
+      <BranchInfoCard
+        name="Obihiro Branch"
+        facts={[
+          { label: "Founded", value: "April 2017 (Heisei 29)" },
+          { label: "Founder", value: "Tetsuhiro Kudo" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/images/Image1.jpg",
+          alt: "Practice session at the Tetsunan District Community Center",
+          width: 649,
+          height: 196,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/kudo.jpg", alt: "In charge: Kudo", name: "Kudo" },
+        ]}
+        address="Nishi 2-jo Minami 24-chome, Obihiro City, Tetsunan District Community Center"
+        mapHref="https://www.google.com/maps/d/viewer?hl=ja&ll=42.906342976232445%2C143.20808862938247&z=16&mid=1mNwLkO77ohCM0yk0rd14mWCBM33D_ais"
+        mapQuery="Nishi 2-jo Minami 24-chome, Obihiro City, Tetsunan District Community Center"
+      />
 
       <p class="detail-page__back">
         <a href="/en/dojo/kitahiro/">← Back to the list of dojos & classes in Obihiro, Eniwa & Asahikawa</a>

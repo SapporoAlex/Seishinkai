@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -56,50 +57,32 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/shima.jpg"
-            alt="指導 嶋"
-            width="100"
-            height="102"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/ooba.jpg"
-            alt="指導 大場"
-            width="105"
-            height="105"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">東区丘珠支部</h2>
-      <p>
-        ◆設立　平成21年(2009)3月<br />
-        ◆設立者　三村佳代子〜ハシニ<br />
-        ◆担当者　本部直轄・指導員は交代で複数名参加します
-      </p>
-
-      <h2 class="detail-page__heading">会場</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/〒007-0835+北海道札幌市東区北３５条東２３丁目７−１０+札幌市丘珠たから児童会館/data=!4m2!3m1!1s0x5f0b2f2842249775:0x7e275989d3915e44?sa=X&ved=2ahUKEwiTiPCZqLHhAhXlFqYKHXuoByMQ8gEwAHoECAoQAQ"
-          target="_blank"
-          rel="noopener">札幌市東区北35条東23丁目7-10　丘珠たから児童会館</a
-        >(R5.5より)
-      </p>
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/okadama/2.jpg"
-          alt="丘珠たから児童会館"
-          width="272"
-          height="202"
-          loading="lazy"
-        />
-      </div>
+      <BranchInfoCard
+        name="清心会丘珠支部"
+        facts={[
+          { label: "設立", value: "平成21年(2009)3月" },
+          { label: "設立者", value: "三村佳代子" },
+          { label: "歴代", value: "ハシニ、滝上由佳" },
+          { label: "担当", value: "島、他、不定期で一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/okadama/2.jpg",
+          alt: "丘珠たから児童会館",
+          width: 272,
+          height: 202,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "指導 嶋", name: "嶋" },
+          { src: "/assets/images/legacy/clubu/ooba.jpg", alt: "指導 大場", name: "大場" },
+        ]}
+        address="札幌市東区北35条東23丁目7-10　丘珠たから児童会館"
+        addressNote="(R5.5より)"
+        mapHref="https://www.google.com/maps/place/〒007-0835+北海道札幌市東区北３５条東２３丁目７−１０+札幌市丘珠たから児童会館/data=!4m2!3m1!1s0x5f0b2f2842249775:0x7e275989d3915e44?sa=X&ved=2ahUKEwiTiPCZqLHhAhXlFqYKHXuoByMQ8gEwAHoECAoQAQ"
+        mapQuery="札幌市東区北35条東23丁目7-10　丘珠たから児童会館"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=丘珠 体験・入会問い合わせ">

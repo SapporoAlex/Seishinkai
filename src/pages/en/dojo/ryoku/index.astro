@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -57,35 +58,22 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Hanakawa-Higashi & Ryokuentai Branch</h2>
-      <p>
-        ◆ Founded: March 2018 (Heisei 30)<br />
-        ◆ Founder: Takushi Muroki
-      </p>
-
-      <h2 class="detail-page__heading">Venue: Ryokuentai Green Hall</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
-          target="_blank"
-          rel="noopener">Ryokuentai Higashi 2-jo 1-chome, Ishikari, Ryokuentai Green Hall</a
-        >
-      </p>
-      <div class="detail-media">
-        <a
-          href="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/ryoku/2.jpg"
-            alt="Ryokuentai Green Hall"
-            width="257"
-            height="182"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <BranchInfoCard
+        name="Hanakawa-Higashi & Ryokuentai Branch"
+        facts={[
+          { label: "Founded", value: "March 2018 (Heisei 30)" },
+          { label: "Founder", value: "Takushi Muroki" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/ryoku/2.jpg",
+          alt: "Ryokuentai Green Hall",
+          width: 257,
+          height: 182,
+        }}
+        address="Ryokuentai Higashi 2-jo 1-chome, Ishikari, Ryokuentai Green Hall"
+        mapHref="https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA"
+        mapQuery="43.163705,141.342457"
+      />
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Ryokuentai Trial Lesson Application">

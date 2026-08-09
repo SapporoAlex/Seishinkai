@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -68,22 +69,24 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Eniwa Branch</h2>
-      <p>
-        ◆ Founded: March 2013 (Heisei 25)<br />
-        ◆ Assistant Master (Shihandai): Kazuya Takashima<br />
-        ◆ Instructor: Directly overseen by Headquarters<br />
-        ◆ Instructor in charge: Maekawa (multiple instructors rotate in this role)
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/島松体育館/@42.917452,141.5843139,15z/data=!4m2!3m1!1s0x0:0x800612839adc2133?sa=X&ved=2ahUKEwito5C8wK_hAhXaM94KHU4BD9wQ_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">389-3 Minami-Shimamatsu, Eniwa City, Shimamatsu Gymnasium</a
-        >
-      </p>
+      <BranchInfoCard
+        name="Eniwa Branch"
+        facts={[
+          { label: "Founded", value: "March 2013 (Heisei 25)" },
+          { label: "Assistant Master (Shihandai)", value: "Kazuya Takashima" },
+          { label: "Instructor", value: "Directly overseen by Headquarters" },
+          { label: "Instructor in charge", value: "Maekawa (multiple instructors rotate in this role)" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/eniwa/2.jpg",
+          alt: "Shimamatsu Gymnasium",
+          width: 254,
+          height: 160,
+        }}
+        address="389-3 Minami-Shimamatsu, Eniwa City, Shimamatsu Gymnasium"
+        mapHref="https://www.google.com/maps/place/島松体育館/@42.917452,141.5843139,15z/data=!4m2!3m1!1s0x0:0x800612839adc2133?sa=X&ved=2ahUKEwito5C8wK_hAhXaM94KHU4BD9wQ_BIwCnoECA8QCA"
+        mapQuery="42.917452,141.5843139"
+      />
 
       <p class="detail-page__note">
         Monthly fee: ¥3,800<br />

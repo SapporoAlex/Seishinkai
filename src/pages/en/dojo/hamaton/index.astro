@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -73,20 +74,22 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Hamatonbetsu Branch — Do-hoku Region</h2>
-      <p>
-        ◆ Founded: April 2023 (Reiwa 5)<br />
-        ◆ Founder: Inomata — contact 090-9759-3959
-      </p>
-
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1"
-          target="_blank"
-          rel="noopener">3-15 Asahi-cho, Hamatonbetsu Town, Hamatonbetsu Elementary School Gymnasium</a
-        >
-      </p>
+      <BranchInfoCard
+        name="Hamatonbetsu Branch — Do-hoku Region"
+        facts={[
+          { label: "Founded", value: "April 2023 (Reiwa 5)" },
+          { label: "Founder", value: "Inomata — contact 090-9759-3959" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/hamaton/img4.jpg",
+          alt: "Hamatonbetsu Elementary School gymnasium",
+          width: 340,
+          height: 169,
+        }}
+        address="3-15 Asahi-cho, Hamatonbetsu Town, Hamatonbetsu Elementary School Gymnasium"
+        mapHref="https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1"
+        mapQuery="45.1220392,142.3559264"
+      />
 
       <p class="detail-page__note">
         <img

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -73,25 +74,31 @@ const entries = [
         </figure>
       </div>
 
-      <h2 class="detail-page__heading">Minami-Ainosato Branch</h2>
-      <p>
-        ◆Founded: May 2010 (Heisei 22)<br />
-        ◆Headquarters-run class
-      </p>
+      <BranchInfoCard
+        name="Minami-Ainosato Branch"
+        facts={[
+          { label: "Founded", value: "May 2010 (Heisei 22)" },
+          { label: "", value: "Headquarters-run class" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/m-ainosato/2.jpg",
+          alt: "Takuhoku Ainosato District Center",
+          width: 345,
+          height: 226,
+        }}
+        address="1-1 Ainosato 1-jo 6-chome, Kita-ku, Sapporo, Takuhoku Ainosato District Center"
+        mapHref="https://www.google.com/maps/place/拓北・あいの里地区センター/@43.155447,141.399294,15z/data=!4m2!3m1!1s0x0:0x78b61eb45497db44?sa=X&ved=2ahUKEwigkNm_3LHhAhXDdHAKHTGtA3YQ_BIwDHoECAsQCA"
+        mapQuery="43.155447,141.399294"
+      />
 
-      <h2 class="detail-page__heading">Venue</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/拓北・あいの里地区センター/@43.155447,141.399294,15z/data=!4m2!3m1!1s0x0:0x78b61eb45497db44?sa=X&ved=2ahUKEwigkNm_3LHhAhXDdHAKHTGtA3YQ_BIwDHoECAsQCA"
-          target="_blank"
-          rel="noopener">1-1 Ainosato 1-jo 6-chome, Kita-ku, Sapporo, Takuhoku Ainosato District Center</a
-        ><br />
+      <p class="detail-page__note">
         ※When the district center is unavailable: <a
           href="https://www.google.com/maps/place/コープさっぽろ+あいの里店/@43.1576295,141.3986342,15z/data=!4m2!3m1!1s0x0:0xc9b4786745542e81?sa=X&ved=2ahUKEwjUwuXRvMHxAhVkNKYKHT-dA5oQ_BIwEnoECD8QBQ"
           target="_blank"
           rel="noopener">Co-op Sapporo Ainosato Store, 2F Circle Room</a
         >
       </p>
+
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=Minami-Ainosato Trial Lesson Application">
           <img

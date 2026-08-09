@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -55,41 +56,23 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/masuda.jpg"
-            alt="Instructor: Masuda"
-            width="87"
-            height="87"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/takashima.jpg"
-            alt="Lead Instructor: Shima"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">Hanakawa-Kita Branch (History)</h2>
-      <p>
-        ◆ Founded: November 2011 (Heisei 23)<br />
-        ◆ Instructors: Masuda, Shima (Lead Instructor)<br />
-        ◆ Merger: Merged into the Ryokuentai Branch (Ishikari Ryokuentai Karate Club) in November 2022 (Reiwa 4)
-      </p>
-
-      <h2 class="detail-page__heading">Former Venue: Hanakawa-Kita Community Center</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/石狩市立花川北コミュニティセンター/@43.1645776,141.3090072,15z/data=!4m2!3m1!1s0x0:0x85c55b058693cc05?sa=X&ved=2ahUKEwiF6uat0a7hAhVGjLwKHWchCFcQ_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">3-2 Hanakawa-Kita, Ishikari, Hanakawa-Kita Community Center</a
-        >
-      </p>
+      <BranchInfoCard
+        name="Hanakawa-Kita Branch (History)"
+        facts={[
+          { label: "Founded", value: "November 2011 (Heisei 23)" },
+          { label: "Instructors", value: "Masuda, Shima (Lead Instructor)" },
+          { label: "Merger", value: "Merged into the Ryokuentai Branch (Ishikari Ryokuentai Karate Club) in November 2022 (Reiwa 4)" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/masuda.jpg", alt: "Instructor: Masuda", name: "Masuda" },
+          { src: "/assets/images/instructors/takashima.jpg", alt: "Lead Instructor: Shima", name: "Shima" },
+        ]}
+        address="3-2 Hanakawa-Kita, Ishikari, Hanakawa-Kita Community Center"
+        mapHref="https://www.google.com/maps/place/石狩市立花川北コミュニティセンター/@43.1645776,141.3090072,15z/data=!4m2!3m1!1s0x0:0x85c55b058693cc05?sa=X&ved=2ahUKEwiF6uat0a7hAhVGjLwKHWchCFcQ_BIwCnoECA8QCA"
+        mapQuery="43.1645776,141.3090072"
+      />
 
       <p class="detail-page__back">
         <a href="/en/dojo/ebetsu/">← Back to the list of dojos & classes in Ebetsu, Iwamizawa & Ishikari</a>

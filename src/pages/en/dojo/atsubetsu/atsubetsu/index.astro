@@ -1,177 +1,167 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ClassScheduleCard from "@components/ClassScheduleCard.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const classes = [
   {
-    title: "Friday Class",
-    schedule: ["① 6:00 pm – 7:00 pm", "② 7:10 pm – 8:10 pm (hall until 8:30 pm)"],
+    title: "Friday Class (Atsubetsu Kita Branch)",
+    schedule: ["①18:00-19:00", "②19:10-20:10 (20:30)"],
     instructors: [
       {
         name: "Tsubasa Okubo",
-        position: "Chief Shihan",
+        position: "Chief Instructor",
         image: "/assets/images/instructors/tsubasa.jpg",
       },
     ],
-    note: "Directly operated by Headquarters　※Class ① is for beginners",
+    note: "",
   },
   {
-    title: "Sunday Class",
+    title: "Sunday Class (Atsubetsu Branch)",
     schedule: [
-      "① 9:30 am – 10:30 am",
-      "② 10:40 am – 11:50 am",
-      "Winter (Dec–Mar) ① 10:00–10:50 am ② 11:00–11:55 am",
+      "①9:30-10:30",
+      "②10:40-11:50",
+      "Winter Schedule (December-March): ①10:00-10:50 ②11:00-11:55",
     ],
     instructors: [
       {
         name: "Keiji Wakabayashi",
-        position: "Deputy Shihan",
+        position: "Assistant Instructor",
         image: "/assets/images/instructors/wakabayashi.jpg",
       },
     ],
-    note: "※Class ① is for beginners",
+    note: "",
   },
 ];
 ---
 
 <BaseLayout
-  title="Seishinkai Karate Federation Atsubetsu Branch"
-  description="Information about the Seishinkai Atsubetsu Branch in Atsubetsu Ward, Sapporo. View class schedules, venue information, and karate classes for children, families, and adults."
+  title="Seishinkai Karate Federation – Atsubetsu Branch"
+  description="Atsubetsu Karate Club and Seishinkai Atsubetsu Branch, established in April 1993. Information on practice schedules and training locations for kids' and junior karate classes."
   lang="en"
-  path="/en/dojo/atsubetsu/atsubetsu/"
+  path="/en/dojo/atsubetsu/"
 >
-  <section class="dojo-list">
-    <div class="page-container">
-      <div class="section__title-area">
-        <span class="section-label">DOJO</span>
-        <h1 class="section-title">Seishinkai Karate Federation Atsubetsu Branch</h1>
-      </div>
+<section class="dojo-list">
+  <div class="page-container">
+    <div class="section__title-area">
+      <span class="section-label">DOJO</span>
+      <h1 class="section-title">Seishinkai Karate Federation – Atsubetsu Branch</h1>
+    </div>
+    <h2 class="detail-page__heading">Atsubetsu Karate Club & Seishinkai Atsubetsu Branch</h2>
 
-      <h2 class="detail-page__heading">Atsubetsu Karate Classes</h2>
-
-      <div class="detail-page__img-text-pair--reverse">
-        <div class="detail-media--med">
-          <figure>
-            <img
-              src="/assets/images/dojo/img_atsubetsu_4.jpg"
-              alt="Atsubetsu West Community Centre"
-              width="234"
-              height="144"
-              loading="lazy"
-            />
-          </figure>
-        </div>
-
-        <p>
-          The Atsubetsu Karate Class began training at the Atsubetsu West
-          Community Centre in April 1993.<br />
-          Since its establishment, the dojo has welcomed everyone from young
-          children to adults, offering karate classes for children, juniors, and
-          families.<br />
-          Families are especially encouraged to train together.<br />
-          Branch Chief Wakabayashi and his son also joined Seishinkai as a
-          parent-and-child team and now lead the branch together.<br />
-          While many dojos focus on a highly competitive sports-club atmosphere,
-          our goal is to provide enjoyable karate training that promotes health,
-          fitness, and lifelong learning in a friendly club environment.<br />
-          <strong>Class ① is intended for beginners.</strong>
-        </p>
-      </div>
-
-      <h2 class="detail-page__heading">Classes in Session</h2>
-      <div class="detail-gallery">
+    <div class="detail-page__img-text-pair--reverse">
+      <div class="detail-media--med">
         <figure>
           <img
-            src="/assets/images/dojo/img_atsubetsu_1.jpg"
-            alt="Friday karate class"
+            src="/assets/images/dojo/img_atsubetsu_4.jpg"
+            alt="Exterior of Hondori Seishinkan"
             width="234"
             height="144"
             loading="lazy"
           />
-          <figcaption>Friday Class</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/dojo/img_atsubetsu_2.jpg"
-            alt="Sunday karate class"
-            width="234"
-            height="144"
-            loading="lazy"
-          />
-          <figcaption>Sunday Class</figcaption>
         </figure>
       </div>
-
-      <h2 class="detail-page__heading">Class Schedule</h2>
-      <div class="class-schedule-grid">
-        {
-          classes.map((c) => (
-            <ClassScheduleCard
-              title={c.title}
-              schedule={c.schedule}
-              instructors={c.instructors}
-              note={c.note}
-            />
-          ))
-        }
-      </div>
-
-      <h2 class="detail-page__heading">Atsubetsu Branch Information</h2>
-
-      <p class="detail-page__note">
-        <strong>Established:</strong> April 1993<br />
-        <strong>Founder:</strong> Katsumi Okubo<br />
-        <strong>Instructors:</strong> Wakabayashi (Keiji), Okubo (Tsubasa)<br>
-        Other adult division members who hold dan ranks
-      </p>
-
-      <h2 class="detail-page__heading">Training Venue</h2>
 
       <p>
-        Atsubetsu West Community Centre<br />
-        2F Meeting Room<br />
-        10-1 Atsubetsu Nishi 4-jo 4-chome, Atsubetsu-ku, Sapporo
-      </p>
-
-      <div class="dojo-list__map-embed">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.450311471158!2d141.46572229999998!3d43.05299579999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2c7d48b71893%3A0x7e0fefb1cdf04351!2z44CSMDA0LTAwNjQgSG9ra2FpZG8sIFNhcHBvcm8sIEF0c3ViZXRzdSBXYXJkLCBBdHN1YmV0c3UgTmlzaGkgNCBKxY0sIDQtY2jFjW1l4oiSMTDiiJIxIOacreW5jOW4guWOmuWIpeilv-WcsOWMuuOCu-ODs-OCv-ODvA!5e0!3m2!1sen!2sjp!4v1785048971458!5m2!1sen!2sjp"
-          width="600"
-          height="450"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-        ></iframe>
-      </div>
-
-      <p class="detail-page__note">
-        As this is a public facility, please contact the Seishinkai office
-        rather than the venue for enquiries.
-      </p>
-
-      <p class="detail-page__note">
-        If the Atsubetsu West Community Centre is unavailable, training may be
-        held at Oasa Seishinkan or the Kawashimo Co-op 2F Circle Room.
-      </p>
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Atsubetsu%20Trial%20Lesson%20Enquiry">
-          <img
-            src="/assets/images/dojo/img_atsubetsu_3.jpg"
-            alt="Apply for a Trial Class"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
-      <p class="detail-page__back">
-        <a href="/en/dojo/atsubetsu/">
-          ← Back to Atsubetsu Ward Dojos
-        </a>
+        Atsubetsu Karate Club began its activities at the Atsubetsu Nishi Community Center in April 1993.
+        Since its establishment, the club has offered kids' and junior karate classes, with participants ranging
+        from preschool children to adults, including parents and children.
+        We especially welcome families to participate together.
+        The Wakabayashi family, who are responsible for instruction, also joined as a parent-and-child family
+        and now serve as the branch instructors.
+        While many dojos operate more like traditional athletic clubs, our goal is to provide a friendly,
+        enjoyable environment where students can learn and practice karate as a form of health and physical
+        fitness.<br>
+        ※ Class ① in each schedule is intended for beginners.<br>
       </p>
     </div>
-  </section>
+
+    <div class="detail-page__highlight-box">
+      <p class="detail-page__highlight-text">★★</p>
+      <p class="detail-page__highlight-text">Seishinkai Karate – Building a heart that never gives up</p>
+      <p class="detail-page__highlight-text">★★</p>
+    </div>
+
+    <h2 class="detail-page__heading">Training Sessions</h2>
+
+    <div class="detail-gallery">
+      <figure>
+        <img
+          src="/assets/images/dojo/img_atsubetsu_1.jpg"
+          alt="Friday class training session at Atsubetsu Kita Branch"
+          width="234"
+          height="144"
+          loading="lazy"
+        />
+        <figcaption>Friday Class</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="/assets/images/dojo/img_atsubetsu_2.jpg"
+          alt="Sunday class training session at Atsubetsu Branch"
+          width="234"
+          height="144"
+          loading="lazy"
+        />
+        <figcaption>Sunday Class</figcaption>
+      </figure>
+    </div>
+
+    <h2 class="detail-page__heading">Class Information</h2>
+
+    <div class="class-schedule-grid">
+      {
+        classes.map((c) => (
+          <ClassScheduleCard
+            title={c.title}
+            schedule={c.schedule}
+            instructors={c.instructors}
+            note={c.note}
+          />
+        ))
+      }
+    </div>
+
+    <BranchInfoCard
+      name="Atsubetsu Branch"
+      facts={[
+        { label: "Established", value: "April 1993" },
+        { label: "Founder", value: "Katsumi Okubo" },
+        { label: "Former Branch Heads", value: "Okubo, Fujiwara, and others" },
+        { label: "Head Instructor", value: "Tsubasa Okubo" },
+        { label: "Assistant Instructor", value: "Wakabayashi" },
+      ]}
+      address="Training Location: 4-4-10-1 Atsubetsu Nishi, Atsubetsu-ku, Sapporo – Atsubetsu Nishi Community Center, 2F Meeting Room"
+      mapQuery="43.052996,141.465722"
+      viewOnMapLabel="View on Google Maps"
+    />
+
+    <p class="detail-page__note">
+      ※ In some classes, preschool children are asked to participate together with a parent.<br>
+      ※ Dan-ranked members of the adult class may participate occasionally.<br>
+      ※ The training venue is a public facility that we rent. For inquiries, please contact the Seishinkai office.
+    </p>
+
+    <p class="detail-page__note">
+      When the Atsubetsu Nishi Community Center is unavailable, training may be held at
+      Daima Seishinkan or the 2nd floor of Kawashimo Coop (Circle Room).
+    </p>
+
+    <p class="detail-page__note">
+      <a href="mailto:karate@seishinkan.ne.jp?subject=%E5%8E%9A%E5%88%A5%E4%BD%93%E9%A8%93%E3%83%BB%E5%85%A5%E4%BC%9A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
+        <img
+          src="/assets/images/dojo/img_atsubetsu_3.jpg"
+          alt="Click here to apply for a trial lesson"
+          width="645"
+          height="293"
+          loading="lazy"
+        />
+      </a>
+    </p>
+
+    <p class="detail-page__back">
+      <a href="/dojo/atsubetsu/">← Back to the Atsubetsu Ward Karate Dojo & Classes</a>
+    </p>
+  </div>
 </BaseLayout>

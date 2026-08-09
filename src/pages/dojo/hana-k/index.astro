@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
 
 const entries = [
   {
@@ -52,41 +53,24 @@ const entries = [
             loading="lazy"
           />
         </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/masuda.jpg"
-            alt="指導 増田"
-            width="87"
-            height="87"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/takashima.jpg"
-            alt="指導リーダー 嶋"
-            width="123"
-            height="123"
-            loading="lazy"
-          />
-        </figure>
       </div>
 
-      <h2 class="detail-page__heading">花川北支部(沿革)</h2>
-      <p>
-        ◆設立　平成23年(2011)11月<br />
-        ◆担当者　増田、嶋(指導リーダー)<br />
-        ◆統合　令和4年(2022)11月、緑苑台支部(石狩緑苑台空手クラブ)へ統合
-      </p>
-
-      <h2 class="detail-page__heading">旧会場　花川北コミュニティセンター</h2>
-      <p>
-        <a
-          href="https://www.google.com/maps/place/石狩市立花川北コミュニティセンター/@43.1645776,141.3090072,15z/data=!4m2!3m1!1s0x0:0x85c55b058693cc05?sa=X&ved=2ahUKEwiF6uat0a7hAhVGjLwKHWchCFcQ_BIwCnoECA8QCA"
-          target="_blank"
-          rel="noopener">石狩市花川北3-2 花川北コミュニティセンター</a
-        >
-      </p>
+      <BranchInfoCard
+        name="花川北支部(沿革)"
+        facts={[
+          { label: "設立", value: "平成23年(2011)11月" },
+          { label: "担当者", value: "増田、嶋(指導リーダー)" },
+          { label: "統合", value: "令和4年(2022)11月、緑苑台支部(石狩緑苑台空手クラブ)へ統合" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/masuda.jpg", alt: "指導 増田", name: "増田" },
+          { src: "/assets/images/instructors/takashima.jpg", alt: "指導リーダー 嶋", name: "嶋" },
+        ]}
+        address="石狩市花川北3-2 花川北コミュニティセンター"
+        mapHref="https://www.google.com/maps/place/石狩市立花川北コミュニティセンター/@43.1645776,141.3090072,15z/data=!4m2!3m1!1s0x0:0x85c55b058693cc05?sa=X&ved=2ahUKEwiF6uat0a7hAhVGjLwKHWchCFcQ_BIwCnoECA8QCA"
+        mapQuery="43.1645776,141.3090072"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <p class="detail-page__back">
         <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>
