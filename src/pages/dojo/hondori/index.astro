@@ -10,9 +10,9 @@ const entries = [
     name: "清心館本通道場",
     address: "白石区本通16丁目北(国道12号線沿) 本通清心館",
     schedule: [
-      "水曜クラス16:30-17:30",
-      "金曜クラス19:00-20:00",
-      "日曜特設クラス(新規受付中/3名集まり次第開始)",
+      "水曜クラス16:30-17:30　園児･小学生",
+      "金曜クラス19:00-20:00　小学生～　※このクラスは、園児は親子参加でお願いします。",
+      "日曜特設 及び土曜(AM)クラス　※新規受付中",
     ],
   },
 ];
@@ -71,29 +71,44 @@ const classes = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">清心会空手道連盟・本通支部</h1>
       </div>
-
+      <h2 class="detail-page__heading">白石区本通空手教室・清心館本通空手道場</h2>
       <p class="detail-page__lead">
-        [白石区本通空手教室・清心館本通空手道場]<br />
-        本通空手教室は、国道12号線沿いに面する本通清心館道場で平成23年9月(2011)より活動を始めました。<br />
-        隣に焼肉の徳寿様、反対隣りにラウンドワンとわかりやすい場所にあります。<br />
-        設立以来、キッズ空手、ジュニア空手を中心として開始し、親子での参加も歓迎しています。<br />
-        専有道場ですが広くはないので各クラス定員枠15名としています。<br />
-        会場はエアコンを完備しています。<br />
+        本通空手教室は、国道12号線沿いに面する本通清心館道場で平成23年9月より活動を始めました。
+        隣に焼肉の徳寿様、反対隣りにラウンドワンとわかりやすい場所にあります。
+        設立以来、キッズ空手、ジュニア空手として開始し、園児から中学生を中心としています。
+        水曜、金曜各クラス定員枠15名としています。会場はエアコンを完備しています。
         体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
       </p>
 
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
+      </div>
+
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=本通体験申込"
-          >事務局</a
-        >までお願いします。<br />
-        開始時刻等若干変動する場合がありますので体験の方は事前にご確認下さい。
-      </p>
 
 
+      <BranchInfoCard
+        name="本通清心館空手道場"
+        facts={[
+          { label: "設立", value: "平成23年(2011) 4月" },
+          { label: "設立者", value: "三村佳代子" },
+          { label: "歴代", value: "ハシニ、滝上、増田、高嶋、他" },
+          { label: "師範代", value: "若林" },
+        ]}
+        address="札幌市白石区本通16丁目北12-41(国道12号線沿) 本通清心館"
+        addressNote="地下鉄南郷18丁目駅2番出口 徒歩約11分(850m) JRバス「下白石駅」下車徒歩3分、中央バス「本通16丁目」徒歩2分"
+        mapHref="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
+        mapQuery="43.0360142,141.4332405"
+        viewOnMapLabel="Google Mapsで見る",
+        instructors={[
+          { src: "/assets/images/instructors/rui.jpg", alt: "指導 瑠唯", name: "瑠唯" },
+          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "指導 若林", name: "若林" },
+          { src: "/assets/images/instructors/takashima.jpg", alt: "指導 髙嶋", name: "髙嶋" },
+        ]}
+      />
 
+    
       <div class="detail-gallery">
         <figure>
           <img
@@ -145,26 +160,18 @@ const classes = [
       </div>
 
       <p class="detail-page__note">
-        ※不定期で一般部員有段者が参加します
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=本通体験申込"
+          >事務局</a
+        >までお願いします。<br />
+        開始時刻等若干変動する場合がありますので体験の方は事前にご確認下さい。
+      </p>
+      <p class="detail-page__note">
+        ※交代で一般部員有段者が参加します。
       </p>
 
-      <BranchInfoCard
-        name="本通清心館空手道場"
-        facts={[
-          { label: "設立", value: "平成23年(2011)4月" },
-          { label: "設立者", value: "三村佳代子" },
-          { label: "歴代", value: "ハシニ、滝上由佳、高嶋、増田" },
-          { label: "指導", value: "若林、瑠唯" },
-        ]}
-        address="札幌市白石区本通16丁目北12-41(国道12号線沿) 本通清心館"
-        addressNote="地下鉄南郷18丁目駅2番出口 徒歩約11分(850m) JRバス「下白石駅」下車徒歩3分、中央バス「本通16丁目」徒歩2分"
-        mapHref="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
-        mapQuery="43.0360142,141.4332405"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
       <p class="detail-page__note">
-        駐車場はありませんので近隣コインパーキングをご利用ください。ラウンド1外駐車場向かいに<a
+        ※駐車場はありませんので近隣コインパーキングをご利用ください。ラウンド1外駐車場向かいに<a
           href="https://www.google.com/maps/place/三井のリパーク+札幌本通１６丁目北駐車場/@43.0368883,141.433396,20.75z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.0462046!4d141.3794742!3m4!1s0x5f0b2b325dd7151b:0x67984f5e45181e18!8m2!3d43.0370477!4d141.4334782"
           target="_blank"
           rel="noopener">三井のリパーク</a

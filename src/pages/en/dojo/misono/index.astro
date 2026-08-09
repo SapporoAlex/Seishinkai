@@ -7,15 +7,15 @@ const entries = [
   {
     marker: "★",
     name: "Misono Branch",
-    address: "Misono 6-jo 7-chome, Toyohira-ku, Co-op Misono Circle Room",
-    schedule: ["Sunday 13:30"],
+    address: "Toyohira Ward, Misono 6-jo 7-chome, Co-op Sapporo Misono 2F Circle Room",
+    schedule: ["Sunday 13:30-14:30　※Preschoolers must attend with a parent"],
   },
 ];
 ---
 
 <BaseLayout
-  title="Karate Classes at the Misono Branch, Toyohira Ward"
-  description="Introducing the Seishinkai Karate dojo and class in Misono, Toyohira Ward, Sapporo — renamed from the former Hiragishi Branch. A junior-centered karate club — see training days and venue information."
+  title="Toyohira Ward Misono Branch Karate Classes"
+  description="Information about the Seishinkai karate dojo/classes in Misono, Toyohira Ward, Sapporo. Formerly the Hiragishi Branch, now renamed. Introducing schedules and venue details for our junior-focused karate club."
   lang="en"
   path="/en/dojo/misono/"
 >
@@ -23,47 +23,34 @@ const entries = [
     <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">DOJO</span>
-        <h1 class="section-title">Seishinkai Karate Federation - Misono Branch (formerly Hiragishi Branch)</h1>
+        <h1 class="section-title">Seishinkai Karate-Do Federation – Misono Branch</h1>
       </div>
-
+      <h2 class="detail-page__heading">Toyohira Ward Misono Karate Club / Misono Branch</h2>
       <p class="detail-page__lead">
-        [Toyohira Ward Misono Branch - Misono Karate Club] (formerly the Hiragishi Karate Club / Seishinkai Hiragishi Branch)<br />
-        The Hiragishi karate class got its start in April 2009 (Heisei 21), borrowing space at the Toyohira Ward Citizens' Center.<br />
-        Since March 2021 (Reiwa 3), the venue has moved to the 2nd-floor circle room at Co-op Misono, and the class was renamed the Misono Karate Club (Misono Branch).<br />
-        Since the venue is a co-op store, it's convenient to be able to shop while training.<br />
-        Since its founding, the class has centered on Junior Karate, with members ranging from preschoolers to junior high schoolers.<br />
-        Participation by parents and children together, as well as senior class members, is also welcome.<br />
-        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.
+        The current Misono Karate Club began activities in April 2009 as the Hiragishi Branch, using the Toyohira
+        Ward Citizens' Center as its venue. It later operated as the Misono Branch at the Misono Children's Center,
+        and in March 2021 the venue moved to the Circle Room on the 2nd floor of Co-op Sapporo Misono, at which point
+        the name changed to the Misono Karate Club (Misono Branch). Since the venue is inside a Co-op store, members
+        can conveniently run errands while practice is underway.
+        Since its founding, the club has focused on junior karate, welcoming students from preschool age through
+        junior high school. Because classes are held on Sundays, it's easy for parents and children to attend
+        together, and senior participants are also very welcome.
+        While many dojos feel like an extension of school sports clubs, we aim for a more relaxed, club-like
+        atmosphere where students can enjoy learning karate for health and fitness.
       </p>
 
-      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Misono Trial Lesson Application"
-          >office</a
-        >.<br />
-        ※Please enter from the 2nd-floor parking lot entrance. If you're unsure, please ask at the co-op service counter.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/misono/acs1.jpg"
-            alt="Training session at the Misono Branch"
-            width="336"
-            height="185"
-            loading="lazy"
-          />
-        </figure>
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">Building an unyielding, unbreakable spirit — Seishinkai Karate</p>
       </div>
+
+      <BranchTable entries={entries} />
 
       <BranchInfoCard
         name="Seishinkai Misono Branch"
         facts={[
           { label: "Founded", value: "April 2009 (Heisei 21)" },
-          { label: "Past instructors", value: "Koyano, Tsubasa Okubo" },
-          { label: "Instructor", value: "Wakabayashi, plus other rotating adult black belt members" },
+          { label: "Past Instructors", value: "Koyano, Tsubasa Okubo, and others" },
+          { label: "In Charge", value: "Wakabayashi" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/misono/img4.jpg",
@@ -72,12 +59,41 @@ const entries = [
           height: 168,
         }}
         instructors={[
-          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "Instructor Wakabayashi", name: "Wakabayashi" },
+          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "In charge: Wakabayashi", name: "Wakabayashi" },
         ]}
-        address="Misono 6-jo 7-chome, Toyohira-ku, Sapporo, Co-op Sapporo Misono 2F Circle Room"
+        address="Misono 6-jo 7-chome, Toyohira Ward　Co-op Sapporo Misono 2F Circle Room"
         mapHref="https://www.google.com/maps/place/コープさっぽろ+美園店/@43.0373071,141.3874316,15z/data=!4m5!3m4!1s0x0:0x72d3e70b77425ccb!8m2!3d43.0373849!4d141.3872843"
         mapQuery="43.0373071,141.3874316"
+        viewOnMapLabel="View on Google Maps"
       />
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/misono/acs1.jpg"
+            alt="Practice session at the Misono Branch"
+            width="336"
+            height="185"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※The venue is a rented facility, so please direct all inquiries to the<a
+          href="mailto:karate@seishinkan.ne.jp?subject=Misono Trial Class Application"
+          >office</a
+        >.
+      </p>
+
+      <p class="detail-page__note">
+        ※Please enter via the 2F entrance from the parking lot. If you're unsure, ask at the Co-op service counter.
+      </p>
+
+      <p class="detail-page__note">
+        ※Senior black-belt members join on an irregular basis.
+      </p>
+
 
       <p class="detail-page__note">
         <img
@@ -90,7 +106,7 @@ const entries = [
       </p>
 
       <p class="detail-page__back">
-        <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
+        <a href="/en/dojo/toyohira/">← Back to the list of Toyohira Ward karate dojos/classes</a>
       </p>
     </div>
   </section>

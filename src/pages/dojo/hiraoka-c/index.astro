@@ -42,15 +42,39 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※クラスにより、園児は親子参加でお願いします。<br>
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=平岡体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
 
-      <div class="detail-gallery">
+
+
+
+      <BranchInfoCard
+        name="清心会平岡支部"
+        facts={[
+          {
+            label: "設立",
+            value: ["平成22年(2010) 3月(木曜クラス)", "平成28年(2016) 9月(火曜クラス)"],
+          },
+          { label: "設立者", value: "大久保翼" },
+          { label: "歴代", value: "大久保翼、高嶋、滝上、島、前川" },
+          { label: "担当", value: "若林、瑠唯" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/hiraoka-c/img3.jpg",
+          alt: "クラブハウス・プラッツ",
+          width: 266,
+          height: 155,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/rui.jpg", alt: "指導 瑠唯", name: "瑠唯" },
+          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "指導 若林", name: "若林" },
+          { src: "/assets/images/instructors/sato2.jpg", alt: "指導 佐藤", name: "佐藤" },
+        ]}
+        address="札幌市清田区平岡5条1丁目1-40　クラブハウス・プラッツ"
+        mapHref="https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087955,141.4478467,18z/data=!3m1!4b1!4m6!3m5!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619!16s/g/12hpr3l9l?entry=ttu"
+        mapQuery="43.0087955,141.4478467"
+        viewOnMapLabel="Google Mapsで見る"
+      />
+
+            <div class="detail-gallery">
         <figure>
           <img
             src="/assets/images/legacy/dojo/hiraoka-c/Image1.jpg"
@@ -73,36 +97,18 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="清心会平岡支部"
-        facts={[
-          {
-            label: "設立",
-            value: ["平成22年(2010)3月(木曜クラス)", "平成28年(2016)9月(火曜クラス)"],
-          },
-          { label: "設立者", value: "大久保翼" },
-          { label: "歴代", value: "ダニエラ、沖村、島" },
-          { label: "担当", value: "若林、瑠唯、前川、他、不定期で一般部員有段者が参加します" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/hiraoka-c/img3.jpg",
-          alt: "クラブハウス・プラッツ",
-          width: 266,
-          height: 155,
-        }}
-        instructors={[
-          { src: "/assets/images/legacy/clubu/maekawa2.jpg", alt: "指導 前川", name: "前川" },
-          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "指導 若林", name: "若林" },
-          { src: "/assets/images/instructors/sato2.jpg", alt: "指導 佐藤", name: "佐藤" },
-          { src: "/assets/images/instructors/noro.jpg", alt: "指導 野呂", name: "野呂" },
-        ]}
-        address="札幌市清田区平岡5条1丁目1-40　クラブハウス・プラッツ"
-        mapHref="https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087955,141.4478467,18z/data=!3m1!4b1!4m6!3m5!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619!16s/g/12hpr3l9l?entry=ttu"
-        mapQuery="43.0087955,141.4478467"
-        viewOnMapLabel="Google Mapsで見る"
-      />
+      <p class="detail-page__note">
+        ※クラスにより、園児は親子参加でお願いします。
+      </p>
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=平岡体験申込"
+          >事務局</a
+        >までお願いします。
+      </p>
 
       <p class="detail-page__note">
+        ※交代で一般部員有段者が参加します
         <a href="mailto:karate@seishinkan.ne.jp?subject=平岡体験申込">
           <img
             src="/assets/images/legacy/dojo/hiraoka-c/img1A.jpg"
