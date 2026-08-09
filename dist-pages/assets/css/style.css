@@ -3131,6 +3131,21 @@ a.content-slider__slide:hover .content-slider__media img {
   color: var(--text-mid);
   margin-top: 8px;
 }
+.detail-page__highlight-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1rem;
+  text-align: center;
+}
+.detail-page__highlight-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--red);
+}
 
 .branch-card {
   margin: 32px 0 40px;
@@ -3142,7 +3157,7 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .branch-card__top {
   display: grid;
-  grid-template-columns: minmax(0, 320px) 1fr;
+  grid-template-columns: minmax(0, 500px) 1fr;
 }
 @media (max-width: 47.98rem) {
   .branch-card__top {
@@ -3201,7 +3216,7 @@ a.content-slider__slide:hover .content-slider__media img {
   }
 }
 .branch-card__fact dt {
-  flex: 0 0 7.5rem;
+  flex: 0 0 4.5rem;
   font-weight: 600;
   color: var(--red);
   letter-spacing: 0.02em;
