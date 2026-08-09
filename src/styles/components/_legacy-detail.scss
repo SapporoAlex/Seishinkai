@@ -181,10 +181,13 @@
     }
 
     dt {
-      flex: 0 0 4.5rem;
+      flex: 0 0 3.5rem;
       font-weight: 600;
       color: var(--red);
       letter-spacing: 0.02em;
+      @include mqsp {
+        flex: 0 0 1.5rem;
+      }
     }
 
     dd {
@@ -226,7 +229,7 @@
     gap: 20px;
     padding: 20px 32px;
     border-top: 1px solid var(--border);
-    background: var(--off-white);
+    background: var(--white);
 
     @include mqsp {
       padding: 16px 20px;
@@ -240,16 +243,23 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    width: 84px;
+    width: 120px;
+    @include mqsp {
+      width: 84px;
+    }
 
     img {
-      width: 72px;
-      height: 72px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #fff;
       box-shadow: 0 1px 4px rgba(13, 37, 69, 0.15);
       display: block;
+      @include mqsp {
+        width: 70px;
+        height: 70px;
+      }
     }
 
     figcaption {
@@ -383,7 +393,7 @@
 // Photo gallery grid with optional captions
 .detail-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 24px;
   margin: 32px 0;
 

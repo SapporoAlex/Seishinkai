@@ -7,15 +7,15 @@ const entries = [
   {
     marker: "★",
     name: "Sakaemachi Karate Club",
-    address: "San-ai Motors Building 3F Meeting Room, Kita 42-jo Higashi 19-chome, Higashi-ku, Sapporo",
-    schedule: ["Sunday 9:30-10:30", "Extended class 10:30-11:00"],
+    address: "Sanai Jidosha Building, 3F Meeting Room, Kita 42 Higashi 19-chome, Higashi-ku",
+    schedule: ["Sunday 9:30–10:30", "Extended class 10:30–11:00"],
   },
 ];
 ---
 
 <BaseLayout
-  title="Karate Classes at the Sakaemachi Branch, Higashi Ward"
-  description="Introducing the Sakaemachi Karate Club, a Seishinkai Karate dojo in Kita 42-jo, Higashi Ward, Sapporo. Training is held on Sundays at the San-ai Motors Building meeting room."
+  title="Karate Classes at the Higashi-ku Sakaemachi Branch"
+  description="An introduction to the Sakaemachi Karate Club, a Seishinkan Karate-do dojo located at Kita 42-jo in Higashi-ku, Sapporo. Sunday practice sessions are held in the meeting room of the Sanai Jidosha Building."
   lang="en"
   path="/en/dojo/sakaemachi/"
 >
@@ -23,61 +23,67 @@ const entries = [
     <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">DOJO</span>
-        <h1 class="section-title">Seishinkai Karate-do Federation — Sakaemachi Branch</h1>
+        <h1 class="section-title">Seishinkan Karate-do Federation – Sakaemachi Branch</h1>
       </div>
-
+      <h2 class="detail-page__heading">Higashi-ku Sakaemachi Karate Class – Seishinkan Sakaemachi Branch</h2>
       <p class="detail-page__lead">
-        [Sakaemachi Karate Class, Seishinkai Sakaemachi Branch, Higashi Ward]<br />
-        The Sakaemachi Karate Class started in September 2003 (Heisei 15), using a meeting room at San-ai Motors as its venue.<br />
-        It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
-        We especially welcome participation from parents and children together, and from the Senior Class.<br />
-        While many dojos feel like an extension of school sports clubs, we aim to make karate an enjoyable, club-like experience centered on health and fitness.
+        The Sakaemachi Karate Class started in September 2003, using a meeting room kindly
+        lent by Sanai Jidosha Kogyo. It is a karate club centered on kids' karate, junior
+        karate, and parent-and-child karate. We especially welcome participation from
+        parents and children together, as well as senior members. While many dojos feel
+        like an extension of a school sports club, we aim to make training feel more like
+        a relaxed circle activity — enjoying karate as a way to build health and fitness
+        while still learning its true spirit.
       </p>
-
-      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">
+          Seishinkan Karate: cultivating a spirit that never gives up and never breaks
+        </p>
+      </div>
+      <BranchTable entries={entries} />
 
       <BranchInfoCard
-        name="Higashi Ward — Sakaemachi Branch"
+        name="Higashi-ku Sakaemachi Branch"
         facts={[
-          { label: "Founded", value: "September 2003 (Heisei 15)" },
+          { label: "Founded", value: "September 2003" },
           { label: "Founders", value: "Kayoko Mimura, Kazuaki Namikawa" },
           { label: "Past Instructors", value: "Hashini" },
-          { label: "Person in Charge", value: "Namikawa" },
+          { label: "Contact", value: "Namikawa" },
         ]}
+        image={{
+          src: "/assets/images/legacy/dojo/sakaemachi/Image1.jpg",
+          alt: "Practice session at the Sakaemachi Branch",
+          width: 240,
+          height: 168,
+        }}
         instructors={[
-          { src: "/assets/images/instructors/namikawa.jpg", alt: "Shihan Namikawa", name: "Namikawa" },
-          { src: "/assets/images/instructors/masuda.jpg", alt: "Instructor Masuda", name: "Masuda" },
+          { src: "/assets/images/instructors/namikawa.jpg", alt: "Instructor Namikawa", name: "Namikawa" }
         ]}
-        address="San-ai Motors, Kita 42-jo Higashi 19-chome 1-1, Higashi-ku, Sapporo"
+        address="Sanai Jidosha, Kita 42 Higashi 19-chome 1-1, Higashi-ku, Sapporo"
         mapHref="http://yahoo.jp/JbqUqo"
-        mapQuery="San-ai Motors, Kita 42-jo Higashi 19-chome 1-1, Higashi-ku, Sapporo"
+        mapQuery="Sanai Jidosha, Kita 42 Higashi 19-chome 1-1, Higashi-ku, Sapporo"
+        viewOnMapLabel="View on Google Maps"
       />
 
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/sakaemachi/Image1.jpg"
-            alt="Practice session at the Sakaemachi Branch"
-            width="336"
-            height="189"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-
       <p class="detail-page__note">
-        ※Session 1, for beginners and elementary school students, runs 9:30-10:30; the Extended session, for intermediate level and above, runs Session 1 plus 10:30-11:00.<br />
-        The venue is provided through the kind courtesy of San-ai Motors. Please ask an instructor where to park, and please do not enter areas outside the meeting room.<br />
-        For inquiries, please contact the <a href="mailto:karate@seishinkan.ne.jp?subject=Sakaemachi Trial Application">office</a>.
+        *Part 1 (beginners / elementary school students): 9:30–10:30. Extended class
+        (intermediate level and above): Part 1 + 10:30–11:00.
+      </p>
+      <p class="detail-page__note">
+        *Preschool-age children must attend with a parent.
+      </p>
+      <p class="detail-page__note">
+        This venue is provided courtesy of Sanai Jidosha. Please ask an instructor
+        where to park, and please do not enter any areas other than the training
+        room.<br />
+        For inquiries, please contact the <a href="mailto:karate@seishinkan.ne.jp?subject=Sakaemachi Trial Class Inquiry">office</a>.
       </p>
 
       <div class="detail-media">
         <a href="https://www.san-ai-jikou.co.jp/" target="_blank" rel="noopener">
           <img
             src="/assets/images/legacy/dojo/sakaemachi/2.jpg"
-            alt="San-ai Motors Building"
+            alt="Sanai Jidosha Building"
             width="521"
             height="225"
             loading="lazy"
@@ -85,8 +91,20 @@ const entries = [
         </a>
       </div>
 
+      <div class="">
+        <figure>
+          <img
+            src="/assets/images/dojo/img_sanaijidosha.png"
+            alt="Sanai Jidosha logo"
+            width="322"
+            height="115"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__back">
-        <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
+        <a href="/en/dojo/higashi/">← Back to the list of Higashi-ku dojos and classes</a>
       </p>
     </div>
   </section>

@@ -8,7 +8,7 @@ const entries = [
     marker: "★",
     name: "栄町空手クラブ",
     address: "東区北42条東19丁目 三愛自動車ビル3F会議室",
-    schedule: ["日曜9:30-10:30", "延長クラス10:30-11:00"],
+    schedule: ["日曜　9:30-10:30", "延長ｸﾗｽ10:30-11:00"],
   },
 ];
 ---
@@ -25,28 +25,35 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">清心会空手道連盟・栄町支部</h1>
       </div>
-
+      <h2 class="detail-page__heading">東区栄町空手教室・清心会栄町支部</h2>
       <p class="detail-page__lead">
-        [東区栄町空手教室・清心会栄町支部]<br />
-        栄町空手教室は、平成15年9月に、三愛自動車工業の会議室をお借りしてスタートした支部です。<br />
-        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
-        特に親子での参加、シニアクラスの参加者を歓迎します。<br />
-        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+        栄町空手教室は、平成15年9月に、三愛自動車工業の会議室をお借りしてスタートした支部です。
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。
+        特に親子での参加、シニアクラスの参加者を歓迎します。
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指
+        しています。
       </p>
-
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
+      </div>
       <BranchTable entries={entries} />
 
       <BranchInfoCard
         name="東区栄町支部"
         facts={[
-          { label: "設立", value: "平成15年(2003)9月" },
+          { label: "設立", value: "平成15年(2003) 9月" },
           { label: "設立者", value: "三村佳代子、波川和明" },
           { label: "歴代", value: "ハシニ" },
           { label: "担当者", value: "波川" },
         ]}
+        image={{
+          src: "/assets/images/legacy/dojo/sakaemachi/Image1.jpg",
+          alt: "栄町支部の稽古風景",
+          width: 240,
+          height: 168,
+        }}
         instructors={[
-          { src: "/assets/images/instructors/namikawa.jpg", alt: "波川師範", name: "波川" },
-          { src: "/assets/images/instructors/masuda.jpg", alt: "指導 ますだ", name: "ますだ" },
+          { src: "/assets/images/instructors/namikawa.jpg", alt: "波川師範", name: "波川" }
         ]}
         address="札幌市東区北42条東19丁目1-1　三愛自動車"
         mapHref="http://yahoo.jp/JbqUqo"
@@ -54,20 +61,13 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/sakaemachi/Image1.jpg"
-            alt="栄町支部の稽古風景"
-            width="336"
-            height="189"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
+        ※一部/初級者・小学生は9:30-10:30、延長/中級者以上は一部+10:30-11:00。
+      </p>
       <p class="detail-page__note">
-        ※一部/初級者・小学生は9:30-10:30、延長/中級者以上は一部+10:30-11:00。<br />
+        ※園児は親子参加でお願いします
+      </p>
+      <p class="detail-page__note">
         会場は三愛自動車様のご厚意で提供していただいています。駐車の際は駐車位置を指導員にお聞き下さい。研修室以外へは立ち入らないようお願い致します。<br />
         お問い合わせは<a href="mailto:karate@seishinkan.ne.jp?subject=栄町体験申込">事務局</a
         >までお願いします。
@@ -83,6 +83,18 @@ const entries = [
             loading="lazy"
           />
         </a>
+      </div>
+
+            <div class="">
+        <figure>
+          <img
+            src="/assets/images/dojo/img_sanaijidosha.png"
+            alt="三愛自動車ロゴ"
+            width="322"
+            height="115"
+            loading="lazy"
+          />
+        </figure>
       </div>
 
       <p class="detail-page__back">

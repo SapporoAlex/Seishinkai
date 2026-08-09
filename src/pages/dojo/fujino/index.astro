@@ -26,43 +26,27 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">清心会空手道連盟・藤野支部</h1>
       </div>
-
+      <h2 class="detail-page__heading">南区藤野空手教室・清心会藤野支部</h2>
       <p class="detail-page__lead">
-        [南区藤野空手教室・清心会藤野支部]<br />
         藤野空手教室は、藤野地区センターをお借りして平成23年3月より活動しています。<br />
-        キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと思います。体験者募集中です!<br />
+        キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと思います。<span class="u-color-red u-bold">体験者募集中です!</span><br />
         また親子での参加、シニアクラスの参加者を歓迎します。<br />
         体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
       </p>
 
-      <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=藤野 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/fujino/acs1.jpg"
-            alt="藤野支部の稽古風景"
-            width="319"
-            height="205"
-            loading="lazy"
-          />
-        </figure>
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
       </div>
 
+      <BranchTable entries={entries} />
+
       <BranchInfoCard
-        name="清心会藤野支部/藤野空手倶楽部"
+        name="南区藤野支部/藤野空手倶楽部"
         facts={[
           { label: "設立", value: "平成23年(2011)3月" },
           { label: "設立者", value: "小谷野雄介" },
           { label: "歴代", value: "ハシニ、高嶋、兵頭" },
-          { label: "担当", value: "沖村(2022-)、他、不定期で一般部員有段者が参加します" },
+          { label: "担当", value: "沖村(2022-)" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/fujino/2.jpg",
@@ -78,6 +62,49 @@ const entries = [
         mapQuery="札幌市南区藤野2条7丁目2-1　藤野地区センター"
         viewOnMapLabel="Google Mapsで見る"
       />
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/dojo/img_fujino_01.jpg"
+            alt="藤野支部の稽古風景"
+            width="319"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_fujino_02.jpg"
+            alt="藤野支部の稽古風景"
+            width="319"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fujino/acs1.jpg"
+            alt="藤野支部の稽古風景"
+            width="319"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※不定期で一般部員有段者が参加します
+      </p>
+
+      <p class="detail-page__note">
+        ※会場は施設をお借りしていますので、お問い合わせは<a
+          href="mailto:karate@seishinkan.ne.jp?subject=藤野 体験・入会問い合わせ"
+          >事務局</a
+        >までお願いします。
+      </p>
 
       <p class="detail-page__note">
         <a href="mailto:karate@seishinkan.ne.jp?subject=藤野 体験・入会問い合わせ">

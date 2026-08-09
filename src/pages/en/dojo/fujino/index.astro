@@ -6,17 +6,17 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
 const entries = [
   {
     marker: "#",
-    name: "Minami-ku Fujino Karate Class (Seishinkai Fujino Branch)",
+    name: "Minami-ku Fujino Karate Class (Seishinkan Fujino Branch)",
     sub: "Fujino Karate Club",
-    address: "2-jo 7-chome 2-1 Fujino, Minami-ku, Sapporo, Fujino District Center",
-    schedule: ["Saturday 10:00-11:00 AM"],
+    address: "Fujino District Center, Fujino 2-jo 7-chome 2-1, Minami-ku, Sapporo",
+    schedule: ["Saturday 10:00–11:00"],
   },
 ];
 ---
 
 <BaseLayout
   title="Karate Classes at the Minami-ku Fujino Branch"
-  description="Introducing the Seishinkai karate class at the Fujino District Center in Minami-ku, Sapporo. Focused on kids and junior karate, with training days and venue information."
+  description="An introduction to the Seishinkan karate class at the Fujino District Center in Minami-ku, Sapporo. Centered on kids' and junior karate, with class days and venue information."
   lang="en"
   path="/en/dojo/fujino/"
 >
@@ -24,45 +24,37 @@ const entries = [
     <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">DOJO</span>
-        <h1 class="section-title">Seishinkai Karate Federation - Fujino Branch</h1>
+        <h1 class="section-title">Seishinkan Karate-do Federation – Fujino Branch</h1>
       </div>
-
+      <h2 class="detail-page__heading">Minami-ku Fujino Karate Class – Seishinkan Fujino Branch</h2>
       <p class="detail-page__lead">
-        [Minami-ku Fujino Karate Class - Seishinkai Fujino Branch]<br />
-        The Fujino Karate Class has been operating since March 2011 (Heisei 23), using the Fujino District Center as its venue.<br />
-        As a kids' and junior karate class, we would like to focus mainly on children from preschool age through junior high school. We are currently recruiting trial students!<br />
-        Participation by parents and children together, and by senior members, is also welcome.<br />
-        While many dojos feel like an extension of school sports clubs, we aim for members to practice and learn in a relaxed, club-like atmosphere as health-oriented, physical-education-style karate.
+        The Fujino Karate Class has been active since March 2011, using space kindly
+        lent by the Fujino District Center.<br />
+        We aim to focus on kids' and junior karate, welcoming participants from
+        preschool age through junior high school.
+        <span class="u-color-red u-bold">We are currently accepting trial participants!</span><br />
+        We also welcome participation from parents and children together, as well as
+        senior members.<br />
+        While many dojos feel like an extension of a school sports club, we aim to
+        make training feel more like a relaxed circle activity — enjoying karate as a
+        way to build health and fitness while still learning its true spirit.
       </p>
 
-      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Fujino Trial Lesson / Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/fujino/acs1.jpg"
-            alt="Fujino Branch practice session"
-            width="319"
-            height="205"
-            loading="lazy"
-          />
-        </figure>
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">
+          Seishinkan Karate: cultivating a spirit that never gives up and never breaks
+        </p>
       </div>
+
+      <BranchTable entries={entries} />
 
       <BranchInfoCard
-        name="Seishinkai Fujino Branch / Fujino Karate Club"
+        name="Minami-ku Fujino Branch / Fujino Karate Club"
         facts={[
-          { label: "Founded", value: "March 2011 (Heisei 23)" },
+          { label: "Founded", value: "March 2011" },
           { label: "Founder", value: "Yusuke Koyano" },
-          { label: "Past instructors", value: "Hashini, Takashima, Hyodo" },
-          { label: "Instructor", value: "Okimura (2022-), plus adult black belt members joining occasionally" },
+          { label: "Past Instructors", value: "Hashini, Takashima, Hyodo" },
+          { label: "Contact", value: "Okimura (2022–)" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/fujino/2.jpg",
@@ -73,16 +65,60 @@ const entries = [
         instructors={[
           { src: "/assets/images/instructors/okimura.jpg", alt: "Instructor Okimura", name: "Okimura" },
         ]}
-        address="2-jo 7-chome 2-1 Fujino, Minami-ku, Sapporo, Fujino District Center"
+        address="Fujino District Center, Fujino 2-jo 7-chome 2-1, Minami-ku, Sapporo"
         mapHref="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
-        mapQuery="2-jo 7-chome 2-1 Fujino, Minami-ku, Sapporo, Fujino District Center"
+        mapQuery="Fujino District Center, Fujino 2-jo 7-chome 2-1, Minami-ku, Sapporo"
+        viewOnMapLabel="View on Google Maps"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/dojo/img_fujino_01.jpg"
+            alt="Practice session at the Fujino Branch"
+            width="319"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_fujino_02.jpg"
+            alt="Practice session at the Fujino Branch"
+            width="319"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/fujino/acs1.jpg"
+            alt="Practice session at the Fujino Branch"
+            width="319"
+            height="205"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Fujino Trial Lesson / Enrollment Inquiry">
+        *Occasionally, black-belt members of the general adult class may join.
+      </p>
+
+      <p class="detail-page__note">
+        *As this venue is a rented facility, please direct inquiries to the
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Fujino Trial Class / Enrollment Inquiry"
+          >office</a
+        >.
+      </p>
+
+      <p class="detail-page__note">
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Fujino Trial Class / Enrollment Inquiry">
           <img
             src="/assets/images/legacy/images/Image2.jpg"
-            alt="Click here to apply for a trial lesson"
+            alt="Click here to apply for a trial class"
             width="645"
             height="260"
             loading="lazy"
@@ -91,7 +127,7 @@ const entries = [
       </p>
 
       <p class="detail-page__back">
-        <a href="/en/dojo/minami-kiyota/">← Back to the Kiyota Ward & Minami Ward Dojo & Class List</a>
+        <a href="/en/dojo/minami-kiyota/">← Back to the list of Kiyota-ku and Minami-ku dojos and classes</a>
       </p>
     </div>
   </section>
