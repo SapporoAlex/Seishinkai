@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,10 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・恵庭支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">恵庭市空手教室・清心会恵庭支部</h2>
+
       <p class="detail-page__lead">
-        [恵庭市空手教室・清心会恵庭支部]　島松空手/恵み野空手<br />
+        島松空手/恵み野空手<br />
         恵庭空手教室は、平成25年3月にスタートしました。<br />
         会場は、島松体育館です。<br />
         キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
@@ -37,13 +40,25 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=恵庭 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。<br />
-        島松体育館の他、コープ恵庭ミーティングルームで練習する場合もあります。
-      </p>
+      <BranchInfoCard
+        name="恵庭支部"
+        facts={[
+          { label: "設立", value: "平成25年(2013)3月" },
+          { label: "師範代", value: "髙嶋和也" },
+          { label: "指導員", value: "本部直轄" },
+          { label: "担当師範", value: "前川(複数名が交代で担当します)" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/eniwa/2.jpg",
+          alt: "島松体育館",
+          width: 254,
+          height: 160,
+        }}
+        address="恵庭市南島松389-3　島松体育館"
+        mapHref="https://www.google.com/maps/place/島松体育館/@42.917452,141.5843139,15z/data=!4m2!3m1!1s0x0:0x800612839adc2133?sa=X&ved=2ahUKEwito5C8wK_hAhXaM94KHU4BD9wQ_BIwCnoECA8QCA"
+        mapQuery="42.917452,141.5843139"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -66,46 +81,24 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="恵庭支部"
-        facts={[
-          { label: "設立", value: "平成25年(2013)3月" },
-          { label: "師範代", value: "髙嶋和也" },
-          { label: "指導員", value: "本部直轄" },
-          { label: "担当師範", value: "前川(複数名が交代で担当します)" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/eniwa/2.jpg",
-          alt: "島松体育館",
-          width: 254,
-          height: 160,
-        }}
-        address="恵庭市南島松389-3　島松体育館"
-        mapHref="https://www.google.com/maps/place/島松体育館/@42.917452,141.5843139,15z/data=!4m2!3m1!1s0x0:0x800612839adc2133?sa=X&ved=2ahUKEwito5C8wK_hAhXaM94KHU4BD9wQ_BIwCnoECA8QCA"
-        mapQuery="42.917452,141.5843139"
-        viewOnMapLabel="Google Mapsで見る"
-      />
+      <p class="detail-page__note">
+        ※<br />
+        島松体育館の他、コープ恵庭ミーティングルームで練習する場合もあります。
+      </p>
 
       <p class="detail-page__note">
         月会費3,800円<br />
         ※3歳時は月額無料
       </p>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=恵庭 体験・入会問い合わせ">
-          <img
-            src="/assets/images/legacy/images/Image2.jpg"
-            alt="体験・入会問い合わせはこちら"
-            width="645"
-            height="260"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/kitahiro/">← 帯広・恵庭・旭川の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="恵庭支部"
+        subject="恵庭 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

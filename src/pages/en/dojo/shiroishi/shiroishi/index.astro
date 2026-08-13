@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -95,14 +96,7 @@ const entries = [
       <BranchTable entries={entries} />
 
       <p class="detail-page__note">
-        * Classes are held using facilities at Shiroishi Welfare Hall.<br />
-        * As this venue is rented, please contact the
-        <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Shiroishi Welfare Hall Trial Lesson & Membership Inquiry"
-        >
-          Administration Office
-        </a>
-        for all inquiries.
+        * Classes are held using facilities at Shiroishi Welfare Hall.
       </p>
 
       <div class="dojo-list__map-embed">
@@ -155,6 +149,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to Shiroishi Ward Dojos</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Shiroishi Main Dojo"
+        subject="Shiroishi Welfare Hall Trial Lesson & Membership Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

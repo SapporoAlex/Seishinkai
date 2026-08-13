@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Kikusui-Motomachi Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kikusui-Motomachi Karate Class, Shiroishi Ward / Seishinkai Kikusui-Motomachi Branch</h2>
+
       <p class="detail-page__lead">
-        [Kikusui-Motomachi Karate Class, Shiroishi Ward / Seishinkai Kikusui-Motomachi Branch]<br />
         The Kikusui-Motomachi Karate Class began activities in April 2010 (Heisei 22) at the Kikusui-Motomachi Children's Center.<br />
         From April 2020 (Reiwa 2), the venue moved to the hall at the Kikusui-Motomachi Minami Community Hall, where members have been enjoying a good workout every Tuesday from 18:30.<br />
         Since its founding, it has run as a Junior Karate class, focused mainly on preschoolers through junior high school students.<br />
@@ -40,12 +42,23 @@ const entries = [
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
 
-      <p class="detail-page__note">
-        ※As the venue is a public facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Kikusui-Motomachi Trial Lesson & Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Seishinkai Kikusui-Motomachi Branch / Kikusui-Motomachi Karate Club"
+        facts={[
+          { label: "Founded", value: "April 2010 (Heisei 22)" },
+          { label: "Past instructors", value: "Tsubasa Okubo, Muroki" },
+          { label: "Instructor", value: "Masumi Yoshida, plus adult black belt members joining occasionally" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kikusui2/img2.jpg",
+          alt: "Kikusui-Motomachi Minami Community Hall",
+          width: 247,
+          height: 157,
+        }}
+        address="6-5 Kikusui-Motomachi 7-jo 2-chome, Shiroishi-ku, Sapporo, Kikusui-Motomachi Minami Community Hall"
+        mapHref="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
+        mapQuery="43.071849,141.410593"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -91,42 +104,15 @@ const entries = [
         <figcaption>Instructors</figcaption>
       </div>
 
-      <BranchInfoCard
-        name="Seishinkai Kikusui-Motomachi Branch / Kikusui-Motomachi Karate Club"
-        facts={[
-          { label: "Founded", value: "April 2010 (Heisei 22)" },
-          { label: "Past instructors", value: "Tsubasa Okubo, Muroki" },
-          { label: "Instructor", value: "Masumi Yoshida, plus adult black belt members joining occasionally" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kikusui2/img2.jpg",
-          alt: "Kikusui-Motomachi Minami Community Hall",
-          width: 247,
-          height: 157,
-        }}
-        address="6-5 Kikusui-Motomachi 7-jo 2-chome, Shiroishi-ku, Sapporo, Kikusui-Motomachi Minami Community Hall"
-        mapHref="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
-        mapQuery="43.071849,141.410593"
-      />
-
-
-      <p class="detail-page__note">
-        <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Kikusui-Motomachi Trial Lesson & Enrollment Inquiry"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kikusui2/img3.jpg"
-            alt="Apply for a trial lesson"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Kikusui-Motomachi Branch"
+        subject="Kikusui-Motomachi Trial Lesson & Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

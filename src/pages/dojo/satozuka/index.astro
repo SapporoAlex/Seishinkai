@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・里塚空手教室</h1>
       </div>
 
+      <h2 class="detail-page__heading">清田区里塚空手教室・清心会里塚支部</h2>
+
       <p class="detail-page__lead">
-        [清田区里塚空手教室・清心会里塚支部]<br />
         里塚空手教室は、平成11年2月に大豊湯里塚店2Fでスタートしました。<br />
         その後、里塚会館、里塚地区センターなどを経て現在の緑ヶ丘町内会館で活動しています。<br />
         キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
@@ -35,34 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=里塚体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/satozuka/Image1.jpg"
-            alt="里塚空手教室の稽古風景"
-            width="247"
-            height="149"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="里塚空手教室の稽古風景"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会里塚支部"
@@ -89,9 +63,35 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/satozuka/Image1.jpg"
+            alt="里塚空手教室の稽古風景"
+            width="247"
+            height="149"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="里塚空手教室の稽古風景"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__back">
         <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="里塚空手教室"
+        subject="里塚体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

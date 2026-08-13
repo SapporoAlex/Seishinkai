@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -28,8 +29,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Kawashimo Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kawashimo Karate Class, Shiroishi Ward / Seishinkai Kawashimo Branch</h2>
+
       <p class="detail-page__lead">
-        [Kawashimo Karate Class, Shiroishi Ward / Seishinkai Kawashimo Branch]<br />
         The Kawashimo Karate Class began activities in June 2011 (Heisei 23) at the Higashi-Kawashimo Community Hall.<br />
         From February 2021 (Reiwa 3), the venue moved to the circle room at the Coop Sapporo Kawashimo Store.<br />
         Since its founding, it has run as a Junior Karate / Parent-Child Karate class, and is active with a wide range of members from preschoolers to adults.<br />
@@ -41,25 +43,6 @@ const entries = [
         entries={entries}
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
-
-      <p class="detail-page__note">
-        ※As the venue is a public facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Kawashimo Trial Lesson Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/kawashimo/Image1.jpg"
-            alt="Kawashimo Branch practice session"
-            width="270"
-            height="115"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Kawashimo Branch / Kawashimo Karate Club"
@@ -82,6 +65,19 @@ const entries = [
         mapHref="https://www.google.com/maps/place/コープさっぽろ+川下店/@43.0492478,141.4447141,15z/data=!4m5!3m4!1s0x0:0x1c36db1f9721dd41!8m2!3d43.0492478!4d141.4447141"
         mapQuery="43.0492478,141.4447141"
       />
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kawashimo/Image1.jpg"
+            alt="Kawashimo Branch practice session"
+            width="270"
+            height="115"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <div class="detail-gallery">
         <figure>
           <a
@@ -125,21 +121,15 @@ const entries = [
         >
       </p>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Kawashimo Trial Lesson Application">
-          <img
-            src="/assets/images/legacy/dojo/kawashimo/img20.jpg"
-            alt="Apply for a trial lesson"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Kawashimo Branch"
+        subject="Kawashimo Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

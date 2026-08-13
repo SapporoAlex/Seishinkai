@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,10 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・旭川外国人限定空手クラブ</h1>
       </div>
 
+      <h2 class="detail-page__heading">旭川外国人限定空手教室・清心会旭川支部</h2>
+
       <p class="detail-page__lead">
-        [旭川外国人限定空手教室・清心会旭川支部]　準備中<br />
+        準備中<br />
         旭川在住の外国人限定の空手クラブを準備中です。<br />
         We are preparing a karate club for foreigners living in Asahikawa. If
         you are interested, please let me know.<br />
@@ -37,12 +40,13 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa karate"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="旭川外国人限定空手クラブ"
+        facts={[
+          { label: "設立者", value: "Inoue Shogo" },
+          { label: "facebook", value: "Inoue Shogo" },
+        ]}
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -67,29 +71,14 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="旭川外国人限定空手クラブ"
-        facts={[
-          { label: "設立者", value: "Inoue Shogo" },
-          { label: "facebook", value: "Inoue Shogo" },
-        ]}
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa karate">
-          <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="体験申込・お問い合わせはこちら"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/kitahiro/">← 帯広・恵庭・旭川の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="旭川外国人限定空手クラブ"
+        subject="Asahikawa karate"
+      />
     </div>
   </section>
 </BaseLayout>

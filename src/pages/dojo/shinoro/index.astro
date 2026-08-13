@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・篠路支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">北区篠路空手教室・清心会篠路支部</h2>
+
       <p class="detail-page__lead">
-        [北区篠路空手教室・清心会篠路支部]<br />
         篠路空手教室は、平成20年7月に篠路コミニティセンターをお借りしてスタートした支部です。<br />
         キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -36,26 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※木曜クラス15:50-16:50、土曜クラス13:30-14:30。<br />
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=篠路支部 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/shinoro/Image1.jpg"
-            alt="篠路支部の稽古風景"
-            width="353"
-            height="191"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="篠路支部"
@@ -80,9 +62,30 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/shinoro/Image1.jpg"
+            alt="篠路支部の稽古風景"
+            width="353"
+            height="191"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※木曜クラス15:50-16:50、土曜クラス13:30-14:30。
+      </p>
+
       <p class="detail-page__back">
         <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="篠路支部"
+        subject="篠路支部 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

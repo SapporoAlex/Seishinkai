@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Fukuzumi Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Toyohira Ward Fukuzumi Karate Club - Seishinkai Fukuzumi Branch</h2>
+
       <p class="detail-page__lead">
-        [Toyohira Ward Fukuzumi Karate Club - Seishinkai Fukuzumi Branch]<br />
         The Fukuzumi karate class got its start in September 2010 (Heisei 22), borrowing space at the Fukuzumi Children's Hall.<br />
         Since its founding, the class has centered on Junior Karate, with members ranging from preschoolers to junior high schoolers.<br />
         Participation by parents and children together, as well as senior class members, is also welcome.<br />
@@ -35,26 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Fukuzumi Trial Lesson Application"
-          >office</a
-        >.<br />
-        Temporary venue: Arcs Tsukisamu-higashi, 1-30 Tsukisamu-higashi 3-jo 8-chome
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/fukuzumi/acs1.jpg"
-            alt="Training session at the Fukuzumi Branch"
-            width="308"
-            height="189"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Fukuzumi Branch / Fukuzumi Karate Club"
@@ -78,21 +60,32 @@ const entries = [
         mapQuery="43.020565,141.402402"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Fukuzumi Trial Lesson Application">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/fukuzumi/img8.jpg"
-            alt="Apply for a trial lesson here"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/fukuzumi/acs1.jpg"
+            alt="Training session at the Fukuzumi Branch"
+            width="308"
+            height="189"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※<br />
+        Temporary venue: Arcs Tsukisamu-higashi, 1-30 Tsukisamu-higashi 3-jo 8-chome
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Fukuzumi Branch"
+        subject="Fukuzumi Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

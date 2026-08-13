@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・西岡支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">豊平区西岡空手教室・清心会西岡支部</h2>
+
       <p class="detail-page__lead">
-        [豊平区西岡空手教室・清心会西岡支部]<br />
         西岡空手教室は、西岡福住地区センターをお借りして平成22年9月より活動を始めました。<br />
         令和3年9月よりコープさっぽろ西岡店2Fのサークル室(又はスタジオ)に会場を移して活動を継続しています。<br />
         駐車場も広く利用できますし、お子様が練習中にお買い物ができるのでとても便利です。<br />
@@ -37,26 +39,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=西岡体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。<br />
-        臨時会場　西岡南町内会館　西岡4条14丁目12-10
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/nishioka/acs1.jpg"
-            alt="西岡支部の稽古風景"
-            width="301"
-            height="179"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会西岡支部"
@@ -80,21 +62,31 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=西岡体験・入会問い合わせ">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/nishioka/img2.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="260"
+            src="/assets/images/legacy/dojo/nishioka/acs1.jpg"
+            alt="西岡支部の稽古風景"
+            width="301"
+            height="179"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※<br />
+        臨時会場　西岡南町内会館　西岡4条14丁目12-10
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="西岡支部"
+        subject="西岡体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

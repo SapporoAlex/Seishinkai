@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -107,28 +108,15 @@ const entries = [
         *Occasionally, black-belt members of the general adult class may join.
       </p>
 
-      <p class="detail-page__note">
-        *As this venue is a rented facility, please direct inquiries to the
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Fujino Trial Class / Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Fujino Trial Class / Enrollment Inquiry">
-          <img
-            src="/assets/images/legacy/images/Image2.jpg"
-            alt="Click here to apply for a trial class"
-            width="645"
-            height="260"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/minami-kiyota/">← Back to the list of Kiyota-ku and Minami-ku dojos and classes</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Fujino Branch"
+        subject="Fujino Trial Class / Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

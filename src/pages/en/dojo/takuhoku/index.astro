@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Takuhoku Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kita Ward Takuhoku Karate Club - Seishinkai Takuhoku Branch</h2>
+
       <p class="detail-page__lead">
-        [Kita Ward Takuhoku Karate Club - Seishinkai Takuhoku Branch]<br />
         The Takuhoku karate class has been active since October 2011 (Heisei 23).<br />
         It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
         Participation by parents and children together, as well as senior class members, is especially welcome.<br />
@@ -35,26 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※Training was originally held on Wednesdays, but changed to Thursday 18:30 in February due to scheduling at Takuhoku Kaikan.<br />
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Takuhoku Branch Trial Lesson / Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/takuhoku/Image1.jpg"
-            alt="Training session at the Takuhoku Branch"
-            width="276"
-            height="150"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Takuhoku Branch"
@@ -77,21 +59,31 @@ const entries = [
         mapQuery="Takuhoku Palace Kaikan, 1-6 Takuhoku 3-jo 4-chome, Kita-ku, Sapporo"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Takuhoku Branch Trial Lesson / Enrollment Inquiry">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/takuhoku/imgC.jpg"
-            alt="Apply for a trial lesson here"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/takuhoku/Image1.jpg"
+            alt="Training session at the Takuhoku Branch"
+            width="276"
+            height="150"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※Training was originally held on Wednesdays, but changed to Thursday 18:30 in February due to scheduling at Takuhoku Kaikan.
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Takuhoku Branch"
+        subject="Takuhoku Branch Trial Lesson / Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

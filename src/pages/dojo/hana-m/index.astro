@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・花川支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">石狩市花川空手クラブ・清心会花川支部</h2>
+
       <p class="detail-page__lead">
-        [石狩市花川空手クラブ・清心会花川支部]<br />
         花川南空手教室は、平成26年6月に、花川南コミュニティセンターを会場にして設立されました。<br />
         ※令和3年7月より南コメセンがワクチン接種会場で使えない為、花川北コミュニティセンターへ会場を変更。<br />
         ジュニアクラス中心の空手クラブです。<br />
@@ -36,25 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=花川南体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/hana-m/Image1.jpg"
-            alt="花川支部の稽古風景"
-            width="271"
-            height="152"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="花川支部"
@@ -77,21 +60,26 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=花川南体験申込">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/hana-m/img10.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/hana-m/Image1.jpg"
+            alt="花川支部の稽古風景"
+            width="271"
+            height="152"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="花川支部"
+        subject="花川南体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

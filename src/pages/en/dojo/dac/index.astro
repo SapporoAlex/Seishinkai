@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -27,8 +28,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate-do Federation — DAC Motomachi Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">DAC Sports Karate Class, Higashi Ward, Seishinkai DAC Branch</h2>
+
       <p class="detail-page__lead">
-        [DAC Sports Karate Class, Higashi Ward, Seishinkai DAC Branch]<br />
         A Kids and Junior karate class held at DAC Sports Club.<br />
         Active since October 2008 (Heisei 20).<br />
         We are currently recruiting members for the Kids and Junior classes.<br />
@@ -36,35 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※The DAC Karate Club is operated by DAC Sports Club, so trial lessons are paid (please pay directly at the venue). This class is hosted by DAC Sports Club.<br />
-        For questions about the venue, please contact the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=DAC Trial Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/dac/Image1.jpg"
-            alt="Practice session at the DAC Motomachi Branch"
-            width="231"
-            height="134"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/dac/img2.jpg"
-            alt="DAC Sports Club"
-            width="117"
-            height="65"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Higashi Ward — DAC Branch"
@@ -87,9 +60,41 @@ const entries = [
         mapQuery="43.088374,141.373362"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/dac/Image1.jpg"
+            alt="Practice session at the DAC Motomachi Branch"
+            width="231"
+            height="134"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/dac/img2.jpg"
+            alt="DAC Sports Club"
+            width="117"
+            height="65"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※The DAC Karate Club is operated by DAC Sports Club, so trial lessons are paid (please pay directly at the venue). This class is hosted by DAC Sports Club.<br />
+        
+      </p>
+
       <p class="detail-page__back">
         <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="DAC Motomachi Branch"
+        subject="DAC Trial Application"
+      />
     </div>
   </section>
 </BaseLayout>

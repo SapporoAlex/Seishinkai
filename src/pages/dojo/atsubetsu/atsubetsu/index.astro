@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ClassScheduleCard from "@components/ClassScheduleCard.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const classes = [
   {
@@ -49,6 +50,7 @@ const classes = [
         </div>
 
         <h2 class="detail-page__heading">厚別空手倶楽部・清心会厚別支部</h2>
+
         <div class="detail-page__img-text-pair--reverse">
             <div class="detail-media--med">
                 <figure>
@@ -71,6 +73,7 @@ const classes = [
                 ※各クラス①は初級者対象時間となります<br>
             </p>
         </div>
+
         <div class="detail-page__highlight-box">
           <p class="detail-page__highlight-text">★★</p>
           <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
@@ -78,6 +81,7 @@ const classes = [
         </div>
 
         <h2 class="detail-page__heading">稽古風景</h2>
+
         <div class="detail-gallery">
             <figure>
                 <img
@@ -102,6 +106,7 @@ const classes = [
         </div>
 
         <h2 class="detail-page__heading">クラス案内</h2>
+
         <div class="class-schedule-grid">
           {
             classes.map((c) => (
@@ -131,29 +136,21 @@ const classes = [
 
         <p class="detail-page__note">
         ※クラスにより、園児は親子参加でお願いします。<br>
-        ※不定期で一般部員有段者が参加します。<br>
-        ※会場は公共施設を借りていますので、お問い合わせは事務局までお願いします。
+        ※不定期で一般部員有段者が参加します。
         </p>
+
         <p class="detail-page__note">
         厚別西地区センターが使えないとき、大麻清心館又は川下生協2F(サークル室)にて稽古する場合があります。
-        </p>
-
-
-        <p class="detail-page__note">
-            <a href="mailto:karate@seishinkan.ne.jp?subject=%E5%8E%9A%E5%88%A5%E4%BD%93%E9%A8%93%E3%83%BB%E5%85%A5%E4%BC%9A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
-                <img
-                src="/assets/images/dojo/img_atsubetsu_3.jpg"
-                alt="体験申込はこちら"
-                width="645"
-                height="293"
-                loading="lazy"
-                />
-            </a>
         </p>
 
       <p class="detail-page__back">
         <a href="/dojo/atsubetsu/">← 厚別区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="厚別支部"
+        subject="厚別体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

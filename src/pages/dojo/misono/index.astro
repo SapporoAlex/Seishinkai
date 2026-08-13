@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -25,7 +26,9 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">清心会空手道連盟・美園支部</h1>
       </div>
+
       <h2 class="detail-page__heading">豊平区美園空手倶楽部・美園支部</h2>
+
       <p class="detail-page__lead">
         現美園空手クラブは、豊平区民センターをお借りして平成21年4月より平岸支部として活動を開始、美園児童会館
         で美園支部が活動、令和3年3月より会場をコープ美園2Fサークル室に移転し、名称も美園空手クラブ(美園支部)と
@@ -77,20 +80,12 @@ const entries = [
       </div>
 
       <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=美園体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <p class="detail-page__note">
         ※2F駐車場からの入口からお入り下さい。分からない時は生協サービスカウンターでお聞き下さい。
       </p>
 
       <p class="detail-page__note">
         ※不定期で一般部員有段者が参加します。
       </p>
-
 
       <p class="detail-page__note">
         <img
@@ -105,6 +100,11 @@ const entries = [
       <p class="detail-page__back">
         <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="美園支部"
+        subject="美園体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

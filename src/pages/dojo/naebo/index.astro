@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・本町支部(旧苗穂支部)</h1>
       </div>
 
+      <h2 class="detail-page__heading">東区本町空手教室・清心会本町支部</h2>
+
       <p class="detail-page__lead">
-        [東区本町空手教室・清心会本町支部]<br />
         <strong>現在、休止中です。</strong><br />
         苗穂空手教室は、平成22年10月に、苗穂児童会館でスタートしましたが、令和5年より苗穂児童会館が本町小学校内に移転し「苗穂本町児童会館」となり本町空手教室として新スタートを致しました。<br />
         キッズ空手、ジュニア空手中心の空手クラブです。<br />
@@ -36,26 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※R6.5より一時休止。2010年より活動し2024年4月末で一旦、当会場での活動を休止しています。5名程度集まりましたら再開したいと思いますので希望者はお声かけ下さい。<br />
-        会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=苗穂 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/naebo/Image1.jpg"
-            alt="本町支部(旧苗穂支部)の稽古風景"
-            width="1022"
-            height="546"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="東区苗穂支部"
@@ -82,21 +64,31 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=苗穂 体験・入会問い合わせ">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/images/Image2.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="260"
+            src="/assets/images/legacy/dojo/naebo/Image1.jpg"
+            alt="本町支部(旧苗穂支部)の稽古風景"
+            width="1022"
+            height="546"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※R6.5より一時休止。2010年より活動し2024年4月末で一旦、当会場での活動を休止しています。5名程度集まりましたら再開したいと思いますので希望者はお声かけ下さい。<br />
+        
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="本町支部(旧苗穂支部)"
+        subject="苗穂 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

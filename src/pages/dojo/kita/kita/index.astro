@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・札幌北・ARCS北支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">アークス北空手教室・清心会ARCS北支部(札幌北)</h2>
+
       <p class="detail-page__lead">
-        [アークス北空手教室・清心会ARCS北支部(札幌北)]<br />
         ARCS北空手教室は、平成22年4月に、アークス北24条店のコミニティスペースをお借りしてスタートした支部です。<br
         />
         キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
@@ -38,36 +40,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=北 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/kita/Image1.jpg"
-            alt="木曜クラスの稽古風景"
-            width="374"
-            height="203"
-            loading="lazy"
-          />
-          <figcaption>木曜クラス</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/kita/Image2.jpg"
-            alt="土曜クラスの稽古風景"
-            width="341"
-            height="174"
-            loading="lazy"
-          />
-          <figcaption>土曜クラス</figcaption>
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会札幌北・ARCS北支部"
@@ -93,9 +65,37 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kita/Image1.jpg"
+            alt="木曜クラスの稽古風景"
+            width="374"
+            height="203"
+            loading="lazy"
+          />
+          <figcaption>木曜クラス</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kita/Image2.jpg"
+            alt="土曜クラスの稽古風景"
+            width="341"
+            height="174"
+            loading="lazy"
+          />
+          <figcaption>土曜クラス</figcaption>
+        </figure>
+      </div>
+
       <p class="detail-page__back">
         <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="札幌北・ARCS北支部"
+        subject="北 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

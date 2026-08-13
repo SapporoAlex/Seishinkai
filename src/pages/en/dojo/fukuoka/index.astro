@@ -26,8 +26,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Fukuoka Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Fukuoka Karate Class - Seishinkai Fukuoka Branch</h2>
+
       <p class="detail-page__lead">
-        [Fukuoka Karate Class - Seishinkai Fukuoka Branch]<br />
         The Fukuoka Karate Class started in April 2013 (Heisei 25), using the Sasaoka Community Hall as its venue.<br />
         We are grateful for everyone's cooperation over the years.<br />
         Activity concluded as of March 2021 (Reiwa 3).
@@ -35,10 +36,22 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
-      <p class="detail-page__note">
-        ※During the day we may be at work and unable to answer the phone. Please use Facebook Messenger or similar.<br />
-        ※This page carries information from the time activity concluded, migrated from the former site.
-      </p>
+      <BranchInfoCard
+        name="Seishinryu Fukuoka Branch"
+        facts={[
+          { label: "Founded", value: "April 2013 (Heisei 25)" },
+          { label: "Founder", value: "Atsushi Saegusa" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fukuoka/2.jpg",
+          alt: "Sasaoka Community Hall",
+          width: 250,
+          height: 126,
+        }}
+        address="Sasaoka Community Hall, Fukuoka City, Fukuoka Prefecture"
+        mapHref="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
+        mapQuery="33.567146,130.378501"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -101,29 +114,17 @@ const entries = [
       </div>
 
       <p class="detail-page__note">
+        ※During the day we may be at work and unable to answer the phone. Please use Facebook Messenger or similar.<br />
+        ※This page carries information from the time activity concluded, migrated from the former site.
+      </p>
+
+      <p class="detail-page__note">
         　　　　　(Employer: <a
           href="http://www.saegusayakuhin-q.co.jp/"
           target="_blank"
           rel="noopener">Saegusa Yakuhin Kyushu</a
         >)
       </p>
-
-      <BranchInfoCard
-        name="Seishinryu Fukuoka Branch"
-        facts={[
-          { label: "Founded", value: "April 2013 (Heisei 25)" },
-          { label: "Founder", value: "Atsushi Saegusa" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/fukuoka/2.jpg",
-          alt: "Sasaoka Community Hall",
-          width: 250,
-          height: 126,
-        }}
-        address="Sasaoka Community Hall, Fukuoka City, Fukuoka Prefecture"
-        mapHref="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
-        mapQuery="33.567146,130.378501"
-      />
 
       <p class="detail-page__back">
         <a href="/en/dojo/naichi/">← Back to the Shizuoka, Aichi & Chiba Dojo List</a>

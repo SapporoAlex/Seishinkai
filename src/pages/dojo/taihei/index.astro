@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・太平里支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">北区太平空手教室・清心会太平支部</h2>
+
       <p class="detail-page__lead">
-        [北区太平空手教室・清心会太平支部]<br />
         太平空手教室は、平成22年4月に太平児童会館で活動を開始しました。<br />
         現在はコロナ等の関係もあり、篠路コミニティセンターを会場としています。<br />
         キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
@@ -36,34 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=太平里支部 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/taihei/Image1.jpg"
-            alt="太平里支部の稽古風景"
-            width="423"
-            height="242"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/photo/Image2.jpg"
-            alt="清心会空手 稽古の様子"
-            width="570"
-            height="340"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会太平支部"
@@ -86,6 +60,27 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/taihei/Image1.jpg"
+            alt="太平里支部の稽古風景"
+            width="423"
+            height="242"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/photo/Image2.jpg"
+            alt="清心会空手 稽古の様子"
+            width="570"
+            height="340"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">
         ※発足当初の会場：<a
           href="https://www.google.com/maps/place/札幌市役所+子ども未来局子ども育成部太平児童会館/@43.132231,141.359608,15z/data=!4m2!3m1!1s0x0:0xad788ca95c088659?sa=X&ved=2ahUKEwifkp6E3rHhAhUSPnAKHbKXAtIQ_BIwCnoECAoQCA"
@@ -97,6 +92,11 @@ const entries = [
       <p class="detail-page__back">
         <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="太平里支部"
+        subject="太平里支部 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

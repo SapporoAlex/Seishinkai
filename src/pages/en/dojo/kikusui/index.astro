@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Kikusui Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kikusui Karate Class, Shiroishi Ward / Seishinkai Kikusui Branch</h2>
+
       <p class="detail-page__lead">
-        [Kikusui Karate Class, Shiroishi Ward / Seishinkai Kikusui Branch]<br />
         The Kikusui Karate Class began activities in March 2011 (Heisei 23), using the 2nd-floor community space at the Arcs Kikusui Store.<br />
         Since its founding, it has run as a Junior Karate class, focused mainly on preschoolers through junior high school students.<br />
         We also welcome parent-child participants and members of our Senior Class.<br />
@@ -39,12 +41,22 @@ const entries = [
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
 
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Kikusui Trial Lesson Application"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Seishinkai Kikusui Branch"
+        facts={[
+          { label: "Founded", value: "March 2011 (Heisei 23)" },
+          { label: "Instructors", value: "Shima, Oikawa, Rui, plus adult black belt members joining occasionally" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kikusui/acs1.jpg",
+          alt: "Arcs Kikusui Store",
+          width: 248,
+          height: 138,
+        }}
+        address="2-25 Kikusui 3-jo 5-chome, Shiroishi-ku, Sapporo, Arcs Kikusui Store"
+        mapHref="https://www.google.com/maps/place/〒003-0803+北海道札幌市白石区菊水３条５丁目２&#8722;２５+アークス/@43.0529182,141.3763685,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bd3eb0399f1:0xf3795c85cd820460!8m2!3d43.0529182!4d141.3785572"
+        mapQuery="43.0529182,141.3763685"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -68,6 +80,7 @@ const entries = [
       </div>
 
       <p class="detail-page__note">General members who take turns teaching</p>
+
       <div class="detail-media">
         <figure>
           <img
@@ -125,38 +138,15 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Seishinkai Kikusui Branch"
-        facts={[
-          { label: "Founded", value: "March 2011 (Heisei 23)" },
-          { label: "Instructors", value: "Shima, Oikawa, Rui, plus adult black belt members joining occasionally" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kikusui/acs1.jpg",
-          alt: "Arcs Kikusui Store",
-          width: 248,
-          height: 138,
-        }}
-        address="2-25 Kikusui 3-jo 5-chome, Shiroishi-ku, Sapporo, Arcs Kikusui Store"
-        mapHref="https://www.google.com/maps/place/〒003-0803+北海道札幌市白石区菊水３条５丁目２&#8722;２５+アークス/@43.0529182,141.3763685,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bd3eb0399f1:0xf3795c85cd820460!8m2!3d43.0529182!4d141.3785572"
-        mapQuery="43.0529182,141.3763685"
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Kikusui Trial Lesson Application">
-          <img
-            src="/assets/images/legacy/dojo/kikusui/img22.jpg"
-            alt="Apply for a trial lesson"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Kikusui Branch"
+        subject="Kikusui Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

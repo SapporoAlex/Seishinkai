@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -25,7 +26,9 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">清心会空手道連盟・平岡支部</h1>
       </div>
+
         <h2 class="detail-page__heading">清田区平岡空手倶楽部・清心会平岡支部</h2>
+
       <p class="detail-page__lead">
         木曜クラスは、平成22年3月に平岡児童会館で開始され、火曜クラスは平成28年9月に町内会の依頼で町内会館でスタートし、その後現在のクラブハウス・プラッツに会場を移しました。
         令和2年4月に2会場で行われていましたが隣接するのとコロナ騒動による児童館貸出停止を受け、同プラッツへ木曜クラスを移転し曜日別に活動しています。
@@ -41,10 +44,6 @@ const entries = [
         </div>
 
       <BranchTable entries={entries} />
-
-
-
-
 
       <BranchInfoCard
         name="清心会平岡支部"
@@ -100,12 +99,6 @@ const entries = [
       <p class="detail-page__note">
         ※クラスにより、園児は親子参加でお願いします。
       </p>
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=平岡体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
 
       <p class="detail-page__note">
         ※交代で一般部員有段者が参加します
@@ -123,6 +116,11 @@ const entries = [
       <p class="detail-page__back">
         <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="平岡支部"
+        subject="平岡体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

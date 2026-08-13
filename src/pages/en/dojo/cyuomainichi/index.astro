@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Chuo Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Chuo Ward Chuo Karate Class - Seishinkai Sapporo Chuo Branch</h2>
+
       <p class="detail-page__lead">
-        [Chuo Ward Chuo Karate Class - Seishinkai Sapporo Chuo Branch]<br />
         The Chuo karate class began in April 2002 (Heisei 14), centered on working adults, as the Yomiuri Culture Class in the basement of the Yomiuri Shimbun Sapporo Building.<br />
         In 2004 (Heisei 16), when the Yomiuri building was rebuilt, the class moved to the basement of the Mainichi Shimbun building; when fire-code regulations made that space unusable, it moved to the Minami 1-jo Building in 2009 (Heisei 21), where a Junior class was newly established while the General class continued at the same time at the Chuo Ward Community Center. In 2011 (Heisei 23) the two were consolidated and the class operated out of the Ward Community Center, before moving to its current location, Nijo Harunire Jido Kaikan, in 2018 (Heisei 30).<br />
         Participation by parents and children together, as well as senior class members, is especially welcome.<br />
@@ -36,12 +38,28 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Chuo Branch Trial Lesson Application"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Sapporo Chuo Branch"
+        facts={[
+          { label: "Founded", value: "April 2002 (Heisei 14)" },
+          { label: "Founder", value: "Katsumi Okubo" },
+          { label: "Former Instructors", value: "Muroki, Maekawa" },
+          { label: "Instructor", value: "Yoshihiko Oikawa" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/cyuomainichi/2.jpg",
+          alt: "Nijo Harunire Jido Kaikan",
+          width: 251,
+          height: 193,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/oikawa.jpg", alt: "Instructor Yoshihiko Oikawa", name: "Yoshihiko Oikawa" },
+        ]}
+        address="Minami 2-jo Nishi 15-chome, Chuo-ku, Sapporo, inside Nijo Elementary School (Nijo Harunire Jido Kaikan)"
+        addressNote="Located inside Nijo Elementary School."
+        mapHref="https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527"
+        mapQuery="43.0546877,141.3355023"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -56,6 +74,7 @@ const entries = [
       </div>
 
       <h2 class="detail-page__heading">History of the Chuo Branch</h2>
+
       <div class="detail-gallery">
         <figure>
           <img
@@ -89,44 +108,15 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Sapporo Chuo Branch"
-        facts={[
-          { label: "Founded", value: "April 2002 (Heisei 14)" },
-          { label: "Founder", value: "Katsumi Okubo" },
-          { label: "Former Instructors", value: "Muroki, Maekawa" },
-          { label: "Instructor", value: "Yoshihiko Oikawa" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/cyuomainichi/2.jpg",
-          alt: "Nijo Harunire Jido Kaikan",
-          width: 251,
-          height: 193,
-        }}
-        instructors={[
-          { src: "/assets/images/instructors/oikawa.jpg", alt: "Instructor Yoshihiko Oikawa", name: "Yoshihiko Oikawa" },
-        ]}
-        address="Minami 2-jo Nishi 15-chome, Chuo-ku, Sapporo, inside Nijo Elementary School (Nijo Harunire Jido Kaikan)"
-        addressNote="Located inside Nijo Elementary School."
-        mapHref="https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527"
-        mapQuery="43.0546877,141.3355023"
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Chuo Branch Trial Lesson Application">
-          <img
-            src="/assets/images/legacy/images/mail_banner.jpg"
-            alt="Apply for a trial lesson here"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/cyuo/">← Back to the Chuo Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Chuo Branch"
+        subject="Chuo Branch Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

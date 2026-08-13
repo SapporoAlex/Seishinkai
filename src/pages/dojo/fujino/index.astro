@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -99,28 +100,11 @@ const entries = [
         ※不定期で一般部員有段者が参加します
       </p>
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=藤野 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=藤野 体験・入会問い合わせ">
-          <img
-            src="/assets/images/legacy/images/Image2.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="260"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection dojoName="藤野支部" subject="藤野 体験・入会問い合わせ" />
     </div>
   </section>
 </BaseLayout>

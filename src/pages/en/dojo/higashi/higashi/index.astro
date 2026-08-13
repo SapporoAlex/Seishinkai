@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate-do Federation — Sapporo Higashi Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Sapporo Higashi Karate Class, Seishinkai Sapporo Higashi Branch</h2>
+
       <p class="detail-page__lead">
-        [Sapporo Higashi Karate Class, Seishinkai Sapporo Higashi Branch]<br />
         The Sapporo Higashi Karate Class began in May 2009 (Heisei 21) at the meeting room of the Sakae District Center, Higashi Ward.<br />
         It is a karate club centered on Kids Karate, the Junior Class, and Parent-Child Karate.<br />
         We especially welcome participation from parents and children together, and from the Senior Class.<br />
@@ -35,25 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※Since the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Sapporo Higashi Trial Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/higashi/Image1.jpg"
-            alt="Practice session at the Sapporo Higashi Branch"
-            width="295"
-            height="205"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Sapporo Higashi Branch"
@@ -77,25 +60,31 @@ const entries = [
         mapQuery="43.106046,141.358107"
       />
 
-      <p class="detail-page__note">
-        ※The Higashi Branch has many members, so Kids and Junior classes train in two sessions.
-      </p>
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Sapporo Higashi Trial Application">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/higashi/img14.jpg"
-            alt="Click here to apply for a trial lesson"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/higashi/Image1.jpg"
+            alt="Practice session at the Sapporo Higashi Branch"
+            width="295"
+            height="205"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※The Higashi Branch has many members, so Kids and Junior classes train in two sessions.
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Sapporo Higashi Branch"
+        subject="Sapporo Higashi Trial Application"
+      />
     </div>
   </section>
 </BaseLayout>

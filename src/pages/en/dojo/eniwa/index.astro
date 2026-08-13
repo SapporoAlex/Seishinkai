@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,10 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Eniwa Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Eniwa City Karate Class — Seishinkai Eniwa Branch</h2>
+
       <p class="detail-page__lead">
-        [Eniwa City Karate Class — Seishinkai Eniwa Branch] Shimamatsu Karate / Emino Karate<br />
+        Shimamatsu Karate / Emino Karate<br />
         The Eniwa karate class started in March 2013 (Heisei 25).<br />
         The venue is Shimamatsu Gymnasium.<br />
         The class focuses mainly on Kids and Junior classes. Parent-child participation and Senior Class members are also welcome.<br />
@@ -40,13 +43,24 @@ const entries = [
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
 
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Eniwa Trial Lesson & Membership Inquiry"
-          >office</a
-        >.<br />
-        In addition to Shimamatsu Gymnasium, practice sometimes takes place in the Co-op Eniwa meeting room.
-      </p>
+      <BranchInfoCard
+        name="Eniwa Branch"
+        facts={[
+          { label: "Founded", value: "March 2013 (Heisei 25)" },
+          { label: "Assistant Master (Shihandai)", value: "Kazuya Takashima" },
+          { label: "Instructor", value: "Directly overseen by Headquarters" },
+          { label: "Instructor in charge", value: "Maekawa (multiple instructors rotate in this role)" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/eniwa/2.jpg",
+          alt: "Shimamatsu Gymnasium",
+          width: 254,
+          height: 160,
+        }}
+        address="389-3 Minami-Shimamatsu, Eniwa City, Shimamatsu Gymnasium"
+        mapHref="https://www.google.com/maps/place/島松体育館/@42.917452,141.5843139,15z/data=!4m2!3m1!1s0x0:0x800612839adc2133?sa=X&ved=2ahUKEwito5C8wK_hAhXaM94KHU4BD9wQ_BIwCnoECA8QCA"
+        mapQuery="42.917452,141.5843139"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -69,45 +83,25 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Eniwa Branch"
-        facts={[
-          { label: "Founded", value: "March 2013 (Heisei 25)" },
-          { label: "Assistant Master (Shihandai)", value: "Kazuya Takashima" },
-          { label: "Instructor", value: "Directly overseen by Headquarters" },
-          { label: "Instructor in charge", value: "Maekawa (multiple instructors rotate in this role)" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/eniwa/2.jpg",
-          alt: "Shimamatsu Gymnasium",
-          width: 254,
-          height: 160,
-        }}
-        address="389-3 Minami-Shimamatsu, Eniwa City, Shimamatsu Gymnasium"
-        mapHref="https://www.google.com/maps/place/島松体育館/@42.917452,141.5843139,15z/data=!4m2!3m1!1s0x0:0x800612839adc2133?sa=X&ved=2ahUKEwito5C8wK_hAhXaM94KHU4BD9wQ_BIwCnoECA8QCA"
-        mapQuery="42.917452,141.5843139"
-      />
+      <p class="detail-page__note">
+        ※<br />
+        In addition to Shimamatsu Gymnasium, practice sometimes takes place in the Co-op Eniwa meeting room.
+      </p>
 
       <p class="detail-page__note">
         Monthly fee: ¥3,800<br />
         ※Free for 3-year-olds
       </p>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Eniwa Trial Lesson & Membership Inquiry">
-          <img
-            src="/assets/images/legacy/images/Image2.jpg"
-            alt="Apply for a trial lesson or membership"
-            width="645"
-            height="260"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/kitahiro/">← Back to the list of dojos & classes in Obihiro, Eniwa & Asahikawa</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Eniwa Branch"
+        subject="Eniwa Trial Lesson & Membership Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

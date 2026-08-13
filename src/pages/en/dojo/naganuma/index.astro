@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Naganuma Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Naganuma Karate Class / Seishinkai Naganuma Branch</h2>
+
       <p class="detail-page__lead">
-        [Naganuma Karate Class / Seishinkai Naganuma Branch]<br />
         The Naganuma Karate Class was started in August 2011 (Heisei 23) by a member living in Naganuma
         Town who had been commuting to the Kita-Hiroshima Branch, and who gathered fellow members to form
         the class.<br />
@@ -43,34 +45,6 @@ const entries = [
         entries={entries}
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Naganuma Trial Lesson Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/naganuma/Image1.jpg"
-            alt="Naganuma Branch practice session"
-            width="237"
-            height="124"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="Seishinkai Karate training session"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Naganuma Branch"
@@ -94,6 +68,27 @@ const entries = [
         mapQuery="43.007859,141.69233"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/naganuma/Image1.jpg"
+            alt="Naganuma Branch practice session"
+            width="237"
+            height="124"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="Seishinkai Karate training session"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">
         ※As this is a headquarters-run class, multiple instructors rotate in on a shared basis.
       </p>
@@ -101,6 +96,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/tobetsu/">← Back to the Dojo List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Naganuma Branch"
+        subject="Naganuma Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

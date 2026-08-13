@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・澄川西支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">澄川空手教室・清心会澄川支部</h2>
+
       <p class="detail-page__lead">
-        [澄川空手教室・清心会澄川支部]<br />
         澄川空手教室は、平成22年9月に、ビックハウスエクストラ店2Fのコミュニティースペースを会場にして設立されました。<br />
         ジュニアクラス中心の空手クラブです。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -36,27 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        本部直轄教室のため、稽古日は金曜18:30-19:25(基本・相対/少年部・一般部)、19:30-20:00(型、他/一般及び3級以上)です。<br
-        />
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=澄川体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/sumikawa-n/Image1.jpg"
-            alt="澄川支部の稽古風景"
-            width="286"
-            height="170"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会澄川西支部"
@@ -81,21 +62,30 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=澄川体験申込">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/sumikawa-n/img2.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/sumikawa-n/Image1.jpg"
+            alt="澄川支部の稽古風景"
+            width="286"
+            height="170"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        本部直轄教室のため、稽古日は金曜18:30-19:25(基本・相対/少年部・一般部)、19:30-20:00(型、他/一般及び3級以上)です。
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="澄川西支部"
+        subject="澄川体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

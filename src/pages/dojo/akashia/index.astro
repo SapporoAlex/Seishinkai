@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・アカシア支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">東区アカシア空手教室・清心会アカシア支部</h2>
+
       <p class="detail-page__lead">
-        [東区アカシア空手教室・清心会アカシア支部]<br />
         札幌東アカシア空手教室は、平成30年6月にアカシア若者活動者センターでスタートしました。<br />
         東区と北区の境である石狩街道に近く、両方の地域の方が来場しやすい場所にあります。<br />
         キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
@@ -35,25 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=アカシア体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/akashia/Image1.jpg"
-            alt="アカシア支部の稽古風景"
-            width="327"
-            height="207"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="東区アカシア支部"
@@ -82,6 +65,18 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/akashia/Image1.jpg"
+            alt="アカシア支部の稽古風景"
+            width="327"
+            height="207"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">
         <img
           src="/assets/images/legacy/images/Image1_akashia_wide.jpg"
@@ -95,6 +90,11 @@ const entries = [
       <p class="detail-page__back">
         <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="アカシア支部"
+        subject="アカシア体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

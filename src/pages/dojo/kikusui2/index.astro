@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・菊水元町支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">菊水元町空手教室・清心会菊水元町支部</h2>
+
       <p class="detail-page__lead">
-        [菊水元町空手教室・清心会菊水元町支部]<br />
         菊水元町空手教室は、平成22年4月より菊水元町児童会館で活動を始めました。<br />
         令和2年4月より菊水元町南町内会館ホールに会場を移転し、火曜18:30より楽しい汗を流しています。<br />
         設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
@@ -37,12 +39,24 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は公共施設を借りていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=菊水元町 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="清心会菊水元町支部/菊水元町空手倶楽部"
+        facts={[
+          { label: "設立", value: "平成22年(2010)4月" },
+          { label: "歴代", value: "大久保翼、室木" },
+          { label: "担当", value: "吉田真純、他、不定期で一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kikusui2/img2.jpg",
+          alt: "菊水元町南町内会館",
+          width: 247,
+          height: 157,
+        }}
+        address="札幌市白石区菊水元町7条2丁目6-5 菊水元町南町内会館"
+        mapHref="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
+        mapQuery="43.071849,141.410593"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -88,42 +102,14 @@ const entries = [
         <figcaption>指導員</figcaption>
       </div>
 
-      <BranchInfoCard
-        name="清心会菊水元町支部/菊水元町空手倶楽部"
-        facts={[
-          { label: "設立", value: "平成22年(2010)4月" },
-          { label: "歴代", value: "大久保翼、室木" },
-          { label: "担当", value: "吉田真純、他、不定期で一般部員有段者が参加します" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kikusui2/img2.jpg",
-          alt: "菊水元町南町内会館",
-          width: 247,
-          height: 157,
-        }}
-        address="札幌市白石区菊水元町7条2丁目6-5 菊水元町南町内会館"
-        mapHref="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
-        mapQuery="43.071849,141.410593"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
-      <p class="detail-page__note">
-        <a
-          href="mailto:karate@seishinkan.ne.jp?subject=菊水元町 体験・入会問い合わせ"
-        >
-          <img
-            src="/assets/images/legacy/dojo/kikusui2/img3.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="菊水元町支部"
+        subject="菊水元町 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,10 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Asahikawa Karate Club for Foreign Residents</h1>
       </div>
 
+      <h2 class="detail-page__heading">Asahikawa Karate Class for Foreign Residents — Seishinkai Asahikawa Branch</h2>
+
       <p class="detail-page__lead">
-        [Asahikawa Karate Class for Foreign Residents — Seishinkai Asahikawa Branch] In preparation<br />
+        In preparation<br />
         We are preparing a karate club exclusively for foreign residents living in Asahikawa.<br />
         If you are interested, please let us know.<br />
         It will start as soon as enough members have gathered.
@@ -38,12 +41,13 @@ const entries = [
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
 
-      <p class="detail-page__note">
-        ※As the venue will be a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa Karate Inquiry"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Asahikawa Karate Club for Foreign Residents"
+        facts={[
+          { label: "Founder", value: "Shogo Inoue" },
+          { label: "Facebook", value: "Shogo Inoue" },
+        ]}
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -68,29 +72,15 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Asahikawa Karate Club for Foreign Residents"
-        facts={[
-          { label: "Founder", value: "Shogo Inoue" },
-          { label: "Facebook", value: "Shogo Inoue" },
-        ]}
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Asahikawa Karate Inquiry">
-          <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="Apply for a trial lesson or inquire here"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/kitahiro/">← Back to the list of dojos & classes in Obihiro, Eniwa & Asahikawa</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Asahikawa Karate Club for Foreign Residents"
+        subject="Asahikawa Karate Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

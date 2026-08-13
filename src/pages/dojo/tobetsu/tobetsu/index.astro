@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・当別支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">当別町空手教室・清心会当別支部</h2>
+
       <p class="detail-page__lead">
-        [当別町空手教室・清心会当別支部]<br />
         当別空手教室は、平成20年(2008年)10月よりスタートしました。<br />
         会場は、当別町総合体育館です。<br />
         キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
@@ -37,30 +39,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=当別支部 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。<br />
-        当別町総合体育館が使用できないときは白樺コミュニティセンターで稽古する場合もあります。稽古予定は<a
-          href="https://karate14.dokkin.com/"
-          target="_blank"
-          rel="noopener">当別支部の稽古予定ページ</a
-        >でご確認下さい。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="清心会空手の稽古風景"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="当別支部(本部直轄)"
@@ -77,13 +55,17 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        ※代替会場：<a
-          href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"
-          target="_blank"
-          rel="noopener">当別町白樺2792-1　白樺コミュニティセンター</a
-        >
-      </p>
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="清心会空手の稽古風景"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
 
       <div class="detail-gallery">
         <figure>
@@ -97,9 +79,31 @@ const entries = [
         </figure>
       </div>
 
+      <p class="detail-page__note">
+        ※<br />
+        当別町総合体育館が使用できないときは白樺コミュニティセンターで稽古する場合もあります。稽古予定は<a
+          href="https://karate14.dokkin.com/"
+          target="_blank"
+          rel="noopener">当別支部の稽古予定ページ</a
+        >でご確認下さい。
+      </p>
+
+      <p class="detail-page__note">
+        ※代替会場：<a
+          href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"
+          target="_blank"
+          rel="noopener">当別町白樺2792-1　白樺コミュニティセンター</a
+        >
+      </p>
+
       <p class="detail-page__back">
         <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="当別支部"
+        subject="当別支部 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Heiwadori Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Heiwadori Karate Class, Shiroishi Ward / Seishinkai Heiwadori Branch</h2>
+
       <p class="detail-page__lead">
-        [Heiwadori Karate Class, Shiroishi Ward / Seishinkai Heiwadori Branch]<br />
         The Heiwadori Karate Class began activities in March 2010 (Heisei 22), using the 2nd-floor community space at the Big House Heiwadori store.<br />
         Since its founding, it has run as a Junior Karate class, focused mainly on preschoolers through junior high school students.<br />
         Because it's inside the Big House store, parents can go shopping while their children practice, which is very convenient.<br />
@@ -40,25 +42,6 @@ const entries = [
         entries={entries}
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Heiwadori Trial Lesson Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/heiwa/Image2.jpg"
-            alt="Heiwadori Branch practice session"
-            width="335"
-            height="203"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Heiwadori Branch / Heiwadori Karate Club"
@@ -79,7 +62,20 @@ const entries = [
         mapQuery="43.0514733,141.4108608"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/heiwa/Image2.jpg"
+            alt="Heiwadori Branch practice session"
+            width="335"
+            height="203"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">We also drop by from time to time</p>
+
       <div class="detail-media">
         <figure>
           <img
@@ -103,21 +99,15 @@ const entries = [
         </figure>
       </div>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Heiwadori Trial Lesson Application">
-          <img
-            src="/assets/images/legacy/dojo/heiwa/img12.jpg"
-            alt="Apply for a trial lesson"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Heiwadori Branch"
+        subject="Heiwadori Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

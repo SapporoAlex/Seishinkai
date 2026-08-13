@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・北郷支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">白石区北白石空手教室・清心会北白石・北郷支部</h2>
+
       <p class="detail-page__lead">
-        [白石区北白石空手教室・清心会北白石・北郷支部]<br />
         北白石空手教室は、平成10年6月に北郷支部として北郷会館でスタートしました。<br />
         その後、現在の北白石地区センターに会場を移転して活動を継続しています。<br />
         設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
@@ -37,12 +39,25 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=北郷体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="清心会北郷支部"
+        facts={[
+          { label: "設立", value: "平成10年(1998)6月" },
+          { label: "設立者", value: "大久保勝美" },
+          { label: "歴代", value: "犬浦壽信、波川、佐藤ありさ" },
+          { label: "担当", value: "波川、高嶋、他、不定期に一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kitashiroishi/2.jpg",
+          alt: "北白石地区センター",
+          width: 247,
+          height: 130,
+        }}
+        address="札幌市白石区北郷3条7丁目9-20 北白石地区センター"
+        mapHref="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
+        mapQuery="43.053449,141.424351"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -65,41 +80,14 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="清心会北郷支部"
-        facts={[
-          { label: "設立", value: "平成10年(1998)6月" },
-          { label: "設立者", value: "大久保勝美" },
-          { label: "歴代", value: "犬浦壽信、波川、佐藤ありさ" },
-          { label: "担当", value: "波川、高嶋、他、不定期に一般部員有段者が参加します" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kitashiroishi/2.jpg",
-          alt: "北白石地区センター",
-          width: 247,
-          height: 130,
-        }}
-        address="札幌市白石区北郷3条7丁目9-20 北白石地区センター"
-        mapHref="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
-        mapQuery="43.053449,141.424351"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=北郷体験・入会問い合わせ">
-          <img
-            src="/assets/images/legacy/dojo/kitashiroishi/img4.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="北郷支部"
+        subject="北郷体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

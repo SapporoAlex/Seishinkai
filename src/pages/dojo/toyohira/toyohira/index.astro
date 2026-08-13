@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,20 +27,14 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・豊平支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">豊平区豊平空手教室・清心会豊平支部</h2>
+
       <p class="detail-page__lead">
-        [豊平区豊平空手教室・清心会豊平支部]<br />
         豊平支部は、豊平児童会館をお借りして活動している本部直轄の教室です。<br />
         一般部会員の指導員が交代で参加し、指導にあたります。
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=豊平体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
 
       <BranchInfoCard
         name="清心会豊平支部"
@@ -58,6 +53,11 @@ const entries = [
       <p class="detail-page__back">
         <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="豊平支部"
+        subject="豊平体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

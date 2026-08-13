@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Sumikawa-Nishi Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Sumikawa Karate Club - Seishinkai Sumikawa Branch</h2>
+
       <p class="detail-page__lead">
-        [Sumikawa Karate Club - Seishinkai Sumikawa Branch]<br />
         The Sumikawa karate class was founded in September 2010 (Heisei 22), at the community space on the 2nd floor of Big House Extra Store.<br />
         It is a junior-centered karate club.<br />
         Participation by parents and children together, as well as senior class members, is especially welcome.<br />
@@ -36,26 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        As this is a headquarters-run class, training is held on Fridays from 18:30–19:25 (basics & pair drills / Youth & General Divisions) and 19:30–20:00 (kata and other training / General Division and 3rd kyu and above).<br />
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Sumikawa Trial Lesson Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/sumikawa-n/Image1.jpg"
-            alt="Training session at the Sumikawa Branch"
-            width="286"
-            height="170"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Sumikawa-Nishi Branch"
@@ -79,21 +61,31 @@ const entries = [
         mapQuery="43.0147543,141.3584402"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Sumikawa Trial Lesson Application">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/sumikawa-n/img2.jpg"
-            alt="Apply for a trial lesson here"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/sumikawa-n/Image1.jpg"
+            alt="Training session at the Sumikawa Branch"
+            width="286"
+            height="170"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        As this is a headquarters-run class, training is held on Fridays from 18:30–19:25 (basics & pair drills / Youth & General Divisions) and 19:30–20:00 (kata and other training / General Division and 3rd kyu and above).
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Sumikawa-Nishi Branch"
+        subject="Sumikawa Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,10 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Sapporo Kita / ARCS Kita Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">ARCS Kita Karate Club - Seishinkai ARCS Kita Branch (Sapporo Kita)</h2>
+
       <p class="detail-page__lead">
-        [ARCS Kita Karate Club - Seishinkai ARCS Kita Branch (Sapporo Kita)]<br
+        <br
         />
         The ARCS Kita karate class got its start in April 2010 (Heisei 22), borrowing community space at the ARCS Kita 24-jo Store.<br
         />
@@ -42,36 +45,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Kita Branch Trial Lesson / Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/kita/Image1.jpg"
-            alt="Thursday class training session"
-            width="374"
-            height="203"
-            loading="lazy"
-          />
-          <figcaption>Thursday class</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/kita/Image2.jpg"
-            alt="Saturday class training session"
-            width="341"
-            height="174"
-            loading="lazy"
-          />
-          <figcaption>Saturday class</figcaption>
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Sapporo Kita / ARCS Kita Branch"
@@ -96,9 +69,38 @@ const entries = [
         mapQuery="札幌市北区北24条西9丁目1-1 アークス北24条店"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kita/Image1.jpg"
+            alt="Thursday class training session"
+            width="374"
+            height="203"
+            loading="lazy"
+          />
+          <figcaption>Thursday class</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kita/Image2.jpg"
+            alt="Saturday class training session"
+            width="341"
+            height="174"
+            loading="lazy"
+          />
+          <figcaption>Saturday class</figcaption>
+        </figure>
+      </div>
+
       <p class="detail-page__back">
         <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Sapporo Kita / ARCS Kita Branch"
+        subject="Kita Branch Trial Lesson / Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

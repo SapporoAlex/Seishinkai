@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -27,8 +28,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Tokiwa Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Minami-ku Tokiwa Karate Class - Seishinkai Tokiwa Branch</h2>
+
       <p class="detail-page__lead">
-        [Minami-ku Tokiwa Karate Class - Seishinkai Tokiwa Branch]<br />
         The Tokiwa Karate Class started in September 2012 (Heisei 24). It began at the neighborhood hall, later moved to the Tokiwa Children's Hall, and has since returned to holding activities at the Tokiwa Danchi Hall (from April 2020, Reiwa 2).<br />
         As a kids' and junior karate class, we would like to focus mainly on children from preschool age through junior high school. We are currently recruiting trial students!<br />
         Participation by parents and children together, and by senior members, is also welcome.<br />
@@ -36,30 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Tokiwa Branch Trial Lesson / Enrollment Inquiry"
-          >office</a
-        >.<br />
-        ※Due to the impact of COVID-19, the venue was temporarily moved to the following location: 1-jo 1-chome 3-1 Tokiwa, Minami-ku <a
-          href="https://www.google.com/maps/place/〒005-0851+北海道札幌市南区常盤１条１丁目３−１+常盤団地会館/@42.955108,141.344939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f752b30e3655f31:0x43a4187663d955fc!8m2!3d42.9551041!4d141.3471277"
-          target="_blank"
-          rel="noopener">Tokiwa Danchi Hall</a
-        >
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/tokiwa/acs1.jpg"
-            alt="Tokiwa Branch practice session"
-            width="316"
-            height="194"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Tokiwa Branch / Tokiwa Karate Club"
@@ -83,21 +61,36 @@ const entries = [
         mapQuery="42.948119,141.347944"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Tokiwa Branch Trial Lesson / Enrollment Inquiry">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/tokiwa/img8.jpg"
-            alt="Click here to apply for a trial lesson"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/tokiwa/acs1.jpg"
+            alt="Tokiwa Branch practice session"
+            width="316"
+            height="194"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※<br />
+        ※Due to the impact of COVID-19, the venue was temporarily moved to the following location: 1-jo 1-chome 3-1 Tokiwa, Minami-ku <a
+          href="https://www.google.com/maps/place/〒005-0851+北海道札幌市南区常盤１条１丁目３−１+常盤団地会館/@42.955108,141.344939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f752b30e3655f31:0x43a4187663d955fc!8m2!3d42.9551041!4d141.3471277"
+          target="_blank"
+          rel="noopener">Tokiwa Danchi Hall</a
+        >
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/minami-kiyota/">← Back to the Kiyota Ward & Minami Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Tokiwa Branch"
+        subject="Tokiwa Branch Trial Lesson / Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

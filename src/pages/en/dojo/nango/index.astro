@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Nango Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Nango LUCY Karate Class, Shiroishi Ward / Seishinkai Nango Branch</h2>
+
       <p class="detail-page__lead">
-        [Nango LUCY Karate Class, Shiroishi Ward / Seishinkai Nango Branch]<br />
         The Nango LUCY Karate Class held trial sessions starting in June 2018 (Heisei 30), and began full-scale activities in July of the same year.<br />
         The Nango Branch is a Junior Karate / Parent-Child Karate class held inside the Coop Sapporo "Lucy Cultural School."<br />
         Because it's inside Coop Sapporo, parents can shop while their children practice, which is very convenient.<br />
@@ -38,22 +40,6 @@ const entries = [
         entries={entries}
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
-
-      <p class="detail-page__note">
-        ● As this is an instructor-dispatch class, please direct inquiries to the Lucy Cultural School (TEL 011-851-8760 / FAX 011-851-8765) or the Seishinkai office (TEL 011-300-0048).
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/nango/Image1.jpg"
-            alt="Nango Branch practice session"
-            width="282"
-            height="180"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Lucy Nango Branch"
@@ -74,6 +60,18 @@ const entries = [
         mapQuery="43.028082,141.434141"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/nango/Image1.jpg"
+            alt="Nango Branch practice session"
+            width="282"
+            height="180"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">
         For details and to register for the class, please see the <a
           href="https://life-culture.sapporo.coop/culture/course/detail.html/?course_id=795"
@@ -85,6 +83,17 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Nango Branch"
+        subject="Nango Branch Trial & Enrollment Inquiry"
+        directPhone={{
+          number: "011-851-8760",
+          tel: "0118518760",
+          note: "Coop Sapporo Lucy Cultural School (instructor-dispatch class) / FAX 011-851-8765",
+        }}
+      />
     </div>
   </section>
 </BaseLayout>

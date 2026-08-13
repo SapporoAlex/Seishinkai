@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・野幌支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">江別市野幌空手教室・清心会野幌支部</h2>
+
       <p class="detail-page__lead">
-        [江別市野幌空手教室・清心会野幌支部]<br />
         野幌空手教室は、平成19年10月に、江別市三番通りに杜の台記念会館でスタートしました。<br />
         ジュニアクラス中心の空手クラブです。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -35,25 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=野幌体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/nop/Image1.jpg"
-            alt="野幌支部の稽古風景"
-            width="243"
-            height="122"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="江別市野幌支部"
@@ -79,21 +62,26 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=野幌体験申込">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/nop/img3.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/nop/Image1.jpg"
+            alt="野幌支部の稽古風景"
+            width="243"
+            height="122"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="野幌支部"
+        subject="野幌体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

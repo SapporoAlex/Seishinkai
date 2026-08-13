@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・拓北支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">北区拓北空手教室・清心会拓北支部</h2>
+
       <p class="detail-page__lead">
-        [北区拓北空手教室・清心会拓北支部]<br />
         拓北空手教室は、平成23年10月より活動しています。<br />
         キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -35,26 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※練習日はもともと水曜日でしたが、2月より拓北会館の都合により木曜18:30へ変更となりました。<br />
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=拓北支部 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/takuhoku/Image1.jpg"
-            alt="拓北支部の稽古風景"
-            width="276"
-            height="150"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会拓北支部"
@@ -78,21 +60,30 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=拓北支部 体験・入会問い合わせ">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/takuhoku/imgC.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/takuhoku/Image1.jpg"
+            alt="拓北支部の稽古風景"
+            width="276"
+            height="150"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※練習日はもともと水曜日でしたが、2月より拓北会館の都合により木曜18:30へ変更となりました。
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="拓北支部"
+        subject="拓北支部 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

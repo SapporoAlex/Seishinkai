@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・平岡支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">清田区平岡空手教室・清心会平岡支部</h2>
+
       <p class="detail-page__lead">
-        [清田区平岡空手教室・清心会平岡支部]<br />
         木曜クラスは、平成22年3月に平岡児童会館で開始され、火曜クラスは平成28年9月に町内会の依頼で町内会館でスタートし、その後現在のクラブハウス・プラッツに会場を移しました。<br />
         令和2年4月に2会場で行われていましたが隣接するのとコロナ騒動による児童館貸出停止を受け、同プラッツへ木曜クラスを移転し曜日別に活動しています。<br />
         いずれの曜日もジュニアクラス中心ですが、火曜は時間帯も早めにして園児、低学年が参加しやすいようにしています。<br />
@@ -36,40 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=平岡体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/hiraoka/Image1.jpg"
-            alt="平岡支部・火曜クラスの稽古風景"
-            width="247"
-            height="149"
-            loading="lazy"
-          />
-          <figcaption>火曜クラスの稽古風景</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/hiraoka/1.jpg"
-            alt="平岡支部・木曜クラスの稽古風景"
-            width="245"
-            height="134"
-            loading="lazy"
-          />
-          <figcaption>木曜クラスの稽古風景</figcaption>
-        </figure>
-      </div>
-
-      <p class="detail-page__note">
-        ■本部直轄/交代で指導となります
-      </p>
 
       <BranchInfoCard
         name="清田区平岡支部"
@@ -100,21 +68,41 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=平岡体験申込">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/hiraoka/img1A.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/hiraoka/Image1.jpg"
+            alt="平岡支部・火曜クラスの稽古風景"
+            width="247"
+            height="149"
             loading="lazy"
           />
-        </a>
+          <figcaption>火曜クラスの稽古風景</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/hiraoka/1.jpg"
+            alt="平岡支部・木曜クラスの稽古風景"
+            width="245"
+            height="134"
+            loading="lazy"
+          />
+          <figcaption>木曜クラスの稽古風景</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ■本部直轄/交代で指導となります
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="平岡支部"
+        subject="平岡体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

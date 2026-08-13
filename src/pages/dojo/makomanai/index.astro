@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,7 +27,9 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">清心会空手道連盟・真駒内支部</h1>
       </div>
+
       <h2 class="detail-page__heading">南区真駒内空手教室・清心会真駒内支部</h2>
+
       <p class="detail-page__lead">
       真駒内空手教室は平成19年に真駒内五輪児童会館でスタートしましたが、
       平成29年に所属員が減り藻岩、常盤支部と統合しましたが、令和元年9月
@@ -36,6 +39,7 @@ const entries = [
       キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと
       思います。<span class="u-color-red u-bold">体験者募集中です!</span>
       </p>
+
       <p class="detail-page__lead">
       また親子での参加が他教室支部より多いかと思います。
       体育会系部活の延長線上のような道場が多い中、健康・体育の空手として
@@ -86,28 +90,14 @@ const entries = [
       ※不定期で一般部員有段者が参加します
       </p>
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=真駒内体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=真駒内体験申込">
-          <img
-            src="/assets/images/legacy/dojo/makomanai/img9.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="真駒内支部"
+        subject="真駒内体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

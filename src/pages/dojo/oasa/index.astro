@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -33,8 +34,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・江別大麻支部「清心館大麻」</h1>
       </div>
 
+      <h2 class="detail-page__heading">清心館大麻空手教室・清心会大麻支部</h2>
+
       <p class="detail-page__lead">
-        [清心館大麻空手教室・清心会大麻支部]<br />
         清心館大麻空手教室は、平成20年4月に、江別市大麻二番通りに面したパークヒルズ1Fに開設した常設道場です。<br />
         ジュニアクラス中心にスタートし、現在は週2回ですが現在、新規曜日でも開設準備中です。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -43,20 +45,34 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ●月曜クラス16:00-17:00(園児〜小学生)<br />
-        ●金曜クラス16:00-17:00(園児〜小学生)<br />
-        ●木曜クラス18:30-19:30(小学生〜大人)<br />
-        ★金曜クラス夜の部　特別限定クラス/完全予約制　18:45-20:00<br />
-        ★土曜クラス　10:00-11:00
-      </p>
+      <BranchInfoCard
+        name="江別市大麻支部/大麻空手倶楽部"
+        facts={[
+          { label: "設立", value: "平成20年(2008)4月" },
+          { label: "担当者", value: "波川、斎藤、島、増田、前川、野呂" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/oasa/2.jpg",
+          alt: "清心館大麻空手道場",
+          width: 342,
+          height: 273,
+        }}
+        address="江別市大麻沢町6　パークヒルズ1F 清心館大麻空手道場"
+        addressNote="二番通に面しています。大麻西公園となり。"
+        mapHref="https://www.google.com/maps/dir/43.0720251,141.4873424/43.071927,141.48733/@43.071403,141.4865876,18.5z"
+        mapQuery="43.071403,141.4865876"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=大麻体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/base/iqi.jpg"
+          alt="パークヒルズ 外観"
+          width="633"
+          height="149"
+          loading="lazy"
+        />
+      </div>
 
       <div class="detail-gallery">
         <figure>
@@ -97,37 +113,22 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="江別市大麻支部/大麻空手倶楽部"
-        facts={[
-          { label: "設立", value: "平成20年(2008)4月" },
-          { label: "担当者", value: "波川、斎藤、島、増田、前川、野呂" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/oasa/2.jpg",
-          alt: "清心館大麻空手道場",
-          width: 342,
-          height: 273,
-        }}
-        address="江別市大麻沢町6　パークヒルズ1F 清心館大麻空手道場"
-        addressNote="二番通に面しています。大麻西公園となり。"
-        mapHref="https://www.google.com/maps/dir/43.0720251,141.4873424/43.071927,141.48733/@43.071403,141.4865876,18.5z"
-        mapQuery="43.071403,141.4865876"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/base/iqi.jpg"
-          alt="パークヒルズ 外観"
-          width="633"
-          height="149"
-          loading="lazy"
-        />
-      </div>
+      <p class="detail-page__note">
+        ●月曜クラス16:00-17:00(園児〜小学生)<br />
+        ●金曜クラス16:00-17:00(園児〜小学生)<br />
+        ●木曜クラス18:30-19:30(小学生〜大人)<br />
+        ★金曜クラス夜の部　特別限定クラス/完全予約制　18:45-20:00<br />
+        ★土曜クラス　10:00-11:00
+      </p>
 
       <p class="detail-page__back">
         <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="江別大麻支部"
+        subject="大麻体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

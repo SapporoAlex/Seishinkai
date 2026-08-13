@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・菊水支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">菊水空手教室・清心会菊水支部</h2>
+
       <p class="detail-page__lead">
-        [菊水空手教室・清心会菊水支部]<br />
         菊水空手教室は、アークス菊水店2Fコミュニティスペースをお借りして平成23年3月より活動を始めました。<br />
         設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
         また親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -36,12 +38,23 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=菊水体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="清心会菊水支部"
+        facts={[
+          { label: "設立", value: "平成23年(2011)3月" },
+          { label: "担当", value: "島、及川、瑠唯、他、不定期で一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kikusui/acs1.jpg",
+          alt: "アークス菊水店",
+          width: 248,
+          height: 138,
+        }}
+        address="札幌市白石区菊水3条5丁目2-25 アークス菊水店"
+        mapHref="https://www.google.com/maps/place/〒003-0803+北海道札幌市白石区菊水３条５丁目２&#8722;２５+アークス/@43.0529182,141.3763685,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bd3eb0399f1:0xf3795c85cd820460!8m2!3d43.0529182!4d141.3785572"
+        mapQuery="43.0529182,141.3763685"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -65,6 +78,7 @@ const entries = [
       </div>
 
       <p class="detail-page__note">交代で指導する一般部メンバー</p>
+
       <div class="detail-media">
         <figure>
           <img
@@ -122,39 +136,14 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="清心会菊水支部"
-        facts={[
-          { label: "設立", value: "平成23年(2011)3月" },
-          { label: "担当", value: "島、及川、瑠唯、他、不定期で一般部員有段者が参加します" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kikusui/acs1.jpg",
-          alt: "アークス菊水店",
-          width: 248,
-          height: 138,
-        }}
-        address="札幌市白石区菊水3条5丁目2-25 アークス菊水店"
-        mapHref="https://www.google.com/maps/place/〒003-0803+北海道札幌市白石区菊水３条５丁目２&#8722;２５+アークス/@43.0529182,141.3763685,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bd3eb0399f1:0xf3795c85cd820460!8m2!3d43.0529182!4d141.3785572"
-        mapQuery="43.0529182,141.3763685"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=菊水体験申込">
-          <img
-            src="/assets/images/legacy/dojo/kikusui/img22.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="菊水支部"
+        subject="菊水体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

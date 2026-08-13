@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate-do Federation — Sapponai Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Sapponai Karate Class, Seishinkai Sapponai Branch, Higashi Ward</h2>
+
       <p class="detail-page__lead">
-        [Sapponai Karate Class, Seishinkai Sapponai Branch, Higashi Ward]<br />
         The Sapponai Karate Class has been active since July 2010 (Heisei 22), using the Sapponai-Moere Community Center as its venue.<br />
         As a Kids Karate and Junior Karate class, we focus on students from preschool through junior high school age. We are currently recruiting trial participants!<br />
         We also welcome participation from parents and children together, and from the Senior Class.<br />
@@ -35,25 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※Since the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Sapponai Trial Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/h-naebo/acs1.jpg"
-            alt="Practice session at the Sapponai Branch"
-            width="315"
-            height="141"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Sapponai Branch"
@@ -76,21 +59,27 @@ const entries = [
         mapQuery="43.093113,141.4112141"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Sapponai Trial Application">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/h-naebo/img1C.jpg"
-            alt="Click here to apply for a trial lesson"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/h-naebo/acs1.jpg"
+            alt="Practice session at the Sapponai Branch"
+            width="315"
+            height="141"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Sapponai Branch"
+        subject="Sapponai Trial Application"
+      />
     </div>
   </section>
 </BaseLayout>

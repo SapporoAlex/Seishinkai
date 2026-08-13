@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・札幌東支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">札幌東空手教室・清心会札幌東支部</h2>
+
       <p class="detail-page__lead">
-        [札幌東空手教室・清心会札幌東支部]<br />
         札幌東空手教室は、平成21年5月に、東区栄地区センターの会議室をお借りしてスタートした支部です。<br />
         キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -35,25 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=札幌東体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/higashi/Image1.jpg"
-            alt="札幌東支部の稽古風景"
-            width="295"
-            height="205"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会札幌東支部"
@@ -78,25 +61,30 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        ※東支部は、所属員が多くキッズ、ジュニア二部体制で稽古をしています。
-      </p>
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=札幌東体験申込">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/higashi/img14.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/higashi/Image1.jpg"
+            alt="札幌東支部の稽古風景"
+            width="295"
+            height="205"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※東支部は、所属員が多くキッズ、ジュニア二部体制で稽古をしています。
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="札幌東支部"
+        subject="札幌東体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

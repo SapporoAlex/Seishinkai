@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Hamatonbetsu Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Hamatonbetsu Karate Class / Seishinkai Hamatonbetsu Branch</h2>
+
       <p class="detail-page__lead">
-        [Hamatonbetsu Karate Class / Seishinkai Hamatonbetsu Branch]<br />
         Activities began in July 2023 (Reiwa 5). The Hamatonbetsu Karate Club also operates as the
         Hamatonbetsu Branch of the Seishinkai Karate Federation.<br />
         If you're interested, please feel free to contact us.
@@ -38,11 +40,22 @@ const entries = [
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
 
-      <p class="detail-page__note">
-        ※General class: Wednesday 18:30 / Youth class: Friday 18:30. The venue is the Hamatonbetsu
-        Elementary School gymnasium.<br />
-        Hamatonbetsu Branch inquiries: <strong>090-9759-3959 (Inomata)</strong>
-      </p>
+      <BranchInfoCard
+        name="Hamatonbetsu Branch — Do-hoku Region"
+        facts={[
+          { label: "Founded", value: "April 2023 (Reiwa 5)" },
+          { label: "Founder", value: "Inomata — contact 090-9759-3959" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/hamaton/img4.jpg",
+          alt: "Hamatonbetsu Elementary School gymnasium",
+          width: 340,
+          height: 169,
+        }}
+        address="3-15 Asahi-cho, Hamatonbetsu Town, Hamatonbetsu Elementary School Gymnasium"
+        mapHref="https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1"
+        mapQuery="45.1220392,142.3559264"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -74,36 +87,21 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Hamatonbetsu Branch — Do-hoku Region"
-        facts={[
-          { label: "Founded", value: "April 2023 (Reiwa 5)" },
-          { label: "Founder", value: "Inomata — contact 090-9759-3959" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/hamaton/img4.jpg",
-          alt: "Hamatonbetsu Elementary School gymnasium",
-          width: 340,
-          height: 169,
-        }}
-        address="3-15 Asahi-cho, Hamatonbetsu Town, Hamatonbetsu Elementary School Gymnasium"
-        mapHref="https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1"
-        mapQuery="45.1220392,142.3559264"
-      />
-
       <p class="detail-page__note">
-        <img
-          src="/assets/images/legacy/dojo/hamaton/img-apply.png"
-          alt="Trial lesson / enrollment reservation"
-          width="240"
-          height="240"
-          loading="lazy"
-        />
+        ※General class: Wednesday 18:30 / Youth class: Friday 18:30. The venue is the Hamatonbetsu
+        Elementary School gymnasium.
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/tobetsu/">← Back to the Dojo List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Hamatonbetsu Branch"
+        subject="Hamatonbetsu Branch Trial & Enrollment Inquiry"
+        directPhone={{ number: "090-9759-3959", tel: "09097593959", note: "Inomata" }}
+      />
     </div>
   </section>
 </BaseLayout>

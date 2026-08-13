@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -28,6 +29,7 @@ const entries = [
         <span class="section-label">DOJO</span> 
         <h1 class="section-title">Seishinkai Karate-do Federation・Hiraoka Branch</h1> 
       </div> <h2 class="detail-page__heading">Kiyota-ku Hiraoka Karate Club・Seishinkai Hiraoka Branch</h2> 
+
       <p class="detail-page__lead"> The Thursday class began at Hiraoka Children's Center in March 2010,
          while the Tuesday class started at a neighborhood community center in September 
          2016 at the request of the local residents' association. The Tuesday class later moved
@@ -49,8 +51,6 @@ const entries = [
       </div>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-
 
       <BranchInfoCard
         name="Seishinkai Hiraoka Branch"
@@ -111,12 +111,6 @@ const entries = [
       <p class="detail-page__note">
         ※In some classes, preschool children are asked to participate together with a parent.
       </p>
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Hiraoka Trial Lesson Inquiry"
-          >office</a
-        >.
-      </p>
 
       <p class="detail-page__note">
         ※ Black belt members from the adult division participate on a rotating basis.
@@ -134,6 +128,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/minami-kiyota/">← Back to the Kiyota Ward & Minami Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Hiraoka Branch"
+        subject="Hiraoka Trial Lesson Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

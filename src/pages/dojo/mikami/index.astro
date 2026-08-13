@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・中央東支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">札幌中央東空手教室・清心会中央東支部</h2>
+
       <p class="detail-page__lead">
-        [札幌中央東空手教室・清心会中央東支部]<br />
         中央東空手教室、通称名「かもめ支部」は平成27年6月に設立されました。<br />
         ジュニアクラスと一般部(社会人、学生)があり、中央区に位置していることもあり大人と子供のバランスのとれた教室です。<br />
         地下鉄バスセンター駅そばと交通の便もよく、会社帰りストレス発散など健康目的で通われる方が多いです。<br />
@@ -38,9 +40,34 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ◆稽古日/水曜日　18:30-19:30　ジュニア　／　19:30-20:30　社会人
-      </p>
+      <BranchInfoCard
+        name="中央東支部"
+        facts={[
+          { label: "設立", value: "平成27年(2015)6月" },
+          { label: "設立者", value: "三上 淳" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/mikami/2.jpg",
+          alt: "三上ビル(かもめアカデミー)",
+          width: 230,
+          height: 203,
+        }}
+        address="札幌市中央区南2条東4丁目1-10　三上ビル3F"
+        addressNote="地下鉄バスセンター駅より徒歩4分(300m)です。駐車場はありませんので、お車の場合は近隣のパーキングをご利用ください。"
+        mapHref="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0593031,141.3601062,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
+        mapQuery="43.0593031,141.3601062"
+        viewOnMapLabel="Google Mapsで見る"
+      />
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/mikami/Image1.jpg"
+          alt="三上ビル入口の看板"
+          width="247"
+          height="194"
+          loading="lazy"
+        />
+      </div>
 
       <div class="detail-gallery">
         <figure>
@@ -86,38 +113,18 @@ const entries = [
         </a>
       </div>
 
-      <BranchInfoCard
-        name="中央東支部"
-        facts={[
-          { label: "設立", value: "平成27年(2015)6月" },
-          { label: "設立者", value: "三上 淳" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/mikami/2.jpg",
-          alt: "三上ビル(かもめアカデミー)",
-          width: 230,
-          height: 203,
-        }}
-        address="札幌市中央区南2条東4丁目1-10　三上ビル3F"
-        addressNote="地下鉄バスセンター駅より徒歩4分(300m)です。駐車場はありませんので、お車の場合は近隣のパーキングをご利用ください。"
-        mapHref="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0593031,141.3601062,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
-        mapQuery="43.0593031,141.3601062"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/mikami/Image1.jpg"
-          alt="三上ビル入口の看板"
-          width="247"
-          height="194"
-          loading="lazy"
-        />
-      </div>
+      <p class="detail-page__note">
+        ◆稽古日/水曜日　18:30-19:30　ジュニア　／　19:30-20:30　社会人
+      </p>
 
       <p class="detail-page__back">
         <a href="/dojo/cyuo/">← 中央区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="中央東支部"
+        subject="中央東支部 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

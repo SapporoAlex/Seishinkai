@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ClassScheduleCard from "@components/ClassScheduleCard.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const classes = [
   {
@@ -47,6 +48,7 @@ const classes = [
       <span class="section-label">DOJO</span>
       <h1 class="section-title">Seishinkai Karate Federation – Atsubetsu Branch</h1>
     </div>
+
     <h2 class="detail-page__heading">Atsubetsu Karate Club & Seishinkai Atsubetsu Branch</h2>
 
     <div class="detail-page__img-text-pair--reverse">
@@ -139,8 +141,7 @@ const classes = [
 
     <p class="detail-page__note">
       ※ In some classes, preschool children are asked to participate together with a parent.<br>
-      ※ Dan-ranked members of the adult class may participate occasionally.<br>
-      ※ The training venue is a public facility that we rent. For inquiries, please contact the Seishinkai office.
+      ※ Dan-ranked members of the adult class may participate occasionally.
     </p>
 
     <p class="detail-page__note">
@@ -148,20 +149,14 @@ const classes = [
       Daima Seishinkan or the 2nd floor of Kawashimo Coop (Circle Room).
     </p>
 
-    <p class="detail-page__note">
-      <a href="mailto:karate@seishinkan.ne.jp?subject=%E5%8E%9A%E5%88%A5%E4%BD%93%E9%A8%93%E3%83%BB%E5%85%A5%E4%BC%9A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
-        <img
-          src="/assets/images/dojo/img_atsubetsu_3.jpg"
-          alt="Click here to apply for a trial lesson"
-          width="645"
-          height="293"
-          loading="lazy"
-        />
-      </a>
-    </p>
-
     <p class="detail-page__back">
       <a href="/dojo/atsubetsu/">← Back to the Atsubetsu Ward Karate Dojo & Classes</a>
     </p>
+
+    <DojoContactSection
+      lang="en"
+      dojoName="Atsubetsu Branch"
+      subject="Atsubetsu Branch Trial & Enrollment Inquiry"
+    />
   </div>
 </BaseLayout>

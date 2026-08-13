@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -27,8 +28,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・常盤支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">南区常盤空手教室・清心会常盤支部</h2>
+
       <p class="detail-page__lead">
-        [南区常盤空手教室・清心会常盤支部]<br />
         常盤空手教室は平成24年9月よりスタートし、当初町内会館から現在の常盤児童会館に会場を移して活動していましたが、再び常盤団地会館にて活動しています(令和2年4月より)。<br />
         キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと思います。体験者募集中です!<br />
         また親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -36,30 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=常盤支部 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。<br />
-        ※コロナの影響により下記臨時会場を移動しました。南区常盤1条1丁目3-1<a
-          href="https://www.google.com/maps/place/〒005-0851+北海道札幌市南区常盤１条１丁目３−１+常盤団地会館/@42.955108,141.344939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f752b30e3655f31:0x43a4187663d955fc!8m2!3d42.9551041!4d141.3471277"
-          target="_blank"
-          rel="noopener">常盤団地会館</a
-        >
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/tokiwa/acs1.jpg"
-            alt="常盤支部の稽古風景"
-            width="316"
-            height="194"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会常盤支部/常盤空手クラブ"
@@ -84,21 +62,35 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=常盤支部 体験・入会問い合わせ">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/tokiwa/img8.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/tokiwa/acs1.jpg"
+            alt="常盤支部の稽古風景"
+            width="316"
+            height="194"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※<br />
+        ※コロナの影響により下記臨時会場を移動しました。南区常盤1条1丁目3-1<a
+          href="https://www.google.com/maps/place/〒005-0851+北海道札幌市南区常盤１条１丁目３−１+常盤団地会館/@42.955108,141.344939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f752b30e3655f31:0x43a4187663d955fc!8m2!3d42.9551041!4d141.3471277"
+          target="_blank"
+          rel="noopener">常盤団地会館</a
+        >
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="常盤支部"
+        subject="常盤支部 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

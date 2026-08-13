@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・光星支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">東区光星空手教室・清心会光星支部</h2>
+
       <p class="detail-page__lead">
-        [東区光星空手教室・清心会光星支部]<br />
         光星空手教室は、平成17年5月に、東区民センターの会議室をお借りしてスタートした支部です。<br />
         令和4年2月より新生児童会館体育室に移り活動しています。<br />
         キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
@@ -37,14 +39,25 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※稽古日は木曜、少年部 一部18:25-19:10(基本・相対)／二部19:10-19:25(型)、一般部
-        一部19:35-20:25(基本・相対)／二部20:25-20:45(型・他)。<br />
-        会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=光星体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="清心会光星支部"
+        facts={[
+          { label: "設立", value: "平成17年(2005)5月" },
+          { label: "設立者", value: "三村佳代子" },
+          { label: "歴代", value: "ハシニ、ダニエラ" },
+          { label: "担当", value: "高嶋、他、不定期で一般部員有段者が参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kosei/img4.jpg",
+          alt: "新生児童会館体育室",
+          width: 348,
+          height: 204,
+        }}
+        address="札幌市東区北8条東7丁目1-3　新生児童会館体育室"
+        mapHref="https://www.google.com/maps/place/〒060-0908+北海道札幌市東区北８条東７丁目１−３+札幌市新生児童会館/@43.0742402,141.3619215,17z/data=!4m19!1m13!4m12!1m3!2m2!1d141.3643461!2d43.0725357!1m6!1m2!1s0x5f0b296ce5c76f23:0x6808b1cf13082457!2z44CSMDYwLTA5MDgg5YyX5rW36YGT5pyt5bmM5biC5p2x5Yy65YyX77yY5p2h5p2x77yX5LiB55uu77yR4oiS77yTIOacreW5jOW4guaWsOeUn-WFkOerpeS8mumkqA!2m2!1d141.36429!2d43.0724337!3e2!3m4!1s0x5f0b296ce5c76f23:0x6808b1cf13082457!8m2!3d43.0724337!4d141.36429"
+        mapQuery="43.0742402,141.3619215"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -67,41 +80,20 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="清心会光星支部"
-        facts={[
-          { label: "設立", value: "平成17年(2005)5月" },
-          { label: "設立者", value: "三村佳代子" },
-          { label: "歴代", value: "ハシニ、ダニエラ" },
-          { label: "担当", value: "高嶋、他、不定期で一般部員有段者が参加します" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kosei/img4.jpg",
-          alt: "新生児童会館体育室",
-          width: 348,
-          height: 204,
-        }}
-        address="札幌市東区北8条東7丁目1-3　新生児童会館体育室"
-        mapHref="https://www.google.com/maps/place/〒060-0908+北海道札幌市東区北８条東７丁目１−３+札幌市新生児童会館/@43.0742402,141.3619215,17z/data=!4m19!1m13!4m12!1m3!2m2!1d141.3643461!2d43.0725357!1m6!1m2!1s0x5f0b296ce5c76f23:0x6808b1cf13082457!2z44CSMDYwLTA5MDgg5YyX5rW36YGT5pyt5bmM5biC5p2x5Yy65YyX77yY5p2h5p2x77yX5LiB55uu77yR4oiS77yTIOacreW5jOW4guaWsOeUn-WFkOerpeS8mumkqA!2m2!1d141.36429!2d43.0724337!3e2!3m4!1s0x5f0b296ce5c76f23:0x6808b1cf13082457!8m2!3d43.0724337!4d141.36429"
-        mapQuery="43.0742402,141.3619215"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
       <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=光星体験申込">
-          <img
-            src="/assets/images/legacy/dojo/kosei/img5.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
+        ※稽古日は木曜、少年部 一部18:25-19:10(基本・相対)／二部19:10-19:25(型)、一般部
+        一部19:35-20:25(基本・相対)／二部20:25-20:45(型・他)。<br />
+        
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="光星支部"
+        subject="光星体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

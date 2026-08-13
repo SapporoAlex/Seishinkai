@@ -3,6 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import ClassScheduleCard from "@components/ClassScheduleCard.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -71,7 +72,9 @@ const classes = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">Seishinkai Karate-Do Federation – Hondori Branch</h1>
       </div>
+
       <h2 class="detail-page__heading">Shiroishi Ward Hondori Karate Classes / Seishinkan Hondori Dojo</h2>
+
       <p class="detail-page__lead">
         The Hondori karate class began in September 2011 at the Hondori Seishinkan Dojo, located along National Route 12.
         It sits next to Yakiniku Tokuju, and directly across from Round One, making it easy to find.
@@ -86,8 +89,6 @@ const classes = [
       </div>
 
       <BranchTable entries={entries} />
-
-
 
       <BranchInfoCard
         name="Hondori Seishinkan Karate Dojo"
@@ -109,7 +110,6 @@ const classes = [
         ]}
       />
 
-    
       <div class="detail-gallery">
         <figure>
           <img
@@ -161,12 +161,10 @@ const classes = [
       </div>
 
       <p class="detail-page__note">
-        ※The venue is a rented facility, so please direct all inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Hondori Trial Class Application"
-          >office</a
-        >.<br />
+        ※<br />
         Start times may vary slightly, so those coming for a trial class should confirm the schedule in advance.
       </p>
+
       <p class="detail-page__note">
         ※Senior black-belt members join on a rotating basis.
       </p>
@@ -179,21 +177,15 @@ const classes = [
         > is located across from the Round One parking lot (140m / about a 2-minute walk from Hondori Seishinkan).
       </p>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Hondori Trial Class Application">
-          <img
-            src="/assets/images/legacy/dojo/hondori/img1E.jpg"
-            alt="Click here to apply for a trial class"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to the list of Shiroishi Ward karate classes</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Hondori Branch"
+        subject="Hondori Trial Class Application"
+      />
     </div>
   </section>
 </BaseLayout>

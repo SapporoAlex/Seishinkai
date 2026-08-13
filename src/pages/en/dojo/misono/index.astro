@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -25,7 +26,9 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">Seishinkai Karate-Do Federation – Misono Branch</h1>
       </div>
+
       <h2 class="detail-page__heading">Toyohira Ward Misono Karate Club / Misono Branch</h2>
+
       <p class="detail-page__lead">
         The current Misono Karate Club began activities in April 2009 as the Hiragishi Branch, using the Toyohira
         Ward Citizens' Center as its venue. It later operated as the Misono Branch at the Misono Children's Center,
@@ -80,20 +83,12 @@ const entries = [
       </div>
 
       <p class="detail-page__note">
-        ※The venue is a rented facility, so please direct all inquiries to the<a
-          href="mailto:karate@seishinkan.ne.jp?subject=Misono Trial Class Application"
-          >office</a
-        >.
-      </p>
-
-      <p class="detail-page__note">
         ※Please enter via the 2F entrance from the parking lot. If you're unsure, ask at the Co-op service counter.
       </p>
 
       <p class="detail-page__note">
         ※Senior black-belt members join on an irregular basis.
       </p>
-
 
       <p class="detail-page__note">
         <img
@@ -108,6 +103,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/toyohira/">← Back to the list of Toyohira Ward karate dojos/classes</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Misono Branch"
+        subject="Misono Trial Class Application"
+      />
     </div>
   </section>
 </BaseLayout>

@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -25,7 +26,9 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">清心会空手道連盟・青葉支部(仮称) </h1>
       </div>
+
       <h2 class="detail-page__heading">厚別区青葉空手教室・清心会青葉支部(仮称) </h2>
+
       <p class="detail-page__lead">
         青葉空手教室は、平成23年12月にキッズ空手、ジュニア空手として開始ししました。
         その後、会場等の関係で厚別南支部(厚別南地区センター)で活動していましたが、青葉支部としての再開を準備中です。
@@ -34,6 +37,7 @@ const entries = [
         しています。
         現在、参加者を募集しています。5名集まれば開始したいと考えています。
       </p>
+
         <div class="detail-page__highlight-box">
           <p class="detail-page__highlight-text">★★</p>
           <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
@@ -41,8 +45,6 @@ const entries = [
         </div>
 
       <BranchTable entries={entries} />
-      <p class="detail-page__note">※青葉支部スタート前での参加希望者での体験は、もみじ台支部又は厚別南支部で行っています
-      </p>
 
       <BranchInfoCard
         name="青葉支部(仮称)"
@@ -74,28 +76,17 @@ const entries = [
         </figure>
       </div>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=青葉支部再開・参加希望">
-          <img
-            src="/assets/images/legacy/dojo/aoba/imgA.jpg"
-            alt="参加お問い合わせはこちら"
-            width="645"
-            height="271"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りする予定です。参加をご希望の方は<a
-          href="mailto:karate@seishinkan.ne.jp?subject=青葉支部再開・参加希望"
-          >事務局</a
-        >までお問い合わせください。
+      <p class="detail-page__note">※青葉支部スタート前での参加希望者での体験は、もみじ台支部又は厚別南支部で行っています
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/atsubetsu/">← 厚別区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="青葉支部"
+        subject="青葉支部再開・参加希望"
+      />
     </div>
   </section>
 </BaseLayout>

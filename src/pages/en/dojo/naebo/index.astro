@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -27,8 +28,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate-do Federation — Honmachi Branch (formerly Naebo Branch)</h1>
       </div>
 
+      <h2 class="detail-page__heading">Honmachi Karate Class, Higashi Ward, Seishinkai Honmachi Branch</h2>
+
       <p class="detail-page__lead">
-        [Honmachi Karate Class, Higashi Ward, Seishinkai Honmachi Branch]<br />
         <strong>This class is currently suspended.</strong><br />
         The Naebo Karate Class started in October 2010 (Heisei 22) at the Naebo Children's Hall. From 2023 (Reiwa 5), the Naebo Children's Hall relocated inside Honmachi Elementary School and became the "Naebo-Honmachi Children's Hall," and the class relaunched as the Honmachi Karate Class.<br />
         A karate club centered on Kids and Junior classes.<br />
@@ -37,26 +39,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※Temporarily suspended since May 2024 (Reiwa 6). Active from 2010, activity at this venue paused at the end of April 2024. We would like to resume once around 5 or more members have gathered, so please get in touch if you're interested.<br />
-        Since the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Naebo Trial & Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/naebo/Image1.jpg"
-            alt="Practice session at the Honmachi Branch (formerly Naebo Branch)"
-            width="1022"
-            height="546"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Higashi Ward — Naebo Branch"
@@ -82,21 +64,32 @@ const entries = [
         mapQuery="43.0754469,141.3902726"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Naebo Trial & Enrollment Inquiry">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/images/Image2.jpg"
-            alt="Apply for a trial lesson here"
-            width="645"
-            height="260"
+            src="/assets/images/legacy/dojo/naebo/Image1.jpg"
+            alt="Practice session at the Honmachi Branch (formerly Naebo Branch)"
+            width="1022"
+            height="546"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※Temporarily suspended since May 2024 (Reiwa 6). Active from 2010, activity at this venue paused at the end of April 2024. We would like to resume once around 5 or more members have gathered, so please get in touch if you're interested.<br />
+        
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Honmachi Branch (formerly Naebo Branch)"
+        subject="Naebo Trial & Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

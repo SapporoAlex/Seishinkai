@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・浜頓別支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">浜頓別町空手教室・清心会浜頓別支部</h2>
+
       <p class="detail-page__lead">
-        [浜頓別町空手教室・清心会浜頓別支部]<br />
         令和5年7月より開始しました。浜頓別空手倶楽部は、清心会空手連盟の浜頓別支部としても活動しています。<br
         />
         興味のある方は是非、ご連絡ください。
@@ -35,10 +37,23 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※一般部/水曜18:30・少年部/金曜18:30、会場は浜頓別小学校体育館です。<br />
-        浜頓別支部問合せ　<strong>090-9759-3959（猪又）</strong>
-      </p>
+      <BranchInfoCard
+        name="道北地区・浜頓別支部"
+        facts={[
+          { label: "設立", value: "令和5年(2023)4月" },
+          { label: "設立者", value: "猪又(いのまた)　090-9759-3959まで" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/hamaton/img4.jpg",
+          alt: "浜頓別小学校体育館",
+          width: 340,
+          height: 169,
+        }}
+        address="浜頓別町旭町3丁目15番地　浜頓別小学校体育館"
+        mapHref="https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1"
+        mapQuery="45.1220392,142.3559264"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -70,37 +85,19 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="道北地区・浜頓別支部"
-        facts={[
-          { label: "設立", value: "令和5年(2023)4月" },
-          { label: "設立者", value: "猪又(いのまた)　090-9759-3959まで" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/hamaton/img4.jpg",
-          alt: "浜頓別小学校体育館",
-          width: 340,
-          height: 169,
-        }}
-        address="浜頓別町旭町3丁目15番地　浜頓別小学校体育館"
-        mapHref="https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1"
-        mapQuery="45.1220392,142.3559264"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
       <p class="detail-page__note">
-        <img
-          src="/assets/images/legacy/dojo/hamaton/img-apply.png"
-          alt="体験・入会予約"
-          width="240"
-          height="240"
-          loading="lazy"
-        />
+        ※一般部/水曜18:30・少年部/金曜18:30、会場は浜頓別小学校体育館です。
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="浜頓別支部"
+        subject="浜頓別支部 体験・入会問い合わせ"
+        directPhone={{ number: "090-9759-3959", tel: "09097593959", note: "猪又" }}
+      />
     </div>
   </section>
 </BaseLayout>

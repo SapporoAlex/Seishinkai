@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Momijidai Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Momijidai Karate Class, Atsubetsu-ku / Seishinkai Momijidai Branch</h2>
+
       <p class="detail-page__lead">
-        [Momijidai Karate Class, Atsubetsu-ku / Seishinkai Momijidai Branch]<br />
         The Momijidai Karate Class began its activities at the Momijidai Management Center in April 2010 (Heisei 22).<br />
         Since its founding, it started as Kids Karate and Junior Karate, and now welcomes a wide range of participants, from preschoolers to adults (parent and child).<br />
         Parent-and-child participation is especially welcome.<br />
@@ -36,13 +38,25 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
-      <p class="detail-page__note">
-        ※Training days are Saturday 10:00–10:55 and 11:00–11:30.<br />
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Momijidai Trial Lesson & Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Momijidai Branch"
+        facts={[
+          { label: "Founded", value: "April 2010 (Heisei 22)" },
+          { label: "In charge", value: "Maekawa and other adult division dan-ranked members." },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/momi/2.jpg",
+          alt: "Momijidai Management Center",
+          width: 330,
+          height: 213,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/maekawa.jpg", alt: "", name: "Nobutaka Maekawa" },
+        ]}
+        address="Momijidai 7-chome 1-1, Atsubetsu-ku, Sapporo — Momijidai Management Center, Meeting Room"
+        mapHref="https://www.google.com/maps/place/もみじ台管理センター/@43.031883,141.491963,15z/data=!4m5!3m4!1s0x0:0x7df1cd1f8ac0d953!8m2!3d43.031883!4d141.491963"
+        mapQuery="43.031883,141.491963"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -66,41 +80,19 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Momijidai Branch"
-        facts={[
-          { label: "Founded", value: "April 2010 (Heisei 22)" },
-          { label: "In charge", value: "Maekawa and other adult division dan-ranked members." },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/momi/2.jpg",
-          alt: "Momijidai Management Center",
-          width: 330,
-          height: 213,
-        }}
-        instructors={[
-          { src: "/assets/images/instructors/maekawa.jpg", alt: "", name: "Nobutaka Maekawa" },
-        ]}
-        address="Momijidai 7-chome 1-1, Atsubetsu-ku, Sapporo — Momijidai Management Center, Meeting Room"
-        mapHref="https://www.google.com/maps/place/もみじ台管理センター/@43.031883,141.491963,15z/data=!4m5!3m4!1s0x0:0x7df1cd1f8ac0d953!8m2!3d43.031883!4d141.491963"
-        mapQuery="43.031883,141.491963"
-      />
-
       <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Momijidai Trial Lesson & Enrollment Inquiry">
-          <img
-            src="/assets/images/legacy/dojo/momi/imgA.jpg"
-            alt="Click here for a trial lesson"
-            width="645"
-            height="271"
-            loading="lazy"
-          />
-        </a>
+        ※Training days are Saturday 10:00–10:55 and 11:00–11:30.
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/atsubetsu/">← Back to Karate Dojos & Classes in Atsubetsu Ward</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Momijidai Branch"
+        subject="Momijidai Trial Lesson & Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

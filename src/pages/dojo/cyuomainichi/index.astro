@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・中央支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">中央区中央空手教室・清心会札幌中央支部</h2>
+
       <p class="detail-page__lead">
-        [中央区中央空手教室・清心会札幌中央支部]<br />
         中央空手教室は、平成14年4月に、読売新聞社札幌ビル地下のよみうり文化教室として社会人中心にスタートしました。<br />
         平成16年、読売ビル改築に伴い毎日新聞社地下へ移転、消防法の関係で使用できなくなり平成21年に南一条ビルへ移転しジュニアクラスを新設、同時に中央区民センターで社会人クラスを継続、平成23年に一本化し区民センターで活動し、平成30年に現在の二条はるにれ児童会館に移転しました。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -36,12 +38,29 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=中央支部体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="札幌中央支部"
+        facts={[
+          { label: "設立", value: "平成14年(2002)4月" },
+          { label: "設立者", value: "大久保勝美" },
+          { label: "歴代", value: "室木、前川" },
+          { label: "担当者", value: "及川義彦" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/cyuomainichi/2.jpg",
+          alt: "二条はるにれ児童会館",
+          width: 251,
+          height: 193,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/oikawa.jpg", alt: "担当 及川義彦", name: "及川義彦" },
+        ]}
+        address="札幌市中央区南2条西15丁目　二条小学校内(二条はるにれ児童会館)"
+        addressNote="二条小学校の中にあります。"
+        mapHref="https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527"
+        mapQuery="43.0546877,141.3355023"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -56,6 +75,7 @@ const entries = [
       </div>
 
       <h2 class="detail-page__heading">中央支部の変遷</h2>
+
       <div class="detail-gallery">
         <figure>
           <img
@@ -89,45 +109,14 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="札幌中央支部"
-        facts={[
-          { label: "設立", value: "平成14年(2002)4月" },
-          { label: "設立者", value: "大久保勝美" },
-          { label: "歴代", value: "室木、前川" },
-          { label: "担当者", value: "及川義彦" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/cyuomainichi/2.jpg",
-          alt: "二条はるにれ児童会館",
-          width: 251,
-          height: 193,
-        }}
-        instructors={[
-          { src: "/assets/images/instructors/oikawa.jpg", alt: "担当 及川義彦", name: "及川義彦" },
-        ]}
-        address="札幌市中央区南2条西15丁目　二条小学校内(二条はるにれ児童会館)"
-        addressNote="二条小学校の中にあります。"
-        mapHref="https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527"
-        mapQuery="43.0546877,141.3355023"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=中央支部体験申込">
-          <img
-            src="/assets/images/legacy/images/mail_banner.jpg"
-            alt="体験申込はこちら"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/cyuo/">← 中央区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="中央支部"
+        subject="中央支部体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

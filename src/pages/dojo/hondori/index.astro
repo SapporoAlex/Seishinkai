@@ -3,6 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import ClassScheduleCard from "@components/ClassScheduleCard.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -71,7 +72,9 @@ const classes = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">清心会空手道連盟・本通支部</h1>
       </div>
+
       <h2 class="detail-page__heading">白石区本通空手教室・清心館本通空手道場</h2>
+
       <p class="detail-page__lead">
         本通空手教室は、国道12号線沿いに面する本通清心館道場で平成23年9月より活動を始めました。
         隣に焼肉の徳寿様、反対隣りにラウンドワンとわかりやすい場所にあります。
@@ -85,8 +88,6 @@ const classes = [
       </div>
 
       <BranchTable entries={entries} />
-
-
 
       <BranchInfoCard
         name="本通清心館空手道場"
@@ -108,7 +109,6 @@ const classes = [
         ]}
       />
 
-    
       <div class="detail-gallery">
         <figure>
           <img
@@ -160,12 +160,10 @@ const classes = [
       </div>
 
       <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=本通体験申込"
-          >事務局</a
-        >までお願いします。<br />
+        ※<br />
         開始時刻等若干変動する場合がありますので体験の方は事前にご確認下さい。
       </p>
+
       <p class="detail-page__note">
         ※交代で一般部員有段者が参加します。
       </p>
@@ -178,21 +176,14 @@ const classes = [
         >があります(本通清心館より140m、徒歩2分)。
       </p>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=本通体験申込">
-          <img
-            src="/assets/images/legacy/dojo/hondori/img1E.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="本通支部"
+        subject="本通体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

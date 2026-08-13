@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -27,8 +28,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Shizuoka Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Hokureikai - Sansenji Karate Dojo - Seishinkai Shizuoka Branch</h2>
+
       <p class="detail-page__lead">
-        [Hokureikai - Sansenji Karate Dojo - Seishinkai Shizuoka Branch]<br />
         The Sansenji Dojo traces back to Hisanobu Inuura (Hokugo Branch Chief, now head priest of Sansenji Temple), who trained at Seishinkai Headquarters and founded the Minobusan University Karate Club in Yamanashi Prefecture in 2001 (Heisei 13).<br />
         The Sansenji Dojo itself started at Sansenji Temple in Shizuoka Prefecture in June 2005 (Heisei 17).<br />
         Members range widely from children to seniors.
@@ -36,9 +38,23 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
-      <p class="detail-page__note">
-        ※During the day we may be at work and unable to answer the phone. Training day/Wednesday evening TEL/FAX 01544-29-3500
-      </p>
+      <BranchInfoCard
+        name="Shizuoka Branch"
+        facts={[
+          { label: "Founded", value: ["October 2001 (Heisei 13) - Yamanashi Branch", "June 2005 (Heisei 17) - Shizuoka Branch"] },
+          { label: "Founder", value: "Hisanobu Inuura" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/shizuoka/2.jpg",
+          alt: "Sansenji Dojo",
+          width: 258,
+          height: 175,
+        }}
+        address="332 Oshikakubo, Fujinomiya City, Shizuoka Prefecture, Sansenji Temple"
+        addressNote="The dojo is located on the temple grounds"
+        mapHref="https://www.google.com/maps/place/〒419-0303+静岡県富士宮市大鹿窪３３２/@35.2507663,138.5611994,17z/data=!3m1!4b1!4m5!3m4!1s0x601bd01f37b31da9:0xc2111aeb55d23bb5!8m2!3d35.2507663!4d138.5633881"
+        mapQuery="35.2507663,138.5611994"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -89,27 +105,20 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Shizuoka Branch"
-        facts={[
-          { label: "Founded", value: ["October 2001 (Heisei 13) - Yamanashi Branch", "June 2005 (Heisei 17) - Shizuoka Branch"] },
-          { label: "Founder", value: "Hisanobu Inuura" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/shizuoka/2.jpg",
-          alt: "Sansenji Dojo",
-          width: 258,
-          height: 175,
-        }}
-        address="332 Oshikakubo, Fujinomiya City, Shizuoka Prefecture, Sansenji Temple"
-        addressNote="The dojo is located on the temple grounds"
-        mapHref="https://www.google.com/maps/place/〒419-0303+静岡県富士宮市大鹿窪３３２/@35.2507663,138.5611994,17z/data=!3m1!4b1!4m5!3m4!1s0x601bd01f37b31da9:0xc2111aeb55d23bb5!8m2!3d35.2507663!4d138.5633881"
-        mapQuery="35.2507663,138.5611994"
-      />
-
       <p class="detail-page__back">
         <a href="/en/dojo/naichi/">← Back to the Shizuoka, Aichi & Chiba Dojo List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Shizuoka Branch"
+        subject="Shizuoka Branch Trial & Enrollment Inquiry"
+        directPhone={{
+          number: "01544-29-3500",
+          tel: "01544293500",
+          note: "TEL/FAX. We may be at work during the day — Wednesday evenings only.",
+        }}
+      />
     </div>
   </section>
 </BaseLayout>

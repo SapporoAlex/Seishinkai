@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,20 +27,14 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Toyohira Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Toyohira Ward Toyohira Karate Class - Seishinkai Toyohira Branch</h2>
+
       <p class="detail-page__lead">
-        [Toyohira Ward Toyohira Karate Class - Seishinkai Toyohira Branch]<br />
         The Toyohira Branch is a headquarters-run class held at the Toyohira Children's Hall.<br />
         Instructors from the adult general division take turns leading the class.
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Toyohira Trial Lesson Application"
-          >office</a
-        >.
-      </p>
 
       <BranchInfoCard
         name="Seishinkai Toyohira Branch"
@@ -57,6 +52,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Toyohira Branch"
+        subject="Toyohira Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

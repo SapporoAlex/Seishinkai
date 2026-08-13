@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Tobetsu Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Tobetsu Karate Class / Seishinkai Tobetsu Branch</h2>
+
       <p class="detail-page__lead">
-        [Tobetsu Karate Class / Seishinkai Tobetsu Branch]<br />
         The Tobetsu karate class started in October 2008 (Heisei 20).<br />
         The venue is the Tobetsu Town General Gymnasium.<br />
         The class is centered on Kids and Junior classes. Parent-child participation and Senior Class members
@@ -41,31 +43,6 @@ const entries = [
         entries={entries}
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Tobetsu Trial Lesson & Membership Inquiry"
-          >office</a
-        >.<br />
-        When the Tobetsu Town General Gymnasium is unavailable, practice sometimes takes place at the
-        Shirakaba Community Center instead. Please check the <a
-          href="https://karate14.dokkin.com/"
-          target="_blank"
-          rel="noopener">Tobetsu Branch schedule page</a
-        > for the current training venue.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="Seishinkai Karate training session"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Tobetsu Branch (Headquarters-run)"
@@ -81,13 +58,17 @@ const entries = [
         mapQuery="43.223059,141.5131699"
       />
 
-      <p class="detail-page__note">
-        ※Alternate venue: <a
-          href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"
-          target="_blank"
-          rel="noopener">2792-1 Shirakaba, Tobetsu Town, Shirakaba Community Center</a
-        >
-      </p>
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="Seishinkai Karate training session"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
 
       <div class="detail-gallery">
         <figure>
@@ -101,9 +82,33 @@ const entries = [
         </figure>
       </div>
 
+      <p class="detail-page__note">
+        ※<br />
+        When the Tobetsu Town General Gymnasium is unavailable, practice sometimes takes place at the
+        Shirakaba Community Center instead. Please check the <a
+          href="https://karate14.dokkin.com/"
+          target="_blank"
+          rel="noopener">Tobetsu Branch schedule page</a
+        > for the current training venue.
+      </p>
+
+      <p class="detail-page__note">
+        ※Alternate venue: <a
+          href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"
+          target="_blank"
+          rel="noopener">2792-1 Shirakaba, Tobetsu Town, Shirakaba Community Center</a
+        >
+      </p>
+
       <p class="detail-page__back">
         <a href="/en/dojo/tobetsu/">← Back to the Dojo List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Tobetsu Branch"
+        subject="Tobetsu Trial Lesson & Membership Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

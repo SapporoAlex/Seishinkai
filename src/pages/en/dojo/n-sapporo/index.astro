@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -25,7 +26,9 @@ const entries = [
         <span class="section-label">DOJO</span>
         <h1 class="section-title">Seishinkan Karate-do Federation – Shin-Sapporo Branch</h1>
       </div>
+
       <h2 class="detail-page__heading">Atsubetsu-ku Shin-Sapporo Karate Class – Seishinkan Shin-Sapporo Branch</h2>
+
       <p class="detail-page__lead">
         The Shin-Sapporo Karate Class has been active since April 1997 at the Atsubetsu
         Ward Citizens' Center, making it one of Seishinkan's longest-running branches.
@@ -36,6 +39,7 @@ const entries = [
         feel more like a relaxed circle activity — enjoying karate as a way to build
         health and fitness while still learning its true spirit.
       </p>
+
       <div class="detail-page__highlight-box">
         <p class="detail-page__highlight-text">★★</p>
         <p class="detail-page__highlight-text">
@@ -43,6 +47,7 @@ const entries = [
         </p>
         <p class="detail-page__highlight-text">★★</p>
       </div>
+
       <BranchTable entries={entries} />
 
       <BranchInfoCard
@@ -67,22 +72,6 @@ const entries = [
         mapQuery="43.036652,141.474159"
         viewOnMapLabel="View on Google Maps"
       />
-      <p class="detail-page__note">
-        *Preschool-age children must attend with a parent.
-      </p>
-
-      <p class="detail-page__note">
-        *Occasionally, black-belt members of the general adult class may join.
-      </p>
-
-      <p class="detail-page__note">
-        *As of July 2025, the practice day was changed to Mondays, 19:00–20:30.
-      </p>
-
-      <p class="detail-page__note">
-        *As this venue is a rented facility, please direct inquiries to the
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Shin-Sapporo Trial Class / Enrollment Inquiry">office</a>.
-      </p>
 
       <div class="detail-gallery">
         <figure>
@@ -97,20 +86,26 @@ const entries = [
       </div>
 
       <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Shin-Sapporo Trial Class / Enrollment Inquiry">
-          <img
-            src="/assets/images/legacy/dojo/n-sapporo/img8.jpg"
-            alt="Click here to apply for a trial class"
-            width="645"
-            height="260"
-            loading="lazy"
-          />
-        </a>
+        *Preschool-age children must attend with a parent.
+      </p>
+
+      <p class="detail-page__note">
+        *Occasionally, black-belt members of the general adult class may join.
+      </p>
+
+      <p class="detail-page__note">
+        *As of July 2025, the practice day was changed to Mondays, 19:00–20:30.
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/atsubetsu/">← Back to the list of Atsubetsu-ku dojos and classes</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Shin-Sapporo Branch"
+        subject="Shin-Sapporo Trial Class / Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

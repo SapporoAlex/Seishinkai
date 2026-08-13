@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・京極支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">京極町空手教室・清心会京極支部</h2>
+
       <p class="detail-page__lead">
-        [京極町空手教室・清心会京極支部]<br />
         京極空手クラブは、喜茂別支部へ京極町から通っていたメンバーにより、京極町・広徳寺様のご協力をいただきスタートした支部です。<br
         />
         その後、会場は社会福祉センターとなり、令和元年12月より京極町公民館大ホールとなっています。<br />
@@ -37,12 +39,24 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※一部　白帯〜水色帯　18:15-19:00／二部　青帯以上　19:05-20:00。会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=京極体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="京極町支部"
+        facts={[
+          { label: "設立", value: "平成29年(2017)11月" },
+          { label: "設立者", value: "駒田拓朗" },
+          { label: "担当者", value: "大久保翼" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kyogoku/img3.jpg",
+          alt: "京極町公民館",
+          width: 350,
+          height: 184,
+        }}
+        address="虻田郡京極町京極160　京極町公民館"
+        mapHref="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
+        mapQuery="虻田郡京極町京極160　京極町公民館"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -92,24 +106,9 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="京極町支部"
-        facts={[
-          { label: "設立", value: "平成29年(2017)11月" },
-          { label: "設立者", value: "駒田拓朗" },
-          { label: "担当者", value: "大久保翼" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kyogoku/img3.jpg",
-          alt: "京極町公民館",
-          width: 350,
-          height: 184,
-        }}
-        address="虻田郡京極町京極160　京極町公民館"
-        mapHref="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
-        mapQuery="虻田郡京極町京極160　京極町公民館"
-        viewOnMapLabel="Google Mapsで見る"
-      />
+      <p class="detail-page__note">
+        ※一部　白帯〜水色帯　18:15-19:00／二部　青帯以上　19:05-20:00。
+      </p>
 
       <p class="detail-page__note">
         ※旧会場：<a
@@ -140,6 +139,11 @@ const entries = [
       <p class="detail-page__back">
         <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="京極支部"
+        subject="京極体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

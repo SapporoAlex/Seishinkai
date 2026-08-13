@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 ---
 
 <BaseLayout
@@ -39,6 +40,7 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
       </p>
 
       <h2 class="detail-page__heading">Karate that builds a heart that won't lose, a spirit that won't break</h2>
+
       <table class="table">
         <tbody>
           <tr>
@@ -84,6 +86,7 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
           { src: "/assets/images/instructors/ito.jpg", alt: "Ito, 2nd Dan (school teacher)", name: "Ito" },
         ]}
       />
+
       <div class="detail-media">
         <a href="https://youtu.be/bqi8972NRXE" target="_blank" rel="noopener">
           <img
@@ -94,11 +97,13 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
         </a>
         <p class="detail-media__caption">Introduction Video (YouTube)</p>
       </div>
+
       <p class="detail-page__note">
         ※Inoue-juku is a member of the All Japan Full-Contact Karate-do Federation.
       </p>
 
       <h2 class="detail-page__heading">Kumite Practice</h2>
+
       <div class="detail-gallery">
         <figure>
           <img
@@ -110,6 +115,7 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
       </div>
 
       <h2 class="detail-page__heading">Instructors</h2>
+
       <p class="detail-page__note">
         ※Instructors volunteer their time outside their regular jobs.
       </p>
@@ -117,6 +123,12 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
       <p class="detail-page__back">
         <a href="/en/dojo/">← Back to the Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Inoue Dojo"
+        subject="Inoue Dojo Trial & Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

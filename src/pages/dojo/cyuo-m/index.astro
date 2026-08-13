@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・伏見支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">中央区伏見空手教室・清心会伏見支部</h2>
+
       <p class="detail-page__lead">
-        [中央区伏見空手教室・清心会伏見支部]<br />
         伏見空手教室は、支援企業の協力で支援会社の会議室スペースをお借りして平成24年4月にスタートしました。<br />
         セキュリティの関係もあり翌年、現在地の伏見会館に会場を移転して活動しています。<br />
         設立以来、ジュニア空手と親子空手としてを中心としています。<br />
@@ -36,25 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=伏見体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/cyuo-m/Image1.jpg"
-            alt="伏見支部の稽古風景"
-            width="292"
-            height="182"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="平和通支部"
@@ -79,21 +62,26 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=伏見体験申込">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/cyuo-m/imgC.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/cyuo-m/Image1.jpg"
+            alt="伏見支部の稽古風景"
+            width="292"
+            height="182"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/cyuo/">← 中央区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="伏見支部"
+        subject="伏見体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

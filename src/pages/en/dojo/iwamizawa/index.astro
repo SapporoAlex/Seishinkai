@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Iwamizawa Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Iwamizawa Karate Class / Seishinkai Iwamizawa Branch</h2>
+
       <p class="detail-page__lead">
-        [Iwamizawa Karate Class / Seishinkai Iwamizawa Branch]<br />
         The Iwamizawa Karate Class was founded in March 2005 (Heisei 17) by Shihan Ishimori, upon his retirement from Iwamizawa City Hall.<br />
         It is a karate club focused mainly on the Junior Class.<br />
         We especially welcome parent-child participants and members of our Senior Class.<br />
@@ -39,12 +41,22 @@ const entries = [
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
 
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Iwamizawa Trial Lesson Application"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Iwamizawa Branch / Iwamizawa Karate Club"
+        facts={[
+          { label: "Founded", value: "March 2005 (Heisei 17)" },
+          { label: "Founder", value: "Tadayuki Ishimori" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/iwamizawa/2.jpg",
+          alt: "Iwamizawa Lifelong Learning Center",
+          width: 270,
+          height: 190,
+        }}
+        address="4-jo Nishi 1-chome, Iwamizawa, Iwamizawa Lifelong Learning Center"
+        mapHref="https://www.google.com/maps/place/岩見沢市+生涯学習センターいわなび/@43.2028905,141.7662754,15z/data=!4m5!3m4!1s0x0:0x43bfeebd5643c2e9!8m2!3d43.2028905!4d141.7662754"
+        mapQuery="43.2028905,141.7662754"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -73,38 +85,15 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Iwamizawa Branch / Iwamizawa Karate Club"
-        facts={[
-          { label: "Founded", value: "March 2005 (Heisei 17)" },
-          { label: "Founder", value: "Tadayuki Ishimori" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/iwamizawa/2.jpg",
-          alt: "Iwamizawa Lifelong Learning Center",
-          width: 270,
-          height: 190,
-        }}
-        address="4-jo Nishi 1-chome, Iwamizawa, Iwamizawa Lifelong Learning Center"
-        mapHref="https://www.google.com/maps/place/岩見沢市+生涯学習センターいわなび/@43.2028905,141.7662754,15z/data=!4m5!3m4!1s0x0:0x43bfeebd5643c2e9!8m2!3d43.2028905!4d141.7662754"
-        mapQuery="43.2028905,141.7662754"
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Iwamizawa Trial Lesson Application">
-          <img
-            src="/assets/images/legacy/dojo/iwamizawa/img2.jpg"
-            alt="Apply for a trial lesson"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/ebetsu/">← Back to the list of dojos & classes in Ebetsu, Iwamizawa & Ishikari</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Iwamizawa Branch"
+        subject="Iwamizawa Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

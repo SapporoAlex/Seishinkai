@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・札苗支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">東区札苗空手教室・清心会札苗支部</h2>
+
       <p class="detail-page__lead">
-        [東区札苗空手教室・清心会札苗支部]<br />
         札苗空手教室は、札苗モエレ交流センターをお借りして平成22年7月より活動しています。<br />
         キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと思います。体験者募集中です!<br />
         また親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -35,25 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=札苗体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/h-naebo/acs1.jpg"
-            alt="札苗支部の稽古風景"
-            width="315"
-            height="141"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会札苗支部"
@@ -77,21 +60,26 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=札苗体験申込">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/h-naebo/img1C.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/h-naebo/acs1.jpg"
+            alt="札苗支部の稽古風景"
+            width="315"
+            height="141"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="札苗支部"
+        subject="札苗体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

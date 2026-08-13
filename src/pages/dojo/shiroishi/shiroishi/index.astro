@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,6 +27,7 @@ const entries = [
       </div>
 
     <h2 class="detail-page__heading">白石区の空手道場です</h2>
+
       <div class="detail-page__img-text-pair--reverse">
         <div class="detail-media--med">
         <figure>
@@ -50,7 +52,6 @@ const entries = [
         </p>
 
       </div>
-
 
         <div class="detail-page__img-text-pair">
             <div class="detail-gallery">
@@ -78,21 +79,15 @@ const entries = [
 
       </div>
 
-
       <BranchTable entries={entries} />
 
         <p class="detail-page__note">
-            ※白石中央福祉会館を利用する形となります。<br>
-            ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=白石中央福祉会館 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
+            ※白石中央福祉会館を利用する形となります。
         </p>
 
         <div class="dojo-list__map-embed">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.4130221087366!2d141.3980022!3d43.0537802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2bc48025a535%3A0xb5799aa9afba892d!2sShiroishi%20Ch%C5%AB%C5%8D%20Welfare%20Hall!5e0!3m2!1sen!2sjp!4v1785046476874!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
-
 
         <p class="detail-page__note">
             地下鉄白石駅・徒歩約14分 約1.1km、中央バス｢中央1-4｣下車徒歩約2分、JRバス｢中央1-3｣下車徒歩約5分<br>
@@ -100,6 +95,7 @@ const entries = [
         </p>
 
     <h2 class="detail-page__heading">2005年～2026年7月までの21年間、この会場で活動</h2>
+
     <div class="detail-gallery">
 
         <figure>
@@ -121,9 +117,15 @@ const entries = [
           />
         </figure>
       </div>
+
       <p class="detail-page__back">
         <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="白石本部"
+        subject="白石中央福祉会館 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

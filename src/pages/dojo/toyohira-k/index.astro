@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・豊平公園支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">豊平公園空手教室・清心会豊平公園支部</h2>
+
       <p class="detail-page__lead">
-        [豊平公園空手教室・清心会豊平公園支部]<br />
         豊平公園空手教室は、豊平若者活動センターをお借りして平成27年6月より活動を始めました。<br />
         設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
         また親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -38,25 +40,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=豊平公園支部 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/toyohira-k/img8.jpg"
-            alt="豊平公園支部の稽古風景"
-            width="282"
-            height="162"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="豊平公園支部"
@@ -80,21 +63,26 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=豊平公園支部 体験・入会問い合わせ">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/toyohira-k/img4.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="271"
+            src="/assets/images/legacy/dojo/toyohira-k/img8.jpg"
+            alt="豊平公園支部の稽古風景"
+            width="282"
+            height="162"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="豊平公園支部"
+        subject="豊平公園支部 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

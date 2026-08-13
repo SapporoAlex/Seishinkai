@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・平和通支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">白石区平和通空手教室・清心会平和通支部</h2>
+
       <p class="detail-page__lead">
-        [白石区平和通空手教室・清心会平和通支部]<br />
         平和通空手教室は、ビックハウス平和通店2Fコミュニティスペースをお借りして平成22年3月より活動を始めました。<br />
         設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
         ビックハウス店舗内ですのでお子様が練習中にお買い物ができますので、とても便利です。<br />
@@ -37,25 +39,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=平和通体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/heiwa/Image2.jpg"
-            alt="平和通支部の稽古風景"
-            width="335"
-            height="203"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会平和通支部/平和通空手倶楽部"
@@ -77,7 +60,20 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/heiwa/Image2.jpg"
+            alt="平和通支部の稽古風景"
+            width="335"
+            height="203"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">私たちも不定期で行きます</p>
+
       <div class="detail-media">
         <figure>
           <img
@@ -101,21 +97,14 @@ const entries = [
         </figure>
       </div>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=平和通体験申込">
-          <img
-            src="/assets/images/legacy/dojo/heiwa/img12.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="平和通支部"
+        subject="平和通体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

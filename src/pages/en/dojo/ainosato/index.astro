@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Ainosato Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kita Ward Ainosato Karate Club - Seishinkai Ainosato Branch</h2>
+
       <p class="detail-page__lead">
-        [Kita Ward Ainosato Karate Club - Seishinkai Ainosato Branch]<br />
         The Ainosato karate class has been active since March 2009 (Heisei 21).<br />
         It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
         Participation by parents and children together, as well as senior class members, is especially welcome.<br />
@@ -37,12 +39,26 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Ainosato Branch Trial Lesson / Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Ainosato Branch"
+        facts={[
+          { label: "Founded", value: "March 2009 (Heisei 21)" },
+          { label: "Founder", value: "Takushi Muroki" },
+          { label: "Instructors", value: "Tsubasa Okubo, Shima" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/ainosato/img4.jpg",
+          alt: "Takuhoku Kaikan",
+          width: 455,
+          height: 305,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
+        ]}
+        address="Ainosato 4-jo 6-chome, Kita-ku, Sapporo, Takuhoku Kaikan"
+        mapHref="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
+        mapQuery="43.164024,141.403793"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -74,30 +90,15 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Ainosato Branch"
-        facts={[
-          { label: "Founded", value: "March 2009 (Heisei 21)" },
-          { label: "Founder", value: "Takushi Muroki" },
-          { label: "Instructors", value: "Tsubasa Okubo, Shima" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/ainosato/img4.jpg",
-          alt: "Takuhoku Kaikan",
-          width: 455,
-          height: 305,
-        }}
-        instructors={[
-          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
-        ]}
-        address="Ainosato 4-jo 6-chome, Kita-ku, Sapporo, Takuhoku Kaikan"
-        mapHref="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
-        mapQuery="43.164024,141.403793"
-      />
-
       <p class="detail-page__back">
         <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Ainosato Branch"
+        subject="Ainosato Branch Trial Lesson / Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Kitago Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kita-Shiroishi Karate Class, Shiroishi Ward / Seishinkai Kita-Shiroishi / Kitago Branch</h2>
+
       <p class="detail-page__lead">
-        [Kita-Shiroishi Karate Class, Shiroishi Ward / Seishinkai Kita-Shiroishi / Kitago Branch]<br />
         The Kita-Shiroishi Karate Class started in June 1998 (Heisei 10) as the Kitago Branch, at the Kitago Community Hall.<br />
         It later moved its venue to the current Kita-Shiroishi District Center, where it continues its activities today.<br />
         Since its founding, it has run as a Junior Karate class, focused mainly on preschoolers through junior high school students.<br />
@@ -40,12 +42,24 @@ const entries = [
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
 
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Kitago Trial Lesson & Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Seishinkai Kitago Branch"
+        facts={[
+          { label: "Founded", value: "June 1998 (Heisei 10)" },
+          { label: "Founder", value: "Katsumi Okubo" },
+          { label: "Past instructors", value: "Toshinobu Inuura, Namikawa, Arisa Sato" },
+          { label: "Instructors", value: "Namikawa, Takashima, plus adult black belt members joining occasionally" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kitashiroishi/2.jpg",
+          alt: "Kita-Shiroishi District Center",
+          width: 247,
+          height: 130,
+        }}
+        address="9-20 Kitago 3-jo 7-chome, Shiroishi-ku, Sapporo, Kita-Shiroishi District Center"
+        mapHref="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
+        mapQuery="43.053449,141.424351"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -68,40 +82,15 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Seishinkai Kitago Branch"
-        facts={[
-          { label: "Founded", value: "June 1998 (Heisei 10)" },
-          { label: "Founder", value: "Katsumi Okubo" },
-          { label: "Past instructors", value: "Toshinobu Inuura, Namikawa, Arisa Sato" },
-          { label: "Instructors", value: "Namikawa, Takashima, plus adult black belt members joining occasionally" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kitashiroishi/2.jpg",
-          alt: "Kita-Shiroishi District Center",
-          width: 247,
-          height: 130,
-        }}
-        address="9-20 Kitago 3-jo 7-chome, Shiroishi-ku, Sapporo, Kita-Shiroishi District Center"
-        mapHref="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
-        mapQuery="43.053449,141.424351"
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Kitago Trial Lesson & Enrollment Inquiry">
-          <img
-            src="/assets/images/legacy/dojo/kitashiroishi/img4.jpg"
-            alt="Apply for a trial lesson"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Kitago Branch"
+        subject="Kitago Trial Lesson & Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

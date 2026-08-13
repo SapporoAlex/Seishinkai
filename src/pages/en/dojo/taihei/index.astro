@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Taihei Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kita Ward Taihei Karate Club - Seishinkai Taihei Branch</h2>
+
       <p class="detail-page__lead">
-        [Kita Ward Taihei Karate Club - Seishinkai Taihei Branch]<br />
         The Taihei karate class began its activities in April 2010 (Heisei 22) at Taihei Children's Hall.<br />
         Due in part to the effects of COVID-19, the class is now held at Shinoro Community Center.<br />
         It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br />
@@ -37,12 +39,25 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Taihei Branch Trial Lesson / Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Seishinkai Taihei Branch"
+        facts={[
+          { label: "Founded", value: "April 2010 (Heisei 22)" },
+          { label: "Founder", value: "Takushi Muroki" },
+        ]}
+        instructors={[
+          { src: "/assets/images/instructors/muroki.jpg", alt: "Instructor Muroki", name: "Muroki" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/shinoro/2.jpg",
+          alt: "Shinoro Community Center",
+          width: 282,
+          height: 245,
+        }}
+        address="11-1 Shinoro 3-jo 8-chome, Kita-ku, Sapporo, Shinoro Community Center 2F"
+        mapHref="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
+        mapQuery="43.1431773,141.367712"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -65,26 +80,6 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Seishinkai Taihei Branch"
-        facts={[
-          { label: "Founded", value: "April 2010 (Heisei 22)" },
-          { label: "Founder", value: "Takushi Muroki" },
-        ]}
-        instructors={[
-          { src: "/assets/images/instructors/muroki.jpg", alt: "Instructor Muroki", name: "Muroki" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/shinoro/2.jpg",
-          alt: "Shinoro Community Center",
-          width: 282,
-          height: 245,
-        }}
-        address="11-1 Shinoro 3-jo 8-chome, Kita-ku, Sapporo, Shinoro Community Center 2F"
-        mapHref="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
-        mapQuery="43.1431773,141.367712"
-      />
-
       <p class="detail-page__note">
         ※Original venue: <a
           href="https://www.google.com/maps/place/札幌市役所+子ども未来局子ども育成部太平児童会館/@43.132231,141.359608,15z/data=!4m2!3m1!1s0x0:0xad788ca95c088659?sa=X&ved=2ahUKEwifkp6E3rHhAhUSPnAKHbKXAtIQ_BIwCnoECAoQCA"
@@ -96,6 +91,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/kita/">← Back to the Kita Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Taihei Branch"
+        subject="Taihei Branch Trial Lesson / Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

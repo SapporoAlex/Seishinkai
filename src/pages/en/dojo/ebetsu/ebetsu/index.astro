@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation Ebetsu Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Ebetsu Karate Class — Seishinkai Ebetsu Karate Club</h2>
+
       <p class="detail-page__lead">
-        [Ebetsu Karate Class — Seishinkai Ebetsu Karate Club]<br />
         The Ebetsu Karate Class began in February 2006 as Seishinkai's first karate
         class in Ebetsu, starting at the Kami-Ebetsu Community Hall.<br />
         From February 2021 the class split between the meeting room at Co-op Ebetsu 1F
@@ -45,13 +47,6 @@ const entries = [
         entries={entries}
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
-
-      <p class="detail-page__note">
-        As this is a public facility, please contact the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Ebetsu%20Trial%20Lesson%20Enquiry"
-          >Seishinkai office</a
-        > for enquiries.
-      </p>
 
       <BranchInfoCard
         name="Ebetsu Branch Information"
@@ -77,6 +72,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/ebetsu/">← Back to Ebetsu, Iwamizawa & Ishikari Dojos</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Ebetsu Branch"
+        subject="Ebetsu Trial Lesson Enquiry"
+      />
     </div>
   </section>
 </BaseLayout>

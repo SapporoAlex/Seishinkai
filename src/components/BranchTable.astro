@@ -18,13 +18,14 @@ interface Props {
 }
 const { entries, headers = ["道場・支部名", "住 所/会場施設名", "稽古日"] } =
   Astro.props as Props;
+const hasNo = entries.some((e) => e.no !== undefined && e.no !== null && e.no !== "");
 ---
 
 <div class="branch-table__wrap fade-up-in">
   <table class="branch-table fade-up-in">
     <thead>
       <tr>
-        <th class="branch-table__no"></th>
+        {hasNo && <th class="branch-table__no"></th>}
         <th>{headers[0]}</th>
         <th>{headers[1]}</th>
         <th>{headers[2]}</th>
@@ -34,7 +35,7 @@ const { entries, headers = ["道場・支部名", "住 所/会場施設名", "�
       {
         entries.map((e) => (
           <tr>
-            <td class="branch-table__no">{e.no ?? ""}</td>
+            {hasNo && <td class="branch-table__no">{e.no ?? ""}</td>}
             <td class="branch-table__name">
               {e.marker && <span class="branch-table__marker">{e.marker}</span>}
               {e.link ? (

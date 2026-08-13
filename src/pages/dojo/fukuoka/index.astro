@@ -26,8 +26,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・福岡支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">福岡空手教室・清心会福岡支部</h2>
+
       <p class="detail-page__lead">
-        [福岡空手教室・清心会福岡支部]<br />
         福岡空手教室は、平成25年4月に、笹丘公民館を会場としてスタートしました。<br />
         長らく皆様の御協力に感謝致します。<br />
         令和3年3月を持ちまして活動が終了となります。
@@ -35,10 +36,23 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※日中は仕事中なので電話に出れない場合があります。Facebookメッセンジャーなどをご利用下さい。<br />
-        ※本ページは活動終了時点の情報を旧サイトより移設したものです。
-      </p>
+      <BranchInfoCard
+        name="清心流福岡支部"
+        facts={[
+          { label: "設立", value: "平成25年(2013)4月" },
+          { label: "設立者", value: "三枝篤史" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/fukuoka/2.jpg",
+          alt: "笹丘公民館",
+          width: 250,
+          height: 126,
+        }}
+        address="福岡県福岡市　笹丘公民館"
+        mapHref="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
+        mapQuery="33.567146,130.378501"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -101,30 +115,17 @@ const entries = [
       </div>
 
       <p class="detail-page__note">
+        ※日中は仕事中なので電話に出れない場合があります。Facebookメッセンジャーなどをご利用下さい。<br />
+        ※本ページは活動終了時点の情報を旧サイトより移設したものです。
+      </p>
+
+      <p class="detail-page__note">
         　　　　　(勤務先：<a
           href="http://www.saegusayakuhin-q.co.jp/"
           target="_blank"
           rel="noopener">サエグサ薬品九州</a
         >)
       </p>
-
-      <BranchInfoCard
-        name="清心流福岡支部"
-        facts={[
-          { label: "設立", value: "平成25年(2013)4月" },
-          { label: "設立者", value: "三枝篤史" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/fukuoka/2.jpg",
-          alt: "笹丘公民館",
-          width: 250,
-          height: 126,
-        }}
-        address="福岡県福岡市　笹丘公民館"
-        mapHref="https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA"
-        mapQuery="33.567146,130.378501"
-        viewOnMapLabel="Google Mapsで見る"
-      />
 
       <p class="detail-page__back">
         <a href="/dojo/naichi/">← 静岡県・愛知県・千葉県の空手道場の一覧へ戻る</a>

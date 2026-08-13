@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,38 +27,16 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・丘珠支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">東区丘珠空手教室・清心会丘珠支部</h2>
+
       <p class="detail-page__lead">
-        [東区丘珠空手教室・清心会丘珠支部]<br />
         丘珠空手教室は、平成21年3月に、丘珠たから児童会館でスタートしました。<br />
         キッズ空手、ジュニア空手中心の空手クラブです。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
         体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
       </p>
 
-      <p class="detail-page__note">
-        ※コロナの関係で令和2年5月より、児童会館より丘珠みなみ会館へ会場が移転しましたが、マスク自由化に伴い令和5年5月より以前の丘珠たから児童会館で活動しています。
-      </p>
-
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=丘珠 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/okadama/Image1.jpg"
-            alt="丘珠支部の稽古風景"
-            width="272"
-            height="175"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会丘珠支部"
@@ -84,21 +63,30 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=丘珠 体験・入会問い合わせ">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/images/Image2.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="260"
+            src="/assets/images/legacy/dojo/okadama/Image1.jpg"
+            alt="丘珠支部の稽古風景"
+            width="272"
+            height="175"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※コロナの関係で令和2年5月より、児童会館より丘珠みなみ会館へ会場が移転しましたが、マスク自由化に伴い令和5年5月より以前の丘珠たから児童会館で活動しています。
       </p>
 
       <p class="detail-page__back">
         <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="丘珠支部"
+        subject="丘珠 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

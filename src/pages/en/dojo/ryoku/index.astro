@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Hanakawa-Higashi & Ryokuentai Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Ishikari Hanakawa-Higashi Karate Class / Seishinkai Ryokuentai Branch</h2>
+
       <p class="detail-page__lead">
-        [Ishikari Hanakawa-Higashi Karate Class / Seishinkai Ryokuentai Branch]<br />
         The Hanakawa-Higashi & Ryokuentai Karate Class was founded in March 2018 (Heisei 30), using the Ryokuentai Green Hall as its venue.<br />
         It is a karate club focused mainly on Junior Karate and Parent-Child Karate.<br />
         We especially welcome parent-child participants and members of our Senior Class.<br />
@@ -38,25 +40,6 @@ const entries = [
         entries={entries}
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Ryokuentai Trial Lesson Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/ryoku/Image1.jpg"
-            alt="Ryokuentai Branch practice session"
-            width="288"
-            height="170"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Hanakawa-Higashi & Ryokuentai Branch"
@@ -75,21 +58,27 @@ const entries = [
         mapQuery="43.163705,141.342457"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Ryokuentai Trial Lesson Application">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/ryoku/img5.jpg"
-            alt="Apply for a trial lesson"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/ryoku/Image1.jpg"
+            alt="Ryokuentai Branch practice session"
+            width="288"
+            height="170"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/en/dojo/ebetsu/">← Back to the list of dojos & classes in Ebetsu, Iwamizawa & Ishikari</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Hanakawa-Higashi & Ryokuentai Branch"
+        subject="Ryokuentai Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

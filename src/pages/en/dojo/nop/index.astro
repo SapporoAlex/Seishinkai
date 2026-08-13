@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Nopporo Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Nopporo Karate Class, Ebetsu City / Seishinkai Nopporo Branch</h2>
+
       <p class="detail-page__lead">
-        [Nopporo Karate Class, Ebetsu City / Seishinkai Nopporo Branch]<br />
         The Nopporo Karate Class started in October 2007 (Heisei 19) at the Morinodai Memorial Hall, along Sanban-dori in Ebetsu.<br />
         It is a karate club focused mainly on the Junior Class.<br />
         We especially welcome parent-child participants and members of our Senior Class.<br />
@@ -38,25 +40,6 @@ const entries = [
         entries={entries}
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Nopporo Trial Lesson Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/nop/Image1.jpg"
-            alt="Nopporo Branch practice session"
-            width="243"
-            height="122"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Nopporo Branch, Ebetsu City"
@@ -81,21 +64,27 @@ const entries = [
         mapQuery="43.0969071,141.5075755"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Nopporo Trial Lesson Application">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/nop/img3.jpg"
-            alt="Apply for a trial lesson"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/nop/Image1.jpg"
+            alt="Nopporo Branch practice session"
+            width="243"
+            height="122"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/en/dojo/ebetsu/">← Back to the list of dojos & classes in Ebetsu, Iwamizawa & Ishikari</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Nopporo Branch"
+        subject="Nopporo Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・あいの里支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">北区あいの里空手教室・清心会あいの里支部</h2>
+
       <p class="detail-page__lead">
-        [北区あいの里空手教室・清心会あいの里支部]<br />
         あいの里空手教室は、平成21年3月より活動しています。<br />
         キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -37,12 +39,27 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=あいの里支部 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="あいの里支部"
+        facts={[
+          { label: "設立", value: "平成21年(2009)3月" },
+          { label: "設立者", value: "室木拓士" },
+          { label: "担当", value: "大久保 翼、島" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/ainosato/img4.jpg",
+          alt: "拓北会館",
+          width: 455,
+          height: 305,
+        }}
+        instructors={[
+          { src: "/assets/images/instructors/shima.jpg", alt: "担当 島", name: "島" },
+        ]}
+        address="札幌市北区あいの里４条６丁目　拓北会館"
+        mapHref="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
+        mapQuery="43.164024,141.403793"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -74,31 +91,14 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="あいの里支部"
-        facts={[
-          { label: "設立", value: "平成21年(2009)3月" },
-          { label: "設立者", value: "室木拓士" },
-          { label: "担当", value: "大久保 翼、島" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/ainosato/img4.jpg",
-          alt: "拓北会館",
-          width: 455,
-          height: 305,
-        }}
-        instructors={[
-          { src: "/assets/images/instructors/shima.jpg", alt: "担当 島", name: "島" },
-        ]}
-        address="札幌市北区あいの里４条６丁目　拓北会館"
-        mapHref="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
-        mapQuery="43.164024,141.403793"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
       <p class="detail-page__back">
         <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="あいの里支部"
+        subject="あいの里支部 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

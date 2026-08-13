@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Satozuka Karate Class</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kiyota-ku Satozuka Karate Class - Seishinkai Satozuka Branch</h2>
+
       <p class="detail-page__lead">
-        [Kiyota-ku Satozuka Karate Class - Seishinkai Satozuka Branch]<br />
         The Satozuka Karate Class started on the 2nd floor of the Daiho-yu Satozuka store in February 1999 (Heisei 11).<br />
         It later moved through the Satozuka Hall and the Satozuka District Center before settling at its current venue, the Midorigaoka Neighborhood Hall.<br />
         The class is centered on the kids' and junior classes. Participation by parents and children together, and by senior members, is also welcome.<br />
@@ -35,34 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Satozuka Trial Lesson Inquiry"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/satozuka/Image1.jpg"
-            alt="Satozuka Karate Class practice session"
-            width="247"
-            height="149"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="Satozuka Karate Class practice session"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Satozuka Branch"
@@ -88,9 +62,36 @@ const entries = [
         mapQuery="42.9895177,141.4727112"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/satozuka/Image1.jpg"
+            alt="Satozuka Karate Class practice session"
+            width="247"
+            height="149"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="Satozuka Karate Class practice session"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__back">
         <a href="/en/dojo/minami-kiyota/">← Back to the Kiyota Ward & Minami Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Satozuka Karate Class"
+        subject="Satozuka Trial Lesson Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

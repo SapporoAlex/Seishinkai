@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -28,8 +29,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・川下支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">川下空手教室・清心会川下支部</h2>
+
       <p class="detail-page__lead">
-        [川下空手教室・清心会川下支部]<br />
         川下空手教室は、平成23年6月より東川下集会所で活動を始めました。<br />
         令和3年2月よりコープさっぽろ川下店のサークル室に会場を変更しました。<br />
         設立以来、ジュニア空手、親子空手として開始し、園児から大人まで幅広く活動中です。<br />
@@ -38,25 +40,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は公共施設を借りていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=川下体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/kawashimo/Image1.jpg"
-            alt="川下支部の稽古風景"
-            width="270"
-            height="115"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="清心会川下支部/川下空手倶楽部"
@@ -80,6 +63,19 @@ const entries = [
         mapQuery="43.0492478,141.4447141"
         viewOnMapLabel="Google Mapsで見る"
       />
+
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/kawashimo/Image1.jpg"
+            alt="川下支部の稽古風景"
+            width="270"
+            height="115"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <div class="detail-gallery">
         <figure>
           <a
@@ -123,21 +119,14 @@ const entries = [
         >
       </p>
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=川下体験申込">
-          <img
-            src="/assets/images/legacy/dojo/kawashimo/img20.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="川下支部"
+        subject="川下体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

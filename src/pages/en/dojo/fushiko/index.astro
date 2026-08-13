@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate-do Federation — Fushiko Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Fushiko Karate Class, Seishinkai Fushiko Branch, Higashi Ward</h2>
+
       <p class="detail-page__lead">
-        [Fushiko Karate Class, Seishinkai Fushiko Branch, Higashi Ward]<br />
         The Fushiko Karate Class began in November 2011 (Heisei 23) at the Fushiko Memorial Hall.<br />
         It is a karate club centered on Kids Karate, the Junior Class, and Parent-Child Karate.<br />
         We especially welcome participation from parents and children together, and from the Senior Class.<br />
@@ -35,25 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※Since the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Fushiko Trial Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/fushiko/Image1.jpg"
-            alt="Practice session at the Fushiko Branch"
-            width="324"
-            height="190"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Seishinkai Fushiko Branch"
@@ -78,21 +61,27 @@ const entries = [
         mapQuery="43.090063,141.3897776"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Fushiko Trial Application">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/fushiko/imgA.jpg"
-            alt="Click here to apply for a trial lesson"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/fushiko/Image1.jpg"
+            alt="Practice session at the Fushiko Branch"
+            width="324"
+            height="190"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Fushiko Branch"
+        subject="Fushiko Trial Application"
+      />
     </div>
   </section>
 </BaseLayout>

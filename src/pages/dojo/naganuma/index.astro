@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・長沼支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">長沼町空手教室・清心会長沼支部</h2>
+
       <p class="detail-page__lead">
-        [長沼町空手教室・清心会長沼支部]<br />
         長沼空手教室は、長沼町にお住まいで北広島支部に通われていた会員がメンバーを集め、平成23年8月よりスタートしました。<br
         />
         会場は、長沼スポーツセンターです。<br />
@@ -38,34 +40,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=長沼体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/naganuma/Image1.jpg"
-            alt="長沼支部の稽古風景"
-            width="237"
-            height="124"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="清心会空手の稽古風景"
-            width="649"
-            height="196"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="長沼支部"
@@ -90,6 +64,27 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/naganuma/Image1.jpg"
+            alt="長沼支部の稽古風景"
+            width="237"
+            height="124"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/images/Image1.jpg"
+            alt="清心会空手の稽古風景"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">
         ※本部直轄につき指導員は交代で複数名が参加します。
       </p>
@@ -97,6 +92,11 @@ const entries = [
       <p class="detail-page__back">
         <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="長沼支部"
+        subject="長沼体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

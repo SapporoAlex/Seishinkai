@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Kyogoku Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Kyogoku Karate Class / Seishinkai Kyogoku Branch</h2>
+
       <p class="detail-page__lead">
-        [Kyogoku Karate Class / Seishinkai Kyogoku Branch]<br />
         The Kyogoku Karate Club began as a branch started by members from Kyogoku Town who had been commuting
         to the Kimobetsu Branch, with the kind cooperation of Kotoku-ji Temple in Kyogoku Town.<br />
         The venue later moved to the Social Welfare Center, and since December 2019 (Reiwa 1) has been the
@@ -43,13 +45,23 @@ const entries = [
         headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
       />
 
-      <p class="detail-page__note">
-        ※Session 1: white belt–light blue belt, 18:15–19:00 / Session 2: blue belt and above, 19:05–20:00.
-        As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Kyogoku Trial Lesson Application"
-          >office</a
-        >.
-      </p>
+      <BranchInfoCard
+        name="Kyogoku Branch"
+        facts={[
+          { label: "Founded", value: "November 2017 (Heisei 29)" },
+          { label: "Founder", value: "Takuro Komada" },
+          { label: "In charge", value: "Tsubasa Okubo" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kyogoku/img3.jpg",
+          alt: "Kyogoku Town Community Hall",
+          width: 350,
+          height: 184,
+        }}
+        address="160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall"
+        mapHref="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
+        mapQuery="160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -99,23 +111,10 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="Kyogoku Branch"
-        facts={[
-          { label: "Founded", value: "November 2017 (Heisei 29)" },
-          { label: "Founder", value: "Takuro Komada" },
-          { label: "In charge", value: "Tsubasa Okubo" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kyogoku/img3.jpg",
-          alt: "Kyogoku Town Community Hall",
-          width: 350,
-          height: 184,
-        }}
-        address="160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall"
-        mapHref="https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8"
-        mapQuery="160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall"
-      />
+      <p class="detail-page__note">
+        ※Session 1: white belt–light blue belt, 18:15–19:00 / Session 2: blue belt and above, 19:05–20:00.
+        
+      </p>
 
       <p class="detail-page__note">
         ※Former venues: <a
@@ -147,6 +146,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/tobetsu/">← Back to the Dojo List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Kyogoku Branch"
+        subject="Kyogoku Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

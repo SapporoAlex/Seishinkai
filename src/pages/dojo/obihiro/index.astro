@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・帯広支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">帯広市空手教室・清心会帯広支部</h2>
+
       <p class="detail-page__lead">
-        [帯広市空手教室・清心会帯広支部]<br />
         帯広空手教室は、平成29年4月より本格的スタートしました。<br />
         会場は、鉄南地区コミュニティセンターです。<br />
         キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br />
@@ -35,38 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-
-      <h2 class="detail-page__heading">帯広支部 お問い合わせ</h2>
-        <p class="detail-page__note">
-        090-6692-6573　工藤まで（日中は働いていますので17:00以降に御連絡下さい）<br />
-        帯広支部問合せ　<a href="mailto:kudo813@seishinkan.ne.jp">kudo813@seishinkan.ne.jp</a><br />
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=帯広支部 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/obihiro/Image1.jpg"
-            alt="帯広支部の稽古風景"
-            width="352"
-            height="159"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/obihiro/2.jpg"
-            alt="鉄南地区コミュニティセンター"
-            width="180"
-            height="135"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="帯広支部"
@@ -89,9 +59,37 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/obihiro/Image1.jpg"
+            alt="帯広支部の稽古風景"
+            width="352"
+            height="159"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/obihiro/2.jpg"
+            alt="鉄南地区コミュニティセンター"
+            width="180"
+            height="135"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__back">
         <a href="/dojo/kitahiro/">← 帯広・恵庭・旭川の空手教室一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="帯広支部"
+        subject="帯広支部 体験・入会問い合わせ"
+        directPhone={{ number: "090-6692-6573", tel: "09066926573", note: "工藤（平日は17:00以降に）" }}
+        directEmail="kudo813@seishinkan.ne.jp"
+      />
     </div>
   </section>
 </BaseLayout>

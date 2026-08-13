@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・月寒支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">豊平区月寒空手教室・清心会月寒支部</h2>
+
       <p class="detail-page__lead">
-        [豊平区月寒空手教室・清心会月寒支部]<br />
         月寒西空手教室は、月寒児童会館をお借りして平成22年3月より活動をしていますが、母体となる最初の月寒支部教室は月寒五区会館で1993年より開始した、清心会でも古い支部教室のひとつです。<br
         />
         設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br />
@@ -36,25 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} />
-
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=月寒 体験・入会問い合わせ"
-          >事務局</a
-        >までお願いします。
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/tsukisam-n/acs1.jpg"
-            alt="月寒支部の稽古風景"
-            width="315"
-            height="141"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="月寒支部"
@@ -81,21 +64,26 @@ const entries = [
         viewOnMapLabel="Google Mapsで見る"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=月寒 体験・入会問い合わせ">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/tsukisam-n/img2.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/tsukisam-n/acs1.jpg"
+            alt="月寒支部の稽古風景"
+            width="315"
+            height="141"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="月寒支部"
+        subject="月寒 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

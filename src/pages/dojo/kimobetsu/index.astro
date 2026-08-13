@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・喜茂別支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">喜茂別町空手教室・清心会喜茂別支部</h2>
+
       <p class="detail-page__lead">
-        [喜茂別町空手教室・清心会喜茂別支部]<br />
         喜茂別空手クラブは、清心流と縁の深い神道自然流支部としてスタートし、平成19年12月より清心会喜茂別支部として新スタートを切りました。<br
         />
         会場は、喜茂別武道館です。<br />
@@ -37,12 +39,24 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※稽古時間は18:30-19:30(中級以上は20:00まで)。会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=喜茂別体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="喜茂別町支部"
+        facts={[
+          { label: "設立", value: "平成19年(2007)12月" },
+          { label: "設立者", value: "大久保勝美" },
+          { label: "担当者", value: "本部直轄" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/kimobetsu/2.jpg",
+          alt: "喜茂別町武道館",
+          width: 286,
+          height: 211,
+        }}
+        address="虻田郡喜茂別町字喜茂別22　喜茂別町武道館"
+        mapHref="https://www.google.com/maps/place/喜茂別武道館/@42.7988387,140.9335731,15z/data=!4m5!3m4!1s0x0:0x81f4a8b87c2dd038!8m2!3d42.7988387!4d140.9335731"
+        mapQuery="42.7988387,140.9335731"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -74,24 +88,9 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="喜茂別町支部"
-        facts={[
-          { label: "設立", value: "平成19年(2007)12月" },
-          { label: "設立者", value: "大久保勝美" },
-          { label: "担当者", value: "本部直轄" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/kimobetsu/2.jpg",
-          alt: "喜茂別町武道館",
-          width: 286,
-          height: 211,
-        }}
-        address="虻田郡喜茂別町字喜茂別22　喜茂別町武道館"
-        mapHref="https://www.google.com/maps/place/喜茂別武道館/@42.7988387,140.9335731,15z/data=!4m5!3m4!1s0x0:0x81f4a8b87c2dd038!8m2!3d42.7988387!4d140.9335731"
-        mapQuery="42.7988387,140.9335731"
-        viewOnMapLabel="Google Mapsで見る"
-      />
+      <p class="detail-page__note">
+        ※稽古時間は18:30-19:30(中級以上は20:00まで)。
+      </p>
 
       <p class="detail-page__note">
         ※会費等：月会費2,500円～(喜茂別町民)。別途年会費等。
@@ -100,6 +99,11 @@ const entries = [
       <p class="detail-page__back">
         <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="喜茂別支部"
+        subject="喜茂別体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

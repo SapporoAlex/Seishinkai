@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Fushimi Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Chuo Ward Fushimi Karate Club - Seishinkai Fushimi Branch</h2>
+
       <p class="detail-page__lead">
-        [Chuo Ward Fushimi Karate Club - Seishinkai Fushimi Branch]<br />
         The Fushimi karate class got its start in April 2012 (Heisei 24), borrowing meeting-room space from a supporting company thanks to their cooperation.<br />
         Due to security considerations, the venue was moved the following year to its current location, Fushimi Kaikan, where it has been active ever since.<br />
         Since its founding, the class has centered on Junior Karate and Parent-Child Karate.<br />
@@ -36,29 +38,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Fushimi Trial Lesson Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/fushimi/Image1.jpg"
-            alt="Training session at the Fushimi Branch"
-            width="292"
-            height="182"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-
-      <p class="detail-page__note">
-        Note: Adult black belt members participate on an irregular basis.
-      </p>
 
       <BranchInfoCard
         name="Fushimi Branch"
@@ -82,21 +61,31 @@ const entries = [
         mapQuery="43.0410241,141.3303314"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Fushimi Trial Lesson Application">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/fushimi/imgC.jpg"
-            alt="Apply for a trial lesson here"
-            width="645"
-            height="293"
+            src="/assets/images/legacy/dojo/fushimi/Image1.jpg"
+            alt="Training session at the Fushimi Branch"
+            width="292"
+            height="182"
             loading="lazy"
           />
-        </a>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        Note: Adult black belt members participate on an irregular basis.
       </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/cyuo/">← Back to the Chuo Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Fushimi Branch"
+        subject="Fushimi Trial Lesson Application"
+      />
     </div>
   </section>
 </BaseLayout>

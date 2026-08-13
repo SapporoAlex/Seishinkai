@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Toyohira Park Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Toyohira Park Karate Club - Seishinkai Toyohira Park Branch</h2>
+
       <p class="detail-page__lead">
-        [Toyohira Park Karate Club - Seishinkai Toyohira Park Branch]<br />
         The Toyohira Park karate class got its start in June 2015 (Heisei 27), borrowing space at the Toyohira Youth Activity Center.<br />
         Since its founding, the class has centered on Junior Karate, with members ranging from preschoolers to junior high schoolers.<br />
         Participation by parents and children together, as well as senior class members, is also welcome.<br />
@@ -38,25 +40,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※As the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Toyohira Park Branch Trial Lesson & Enrollment Inquiry"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/toyohira-k/img8.jpg"
-            alt="Training session at the Toyohira Park Branch"
-            width="282"
-            height="162"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Toyohira Park Branch"
@@ -79,21 +62,27 @@ const entries = [
         mapQuery="43.0430538,141.3731148"
       />
 
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=Toyohira Park Branch Trial Lesson & Enrollment Inquiry">
+      <div class="detail-gallery">
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/toyohira-k/img4.jpg"
-            alt="Apply for a trial lesson here"
-            width="645"
-            height="271"
+            src="/assets/images/legacy/dojo/toyohira-k/img8.jpg"
+            alt="Training session at the Toyohira Park Branch"
+            width="282"
+            height="162"
             loading="lazy"
           />
-        </a>
-      </p>
+        </figure>
+      </div>
 
       <p class="detail-page__back">
         <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Toyohira Park Branch"
+        subject="Toyohira Park Branch Trial Lesson & Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

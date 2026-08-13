@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation - Chuo-Higashi Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Sapporo Chuo-Higashi Karate Class - Seishinkai Chuo-Higashi Branch</h2>
+
       <p class="detail-page__lead">
-        [Sapporo Chuo-Higashi Karate Class - Seishinkai Chuo-Higashi Branch]<br />
         The Chuo-Higashi karate class, nicknamed the "Kamome Branch," was established in June 2015 (Heisei 27).<br />
         It offers both a Junior class and a General class (working adults and students); being located in Chuo Ward, it draws a well-balanced mix of adults and children.<br />
         With easy access near the subway Bus Center Station, many members attend on their way home from work for stress relief and general health.<br />
@@ -38,9 +40,33 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
-      <p class="detail-page__note">
-        ◆Training days / Wednesdays 18:30–19:30 (Junior) / 19:30–20:30 (General)
-      </p>
+      <BranchInfoCard
+        name="Chuo-Higashi Branch"
+        facts={[
+          { label: "Founded", value: "June 2015 (Heisei 27)" },
+          { label: "Founder", value: "Jun Mikami" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/mikami/2.jpg",
+          alt: "Mikami Bldg. (Kamome Academy)",
+          width: 230,
+          height: 203,
+        }}
+        address="1-10 Minami 2-jo Higashi 4-chome, Chuo-ku, Sapporo, Mikami Bldg. 3F"
+        addressNote="About a 4-minute walk (300m) from the subway Bus Center Station. There is no on-site parking, so if driving please use a nearby paid parking lot."
+        mapHref="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0593031,141.3601062,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
+        mapQuery="43.0593031,141.3601062"
+      />
+
+      <div class="detail-media">
+        <img
+          src="/assets/images/legacy/dojo/mikami/Image1.jpg"
+          alt="Signboard at the entrance of Mikami Bldg."
+          width="247"
+          height="194"
+          loading="lazy"
+        />
+      </div>
 
       <div class="detail-gallery">
         <figure>
@@ -86,37 +112,19 @@ const entries = [
         </a>
       </div>
 
-      <BranchInfoCard
-        name="Chuo-Higashi Branch"
-        facts={[
-          { label: "Founded", value: "June 2015 (Heisei 27)" },
-          { label: "Founder", value: "Jun Mikami" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/mikami/2.jpg",
-          alt: "Mikami Bldg. (Kamome Academy)",
-          width: 230,
-          height: 203,
-        }}
-        address="1-10 Minami 2-jo Higashi 4-chome, Chuo-ku, Sapporo, Mikami Bldg. 3F"
-        addressNote="About a 4-minute walk (300m) from the subway Bus Center Station. There is no on-site parking, so if driving please use a nearby paid parking lot."
-        mapHref="https://www.google.com/maps/place/〒060-0052+北海道札幌市中央区南２条東４丁目１/@43.0593031,141.3601062,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b29788cad6f89:0xb8705edfef429a09!8m2!3d43.0593031!4d141.3622949"
-        mapQuery="43.0593031,141.3601062"
-      />
-
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/mikami/Image1.jpg"
-          alt="Signboard at the entrance of Mikami Bldg."
-          width="247"
-          height="194"
-          loading="lazy"
-        />
-      </div>
+      <p class="detail-page__note">
+        ◆Training days / Wednesdays 18:30–19:30 (Junior) / 19:30–20:30 (General)
+      </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/cyuo/">← Back to the Chuo Ward dojo & class list</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Chuo-Higashi Branch"
+        subject="Chuo-Higashi Branch Trial & Enrollment Inquiry"
+      />
     </div>
   </section>
 </BaseLayout>

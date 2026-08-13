@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 ---
 
 <BaseLayout
@@ -37,6 +38,7 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
       </p>
 
       <h2 class="detail-page__heading">負けない心、くじけない心をつくる 清心会空手</h2>
+
       <table class="table">
         <tbody>
           <tr>
@@ -82,6 +84,7 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
           { src: "/assets/images/instructors/ito.jpg", alt: "伊藤二段(教職員)", name: "伊藤" },
         ]}
       />
+
       <div class="detail-media">
         <a href="https://youtu.be/bqi8972NRXE" target="_blank" rel="noopener">
           <img
@@ -92,11 +95,13 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
         </a>
         <p class="detail-media__caption">紹介動画(YouTube)</p>
       </div>
+
       <p class="detail-page__note">
         ※井上塾は全日本フルコンタクト空手道連盟に加盟しています。
       </p>
 
       <h2 class="detail-page__heading">組手練習</h2>
+
       <div class="detail-gallery">
         <figure>
           <img
@@ -108,6 +113,7 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
       </div>
 
       <h2 class="detail-page__heading">指導者</h2>
+
       <p class="detail-page__note">
         ※指導員は就労後のボランティアとして従事しています。
       </p>
@@ -115,6 +121,11 @@ import BranchInfoCard from "@components/BranchInfoCard.astro";
       <p class="detail-page__back">
         <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="井上空手道場"
+        subject="井上空手道場 体験・入会問い合わせ"
+      />
     </div>
   </section>
 </BaseLayout>

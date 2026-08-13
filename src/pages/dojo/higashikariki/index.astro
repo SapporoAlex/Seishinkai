@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">清心会空手道連盟・東雁来支部</h1>
       </div>
 
+      <h2 class="detail-page__heading">東雁来空手教室・清心会東雁来支部</h2>
+
       <p class="detail-page__lead">
-        [東雁来空手教室・清心会東雁来支部]<br />
         東雁来空手教室は、令和3年2月に東雁来集会所でスタートし、翌年、東雁来児童会館に会場を移動しました。<br />
         子供から大人まで楽しく学べる空手です。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
@@ -36,12 +38,24 @@ const entries = [
 
       <BranchTable entries={entries} />
 
-      <p class="detail-page__note">
-        ※会場は施設をお借りしていますので、お問い合わせは<a
-          href="mailto:karate@seishinkan.ne.jp?subject=東雁来体験申込"
-          >事務局</a
-        >までお願いします。
-      </p>
+      <BranchInfoCard
+        name="清心会東雁来支部"
+        facts={[
+          { label: "設立", value: "令和3年(2021)2月" },
+          { label: "設立者", value: "猪又敬之" },
+          { label: "担当", value: "本部直轄　斎藤、不定期で一般部員有段者が交代で参加します" },
+        ]}
+        image={{
+          src: "/assets/images/legacy/dojo/higashikariki/img3.jpg",
+          alt: "東雁来児童会館",
+          width: 437,
+          height: 239,
+        }}
+        address="札幌市東区東雁来14条2丁目1-1　東雁来児童会館"
+        mapHref="https://www.google.com/maps/place/札幌市東雁来児童会館+かりたま/@43.105653,141.4308999,15z/data=!4m5!3m4!1s0x0:0xeb5bbea1f521e82b!8m2!3d43.1056214!4d141.4308765"
+        mapQuery="43.105653,141.4308999"
+        viewOnMapLabel="Google Mapsで見る"
+      />
 
       <div class="detail-gallery">
         <figure>
@@ -64,40 +78,14 @@ const entries = [
         </figure>
       </div>
 
-      <BranchInfoCard
-        name="清心会東雁来支部"
-        facts={[
-          { label: "設立", value: "令和3年(2021)2月" },
-          { label: "設立者", value: "猪又敬之" },
-          { label: "担当", value: "本部直轄　斎藤、不定期で一般部員有段者が交代で参加します" },
-        ]}
-        image={{
-          src: "/assets/images/legacy/dojo/higashikariki/img3.jpg",
-          alt: "東雁来児童会館",
-          width: 437,
-          height: 239,
-        }}
-        address="札幌市東区東雁来14条2丁目1-1　東雁来児童会館"
-        mapHref="https://www.google.com/maps/place/札幌市東雁来児童会館+かりたま/@43.105653,141.4308999,15z/data=!4m5!3m4!1s0x0:0xeb5bbea1f521e82b!8m2!3d43.1056214!4d141.4308765"
-        mapQuery="43.105653,141.4308999"
-        viewOnMapLabel="Google Mapsで見る"
-      />
-
-      <p class="detail-page__note">
-        <a href="mailto:karate@seishinkan.ne.jp?subject=東雁来体験申込">
-          <img
-            src="/assets/images/legacy/dojo/higashikariki/img16.jpg"
-            alt="体験申込はこちら"
-            width="645"
-            height="293"
-            loading="lazy"
-          />
-        </a>
-      </p>
-
       <p class="detail-page__back">
         <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="東雁来支部"
+        subject="東雁来体験申込"
+      />
     </div>
   </section>
 </BaseLayout>

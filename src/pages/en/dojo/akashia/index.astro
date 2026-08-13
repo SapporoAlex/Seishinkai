@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BranchTable from "@components/BranchTable.astro";
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
@@ -26,8 +27,9 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate-do Federation — Akashia Branch</h1>
       </div>
 
+      <h2 class="detail-page__heading">Akashia Karate Class, Seishinkai Akashia Branch, Higashi Ward</h2>
+
       <p class="detail-page__lead">
-        [Akashia Karate Class, Seishinkai Akashia Branch, Higashi Ward]<br />
         The Sapporo Higashi Akashia Karate Class started in June 2018 (Heisei 30) at the Akashia Youth Activity Center.<br />
         It sits near Ishikari Kaido, the boundary between Higashi Ward and Kita Ward, making it easy to reach for residents of both areas.<br />
         It centers on Kids and Junior classes, and also welcomes participation from parents and children together, and from the Senior Class.<br />
@@ -35,25 +37,6 @@ const entries = [
       </p>
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
-
-      <p class="detail-page__note">
-        ※Since the venue is a rented facility, please direct inquiries to the <a
-          href="mailto:karate@seishinkan.ne.jp?subject=Akashia Trial Application"
-          >office</a
-        >.
-      </p>
-
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/dojo/akashia/Image1.jpg"
-            alt="Practice session at the Akashia Branch"
-            width="327"
-            height="207"
-            loading="lazy"
-          />
-        </figure>
-      </div>
 
       <BranchInfoCard
         name="Higashi Ward — Akashia Branch"
@@ -81,6 +64,18 @@ const entries = [
         mapQuery="Akashia Youth Activity Center, Kita 22-jo Higashi 1-chome 1-20, Higashi-ku, Sapporo"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/legacy/dojo/akashia/Image1.jpg"
+            alt="Practice session at the Akashia Branch"
+            width="327"
+            height="207"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__note">
         <img
           src="/assets/images/legacy/images/Image1_akashia_wide.jpg"
@@ -94,6 +89,12 @@ const entries = [
       <p class="detail-page__back">
         <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Akashia Branch"
+        subject="Akashia Trial Application"
+      />
     </div>
   </section>
 </BaseLayout>
