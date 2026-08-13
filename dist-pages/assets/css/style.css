@@ -3075,11 +3075,14 @@ a.content-slider__slide:hover .content-slider__media img {
 .detail-page__img-text-pair {
   display: flex;
   gap: 40px;
+  margin-bottom: 32px;
+  align-items: center;
 }
 @media (max-width: 47.98rem) {
   .detail-page__img-text-pair {
     flex-direction: column;
     gap: 16px;
+    margin-bottom: 24px;
   }
 }
 .detail-page__img-text-pair--reverse {
@@ -3087,11 +3090,14 @@ a.content-slider__slide:hover .content-slider__media img {
   flex-direction: row-reverse;
   justify-content: space-between;
   gap: 40px;
+  margin-bottom: 32px;
+  align-items: center;
 }
 @media (max-width: 47.98rem) {
   .detail-page__img-text-pair--reverse {
     flex-direction: column;
     gap: 16px;
+    margin-bottom: 24px;
   }
 }
 .detail-page__img-text-pair--col {
@@ -3905,6 +3911,99 @@ a.content-slider__slide:hover .content-slider__media img {
   height: auto;
   margin-top: 8px;
   border: 1px solid var(--border);
+}
+
+.dojo-contact {
+  margin: 40px 0;
+  padding: 36px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fff 0%, #f4f8fd 100%);
+  box-shadow: 0 4px 14px rgba(13, 37, 69, 0.05);
+}
+@media (max-width: 47.98rem) {
+  .dojo-contact {
+    padding: 24px 20px;
+    margin: 32px 0;
+  }
+}
+.dojo-contact__header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.dojo-contact__header span {
+  color: var(--red);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+.dojo-contact__header h2 {
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin: 10px 0 8px;
+}
+.dojo-contact__header p {
+  color: var(--text-mid);
+}
+.dojo-contact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.dojo-contact__card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(13, 37, 69, 0.05);
+}
+.dojo-contact__card--highlight {
+  border-top: 4px solid var(--red);
+}
+.dojo-contact__icon {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.dojo-contact__card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  margin: 0 0 8px;
+}
+.dojo-contact__big {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--red);
+  text-decoration: none;
+}
+.dojo-contact__big:hover {
+  text-decoration: underline;
+}
+.dojo-contact__card small {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--text-mid);
+}
+.dojo-contact__email {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  word-break: break-all;
+  text-decoration: none;
+}
+.dojo-contact__email:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.dojo-contact__note {
+  margin: 22px 0 0;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  text-align: center;
 }
 
 .class-schedule-grid {

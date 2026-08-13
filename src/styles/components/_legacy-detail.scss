@@ -26,7 +26,6 @@
     font-weight: 600;
     color: var(--navy);
     margin-bottom: 32px;
-
     @include mqsp {
       margin-bottom: 24px;
     }
@@ -35,9 +34,12 @@
   &__img-text-pair {
     display: flex;
     gap: 40px;
+    margin-bottom: 32px;
+    align-items: center;
     @include mqsp {
       flex-direction: column;
       gap: 16px;
+      margin-bottom: 24px;
     }
   }
   &__img-text-pair--reverse {
@@ -45,9 +47,12 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     gap: 40px;
+    margin-bottom: 32px;
+    align-items: center;
     @include mqsp {
       flex-direction: column;
       gap: 16px;
+      margin-bottom: 24px;
     }
   }
   &__img-text-pair--col {
