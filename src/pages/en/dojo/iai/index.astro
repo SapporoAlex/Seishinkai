@@ -1,5 +1,35 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "Iaido Division",
+    address: "Seishinkan Headquarters Dojo",
+    schedule: ["Sunday 14:00–15:00", "※Autumn/Winter/Spring hours; evening start possible in summer"],
+  },
+];
+
+const videos = [
+  {
+    href: "https://www.youtube.com/playlist?list=PLyugCVja4s7Kz8vG3OA4GyMEpSKcsDzQV",
+    image: "/assets/images/legacy/dojo/iai/img6.jpg",
+    caption: "Performance Video",
+  },
+  {
+    href: "https://www.youtube.com/playlist?list=PLyugCVja4s7Kz8vG3OA4GyMEpSKcsDzQV",
+    image: "/assets/images/legacy/dojo/iai/img4.jpg",
+    caption: "Early Members of the Seishinkai Iaido Division",
+  },
+  {
+    href: "https://www.youtube.com/channel/UClIx3Srenlu1ddf5coow83A",
+    image: "/assets/images/legacy/dojo/iai/img3.jpg",
+    caption: "Taku Muroki's Channel",
+  },
+];
 ---
 
 <BaseLayout
@@ -30,24 +60,46 @@ import BaseLayout from "@layouts/BaseLayout.astro";
           >Sundays from 14:00</a
         ><br />
         ※Autumn/Winter/Spring hours<br />
-        During the height of summer heat, sessions may begin in the evening instead
+        During the height of summer heat, sessions may begin in the evening instead<br />
+        Opening times may be delayed due to traffic conditions, so please wait if this happens.<br />
+        Trial classes are available for 1,000 yen. We also offer one-time private seminars (tuition: 5,000–10,000 yen).
       </p>
 
+      <BranchTable
+        entries={entries}
+        headers={["Dojo / Division", "Address / Venue", "Training Days"]}
+      />
+
+      <BranchInfoCard
+        name="Seishinkai Iaido Division"
+        facts={[
+          { label: "Founded", value: "July 2005 (Heisei 17)" },
+          { label: "Founder", value: "Nobutaka Maekawa (1st Division Head)" },
+          { label: "Current Head", value: "Taku Muroki (2nd Division Head)" },
+          {
+            label: "Fees",
+            value: [
+              "Enrollment fee ¥7,000",
+              "Annual fee ¥5,800",
+              "Base monthly fee ¥6,000/month",
+              "※¥3,000/month for current Karate Division members",
+            ],
+          },
+        ]}
+        image={{
+          src: "/assets/images/dojo/img_iai_01.png",
+          alt: "Seishinkan Headquarters Dojo",
+          width: 263,
+          height: 263,
+        }}
+        address="2-1-27 Sakaedori, Shiroishi-ku, Sapporo (along Tohoku-dori) — Seishinkan Headquarters Dojo"
+        addressNote="About 10 min / 800m on foot from Shiroishi Subway Station"
+        mapHref="https://www.google.com/maps/place/〒003-0021+北海道札幌市白石区栄通２丁目１−２７/@43.0409785,141.3938016,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bb4690b9e5f:0x622b301003410409!8m2!3d43.0409785!4d141.3959903"
+        mapQuery="43.0409785,141.3938016"
+        viewOnMapLabel="View on Google Maps"
+      />
+
       <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/images/muro.jpg"
-            alt="Taku Muroki, Iaido Division Head"
-            width="300"
-            height="300"
-            loading="lazy"
-          />
-          <figcaption>
-            <a href="mailto:muroki-taku@seishinryu.info?subject=Iaido Inquiry"
-              >Direct Email</a
-            >
-          </figcaption>
-        </figure>
         <figure>
           <img
             src="/assets/images/legacy/dojo/iai/img2.jpg"
@@ -57,93 +109,17 @@ import BaseLayout from "@layouts/BaseLayout.astro";
             loading="lazy"
           />
         </figure>
-      </div>
-
-      <p>
-        Opening times may be delayed due to traffic conditions, so please wait if this happens.<br />
-        ※For inquiries, please contact our office.<br />
-        Trial classes are available for 1,000 yen.<br />
-        We also offer one-time private seminars (tuition: 5,000–10,000 yen).
-      </p>
-
-      <h2 class="detail-page__heading">
-        <a
-          href="https://www.google.com/maps/place/〒003-0021+北海道札幌市白石区栄通２丁目１−２７/@43.0409785,141.3938016,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bb4690b9e5f:0x622b301003410409!8m2!3d43.0409785!4d141.3959903"
-          target="_blank"
-          rel="noopener"
-          >2-1-27 Sakaedori, Shiroishi-ku, Sapporo (along Tohoku-dori) — about
-          10 min / 800m on foot from Shiroishi Subway Station — Seishinkan
-          Headquarters Dojo</a
-        >
-      </h2>
-
-      <div class="detail-media">
-        <a
-          href="https://www.youtube.com/playlist?list=PLyugCVja4s7Kz8vG3OA4GyMEpSKcsDzQV"
-          target="_blank"
-          rel="noopener"
-        >
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/iai/img6.jpg"
-            alt="Seishinkai Iaido Division performance video (YouTube)"
+            src="/assets/images/legacy/dojo/iai/img7.jpg"
+            alt="Seishinkai Iaido Division practice session"
+            width="626"
+            height="218"
             loading="lazy"
           />
-        </a>
-        <p class="detail-media__caption">Performance Video (YouTube)</p>
+        </figure>
       </div>
 
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/iai/img7.jpg"
-          alt="Seishinkai Iaido Division practice session"
-          width="626"
-          height="218"
-          loading="lazy"
-        />
-      </div>
-
-      <h2 class="detail-page__heading">Seishinkai Iaido Division</h2>
-      <p>
-        ◆ Founded: July 2005 (Heisei 17)<br />
-        ◆ Founder: Nobutaka Maekawa (1st Division Head)<br />
-        ◆ Current Head: Taku Muroki (2nd Division Head)
-      </p>
-
-      <h2 class="detail-page__heading">Early Members of the Seishinkai Iaido Division</h2>
-      <div class="detail-media">
-        <a
-          href="https://www.youtube.com/playlist?list=PLyugCVja4s7Kz8vG3OA4GyMEpSKcsDzQV"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/iai/img4.jpg"
-            alt="Early members of the Seishinkai Iaido Division"
-            loading="lazy"
-          />
-        </a>
-      </div>
-
-      <h2 class="detail-page__heading">Iaido Division Head, Taku Muroki</h2>
-      <div class="detail-media">
-        <a
-          href="https://www.youtube.com/channel/UClIx3Srenlu1ddf5coow83A"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/iai/img3.jpg"
-            alt="Taku Muroki, Iaido Division Head (YouTube channel)"
-            loading="lazy"
-          />
-        </a>
-      </div>
-      <p>
-        □Enrollment fee ¥7,000<br />
-        □Annual fee ¥5,800<br />
-        □Base monthly fee ¥6,000/month<br />
-        ※¥3,000/month for current Karate Division members
-      </p>
       <p class="detail-page__note">
         Please ask us about this when you come for a trial class<br />
         ※Fees are reduced in stages as you advance in rank<br />
@@ -151,9 +127,39 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         (wooden sword), soft sword, and other equipment.
       </p>
 
+      <section class="partner-section">
+        <h2 class="detail-page__heading">Watch Us on YouTube</h2>
+
+        <div class="youtube-grid">
+          {
+            videos.map((video) => (
+              <a
+                class="youtube-card"
+                href={video.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="youtube-card__thumb">
+                  <img src={video.image} alt={`${video.caption} (YouTube)`} loading="lazy" />
+                </span>
+                <span>{video.caption}</span>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+
       <p class="detail-page__back">
         <a href="/en/dojo/">← Back to the Dojo & Class List</a>
       </p>
+
+      <DojoContactSection
+        lang="en"
+        dojoName="Iaido Division"
+        subject="Iaido Division Trial Lesson Application"
+        directEmail="muroki-taku@seishinryu.info"
+        directEmailLabel="Iaido Division Direct Email"
+      />
     </div>
   </section>
 </BaseLayout>

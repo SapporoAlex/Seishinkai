@@ -21,6 +21,10 @@ interface Props {
   slidesPerView?: number;
   spaceBetween?: number;
   lang?: string;
+  /** Seconds between auto-advances. Omit to disable autoplay. */
+  autoplaySeconds?: number;
+  /** Extra class(es) on the root element, e.g. for a per-instance visual variant. */
+  class?: string;
 }
 
 const {
@@ -30,6 +34,8 @@ const {
   slidesPerView = 1,
   spaceBetween = 20,
   lang = "ja",
+  autoplaySeconds,
+  class: className,
 } = Astro.props;
 
 const prevLabel = lang === "en" ? "Previous slide" : "前のスライド";
@@ -37,11 +43,12 @@ const nextLabel = lang === "en" ? "Next slide" : "次のスライド";
 ---
 
 <div
-  class="content-slider"
+  class:list={["content-slider", className]}
   id={id}
   data-content-slider
   data-slides-per-view={slidesPerView}
   data-space-between={spaceBetween}
+  data-autoplay-seconds={autoplaySeconds}
 >
   <div class="swiper">
     <div class="swiper-wrapper">

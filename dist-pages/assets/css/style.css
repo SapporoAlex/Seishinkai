@@ -1695,6 +1695,36 @@ a.content-slider__slide:hover .content-slider__media img {
 .content-slider .swiper-pagination {
   bottom: 0;
 }
+.content-slider--history {
+  --swiper-pagination-bullet-inactive-color: var(--blue);
+  --swiper-pagination-bullet-inactive-opacity: 0.35;
+}
+.content-slider--history .swiper-pagination-bullet-active {
+  background: var(--red);
+}
+@media (max-width: 47.98rem) {
+  .content-slider--history .swiper-button-prev,
+  .content-slider--history .swiper-button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+  }
+}
+.content-slider--history .swiper-button-prev::after,
+.content-slider--history .swiper-button-next::after {
+  font-family: initial;
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 700;
+}
+.content-slider--history .swiper-button-prev::after {
+  content: "<";
+}
+.content-slider--history .swiper-button-next::after {
+  content: ">";
+}
 
 .image-lightbox {
   position: fixed;
@@ -3765,6 +3795,31 @@ a.content-slider__slide:hover .content-slider__media img {
   transform: translateY(-2px);
 }
 
+.youtube-card__thumb::after, .video-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 25%;
+  max-width: 56px;
+  aspect-ratio: 1/1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230d2545'/%3E%3Cpath d='M26 20 L46 32 L26 44 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: opacity var(--hover-time);
+  pointer-events: none;
+}
+
+.video-thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.video-thumb:hover::after {
+  opacity: 0.85;
+}
+
 .youtube-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -3806,6 +3861,14 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .youtube-card.is-visible:hover img {
   transform: scale(1.04);
+}
+.youtube-card__thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.youtube-card.is-visible:hover .youtube-card__thumb::after {
+  opacity: 0.85;
 }
 
 .photo-grid {

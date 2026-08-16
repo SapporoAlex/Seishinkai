@@ -252,7 +252,7 @@ const studentConditions = [
             mediaItems.map((item) => (
               <div class="membership__media-card fade-up-in">
                 {item.href ? (
-                  <a href={item.href} target="_blank">
+                  <a class="video-thumb" href={item.href} target="_blank">
                     <img src={item.image} alt={item.label} loading="lazy" />
                   </a>
                 ) : (

@@ -50,7 +50,12 @@ const visits = [
           visits.map((v) =>
             v.href ? (
               <figure>
-                <a href={v.href} target="_blank" rel="noopener">
+                <a
+                  href={v.href}
+                  target="_blank"
+                  rel="noopener"
+                  class:list={{ "video-thumb": v.href.includes("youtube") }}
+                >
                   <img src={v.image} alt={`${v.year} ${v.place}`} loading="lazy" />
                 </a>
                 <figcaption>{v.year} {v.place}</figcaption>
@@ -72,11 +77,11 @@ const visits = [
       <h2 class="detail-page__heading">Accommodation</h2>
       <div class="detail-page__img-text-pair--col">
         <div class="detail-media--big">
-          <a target="_blank" href="https://www.youtube.com/watch?v=Q6q0g7h7f0A">
+          <a class="video-thumb" target="_blank" href="https://www.youtube.com/watch?v=Q6q0g7h7f0A">
             <figure>
               <img
                 src="/assets/images/youtube/img_accommodation-thumb.jpg"
-                alt="short-term accommodation"
+                alt="short-term accommodation (YouTube)"
                 loading="lazy"
               />
             </figure>

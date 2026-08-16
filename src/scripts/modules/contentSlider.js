@@ -14,6 +14,7 @@ export function initContentSliders() {
     const spaceBetween = Number(root.dataset.spaceBetween) || 20;
     const slideCount = root.querySelectorAll(".swiper-slide").length;
     const loop = slideCount > slidesPerView;
+    const autoplaySeconds = Number(root.dataset.autoplaySeconds) || 0;
 
     new Swiper(swiperEl, {
       loop,
@@ -35,6 +36,13 @@ export function initContentSliders() {
       a11y: {
         enabled: true,
       },
+      autoplay: autoplaySeconds
+        ? {
+            delay: autoplaySeconds * 1000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }
+        : false,
       breakpoints:
         slidesPerView > 1
           ? {

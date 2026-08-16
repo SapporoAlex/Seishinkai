@@ -147,4 +147,44 @@
   .swiper-pagination {
     bottom: 0;
   }
+
+  // Single full-width image slide, autoplay, blue nav arrows using literal
+  // "<"/">" glyphs, and blue pagination dots with a red current dot. Arrows
+  // stay visible on SP too (unlike the default card-slider variant above,
+  // which relies on swipe gestures on mobile).
+  &--history {
+    --swiper-pagination-bullet-inactive-color: var(--blue);
+    --swiper-pagination-bullet-inactive-opacity: 0.35;
+
+    .swiper-pagination-bullet-active {
+      background: var(--red);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      @include mqsp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-family: initial;
+      color: var(--blue);
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .swiper-button-prev::after {
+      content: "<";
+    }
+
+    .swiper-button-next::after {
+      content: ">";
+    }
+  }
 }

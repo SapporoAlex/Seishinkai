@@ -1,5 +1,35 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import BranchTable from "@components/BranchTable.astro";
+import BranchInfoCard from "@components/BranchInfoCard.astro";
+import DojoContactSection from "@components/DojoContactSection.astro";
+
+const entries = [
+  {
+    marker: "★",
+    name: "居合部",
+    address: "清心館総本部",
+    schedule: ["日曜 14:00〜15:00", "※秋冬春時間、夏季は夕方開始の場合あり"],
+  },
+];
+
+const videos = [
+  {
+    href: "https://www.youtube.com/playlist?list=PLyugCVja4s7Kz8vG3OA4GyMEpSKcsDzQV",
+    image: "/assets/images/legacy/dojo/iai/img6.jpg",
+    caption: "演武動画",
+  },
+  {
+    href: "https://www.youtube.com/playlist?list=PLyugCVja4s7Kz8vG3OA4GyMEpSKcsDzQV",
+    image: "/assets/images/legacy/dojo/iai/img4.jpg",
+    caption: "清心会居合部・初期メンバー",
+  },
+  {
+    href: "https://www.youtube.com/channel/UClIx3Srenlu1ddf5coow83A",
+    image: "/assets/images/legacy/dojo/iai/img3.jpg",
+    caption: "居合部長 室木拓士のチャンネル",
+  },
+];
 ---
 
 <BaseLayout
@@ -30,24 +60,47 @@ import BaseLayout from "@layouts/BaseLayout.astro";
           >日曜 14:00より</a
         ><br />
         ※秋冬春時間<br />
-        夏猛暑の際は夕方開始の場合もあります
+        夏猛暑の際は夕方開始の場合もあります<br />
+        交通状況により開館時間が遅れる場合がありますので、その場合はお待ち下さい。<br />
+        体験授業(1,000円)となります。単発の個別セミナーも行っています(受講料:5,000〜10,000円)。
       </p>
 
+      <BranchTable entries={entries} />
+
+      <BranchInfoCard
+        name="清心会居合部"
+        facts={[
+          { label: "設立", value: "平成17年(2005)7月" },
+          { label: "設立者", value: "前川信孝(初代部長)" },
+          { label: "担当", value: "室木拓士(二代目部長)" },
+          {
+            label: "会費",
+            value: [
+              "入会金 7,000円",
+              "年会費 5,800円",
+              "基本会費 6,000円/月",
+              "※空手部員は3,000円/月",
+            ],
+          },
+        ]}
+        image={{
+          src: "/assets/images/dojo/img_iai_01.png",
+          alt: "HQ道場",
+          width: 263,
+          height: 263,
+        }}
+        address="札幌市白石区栄通2丁目1-27 (東北通沿) 清心館総本部"
+        addressNote="地下鉄白石駅・徒歩約10分 約800m"
+        mapHref="https://www.google.com/maps/place/〒003-0021+北海道札幌市白石区栄通２丁目１−２７/@43.0409785,141.3938016,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bb4690b9e5f:0x622b301003410409!8m2!3d43.0409785!4d141.3959903"
+        mapQuery="43.0409785,141.3938016"
+        viewOnMapLabel="Google Mapsで見る"
+        instructors={[
+          { src: "/assets/images/instructors/muroki.jpg", alt: "指導 室木", name: "室木" },
+        ]}
+          
+      />
+
       <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/images/muro.jpg"
-            alt="居合部長 室木拓士"
-            width="300"
-            height="300"
-            loading="lazy"
-          />
-          <figcaption>
-            <a href="mailto:muroki-taku@seishinryu.info?subject=居合問合せ"
-              >直通メール</a
-            >
-          </figcaption>
-        </figure>
         <figure>
           <img
             src="/assets/images/legacy/dojo/iai/img2.jpg"
@@ -57,101 +110,55 @@ import BaseLayout from "@layouts/BaseLayout.astro";
             loading="lazy"
           />
         </figure>
-      </div>
-
-      <p>
-        交通状況により開館時間が遅れる場合がありますので、その場合はお待ち下さい。<br />
-        ※お問い合わせは事務局までお願いします。<br />
-        体験授業(1,000円)となります。<br />
-        単発の個別セミナーも行っています(受講料:5,000〜10,000円)。
-      </p>
-
-      <h2 class="detail-page__heading">
-        <a
-          href="https://www.google.com/maps/place/〒003-0021+北海道札幌市白石区栄通２丁目１−２７/@43.0409785,141.3938016,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2bb4690b9e5f:0x622b301003410409!8m2!3d43.0409785!4d141.3959903"
-          target="_blank"
-          rel="noopener"
-          >札幌市白石区栄通2丁目1-27 (東北通沿)　地下鉄白石駅・徒歩約10分
-          約800m　清心館総本部</a
-        >
-      </h2>
-
-      <div class="detail-media">
-        <a
-          href="https://www.youtube.com/playlist?list=PLyugCVja4s7Kz8vG3OA4GyMEpSKcsDzQV"
-          target="_blank"
-          rel="noopener"
-        >
+        <figure>
           <img
-            src="/assets/images/legacy/dojo/iai/img6.jpg"
-            alt="清心会居合部の演武動画(YouTube)"
+            src="/assets/images/legacy/dojo/iai/img7.jpg"
+            alt="清心会居合部の稽古の様子"
+            width="626"
+            height="218"
             loading="lazy"
           />
-        </a>
-        <p class="detail-media__caption">演武動画(YouTube)</p>
+        </figure>
       </div>
 
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/dojo/iai/img7.jpg"
-          alt="清心会居合部の稽古の様子"
-          width="626"
-          height="218"
-          loading="lazy"
-        />
-      </div>
-
-      <h2 class="detail-page__heading">清心会居合部</h2>
-      <p>
-        ◆設 立　平成17年(2005) 7月<br />
-        ◆設立者　前川信孝(初代部長)<br />
-        ◆担当者　室木拓士(二代目部長)
-      </p>
-
-      <h2 class="detail-page__heading">清心会居合部初期メンバー</h2>
-      <div class="detail-media">
-        <a
-          href="https://www.youtube.com/playlist?list=PLyugCVja4s7Kz8vG3OA4GyMEpSKcsDzQV"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/iai/img4.jpg"
-            alt="清心会居合部初期メンバー"
-            loading="lazy"
-          />
-        </a>
-      </div>
-
-      <h2 class="detail-page__heading">居合部長 室木拓士</h2>
-      <div class="detail-media">
-        <a
-          href="https://www.youtube.com/channel/UClIx3Srenlu1ddf5coow83A"
-          target="_blank"
-          rel="noopener"
-        >
-          <img
-            src="/assets/images/legacy/dojo/iai/img3.jpg"
-            alt="居合部長 室木拓士(YouTubeチャンネル)"
-            loading="lazy"
-          />
-        </a>
-      </div>
-      <p>
-        □入会金 7,000円<br />
-        □年会費 5,800円<br />
-        □基本会費 6,000円/月<br />
-        ※空手部員は3,000円/月
-      </p>
       <p class="detail-page__note">
         体験の際にお問合せ下さい<br />
         ※昇級に伴い段階的に減額されます<br />
         ※その他、袴、居合衣、居合帯、居合刀、木刀、ソフト刀などが必要となります。
       </p>
 
+      <section class="partner-section">
+        <h2 class="detail-page__heading">YouTubeで見る清心会居合部</h2>
+
+        <div class="youtube-grid">
+          {
+            videos.map((video) => (
+              <a
+                class="youtube-card"
+                href={video.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="youtube-card__thumb">
+                  <img src={video.image} alt={`${video.caption}(YouTube)`} loading="lazy" />
+                </span>
+                <span>{video.caption}</span>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+
       <p class="detail-page__back">
         <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
       </p>
+
+      <DojoContactSection
+        dojoName="居合部"
+        subject="居合部体験申込"
+        directEmail="muroki-taku@seishinryu.info"
+        directEmailLabel="居合部直通メール"
+      />
     </div>
   </section>
 </BaseLayout>

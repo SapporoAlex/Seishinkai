@@ -4,78 +4,89 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 // Placeholder entries — replace href with the real PDF path once supplied,
 // e.g. /assets/pdf/newsletter/newsletter-12.pdf. Newsletters are Japanese-only.
 const newsletters = [
-  { title: "Seishinkai Newsletter Issue:516 (June, 2026)", href: "/assets/pdf/newsletter/会報516-2026.7.1.pdf" },
-  { title: "Seishinkai Newsletter Issue:515 (May, 2026)", href: "/assets/pdf/newsletter/会報515-2026.6.1.pdf" },
-  { title: "Seishinkai Newsletter Issue:514 (April, 2026)", href: "/assets/pdf/newsletter/会報514-2026.5.1.pdf" },
-  { title: "Seishinkai Newsletter Issue:513 (March, 2026)", href: "/assets/pdf/newsletter/会報513-2026.4.1s.pdf" },
+  { title: "Seishinkai Newsletter Issue:516 (July, 2026)", href: "/assets/pdf/newsletter/会報516-2026.7.1.pdf" },
+  { title: "Seishinkai Newsletter Issue:515 (June, 2026)", href: "/assets/pdf/newsletter/会報515-2026.6.1.pdf" },
+  { title: "Seishinkai Newsletter Issue:514 (May, 2026)", href: "/assets/pdf/newsletter/会報514-2026.5.1.pdf" },
+  { title: "Seishinkai Newsletter Issue:513 (April, 2026)", href: "/assets/pdf/newsletter/会報513-2026.4.1s.pdf" },
 ];
 
 const snsLinks = [
+  {
+    id: "members",
+    name: "Member Blogs & Facebook",
+    description: "A directory of blogs and Facebook pages run by branches and members.",
+    href: "/en/news/blogs/",
+    target: "",
+  },
   {
     id: "facebook",
     name: "Facebook Group",
     description: "The official Facebook group of the Seishinkai karate dojo, with updates on daily activities.",
     href: "https://www.facebook.com/seishinkai.karate.dojo",
+    target: "_blank",
   },
   {
     id: "x",
     name: "X (Twitter)",
     description: "Seishinkai's official account, sharing the latest announcements.",
     href: "https://twitter.com/Seishinkai2",
+    target: "_blank",
   },
   {
     id: "tiktok",
     name: "TikTok",
     description: "Watch videos of demonstrations, training sessions, tournaments, and more.",
     href: "https://www.tiktok.com/@seishinryu.karate",
+    target: "_blank",
   },
   {
     id: "youtube",
     name: "YouTube Channel",
     description: "Videos of demonstrations, training, and media appearances.",
     href: "https://www.youtube.com/channel/UClIx3Srenlu1ddf5coow83A/playlists",
+    target: "_blank",
   },
   {
     id: "blog",
     name: "Official Blog",
     description: "The dojo's official blog, covering training sessions and events.",
     href: "https://seishinkan-dojo.hateblo.jp/",
+    target: "_blank",
   },
   {
     id: "events-blog",
     name: "Events Blog",
     description: "Updates and photos from tournaments, grading examinations, training camps, and other events.",
     href: "https://seishinryu.hatenablog.com/",
+    target: "_blank",
   },
   {
     id: "news-blog",
     name: "News Blog",
     description: "The latest news, announcements, and updates from Seishinkai.",
     href: "https://seishinkan-news.hatenablog.com/",
+    target: "_blank",
   },
   {
     id: "okubo-blog",
     name: "Okubo Blog",
     description: "Learn more about Okubo Dojo's activities and training sessions.",
     href: "https://okubo-dojo.hatenablog.com/",
+    target: "_blank",
   },
   {
     id: "bbs",
     name: "Bulletin Board",
     description: "Class cancellations and announcements — check here in bad weather.",
     href: "https://seishinkan-dojo.bbs.fc2.com/",
-  },
-  {
-    id: "members",
-    name: "Member Blogs & Facebook",
-    description: "A directory of blogs and Facebook pages run by branches and members.",
-    href: "/en/news/blogs/",
+    target: "_blank",
   },
   {
     id: "events",
     name: "Seishinkai Event Schedule",
     description: "Annual event schedule: tournaments, gradings, training camps, and more.",
     href: "/en/news/archive/",
+    target: "",
   },
 ];
 ---
@@ -99,7 +110,7 @@ const snsLinks = [
       <div class="news__grid">
         {
           snsLinks.map((sns) => (
-            <a class="news__card fade-up-in" href={sns.href} target="_blank" rel="noopener">
+            <a class="news__card fade-up-in" href={sns.href} target={sns.target} rel="noopener">
               <span class={`news__icon news__icon--${sns.id}`} aria-hidden="true">
                 {sns.id === "facebook" && (
                   <svg viewBox="0 0 24 24" fill="currentColor">

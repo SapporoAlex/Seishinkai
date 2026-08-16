@@ -36,7 +36,8 @@
       "Bash(cp -r /Users/M464_AlexMckinley/Downloads/htree/src/pages/en/dojo /private/tmp/claude-502/-Users-M464-AlexMckinley-Downloads-htree/28471114-2154-42d6-a579-72ed08858db8/scratchpad/contact-backup/dojo-en)",
       "Bash(cp -r /private/tmp/claude-502/-Users-M464-AlexMckinley-Downloads-htree/28471114-2154-42d6-a579-72ed08858db8/scratchpad/contact-backup/dojo-ja/. /Users/M464_AlexMckinley/Downloads/htree/src/pages/dojo/)",
       "Bash(cp -r /private/tmp/claude-502/-Users-M464-AlexMckinley-Downloads-htree/28471114-2154-42d6-a579-72ed08858db8/scratchpad/contact-backup/dojo-en/. /Users/M464_AlexMckinley/Downloads/htree/src/pages/en/dojo/)",
-      "Bash(grep -v \"name='[^\\\\\"]*' subject='[^\\\\\"]*'$\")"
+      "Bash(grep -v \"name='[^\\\\\"]*' subject='[^\\\\\"]*'$\")",
+      "Bash(sips -g pixelWidth -g pixelHeight public/assets/images/legacy/images/muro.jpg public/assets/images/legacy/clubu/muroki.jpg public/assets/images/instructors/muroki.jpg public/assets/images/instructors/muroki-yoichi.jpg public/assets/images/about/muro.jpg)"
     ]
   }
 }

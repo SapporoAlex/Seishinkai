@@ -802,6 +802,42 @@
   }
 }
 
+// Play button icon shared by anything that links out to a video: a filled
+// circle + triangle, centered over the thumbnail at 50% opacity so it reads
+// as "this is a video" without hiding the frame underneath.
+%video-play-button {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 25%;
+  max-width: 56px;
+  aspect-ratio: 1 / 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230d2545'/%3E%3Cpath d='M26 20 L46 32 L26 44 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: opacity var(--hover-time);
+  pointer-events: none;
+}
+
+// Generic "this thumbnail links to a video" overlay. Apply directly to the
+// <a> (or a wrapping <span>) around any standalone video thumbnail image —
+// gallery figures, detail-media blocks, media cards, etc.
+.video-thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  &::after {
+    @extend %video-play-button;
+  }
+
+  &:hover::after {
+    opacity: 0.85;
+  }
+}
+
 .youtube-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -851,6 +887,20 @@
 
   &.is-visible:hover img {
     transform: scale(1.04);
+  }
+
+  &__thumb {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    &::after {
+      @extend %video-play-button;
+    }
+  }
+
+  &.is-visible:hover &__thumb::after {
+    opacity: 0.85;
   }
 }
 

@@ -58,7 +58,12 @@ const IMG = "/assets/images/legacy/intern/";
           longTerm.map((student) =>
             student.href ? (
               <figure>
-                <a href={student.href} target="_blank" rel="noopener">
+                <a
+                  href={student.href}
+                  target="_blank"
+                  rel="noopener"
+                  class:list={{ "video-thumb": student.href.includes("youtube") }}
+                >
                   <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
                 </a>
                 <figcaption>
@@ -107,11 +112,12 @@ const IMG = "/assets/images/legacy/intern/";
       <div class="detail-gallery">
         <figure>
           <a
+            class="video-thumb"
             href="https://www.youtube.com/watch?v=UpRmPGwuNNM"
             target="_blank"
             rel="noopener"
           >
-            <img src={`${IMG}DSC_4462.jpg`} alt="International students training" loading="lazy" />
+            <img src={`${IMG}DSC_4462.jpg`} alt="International students training (YouTube)" loading="lazy" />
           </a>
         </figure>
         <figure>

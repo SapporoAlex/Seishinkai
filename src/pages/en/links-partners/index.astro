@@ -309,7 +309,9 @@ const youtubeArchives = [
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={video.image} alt={video.year} />
+                <span class="youtube-card__thumb">
+                  <img src={video.image} alt={video.year} />
+                </span>
                 <span>{video.year}</span>
               </a>
             ) : (
