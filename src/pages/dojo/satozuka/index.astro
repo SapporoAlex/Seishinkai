@@ -38,13 +38,18 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/shima.jpg", alt: "指導 嶋", name: "嶋" },
+        { src: "/assets/images/instructors/masuda.jpg", alt: "指導 増田", name: "増田" },
+        { src: "/assets/images/instructors/noro.jpg", alt: "指導 野呂", name: "野呂" },
+      ]} */}
       <BranchInfoCard
         name="清心会里塚支部"
         facts={[
           { label: "設立", value: "平成11年(1999)2月" },
           { label: "設立者", value: "大久保勝美" },
           { label: "歴代", value: "井上、大久保翼、工藤哲弘" },
-          { label: "担当", value: "島、他、不定期で一般部員有段者が参加します" },
+          { label: "担当", value: "本部直轄" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/satozuka/2.jpg",
@@ -52,11 +57,6 @@ const entries = [
           width: 258,
           height: 192,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/shima.jpg", alt: "指導 嶋", name: "嶋" },
-          { src: "/assets/images/instructors/masuda.jpg", alt: "指導 増田", name: "増田" },
-          { src: "/assets/images/instructors/noro.jpg", alt: "指導 野呂", name: "野呂" },
-        ]}
         address="札幌市清田区里塚緑ヶ丘10丁目4-17　里塚緑ヶ丘町内会館"
         mapHref="https://www.google.com/maps/place/里塚緑ヶ丘町内会館/@42.9895177,141.4727112,15z/data=!4m2!3m1!1s0x0:0x56db9b692a940c94?sa=X&ved=2ahUKEwjps-jkmLHhAhUQBKYKHZFyDqEQ_BIwCnoECAsQCA"
         mapQuery="42.9895177,141.4727112"

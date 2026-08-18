@@ -50,13 +50,16 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/namikawa.jpg", alt: "Instructor Namikawa", name: "Namikawa" }
+      ]} */}
       <BranchInfoCard
         name="Shin-Sapporo Branch"
         facts={[
           { label: "Founded", value: "April 1997" },
           { label: "Founder", value: "Tsubasa Okubo" },
           { label: "Past Instructors", value: "Okubo, Abe, and others" },
-          { label: "Head Instructor", value: "Namikawa" },
+          { label: "Head Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/n-sapporo/2.jpg",
@@ -64,9 +67,6 @@ const entries = [
           width: 290,
           height: 206,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/namikawa.jpg", alt: "Instructor Namikawa", name: "Namikawa" }
-        ]}
         address="Atsubetsu Ward Citizens' Center Meeting Room, Chuo 1-jo 5-chome, Atsubetsu-ku"
         mapHref="https://www.google.com/maps/place/札幌市+厚別区民センター/@43.036652,141.474159,15z/data=!4m2!3m1!1s0x0:0x2eeb48db85d54c24?sa=X&ved=2ahUKEwi-kKuTlaXhAhUOUN4KHZo-B5UQ_BIwCnoECA8QCA"
         mapQuery="43.036652,141.474159"

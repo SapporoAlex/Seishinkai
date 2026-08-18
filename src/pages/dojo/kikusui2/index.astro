@@ -39,12 +39,16 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/yoshida.jpg", alt: "指導 吉田", name: "吉田" },
+        { src: "/assets/images/instructors/wakabayashi.jpg", alt: "指導 若林", name: "若林" },
+      ]} */}
       <BranchInfoCard
         name="清心会菊水元町支部/菊水元町空手倶楽部"
         facts={[
           { label: "設立", value: "平成22年(2010)4月" },
           { label: "歴代", value: "大久保翼、室木" },
-          { label: "担当", value: "吉田真純、他、不定期で一般部員有段者が参加します" },
+          { label: "担当", value: "本部直轄" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/kikusui2/img2.jpg",
@@ -56,10 +60,6 @@ const entries = [
         mapHref="https://www.google.com/maps/place/菊水元町+南町内会館/@43.071849,141.410593,15z/data=!4m5!3m4!1s0x0:0xe2232039b08716fc!8m2!3d43.071849!4d141.410593"
         mapQuery="43.071849,141.410593"
         viewOnMapLabel="Google Mapsで見る"
-        instructors={[
-          { src: "/assets/images/instructors/yoshida.jpg", alt: "指導 吉田", name: "吉田" },
-          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "指導 若林", name: "若林" },
-        ]}
       />
 
       <div class="detail-gallery">

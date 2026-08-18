@@ -48,12 +48,15 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/wakabayashi.jpg", alt: "In charge: Wakabayashi", name: "Wakabayashi" },
+      ]} */}
       <BranchInfoCard
         name="Seishinkai Misono Branch"
         facts={[
           { label: "Founded", value: "April 2009 (Heisei 21)" },
           { label: "Past Instructors", value: "Koyano, Tsubasa Okubo, and others" },
-          { label: "In Charge", value: "Wakabayashi" },
+          { label: "In Charge", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/misono/img4.jpg",
@@ -61,14 +64,19 @@ const entries = [
           width: 240,
           height: 168,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "In charge: Wakabayashi", name: "Wakabayashi" },
-        ]}
         address="Misono 6-jo 7-chome, Toyohira Ward　Co-op Sapporo Misono 2F Circle Room"
         mapHref="https://www.google.com/maps/place/コープさっぽろ+美園店/@43.0373071,141.3874316,15z/data=!4m5!3m4!1s0x0:0x72d3e70b77425ccb!8m2!3d43.0373849!4d141.3872843"
         mapQuery="43.0373071,141.3874316"
         viewOnMapLabel="View on Google Maps"
       />
+
+      <p class="detail-page__note">
+        ※Please enter via the 2F entrance from the parking lot. If you're unsure, ask at the Co-op service counter.
+      </p>
+
+      <p class="detail-page__note">
+        ※Senior black-belt members join on an irregular basis.
+      </p>
 
       <div class="detail-gallery">
         <figure>
@@ -81,24 +89,6 @@ const entries = [
           />
         </figure>
       </div>
-
-      <p class="detail-page__note">
-        ※Please enter via the 2F entrance from the parking lot. If you're unsure, ask at the Co-op service counter.
-      </p>
-
-      <p class="detail-page__note">
-        ※Senior black-belt members join on an irregular basis.
-      </p>
-
-      <p class="detail-page__note">
-        <img
-          src="/assets/images/legacy/dojo/misono/img18.jpg"
-          alt="Misono Branch"
-          width="645"
-          height="293"
-          loading="lazy"
-        />
-      </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/toyohira/">← Back to the list of Toyohira Ward karate dojos/classes</a>

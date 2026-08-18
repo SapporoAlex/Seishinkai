@@ -49,13 +49,16 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/okimura.jpg", alt: "Instructor Okimura", name: "Okimura" },
+      ]} */}
       <BranchInfoCard
         name="Minami-ku Fujino Branch / Fujino Karate Club"
         facts={[
           { label: "Founded", value: "March 2011" },
           { label: "Founder", value: "Yusuke Koyano" },
           { label: "Past Instructors", value: "Hashini, Takashima, Hyodo" },
-          { label: "Contact", value: "Okimura (2022–)" },
+          { label: "Contact", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/fujino/2.jpg",
@@ -63,9 +66,6 @@ const entries = [
           width: 243,
           height: 192,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/okimura.jpg", alt: "Instructor Okimura", name: "Okimura" },
-        ]}
         address="Fujino District Center, Fujino 2-jo 7-chome 2-1, Minami-ku, Sapporo"
         mapHref="https://www.google.com/maps/place/〒061-2282+北海道札幌市南区藤野２条７丁目２−１+札幌市藤野地区センター/data=!4m2!3m1!1s0x5f0ad4a1fe1a011b:0xa26126fd6c360ffa?sa=X&ved=2ahUKEwi_mrjHjrHhAhXHG6YKHZu7AM0Q8gEwAHoECAoQAQ"
         mapQuery="Fujino District Center, Fujino 2-jo 7-chome 2-1, Minami-ku, Sapporo"

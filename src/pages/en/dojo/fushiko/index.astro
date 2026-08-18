@@ -38,13 +38,16 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/tsubasa.jpg", alt: "Instructor Tsubasa Okubo", name: "Tsubasa Okubo" },
+      ]} */}
       <BranchInfoCard
         name="Seishinkai Fushiko Branch"
         facts={[
           { label: "Founded", value: "November 2011 (Heisei 23)" },
           {
             label: "Instructor",
-            value: "Tsubasa Okubo (2011-), plus adult black belt members joining occasionally",
+            value: "Headquarters-run",
           },
         ]}
         image={{
@@ -53,9 +56,6 @@ const entries = [
           width: 277,
           height: 210,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/tsubasa.jpg", alt: "Instructor Tsubasa Okubo", name: "Tsubasa Okubo" },
-        ]}
         address="Fushiko Memorial Hall, Fushiko 7-jo 2-chome 8-15, Higashi-ku, Sapporo"
         mapHref="https://www.google.com/maps/place/〒007-0867+北海道札幌市東区伏古７条２丁目８−１５+伏古記念会館/@43.090063,141.3897776,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2ecb7cb8d6fb:0x18450b6d1f6a09e1!8m2!3d43.090063!4d141.3919663"
         mapQuery="43.090063,141.3897776"

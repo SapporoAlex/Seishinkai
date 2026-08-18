@@ -39,6 +39,13 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/wakabayashi.jpg", alt: "Instructor Wakabayashi", name: "Wakabayashi" },
+        { src: "/assets/images/instructors/sato2.jpg", alt: "Instructor Sato", name: "Sato" },
+        { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
+        { src: "/assets/images/legacy/clubu/ooba.jpg", alt: "Instructor Ooba", name: "Ooba" },
+        { src: "/assets/images/instructors/masuda.jpg", alt: "Instructor Masuda", name: "Masuda" },
+      ]} */}
       <BranchInfoCard
         name="Kiyota-ku Hiraoka Branch"
         facts={[
@@ -47,14 +54,7 @@ const entries = [
             value: ["March 2010 (Heisei 22) (Thursday class)", "September 2016 (Heisei 28) (Tuesday class)"],
           },
           { label: "Founder", value: "Tsubasa Okubo" },
-          { label: "Lead instructors", value: "Takigami, Wakabayashi" },
-        ]}
-        instructors={[
-          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "Instructor Wakabayashi", name: "Wakabayashi" },
-          { src: "/assets/images/instructors/sato2.jpg", alt: "Instructor Sato", name: "Sato" },
-          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
-          { src: "/assets/images/legacy/clubu/ooba.jpg", alt: "Instructor Ooba", name: "Ooba" },
-          { src: "/assets/images/instructors/masuda.jpg", alt: "Instructor Masuda", name: "Masuda" },
+          { label: "Lead instructors", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/hiraoka-c/2.jpg",

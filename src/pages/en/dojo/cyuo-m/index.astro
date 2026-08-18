@@ -39,12 +39,15 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/tsubasa.jpg", alt: "Instructor Tsubasa Okubo", name: "Tsubasa Okubo" },
+        { src: "/assets/images/legacy/images/yuko1.jpg", alt: "Yuko Wakabayashi", name: "Yuko Wakabayashi" },
+      ]} */}
       <BranchInfoCard
         name="Heiwadori Branch"
         facts={[
           { label: "Founded", value: "April 2012 (Heisei 24)" },
-          { label: "Instructor", value: "Tsubasa Okubo" },
-          { label: "I also come by to teach from time to time", value: "Yuko Wakabayashi" },
+          { label: "Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/cyuo-m/2.jpg",
@@ -52,10 +55,6 @@ const entries = [
           width: 293,
           height: 200,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/tsubasa.jpg", alt: "Instructor Tsubasa Okubo", name: "Tsubasa Okubo" },
-          { src: "/assets/images/legacy/images/yuko1.jpg", alt: "Yuko Wakabayashi", name: "Yuko Wakabayashi" },
-        ]}
         address="6-10 Minami 14-jo Nishi 18-chome, Chuo-ku, Sapporo, Fushimi Kaikan"
         mapHref="https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367"
         mapQuery="43.0410241,141.3303314"

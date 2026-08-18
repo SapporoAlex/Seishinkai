@@ -40,15 +40,15 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/oki.jpg", alt: "沖村", name: "沖村" },
+        { src: "/assets/images/instructors/sakai.jpg", alt: "指導補佐 坂井", name: "坂井" },
+      ]} */}
       <BranchInfoCard
         name="清心会西岡支部"
         facts={[
           { label: "設立", value: "平成22年(2010)9月" },
-          { label: "担当", value: "沖村、他、一般部員有段者が参加します" },
-        ]}
-        instructors={[
-          { src: "/assets/images/instructors/oki.jpg", alt: "沖村", name: "沖村" },
-          { src: "/assets/images/instructors/sakai.jpg", alt: "指導補佐 坂井", name: "坂井" },
+          { label: "担当", value: "本部直轄" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/nishioka/img3.jpg",
@@ -61,6 +61,10 @@ const entries = [
         mapQuery="43.01181,141.374177"
         viewOnMapLabel="Google Mapsで見る"
       />
+      
+      <p class="detail-page__note">
+        ※臨時会場　西岡南町内会館　西岡4条14丁目12-10
+      </p>
 
       <div class="detail-gallery">
         <figure>
@@ -73,11 +77,6 @@ const entries = [
           />
         </figure>
       </div>
-
-      <p class="detail-page__note">
-        ※<br />
-        臨時会場　西岡南町内会館　西岡4条14丁目12-10
-      </p>
 
       <p class="detail-page__back">
         <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>

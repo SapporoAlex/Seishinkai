@@ -38,12 +38,16 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/sugimoto.jpg", alt: "Instructor Sugimoto", name: "Sugimoto" },
+        { src: "/assets/images/legacy/clubu/ooba.jpg", alt: "Ooba", name: "Ooba" },
+      ]} */}
       <BranchInfoCard
         name="Seishinkai Fukuzumi Branch / Fukuzumi Karate Club"
         facts={[
           { label: "Founded", value: "September 2010 (Heisei 22)" },
           { label: "Past instructors", value: "Koyano, Muroki, Takashima" },
-          { label: "Instructor", value: "Sugimoto (2024-), plus rotating adult black belt members" },
+          { label: "Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/fukuzumi/2.jpg",
@@ -51,14 +55,14 @@ const entries = [
           width: 262,
           height: 174,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/sugimoto.jpg", alt: "Instructor Sugimoto", name: "Sugimoto" },
-          { src: "/assets/images/legacy/clubu/ooba.jpg", alt: "Ooba", name: "Ooba" },
-        ]}
         address="5-5 Fukuzumi 1-jo 1-chome, Toyohira-ku, Sapporo, Fukuzumi Children's Hall"
         mapHref="https://www.google.com/maps/place/福住児童会館/@43.020565,141.402402,15z/data=!4m5!3m4!1s0x0:0x749365fd7c50d1bf!8m2!3d43.020565!4d141.402402"
         mapQuery="43.020565,141.402402"
       />
+
+      <p class="detail-page__note">
+        ※Temporary venue: Arcs Tsukisamu-higashi, 1-30 Tsukisamu-higashi 3-jo 8-chome
+      </p>
 
       <div class="detail-gallery">
         <figure>
@@ -72,10 +76,6 @@ const entries = [
         </figure>
       </div>
 
-      <p class="detail-page__note">
-        ※<br />
-        Temporary venue: Arcs Tsukisamu-higashi, 1-30 Tsukisamu-higashi 3-jo 8-chome
-      </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>

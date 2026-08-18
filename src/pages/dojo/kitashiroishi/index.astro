@@ -39,13 +39,17 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/namikawa.jpg", alt: "指導 波川", name: "波川" },
+        { src: "/assets/images/instructors/takashima.jpg", alt: "指導 高嶋", name: "高嶋" },
+      ]} */}
       <BranchInfoCard
         name="清心会北郷支部"
         facts={[
           { label: "設立", value: "平成10年(1998)6月" },
           { label: "設立者", value: "大久保勝美" },
           { label: "歴代", value: "犬浦壽信、波川、佐藤ありさ" },
-          { label: "担当", value: "波川、高嶋、他、不定期に一般部員有段者が参加します" },
+          { label: "担当", value: "本部直轄" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/kitashiroishi/2.jpg",
@@ -57,10 +61,6 @@ const entries = [
         mapHref="https://www.google.com/maps/place/北白石地区センター/@43.053449,141.424351,15z/data=!4m5!3m4!1s0x0:0x51a3c6bc9843f2f!8m2!3d43.053449!4d141.424351"
         mapQuery="43.053449,141.424351"
         viewOnMapLabel="Google Mapsで見る"
-        instructors={[
-          { src: "/assets/images/instructors/namikawa.jpg", alt: "指導 波川", name: "波川" },
-          { src: "/assets/images/instructors/takashima.jpg", alt: "指導 高嶋", name: "高嶋" },
-        ]}
       />
 
       <div class="detail-gallery">

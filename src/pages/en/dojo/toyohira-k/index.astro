@@ -41,12 +41,15 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/oki.jpg", alt: "Instructor Shima", name: "Shima" },
+      ]} */}
       <BranchInfoCard
         name="Toyohira Park Branch"
         facts={[
           { label: "Established", value: "June 2015" },
           { label: "Former Instructors", value: "Oikawa, Shima" },
-          { label: "Current Instructors", value: "Okimura, assisted by rotating adult black belt members" },
+          { label: "Current Instructors", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/toyohira-k/imgC.jpg",
@@ -54,9 +57,6 @@ const entries = [
           width: 236,
           height: 176,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/oki.jpg", alt: "Instructor Shima", name: "Shima" },
-        ]}
         address="3-5 Toyohira 8-jo 11-chome, Toyohira Youth Activity Center"
         mapHref="https://www.google.com/maps/place/札幌市豊平若者活動センター/@43.0430538,141.3731148,15z/data=!4m2!3m1!1s0x0:0x8c7de2009ed78c7a"
         mapQuery="43.0430538,141.3731148"

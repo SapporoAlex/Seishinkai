@@ -47,13 +47,16 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/namikawa.jpg", alt: "Instructor Namikawa", name: "Namikawa" }
+      ]} */}
       <BranchInfoCard
         name="Higashi-ku Sakaemachi Branch"
         facts={[
           { label: "Founded", value: "September 2003" },
           { label: "Founders", value: "Kayoko Mimura, Kazuaki Namikawa" },
           { label: "Past Instructors", value: "Hashini" },
-          { label: "Contact", value: "Namikawa" },
+          { label: "Contact", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/sakaemachi/Image1.jpg",
@@ -61,9 +64,6 @@ const entries = [
           width: 240,
           height: 168,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/namikawa.jpg", alt: "Instructor Namikawa", name: "Namikawa" }
-        ]}
         address="Sanai Jidosha, Kita 42 Higashi 19-chome 1-1, Higashi-ku, Sapporo"
         mapHref="http://yahoo.jp/JbqUqo"
         mapQuery="Sanai Jidosha, Kita 42 Higashi 19-chome 1-1, Higashi-ku, Sapporo"

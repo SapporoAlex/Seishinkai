@@ -39,12 +39,15 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
+      ]} */}
       <BranchInfoCard
         name="Ainosato Branch"
         facts={[
           { label: "Founded", value: "March 2009 (Heisei 21)" },
           { label: "Founder", value: "Takushi Muroki" },
-          { label: "Instructors", value: "Tsubasa Okubo, Shima" },
+          { label: "Instructors", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/ainosato/img4.jpg",
@@ -52,10 +55,7 @@ const entries = [
           width: 455,
           height: 305,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
-        ]}
-        address="Ainosato 4-jo 6-chome, Kita-ku, Sapporo, Takuhoku Kaikan"
+="Ainosato 4-jo 6-chome, Kita-ku, Sapporo, Takuhoku Kaikan"
         mapHref="https://www.google.com/maps/place/拓北会館/@43.164024,141.403793,15z/data=!4m5!3m4!1s0x0:0x63d720b3ff077d1d!8m2!3d43.164024!4d141.403793"
         mapQuery="43.164024,141.403793"
       />

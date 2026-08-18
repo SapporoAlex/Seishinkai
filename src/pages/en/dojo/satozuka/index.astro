@@ -38,13 +38,18 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
+        { src: "/assets/images/instructors/masuda.jpg", alt: "Instructor Masuda", name: "Masuda" },
+        { src: "/assets/images/instructors/noro.jpg", alt: "Instructor Noro", name: "Noro" },
+      ]} */}
       <BranchInfoCard
         name="Seishinkai Satozuka Branch"
         facts={[
           { label: "Founded", value: "February 1999 (Heisei 11)" },
           { label: "Founder", value: "Katsumi Okubo" },
           { label: "Past instructors", value: "Inoue, Tsubasa Okubo, Tetsuhiro Kudo" },
-          { label: "Instructor", value: "Shima, plus adult black belt members joining occasionally" },
+          { label: "Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/satozuka/2.jpg",
@@ -52,11 +57,6 @@ const entries = [
           width: 258,
           height: 192,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/shima.jpg", alt: "Instructor Shima", name: "Shima" },
-          { src: "/assets/images/instructors/masuda.jpg", alt: "Instructor Masuda", name: "Masuda" },
-          { src: "/assets/images/instructors/noro.jpg", alt: "Instructor Noro", name: "Noro" },
-        ]}
         address="10-chome 4-17 Satozuka Midorigaoka, Kiyota-ku, Sapporo, Satozuka Midorigaoka Neighborhood Hall"
         mapHref="https://www.google.com/maps/place/里塚緑ヶ丘町内会館/@42.9895177,141.4727112,15z/data=!4m2!3m1!1s0x0:0x56db9b692a940c94?sa=X&ved=2ahUKEwjps-jkmLHhAhUQBKYKHZFyDqEQ_BIwCnoECAsQCA"
         mapQuery="42.9895177,141.4727112"

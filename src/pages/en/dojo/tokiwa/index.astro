@@ -39,13 +39,16 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/okimura.jpg", alt: "Instructor Okimura", name: "Okimura" },
+      ]} */}
       <BranchInfoCard
         name="Seishinkai Tokiwa Branch / Tokiwa Karate Club"
         facts={[
           { label: "Founded", value: "September 2012 (Heisei 24)" },
           { label: "Founder", value: "Takushi Muroki (2012-2020)" },
           { label: "Past instructors", value: ["Yutaka Yamane (2013-2014)", "Yoshihiko Oikawa (2020-2022)"] },
-          { label: "Instructor", value: "Okimura, plus adult black belt members joining occasionally" },
+          { label: "Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/tokiwa/img2.jpg",
@@ -53,9 +56,6 @@ const entries = [
           width: 259,
           height: 161,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/okimura.jpg", alt: "Instructor Okimura", name: "Okimura" },
-        ]}
         address="2-jo 2-chome 17-23 Tokiwa, Minami-ku, Sapporo, Tokiwa Children's Hall"
         mapHref="https://www.google.com/maps/place/常盤児童会館/@42.948119,141.347944,15z/data=!4m5!3m4!1s0x0:0xd28fbfc8404d010!8m2!3d42.948119!4d141.347944"
         mapQuery="42.948119,141.347944"

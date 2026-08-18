@@ -39,12 +39,16 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/takashima.jpg", alt: "土曜日指導担当", name: "髙嶋" },
+        { src: "/assets/images/instructors/manaya.jpg", alt: "木曜日指導担当", name: "愛弥" },
+      ]} */}
       <BranchInfoCard
         name="篠路支部"
         facts={[
           { label: "設立", value: "平成20年(2008)7月" },
           { label: "設立者", value: "室木拓士" },
-          { label: "担当", value: "本部直轄-嶋" },
+          { label: "担当", value: "本部直轄" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/shinoro/2.jpg",
@@ -52,10 +56,6 @@ const entries = [
           width: 282,
           height: 245,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/takashima.jpg", alt: "土曜日指導担当", name: "髙嶋" },
-          { src: "/assets/images/instructors/manaya.jpg", alt: "木曜日指導担当", name: "愛弥" },
-        ]}
         address="札幌市北区篠路3条8丁目11-1　篠路コミニティセンター2F"
         mapHref="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
         mapQuery="43.1431773,141.367712"

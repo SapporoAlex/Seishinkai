@@ -38,13 +38,16 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/oikawa.jpg", alt: "Instructor Yoshihiko Oikawa", name: "Yoshihiko Oikawa" },
+      ]} */}
       <BranchInfoCard
         name="Sapporo Chuo Branch"
         facts={[
           { label: "Founded", value: "April 2002 (Heisei 14)" },
           { label: "Founder", value: "Katsumi Okubo" },
           { label: "Former Instructors", value: "Muroki, Maekawa" },
-          { label: "Instructor", value: "Yoshihiko Oikawa" },
+          { label: "Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/cyuomainichi/2.jpg",
@@ -52,9 +55,6 @@ const entries = [
           width: 251,
           height: 193,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/oikawa.jpg", alt: "Instructor Yoshihiko Oikawa", name: "Yoshihiko Oikawa" },
-        ]}
         address="Minami 2-jo Nishi 15-chome, Chuo-ku, Sapporo, inside Nijo Elementary School (Nijo Harunire Jido Kaikan)"
         addressNote="Located inside Nijo Elementary School."
         mapHref="https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527"

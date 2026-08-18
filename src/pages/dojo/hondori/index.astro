@@ -23,38 +23,22 @@ const classes = [
     title: "水曜クラス",
     schedule: ["16:30-17:30"],
     instructors: [
-      {
-        name: "瑠唯",
-        position: "内弟子",
-        image: "/assets/images/instructors/rui.jpg",
-      },
-      {
-        name: "髙嶋",
-        position: "師範補",
-        image: "/assets/images/instructors/takashima.jpg",
-      },
+      { name: "本部直轄" },
+      { name: "本部直轄" },
     ],
   },
   {
     title: "金曜クラス",
     schedule: ["19:00-20:00"],
     instructors: [
-      {
-        name: "若林 敬司",
-        position: "師範代",
-        image: "/assets/images/instructors/wakabayashi.jpg",
-      },
+      { name: "本部直轄" },
     ],
   },
   {
     title: "日曜特設クラス",
     schedule: ["新規受付中／3名集まり次第開始"],
     instructors: [
-      {
-        name: "髙嶋",
-        position: "師範補",
-        image: "/assets/images/instructors/takashima.jpg",
-      },
+      { name: "本部直轄" },
     ],
   },
 ];
@@ -89,13 +73,18 @@ const classes = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/rui.jpg", alt: "指導 瑠唯", name: "瑠唯" },
+        { src: "/assets/images/instructors/wakabayashi.jpg", alt: "指導 若林", name: "若林" },
+        { src: "/assets/images/instructors/takashima.jpg", alt: "指導 髙嶋", name: "髙嶋" },
+      ]} */}
       <BranchInfoCard
         name="本通清心館空手道場"
         facts={[
           { label: "設立", value: "平成23年(2011) 4月" },
           { label: "設立者", value: "三村佳代子" },
           { label: "歴代", value: "ハシニ、滝上、増田、高嶋、他" },
-          { label: "師範代", value: "若林" },
+          { label: "師範代", value: "本部直轄" },
         ]}
         image={{
             src: "/assets/images/legacy/dojo/hondori/2.jpg",
@@ -107,12 +96,7 @@ const classes = [
         addressNote="地下鉄南郷18丁目駅2番出口 徒歩約11分(850m) JRバス「下白石駅」下車徒歩3分、中央バス「本通16丁目」徒歩2分"
         mapHref="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
         mapQuery="43.0360142,141.4332405"
-        viewOnMapLabel="Google Mapsで見る",
-        instructors={[
-          { src: "/assets/images/instructors/rui.jpg", alt: "指導 瑠唯", name: "瑠唯" },
-          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "指導 若林", name: "若林" },
-          { src: "/assets/images/instructors/takashima.jpg", alt: "指導 髙嶋", name: "髙嶋" },
-        ]}
+        viewOnMapLabel="Google Mapsで見る"
       />
 
       <div class="detail-gallery">

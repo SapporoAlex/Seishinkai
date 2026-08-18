@@ -38,6 +38,11 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/oki.jpg", alt: "指導 沖村", name: "沖村" },
+        { src: "/assets/images/legacy/images/sahan.jpg", alt: "サハン", name: "サハン" },
+        { src: "/assets/images/instructors/muroki.jpg", alt: "室木", name: "室木" },
+      ]} */}
       <BranchInfoCard
         name="東区アカシア支部"
         facts={[
@@ -45,7 +50,7 @@ const entries = [
           { label: "設立者", value: "室木拓士" },
           {
             label: "担当者",
-            value: ["沖村さおり", "※室木、サハンが不定期で指導参加しています"],
+            value: "本部直轄",
           },
         ]}
         image={{
@@ -54,12 +59,7 @@ const entries = [
           width: 224,
           height: 168,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/oki.jpg", alt: "指導 沖村", name: "沖村" },
-          { src: "/assets/images/legacy/images/sahan.jpg", alt: "サハン", name: "サハン" },
-          { src: "/assets/images/instructors/muroki.jpg", alt: "室木", name: "室木" },
-        ]}
-        address="札幌市東区北22条東1丁目1-20　アカシア若者活動者センター"
+="札幌市東区北22条東1丁目1-20　アカシア若者活動者センター"
         mapHref="http://yahoo.jp/-j3unj"
         mapQuery="札幌市東区北22条東1丁目1-20　アカシア若者活動者センター"
         viewOnMapLabel="Google Mapsで見る"

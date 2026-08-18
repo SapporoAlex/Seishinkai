@@ -23,38 +23,22 @@ const classes = [
     title: "Wednesday Class",
     schedule: ["16:30-17:30"],
     instructors: [
-      {
-        name: "Rui",
-        position: "Live-in Disciple (Uchi-deshi)",
-        image: "/assets/images/instructors/rui.jpg",
-      },
-      {
-        name: "Takashima",
-        position: "Assistant Instructor",
-        image: "/assets/images/instructors/takashima.jpg",
-      },
+      { name: "Headquarters-run" },
+      { name: "Headquarters-run" },
     ],
   },
   {
     title: "Friday Class",
     schedule: ["19:00-20:00"],
     instructors: [
-      {
-        name: "Keiji Wakabayashi",
-        position: "Deputy Instructor",
-        image: "/assets/images/instructors/wakabayashi.jpg",
-      },
+      { name: "Headquarters-run" },
     ],
   },
   {
     title: "Sunday Special Class",
     schedule: ["Currently accepting new students／Starts once 3 students have joined"],
     instructors: [
-      {
-        name: "Takashima",
-        position: "Assistant Instructor",
-        image: "/assets/images/instructors/takashima.jpg",
-      },
+      { name: "Headquarters-run" },
     ],
   },
 ];
@@ -90,13 +74,18 @@ const classes = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/rui.jpg", alt: "Instructor Rui", name: "Rui" },
+        { src: "/assets/images/instructors/wakabayashi.jpg", alt: "Instructor Wakabayashi", name: "Wakabayashi" },
+        { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Takashima", name: "Takashima" },
+      ]} */}
       <BranchInfoCard
         name="Hondori Seishinkan Karate Dojo"
         facts={[
           { label: "Founded", value: "April 2011 (Heisei 23)" },
           { label: "Founder", value: "Kayoko Mimura" },
           { label: "Past Instructors", value: "Hashini, Takigami, Masuda, Takashima, and others" },
-          { label: "Deputy Instructor", value: "Wakabayashi" },
+          { label: "Deputy Instructor", value: "Headquarters-run" },
         ]}
         image={{
             src: "/assets/images/legacy/dojo/hondori/2.jpg",
@@ -108,12 +97,7 @@ const classes = [
         addressNote="Approx. 11 min walk (850m) from Exit 2 of Nango 18-chome Subway Station / 3 min walk from JR Bus 'Shimo-Shiroishi Station' stop / 2 min walk from Chuo Bus 'Hondori 16-chome' stop"
         mapHref="https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２&#8722;４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991"
         mapQuery="43.0360142,141.4332405"
-        viewOnMapLabel="View on Google Maps",
-        instructors={[
-          { src: "/assets/images/instructors/rui.jpg", alt: "Instructor Rui", name: "Rui" },
-          { src: "/assets/images/instructors/wakabayashi.jpg", alt: "Instructor Wakabayashi", name: "Wakabayashi" },
-          { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Takashima", name: "Takashima" },
-        ]}
+        viewOnMapLabel="View on Google Maps"
       />
 
       <div class="detail-gallery">

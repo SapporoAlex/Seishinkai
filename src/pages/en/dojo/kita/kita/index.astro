@@ -44,13 +44,17 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/maekawa.jpg", alt: "Instructor Maekawa", name: "Maekawa" },
+        { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Takashima", name: "Takashima" },
+      ]} */}
       <BranchInfoCard
         name="Seishinkai Sapporo Kita / ARCS Kita Branch"
         facts={[
           { label: "Founded", value: "April 2010 (Heisei 22)" },
           { label: "Founder", value: "Kayoko Mimura" },
           { label: "Past instructors", value: "Hashini, Daniela, Shima, Okimura" },
-          { label: "Instructors", value: "Takashima, Maekawa, plus adult black belt members joining occasionally" },
+          { label: "Instructors", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/kita/2.jpg",
@@ -58,10 +62,6 @@ const entries = [
           width: 286,
           height: 178,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/maekawa.jpg", alt: "Instructor Maekawa", name: "Maekawa" },
-          { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Takashima", name: "Takashima" },
-        ]}
         address="1-1 Kita 24-jo Nishi 9-chome, Kita-ku, Sapporo, ARCS Kita 24-jo Store 2F"
         mapHref="https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店"
         mapQuery="札幌市北区北24条西9丁目1-1 アークス北24条店"

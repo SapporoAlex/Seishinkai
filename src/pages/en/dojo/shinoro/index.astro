@@ -39,12 +39,16 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/takashima.jpg", alt: "Saturday instructor", name: "Takashima" },
+        { src: "/assets/images/instructors/manaya.jpg", alt: "Thursday instructor", name: "Manaya" },
+      ]} */}
       <BranchInfoCard
         name="Shinoro Branch"
         facts={[
           { label: "Founded", value: "July 2008 (Heisei 20)" },
           { label: "Founder", value: "Takushi Muroki" },
-          { label: "Instructor", value: "Headquarters-run - Shima" },
+          { label: "Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/shinoro/2.jpg",
@@ -52,10 +56,6 @@ const entries = [
           width: 282,
           height: 245,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/takashima.jpg", alt: "Saturday instructor", name: "Takashima" },
-          { src: "/assets/images/instructors/manaya.jpg", alt: "Thursday instructor", name: "Manaya" },
-        ]}
         address="11-1 Shinoro 3-jo 8-chome, Kita-ku, Sapporo, Shinoro Community Center 2F"
         mapHref="https://www.google.com/maps/place/札幌市篠路コミュニティセンター/@43.1431773,141.367712,15z/data=!4m2!3m1!1s0x0:0x4aaefe8a200690fe?sa=X&ved=2ahUKEwjf6on517HhAhWCAYgKHV-_BqEQ_BIwCnoECAcQCA"
         mapQuery="43.1431773,141.367712"

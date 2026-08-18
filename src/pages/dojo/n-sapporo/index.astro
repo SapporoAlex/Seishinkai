@@ -45,13 +45,16 @@ const entries = [
 
       <BranchTable entries={entries} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/namikawa.jpg", alt: "波川師範", name: "波川" }
+      ]} */}
       <BranchInfoCard
         name="新札幌支部"
         facts={[
           { label: "設立", value: "平成9年(1997) 4月" },
           { label: "設立者", value: "大久保翼" },
           { label: "歴代", value: "大久保、阿部、他" },
-          { label: "師範", value: "波川" },
+          { label: "師範", value: "本部直轄" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/n-sapporo/2.jpg",
@@ -59,9 +62,6 @@ const entries = [
           width: 290,
           height: 206,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/namikawa.jpg", alt: "波川師範", name: "波川" }
-        ]}
         address="厚別区中央1条5丁目　厚別区民センター会議室"
         mapHref="https://www.google.com/maps/place/札幌市+厚別区民センター/@43.036652,141.474159,15z/data=!4m2!3m1!1s0x0:0x2eeb48db85d54c24?sa=X&ved=2ahUKEwi-kKuTlaXhAhUOUN4KHZo-B5UQ_BIwCnoECA8QCA"
         mapQuery="43.036652,141.474159"

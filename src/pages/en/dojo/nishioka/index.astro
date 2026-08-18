@@ -40,15 +40,15 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/oki.jpg", alt: "Okimura", name: "Okimura" },
+        { src: "/assets/images/instructors/sakai.jpg", alt: "Assistant Instructor Sakai", name: "Sakai" },
+      ]} */}
       <BranchInfoCard
         name="Seishinkai Nishioka Branch"
         facts={[
           { label: "Founded", value: "September 2010 (Heisei 22)" },
-          { label: "Instructor", value: "Okimura, plus rotating adult black belt members" },
-        ]}
-        instructors={[
-          { src: "/assets/images/instructors/oki.jpg", alt: "Okimura", name: "Okimura" },
-          { src: "/assets/images/instructors/sakai.jpg", alt: "Assistant Instructor Sakai", name: "Sakai" },
+          { label: "Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/nishioka/img3.jpg",
@@ -61,6 +61,10 @@ const entries = [
         mapQuery="43.01181,141.374177"
       />
 
+      <p class="detail-page__note">
+        ※Temporary venue: Nishioka-Minami Neighborhood Hall, 12-10 Nishioka 4-jo 14-chome
+      </p>
+
       <div class="detail-gallery">
         <figure>
           <img
@@ -72,11 +76,6 @@ const entries = [
           />
         </figure>
       </div>
-
-      <p class="detail-page__note">
-        ※<br />
-        Temporary venue: Nishioka-Minami Neighborhood Hall, 12-10 Nishioka 4-jo 14-chome
-      </p>
 
       <p class="detail-page__back">
         <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>

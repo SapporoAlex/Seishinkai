@@ -39,12 +39,16 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Shima", name: "Shima" },
+        { src: "/assets/images/instructors/masuda.jpg", alt: "Masuda", name: "Masuda" },
+      ]} */}
       <BranchInfoCard
         name="Seishinkai Sumikawa-Nishi Branch"
         facts={[
           { label: "Founded", value: "September 2010 (Heisei 22)" },
           { label: "Past instructors", value: "Tsubasa Okubo, Takashima" },
-          { label: "Instructor", value: "Okimura, plus rotating adult black belt members" },
+          { label: "Instructor", value: "Headquarters-run" },
         ]}
         image={{
           src: "/assets/images/legacy/dojo/sumikawa-n/2.jpg",
@@ -52,10 +56,6 @@ const entries = [
           width: 243,
           height: 174,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Shima", name: "Shima" },
-          { src: "/assets/images/instructors/masuda.jpg", alt: "Masuda", name: "Masuda" },
-        ]}
         address="2-15 Hiragishi 1-jo 22-chome, Toyohira-ku, Sapporo, Big House Extra Store 2F"
         mapHref="https://www.google.com/maps/place/%E3%83%93%E3%83%83%E3%82%AF%E3%83%8F%E3%82%A6%E3%82%B9+%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E5%BA%97/@43.0147543,141.3584402,17z"
         mapQuery="43.0147543,141.3584402"

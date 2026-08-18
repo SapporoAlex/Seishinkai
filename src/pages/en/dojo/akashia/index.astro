@@ -38,6 +38,11 @@ const entries = [
 
       <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
 
+      {/* instructors={[
+        { src: "/assets/images/instructors/oki.jpg", alt: "Instructor Saori Okimura", name: "Saori Okimura" },
+        { src: "/assets/images/legacy/images/sahan.jpg", alt: "Sahan", name: "Sahan" },
+        { src: "/assets/images/instructors/muroki.jpg", alt: "Muroki", name: "Muroki" },
+      ]} */}
       <BranchInfoCard
         name="Higashi Ward — Akashia Branch"
         facts={[
@@ -45,7 +50,7 @@ const entries = [
           { label: "Founder", value: "Taku Muroki" },
           {
             label: "Person in Charge",
-            value: ["Saori Okimura", "※Muroki and Sahan also help with instruction on an irregular basis"],
+            value: "Headquarters-run",
           },
         ]}
         image={{
@@ -54,12 +59,7 @@ const entries = [
           width: 224,
           height: 168,
         }}
-        instructors={[
-          { src: "/assets/images/instructors/oki.jpg", alt: "Instructor Saori Okimura", name: "Saori Okimura" },
-          { src: "/assets/images/legacy/images/sahan.jpg", alt: "Sahan", name: "Sahan" },
-          { src: "/assets/images/instructors/muroki.jpg", alt: "Muroki", name: "Muroki" },
-        ]}
-        address="Akashia Youth Activity Center, Kita 22-jo Higashi 1-chome 1-20, Higashi-ku, Sapporo"
+="Akashia Youth Activity Center, Kita 22-jo Higashi 1-chome 1-20, Higashi-ku, Sapporo"
         mapHref="http://yahoo.jp/-j3unj"
         mapQuery="Akashia Youth Activity Center, Kita 22-jo Higashi 1-chome 1-20, Higashi-ku, Sapporo"
       />
