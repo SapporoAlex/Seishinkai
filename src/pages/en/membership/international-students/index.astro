@@ -21,61 +21,95 @@ const IMG = "/assets/images/legacy/intern/";
 ---
 
 <BaseLayout
-  title="Karate International Students"
-  description="Introducing the international students and uchideshi (live-in trainees) who have studied karate at Seishinkai Headquarters. Information on our long-term karate culture visa program, accommodation, and short-term student intake."
+  title="Foreign Karate Students - Karate International Students"
+  description="Information about foreign students and live-in trainees who have studied karate at Seishinkai Headquarters, including the long-term study program using a Karate Culture Visa, accommodation, and short-term study opportunities."
   lang="en"
-  path="/en/membership/international-students/"
+  path="/membership/international-students/"
 >
   <section class="dojo-list">
     <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">INTERNATIONAL</span>
-        <h1 class="section-title">Karate International Students</h1>
+        <h1 class="section-title">Foreign Karate Students</h1>
       </div>
 
+      <h2 class="detail-page__heading">
+        JAPAN Old Style Karate "Seishinkai Dojo"
+      </h2>
+
       <p class="detail-page__lead">
-        [JAPAN Old style karate "Seishinkai dojo"]<br />
-        Foreign nationals wishing to study karate at Seishinkai can obtain a karate culture visa and stay for a long time to learn karate.<br />
-        The following are long-term trainees (international students) who
-        studied at Seishinkai Headquarters.
+        Foreigners who wish to study karate at Seishinkai can obtain a Karate
+        Culture Visa, allowing them to stay in Japan for an extended period
+        while studying karate.
       </p>
 
       <p class="detail-page__note">
-        Accommodation is available for foreign trainees of Seishinryu
-        Karate.<br />
-        <a href="https://youtu.be/Q6q0g7h7f0A" target="_blank" rel="noopener"
-          >Watch an introduction video of the accommodation (YouTube)</a
+        Accommodation is available for those studying Seishinryu Karate.
+        <br />
+        <a
+          href="https://youtu.be/Q6q0g7h7f0A"
+          target="_blank"
+          rel="noopener"
         >
+          Watch the accommodation introduction video on YouTube
+        </a>
       </p>
 
       <h2 class="detail-page__heading">
-        ◆Special Long-Term Foreign Students (Instructor Training Course) / Uchideshi<br />
+        ◆ Long-Term Foreign Students (Instructor Training Course) & Live-in Trainees
+        <br />
         <small>Long-term foreign student, leader training course</small>
       </h2>
 
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--tall">
         {
           longTerm.map((student) =>
             student.href ? (
               <figure>
-                <a
-                  href={student.href}
-                  target="_blank"
-                  rel="noopener"
-                  class:list={{ "video-thumb": student.href.includes("youtube") }}
-                >
-                  <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
-                </a>
+                <img
+                  src={`${IMG}${student.image}`}
+                  alt={student.name}
+                  loading="lazy"
+                />
                 <figcaption>
                   {student.name}
                   <br />
                   {student.years}
                   {student.rank && ` ${student.rank}`}
+                  <a
+                    href={student.href}
+                    target="_blank"
+                    rel="noopener"
+                    class:list={{
+                      "logo-youtube": student.href.includes("youtube"),
+                      "logo-facebook": student.href.includes("facebook"),
+                    }}
+                  >
+                    {student.href.includes("facebook") && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+                      </svg>
+                    )}
+
+                    {student.href.includes("youtube") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
+                      </svg>
+                    )}
+                  </a>
                 </figcaption>
               </figure>
             ) : (
               <figure>
-                <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
+                <img
+                  src={`${IMG}${student.image}`}
+                  alt={student.name}
+                  loading="lazy"
+                />
                 <figcaption>
                   {student.name}
                   <br />
@@ -89,15 +123,20 @@ const IMG = "/assets/images/legacy/intern/";
       </div>
 
       <h2 class="detail-page__heading">
-        ◆Short-Term Foreign Students (Graduates)<br />
+        ◆ Short-Term Foreign Students (Graduates)
+        <br />
         <small>Foreign short-term students (Graduates)</small>
       </h2>
 
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--tall">
         {
           shortTerm.map((student) => (
             <figure>
-              <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
+              <img
+                src={`${IMG}${student.image}`}
+                alt={student.name}
+                loading="lazy"
+              />
               <figcaption>
                 {student.name}
                 <br />
@@ -108,7 +147,8 @@ const IMG = "/assets/images/legacy/intern/";
         }
       </div>
 
-      <h2 class="detail-page__heading">Training Scenes</h2>
+      <h2 class="detail-page__heading">Training at the Dojo</h2>
+
       <div class="detail-gallery">
         <figure>
           <a
@@ -117,27 +157,43 @@ const IMG = "/assets/images/legacy/intern/";
             target="_blank"
             rel="noopener"
           >
-            <img src={`${IMG}DSC_4462.jpg`} alt="International students training (YouTube)" loading="lazy" />
+            <img
+              src={`${IMG}DSC_4462.jpg`}
+              alt="Foreign students training at the dojo"
+              loading="lazy"
+            />
           </a>
         </figure>
+
         <figure>
-          <img src={`${IMG}DSC_4138.jpg`} alt="International students training" loading="lazy" />
+          <img
+            src={`${IMG}DSC_4138.jpg`}
+            alt="Foreign students training at the dojo"
+            loading="lazy"
+          />
         </figure>
+
         <figure>
-          <img src={`${IMG}DSC_3105.jpg`} alt="International students training" loading="lazy" />
+          <img
+            src={`${IMG}DSC_3105.jpg`}
+            alt="Foreign students training at the dojo"
+            loading="lazy"
+          />
         </figure>
       </div>
 
       <p class="detail-page__note">
-        Foreigners residing in Japan will be charged the same enrollment
-        and fees as Japanese.<br />
-        <a href="/assets/pdf/kis.pdf" target="_blank"
-          >About karate study abroad expenses(PDF)</a
-        >
+        Foreigners residing in Japan enroll under the same conditions and fees
+        as Japanese members.
+        <br />
+        <a href="/assets/pdf/kis.pdf" target="_blank">
+          About Karate Study Abroad Expenses (PDF)
+        </a>
       </p>
 
-      <h2 class="detail-page__heading">Inquiry by message</h2>
-      <div class="detail-gallery">
+      <h2 class="detail-page__heading">Inquiries</h2>
+
+      <div class="detail-gallery detail-gallery--full">
         <figure>
           <a
             href="https://www.facebook.com/katsumi.okubo.9"
@@ -152,6 +208,7 @@ const IMG = "/assets/images/legacy/intern/";
           </a>
           <figcaption>Soke Okubo</figcaption>
         </figure>
+
         <figure>
           <a
             href="https://www.facebook.com/nobutaka.maekawa"
@@ -169,7 +226,7 @@ const IMG = "/assets/images/legacy/intern/";
       </div>
 
       <p class="detail-page__back">
-        <a href="/en/membership/">← Back to Membership Information</a>
+        <a href="/membership/">← Back to Membership Information</a>
       </p>
     </div>
   </section>
