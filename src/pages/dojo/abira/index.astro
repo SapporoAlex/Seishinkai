@@ -72,14 +72,86 @@ const entries = [
       </div>
       <p class="detail-page__contact">お問い合わせは　各道場へ</p>
 
-      <BranchTable entries={entries} />
+      <!-- <BranchTable entries={entries} /> -->
+
+      <div class="branch-table__wrap fade-up-in">
+        <table class="branch-table fade-up-in">
+          <thead>
+            <tr>
+              <th></th>
+              <th>道場・支部名</th>
+              <th>住　所/会場施設名</th>
+              <th>稽古日/連絡先</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td rowspan="4" class="branch-table__name">◇清心館高橋道場</td>
+              <td>安平町安平　安平小体育館</td>
+              <td>火曜　※0145-23-2604(高橋)</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>安平町追分　追分労働会館</td>
+              <td>木曜　※0145-23-2604(高橋)</td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>安平町早来　早来町民センター</td>
+              <td>金曜　※0145-23-2604(高橋)</td>
+            </tr>
+
+            <tr>
+              <td>4</td>
+              <td>安平町遠浅　遠浅公民館</td>
+              <td>月曜　※0145-23-2604(高橋)</td>
+            </tr>
+
+            <tr>
+              <td>5</td>
+              <td class="branch-table__name"><a target="_blank" href="https://www.facebook.com/profile.php?id=100034261714273">◇北新会新冠道場</a></td>
+              <td>新冠町</td>
+              <td>※090-9086-7943(高野)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <p class="detail-page__note">
-        ◇加盟道場　清心会･高橋道場、清心会･北新会道場は、苫小牧地区空手道連盟(道空連/全空連)加盟しています。上記の各教室は、全空連に準じた形の指導体系となります。<br />
+        ◇清心会･高橋道場は、苫小牧地区空手道連盟(JKF道空連)加盟しています。<br />
+        　上記の各教室は、全空連に準じた形の指導体系となります。<br />
         ※昼間は仕事中ですので、電話に出れない場合があります。
       </p>
 
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--full">
+        <figure>
+            <img
+              src="/assets/images/instructors/takafashiabira.jpg"
+              alt="高橋"
+              loading="lazy"
+            />
+          <figcaption>清心館高橋道場　<br>
+            師範　高橋　剛
+          </figcaption>
+        </figure>
+
+        <figure>
+            <img
+              src="/assets/images/instructors/takano.jpg"
+              alt="高野"
+              loading="lazy"
+            />
+          <figcaption>北新会道場　<br>
+            師範　高野　均
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- <div class="detail-gallery">
         <figure>
           <img
             src="/assets/images/legacy/photo/Image8.jpg"
@@ -100,17 +172,7 @@ const entries = [
           />
           <figcaption>高橋道場</figcaption>
         </figure>
-      </div>
-
-      <div class="detail-media">
-        <img
-          src="/assets/images/legacy/photo/Image2.jpg"
-          alt="清心会空手 稽古の様子"
-          width="570"
-          height="340"
-          loading="lazy"
-        />
-      </div>
+      </div> -->
 
       <p class="detail-page__back">
         <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>

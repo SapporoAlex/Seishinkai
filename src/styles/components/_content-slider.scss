@@ -8,7 +8,7 @@
 .content-slider {
   position: relative;
   width: 100%;
-  margin: 40px 0;
+  margin: 80px 0;
 
   --swiper-theme-color: var(--navy);
   --swiper-pagination-bullet-inactive-color: var(--border);
@@ -18,7 +18,9 @@
 
   .swiper {
     width: 100%;
+    max-height: 750px;
     padding-bottom: 44px; // room for pagination dots below the slides
+    padding-top: 16px;
     @include mqsp {
       width: 100%;
     }
@@ -29,9 +31,11 @@
   }
 
   &__slide {
+    padding-top: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100%;
     border: 1px solid var(--border);
     overflow: hidden;
@@ -57,14 +61,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 700px;
+    max-width: 900px;
+    max-height: 600px;
     overflow: hidden;
-    background: var(--off-white);
-
+    background-color: #fff;
+    @include mqsp {
+      max-height: 200px;
+    }
     img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+      width: auto;
+      height: 100%;
+      object-fit: contain;
       display: block;
       transition: transform var(--hover-time);
     }
@@ -112,15 +119,15 @@
     width: $arrow-size;
     height: $arrow-size;
     margin-top: 0;
-    background: #fff;
-    border: 1px solid var(--border);
+    background: #ffffff4d;
+    border: 1px solid transparent;
     border-radius: 50%;
     box-shadow: 0 1px 4px rgba(13, 37, 69, 0.08);
     transition:
       border-color var(--hover-time),
       box-shadow var(--hover-time),
-      transform var(--hover-time);
-
+      transform var(--hover-time),
+      background var(--hover-time);
     &::after {
       font-size: 16px;
       font-weight: 600;
@@ -131,6 +138,7 @@
       border-color: var(--blue);
       box-shadow: 0 4px 10px rgba(13, 37, 69, 0.12);
       transform: translateY(-2px);
+      background: #fff;
     }
 
     &.swiper-button-disabled {
@@ -139,15 +147,21 @@
 
     @include mqsp {
       display: none;
+      background: #fff;
+      border: 1px solid var(--border);
     }
   }
 
   .swiper-button-prev {
-    left: 10px;
+    @include mqsp {
+      left: 10px;
+    }
   }
 
   .swiper-button-next {
-    right: 10px;
+    @include mqsp {
+      right: 10px;
+    }
   }
 
   // Pagination
@@ -181,9 +195,10 @@
     .swiper-button-prev::after,
     .swiper-button-next::after {
       font-family: initial;
-      color: var(--blue);
-      font-size: 20px;
+      color: var(--red);
+      font-size: 25px;
       font-weight: 700;
+      font-weight: 900;
     }
 
     .swiper-button-prev::after {

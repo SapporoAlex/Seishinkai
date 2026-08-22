@@ -1,5 +1,167 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ContentSlider from "@components/ContentSlider.astro";
+
+
+const mimuraSlides = [
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_01.jpg",
+    alt: "2008年の女性練成会の様子",
+    text: "2008.女性練成会を実現。以後、11回開催する",
+  },
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_04.jpg",
+    alt: "2008.1",
+    text: "2008.1",
+  },
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_03.jpg",
+    alt: "2012-1",
+    text: "2012-1",
+  },
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_09.jpg",
+    alt: "2013.4",
+    text: "2013.4",
+  },
+      {
+    image: "/assets/images/instructors/mimura/img_mimura_07.jpg",
+    alt: "2013年6月の三村館長",
+    text: "2013.6.11",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_15.jpg",
+    alt: "2013.8",
+    text: "2013.8",
+  },
+
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_21.jpg",
+    alt: "2015.6",
+    text: "2015.6",
+  },
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_27.jpg",
+    alt: "2015.8",
+    text: "2015.8",
+  },
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_02.jpg",
+    alt: "2015年11月、最後の女性練成会の様子",
+    text: "2015.11.5.亡くなる直前の最後の女性練成会",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_06.jpg",
+    alt: "子供たちと三村館長",
+    text: "子供が大好き",
+  },
+
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_08.jpg",
+    alt: "司会を務める三村館長",
+    text: "話し上手で司会進行もお手のもの",
+  },
+
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_10.jpg",
+    alt: "ピアノを演奏する三村館長",
+    text: "ピアノも上手でした",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_11.jpg",
+    alt: "旭山動物園を訪れる三村館長",
+    text: "旭山動物園にて",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_12.jpg",
+    alt: "審査会での三村館長",
+    text: "審査会にて",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_13.jpg",
+    alt: "三村佳代子館長",
+    text: "",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_14.jpg",
+    alt: "取材を受ける三村館長",
+    text: "多くの取材を受ける",
+  },
+      {
+    image: "/assets/images/instructors/mimura/img_mimura_28.jpg",
+    alt: "",
+    text: "",
+  },
+      {
+    image: "/assets/images/instructors/mimura/img_mimura_29.jpg",
+    alt: "",
+    text: "",
+  },
+        {
+    image: "/assets/images/instructors/mimura/img_mimura_30.jpg",
+    alt: "",
+    text: "",
+  },
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_25.jpg",
+    alt: "愛車 SUZUKI Bolty 250cc",
+    text: "愛車SUZUKI Bolty250cc",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_16.jpg",
+    alt: "三村館長ブログを書籍化した全10冊",
+    text: "三村館長ブログを書籍に全10冊に",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_17.jpg",
+    alt: "おたる水族館を訪れる三村館長",
+    text: "おたる水族館で",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_18.jpg",
+    alt: "サッポロファクトリーでの演武",
+    text: "サッポロファクトリーで演武",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_19.jpg",
+    alt: "2006年、バイクでの合宿",
+    text: "2006.合宿はバイクで",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_20.jpg",
+    alt: "何にでも挑戦する三村館長",
+    text: "なんでも挑戦!",
+  },
+
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_22.jpg",
+    alt: "スリランカで会長とともに",
+    text: "スリランカにて",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_23.jpg",
+    alt: "会長の誕生日に",
+    text: "会長の誕生日に",
+  },
+
+
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_26.jpg",
+    alt: "三村佳代子館長",
+    text: "三村佳代子館長",
+  },
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_24.jpg",
+    alt: "藤野聖山園の墓碑・清心会顕彰碑",
+    text: "墓碑・顕彰碑",
+  },
+    {
+    image: "/assets/images/instructors/mimura/img_mimura_05.jpg",
+    alt: "三村佳代子館長",
+    text: "",
+  },
+];
+
 
 const memorialVideos = [
   { href: "https://www.youtube.com/watch?v=WzCHiw9EH58", image: "/assets/images/legacy/mimu/2D5O2742.jpg", caption: "1974.6.11 - 2015.11.27" },
@@ -39,81 +201,73 @@ const memorialVideos = [
 
         <h2 class="detail-page__heading">概略</h2>
         <div class="profile-detail__body">
-          <p>
-            北星学園女子短期大学英文科卒業後、ＯＬをしながら清心流空手読売文化教室に入門。<br />
-            第二期研修生となり栄町支部長に任命され、平成18年終了。道新スポーツの取材の際に将来の夢は「女性館長」と語る。<br />
-            平成20年、胃がんにより胃を全摘(ステージ4)、同年、ＮＰＯ法人清心会常勤職員第一号となる。<br />
-            平成21年、師範に就任。
-          </p>
-          <p>
-            日々研鑽し会長の一番弟子、後継者として誰もが認める存在となり平成24年、総本部第二代・館長に任命される。清心流空手道錬士・六段。<br />
-            清心会空手道における女性指導者の先駆者として活躍し、清心会初の女性師範、女性館長。<br />
-            英語が堪能で同時通訳もでき国際部長を務め、毎年訪れる海外からの空手愛好家のホスト役を務める。平成25年、スリランカへ空手指導に赴く。<br />
-            平成27年、教士七段。空手の他、沖縄古武道(武器術)、居合なども研鑽。<br />
-            特定非営利活動法人全日本清心会専務理事、ISKF総本部館長 兼 国際部長を務め清心会の礎を築く。
-          </p>
-          <p>
-            平成27年11月27日、癌が再発し若くして急逝。栄誉九段。葬儀に際しては会員など800名以上が参列した。<br />
-            故人の貢献を名誉館長として讃える。<br />
-            平成28年、藤野聖山園に墓碑及び清心会顕彰碑を建立。毎年、<a
-              href="https://www.youtube.com/watch?v=Kbx1rgE_Gec"
-              target="_blank"
-              rel="noopener">GW</a>・<a
-              href="https://www.youtube.com/watch?v=CskzxHmgsk8"
-              target="_blank"
-              rel="noopener">お盆</a>・<a
-              href="https://www.youtube.com/watch?v=YXWBOzv3jxs"
-              target="_blank"
-              rel="noopener">11月</a
-            >の3回、墓参会を実施している。
-          </p>
+
+          <div class="detail-page__img-text-pair--reverse">
+            <div class="detail-media--small fade-right-in">
+              <figure>
+                <img
+                  src="/assets/images/instructors/mimura/img_mimura_fv.jpg"
+                  alt="Mimura"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div>
+              <p>
+                北星学園女子短期大学英文科卒業後、ＯＬをしながら清心流空手読売文化教室に入門。<br />
+                第二期研修生となり栄町支部長に任命され、平成18年終了。道新スポーツの取材の際に将来の夢は「女性館長」と語る。<br />
+                平成20年、胃がんにより胃を全摘(ステージ4)、同年、ＮＰＯ法人清心会常勤職員第一号となる。<br />
+                平成21年、師範に就任。
+              </p>
+              <p>
+                日々研鑽し会長の一番弟子、後継者として誰もが認める存在となり平成24年、総本部第二代・館長に任命される。清心流空手道錬士・六段。<br />
+                清心会空手道における女性指導者の先駆者として活躍し、清心会初の女性師範、女性館長。<br />
+                英語が堪能で同時通訳もでき国際部長を務め、毎年訪れる海外からの空手愛好家のホスト役を務める。平成25年、スリランカへ空手指導に赴く。<br />
+                平成27年、教士七段。空手の他、沖縄古武道(武器術)、居合なども研鑽。<br />
+                特定非営利活動法人全日本清心会専務理事、ISKF総本部館長 兼 国際部長を務め清心会の礎を築く。
+              </p>
+              <p>
+                平成27年11月27日、癌が再発し若くして急逝。栄誉九段。葬儀に際しては会員など800名以上が参列した。<br />
+                故人の貢献を名誉館長として讃える。<br />
+                平成28年、藤野聖山園に墓碑及び清心会顕彰碑を建立。毎年、<a
+                  href="https://www.youtube.com/watch?v=Kbx1rgE_Gec"
+                  target="_blank"
+                  rel="noopener">GW</a>・<a
+                  href="https://www.youtube.com/watch?v=CskzxHmgsk8"
+                  target="_blank"
+                  rel="noopener">お盆</a>・<a
+                  href="https://www.youtube.com/watch?v=YXWBOzv3jxs"
+                  target="_blank"
+                  rel="noopener">11月</a
+                >の3回、墓参会を実施している。
+              </p>
+            </div>
+          </div>
         </div>
 
+        <ContentSlider
+          slides={mimuraSlides}
+          ratio=""
+          autoplaySeconds={10}
+          class="content-slider--history"
+        />
+<!-- 
         <div class="detail-gallery">
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=WzCHiw9EH58"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/2D5O2742.jpg"
-                alt="故・三村佳代子館長 1974.6.11-2015.11.27"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>1974.6.11 - 2015.11.27（動画）</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=IuvwfOgrzPw"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/2008.jpg"
                 alt="2008年の女性練成会の様子"
                 loading="lazy"
               />
-            </a>
-            <figcaption>2008.女性練成会を実現。以後、11回開催する（動画）</figcaption>
+            <figcaption>2008.女性練成会を実現。以後、11回開催する</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=yTM8k8jQPtY"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/201511.jpg"
                 alt="2015年11月、最後の女性練成会の様子"
                 loading="lazy"
               />
-            </a>
-            <figcaption>2015.11.5.亡くなる直前の最後の女性練成会（動画）</figcaption>
+            <figcaption>2015.11.5.亡くなる直前の最後の女性練成会</figcaption>
           </figure>
           <figure>
             <img
@@ -125,19 +279,12 @@ const memorialVideos = [
             <figcaption>任命証</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=nKzgM6h24_M"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/20130427.jpg"
                 alt="行事に参加する三村館長"
                 loading="lazy"
               />
-            </a>
-            <figcaption>亡くなるまで全ての行事に参加（動画）</figcaption>
+            <figcaption>亡くなるまで全ての行事に参加</figcaption>
           </figure>
           <figure>
             <img
@@ -179,34 +326,20 @@ const memorialVideos = [
             <figcaption>2015.石森師範宅で</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=qQODzM12-pE"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/20080613.jpg"
                 alt="ピアノを演奏する三村館長"
                 loading="lazy"
               />
-            </a>
-            <figcaption>▲ピアノも上手でした（動画）</figcaption>
+            <figcaption>▲ピアノも上手でした</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=sl9WIxrOc_c"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/20080811.jpg"
                 alt="旭山動物園を訪れる三村館長"
                 loading="lazy"
               />
-            </a>
-            <figcaption>旭山動物園にて（動画）</figcaption>
+            <figcaption>旭山動物園にて</figcaption>
           </figure>
           <figure>
             <img
@@ -232,19 +365,12 @@ const memorialVideos = [
             <figcaption>多くの取材を受ける</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=FTJaGpSop5c&t=2s"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/mimu2.jpg"
                 alt="沖縄古武道・トンファーを指導する三村館長"
                 loading="lazy"
               />
-            </a>
-            <figcaption>沖縄古武道・トンファーの指導（動画）</figcaption>
+            <figcaption>沖縄古武道・トンファーの指導</figcaption>
           </figure>
           <figure>
             <img
@@ -255,34 +381,21 @@ const memorialVideos = [
             <figcaption>三村館長ブログを書籍に全10冊に</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=HsIhOwJ6nXk"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/DSC_0012.jpg"
                 alt="おたる水族館を訪れる三村館長"
                 loading="lazy"
               />
-            </a>
-            <figcaption>おたる水族館で（動画）</figcaption>
+            <figcaption>おたる水族館で</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=jRyGGyLBw2A"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/20070915.jpg"
                 alt="サッポロファクトリーでの演武"
                 loading="lazy"
               />
             </a>
-            <figcaption>サッポロファクトリーで演武（動画）</figcaption>
+            <figcaption>サッポロファクトリーで演武</figcaption>
           </figure>
           <figure>
             <img
@@ -301,27 +414,14 @@ const memorialVideos = [
             <figcaption>なんでも挑戦!</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=v6gX_JVRuys&t=3s"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/Image1.jpg"
                 alt="2015年11月、最後の稽古"
                 loading="lazy"
               />
-            </a>
-            <figcaption>最後の稽古 2015.11（動画）</figcaption>
+            <figcaption>最後の稽古 2015.11</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=rv05o7MNxu4"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/Image3.jpg"
                 alt="スリランカで会長とともに"
@@ -339,19 +439,13 @@ const memorialVideos = [
             <figcaption>会長の誕生日に</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=Q5vSaxyu1Sg&t=116s"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/20180429.jpg"
                 alt="藤野聖山園の墓碑・清心会顕彰碑"
                 loading="lazy"
               />
             </a>
-            <figcaption>墓碑・顕彰碑（動画）</figcaption>
+            <figcaption>墓碑・顕彰碑</figcaption>
           </figure>
           <figure>
             <img
@@ -362,22 +456,15 @@ const memorialVideos = [
             <figcaption>愛車SUZUKI Bolty250cc</figcaption>
           </figure>
           <figure>
-            <a
-              href="https://www.youtube.com/watch?v=AQcVXGI4GBY&t=418s"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
               <img
                 src="/assets/images/legacy/mimu/2d5o8277.jpg"
                 alt="三村佳代子館長"
                 loading="lazy"
               />
-            </a>
-            <figcaption>動画を見る</figcaption>
+            <figcaption>三村佳代子館長</figcaption>
           </figure>
         </div>
-      </div>
+      </div> -->
 
       <section class="partner-section">
         <h2 class="detail-page__heading">動画で見る三村佳代子館長</h2>

@@ -833,6 +833,42 @@
   }
 }
 
+.detail-media--small {
+  height: auto;
+  width: 30%;
+  min-width: 200px;
+  @include mqsp {
+    width: 100%;
+  }
+  figure {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+    transform: translateY(20px);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      @include mqsp {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  &__caption {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    margin-top: 6px;
+    text-align: center;
+  }
+}
+
 // Profile pages (okubo / tubasa)
 .profile-detail {
   &__role {

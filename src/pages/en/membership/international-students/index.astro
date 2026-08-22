@@ -2,27 +2,27 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 const longTerm = [
-  { name: "Hashini / Sri Lanka", years: "2011-2021", rank: "4th Dan", image: "hashini.jpg", href: "https://www.youtube.com/watch?v=UpRmPGwuNNM" },
-  { name: "Erica / Sweden", years: "2025-2026", rank: "", image: "erica2.jpg", href: "https://www.facebook.com/erica.bokelius" },
-  { name: "Alex / Australia", years: "2007-2013", rank: "2nd Dan", image: "alex.jpg" },
-  { name: "Emmet / Ireland", years: "2009-2013", rank: "", image: "emet.jpg" },
-  { name: "Daniela / Italy", years: "2016-2019", rank: "2nd Dan", image: "dani.jpg" },
-  { name: "Sahan / Sri Lanka", years: "2018-2021", rank: "2nd Dan", image: "sahan.jpg", href: "https://www.youtube.com/watch?v=UpRmPGwuNNM" },
+  { name: "Hashini / Sri Lanka", years: "2011-2021", rank: "4th Dan", image: "hashini.jpeg", href: "https://www.youtube.com/watch?v=UpRmPGwuNNM" },
+  { name: "Erica / Sweden", years: "2025-2026", rank: "", image: "erica_02.jpeg", href: "https://www.facebook.com/erica.bokelius" },
+  { name: "Alex / Australia", years: "2007-2013", rank: "2nd Dan", image: "alex.jpeg" },
+  { name: "Emmet / Ireland", years: "2009-2013", rank: "", image: "emmet.jpeg" },
+  { name: "Daniela / Italy", years: "2016-2019", rank: "2nd Dan", image: "daniera.jpeg" },
+  { name: "Sahan / Sri Lanka", years: "2018-2021", rank: "2nd Dan", image: "sahan.jpeg", href: "https://www.youtube.com/watch?v=UpRmPGwuNNM" },
 ];
 
 const shortTerm = [
-  { name: "Mario / Spain", years: "2007 / 2008", image: "mario.jpg" },
-  { name: "Silvia / Italy", years: "2016", image: "silvia.jpg" },
-  { name: "Erica / Sweden", years: "2015 / 2016 / 2025", image: "erica.jpg" },
-  { name: "Josephine / Sweden", years: "2016", image: "josefin.jpg" },
+  { name: "Mario / Spain", years: "2007 / 2008", image: "mario.jpeg" },
+  { name: "Silvia / Italy", years: "2016", image: "silvia.jpeg" },
+  { name: "Erica / Sweden", years: "2015 / 2016 / 2025", image: "erica_01.jpeg" },
+  { name: "Josephine / Sweden", years: "2016", image: "josephine.jpeg" },
 ];
 
-const IMG = "/assets/images/legacy/intern/";
+const IMG = "/assets/images/membership/foreign-trainees/";
 ---
 
 <BaseLayout
   title="Foreign Karate Students - Karate International Students"
-  description="Information about foreign students and live-in trainees who have studied karate at Seishinkai Headquarters, including the long-term study program using a Karate Culture Visa, accommodation, and short-term study opportunities."
+  description="Introduction to foreign students and resident trainees who studied karate at Seishinkai Headquarters. Information about the long-term study program using a Karate Culture Visa, accommodation, and short-term student opportunities."
   lang="en"
   path="/membership/international-students/"
 >
@@ -33,32 +33,37 @@ const IMG = "/assets/images/legacy/intern/";
         <h1 class="section-title">Foreign Karate Students</h1>
       </div>
 
-      <h2 class="detail-page__heading">
-        JAPAN Old Style Karate "Seishinkai Dojo"
-      </h2>
+      <h2 class="detail-page__heading">JAPAN Old Style Karate "Seishinkai Dojo"</h2>
 
       <p class="detail-page__lead">
-        Foreigners who wish to study karate at Seishinkai can obtain a Karate
-        Culture Visa, allowing them to stay in Japan for an extended period
-        while studying karate.
+        Foreigners who wish to study karate at Seishinkai can obtain a Karate Culture Visa,
+        stay in Japan for an extended period, and study karate.<br />
+        <em>
+          Get a Karate Culture Visa and stay for a long time to learn
+          karate.
+        </em><br />
+        The following are long-term trainees (international students) who
+        studied at Seishinkai Headquarters.<br />
+        <em>
+          The following are long-term trainees (international students) who
+          studied at Seishinkai Headquarters.
+        </em>
       </p>
 
       <p class="detail-page__note">
         Accommodation is available for those studying Seishinryu Karate.
-        <br />
-        <a
-          href="https://youtu.be/Q6q0g7h7f0A"
-          target="_blank"
-          rel="noopener"
-        >
-          Watch the accommodation introduction video on YouTube
+        <em>
+          Accommodation available for foreign trainees of Seishinryu
+          Karate.
+        </em><br />
+        <a href="https://youtu.be/Q6q0g7h7f0A" target="_blank" rel="noopener">
+          Watch the accommodation introduction video (YouTube)
         </a>
       </p>
 
       <h2 class="detail-page__heading">
-        ◆ Long-Term Foreign Students (Instructor Training Course) & Live-in Trainees
-        <br />
-        <small>Long-term foreign student, leader training course</small>
+        ◆ Long-Term Foreign Students (Leader Training Course) / Resident Trainees<br />
+        <small>Long-term foreign students, leader training course</small>
       </h2>
 
       <div class="detail-gallery detail-gallery--tall">
@@ -66,11 +71,7 @@ const IMG = "/assets/images/legacy/intern/";
           longTerm.map((student) =>
             student.href ? (
               <figure>
-                <img
-                  src={`${IMG}${student.image}`}
-                  alt={student.name}
-                  loading="lazy"
-                />
+                <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
                 <figcaption>
                   {student.name}
                   <br />
@@ -86,11 +87,7 @@ const IMG = "/assets/images/legacy/intern/";
                     }}
                   >
                     {student.href.includes("facebook") && (
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
                       </svg>
                     )}
@@ -105,11 +102,7 @@ const IMG = "/assets/images/legacy/intern/";
               </figure>
             ) : (
               <figure>
-                <img
-                  src={`${IMG}${student.image}`}
-                  alt={student.name}
-                  loading="lazy"
-                />
+                <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
                 <figcaption>
                   {student.name}
                   <br />
@@ -123,8 +116,7 @@ const IMG = "/assets/images/legacy/intern/";
       </div>
 
       <h2 class="detail-page__heading">
-        ◆ Short-Term Foreign Students (Graduates)
-        <br />
+        ◆ Foreign Short-Term Students (Graduates)<br />
         <small>Foreign short-term students (Graduates)</small>
       </h2>
 
@@ -132,11 +124,7 @@ const IMG = "/assets/images/legacy/intern/";
         {
           shortTerm.map((student) => (
             <figure>
-              <img
-                src={`${IMG}${student.image}`}
-                alt={student.name}
-                loading="lazy"
-              />
+              <img src={`${IMG}${student.image}`} alt={student.name} loading="lazy" />
               <figcaption>
                 {student.name}
                 <br />
@@ -147,7 +135,7 @@ const IMG = "/assets/images/legacy/intern/";
         }
       </div>
 
-      <h2 class="detail-page__heading">Training at the Dojo</h2>
+      <h2 class="detail-page__heading">Training Sessions</h2>
 
       <div class="detail-gallery">
         <figure>
@@ -158,8 +146,8 @@ const IMG = "/assets/images/legacy/intern/";
             rel="noopener"
           >
             <img
-              src={`${IMG}DSC_4462.jpg`}
-              alt="Foreign students training at the dojo"
+              src={`${IMG}video_thumb_01.jpg`}
+              alt="Foreign student training session (YouTube)"
               loading="lazy"
             />
           </a>
@@ -167,31 +155,89 @@ const IMG = "/assets/images/legacy/intern/";
 
         <figure>
           <img
-            src={`${IMG}DSC_4138.jpg`}
-            alt="Foreign students training at the dojo"
+            src={`${IMG}foreign-trainees_01.jpeg`}
+            alt="Foreign student training session"
             loading="lazy"
           />
         </figure>
 
         <figure>
           <img
-            src={`${IMG}DSC_3105.jpg`}
-            alt="Foreign students training at the dojo"
+            src={`${IMG}foreign-trainees_02.jpeg`}
+            alt="Foreign student training session"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${IMG}foreign-trainees_03.jpg`}
+            alt="Foreign student training session"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${IMG}foreign-trainees_04.jpg`}
+            alt="Foreign student training session"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${IMG}foreign-trainees_05.jpg`}
+            alt="Foreign student training session"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${IMG}foreign-trainees_06.jpg`}
+            alt="Foreign student training session"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${IMG}foreign-trainees_07.jpg`}
+            alt="Foreign student training session"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${IMG}foreign-trainees_08.jpg`}
+            alt="Foreign student training session"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${IMG}foreign-trainees_09.jpg`}
+            alt="Foreign student training session"
             loading="lazy"
           />
         </figure>
       </div>
 
       <p class="detail-page__note">
-        Foreigners residing in Japan enroll under the same conditions and fees
-        as Japanese members.
-        <br />
+        Foreigners residing in Japan can enroll under the same conditions as Japanese members.<br />
+        <em>
+          Foreigners residing in Japan will be charged the same enrollment
+          and fees as Japanese.
+        </em><br />
         <a href="/assets/pdf/kis.pdf" target="_blank">
-          About Karate Study Abroad Expenses (PDF)
+          About the expenses for studying karate in Japan (PDF)
         </a>
       </p>
 
-      <h2 class="detail-page__heading">Inquiries</h2>
+      <h2 class="detail-page__heading">Inquiry by Message</h2>
 
       <div class="detail-gallery detail-gallery--full">
         <figure>
@@ -201,7 +247,7 @@ const IMG = "/assets/images/legacy/intern/";
             rel="noopener"
           >
             <img
-              src="/assets/images/instructors/masami.jpg"
+              src="/assets/images/instructors/masami2.jpg"
               alt="Soke Okubo"
               loading="lazy"
             />

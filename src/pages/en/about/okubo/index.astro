@@ -1,193 +1,497 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ContentSlider from "@components/ContentSlider.astro";
+
+const historySlides = [
+  {
+    image: "/assets/images/about/okubo/img_okubo_04.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_03.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_14.jpg",
+    alt: "University days",
+    text: "University days",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_02.jpg",
+    alt: "During the Okubo Dojo years",
+    text: "During the Okubo Dojo years",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_05.jpg",
+    alt: "University days",
+    text: "University days",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_01.jpg",
+    alt: "During the Okubo Dojo years",
+    text: "During the Okubo Dojo years",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_06.jpg",
+    alt: "At the Okushiri Branch",
+    text: "At the Okushiri Branch",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_07.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_08.jpg",
+    alt: "With Master Darren in Australia",
+    text: "With Master Darren in Australia",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_09.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_10.jpg",
+    alt: "Okinawa",
+    text: "Okinawa",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_11.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_12.jpg",
+    alt: "At the Shizuoka Dojo",
+    text: "At the Shizuoka Dojo",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_13.jpg",
+    alt: "With Master Sakaba in Italy",
+    text: "With Master Sakaba in Italy",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_15.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_16.jpg",
+    alt: "Nameplate from the former Tokyo Headquarters",
+    text: "Nameplate from the former Tokyo Headquarters",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_17.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_18.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_19.jpg",
+    alt: "With Master Tamas in Sweden",
+    text: "With Master Tamas in Sweden",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_20.jpg",
+    alt: "Summer 2012, awarded 10th Dan and Soke title",
+    text: "Summer 2012, awarded 10th Dan and Soke title",
+  },
+  {
+    image: "/assets/images/about/okubo/img_okubo_21.jpg",
+    alt: "With Master Sasara Singh in Sri Lanka",
+    text: "With Master Sasara Singh in Sri Lanka",
+  },
+];
+
 ---
 
 <BaseLayout
-  title="Chairman Katsumi Okubo"
-  description="Profile of Katsumi Okubo, Chairman of the All Japan Seishinkai Karate Federation, founder of ISKF, and Soke of Seishin-ryu Kenpo Karate-do."
+  title="Katsumi Okubo - Chairman"
+  description="Profile of Katsumi Okubo, Chairman of the All Japan Seishinkai Karate Federation, founder of ISKF, and Soke of Seishinryu Kenpo Karate-do."
   lang="en"
-  path="/en/about/okubo/"
+  path="/about/okubo/"
 >
   <section class="dojo-list">
     <div class="page-container">
+
       <div class="section__title-area">
         <span class="section-label">PROFILE</span>
         <h1 class="section-title">Katsumi Okubo</h1>
       </div>
 
       <div class="profile-detail">
+
         <p class="profile-detail__role">
           Chairman, All Japan Seishinkai Karate Federation<br />
-          Founder of ISKF, Soke of Seishin-ryu Kenpo Karate-do
+          Founder of ISKF · Soke of Seishinryu Kenpo Karate-do
         </p>
 
-        <h2 class="detail-page__heading">Overview</h2>
-        <div class="profile-detail__body">
-          <p>
-            He began training in karate in 1972 (Showa 47), joining the karate club at Kotoni Technical High School and later the Okinawan Kobudo Club at Tokai University (serving as team captain in 1979).<br />
-            In 1977 (Showa 52), Soke Kazuo Kikuchi appointed him the youngest branch chief in Seishin-ryu history, leading the Sapporo Branch.<br />
-            Alongside karate, he studied aikido during his university years, and bayonet fighting (jukendo), unarmed combat, and jujutsu during his service in the Japan Ground Self-Defense Force, earning 3rd dan certification directly from the Soke.<br />
-            While still in the service, he also founded the Seishin-ryu Engaru Branch and Rumoi Branch.
-          </p>
-          <p>
-            After the Soke's passing, he reorganized the Sapporo Branch in 1986 (Showa 61) into the permanent dojo "Seishinkan Okubo Dojo."<br />
-            He initially joined the Japan Seishin-ryu Karate-do Federation, led by the former headquarters' deputy director, but later withdrew from it and joined the Seishin-ryu Karate-do Association, a federation of Seishin-ryu affiliated groups, centering his activities in Sapporo.<br />
-            In 2004 (Heisei 16), what had begun as a private neighborhood dojo was certified by Hokkaido Prefecture and registered with the Legal Affairs Bureau as the Specified Nonprofit Corporation All Japan Seishinkai.<br />
-            As its branches continued to grow, he established the All Japan Seishinkai Karate Federation, and in 2011 (Heisei 23), following the opening of the first overseas branch (Sri Lanka), he founded the Seishin-ryu International Karate Federation (ISKF) as its international body.<br />
-            In 2012 (Heisei 24), the Association awarded him 10th dan and the title of Soshi (succeeding as its 2nd-generation head), and the organization became fully independent.
-          </p>
-          <p>
-            He holds 8th dan certified by the National Bogu Karate-do Federation, 8th dan in karate-do certified by the (Foundation) Toko Association, and 10th dan certified by WUKO (the World Union of Karate-do Organizations); he was also certified as Japan Chief Instructor by FIKM, and was granted honorary 10th dan by <a
-              href="https://www.sanshinkarate.se/"
-              target="_blank"
-              rel="noopener">Shito-ryu Sanshinkan International</a> and the World Shorin-ryu Karate & Kobudo Association (USA).<br />
-            He later named his style "Seishin-ryu Kenpo Karate-do," incorporating techniques and philosophies from various schools gained through his own training.<br />
-            He currently serves as Soke and Chairman of ISKF, which today spans roughly 150 dojos in Japan and abroad with over 4,000 members.
-          </p>
+        <h2 class="detail-page__heading">Profile</h2>
+
+        <div class="detail-page__img-text-pair">
+
+          <div class="detail-media--med">
+            <figure>
+              <img
+                src="/assets/images/about/okubo/img_okubo_fv.jpg"
+                alt="Katsumi Okubo"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <div class="profile-detail__body">
+
+            <p>
+              Began studying karate in 1972. He trained with the karate club
+              at Kotoni Technical High School and later studied Okinawan
+              traditional martial arts at Tokai University, where he served
+              as captain of the club in 1979.<br />
+
+              In 1977, he was appointed by Soke Kikuchi as the youngest
+              Seishinryu branch chief, taking charge of the Sapporo Branch.<br />
+
+              In addition to karate, he studied Aikido during university.
+              During his service in the Japan Ground Self-Defense Force,
+              he also studied Jukendo (bayonet fighting), unarmed combat,
+              and Jujutsu. He was awarded 3rd Dan by the Soke.<br />
+
+              During his military service, he established the Seishinryu
+              Engaru Branch and Rumoi Branch.
+            </p>
+
+            <p>
+              Following the death of his Soke, he reorganized the Sapporo
+              Branch in 1986 and established the permanent training facility
+              "Seishinkan Okubo Dojo."<br />
+
+              Initially, he joined the Japan Seishinryu Karate-do Federation,
+              headed by the former deputy head of the main dojo. He later
+              left the organization and joined the Seishinryu Karate-do
+              Association, an umbrella organization for Seishinryu groups,
+              and continued his activities centered in Sapporo.<br />
+
+              In 2004, the organization developed from a private local dojo
+              into the Non-Profit Organization All Japan Seishinkai, which
+              received certification from Hokkaido and was registered with
+              the Legal Affairs Bureau.<br />
+
+              As the number of branches grew, he established the All Japan
+              Seishinkai Karate Federation. In 2011, following the establishment
+              of its first overseas branch in Sri Lanka, he founded the
+              international organization International Seishinryu Karate-do
+              Federation (ISKF).<br />
+
+              In 2012, he was awarded 10th Dan and the title of Soke
+              (second-generation successor) by the association, becoming
+              a completely independent organization.
+            </p>
+
+            <p>
+              He holds 8th Dan recognized by the National Protective
+              Equipment Karate Federation, 8th Dan recognized by the
+              Toko Association, and 10th Dan recognized by WUKO
+              (World Union of Karate Organizations). He also holds the
+              Japanese Chief Instructor qualification from FIKM and has
+              received honorary 10th Dan from Seishito-ryu Sanshinkan
+              International and the World Kobayashi-ryu Karate Kobudo
+              Association (USA).<br />
+
+              He later incorporated techniques and philosophies from the
+              various styles he studied through his own training and named
+              his school's style "Seishinryu Kenpo Karate-do."<br />
+
+              Today, he serves as the Soke and Chairman of ISKF, which has
+              more than 4,000 members across approximately 150 dojos in
+              Japan and overseas.
+            </p>
+          </div>
         </div>
 
-        <h2 class="detail-page__heading">Career</h2>
-        <div class="profile-detail__body">
-          <p>
-            He served with the Japan Ground Self-Defense Force at the Engaru garrison and the Rumoi garrison. After returning to civilian life, he joined Suzuki Jihan Hokkaido Co., Ltd., where he worked in sales before going on to serve as manager of the Ebetsu sales office and the Head Office Higashi sales office, and later as head of the Head Office Sales Planning Group, where he oversaw the company's shift to IT as well as its events and advertising as a whole.<br />
-            After leaving the company, he served as a director of the (Foundation) Toko Association, and today, alongside his karate activities, runs a martial arts equipment shop (Toyo Budogu).
-          </p>
+        <div class="detail-page__img-text-pair--reverse">
+
+          <div class="detail-media--med">
+            <figure>
+              <img
+                src="/assets/images/about/okubo/img_okubo_22.jpg"
+                alt="Katsumi Okubo"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <div>
+
+            <h2 class="detail-page__heading">Career History</h2>
+
+            <div class="profile-detail__body">
+              <p>
+                Served at the Japan Ground Self-Defense Force bases in
+                Engaru and Rumoi. After returning home, he joined
+                Suzuki Jihan Hokkaido Co., Ltd., where he worked in sales,
+                later serving as manager of the Ebetsu Sales Office and
+                the company's East Sales Office. He eventually became
+                head of the Sales Planning Group at the head office,
+                where he was responsible for the company's transition
+                to IT as well as events and advertising.<br />
+
+                After retiring, he served as a director of the Toko
+                Association Foundation. He currently operates a martial
+                arts equipment store, Toyo Budo-gu, alongside his karate
+                activities.
+              </p>
+            </div>
+
+            <h2 class="detail-page__heading">Organizations and Affiliations</h2>
+
+            <div class="profile-detail__body">
+              <p>
+                <a
+                  href="https://urkf-uechiryu.com/avales/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Advisor, World Uechi-ryu Karate-do Federation
+                </a>,
+                Chairman of IKMA, Honorary Member of Seishito-ryu
+                Sanshinkan, and others.<br />
+
+                He has also served as Advisor to the National Protective
+                Equipment Karate Federation, Advisor to the Okinawa
+                Kobayashi-ryu Karate Kobudo Federation, Director of the
+                Hokkaido Mainichi Cultural Association, and
+                <a
+                  href="http://thewrbbof.com/holiday.html"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Director of WRBBOF
+                </a>.<br />
+
+                He has also served as the East Asia Regional Representative
+                of WUKO-ad and Advisor to the Pan American Karate Federation.
+              </p>
+            </div>
+
+          </div>
         </div>
 
-        <h2 class="detail-page__heading">Affiliations</h2>
-        <div class="profile-detail__body">
-          <p>
-            <a
-              href="https://urkf-uechiryu.com/avales/"
-              target="_blank"
-              rel="noopener">Advisor to the World Uechi-ryu Karate-do Federation</a>, Chairman of IKMA, honorary member of Shito-ryu Sanshinkan, and more.<br />
-            He has also served as Advisor to the National Bogu Karate-do Federation, Advisor to the Okinawa Shorin-ryu Karate & Kobudo Federation, Director of the Hokkaido Mainichi Culture Association, and <a
-              href="http://thewrbbof.com/holiday.html"
-              target="_blank"
-              rel="noopener">Director of the WRBBOF</a>.<br />
-            He has further served as WUKO-AD East Asia Regional Representative and Advisor to the Pan-American Karate-do Federation, among other roles.
-          </p>
-        </div>
+        <ContentSlider
+          slides={historySlides}
+          ratio="4 / 3"
+          autoplaySeconds={5}
+          class="content-slider--history"
+        />
 
-        <div class="detail-gallery">
+        <div class="detail-gallery detail-gallery">
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/6.jpg"
-              alt="Chairman Katsumi Okubo during his service at the Engaru garrison"
+              src="/assets/images/about/okubo/img_okubo_01.jpg"
+              alt="During the Okubo Dojo years"
               loading="lazy"
             />
-            <figcaption>During his service at Engaru garrison</figcaption>
+            <figcaption>During the Okubo Dojo years</figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/nafuda.jpg"
-              alt="Nameplate from the former Tokyo headquarters"
+              src="/assets/images/about/okubo/img_okubo_02.jpg"
+              alt=""
               loading="lazy"
             />
-            <figcaption>Former Tokyo headquarters nameplate</figcaption>
+            <figcaption></figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/1979.jpg"
-              alt="Chairman Katsumi Okubo during his university years"
+              src="/assets/images/about/okubo/img_okubo_03.jpg"
+              alt=""
               loading="lazy"
             />
-            <figcaption>University years</figcaption>
+            <figcaption></figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/3.jpg"
-              alt="Training at the Okubo Dojo"
+              src="/assets/images/about/okubo/img_okubo_04.jpg"
+              alt=""
               loading="lazy"
             />
-            <figcaption>Okubo Dojo era</figcaption>
+            <figcaption></figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/4.jpg"
-              alt="A scene from the Okubo Dojo era"
+              src="/assets/images/about/okubo/img_okubo_05.jpg"
+              alt="University days"
               loading="lazy"
             />
-            <figcaption>Okubo Dojo era</figcaption>
+            <figcaption>University days</figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/Image1.jpg"
-              alt="A demonstration during his university years"
-              loading="lazy"
-            />
-            <figcaption>University years</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/ok/semi.jpg"
-              alt="The 10th dan and Soshi title conferral ceremony, summer 2012"
-              loading="lazy"
-            />
-            <figcaption>Summer 2012 (Heisei 24): 10th dan and Soshi conferral</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/base/1999.jpg"
-              alt="Commemorative photo at the Okushiri Branch"
+              src="/assets/images/about/okubo/img_okubo_06.jpg"
+              alt="At the Okushiri Branch"
               loading="lazy"
             />
             <figcaption>At the Okushiri Branch</figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/Dscn1928.jpg"
-              alt="Commemorative photo at the Shizuoka Dojo"
+              src="/assets/images/about/okubo/img_okubo_07.jpg"
+              alt=""
               loading="lazy"
             />
-            <figcaption>At the Shizuoka Dojo</figcaption>
+            <figcaption></figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/Dsc_4430.jpg"
-              alt="Commemorative photo in Okinawa"
+              src="/assets/images/about/okubo/img_okubo_08.jpg"
+              alt="With Master Darren in Australia"
+              loading="lazy"
+            />
+            <figcaption>With Master Darren in Australia</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_09.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <figcaption></figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_10.jpg"
+              alt="Okinawa"
               loading="lazy"
             />
             <figcaption>Okinawa</figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/P4020023.jpg"
-              alt="With Shihan Tamas of Sweden"
+              src="/assets/images/about/okubo/img_okubo_11.jpg"
+              alt=""
               loading="lazy"
             />
-            <figcaption>With Shihan Tamas, Sweden</figcaption>
+            <figcaption></figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/sri.jpg"
-              alt="With Shihan Sasarasinghe of Sri Lanka"
+              src="/assets/images/about/okubo/img_okubo_12.jpg"
+              alt="At the Shizuoka Dojo"
               loading="lazy"
             />
-            <figcaption>With Shihan Sasarasinghe, Sri Lanka</figcaption>
+            <figcaption>At the Shizuoka Dojo</figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/base/dalen.jpg"
-              alt="With Shihan Darren of Australia"
+              src="/assets/images/about/okubo/img_okubo_13.jpg"
+              alt="With Master Sakaba in Italy"
               loading="lazy"
             />
-            <figcaption>With Shihan Darren, Australia</figcaption>
+            <figcaption>With Master Sakaba in Italy</figcaption>
           </figure>
+
           <figure>
             <img
-              src="/assets/images/legacy/ok/Dscn9659.jpg"
-              alt="With Shihan Sakaba of Italy"
+              src="/assets/images/about/okubo/img_okubo_14.jpg"
+              alt="University days"
               loading="lazy"
             />
-            <figcaption>With Shihan Sakaba, Italy</figcaption>
+            <figcaption>University days</figcaption>
           </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_15.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <figcaption></figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_16.jpg"
+              alt="Nameplate from the former Tokyo Headquarters"
+              loading="lazy"
+            />
+            <figcaption>Nameplate from the former Tokyo Headquarters</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_17.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <figcaption></figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_18.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <figcaption></figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_19.jpg"
+              alt="With Master Tamas in Sweden"
+              loading="lazy"
+            />
+            <figcaption>With Master Tamas in Sweden</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_20.jpg"
+              alt="Summer 2012, awarded 10th Dan and Soke title"
+              loading="lazy"
+            />
+            <figcaption>
+              Summer 2012, awarded 10th Dan and Soke title
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_21.jpg"
+              alt="With Master Sasara Singh in Sri Lanka"
+              loading="lazy"
+            />
+            <figcaption>
+              With Master Sasara Singh in Sri Lanka
+            </figcaption>
+          </figure>
+
         </div>
       </div>
 
       <p class="detail-page__back">
-        <a href="/en/about/">← Back to About Seishinkai</a>
+        <a href="/about/">← Back to About Seishinkai</a>
       </p>
+
     </div>
   </section>
 </BaseLayout>

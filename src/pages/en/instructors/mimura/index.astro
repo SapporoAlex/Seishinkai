@@ -1,411 +1,386 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ContentSlider from "@components/ContentSlider.astro";
+
+const mimuraSlides = [
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_01.jpg",
+    alt: "2008 Women's Training Session",
+    text: "2008. Held the first Women's Training Session. Held 11 times thereafter",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_04.jpg",
+    alt: "2008.1",
+    text: "2008.1",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_03.jpg",
+    alt: "2012-1",
+    text: "2012-1",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_09.jpg",
+    alt: "2013.4",
+    text: "2013.4",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_07.jpg",
+    alt: "Master Mimura in June 2013",
+    text: "2013.6.11",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_15.jpg",
+    alt: "2013.8",
+    text: "2013.8",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_21.jpg",
+    alt: "2015.6",
+    text: "2015.6",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_27.jpg",
+    alt: "2015.8",
+    text: "2015.8",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_02.jpg",
+    alt: "Final Women's Training Session in November 2015",
+    text: "2015.11.5. Final Women's Training Session shortly before her passing",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_06.jpg",
+    alt: "Master Mimura with children",
+    text: "She loved children",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_08.jpg",
+    alt: "Master Mimura serving as emcee",
+    text: "A skilled speaker and accomplished emcee",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_10.jpg",
+    alt: "Master Mimura playing the piano",
+    text: "She was also an excellent pianist",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_11.jpg",
+    alt: "Master Mimura visiting Asahiyama Zoo",
+    text: "At Asahiyama Zoo",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_12.jpg",
+    alt: "Master Mimura at a grading examination",
+    text: "At a grading examination",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_13.jpg",
+    alt: "Master Kayoko Mimura",
+    text: "",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_14.jpg",
+    alt: "Master Mimura being interviewed",
+    text: "Received numerous interviews",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_28.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_29.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_30.jpg",
+    alt: "",
+    text: "",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_25.jpg",
+    alt: "Her beloved Suzuki Bolty 250cc",
+    text: "Her beloved Suzuki Bolty 250cc",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_16.jpg",
+    alt: "All 10 volumes of Master Mimura's blog published as books",
+    text: "Master Mimura's blog was published as a 10-volume book series",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_17.jpg",
+    alt: "Master Mimura visiting Otaru Aquarium",
+    text: "At Otaru Aquarium",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_18.jpg",
+    alt: "Karate demonstration at Sapporo Factory",
+    text: "Karate demonstration at Sapporo Factory",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_19.jpg",
+    alt: "2006 training camp by motorcycle",
+    text: "2006. Traveled to training camp by motorcycle",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_20.jpg",
+    alt: "Master Mimura taking on every challenge",
+    text: "Taking on every challenge!",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_22.jpg",
+    alt: "With the Chairman in Sri Lanka",
+    text: "In Sri Lanka",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_23.jpg",
+    alt: "At the Chairman's birthday celebration",
+    text: "At the Chairman's birthday celebration",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_26.jpg",
+    alt: "Master Kayoko Mimura",
+    text: "Master Kayoko Mimura",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_24.jpg",
+    alt: "Memorial monument and Seishinkai commemorative monument at Fujino Seizan-en",
+    text: "Memorial monument and commemorative monument",
+  },
+  {
+    image: "/assets/images/instructors/mimura/img_mimura_05.jpg",
+    alt: "Master Kayoko Mimura",
+    text: "",
+  },
+];
 
 const memorialVideos = [
-  { href: "https://www.youtube.com/watch?v=WzCHiw9EH58", image: "/assets/images/legacy/mimu/2D5O2742.jpg", caption: "1974.6.11 - 2015.11.27" },
-  { href: "https://www.youtube.com/watch?v=IuvwfOgrzPw", image: "/assets/images/legacy/mimu/2008.jpg", caption: "2008: She realized the women's training seminar, held 11 times thereafter" },
-  { href: "https://www.youtube.com/watch?v=yTM8k8jQPtY", image: "/assets/images/legacy/mimu/201511.jpg", caption: "2015.11.5 — Her last women's training seminar, shortly before she passed away" },
-  { href: "https://www.youtube.com/watch?v=nKzgM6h24_M", image: "/assets/images/legacy/mimu/20130427.jpg", caption: "She took part in every event up until her passing" },
-  { href: "https://www.youtube.com/watch?v=qQODzM12-pE", image: "/assets/images/legacy/mimu/20080613.jpg", caption: "She was also a skilled pianist" },
-  { href: "https://www.youtube.com/watch?v=sl9WIxrOc_c", image: "/assets/images/legacy/mimu/20080811.jpg", caption: "At Asahiyama Zoo" },
-  { href: "https://www.youtube.com/watch?v=FTJaGpSop5c&t=2s", image: "/assets/images/legacy/mimu/mimu2.jpg", caption: "Teaching Okinawan kobudo — tonfa" },
-  { href: "https://www.youtube.com/watch?v=HsIhOwJ6nXk", image: "/assets/images/legacy/mimu/DSC_0012.jpg", caption: "At Otaru Aquarium" },
-  { href: "https://www.youtube.com/watch?v=jRyGGyLBw2A", image: "/assets/images/legacy/mimu/20070915.jpg", caption: "Demonstration at Sapporo Factory" },
-  { href: "https://www.youtube.com/watch?v=v6gX_JVRuys&t=3s", image: "/assets/images/legacy/mimu/Image1.jpg", caption: "Her last training session, 2015.11" },
-  { href: "https://www.youtube.com/watch?v=rv05o7MNxu4", image: "/assets/images/legacy/mimu/Image3.jpg", caption: "In Sri Lanka" },
-  { href: "https://www.youtube.com/watch?v=Q5vSaxyu1Sg&t=116s", image: "/assets/images/legacy/mimu/20180429.jpg", caption: "Memorial stone & commemorative monument" },
-  { href: "https://www.youtube.com/watch?v=AQcVXGI4GBY&t=418s", image: "/assets/images/legacy/mimu/2d5o8277.jpg", caption: "Director Kayoko Mimura" },
+  {
+    href: "https://www.youtube.com/watch?v=WzCHiw9EH58",
+    image: "/assets/images/legacy/mimu/2D5O2742.jpg",
+    caption: "1974.6.11 - 2015.11.27",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=IuvwfOgrzPw",
+    image: "/assets/images/legacy/mimu/2008.jpg",
+    caption:
+      "2008. Held the first Women's Training Session. Held 11 times thereafter",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=yTM8k8jQPtY",
+    image: "/assets/images/legacy/mimu/201511.jpg",
+    caption:
+      "2015.11.5. Final Women's Training Session shortly before her passing",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=nKzgM6h24_M",
+    image: "/assets/images/legacy/mimu/20130427.jpg",
+    caption: "Participated in every event until her passing",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=qQODzM12-pE",
+    image: "/assets/images/legacy/mimu/20080613.jpg",
+    caption: "She was also an excellent pianist",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=sl9WIxrOc_c",
+    image: "/assets/images/legacy/mimu/20080811.jpg",
+    caption: "At Asahiyama Zoo",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=FTJaGpSop5c&t=2s",
+    image: "/assets/images/legacy/mimu/mimu2.jpg",
+    caption: "Teaching Okinawan Kobudo and Tonfa",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=HsIhOwJ6nXk",
+    image: "/assets/images/legacy/mimu/DSC_0012.jpg",
+    caption: "At Otaru Aquarium",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=jRyGGyLBw2A",
+    image: "/assets/images/legacy/mimu/20070915.jpg",
+    caption: "Karate demonstration at Sapporo Factory",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=v6gX_JVRuys&t=3s",
+    image: "/assets/images/legacy/mimu/Image1.jpg",
+    caption: "Final training session, November 2015",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=rv05o7MNxu4",
+    image: "/assets/images/legacy/mimu/Image3.jpg",
+    caption: "In Sri Lanka",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=Q5vSaxyu1Sg&t=116s",
+    image: "/assets/images/legacy/mimu/20180429.jpg",
+    caption: "Memorial monument and commemorative monument",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=AQcVXGI4GBY&t=418s",
+    image: "/assets/images/legacy/mimu/2d5o8277.jpg",
+    caption: "Master Kayoko Mimura",
+  },
 ];
 ---
 
 <BaseLayout
-  title="Kayoko Mimura, Honorary Director"
-  description="Profile of the late Kayoko Mimura, 2nd-generation Director and Honorary Director of the Seishinkan Headquarters Dojo of the All Japan Seishinkai Karate Federation."
+  title="Kayoko Mimura - Honorary Head Instructor"
+  description="Profile of the late Kayoko Mimura, second head instructor and honorary head instructor of Seishinkan Dojo, Seishinkai Headquarters, All Japan Seishinkai Karate Federation."
   lang="en"
-  path="/en/instructors/mimura/"
+  path="/instructors/mimura/"
 >
   <section class="dojo-list">
     <div class="page-container">
+
       <div class="section__title-area">
         <span class="section-label">PROFILE</span>
         <h1 class="section-title">Kayoko Mimura</h1>
       </div>
 
       <div class="profile-detail">
+
         <p class="profile-detail__role">
-          Seishinkai Headquarters, Seishinkan Dojo — 2nd-generation Director (Honorary Director)<br />
+          Second Head Instructor, Seishinkan Dojo, Seishinkai Headquarters
+          (Honorary Head Instructor)<br />
           1974.6.11 - 2015.11.27
         </p>
 
-        <h2 class="detail-page__heading">Overview</h2>
+        <h2 class="detail-page__heading">Profile</h2>
+
         <div class="profile-detail__body">
-          <p>
-            After graduating from the English Department of Hokusei Gakuen Women's Junior College, she worked as an office employee while enrolling in the Seishin-ryu Karate Yomiuri Culture Class.<br />
-            She became a 2nd-term trainee and was appointed Branch Chief of Sakaemachi, a post she held until 2006 (Heisei 18). In an interview with Dosports, the Hokkaido Shimbun's sports paper, she said her dream for the future was to become a "female Director."<br />
-            In 2008 (Heisei 20), she underwent a full gastrectomy for stage 4 stomach cancer; that same year she became the first full-time staff member of the NPO Seishinkai.<br />
-            In 2009 (Heisei 21), she was appointed Shihan.
-          </p>
-          <p>
-            Through daily training she became universally recognized as the President's top disciple and successor, and in 2012 (Heisei 24) she was appointed 2nd-generation Director of the Headquarters. Seishin-ryu Karate Renshi, 6th Dan.<br />
-            She was a pioneer among women instructors in Seishinkai karate, becoming the organization's first female Shihan and first female Director.<br />
-            Fluent in English and capable of simultaneous interpretation, she served as Head of the International Division, hosting the karate enthusiasts who visited from overseas every year. In 2013 (Heisei 25), she traveled to Sri Lanka to teach karate.<br />
-            In 2015 (Heisei 27), she was awarded Kyoshi, 7th Dan. Alongside karate, she also trained in Okinawan kobudo (weapons arts) and iaido.<br />
-            She served as Executive Director of the NPO All Japan Seishinkai and as Headquarters Director & Head of the International Division of the ISKF, laying the foundations of Seishinkai.
-          </p>
-          <p>
-            On November 27, 2015 (Heisei 27), her cancer recurred and she passed away suddenly at a young age. She was posthumously awarded the honorary rank of 9th Dan. More than 800 people, including members, attended her funeral.<br />
-            Her contributions are honored with the title of Honorary Director.<br />
-            In 2016 (Heisei 28), a memorial stone and a Seishinkai commemorative monument were erected at Fujino Seizan-en. A memorial visit to her grave is held three times each year — during <a
-              href="https://www.youtube.com/watch?v=Kbx1rgE_Gec"
-              target="_blank"
-              rel="noopener">Golden Week</a
-            >, <a
-              href="https://www.youtube.com/watch?v=CskzxHmgsk8"
-              target="_blank"
-              rel="noopener">Obon</a
-            >, and <a
-              href="https://www.youtube.com/watch?v=YXWBOzv3jxs"
-              target="_blank"
-              rel="noopener">November</a
-            >.
-          </p>
+          <div class="detail-page__img-text-pair--reverse">
+
+            <div class="detail-media--med fade-right-in">
+              <figure>
+                <img
+                  src="/assets/images/instructors/mimura/img_mimura_fv.jpg"
+                  alt="Kayoko Mimura"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div>
+
+              <p>
+                After graduating from Hokusei Gakuen Women's Junior College
+                with a degree in English, she began studying Seishinryu Karate
+                at the Yomiuri Culture School while working as an office
+                worker.<br />
+
+                She became the second trainee in the training program and was
+                appointed head of the Sakaemachi Branch, completing the program
+                in 2006. During an interview with Doshi Sports, she spoke of
+                her dream of becoming a "female head instructor" in the future.<br />
+
+                In 2008, she underwent a total gastrectomy due to stage IV
+                stomach cancer. That same year, she became the first full-time
+                employee of the NPO Seishinkai.<br />
+
+                In 2009, she was appointed Shihan (Master Instructor).
+              </p>
+
+              <p>
+                Through her daily dedication to training, she became widely
+                recognized as the Chairman's top student and successor. In
+                2012, she was appointed the second Head Instructor of Seishinkai
+                Headquarters. She held the rank of Renshi 6th Dan in
+                Seishinryu Karate-do.<br />
+
+                She was a pioneer among female instructors in Seishinkai
+                Karate-do, becoming Seishinkai's first female Shihan and
+                female Head Instructor.<br />
+
+                Fluent in English and capable of simultaneous interpretation,
+                she served as Director of the International Department and
+                hosted karate enthusiasts from overseas who visited Japan
+                each year. In 2013, she traveled to Sri Lanka to teach karate.<br />
+
+                In 2015, she was awarded Kyoshi 7th Dan. In addition to karate,
+                she studied Okinawan Kobudo (weapons arts) and Iaido.<br />
+
+                She served as Executive Director of the NPO All Japan
+                Seishinkai and as Head Instructor and Director of the
+                International Department at ISKF Headquarters, helping to build
+                the foundation of Seishinkai.
+              </p>
+
+              <p>
+                On November 27, 2015, her cancer returned and she passed away
+                at a young age. She was posthumously awarded 9th Dan in honor
+                of her achievements. More than 800 members and others attended
+                her funeral.<br />
+
+                Her contributions are honored through her title of Honorary
+                Head Instructor.<br />
+
+                In 2016, a memorial monument and Seishinkai commemorative
+                monument were erected at Fujino Seizan-en. Every year, memorial
+                visits are held three times: during
+                <a
+                  href="https://www.youtube.com/watch?v=Kbx1rgE_Gec"
+                  target="_blank"
+                  rel="noopener"
+                >Golden Week</a>,
+                <a
+                  href="https://www.youtube.com/watch?v=CskzxHmgsk8"
+                  target="_blank"
+                  rel="noopener"
+                >Obon</a>, and
+                <a
+                  href="https://www.youtube.com/watch?v=YXWBOzv3jxs"
+                  target="_blank"
+                  rel="noopener"
+                >November</a>.
+              </p>
+
+            </div>
+          </div>
         </div>
 
-        <div class="detail-gallery">
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=WzCHiw9EH58"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/2D5O2742.jpg"
-                alt="The late Director Kayoko Mimura, 1974.6.11-2015.11.27"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>1974.6.11 - 2015.11.27 (video)</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=IuvwfOgrzPw"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/2008.jpg"
-                alt="The 2008 women's training seminar"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>2008: She realized the women's training seminar, held 11 times thereafter (video)</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=yTM8k8jQPtY"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/201511.jpg"
-                alt="The last women's training seminar, November 2015"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>2015.11.5 — Her last women's training seminar, shortly before she passed away (video)</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/Image4.jpg"
-              alt="Certificate of appointment as Director"
-              class="u-object-contain"
-              loading="lazy"
-            />
-            <figcaption>Certificate of appointment</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=nKzgM6h24_M"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/20130427.jpg"
-                alt="Director Mimura taking part in an event"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>She took part in every event up until her passing (video)</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/Image2.jpg"
-              alt="Director Kayoko Mimura"
-              loading="lazy"
-            />
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/m.jpg"
-              alt="Director Mimura with children"
-              loading="lazy"
-            />
-            <figcaption>She loved children</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/20130611.jpg"
-              alt="Director Mimura, June 2013"
-              loading="lazy"
-            />
-            <figcaption>2013.6.11</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/20130728.jpg"
-              alt="Director Mimura serving as emcee"
-              loading="lazy"
-            />
-            <figcaption>A gifted speaker, equally at home as an emcee</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/20150822-1.jpg"
-              alt="Director Mimura at Shihan Ishimori's home"
-              loading="lazy"
-            />
-            <figcaption>2015, at Shihan Ishimori's home</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=qQODzM12-pE"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/20080613.jpg"
-                alt="Director Mimura playing the piano"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>▲ She was also a skilled pianist (video)</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=sl9WIxrOc_c"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/20080811.jpg"
-                alt="Director Mimura visiting Asahiyama Zoo"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>At Asahiyama Zoo (video)</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/20091213.jpg"
-              alt="Director Mimura at a grading examination"
-              loading="lazy"
-            />
-            <figcaption>At a grading examination</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/boot.jpg"
-              alt="Director Kayoko Mimura"
-              loading="lazy"
-            />
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/mimu-np.jpg"
-              alt="Director Mimura being interviewed"
-              loading="lazy"
-            />
-            <figcaption>She was interviewed by the media many times</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=FTJaGpSop5c&t=2s"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/mimu2.jpg"
-                alt="Director Mimura teaching Okinawan kobudo tonfa"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>Teaching Okinawan kobudo — tonfa (video)</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/DSC_5490.jpg"
-              alt="All 10 volumes of Director Mimura's blog, published as books"
-              loading="lazy"
-            />
-            <figcaption>Director Mimura's blog compiled into 10 volumes</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=HsIhOwJ6nXk"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/DSC_0012.jpg"
-                alt="Director Mimura visiting Otaru Aquarium"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>At Otaru Aquarium (video)</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=jRyGGyLBw2A"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/20070915.jpg"
-                alt="Demonstration at Sapporo Factory"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>Demonstration at Sapporo Factory (video)</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/20060701.jpg"
-              alt="The 2006 training camp, traveling by motorcycle"
-              loading="lazy"
-            />
-            <figcaption>2006 — She rode her motorcycle to training camp</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/20070811.jpg"
-              alt="Director Mimura, always ready to try anything"
-              loading="lazy"
-            />
-            <figcaption>Always ready for a challenge!</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=v6gX_JVRuys&t=3s"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/Image1.jpg"
-                alt="Her last training session, November 2015"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>Her last training session, 2015.11 (video)</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=rv05o7MNxu4"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/Image3.jpg"
-                alt="With the President in Sri Lanka"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>In Sri Lanka (video)</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/20140531.jpg"
-              alt="On the President's birthday"
-              loading="lazy"
-            />
-            <figcaption>On the President's birthday</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=Q5vSaxyu1Sg&t=116s"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/20180429.jpg"
-                alt="Her memorial stone and the Seishinkai commemorative monument at Fujino Seizan-en"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>Memorial stone & commemorative monument (video)</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/legacy/mimu/volty.jpg"
-              alt="Her beloved motorcycle, a SUZUKI Bolty 250cc"
-              loading="lazy"
-            />
-            <figcaption>Her beloved SUZUKI Bolty 250cc</figcaption>
-          </figure>
-          <figure>
-            <a
-              href="https://www.youtube.com/watch?v=AQcVXGI4GBY&t=418s"
-              target="_blank"
-              rel="noopener"
-              class="video-thumb"
-            >
-              <img
-                src="/assets/images/legacy/mimu/2d5o8277.jpg"
-                alt="Director Kayoko Mimura"
-                loading="lazy"
-              />
-            </a>
-            <figcaption>Watch the video</figcaption>
-          </figure>
-        </div>
+        <ContentSlider
+          slides={mimuraSlides}
+          ratio=""
+          autoplaySeconds={10}
+          class="content-slider--history"
+        />
+
+        <section class="partner-section">
+          <h2 class="detail-page__heading">
+            Kayoko Mimura in Videos
+          </h2>
+
+          <div class="youtube-grid">
+            {
+              memorialVideos.map((video) => (
+                <a
+                  class="youtube-card"
+                  href={video.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="youtube-card__thumb">
+                    <img
+                      src={video.image}
+                      alt={`${video.caption} (YouTube)`}
+                      loading="lazy"
+                    />
+                  </span>
+                  <span>{video.caption}</span>
+                </a>
+              ))
+            }
+          </div>
+        </section>
+
+        <p class="detail-page__back">
+          <a href="/instructors/">← Back to Instructors & Branch Heads</a>
+        </p>
+
       </div>
-
-      <section class="partner-section">
-        <h2 class="detail-page__heading">Watch Kayoko Mimura on YouTube</h2>
-
-        <div class="youtube-grid">
-          {
-            memorialVideos.map((video) => (
-              <a
-                class="youtube-card"
-                href={video.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span class="youtube-card__thumb">
-                  <img src={video.image} alt={`${video.caption} (YouTube)`} loading="lazy" />
-                </span>
-                <span>{video.caption}</span>
-              </a>
-            ))
-          }
-        </div>
-      </section>
-
-      <p class="detail-page__back">
-        <a href="/en/instructors/">← Back to Instructors</a>
-      </p>
     </div>
   </section>
 </BaseLayout>
