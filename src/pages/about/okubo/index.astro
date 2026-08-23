@@ -1,116 +1,5 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import ContentSlider from "@components/ContentSlider.astro";
-
-const historySlides = [
-  {
-    image: "/assets/images/about/okubo/img_okubo_04.jpg",
-    alt: "",
-    text: "",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_03.jpg",
-    alt: "",
-    text: "",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_14.jpg",
-    alt: "大学時代",
-    text: "大学時代",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_02.jpg",
-    alt: "大久保道場時代",
-    text: "大久保道場時代",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_05.jpg",
-    alt: "大学時代",
-    text: "大学時代",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_01.jpg",
-    alt: "大久保道場時代",
-    text: "大久保道場時代",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_06.jpg",
-    alt: "奥尻支部にて",
-    text: "奥尻支部にて",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_07.jpg",
-    alt: "",
-    text: "",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_08.jpg",
-    alt: "オーストラリア・ダレン師範と",
-    text: "オーストラリア・ダレン師範と",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_09.jpg",
-    alt: "",
-    text: "",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_10.jpg",
-    alt: "沖縄",
-    text: "沖縄",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_11.jpg",
-    alt: "",
-    text: "",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_12.jpg",
-    alt: "静岡道場にて",
-    text: "静岡道場にて",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_13.jpg",
-    alt: "イタリア・サカバ師範と",
-    text: "イタリア・サカバ師範と",
-  },
-
-  {
-    image: "/assets/images/about/okubo/img_okubo_15.jpg",
-    alt: "",
-    text: "",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_16.jpg",
-    alt: "旧東京本部名札",
-    text: "旧東京本部名札",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_17.jpg",
-    alt: "",
-    text: "",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_18.jpg",
-    alt: "",
-    text: "",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_19.jpg",
-    alt: "スウエーデン・タマス師範と",
-    text: "スウエーデン・タマス師範と",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_20.jpg",
-    alt: "平成24年夏、十段・宗師授与",
-    text: "平成24年夏、十段・宗師授与",
-  },
-  {
-    image: "/assets/images/about/okubo/img_okubo_21.jpg",
-    alt: "スリランカ・ササラシン師範と",
-    text: "スリランカ・ササラシン師範と",
-  },
-];
-
 ---
 
 <BaseLayout
@@ -202,134 +91,15 @@ const historySlides = [
             </div>
           </div>
         </div>
-      
-        <ContentSlider
-          slides={historySlides}
-          ratio="4 / 3"
-          autoplaySeconds={5}
-          class="content-slider--history"
-        />
 
-        <div class="detail-gallery detail-gallery">
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_01.jpg"
-              alt="大久保道場時代"
-              loading="lazy"
-            />
-            <figcaption>大久保道場時代</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_02.jpg"
-              alt=""
-              loading="lazy"
-            />
-            <figcaption></figcaption>
-          </figure>
+        <div class="detail-gallery">
           <figure>
             <img
               src="/assets/images/about/okubo/img_okubo_03.jpg"
-              alt=""
+              alt="遠軽駐屯地時代"
               loading="lazy"
             />
-            <figcaption></figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_04.jpg"
-              alt=""
-              loading="lazy"
-            />
-            <figcaption></figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_05.jpg"
-              alt="大学時代"
-              loading="lazy"
-            />
-            <figcaption>大学時代</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_06.jpg"
-              alt="奥尻支部にて"
-              loading="lazy"
-            />
-            <figcaption>奥尻支部にて</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_07.jpg"
-              alt=""
-              loading="lazy"
-            />
-            <figcaption></figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_08.jpg"
-              alt="オーストラリア・ダレン師範と"
-              loading="lazy"
-            />
-            <figcaption>オーストラリア・ダレン師範と</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_09.jpg"
-              alt=""
-              loading="lazy"
-            />
-            <figcaption></figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_10.jpg"
-              alt="沖縄"
-              loading="lazy"
-            />
-            <figcaption>沖縄</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_11.jpg"
-              alt=""
-              loading="lazy"
-            />
-            <figcaption></figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_12.jpg"
-              alt="静岡道場にて"
-              loading="lazy"
-            />
-            <figcaption>静岡道場にて</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_13.jpg"
-              alt="イタリア・サカバ師範と"
-              loading="lazy"
-            />
-            <figcaption>イタリア・サカバ師範と</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_14.jpg"
-              alt="大学時代"
-              loading="lazy"
-            />
-            <figcaption>大学時代</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/assets/images/about/okubo/img_okubo_15.jpg"
-              alt=""
-              loading="lazy"
-            />
-            <figcaption></figcaption>
+            <figcaption>遠軽駐屯地時代</figcaption>
           </figure>
           <figure>
             <img
@@ -341,19 +111,88 @@ const historySlides = [
           </figure>
           <figure>
             <img
-              src="/assets/images/about/okubo/img_okubo_17.jpg"
-              alt=""
+              src="/assets/images/about/okubo/img_okubo_05.jpg"
+              alt="大学時代"
               loading="lazy"
             />
-            <figcaption></figcaption>
+            <figcaption>大学時代</figcaption>
           </figure>
           <figure>
             <img
-              src="/assets/images/about/okubo/img_okubo_18.jpg"
-              alt=""
+              src="/assets/images/about/okubo/img_okubo_01.jpg"
+              alt="大久保道場時代"
               loading="lazy"
             />
-            <figcaption></figcaption>
+            <figcaption>大久保道場時代</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_02.jpg"
+              alt="大会での演武"
+              loading="lazy"
+            />
+            <figcaption>大会での演武</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_15.jpg"
+              alt="大会での演武"
+              loading="lazy"
+            />
+            <figcaption>大会での演武</figcaption>
+          </figure>
+        </div>
+        <div class="detail-gallery--wide">
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_20.jpg"
+              alt="平成24年夏、十段・宗師授与"
+              loading="lazy"
+            />
+            <figcaption>平成24年夏、十段・宗師授与</figcaption>
+          </figure>
+        </div>
+        <div class="detail-gallery">
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_14.jpg"
+              alt="大学時代"
+              loading="lazy"
+            />
+            <figcaption>大学時代</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_06.jpg"
+              alt="奥尻支部にて"
+              loading="lazy"
+            />
+            <figcaption>奥尻支部にて</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_11.jpg"
+              alt="設立記念式"
+              loading="lazy"
+            />
+            <figcaption>設立記念式</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_12.jpg"
+              alt="静岡道場にて"
+              loading="lazy"
+            />
+            <figcaption>静岡道場にて</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_10.jpg"
+              alt="沖縄・外間先生の道場で"
+              loading="lazy"
+            />
+            <figcaption>沖縄・外間先生の道場で</figcaption>
           </figure>
           <figure>
             <img
@@ -365,22 +204,53 @@ const historySlides = [
           </figure>
           <figure>
             <img
-              src="/assets/images/about/okubo/img_okubo_20.jpg"
-              alt="平成24年夏、十段・宗師授与"
-              loading="lazy"
-            />
-            <figcaption>平成24年夏、十段・宗師授与</figcaption>
-          </figure>
-          <figure>
-            <img
               src="/assets/images/about/okubo/img_okubo_21.jpg"
               alt="スリランカ・ササラシン師範と"
               loading="lazy"
             />
             <figcaption>スリランカ・ササラシン師範と</figcaption>
           </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_08.jpg"
+              alt="オーストラリア・ダレン師範と"
+              loading="lazy"
+            />
+            <figcaption>オーストラリア・ダレン師範と</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_13.jpg"
+              alt="イタリア・サカバ師範と"
+              loading="lazy"
+            />
+            <figcaption>イタリア・サカバ師範と</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_07.jpg"
+              alt="清心会顕彰碑・墓碑"
+              loading="lazy"
+            />
+            <figcaption>清心会顕彰碑・墓碑</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/assets/images/about/okubo/img_okubo_04.jpg"
+              alt="流祖菊地和雄宗家"
+              loading="lazy"
+            />
+            <figcaption>流祖菊地和雄宗家</figcaption>
+          </figure>
+
+
+
+
+
+
+
+
         </div>
-      </div>
 
       <p class="detail-page__back">
         <a href="/about/">← 清心会について へ戻る</a>

@@ -4,13 +4,15 @@
 export function initImageLightbox() {
   const gallerySelector = [
     ".detail-gallery img",
+    ".detail-gallery--tall img",
+    ".detail-gallery--wide img",
     ".photo-grid img",
     ".about__image-case-set img",
   ].join(", ");
 
-  const candidates = Array.from(document.querySelectorAll(gallerySelector)).filter(
-    (img) => !img.closest("a"),
-  );
+  const candidates = Array.from(
+    document.querySelectorAll(gallerySelector),
+  ).filter((img) => !img.closest("a"));
 
   if (!candidates.length) return;
 
@@ -54,7 +56,8 @@ export function initImageLightbox() {
     lightbox.classList.remove("is-active");
     document.body.style.overflow = "";
     imgEl.src = "";
-    if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+    if (lastFocused && typeof lastFocused.focus === "function")
+      lastFocused.focus();
   };
 
   candidates.forEach((img) => {
@@ -65,7 +68,11 @@ export function initImageLightbox() {
     const trigger = () => {
       const figure = img.closest("figure, .about__image-case-set");
       const captionNode = figure?.querySelector("figcaption, small");
-      open(img.currentSrc || img.src, img.alt, captionNode?.textContent?.trim());
+      open(
+        img.currentSrc || img.src,
+        img.alt,
+        captionNode?.textContent?.trim(),
+      );
     };
 
     img.addEventListener("click", trigger);
