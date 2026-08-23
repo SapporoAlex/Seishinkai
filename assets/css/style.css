@@ -1829,7 +1829,7 @@ a.content-slider__slide:hover .content-slider__media img {
 }
 .image-lightbox__image {
   max-width: 96vw;
-  max-height: 92vh;
+  max-height: 90vh;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -1839,7 +1839,7 @@ a.content-slider__slide:hover .content-slider__media img {
 .image-lightbox__caption {
   margin: 16px 0 0;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 1.6rem;
   line-height: 1.7;
   text-align: center;
   max-width: 70ch;
@@ -3542,7 +3542,72 @@ a.content-slider__slide:hover .content-slider__media img {
 .detail-gallery figcaption {
   margin-top: auto;
   padding: 12px 16px;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid var(--border);
+}
+
+.detail-gallery--wide {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+@media (max-width: 47.98rem) {
+  .detail-gallery--wide {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 14px;
+  }
+}
+.detail-gallery--wide figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--off-white);
+  box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color var(--hover-time), box-shadow var(--hover-time);
+}
+.detail-gallery--wide figure.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.detail-gallery--wide figure.is-visible:hover {
+  border-color: var(--blue);
+  box-shadow: 0 10px 22px rgba(13, 37, 69, 0.1);
+  transform: translateY(-4px);
+}
+.detail-gallery--wide a {
+  display: block;
+  overflow: hidden;
+}
+.detail-gallery--wide img {
+  width: 100%;
+  aspect-ratio: 7/3;
+  object-fit: cover;
+  display: block;
+  background: var(--off-white);
+  transition: transform var(--hover-time);
+}
+.detail-gallery--wide img.u-object-contain {
+  object-fit: contain;
+  background: var(--off-white);
+  padding: 16px;
+}
+.detail-gallery--wide figure.is-visible:hover img.u-object-contain {
+  transform: none;
+}
+.detail-gallery--wide figcaption {
+  margin-top: auto;
+  padding: 12px 16px;
+  font-size: 1rem;
   color: var(--text-mid);
   line-height: 1.6;
   text-align: center;
