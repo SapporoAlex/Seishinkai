@@ -1,31 +1,16 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const visits = [
-  { year: "2026", place: "オーストラリア", image: "/assets/images/legacy/news/2026/dallen202607.jpg" },
-  { year: "2026", place: "スウェーデン", image: "/assets/images/legacy/news/2026/sweden.jpg" },
-  { year: "2025", place: "ノルウエー", image: "/assets/images/legacy/news/2026/nolway.jpg" },
-  { year: "2025", place: "スウェーデン", image: "/assets/images/legacy/news/2025/erica.jpg" },
-  { year: "2025", place: "スリランカ", image: "/assets/images/legacy/news/2025/kkpp.jpg" },
-  { year: "2024", place: "アルゼンチン", image: "/assets/images/legacy/news/2024gon.jpg" },
-  { year: "2024", place: "ロシア", image: "/assets/images/legacy/news/2024ro.jpg" },
-  { year: "2023", place: "スウェーデンへ訪問", image: "/assets/images/legacy/news/2023sweden.jpg" },
-  { year: "2024", place: "スリランカ", image: "/assets/images/legacy/news/2024kk.jpg" },
-  { year: "2019", place: "イタリア/アルゼンチン", image: "/assets/images/legacy/news/2019b.jpg" },
-  { year: "2019", place: "イタリア/アルゼンチン", image: "/assets/images/legacy/news/2019a.jpg" },
-  { year: "2018", place: "イタリア/パキスタン/アルゼンチン", image: "/assets/images/legacy/intern/2018.jpg", href: "https://red.ap.teacup.com/applet/karate-news/201809/archive" },
-  { year: "2018", place: "インド", image: "/assets/images/legacy/intern/2018b.jpg", href: "https://red.ap.teacup.com/applet/karate-news/201805/archive" },
-  { year: "2017", place: "オーストラリア", image: "/assets/images/legacy/intern/2017.1.jpg", href: "https://www.youtube.com/watch?v=xYKuv0V5Y7o" },
-  { year: "2017", place: "イタリア/パキスタン/フランス", image: "/assets/images/legacy/intern/2017b.jpg", href: "https://www.youtube.com/watch?v=mEdD0fOIVaA" },
-  { year: "2015", place: "スウェーデン", image: "/assets/images/legacy/intern/2015.jpg", href: "https://red.ap.teacup.com/karate-news/311.html" },
-  { year: "2016", place: "イタリア/アルゼンチン", image: "/assets/images/legacy/intern/tamas.jpg", href: "https://www.youtube.com/watch?v=JnYL0ukfJcU" },
-  { year: "2014", place: "イタリア/アルゼンチン/エジプト", image: "/assets/images/legacy/intern/P9020012.jpg", href: "https://red.ap.teacup.com/karate-news/180.html" },
-  { year: "2013", place: "スウェーデン", image: "/assets/images/membership/international-exchange/img_inex_01.jpg", href: "https://www.youtube.com/watch?v=UR9dPqzvwEQ" },
+const internationalExchangeVideos = [
+  { href: "https://www.youtube.com/watch?v=xYKuv0V5Y7o", image: "/assets/images/membership/international-exchange/thumb_inex_01.jpg", caption: "2017 オーストラリア" },
+  { href: "https://www.youtube.com/watch?v=mEdD0fOIVaA", image: "/assets/images/membership/international-exchange/thumb_inex_02.jpg", caption: "2017 イタリア・パキスタン・フランス" },
+  { href: "https://www.youtube.com/watch?v=JnYL0ukfJcU", image: "/assets/images/membership/international-exchange/thumb_inex_03.jpg", caption: "2016 イタリア・アルゼンチン" },
+  { href: "https://www.youtube.com/watch?v=UR9dPqzvwEQ", image: "/assets/images/membership/international-exchange/thumb_inex_04.jpg", caption: "2013 スウェーデン" },
 ];
 ---
 
 <BaseLayout
-  title="空手古武道国際交流 - International Karate Exchange"
+  title="空手古武道国際交流"
   description="海外から清心会総本部道場を訪れる外国人空手指導者たちとの国際交流の記録。スウェーデン、イタリア、スリランカなど、世界各国との交流の様子をご紹介します。"
   lang="ja"
   path="/membership/international-exchange/"
@@ -33,98 +18,279 @@ const visits = [
   <section class="dojo-list">
     <div class="page-container">
       <div class="section__title-area">
-        <span class="section-label">INTERNATIONAL</span>
+        <span class="section-label">国際交流</span>
         <h1 class="section-title">空手古武道国際交流</h1>
       </div>
 
       <p class="detail-page__lead">
-        [海外から外国人師範・空手指導者が訪れる清心会空手]<br />
+        海外から外国人師範・空手指導者が訪れる清心会空手<br />
         清心会総本部道場には毎年、海外から外国人空手指導者たちが訪れます。<br />
-        その多くは競技スポーツでない伝統文化としての空手を求めて北海道の清心会へ訪れ、その後、沖縄へと向かいます(その逆に沖縄によってから北海道札幌へ来る場合もあります)。<br />
-        外国人師範の多くは競技空手を経て、修行し足りないものを補いに更に空手の源流を求めて古流空手へたどり着きます。
+        その多くは競技スポーツでない伝統文化としての空手を求めて北海道の清心会へ訪れ、その後、沖縄へと向かいます（その逆に沖縄へ寄ってから北海道札幌へ来る場合もあります）。<br />
+        外国人師範の多くは競技空手を経て、修行し足りないものを補いに、更に空手の源流を求めて古流空手へたどり着きます。
       </p>
 
       <h2 class="detail-page__heading">空手古武道国際交流</h2>
+
       <div class="detail-gallery">
-        {
-          visits.map((v) =>
-            v.href ? (
-              <figure>
-                <a
-                  href={v.href}
-                  target="_blank"
-                  rel="noopener"
-                  class:list={{ "video-thumb": v.href.includes("youtube") }}
-                >
-                  <img src={v.image} alt={`${v.year} ${v.place}`} loading="lazy" />
-                </a>
-                <figcaption>{v.year} {v.place}</figcaption>
-              </figure>
-            ) : (
-              <figure>
-                <img src={v.image} alt={`${v.year} ${v.place}`} loading="lazy" />
-                <figcaption>{v.year} {v.place}</figcaption>
-              </figure>
-            )
-          )
-        }
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_01.jpg"
+            alt="2013年4月 スウェーデン"
+            loading="lazy"
+          />
+          <figcaption>2013年4月 スウェーデン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_02.jpg"
+            alt="2013年8月 スリランカ遠征"
+            loading="lazy"
+          />
+          <figcaption>2013年8月 スリランカ遠征</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_03.jpg"
+            alt="2014年9月 イタリア・アルゼンチン・エジプト"
+            loading="lazy"
+          />
+          <figcaption>2014年9月 イタリア・アルゼンチン・エジプト</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_04.jpg"
+            alt="2015年4月 スウェーデン"
+            loading="lazy"
+          />
+          <figcaption>2015年4月 スウェーデン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_05.jpg"
+            alt="2016年4月 アルゼンチン"
+            loading="lazy"
+          />
+          <figcaption>2016年4月 アルゼンチン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_06.jpg"
+            alt="2017年4月 イタリア"
+            loading="lazy"
+          />
+          <figcaption>2017年4月 イタリア</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_07.jpg"
+            alt="2017年4月 パキスタン"
+            loading="lazy"
+          />
+          <figcaption>2017年4月 パキスタン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_08.jpg"
+            alt="2017年6月 オーストラリア"
+            loading="lazy"
+          />
+          <figcaption>2017年6月 オーストラリア</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_09.jpg"
+            alt="2017年 フランス"
+            loading="lazy"
+          />
+          <figcaption>2017年 フランス</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_10.jpg"
+            alt="2018年5月 インド"
+            loading="lazy"
+          />
+          <figcaption>2018年5月 インド</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_11.jpg"
+            alt="2018年9月 イタリア・アルゼンチン・エジプト・フィリピン・パキスタン"
+            loading="lazy"
+          />
+          <figcaption>2018年9月 イタリア・アルゼンチン・エジプト・フィリピン・パキスタン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_12.jpg"
+            alt="2019年10月 アルゼンチン"
+            loading="lazy"
+          />
+          <figcaption>2019年10月 アルゼンチン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_13.jpg"
+            alt="2023年7月 スウェーデン遠征"
+            loading="lazy"
+          />
+          <figcaption>2023年7月 スウェーデン遠征</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_14.jpg"
+            alt="2024年4月 スリランカ"
+            loading="lazy"
+          />
+          <figcaption>2024年4月 スリランカ</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_15.jpg"
+            alt="2024年8月 ロシア"
+            loading="lazy"
+          />
+          <figcaption>2024年8月 ロシア</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_16.jpg"
+            alt="2024年10月 アルゼンチン"
+            loading="lazy"
+          />
+          <figcaption>2024年10月 アルゼンチン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_17.jpg"
+            alt="2024年 スリランカ"
+            loading="lazy"
+          />
+          <figcaption>2024年 スリランカ</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_18.jpg"
+            alt="2025年1月 スウェーデン"
+            loading="lazy"
+          />
+          <figcaption>2025年1月 スウェーデン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_19.jpg"
+            alt="2025年6月 スリランカ"
+            loading="lazy"
+          />
+          <figcaption>2025年6月 スリランカ</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_20.jpg"
+            alt="2025年12月 ノルウェー"
+            loading="lazy"
+          />
+          <figcaption>2025年12月 ノルウェー</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_21.jpg"
+            alt="2026年2月 スウェーデン"
+            loading="lazy"
+          />
+          <figcaption>2026年2月 スウェーデン</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/membership/international-exchange/img_inex_22.jpg"
+            alt="2026年7月 オーストラリア"
+            loading="lazy"
+          />
+          <figcaption>2026年7月 オーストラリア</figcaption>
+        </figure>
       </div>
 
       <p class="detail-page__note">
         来訪国は、スウェーデン、イタリア、パキスタン、エジプト、オーストラリア、フランス、アルゼンチン、スリランカ、インド、クウェート、アイルランド、アメリカなど。
       </p>
 
+      <section class="partner-section">
+        <h2 class="detail-page__heading">動画ギャラリー</h2>
+
+        <div class="youtube-grid">
+          {
+            internationalExchangeVideos.map((video) => (
+              <a
+                class="youtube-card"
+                href={video.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="youtube-card__thumb">
+                  <img
+                    src={video.image}
+                    alt={`${video.caption}（YouTube）`}
+                    loading="lazy"
+                  />
+                </span>
+                <span>{video.caption}</span>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+
       <h2 class="detail-page__heading">簡易短期宿泊施設</h2>
+
+      <p>
+        海外からの訪問者向けに、短期滞在用の宿泊施設をご用意しております。
+      </p>
+
       <div class="detail-page__img-text-pair--col">
-        <div class="detail-media--big">
-          <a class="video-thumb" target="_blank" href="https://www.youtube.com/watch?v=Q6q0g7h7f0A">
+        <div class="detail-gallery">
+          <a
+            class="video-thumb"
+            target="_blank"
+            href="https://www.youtube.com/watch?v=Q6q0g7h7f0A"
+          >
             <figure>
               <img
                 src="/assets/images/youtube/img_accommodation-thumb.jpg"
-                alt="簡易短期宿泊施設(YouTube)"
+                alt="簡易短期宿泊施設（YouTube）"
                 loading="lazy"
               />
             </figure>
           </a>
         </div>
-
-        <p>
-          海外からの訪問者向けに、短期滞在用の宿泊施設をご用意しております。
-        </p>
       </div>
 
-      <h2 class="detail-page__heading">稽古の様子</h2>
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/intern/P4030057.jpg"
-            alt="タマス先生(WKF10段)"
-            loading="lazy"
-          />
-          <figcaption>タマス先生(WKF10段)</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/intern/scaba.jpg"
-            alt="サカバ先生(沖縄小林流10段)"
-            loading="lazy"
-          />
-          <figcaption>サカバ先生(沖縄小林流10段)</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="/assets/images/legacy/intern/DSC_0182.jpg"
-            alt="ダレン先生(喜屋武派少林流9段)"
-            loading="lazy"
-          />
-          <figcaption>ダレン先生(喜屋武派少林流9段)</figcaption>
-        </figure>
-      </div>
+      <h2 class="detail-page__heading">お問い合わせ</h2>
 
-      <h2 class="detail-page__heading">Inquiry by message</h2>
       <p class="detail-page__note">
-        Please use email or messenger. Other people are Japanese only.
+        メールまたはメッセンジャーをご利用ください。その他の担当者は日本語のみとなります。
       </p>
+
       <div class="detail-gallery detail-gallery--full">
         <figure>
           <a
@@ -134,12 +300,13 @@ const visits = [
           >
             <img
               src="/assets/images/instructors/masami2.jpg"
-              alt="Soke Okubo"
+              alt="大久保宗家"
               loading="lazy"
             />
           </a>
-          <figcaption>Soke Okubo</figcaption>
+          <figcaption>大久保宗家</figcaption>
         </figure>
+
         <figure>
           <a
             href="https://www.facebook.com/nobutaka.maekawa"
@@ -148,11 +315,11 @@ const visits = [
           >
             <img
               src="/assets/images/instructors/maekawa.jpg"
-              alt="Master Maekawa"
+              alt="前川師範"
               loading="lazy"
             />
           </a>
-          <figcaption>Master Maekawa</figcaption>
+          <figcaption>前川師範</figcaption>
         </figure>
       </div>
 
