@@ -1,0 +1,74 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "#",
+      name: "Ishikari Ryokuentai Karate Club",
+      address: "Ryokuentai Higashi 2-jo 1-chome, Ishikari, Ryokuentai Green Hall",
+      schedule: ["Saturday 15:30"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes in Ryokuentai, Ishikari City", "description": "Information on the Seishinkai karate dojo/class in Ryokuentai, Ishikari City. A karate club focused on Junior Karate and Parent-Child Karate, held at the Ryokuentai Green Hall — details on training days and venue.", "lang": "en", "path": "/en/dojo/ryoku/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Hanakawa-Higashi & Ryokuentai Branch</h1>
+      </div>
+
+      <h2 class="detail-page__heading">Ishikari Hanakawa-Higashi Karate Class / Seishinkai Ryokuentai Branch</h2>
+
+      <p class="detail-page__lead">
+        The Hanakawa-Higashi & Ryokuentai Karate Class was founded in March 2018 (Heisei 30), using the Ryokuentai Green Hall as its venue.<br>
+        It is a karate club focused mainly on Junior Karate and Parent-Child Karate.<br>
+        We especially welcome parent-child participants and members of our Senior Class.<br>
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries, "headers": ["Dojo / Branch", "Address / Venue", "Training Days"] })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Hanakawa-Higashi & Ryokuentai Branch", "facts": [
+    { label: "Founded", value: "March 2018 (Heisei 30)" },
+    { label: "Founder", value: "Takushi Muroki" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/ryoku/2.jpg",
+    alt: "Ryokuentai Green Hall",
+    width: 257,
+    height: 182
+  }, "address": "Ryokuentai Higashi 2-jo 1-chome, Ishikari, Ryokuentai Green Hall", "mapHref": "https://www.google.com/maps/place/緑苑台グリーン会館/@43.163705,141.342457,15z/data=!4m2!3m1!1s0x0:0x2993cc986a2ad562?sa=X&ved=2ahUKEwj4zeq_1a7hAhVQQLwKHU9LDkEQ_BIwCnoECA4QCA", "mapQuery": "43.163705,141.342457" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/ryoku/Image1.jpg" alt="Ryokuentai Branch practice session" width="288" height="170" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/ebetsu/">← Back to the list of dojos & classes in Ebetsu, Iwamizawa & Ishikari</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Hanakawa-Higashi & Ryokuentai Branch", "subject": "Ryokuentai Trial Lesson Application" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/ryoku/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/ryoku/index.astro";
+const $$url = "/en/dojo/ryoku";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

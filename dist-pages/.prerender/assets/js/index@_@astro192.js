@@ -1,0 +1,288 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from './prerender.js';
+import { $ as $$ContactSection } from './ContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const IMG = "/assets/images/membership/";
+  const mediaItems = [
+    {
+      label: "UHB TV",
+      image: `${IMG}uhb.jpg`,
+      href: "https://www.youtube.com/watch?v=WMv2SNBHM-8",
+      extra: [{ label: "2", href: "https://www.youtube.com/watch?v=8G2fHgsRqHA" }]
+    },
+    {
+      label: "Hokkaido Rice TV Commercial",
+      image: `${IMG}Image9.jpg`,
+      href: "https://www.youtube.com/watch?v=s89eelnq5wg",
+      extra: []
+    },
+    {
+      label: "HBC",
+      image: `${IMG}hbc2.jpg`,
+      href: "https://www.youtube.com/watch?v=Hh9bA9CcvxI",
+      extra: [{ label: "2", href: "https://www.youtube.com/watch?v=7IjFIsgiLsE" }]
+    },
+    {
+      label: "Sky PerfecTV",
+      image: `${IMG}DSCN2803.jpg`,
+      href: "https://www.youtube.com/watch?v=o32LFD-pjbY",
+      extra: []
+    },
+    {
+      label: "Air-G FM Radio",
+      image: `${IMG}airg.jpg`,
+      href: "https://www.youtube.com/watch?v=-8DsF4va25g",
+      extra: []
+    },
+    {
+      label: "J:COM Cable TV",
+      image: `${IMG}jcom.jpg`,
+      href: "https://www.youtube.com/watch?v=1T1QT6syLfM",
+      extra: []
+    },
+    {
+      label: "J:COM Cable TV",
+      image: `${IMG}Jcom1.jpg`,
+      href: "https://www.youtube.com/watch?v=4wmEG9HwZxw",
+      extra: []
+    },
+    {
+      label: "Honmaru Radio",
+      image: `${IMG}bb.jpg`,
+      href: "https://www.youtube.com/watch?v=jIXSM86flsU",
+      extra: []
+    },
+    {
+      label: "TV Hokkaido",
+      image: `${IMG}Image6.jpg`,
+      href: "",
+      extra: []
+    }
+  ];
+  const studentConditions = [
+    "18 to 30 years old",
+    "Training period from 3 years up to 10 years",
+    "Shodan or higher",
+    "Driver's licence",
+    "Japanese language test grade 4",
+    "Target is Sandan–Godan, Shihan qualification",
+    "Please open a branch dojo of Seishinryu Karate when you return home"
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Membership", "description": "How to join Seishinkai Karate. Visits and trial sessions welcome — beginners, children, and adults can all start at our dojos in Sapporo and Hokkaido.", "lang": "en", "path": "/en/membership/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="membership">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">MEMBERSHIP</span>
+        <h1 class="section-title">How to Join</h1>
+      </div>
+
+      <div class="page-intro">
+        <p>
+          Seishinkai karate is a karate, <a href="/en/dojo/iai/">iaido</a>, and self-defense school focused on <a href="/en/dojo/taiiku/">physical education,</a> <a href="/en/dojo/kenko/">health,</a> and <a href="/en/membership/self-defence/">self-defense</a>. While many karate schools center on competitive sport, our training centers on fundamentals, kata, and yakusoku kumite — so anyone can take part comfortably, regardless of age or gender.
+        </p>
+        <p>
+          The children's division aims to instill courtesy (greetings, manners, etiquette) and to strengthen the mind and body during the crucial years of growth. For women, working adults, and seniors, the goals are fitness, improved stamina, health, and self-defense.
+        </p>
+        <p>
+          Unusually for Hokkaido, we are also active in <a href="/en/membership/international-exchange/">international exchange</a>: <a href="/en/membership/international-students/">karate exchange students</a> and overseas practitioners visit the headquarters dojo every year. With many working adults enrolled, there are plenty of opportunities to meet people from other fields and widen your circle of friends through Seishin-ryu karate. Many members train as parent and child — more than half of today's instructors and branch chiefs started that way. Online karate classes are also available.
+        </p>
+        <p>
+          We also offer self-defense seminars on-site for companies, schools, clubs, and other groups upon request.
+        </p>
+      </div>
+
+      <div class="membership__points">
+        <div class="membership__point fade-up-in">
+          <h3 class="membership__point-title">Train at 80 Branches</h3>
+          <p>
+            Members may freely join practice, as often as they like, at the 80 headquarters-affiliated branches in and around Sapporo (excluding culture-school classes run by other organizations and small venues). A visitor ticket system is also available.
+          </p>
+        </div>
+        <div class="membership__point fade-up-in">
+          <h3 class="membership__point-title">Free Trial Lessons</h3>
+          <p>
+            Direct-affiliated classes offer free trial lessons (culture-school classes are excluded as they are run by other organizations). ※ A heating fee applies in winter.
+          </p>
+        </div>
+        <div class="membership__point fade-up-in">
+          <h3 class="membership__point-title">Office Hours</h3>
+          <p>
+            Phone reception is on weekdays, Monday to Friday, 1:00 PM–4:00 PM. Outside these hours and on weekends/holidays, please contact us by email. Please note we may be unable to answer during private lessons even within office hours.
+          </p>
+        </div>
+      </div>
+
+      <div class="membership__cta-banner">
+        <h2 class="membership__cta-title">Start with a Free Trial</h2>
+        <p>
+          Direct-affiliated classes offer free trial lessons. Just come along in comfortable clothing.
+        </p>
+        <a href="#contact"><div class="fv-btn-primary">Book a Free Trial</div></a>
+      </div>
+
+      <div class="membership__fees" id="fees">
+        <div class="section__title-area">
+          <h2 class="section-title lg">Fees</h2>
+          <p class="section-desc">Example fees for the headquarters dojo and permanent dojos.</p>
+        </div>
+
+        <div class="membership__fees-grid">
+          <div class="membership__fees-card fade-up-in">
+            <h3 class="membership__fees-title">Enrollment Fee</h3>
+            <p class="membership__fees-amount">¥7,000</p>
+            <ul class="membership__fees-list">
+              <li>2nd family member ¥3,500</li>
+              <li>3rd family member ¥1,750</li>
+            </ul>
+          </div>
+
+          <div class="membership__fees-card fade-up-in">
+            <h3 class="membership__fees-title">Monthly Fee <small>※ Sapporo & nearby areas</small></h3>
+            <p class="membership__fees-amount">from ¥5,300</p>
+            <ul class="membership__fees-list">
+              <li>¥5,300 (junior high school age and under; free practice at other direct branches)</li>
+              <li>¥5,800–6,800 (students / women / working adults)</li>
+              <li>Free for children under 3</li>
+            </ul>
+            <p class="membership__fees-note">
+              ※ A heating fee applies in winter: ¥1,100–3,000 per season (varies with fuel prices)
+            </p>
+          </div>
+
+          <div class="membership__fees-card fade-up-in">
+            <h3 class="membership__fees-title">Annual Fee & Equipment</h3>
+            <ul class="membership__fees-list">
+              <li>Annual fee ¥4,800–6,800 (insurance included)</li>
+              <li>Official karate-gi ¥10,500–22,000 (by size and type)</li>
+              <li>Hand & foot protectors ¥6,250–8,250</li>
+            </ul>
+            <p class="membership__fees-note">
+              ※ Made-to-order gi and adidas gear priced separately. Associate membership, ticket plans, and private lessons are also available.
+            </p>
+          </div>
+
+          <div class="membership__fees-aside">
+            <figure class="membership__fees-figure fade-up-in">
+              <img${addAttribute(`${IMG}karategi.jpg`, "src")} alt="Seishin-ryu original made-to-order karate-gi" loading="lazy">
+              <figcaption>Official karate-gi (Seishin-ryu original, made to order)</figcaption>
+            </figure>
+            <figure class="membership__fees-figure fade-up-in">
+              <a href="/en/dojo/iai/">
+                <img${addAttribute(`${IMG}iai.jpg`, "src")} alt="Iaido division" loading="lazy">
+              </a>
+              <figcaption>Iaido division</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <ul class="membership__notes-list">
+          <li>Monthly fees are collected by direct debit from a Japan Post Bank account.</li>
+          <li>
+            As a certified non-profit, we do not charge consumption tax on fees (tax-exempt activity).
+          </li>
+          <li>
+            Fees may vary slightly by branch — please confirm details at a trial class.
+          </li>
+          <li>
+            Members may attend any headquarters-affiliated branch, but not culture-school classes run by other organizations. Culture-school members may attend direct branches by purchasing tickets.
+          </li>
+        </ul>
+
+        <div class="membership__pdf-links">
+          <a href="/assets/pdf/newkai.pdf" target="_blank">Application Form (PDF)</a>
+          <a href="/assets/pdf/hiyo.pdf" target="_blank">Fee Guide (PDF)</a>
+          <a href="/assets/pdf/panfu.pdf" target="_blank">Brochure (PDF)</a>
+        </div>
+      </div>
+
+      <div class="membership__related">
+        <a class="membership__related-card" href="http://seishinryu.info/" target="_blank">
+          <span>We are also recruiting members for the online karate class (net school)</span>
+          <span class="membership__related-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="membership__related-card" href="/en/membership/affiliation/">
+          <span>For culture schools, branch certification, and seminar requests</span>
+          <span class="membership__related-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="membership__npo-note">
+        <strong>About Our Operations</strong>
+        <p>
+          Instruction at each dojo and branch is provided by working adult members volunteering their free time after work. As a certified non-profit organization, monthly membership fees go toward maintaining and running the organization — they are due even in months without practice. Conversely, the fee does not change however often you train, whether 10 or 20 times a month at direct branches (culture schools excluded).
+        </p>
+        <p>
+          Ticket-based membership (private classes, associate membership, etc.) and per-visit plans limited to your home branch are also available, so you can choose what suits your schedule (basic fees excluded).
+        </p>
+      </div>
+
+      <div class="membership__media" id="media">
+        <div class="section__title-area">
+          <h2 class="section-title lg">Media Coverage</h2>
+          <p class="section-desc">
+            A selection of TV and radio coverage of Seishinkai karate.
+          </p>
+        </div>
+
+        <div class="membership__media-grid">
+          ${mediaItems.map((item) => renderTemplate`<div class="membership__media-card fade-up-in">
+                ${item.href ? renderTemplate`<a class="video-thumb"${addAttribute(item.href, "href")} target="_blank">
+                    <img${addAttribute(item.image, "src")}${addAttribute(item.label, "alt")} loading="lazy">
+                  </a>` : renderTemplate`<img${addAttribute(item.image, "src")}${addAttribute(item.label, "alt")} loading="lazy">`}
+                <p class="membership__media-label">
+                  ${item.href ? renderTemplate`<a${addAttribute(item.href, "href")} target="_blank">
+                      ${item.label}
+                    </a>` : item.label}
+                  ${item.extra.map((link) => renderTemplate`<a${addAttribute(link.href, "href")} target="_blank">
+                      ${link.label}
+                    </a>`)}
+                </p>
+              </div>`)}
+        </div>
+
+        <p class="membership__media-more">
+          <a href="https://seishinkan-news.hatenablog.com/" target="_blank">More press coverage of Seishinkai &gt;&gt;</a>
+        </p>
+      </div>
+
+      <div class="membership__students">
+        <div class="section__title-area">
+          <span class="section-label">INTERNATIONAL</span>
+          <h2 class="section-title lg">Karate International Students</h2>
+        </div>
+        <p>
+          Recruiting karate international students (Uchideshi) in Japan.
+          International students study karate in Japan long-term with a karate
+          culture visa.
+        </p>
+        <h3 class="membership__students-subtitle">Student conditions</h3>
+        <ul class="membership__students-list">
+          ${studentConditions.map((condition) => renderTemplate`<li>${condition}</li>`)}
+        </ul>
+        <p>
+          Please <a href="#contact">contact us</a> if you are interested.<br>
+          See our past <a href="/en/membership/international-students/">long-term &amp; short-term students</a> and <a href="/en/membership/international-exchange/">international exchange with visiting instructors</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  ${renderComponent($$result2, "ContactSection", $$ContactSection, { "lang": "en" })}
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/membership/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/membership/index.astro";
+const $$url = "/en/membership";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

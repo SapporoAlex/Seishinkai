@@ -1,0 +1,103 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "京極町空手クラブ",
+      address: "虻田郡京極町京極160 京極町公民館",
+      schedule: ["火曜18:15/19:05"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "京極町の空手教室", "description": "北海道虻田郡京極町の清心会空手道場・京極支部のご案内。稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/kyogoku/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・京極支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">京極町空手教室・清心会京極支部</h2>
+
+      <p class="detail-page__lead">
+        京極空手クラブは、喜茂別支部へ京極町から通っていたメンバーにより、京極町・広徳寺様のご協力をいただきスタートした支部です。<br>
+        その後、会場は社会福祉センターとなり、令和元年12月より京極町公民館大ホールとなっています。<br>
+        キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "京極町支部", "facts": [
+    { label: "設立", value: "平成29年(2017)11月" },
+    { label: "設立者", value: "駒田拓朗" },
+    { label: "担当者", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/kyogoku/img3.jpg",
+    alt: "京極町公民館",
+    width: 350,
+    height: 184
+  }, "address": "虻田郡京極町京極160　京極町公民館", "mapHref": "https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8", "mapQuery": "虻田郡京極町京極160　京極町公民館", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/kyogoku/img2.jpg" alt="京極支部の稽古風景" width="441" height="270" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/dojo/kyogoku/Image7.jpg" alt="京極支部の稽古風景" width="682" height="290" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/images/tuba.jpg" alt="京極支部" width="118" height="118" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/images/komata.jpg" alt="指導員" width="109" height="109" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/clubu/masuda.jpg" alt="指導員" width="161" height="161" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※一部　白帯〜水色帯　18:15-19:00／二部　青帯以上　19:05-20:00。
+      </p>
+
+      <p class="detail-page__note">
+        ※旧会場：<a href="https://www.google.com/maps/place/廣徳寺/@42.8577773,140.8859652,15z/data=!4m5!3m4!1s0x0:0xbd9afdba25b2420b!8m2!3d42.8577773!4d140.8859652" target="_blank" rel="noopener">虻田郡京極町字京極615 広徳寺</a>／<a href="https://www.google.com/maps/place/京極町+社会福祉協議会/@42.860568,140.880615,15z/data=!4m2!3m1!1s0x0:0x444da41dc2d6035" target="_blank" rel="noopener">虻田郡京極町三崎68 福祉センター</a>
+      </p>
+
+      <div class="detail-media">
+        <img src="/assets/images/legacy/dojo/kyogoku/Image1.jpg" alt="京極支部の稽古風景" width="301" height="145" loading="lazy">
+      </div>
+
+      <p class="detail-page__note">
+        ※月会費2,500円(京極町民)～。別途年会費等。
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "京極支部", "subject": "京極体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/kyogoku/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/kyogoku/index.astro";
+const $$url = "/dojo/kyogoku";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

@@ -1,0 +1,111 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "Seishinkan Hondori Dojo",
+      address: "Shiroishi Ward, Hondori 16-chome Kita (along National Route 12), Hondori Seishinkan",
+      schedule: [
+        "Wednesday Class 16:30-17:30　Preschoolers & Elementary school students",
+        "Friday Class 19:00-20:00　Elementary school students and up　※For this class, preschoolers must attend with a parent.",
+        "Sunday Special & Saturday (AM) Class　※Currently accepting new students"
+      ]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Shiroishi Ward Hondori Branch – Seishinkan Hondori Dojo Karate Classes", "description": "Information about Seishinkan Hondori Dojo in Hondori, Shiroishi Ward, Sapporo, located along National Route 12. Introducing schedules and venue details for our kids' and junior karate classes.", "lang": "en", "path": "/en/dojo/hondori/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-Do Federation – Hondori Branch</h1>
+      </div>
+
+      <h2 class="detail-page__heading">Shiroishi Ward Hondori Karate Classes / Seishinkan Hondori Dojo</h2>
+
+      <p class="detail-page__lead">
+        The Hondori karate class began in September 2011 at the Hondori Seishinkan Dojo, located along National Route 12.
+        It sits next to Yakiniku Tokuju, and directly across from Round One, making it easy to find.
+        Since its founding, the dojo has focused on kids' and junior karate, welcoming students from preschool age through
+        junior high school. Both the Wednesday and Friday classes are capped at 15 students each, and the venue is
+        fully air-conditioned. While many dojos feel like an extension of school sports clubs, we aim for a more relaxed,
+        club-like atmosphere where students can enjoy learning karate for health and fitness.
+      </p>
+
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">Building an unyielding, unbreakable spirit — Seishinkai Karate</p>
+      </div>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Hondori Seishinkan Karate Dojo", "facts": [
+    { label: "Founded", value: "April 2011 (Heisei 23)" },
+    { label: "Founder", value: "Kayoko Mimura" },
+    { label: "Past Instructors", value: "Hashini, Takigami, Masuda, Takashima, and others" },
+    { label: "Deputy Instructor", value: "Headquarters-run" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/hondori/2.jpg",
+    alt: "本通清心館の外観",
+    width: 234,
+    height: 144
+  }, "address": "Hondori 16-chome Kita 12-41, Shiroishi Ward, Sapporo (along National Route 12), Hondori Seishinkan", "addressNote": "Approx. 11 min walk (850m) from Exit 2 of Nango 18-chome Subway Station / 3 min walk from JR Bus 'Shimo-Shiroishi Station' stop / 2 min walk from Chuo Bus 'Hondori 16-chome' stop", "mapHref": "https://www.google.com/maps/place/〒003-0027+北海道札幌市白石区本通１６丁目北１２−４１+キッズ空手教室本通清心館/@43.0360142,141.4332405,19.5z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.035898!4d141.4338263!3m4!1s0x5f0b2b0b18c518bb:0xad01d582492e34fe!8m2!3d43.036098!4d141.4332991", "mapQuery": "43.0360142,141.4332405", "viewOnMapLabel": "View on Google Maps" })}
+
+      <div class="detail-gallery">
+
+        <figure>
+          <img src="/assets/images/dojo/img_hondori_01.jpg" alt="Interior of Hondori Seishinkan" width="234" height="144" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_hondori_02.jpg" alt="Interior of Hondori Seishinkan" width="253" height="144" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/dojo/hondori/img5.jpg" alt="Hondori Seishinkan (next to Yakiniku Tokuju)" width="253" height="144" loading="lazy">
+          <figcaption>Located next to Tokuju</figcaption>
+        </figure>
+                <figure>
+          <img src="/assets/images/dojo/img_hondori_05.jpg" alt="Interior of Hondori Seishinkan" width="234" height="144" loading="lazy">
+          <figcaption>Take off your shoes at the entrance, open the front door, and head down the stairs. The dojo is located in the basement.</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※Start times may vary slightly, so those coming for a trial class should confirm the schedule in advance.
+      </p>
+
+      <p class="detail-page__note">
+        ※Senior black-belt members join on a rotating basis.
+      </p>
+
+      <p class="detail-page__note">
+        ※There is no on-site parking, so please use a nearby coin-operated parking lot. <a href="https://www.google.com/maps/place/三井のリパーク+札幌本通１６丁目北駐車場/@43.0368883,141.433396,20.75z/data=!4m12!1m6!3m5!1s0x5f0b2b0b17d719c7:0x9df984ff883e2c96!2z44OR44OG44Kj44K544Oq44O844OV44Os44O844Or!8m2!3d43.0462046!4d141.3794742!3m4!1s0x5f0b2b325dd7151b:0x67984f5e45181e18!8m2!3d43.0370477!4d141.4334782" target="_blank" rel="noopener">Mitsui Repark</a> is located across from the Round One parking lot (140m / about a 2-minute walk from Hondori Seishinkan).
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/shiroishi/">← Back to the list of Shiroishi Ward karate classes</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Hondori Branch", "subject": "Hondori Trial Class Application" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/hondori/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/hondori/index.astro";
+const $$url = "/en/dojo/hondori";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

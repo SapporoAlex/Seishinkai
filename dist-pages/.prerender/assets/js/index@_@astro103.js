@@ -1,0 +1,134 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      no: 1,
+      marker: "★",
+      name: "Atsubetsu Branch / Friday Class",
+      address: "Atsubetsu-nishi 4-jo 4-chome, Atsubetsu-ku, Sapporo — Atsubetsu-nishi District Center, 2F",
+      schedule: ["Friday 18:00/19:10"],
+      link: "/en/dojo/atsubetsu/atsubetsu/"
+    },
+    {
+      no: 2,
+      marker: "★",
+      name: "Atsubetsu Branch / Sunday Class",
+      address: "Atsubetsu-nishi 4-jo 4-chome, Atsubetsu-ku, Sapporo — Atsubetsu-nishi District Center, 2F",
+      schedule: ["Sunday 9:30/10:40"],
+      link: "/en/dojo/atsubetsu/atsubetsu/"
+    },
+    {
+      no: 3,
+      marker: "★",
+      name: "Shin-Sapporo Branch",
+      address: "Chuo 1-jo 5-chome, Atsubetsu-ku, Sapporo — Atsubetsu Ward Citizens' Center, Meeting Room",
+      schedule: ["Monday 19:00 (from July 2025)"],
+      link: "/en/dojo/n-sapporo/"
+    },
+    {
+      no: 4,
+      marker: "★",
+      name: "Atsubetsu-minami Branch",
+      address: "Atsubetsu-minami 7-chome 9-1, Atsubetsu-ku, Sapporo — Atsubetsu-minami District Center (since March 2021)",
+      schedule: ["Thursday 18:00/19:00"],
+      link: "/en/dojo/m-atsubetsu/"
+    },
+    {
+      no: 5,
+      marker: "★",
+      name: "Momijidai Branch",
+      address: "Momijidai-kita 7-chome, Atsubetsu-ku, Sapporo — Momijidai Management Center",
+      schedule: ["Saturday 10:00"],
+      link: "/en/dojo/momi/"
+    },
+    {
+      no: 6,
+      marker: "●",
+      name: "Duo Junior Karate Class",
+      address: "Atsubetsu-chuo 2-jo 5-chome, Atsubetsu-ku, Sapporo, Duo II 5F — Duo Culture Center",
+      schedule: ["Wednesday 16:45"],
+      link: "https://www.arc-city.com/bunka/contents/course/item/p0129.html"
+    },
+    {
+      no: 7,
+      marker: "●",
+      name: "Duo Women's Self-Defense Karate Class",
+      address: "Atsubetsu-chuo 2-jo 5-chome, Atsubetsu-ku, Sapporo, Duo II 5F — Duo Culture Center",
+      schedule: ["Wednesday 19:30"],
+      link: "https://www.arc-city.com/bunka/contents/course/item/p0099.html"
+    },
+    {
+      marker: "★",
+      name: "Aoba-minami Branch (in planning)",
+      address: "Aoba-cho 6-chome 3-10, Atsubetsu-ku, Sapporo — Aoba-minami Community Hall (to begin once 5 members have joined)",
+      schedule: [],
+      link: "/en/dojo/aoba/"
+    },
+    {
+      no: 8,
+      marker: "□",
+      name: "Seishinkai Inoue Dojo",
+      address: "Atsubetsu-nishi 4-jo 4-chome 13-23, Atsubetsu-ku, Sapporo",
+      schedule: ["Saturday/Tuesday 19:00"],
+      link: "/en/dojo/inoue/"
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes in Atsubetsu Ward", "description": "Directory of Seishinkai Karate dojos and classes in Atsubetsu Ward, Sapporo. Find training days for the Atsubetsu-nishi, Shin-Sapporo, Atsubetsu-minami, Momijidai and other branches.", "lang": "en", "path": "/en/dojo/atsubetsu/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Karate Dojos & Classes in Atsubetsu Ward</h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries, "headers": ["Dojo / Branch", "Address / Venue", "Training Days"] })}
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Instructor-dispatch class — inquiries to the hosting cultural center / sports club
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>Self-managed dojo — inquiries to the office or directly to the dojo manager
+        </li>
+      </ul>
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_atsubetsu_03.jpg" alt="atsubetsu dojo" width="301" height="166" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_atsubetsu_04.jpg" alt="atsubetsu dojo" width="288" height="160" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to Karate Dojos & Classes list</a>
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/atsubetsu/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/atsubetsu/index.astro";
+const $$url = "/en/dojo/atsubetsu";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

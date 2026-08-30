@@ -1,0 +1,82 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "#",
+      name: "福岡空手教室(清心会福岡支部)",
+      address: "福岡県福岡市　笹丘公民館",
+      schedule: ["稽古日は要問合せ"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "福岡支部の空手教室(活動終了)", "description": "福岡県福岡市・笹丘公民館を会場とした清心会福岡支部のご案内。平成25年4月開設、令和3年3月に活動終了しました。", "lang": "ja", "path": "/dojo/fukuoka/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・福岡支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">福岡空手教室・清心会福岡支部</h2>
+
+      <p class="detail-page__lead">
+        福岡空手教室は、平成25年4月に、笹丘公民館を会場としてスタートしました。<br>
+        長らく皆様の御協力に感謝致します。<br>
+        令和3年3月を持ちまして活動が終了となります。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心流福岡支部", "facts": [
+    { label: "設立", value: "平成25年(2013)4月" },
+    { label: "設立者", value: "三枝篤史" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/fukuoka/2.jpg",
+    alt: "笹丘公民館",
+    width: 250,
+    height: 126
+  }, "address": "福岡県福岡市　笹丘公民館", "mapHref": "https://www.google.com/maps/place/笹丘公民館/@33.567146,130.378501,15z/data=!4m2!3m1!1s0x0:0x4c673e139e341c71?sa=X&ved=2ahUKEwjn1J27rKfhAhWZPXAKHcLzDf8Q_BIwCnoECA8QCA", "mapQuery": "33.567146,130.378501", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+            <img src="/assets/images/legacy/dojo/fukuoka/Image1.jpg" alt="福岡支部の稽古風景" width="334" height="191" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/dojo/fukuoka/Image5.jpg" alt="福岡支部の稽古風景" width="169" height="137" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※日中は仕事中なので電話に出れない場合があります。Facebookメッセンジャーなどをご利用下さい。<br>
+        ※本ページは活動終了時点の情報を旧サイトより移設したものです。
+      </p>
+
+      <p class="detail-page__note">
+        　　　　　(勤務先：<a href="http://www.saegusayakuhin-q.co.jp/" target="_blank" rel="noopener">サエグサ薬品九州</a>)
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/naichi/">← 静岡県・愛知県・千葉県の空手道場の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/fukuoka/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/fukuoka/index.astro";
+const $$url = "/dojo/fukuoka";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

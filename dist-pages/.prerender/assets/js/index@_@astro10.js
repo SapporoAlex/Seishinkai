@@ -1,0 +1,127 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$ClassScheduleCard } from './ClassScheduleCard.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const classes = [
+    {
+      title: "金曜クラス(厚別北支部)",
+      schedule: ["①18:00-19:00", "②19:10-20:10(20:30)"],
+      instructors: [
+        { name: "本部直轄" }
+      ],
+      note: ""
+    },
+    {
+      title: "日曜クラス(厚別支部)",
+      schedule: [
+        "①9:30-10:30",
+        "②10:40-11:50",
+        "冬時間12-3月 ①10:00-10:50 ②11:00-11:55"
+      ],
+      instructors: [
+        { name: "本部直轄" }
+      ],
+      note: ""
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "清心会空手道連盟 厚別支部", "description": "厚別空手教室・清心会厚別支部、平成5年(1993) 4月。キッズ・ジュニア空手教室の稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/atsubetsu/atsubetsu/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+        <div class="section__title-area">
+            <span class="section-label">DOJO</span>
+            <h1 class="section-title">清心会空手道連盟 厚別支部</h1>
+        </div>
+
+        <h2 class="detail-page__heading">厚別空手倶楽部・清心会厚別支部</h2>
+
+        <div class="detail-page__img-text-pair--reverse">
+            <div class="detail-media--med">
+                <figure>
+                    <img src="/assets/images/dojo/img_atsubetsu_bld.jpg" alt="本通清心館の外観" width="234" height="144" loading="lazy">
+                </figure>
+            </div>
+            <p>
+                厚別空手クラブは、平成5年4月より厚別西地区センターで活動を始めました。
+                設立以来、キッズ空手、ジュニア空手として開始し、園児から大人(親子)まで幅広く参加しています。
+                特に親子での参加を歓迎します。
+                指導を担当している若林親子も親子で入会し、現在は支部長として活動しています。
+                体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指
+                しています。<br>
+                ※各クラス①は初級者対象時間となります<br>
+            </p>
+        </div>
+
+        <div class="detail-page__highlight-box">
+          <p class="detail-page__highlight-text">★★</p>
+          <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
+          <p class="detail-page__highlight-text">★★</p>
+        </div>
+
+        <h2 class="detail-page__heading">クラス案内</h2>
+
+        <div class="class-schedule-grid">
+          ${classes.map((c) => renderTemplate`${renderComponent($$result2, "ClassScheduleCard", $$ClassScheduleCard, { "title": c.title, "schedule": c.schedule, "instructors": c.instructors, "note": c.note })}`)}
+        </div>
+
+        ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "厚別支部", "facts": [
+    { label: "設立", value: "平成5年(1993) 4月" },
+    { label: "開設者", value: "大久保勝美" },
+    { label: "歴代", value: "大久保、藤原、他" },
+    { label: "師範", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_atsubetsu_bld.jpg",
+    alt: "本通清心館の外観",
+    width: 299,
+    height: 154
+  }, "address": "練習会場/厚別区厚別西4条4丁目10-1　厚別西地区センター2F集会室", "mapQuery": "43.052996,141.465722", "viewOnMapLabel": "Google Mapsで見る" })}
+
+        <p class="detail-page__note">
+        ※クラスにより、園児は親子参加でお願いします。<br>
+        ※不定期で一般部員有段者が参加します。
+        </p>
+
+        <p class="detail-page__note">
+        厚別西地区センターが使えないとき、大麻清心館又は川下生協2F(サークル室)にて稽古する場合があります。
+        </p>
+
+        
+        <h2 class="detail-page__heading">稽古風景</h2>
+
+        <div class="detail-gallery">
+            <figure>
+                <img src="/assets/images/dojo/img_atsubetsu_1.jpg" alt="厚別北支部 金曜クラスの稽古風景" width="234" height="144" loading="lazy">
+                <figcaption>金曜クラス</figcaption>
+            </figure>
+            <figure>
+                <img src="/assets/images/dojo/img_atsubetsu_2.jpg" alt="厚別支部 日曜クラスの稽古風景" width="234" height="144" loading="lazy">
+                <figcaption>日曜クラス</figcaption>
+            </figure>
+        </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/atsubetsu/">← 厚別区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "厚別支部", "subject": "厚別体験・入会問い合わせ" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/atsubetsu/atsubetsu/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/atsubetsu/atsubetsu/index.astro";
+const $$url = "/dojo/atsubetsu/atsubetsu";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

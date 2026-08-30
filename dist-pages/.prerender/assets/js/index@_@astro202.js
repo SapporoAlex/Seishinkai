@@ -1,0 +1,165 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$ContactSection } from './ContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "加盟・セミナーのご案内", "description": "清心会空手道連盟への加盟方法のご案内。学校クラブ・同好会・地域サークル・カルチャースクールの加盟相談、企業や学校への出張セミナーについてご紹介します。", "lang": "ja", "path": "/membership/affiliation/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">AFFILIATION</span>
+        <h1 class="section-title">各種セミナー及び清心会への加盟方法</h1>
+      </div>
+
+      <p class="detail-page__lead">清心会への参加希望をされる学校クラブ、同好会、地域サークルやカルチャースクール、文化教室等で新規講座を開講を計画されている方は御相談下さい。</p>
+
+      <h2 class="detail-page__heading">外国人観光客向け 空手・居合・古武道 体験</h2>
+
+      <p class="detail-page__lead">日本への観光客や日本語学校生徒などへの体験セミナーも行っています。<br>
+        道場内に設置された空手資料室には戦前の空手本や明治時代の武術書、1600年頃の甲冑や古書などの資料が展示され閲覧できます。<br>
+        体験セミナーは空手、居合、古武術が可能です。対応は、英語又は日本語となります。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_foreign_01.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              南アジア諸国からの
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_foreign_02.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              韓国人ユーチューバーの体験
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_foreign_03.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              資料室の見学
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_foreign_04.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              ロシア学生の居合体験
+          </figcaption>
+        </figure>
+
+      </div>
+
+
+      <h2 class="detail-page__heading">セミナーについて</h2>
+
+      <p class="detail-page__lead">希望者が5名以上集まりましたら、「健康空手セミナー」「女性の為の防犯・護身術セミナー」や企業や学校等へのセミナーを承ります。<br>
+      メンタル面強化としての新人研修にも活用ください。又、外国人観光客等の体験セミナーも行っています。<br>
+      詳しくは清心会事務局まで<a href="#contact">メールで御連絡</a>下さい。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_seminar_01.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              企業女性社員への護身セミナー
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_seminar_02.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              地方自治体での健康セミナー
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_seminar_03.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              地方自治体での空手セミナー
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_seminar_04.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              札幌国際交流館での護身セミナー
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_seminar_05.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              防犯・護身セミナー
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_seminar_06.jpg" alt="" width="416" height="296" loading="lazy">
+          <figcaption>
+              健康講座
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <h2 class="detail-page__heading">加盟を希望するクラブ・サークルなど</h2>
+
+      <p class="detail-page__lead">どこの流派にも所属せず活動されているサークルや学校クラブ、同好会ですと段級が発行されず、又、自己流になりがちとなります。<br>
+      以前は指導者がいて流派に所属していたが転勤や諸事情で不在となり、同好会的になってしまったところなどで現在は清心会の正規支部として活動しているところもあります。<br>
+      清心会は組織としては競技中心ではありませんが、寸止め、フルコンなど他の大会への参加は制限しておりません。<br>
+      会員の中には他流派で段位を取得され転向した人が多数在籍しております。<br>
+      是非、一度、<a href="#contact">御相談</a>下さい。
+      </p>
+
+      <p class="detail-page__note">
+        ※和道流、松涛館系、剛柔流、糸東流、少林寺流、極真系、正道会館、芦原会館、少林寺拳法など
+      </p>
+
+
+      <div class="detail-img-pair">
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_club_01.jpg" alt="" width="416" height="296" loading="lazy">
+        </figure>
+
+        <figure>
+          <img src="/assets/images/affilliation/img_affilliation_club_02.jpg" alt="" width="416" height="296" loading="lazy">
+        </figure>
+
+      </div>
+
+      <h2 class="detail-page__heading">カルチャースクール・文化教室など</h2>
+      <div class="detail-page__img-text-pair">
+        <div class="detail-media--big">
+          <figure>
+            <img src="/assets/images/legacy/base/Image4.jpg" alt="" loading="lazy">
+          </figure>
+        </div>
+
+        <p>
+          新規で開講や増設を検討されているカルチャー教室は是非、一度ご相談下さい。<br>
+          清心会空手を現在、いくつかのカルチャー教室で実施しておりますが、各種教室の中では生徒数がトップクラスと言えます。<br>
+          丁寧な対応を楽しい練習は生徒数UPには欠かせない重要な要件のひとつと言えます。
+        </p>
+
+      </div>
+    </div></section>
+  ${renderComponent($$result2, "ContactSection", $$ContactSection, {})}
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/membership/affiliation/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/membership/affiliation/index.astro";
+const $$url = "/membership/affiliation";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

@@ -1,0 +1,91 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "美園支部",
+      address: "豊平区美園6条7丁目 コープさっぽろ美園2Fサークル室",
+      schedule: ["日曜13:30-14:30　※園児は親子参加でお願いします"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "豊平区美園支部の空手教室", "description": "札幌市豊平区美園の清心会空手道場・教室のご案内。旧・平岸支部からの改称。ジュニアクラス中心の空手クラブ、稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/misono/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・美園支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">豊平区美園空手倶楽部・美園支部</h2>
+
+      <p class="detail-page__lead">
+        現美園空手クラブは、豊平区民センターをお借りして平成21年4月より平岸支部として活動を開始、美園児童会館
+        で美園支部が活動、令和3年3月より会場をコープ美園2Fサークル室に移転し、名称も美園空手クラブ(美園支部)と
+        なりました。会場がコープなので稽古の間に、お買い物ができますので便利となります。
+        設立以来、ジュニア空手として開始し、園児から中学生を中心としています。
+        また稽古日が日曜なので親子での参加がしやすいと言えます。シニアの参加も大歓迎。
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指
+        しています。
+      </p>
+
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
+      </div>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心会美園支部", "facts": [
+    { label: "設立", value: "平成21年(2009) 4月" },
+    { label: "歴代", value: "小谷野、大久保翼、他" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/misono/img4.jpg",
+    alt: "コープさっぽろ美園店",
+    width: 240,
+    height: 168
+  }, "address": "豊平区美園6条7丁目　コープさっぽろ美園2Fサークル室", "mapHref": "https://www.google.com/maps/place/コープさっぽろ+美園店/@43.0373071,141.3874316,15z/data=!4m5!3m4!1s0x0:0x72d3e70b77425ccb!8m2!3d43.0373849!4d141.3872843", "mapQuery": "43.0373071,141.3874316", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <p class="detail-page__note">
+        ※2F駐車場からの入口からお入り下さい。分からない時は生協サービスカウンターでお聞き下さい。
+      </p>
+
+      <p class="detail-page__note">
+        ※不定期で一般部員有段者が参加します。
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/misono/acs1.jpg" alt="美園支部の稽古風景" width="336" height="185" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "美園支部", "subject": "美園体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/misono/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/misono/index.astro";
+const $$url = "/dojo/misono";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

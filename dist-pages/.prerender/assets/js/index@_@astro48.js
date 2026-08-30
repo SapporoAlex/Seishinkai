@@ -1,0 +1,124 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      no: 1,
+      marker: "★",
+      name: "ARCS北空手クラブ",
+      address: "北区北24条西9丁目　アークス北24条店2F",
+      schedule: ["木曜16:00", "土曜15:30"],
+      link: "/dojo/kita/kita/"
+    },
+    {
+      no: 2,
+      marker: "★",
+      name: "篠路空手クラブ",
+      address: "北区篠路3条8丁目 篠路コミニティセンター2F",
+      schedule: ["土曜13:30", "木曜15:50"],
+      link: "/dojo/shinoro/"
+    },
+    {
+      no: 3,
+      marker: "★",
+      name: "あいの里空手クラブ",
+      address: "北区あいの里４条６丁目 拓北会館",
+      schedule: ["木曜18:30"],
+      link: "/dojo/ainosato/"
+    },
+    {
+      no: 4,
+      marker: "★",
+      name: "南あいの里空手クラブ",
+      address: "北区あいの里1条6丁目拓北あいの里地区センター",
+      schedule: ["日曜10:00(冬10:30)"],
+      link: "/dojo/m-ainosato/"
+    },
+    {
+      no: 5,
+      marker: "□",
+      name: "住吉塾麻生道場",
+      address: "北区北39条西5丁目 麻生児童会館",
+      schedule: ["土曜19:00"]
+    },
+    {
+      no: 6,
+      marker: "□",
+      name: "住吉塾新琴似･新川教室",
+      address: "北区新琴似2-8 新琴似新川地区センター",
+      schedule: ["日曜10:00"]
+    },
+    {
+      no: 7,
+      marker: "□",
+      name: "住吉塾屯田教室",
+      address: "北区屯田５条６丁目　屯田地区センター",
+      schedule: ["日曜10:00"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "北区の空手教室", "description": "札幌市北区の清心会空手道場・教室一覧。ARCS北・篠路・あいの里・南あいの里の各クラブと住吉塾各教室の稽古日をご案内します。", "lang": "ja", "path": "/dojo/kita/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">札幌市北区空手道場・教室の一覧</h1>
+      </div>
+      <p class="detail-page__contact">
+        お問い合わせは　TEL.011-300-0048(平日13:00-16:00)
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>本部直轄教室=お問い合わせは本部事務局へ
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>講師派遣教室=お問い合わせは主催文化教室・スポーツクラブへ
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>自主管理道場=事務局又は直接、管理担当者へ
+        </li>
+      </ul>
+
+      <h2 class="detail-page__heading">住吉塾 各教室の紹介ページ</h2>
+      <ul class="detail-links">
+        <li>
+          <a href="https://sumiyoshijuku.org/class/azabu/" target="_blank" rel="noopener">住吉塾麻生道場</a>
+        </li>
+        <li>
+          <a href="https://sumiyoshijuku.org/class/shinkotoni/" target="_blank" rel="noopener">住吉塾新琴似･新川教室</a>
+        </li>
+        <li>
+          <a href="https://sumiyoshijuku.org/class/tonden/" target="_blank" rel="noopener">住吉塾屯田教室</a>
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img src="/assets/images/legacy/photo/Image2.jpg" alt="清心会空手 稽古の様子" width="570" height="340" loading="lazy">
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/kita/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/kita/index.astro";
+const $$url = "/dojo/kita";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

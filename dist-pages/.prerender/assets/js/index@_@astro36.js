@@ -1,0 +1,64 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "●",
+      name: "SC平岡空手クラブ",
+      address: "清田区平岡3条5丁目　イオン平岡店2F(札幌カルチャー)",
+      schedule: ["土曜9:15"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "清田区SC平岡支部の空手教室", "description": "札幌市清田区平岡・イオン平岡店2F、札幌カルチャー早朝キッズ空手教室(清心会SC平岡支部)のご案内。稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/hiraoka-sc/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・SC平岡支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">SC平岡支部・札幌カルチャー早朝キッズ空手教室</h2>
+
+      <p class="detail-page__lead">
+        イオン平岡店2Fの札幌カルチャーをお借りして活動している早朝キッズ空手教室です。<br>
+        清心会から交代で講師を派遣しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心会SC平岡支部", "facts": [
+    { label: "設立", value: "平成21年(2009)10月" },
+    { label: "歴代", value: "三村佳代子、ハシニ" },
+    { label: "担当", value: "本部直轄" },
+    { label: "備考", value: "清心会で交代で講師派遣しています" }
+  ], "address": "札幌市清田区平岡3条5丁目　イオン平岡店2F(札幌カルチャー)", "mapHref": "https://www.google.com/maps/search/?api=1&query=イオン平岡店", "mapQuery": "イオン平岡店 札幌市清田区平岡3条5丁目", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <p class="detail-page__note">
+        ※こちらは札幌カルチャーの講座です。体験・お申込みは<a href="https://www.culture.gr.jp/detail/sapporo/contact/sapporo_4537192/" target="_blank" rel="noopener">札幌カルチャー</a>まで直接お問い合わせください。
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/hiraoka-sc/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/hiraoka-sc/index.astro";
+const $$url = "/dojo/hiraoka-sc";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

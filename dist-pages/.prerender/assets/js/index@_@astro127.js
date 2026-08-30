@@ -1,0 +1,116 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "Hiraoka Karate Class, Kiyota Ward (Seishinkai Hiraoka Branch)",
+      address: "Clubhouse Platz, 1-1-40 Hiraoka 5-jo, Kiyota-ku, Sapporo",
+      schedule: [
+        "Tuesday 16:00-17:00 ※A time slot suitable for preschool and younger elementary school children",
+        "Thursday 19:00-20:00 ※Preschool children are welcome to enroll together with a parent"
+      ]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes at the Kiyota-ku Hiraoka Branch (Clubhouse Plaz Venue)", "description": "Introducing the Seishinkai karate class at Clubhouse Plaz in Hiraoka, Kiyota-ku, Sapporo. A junior-focused karate class, with training days and venue information.", "lang": "en", "path": "/en/dojo/hiraoka-c/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span> 
+        <h1 class="section-title">Seishinkai Karate-do Federation・Hiraoka Branch</h1> 
+      </div> <h2 class="detail-page__heading">Kiyota-ku Hiraoka Karate Club・Seishinkai Hiraoka Branch</h2> 
+
+      <p class="detail-page__lead"> The Thursday class began at Hiraoka Children's Center in March 2010,
+         while the Tuesday class started at a neighborhood community center in September 
+         2016 at the request of the local residents' association. The Tuesday class later moved
+          to its current location at Club House Platz. In April 2020, the classes were being held 
+          at two separate venues. However, because the venues were close to each other and the children's 
+          center stopped allowing outside groups to use its facilities due to the COVID-19 pandemic,
+           the Thursday class was moved to Club House Platz. The two classes now operate there on separate 
+           days. Both classes are primarily focused on junior students, but the Tuesday class is scheduled 
+           earlier to make it easier for preschool children and younger elementary school students to 
+           participate. We especially welcome families participating together, as well as students in our 
+           senior class. While many dojos operate much like an extension of traditional school sports clubs,
+            our aim is to provide karate as a form of healthy physical activity, creating a relaxed, 
+            club-like environment where everyone can enjoy practicing and learning together. </p>
+
+      <div class="detail-page__highlight-box">
+
+        <p class="detail-page__highlight-text">Seishinkai Karate – Building a heart that never gives up</p>
+
+      </div>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries, "headers": ["Dojo / Branch", "Address / Venue", "Training Days"] })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Seishinkai Hiraoka Branch", "facts": [
+    {
+      label: "Founded",
+      value: [
+        "March 2010 (Thursday Class)",
+        "September 2016 (Tuesday Class)"
+      ]
+    },
+    { label: "Founder", value: "Tsubasa Okubo" },
+    { label: "Past instructors", value: "Tsubasa Okubo, Takashima, Takigami, Shima, Maekawa" },
+    {
+      label: "Instructors",
+      value: "Headquarters-run"
+    }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/hiraoka-c/img3.jpg",
+    alt: "Clubhouse Plaz",
+    width: 266,
+    height: 155
+  }, "address": "5-jo 1-chome 1-40 Hiraoka, Kiyota-ku, Sapporo, Clubhouse Plaz", "mapHref": "https://www.google.com/maps/place/〒004-0875+北海道札幌市清田区平岡５条１丁目１−４０+クラブハウスプラッツ/@43.0087955,141.4478467,18z/data=!3m1!4b1!4m6!3m5!1s0x5f0b2b2be2f705a1:0xd912bff6f45f6a74!8m2!3d43.0087937!4d141.4490619!16s/g/12hpr3l9l?entry=ttu", "mapQuery": "43.0087955,141.4478467" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/hiraoka-c/Image1.jpg" alt="Hiraoka Branch - Tuesday class practice" width="247" height="149" loading="lazy">
+          <figcaption>Tuesday class practice session</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/dojo/hiraoka-c/1.jpg" alt="Hiraoka Branch - Thursday class practice" width="245" height="134" loading="lazy">
+          <figcaption>Thursday class practice session</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※In some classes, preschool children are asked to participate together with a parent.
+      </p>
+
+      <p class="detail-page__note">
+        ※ Black belt members from the adult division participate on a rotating basis.
+        <a href="mailto:karate@seishinkan.ne.jp?subject=Hiraoka Trial Lesson Inquiry">
+          <img src="/assets/images/legacy/dojo/hiraoka-c/img1A.jpg" alt="Click here to apply for a trial lesson" width="645" height="293" loading="lazy">
+        </a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/minami-kiyota/">← Back to the Kiyota Ward & Minami Ward Dojo & Class List</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Hiraoka Branch", "subject": "Hiraoka Trial Lesson Inquiry" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/hiraoka-c/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/hiraoka-c/index.astro";
+const $$url = "/en/dojo/hiraoka-c";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

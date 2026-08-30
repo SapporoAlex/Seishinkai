@@ -1,0 +1,86 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "Kosei Karate Club",
+      address: "Shinsei Children's Hall Gymnasium, Kita 8-jo Higashi 7-chome 1-3, Higashi-ku, Sapporo",
+      schedule: ["Thursday 18:25/19:35"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes at the Kosei Branch, Higashi Ward", "description": "Introducing the Kosei Karate Club, a Seishinkai Karate dojo in Kita 8-jo, Higashi Ward, Sapporo. Training is held on Thursdays at the Shinsei Children's Hall Gymnasium.", "lang": "en", "path": "/en/dojo/kosei/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-do Federation — Kosei Branch</h1>
+      </div>
+
+      <h2 class="detail-page__heading">Kosei Karate Class, Seishinkai Kosei Branch, Higashi Ward</h2>
+
+      <p class="detail-page__lead">
+        The Kosei Karate Class started in May 2005 (Heisei 17), using a meeting room at the Higashi Ward Citizens Center as its venue.<br>
+        Since February 2022 (Reiwa 4), it has been held at the Shinsei Children's Hall Gymnasium.<br>
+        It is a karate club centered on Kids Karate, Junior Karate, and Parent-Child Karate.<br>
+        We especially welcome participation from parents and children together, and from the Senior Class.<br>
+        While many dojos feel like an extension of school sports clubs, we aim to make karate an enjoyable, club-like experience centered on health and fitness.
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries, "headers": ["Dojo / Branch", "Address / Venue", "Training Days"] })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Seishinkai Kosei Branch", "facts": [
+    { label: "Founded", value: "May 2005 (Heisei 17)" },
+    { label: "Founder", value: "Kayoko Mimura" },
+    { label: "Past instructors", value: "Hashini, Daniela" },
+    { label: "Instructor", value: "Headquarters-run" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/kosei/img4.jpg",
+    alt: "Shinsei Children's Hall Gymnasium",
+    width: 348,
+    height: 204
+  }, "address": "Shinsei Children's Hall Gymnasium, Kita 8-jo Higashi 7-chome 1-3, Higashi-ku, Sapporo", "mapHref": "https://www.google.com/maps/place/〒060-0908+北海道札幌市東区北８条東７丁目１−３+札幌市新生児童会館/@43.0742402,141.3619215,17z/data=!4m19!1m13!4m12!1m3!2m2!1d141.3643461!2d43.0725357!1m6!1m2!1s0x5f0b296ce5c76f23:0x6808b1cf13082457!2z44CSMDYwLTA5MDgg5YyX5rW36YGT5pyt5bmM5biC5p2x5Yy65YyX77yY5p2h5p2x77yX5LiB55uu77yR4oiS77yTIOacreW5jOW4guaWsOeUn-WFkOerpeS8mumkqA!2m2!1d141.36429!2d43.0724337!3e2!3m4!1s0x5f0b296ce5c76f23:0x6808b1cf13082457!8m2!3d43.0724337!4d141.36429", "mapQuery": "43.0742402,141.3619215" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/kosei/img2.jpg" alt="Practice session at the Kosei Branch" width="544" height="306" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/dojo/kosei/img4.jpg" alt="Shinsei Children's Hall Gymnasium" width="348" height="204" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※Training is held on Thursdays. Youth Division: Session 1, 18:25-19:10 (basics & partner drills) / Session 2, 19:10-19:25 (kata). General Division:
+        Session 1, 19:35-20:25 (basics & partner drills) / Session 2, 20:25-20:45 (kata & other).<br>
+        
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/higashi/">← Back to the Higashi Ward Dojo & Class List</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Kosei Branch", "subject": "Kosei Trial Application" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/kosei/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/kosei/index.astro";
+const $$url = "/en/dojo/kosei";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

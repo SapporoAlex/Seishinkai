@@ -1,0 +1,89 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "喜茂別町空手クラブ",
+      address: "虻田郡喜茂別町字喜茂別22　喜茂別町武道館",
+      schedule: ["木曜18:30"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "喜茂別町の空手教室", "description": "北海道虻田郡喜茂別町の清心会空手道場・喜茂別支部のご案内。稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/kimobetsu/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・喜茂別支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">喜茂別町空手教室・清心会喜茂別支部</h2>
+
+      <p class="detail-page__lead">
+        喜茂別空手クラブは、清心流と縁の深い神道自然流支部としてスタートし、平成19年12月より清心会喜茂別支部として新スタートを切りました。<br>
+        会場は、喜茂別武道館です。<br>
+        キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "喜茂別町支部", "facts": [
+    { label: "設立", value: "平成19年(2007)12月" },
+    { label: "設立者", value: "大久保勝美" },
+    { label: "担当者", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/kimobetsu/2.jpg",
+    alt: "喜茂別町武道館",
+    width: 286,
+    height: 211
+  }, "address": "虻田郡喜茂別町字喜茂別22　喜茂別町武道館", "mapHref": "https://www.google.com/maps/place/喜茂別武道館/@42.7988387,140.9335731,15z/data=!4m5!3m4!1s0x0:0x81f4a8b87c2dd038!8m2!3d42.7988387!4d140.9335731", "mapQuery": "42.7988387,140.9335731", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/kimobetsu/Image1.jpg" alt="喜茂別支部の稽古風景" width="396" height="214" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/images/Image1.jpg" alt="清心会空手の稽古風景" width="649" height="196" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/clubu/masuda.jpg" alt="指導員" width="161" height="161" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※稽古時間は18:30-19:30(中級以上は20:00まで)。
+      </p>
+
+      <p class="detail-page__note">
+        ※会費等：月会費2,500円～(喜茂別町民)。別途年会費等。
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "喜茂別支部", "subject": "喜茂別体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/kimobetsu/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/kimobetsu/index.astro";
+const $$url = "/dojo/kimobetsu";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

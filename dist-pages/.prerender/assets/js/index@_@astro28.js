@@ -1,0 +1,76 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "#",
+      name: "石狩花川空手クラブ(花川支部)",
+      address: "石狩市花川北コミュニティセンター(旧:花川南コミュニティセンター)",
+      schedule: ["火曜16:30-17:30(R6.4より)"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "石狩市花川支部の空手教室", "description": "石狩市花川南・花川北の清心会空手道場・教室のご案内。ジュニアクラス中心の空手クラブ、稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/hana-m/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・花川支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">石狩市花川空手クラブ・清心会花川支部</h2>
+
+      <p class="detail-page__lead">
+        花川南空手教室は、平成26年6月に、花川南コミュニティセンターを会場にして設立されました。<br>
+        ※令和3年7月より南コメセンがワクチン接種会場で使えない為、花川北コミュニティセンターへ会場を変更。<br>
+        ジュニアクラス中心の空手クラブです。<br>
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "花川支部", "facts": [
+    { label: "設立", value: "平成26年(2014)6月" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/hana-m/2.jpg",
+    alt: "花川南コミュニティセンター",
+    width: 251,
+    height: 198
+  }, "address": "石狩市花川南6-5　花川南コミュニティセンター", "mapHref": "https://www.google.com/maps/place/〒061-3206+北海道石狩市花川南６条５丁目２７−２/@43.1406157,141.291549,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b267a656101db:0xeda52c8f8822b8eb!8m2!3d43.1406157!4d141.2937377", "mapQuery": "43.1406157,141.291549", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/hana-m/Image1.jpg" alt="花川支部の稽古風景" width="271" height="152" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "花川支部", "subject": "花川南体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/hana-m/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/hana-m/index.astro";
+const $$url = "/dojo/hana-m";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

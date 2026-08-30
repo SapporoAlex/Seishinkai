@@ -1,0 +1,82 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "平和通支部",
+      address: "白石区平和通3丁目北 スーパーアークス白石店2F",
+      schedule: ["木曜16:00"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "白石区平和通支部の空手教室", "description": "札幌市白石区平和通の清心会空手道場・教室のご案内。スーパーアークス白石店2Fを会場にしたジュニア空手教室です。", "lang": "ja", "path": "/dojo/heiwa/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・平和通支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">白石区平和通空手教室・清心会平和通支部</h2>
+
+      <p class="detail-page__lead">
+        平和通空手教室は、ビックハウス平和通店2Fコミュニティスペースをお借りして平成22年3月より活動を始めました。<br>
+        設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br>
+        ビックハウス店舗内ですのでお子様が練習中にお買い物ができますので、とても便利です。<br>
+        また親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。<br>
+        ※ビッグハウス白石店は令和5年6月より店名が「スーパーアークス白石店」に変更になっています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心会平和通支部/平和通空手倶楽部", "facts": [
+    { label: "設立", value: "平成22年(2010)3月" },
+    { label: "設立者", value: "三村佳代子" },
+    { label: "歴代", value: "ハシニ、ダニエラ、滝上由佳、高嶋" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_heiwa_bld.jpg",
+    alt: "スーパーアークス白石店",
+    width: 306,
+    height: 183
+  }, "address": "札幌市白石区平和通3丁目北1-1 スーパーアークス白石店2F", "mapHref": "https://www.google.com/maps/place/ビッグハウス+白石店/@43.0514733,141.4108608,17z/data=!4m12!1m6!3m5!1s0x0:0x1e4ad42edd7757dc!2z44Ot44O844K944OzIOacreW5jOW5s-WSjOmAmu-8k-S4geebruW6lw!8m2!3d43.054403!4d141.412858!3m4!1s0x5f0b2beabe8e7a11:0xfbbe7e25dacb240d!8m2!3d43.0523841!4d141.4118193", "mapQuery": "43.0514733,141.4108608", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_heiwa_01.jpg" alt="平和通支部の稽古風景" width="335" height="203" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_heiwa_02.jpg" alt="平和通支部の稽古風景" width="335" height="203" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/shiroishi/">← 白石区の空手教室一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "平和通支部", "subject": "平和通体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/heiwa/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/heiwa/index.astro";
+const $$url = "/dojo/heiwa";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

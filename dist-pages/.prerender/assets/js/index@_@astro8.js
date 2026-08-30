@@ -1,0 +1,85 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "青葉南支部(仮称)",
+      address: "厚別区青葉町6丁目3-10　青葉南集会所(5名集まれば開始予定)",
+      schedule: [""]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "青葉支部の空手教室(準備中)", "description": "札幌市厚別区青葉の清心会空手道場・青葉支部のご案内。現在、再開に向けて参加者を募集中です。", "lang": "ja", "path": "/dojo/aoba/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・青葉支部(仮称) </h1>
+      </div>
+
+      <h2 class="detail-page__heading">厚別区青葉空手教室・清心会青葉支部(仮称) </h2>
+
+      <p class="detail-page__lead">
+        青葉空手教室は、平成23年12月にキッズ空手、ジュニア空手として開始ししました。
+        その後、会場等の関係で厚別南支部(厚別南地区センター)で活動していましたが、青葉支部としての再開を準備中です。
+        キッズ空手、ジュニア空手、そして親子空手を中心とするため土曜又は日曜で再開を計画しています。
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指
+        しています。
+        現在、参加者を募集しています。5名集まれば開始したいと考えています。
+      </p>
+
+        <div class="detail-page__highlight-box">
+          <p class="detail-page__highlight-text">★★</p>
+          <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
+          <p class="detail-page__highlight-text">★★</p>
+        </div>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "青葉支部(仮称)", "facts": [
+    { label: "設立", value: "平成23年(2011) 11月" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/aoba/img4.jpg",
+    alt: "青葉南集会所",
+    width: 299,
+    height: 154
+  }, "address": "厚別区青葉6丁目1-10　青葉南集会所(予定会場)", "mapHref": "https://www.google.com/maps/place/青葉南集会所/@43.0282951,141.4771169,15z/data=!4m6!3m5!1s0x5f0b2b5bd1e99d37:0xb28a71c0f3efd5a9!8m2!3d43.0282951!4d141.4771169!16s/g/1tgdnbw1?entry=ttu", "mapQuery": "43.0282951,141.4771169", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/aoba/Image1.jpg" alt="青葉支部の稽古風景" width="287" height="123" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">※青葉支部スタート前での参加希望者での体験は、もみじ台支部又は厚別南支部で行っています
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/atsubetsu/">← 厚別区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "青葉支部", "subject": "青葉支部再開・参加希望" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/aoba/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/aoba/index.astro";
+const $$url = "/dojo/aoba";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

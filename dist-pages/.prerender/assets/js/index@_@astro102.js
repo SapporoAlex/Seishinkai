@@ -1,0 +1,131 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$ClassScheduleCard } from './ClassScheduleCard.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const classes = [
+    {
+      title: "Friday Class (Atsubetsu Kita Branch)",
+      schedule: ["①18:00-19:00", "②19:10-20:10 (20:30)"],
+      instructors: [
+        { name: "Headquarters-run" }
+      ],
+      note: ""
+    },
+    {
+      title: "Sunday Class (Atsubetsu Branch)",
+      schedule: [
+        "①9:30-10:30",
+        "②10:40-11:50",
+        "Winter Schedule (December-March): ①10:00-10:50 ②11:00-11:55"
+      ],
+      instructors: [
+        { name: "Headquarters-run" }
+      ],
+      note: ""
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Seishinkai Karate Federation – Atsubetsu Branch", "description": "Atsubetsu Karate Club and Seishinkai Atsubetsu Branch, established in April 1993. Information on practice schedules and training locations for kids' and junior karate classes.", "lang": "en", "path": "/en/dojo/atsubetsu/atsubetsu/" }, { "default": ($$result2) => renderTemplate`
+${maybeRenderHead()}<section class="dojo-list">
+  <div class="page-container">
+    <div class="section__title-area">
+      <span class="section-label">DOJO</span>
+      <h1 class="section-title">Seishinkai Karate Federation – Atsubetsu Branch</h1>
+    </div>
+
+    <h2 class="detail-page__heading">Atsubetsu Karate Club & Seishinkai Atsubetsu Branch</h2>
+
+    <div class="detail-page__img-text-pair--reverse">
+      <div class="detail-media--med">
+        <figure>
+          <img src="/assets/images/dojo/img_atsubetsu_bld.jpg" alt="Exterior of Hondori Seishinkan" width="234" height="144" loading="lazy">
+        </figure>
+      </div>
+
+      <p>
+        Atsubetsu Karate Club began its activities at the Atsubetsu Nishi Community Center in April 1993.
+        Since its establishment, the club has offered kids' and junior karate classes, with participants ranging
+        from preschool children to adults, including parents and children.
+        We especially welcome families to participate together.
+        The Wakabayashi family, who are responsible for instruction, also joined as a parent-and-child family
+        and now serve as the branch instructors.
+        While many dojos operate more like traditional athletic clubs, our goal is to provide a friendly,
+        enjoyable environment where students can learn and practice karate as a form of health and physical
+        fitness.<br>
+        ※ Class ① in each schedule is intended for beginners.<br>
+      </p>
+    </div>
+
+    <div class="detail-page__highlight-box">
+      <p class="detail-page__highlight-text">★★</p>
+      <p class="detail-page__highlight-text">Seishinkai Karate – Building a heart that never gives up</p>
+      <p class="detail-page__highlight-text">★★</p>
+    </div>
+
+    <h2 class="detail-page__heading">Class Information</h2>
+
+    <div class="class-schedule-grid">
+      ${classes.map((c) => renderTemplate`${renderComponent($$result2, "ClassScheduleCard", $$ClassScheduleCard, { "title": c.title, "schedule": c.schedule, "instructors": c.instructors, "note": c.note })}`)}
+    </div>
+
+    ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Atsubetsu Branch", "facts": [
+    { label: "Established", value: "April 1993" },
+    { label: "Founder", value: "Katsumi Okubo" },
+    { label: "Former Branch Heads", value: "Okubo, Fujiwara, and others" },
+    { label: "Head Instructor", value: "Headquarters-run" }
+  ], "image": {
+    src: "/assets/images/dojo/img_atsubetsu_bld.jpg",
+    alt: "Exterior of Hondori Seishinkan",
+    width: 299,
+    height: 154
+  }, "address": "Training Location: 4-4-10-1 Atsubetsu Nishi, Atsubetsu-ku, Sapporo – Atsubetsu Nishi Community Center, 2F Meeting Room", "mapQuery": "43.052996,141.465722", "viewOnMapLabel": "View on Google Maps" })}
+
+    <p class="detail-page__note">
+      ※ In some classes, preschool children are asked to participate together with a parent.<br>
+      ※ Dan-ranked members of the adult class may participate occasionally.
+    </p>
+
+    <p class="detail-page__note">
+      When the Atsubetsu Nishi Community Center is unavailable, training may be held at
+      Daima Seishinkan or the 2nd floor of Kawashimo Coop (Circle Room).
+    </p>
+
+        <h2 class="detail-page__heading">Training Sessions</h2>
+
+    <div class="detail-gallery">
+      <figure>
+        <img src="/assets/images/dojo/img_atsubetsu_1.jpg" alt="Friday class training session at Atsubetsu Kita Branch" width="234" height="144" loading="lazy">
+        <figcaption>Friday Class</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/assets/images/dojo/img_atsubetsu_2.jpg" alt="Sunday class training session at Atsubetsu Branch" width="234" height="144" loading="lazy">
+        <figcaption>Sunday Class</figcaption>
+      </figure>
+    </div>
+
+    <p class="detail-page__back">
+      <a href="/en/dojo/atsubetsu/">← Back to the Atsubetsu Ward Karate Dojo & Classes</a>
+    </p>
+
+    ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Atsubetsu Branch", "subject": "Atsubetsu Branch Trial & Enrollment Inquiry" })}
+  </div>
+</section>` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/atsubetsu/atsubetsu/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/atsubetsu/atsubetsu/index.astro";
+const $$url = "/en/dojo/atsubetsu/atsubetsu";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

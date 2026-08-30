@@ -1,0 +1,210 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from './prerender.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const snsLinks = [
+    {
+      id: "members",
+      name: "会員ブログ・Facebook",
+      description: "支部・会員が運営するブログ、Facebookページの一覧です。",
+      href: "/news/blogs/",
+      target: ""
+    },
+    {
+      id: "facebook",
+      name: "Facebook グループ",
+      description: "清心会空手道場の公式Facebookグループ。日々の活動の様子をお届けします。",
+      href: "https://www.facebook.com/seishinkai.karate.dojo",
+      target: "_blank"
+    },
+    {
+      id: "x",
+      name: "X (Twitter)",
+      description: "清心会公式アカウント。最新のお知らせを発信しています。",
+      href: "https://twitter.com/Seishinkai2",
+      target: "_blank"
+    },
+    {
+      id: "tiktok",
+      name: "TikTok",
+      description: "演武や稽古風景、大会の様子などを動画で紹介しています。",
+      href: "https://www.tiktok.com/@seishinryu.karate",
+      target: "_blank"
+    },
+    {
+      id: "youtube",
+      name: "YouTube チャンネル",
+      description: "演武・稽古・メディア出演などの動画を公開しています。",
+      href: "https://www.youtube.com/channel/UClIx3Srenlu1ddf5coow83A/playlists",
+      target: "_blank"
+    },
+    {
+      id: "blog",
+      name: "公式ブログ",
+      description: "稽古や行事の様子を綴る清心会道場の公式ブログです。",
+      href: "https://seishinkan-dojo.hateblo.jp/",
+      target: "_blank"
+    },
+    {
+      id: "events-blog",
+      name: "行事ブログ",
+      description: "大会や審査会、合宿などの行事の様子を掲載しています。",
+      href: "https://seishinryu.hatenablog.com/",
+      target: "_blank"
+    },
+    {
+      id: "news-blog",
+      name: "ニュースブログ",
+      description: "清心会からのお知らせや最新情報を掲載しています。",
+      href: "https://seishinkan-news.hatenablog.com/",
+      target: "_blank"
+    },
+    {
+      id: "okubo-blog",
+      name: "大久保道場ブログ",
+      description: "大久保道場の活動や稽古の様子などを紹介しています。",
+      href: "https://okubo-dojo.hatenablog.com/",
+      target: "_blank"
+    },
+    {
+      id: "bbs",
+      name: "掲示板・連絡事項",
+      description: "休講情報や連絡事項を掲載しています。悪天候時などはこちらをご確認ください。",
+      href: "https://seishinkan-dojo.bbs.fc2.com/",
+      target: "_blank"
+    },
+    {
+      id: "events",
+      name: "清心会空手行事予定",
+      description: "大会・審査会・合宿など、年間の行事予定を掲載しています。",
+      href: "/news/archive/",
+      target: ""
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "ニュース・SNS", "description": "清心会空手の最新ニュースとSNS・動画のご紹介。活動の様子やお知らせをご覧いただけます。", "lang": "ja", "path": "/news/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="news">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">NEWS</span>
+        <h1 class="section-title">ニュース・SNS</h1>
+      </div>
+      <p class="page-intro">
+        清心会の最新情報は、SNS・ブログ・掲示板で随時発信しています。行事予定や稽古の様子、休講のお知らせなどは下記の各メディアからご覧ください。
+      </p>
+
+      <div class="news__grid">
+        ${snsLinks.map((sns) => renderTemplate`<a class="news__card fade-up-in"${addAttribute(sns.href, "href")}${addAttribute(sns.target, "target")} rel="noopener">
+              <span${addAttribute(`news__icon news__icon--${sns.id}`, "class")} aria-hidden="true">
+                ${sns.id === "members" && renderTemplate`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>`}
+                ${sns.id === "facebook" && renderTemplate`<svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"></path>
+                  </svg>`}
+                ${sns.id === "x" && renderTemplate`<svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.8 4h2.7l-6 6.8L21.5 20h-5.5l-4.3-5.6L6.7 20H4l6.4-7.3L3.7 4h5.7l3.9 5.1L17.8 4zm-1 14.4h1.5L8.6 5.5H7L16.8 18.4z"></path>
+                  </svg>`}
+                ${sns.id === "tiktok" && renderTemplate`<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-1.81V15.5a5.5 5.5 0 1 1-5.5-5.5c.43 0 .86.05 1.27.15v2.79a2.74 2.74 0 1 0 1.48 2.56V2h2.75a4.82 4.82 0 0 0 3.77 4.69v2z"></path>
+                  </svg>`}
+                ${sns.id === "youtube" && renderTemplate`<svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"></path>
+                  </svg>`}
+                ${sns.id === "blog" && renderTemplate`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20h9"></path>
+                    <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                  </svg>`}
+                ${sns.id === "events-blog" && renderTemplate`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>`}
+                ${sns.id === "news-blog" && renderTemplate`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19h16"></path>
+                    <path d="M5 5h10v12H5z"></path>
+                    <path d="M17 7h2v10a2 2 0 0 1-2 2"></path>
+                    <line x1="7" y1="8" x2="13" y2="8"></line>
+                    <line x1="7" y1="11" x2="13" y2="11"></line>
+                    <line x1="7" y1="14" x2="11" y2="14"></line>
+                  </svg>`}
+                ${sns.id === "okubo-blog" && renderTemplate`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"></path>
+                    <path d="M4 20a8 8 0 0 1 16 0"></path>
+                  </svg>`}
+                ${sns.id === "bbs" && renderTemplate`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>`}
+                ${sns.id === "events" && renderTemplate`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>`}
+              </span>
+              <span class="news__card-body">
+                <span class="news__card-name">${sns.name}</span>
+                <span class="news__card-desc">${sns.description}</span>
+              </span>
+              <span class="news__card-arrow" aria-hidden="true">→</span>
+            </a>`)}
+      </div>
+
+      <p class="news__note">※各リンクは外部サイトが開きます。</p>
+
+      <h2 class="detail-page__heading">ニュースレター</h2>
+      <!-- <div class="newsletter-list" data-show-more data-batch-size="3">
+        <ul class="newsletter-list__items">
+          {
+            newsletters.map((n, i) => (
+              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
+                <a href={n.href} target="_blank" rel="noopener">
+                  {n.title}（PDF）
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          newsletters.length > 3 && (
+            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
+              もっと見る
+            </button>
+          )
+        }
+      </div> -->
+
+      <p>PDF会報をご希望の会員の方は、本部事務局までお問い合わせください。</p>
+
+      <p>
+        <a href="mailto:Karate@seishinkan.ne.jp">Karate@seishinkan.ne.jp</a>
+      </p>
+
+      <p>
+        お問い合わせの際は、所属支部・会員番号・会員氏名をご記載ください。
+      </p>
+
+      <p>確認後、PDF会報をメール添付にてお送りします。</p>
+
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/news/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/news/index.astro";
+const $$url = "/news";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

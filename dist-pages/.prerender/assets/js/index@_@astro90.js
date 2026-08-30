@@ -1,0 +1,78 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "月寒支部",
+      address: "月寒西1条6丁目3-21 月寒児童会館",
+      schedule: ["土曜18:25"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "豊平区月寒支部の空手教室", "description": "札幌市豊平区月寒の清心会空手道場・教室のご案内。清心会でも古参の支部教室のひとつ、稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/tsukisam-n/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・月寒支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">豊平区月寒空手教室・清心会月寒支部</h2>
+
+      <p class="detail-page__lead">
+        月寒西空手教室は、月寒児童会館をお借りして平成22年3月より活動をしていますが、母体となる最初の月寒支部教室は月寒五区会館で1993年より開始した、清心会でも古い支部教室のひとつです。<br>
+        設立以来、ジュニア空手として開始し、園児から中学生を中心としています。<br>
+        また親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "月寒支部", "facts": [
+    { label: "創設", value: "平成5年(1993年)" },
+    { label: "設立", value: "平成22年(2010)3月" },
+    { label: "設立者", value: "大久保勝美" },
+    { label: "歴代", value: "青木、大久保 翼、滝上、山根、増田" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/tsukisam-n/2.jpg",
+    alt: "月寒児童会館",
+    width: 226,
+    height: 162
+  }, "address": "札幌市豊平区月寒西1条6丁目3-21　月寒児童会館", "mapHref": "https://www.google.com/maps/place/月寒児童会館/@43.031183,141.3936968,15z/data=!4m2!3m1!1s0x0:0xc25e49e9c2bfeaaf", "mapQuery": "43.031183,141.3936968", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/tsukisam-n/acs1.jpg" alt="月寒支部の稽古風景" width="315" height="141" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/toyohira/">← 豊平区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "月寒支部", "subject": "月寒 体験・入会問い合わせ" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/tsukisam-n/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/tsukisam-n/index.astro";
+const $$url = "/dojo/tsukisam-n";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
