@@ -5,3 +5,8 @@ node_modules/
 npm-debug.log*
 .vscode/
 .idea/
+
+# Real newsletter Basic Auth credentials — generate locally and upload to
+# the server directly, never via git (this repo is public). See
+# public/news/newsletter/.htpasswd.example.
+public/news/newsletter/.htpasswd

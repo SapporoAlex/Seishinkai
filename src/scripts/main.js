@@ -6,6 +6,7 @@ import { initModal } from "./modules/modal.js";
 import { initContentSliders } from "./modules/contentSlider.js";
 import { initShowMoreLists } from "./modules/showMoreList.js";
 import { initImageLightbox } from "./modules/imageLightbox.js";
+import { initNewsletterGate } from "./modules/newsletterGate.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initHamburger();
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContentSliders();
   initShowMoreLists();
   initImageLightbox();
+  initNewsletterGate();
 
   const animatedElements = document.querySelectorAll(
     ".fade-in, .fade-up-in, .fade-left-in, .fade-right-in, " +

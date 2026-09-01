@@ -1,7 +1,106 @@
 @use "../abstracts/_mixins.scss" as *;
 @use "../abstracts/_variables.scss" as *;
 
+.newsletter-gate {
+  margin: 0 0 40px;
+
+  &__prompt.is-hidden {
+    display: none;
+  }
+
+  &__open {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    border: 1px solid var(--navy);
+    border-radius: 999px;
+    background: var(--navy);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition:
+      background var(--hover-time),
+      color var(--hover-time);
+
+    &:hover {
+      background: var(--red);
+      border-color: var(--red);
+    }
+  }
+
+  &__form {
+    margin-top: 16px;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--text-mid);
+  }
+
+  &__row {
+    display: flex;
+    gap: 8px;
+
+    @include mqsp {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.95rem;
+
+    &:focus {
+      outline: none;
+      border-color: var(--navy);
+    }
+  }
+
+  &__submit {
+    padding: 10px 24px;
+    border: 1px solid var(--navy);
+    border-radius: 4px;
+    background: var(--navy);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition:
+      background var(--hover-time),
+      color var(--hover-time);
+
+    &:hover {
+      background: var(--red);
+      border-color: var(--red);
+    }
+  }
+
+  &__error {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--red);
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+}
+
 .newsletter-list {
+  &.is-hidden {
+    display: none;
+  }
+
   margin: 0 0 40px;
 
   &__items {

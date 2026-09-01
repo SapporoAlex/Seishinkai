@@ -1,15 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-// Placeholder entries — replace href with the real PDF path once supplied,
-// e.g. /assets/pdf/newsletter/newsletter-12.pdf
-const newsletters = [
-  { title: "会報 第516号（2026年7月）", href: "/assets/pdf/newsletter/会報516-2026.7.1.pdf" },
-  { title: "会報 第515号（2026年6月）", href: "/assets/pdf/newsletter/会報515-2026.6.1.pdf" },
-  { title: "会報 第514号（2026年5月）", href: "/assets/pdf/newsletter/会報514-2026.5.1.pdf" },
-  { title: "会報 第513号（2026年4月）", href: "/assets/pdf/newsletter/会報513-2026.4.1s.pdf" },
-];
-
 const snsLinks = [
   {
     id: "members",
@@ -197,26 +188,15 @@ const snsLinks = [
       <p class="news__note">※各リンクは外部サイトが開きます。</p>
 
       <h2 class="detail-page__heading">ニュースレター</h2>
-      <!-- <div class="newsletter-list" data-show-more data-batch-size="3">
-        <ul class="newsletter-list__items">
-          {
-            newsletters.map((n, i) => (
-              <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
-                <a href={n.href} target="_blank" rel="noopener">
-                  {n.title}（PDF）
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-        {
-          newsletters.length > 3 && (
-            <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
-              もっと見る
-            </button>
-          )
-        }
-      </div> -->
+
+      <p>
+        <a class="newsletter-list__show-more" href="/news/newsletter/">
+          会報一覧を見る（会員限定・要パスワード）
+        </a>
+      </p>
+      <p class="news__note">
+        ※クリックするとパスワードの入力を求められます。パスワードをお持ちでない方は下記までお問い合わせください。
+      </p>
 
       <p>PDF会報をご希望の会員の方は、本部事務局までお問い合わせください。</p>
 

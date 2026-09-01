@@ -1,0 +1,86 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+// PDFs live alongside this page (public/news/newsletter/). This list is
+// only soft-gated client-side (see data-newsletter-gate below) — the PDF
+// files themselves are not access-controlled, just unlinked from the rest
+// of the site. Add new issues here AND drop the file in that same folder.
+const NEWSLETTER_PASSWORD = "test123";
+
+const newsletters = [
+  { title: "会報 第517号（2026年8月）", href: "/news/newsletter/会報517-2026.8.1s.pdf" },
+  { title: "会報 第516号（2026年7月）", href: "/news/newsletter/会報516-2026.7.1.pdf" },
+  { title: "会報 第515号（2026年6月）", href: "/news/newsletter/会報515-2026.6.1.pdf" },
+  { title: "会報 第514号（2026年5月）", href: "/news/newsletter/会報514-2026.5.1.pdf" },
+  { title: "会報 第513号（2026年4月）", href: "/news/newsletter/会報513-2026.4.1s.pdf" },
+];
+---
+
+<BaseLayout
+  title="会報一覧"
+  description="清心会空手道 会員限定のPDF会報一覧です。"
+  lang="ja"
+  path="/news/newsletter/"
+  breadcrumb={[{ path: "/news/", name: "ニュース・SNS" }]}
+>
+  <section class="news">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">NEWSLETTER</span>
+        <h1 class="section-title">会報一覧</h1>
+      </div>
+      <p class="page-intro">
+        会員限定のPDF会報です。合言葉を入力すると一覧が表示されます。
+      </p>
+
+      <div class="newsletter-gate" data-newsletter-gate data-newsletter-gate-password={NEWSLETTER_PASSWORD}>
+        <div class="newsletter-gate__prompt" data-newsletter-gate-prompt>
+          <button type="button" class="newsletter-gate__open" data-newsletter-gate-open>
+            会報を表示する
+          </button>
+          <form class="newsletter-gate__form is-hidden" data-newsletter-gate-form>
+            <label class="newsletter-gate__label" for="newsletter-gate-password">合言葉を入力してください</label>
+            <div class="newsletter-gate__row">
+              <input
+                type="password"
+                id="newsletter-gate-password"
+                class="newsletter-gate__input"
+                data-newsletter-gate-input
+                autocomplete="off"
+              />
+              <button type="submit" class="newsletter-gate__submit">表示</button>
+            </div>
+            <p class="newsletter-gate__error is-hidden" data-newsletter-gate-error>
+              合言葉が違います。もう一度お試しください。
+            </p>
+          </form>
+        </div>
+
+        <div class="newsletter-list is-hidden" data-newsletter-gate-content data-show-more data-batch-size="3">
+          <ul class="newsletter-list__items">
+            {
+              newsletters.map((n, i) => (
+                <li class:list={["newsletter-list__item", { "is-hidden": i >= 3 }]} data-show-more-item>
+                  <a href={n.href} target="_blank" rel="noopener">
+                    {n.title}（PDF）
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          {
+            newsletters.length > 3 && (
+              <button type="button" class="newsletter-list__show-more" data-show-more-trigger>
+                もっと見る
+              </button>
+            )
+          }
+        </div>
+      </div>
+
+      <p class="news__note">
+        <a href="/news/">← ニュース・SNS一覧に戻る</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
