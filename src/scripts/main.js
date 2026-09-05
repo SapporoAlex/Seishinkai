@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const animatedElements = document.querySelectorAll(
     ".fade-in, .fade-up-in, .fade-left-in, .fade-right-in, " +
-      ".detail-gallery figure, .detail-gallery--wide figure, .detail-gallery--tall figure, .detail-img-pair figure, .detail-media img, .detail-media--big figure, .detail-media--med figure, .youtube-card, .photo-grid figure, " +
+      ".detail-gallery figure, .detail-gallery--wide figure, .detail-gallery--tall figure, .detail-img-pair figure, .detail-media img, .detail-media--big figure, .detail-media--bigger figure, .detail-media--med figure, .youtube-card, .photo-grid figure, " +
       ".about__timeline-figure a",
   );
 
