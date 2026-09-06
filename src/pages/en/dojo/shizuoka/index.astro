@@ -1,78 +1,110 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+
 import BranchTable from "@components/BranchTable.astro";
+
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+
 import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
     marker: "#",
-    name: "Sansenji Karate Dojo (Seishinkai Shizuoka Branch)",
+    name: "Misawaji Temple Karate Dojo (Seishinkai Shizuoka Branch)",
     sub: "Hokureikai",
-    address: "332 Oshikakubo, Fujinomiya City, Shizuoka Prefecture, Sansenji Temple",
-    schedule: ["Wednesday - evening"],
+    address: "332 Oshikakubo, Fujinomiya City, Shizuoka Prefecture — Misawaji Temple",
+    schedule: ["Wednesday evenings"],
   },
 ];
 ---
 
 <BaseLayout
-  title="Karate Classes at the Shizuoka Branch (Sansenji Dojo)"
-  description="Introducing the Seishinkai Shizuoka Branch, based at Sansenji Temple in Fujinomiya City, Shizuoka Prefecture. History, training days, and access for the Hokureikai Sansenji Karate Dojo."
+  title="Shizuoka Prefecture Branch Karate Classes (Misawaji Temple Dojo)"
+  description="Information about the Seishinkai Shizuoka Prefecture Branch, based at Misawaji Temple in Fujinomiya City, Shizuoka Prefecture. Learn about the history of Hokureikai and Misawaji Temple Karate Dojo, training days, and access."
   lang="en"
-  path="/en/dojo/shizuoka/"
+  path="/dojo/shizuoka/"
 >
   <section class="dojo-list">
     <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">DOJO</span>
-        <h1 class="section-title">Seishinkai Karate Federation - Shizuoka Branch</h1>
+        <h1 class="section-title">
+          Seishinkai Karate Federation — Shizuoka Prefecture Branch
+        </h1>
       </div>
 
-      <h2 class="detail-page__heading">Hokureikai - Sansenji Karate Dojo - Seishinkai Shizuoka Branch</h2>
+      <h2 class="detail-page__heading">
+        Hokureikai · Misawaji Temple Karate Dojo · Seishinkai Shizuoka Branch
+      </h2>
 
       <p class="detail-page__lead">
-        The Sansenji Dojo traces back to Hisanobu Inuura (Hokugo Branch Chief, now head priest of Sansenji Temple), who trained at Seishinkai Headquarters and founded the Minobusan University Karate Club in Yamanashi Prefecture in 2001 (Heisei 13).<br />
-        The Sansenji Dojo itself started at Sansenji Temple in Shizuoka Prefecture in June 2005 (Heisei 17).<br />
-        Members range widely from children to seniors.
+        Misawaji Temple Dojo was established by Jushin Inuura, who trained at the Seishinkai Headquarters Dojo and founded the Minobusan University Karate Club in Yamanashi Prefecture in 2001.<br />
+        In June 2005, he established Misawaji Temple Dojo at Misawaji Temple in Shizuoka Prefecture.<br />
+        Participants range from children to seniors.
       </p>
 
-      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+      <BranchTable entries={entries} />
 
       <BranchInfoCard
-        name="Shizuoka Branch"
+        name="Shizuoka Prefecture Branch"
         facts={[
-          { label: "Founded", value: ["October 2001 (Heisei 13) - Yamanashi Branch", "June 2005 (Heisei 17) - Shizuoka Branch"] },
-          { label: "Founder", value: "Hisanobu Inuura" },
+          {
+            label: "Established",
+            value: [
+              "October 2001 — Yamanashi Branch",
+              "June 2005 — Shizuoka Branch",
+            ],
+          },
+          { label: "Founder", value: "Jushin Inuura" },
         ]}
         image={{
-          src: "/assets/images/legacy/dojo/shizuoka/2.jpg",
-          alt: "Sansenji Dojo",
+          src: "/assets/images/dojo/img_shizuoka_bld.jpg",
+          alt: "Misawaji Temple Dojo",
           width: 258,
           height: 175,
         }}
-        address="332 Oshikakubo, Fujinomiya City, Shizuoka Prefecture, Sansenji Temple"
-        addressNote="The dojo is located on the temple grounds"
+        address="332 Oshikakubo, Fujinomiya City, Shizuoka Prefecture — Misawaji Temple"
+        addressNote="The dojo is located within the temple grounds."
         mapHref="https://www.google.com/maps/place/〒419-0303+静岡県富士宮市大鹿窪３３２/@35.2507663,138.5611994,17z/data=!3m1!4b1!4m5!3m4!1s0x601bd01f37b31da9:0xc2111aeb55d23bb5!8m2!3d35.2507663!4d138.5633881"
         mapQuery="35.2507663,138.5611994"
+        viewOnMapLabel="View on Google Maps"
       />
 
       <div class="detail-gallery">
         <figure>
-          <a href="https://www.facebook.com/jushin.inuura.3" target="_blank" rel="noopener">
-            <img
-              src="/assets/images/legacy/images/inu.jpg"
-              alt="Founder Hisanobu Inuura"
-              width="109"
-              height="109"
-              loading="lazy"
-            />
-          </a>
-          <figcaption>Founder Hisanobu Inuura</figcaption>
+          <img
+            src="/assets/images/dojo/img_shizuoka_01.jpg"
+            alt="Karate training at Misawaji Temple Dojo"
+            width="336"
+            height="167"
+            loading="lazy"
+          />
         </figure>
+
         <figure>
           <img
-            src="/assets/images/legacy/dojo/shizuoka/Image1.jpg"
-            alt="Sansenji Dojo practice session"
+            src="/assets/images/dojo/img_shizuoka_02.jpg"
+            alt="Karate training at Misawaji Temple Dojo"
+            width="336"
+            height="167"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_shizuoka_03.jpg"
+            alt="Karate training at Misawaji Temple Dojo"
+            width="336"
+            height="167"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_shizuoka_04.jpg"
+            alt="Karate training at Misawaji Temple Dojo"
             width="336"
             height="167"
             loading="lazy"
@@ -80,43 +112,53 @@ const entries = [
         </figure>
       </div>
 
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--full">
         <figure>
-          <a href="https://www.santakuji.com/" target="_blank" rel="noopener">
+          <a
+            href="https://www.facebook.com/jushin.inuura.3"
+            target="_blank"
+            rel="noopener"
+          >
             <img
-              src="/assets/images/legacy/dojo/shizuoka/DSC_4851.jpg"
-              alt="Sansenji Temple"
-              width="314"
-              height="209"
+              src="/assets/images/legacy/images/inu.jpg"
+              alt="Founder Jushin Inuura"
+              width="109"
+              height="109"
               loading="lazy"
             />
           </a>
-          <figcaption>A temple with over 700 years of tradition, founded in the Kamakura period</figcaption>
+          <figcaption>Founder — Jushin Inuura</figcaption>
         </figure>
+
         <figure>
           <img
-            src="/assets/images/legacy/dojo/shizuoka/DSC_4900.jpg"
-            alt="Dedicated dojo on the temple grounds"
-            width="311"
-            height="204"
+            src="/assets/images/legacy/dojo/shizuoka/DSC_4851.jpg"
+            alt="Misawaji Temple"
+            width="314"
+            height="409"
             loading="lazy"
+            class="u-h-full"
           />
-          <figcaption>Dedicated dojo on the temple grounds</figcaption>
+          <figcaption>
+            A historic temple with over 700 years of tradition, founded during the Kamakura period
+          </figcaption>
         </figure>
       </div>
 
       <p class="detail-page__back">
-        <a href="/en/dojo/naichi/">← Back to the Shizuoka, Aichi & Chiba Dojo List</a>
+        <a href="/dojo/naichi/">
+          ← Back to the list of karate dojos in Shizuoka, Aichi, and Chiba
+        </a>
       </p>
 
       <DojoContactSection
         lang="en"
-        dojoName="Shizuoka Branch"
-        subject="Shizuoka Branch Trial & Enrollment Inquiry"
+        dojoName="Shizuoka Prefecture Branch"
+        subject="Shizuoka Branch Trial Lesson & Membership Inquiry"
         directPhone={{
           number: "01544-29-3500",
           tel: "01544293500",
-          note: "TEL/FAX. We may be at work during the day — Wednesday evenings only.",
+          note: "TEL/FAX. We may be unable to answer calls during the day. Available Wednesday evenings only.",
         }}
       />
     </div>

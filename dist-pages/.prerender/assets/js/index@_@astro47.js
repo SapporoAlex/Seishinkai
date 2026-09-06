@@ -1,0 +1,84 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "ARCS北空手クラブ",
+      address: "北区北24条西9丁目1-1 アークス北24条店2F",
+      schedule: ["木曜クラス16:00-17:00", "土曜クラス15:30-17:00"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "札幌市北区ARCS北支部の空手教室", "description": "札幌市北区、アークス北24条店2Fの清心会空手道場・ARCS北空手クラブのご案内。木曜・土曜稽古を行うキッズ・ジュニア空手クラブです。", "lang": "ja", "path": "/dojo/kita/kita/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・札幌北・ARCS北支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">アークス北空手教室・清心会ARCS北支部(札幌北)</h2>
+
+      <p class="detail-page__lead">
+        ARCS北空手教室は、平成22年4月に、アークス北24条店のコミニティスペースをお借りしてスタートした支部です。<br>
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br>
+        平成25年5月には土曜クラスを追加しました。<br>
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br>
+        アークスの中にありますのでお子様が稽古中にお買い物などもできて便利な立地にあります。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心会札幌北・ARCS北支部", "facts": [
+    { label: "設立", value: "平成22年(2010)4月" },
+    { label: "設立者", value: "三村佳代子" },
+    { label: "歴代", value: "ハシニ、ダニエラ、島、沖村" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/kita/2.jpg",
+    alt: "アークス北24条店2F",
+    width: 286,
+    height: 178
+  }, "address": "札幌市北区北24条西9丁目1-1　アークス北24条店2F", "mapHref": "https://www.google.com/maps/search/?api=1&query=札幌市北区北24条西9丁目1-1+アークス北24条店", "mapQuery": "札幌市北区北24条西9丁目1-1 アークス北24条店", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/kita/Image1.jpg" alt="木曜クラスの稽古風景" width="374" height="203" loading="lazy">
+          <figcaption>木曜クラス</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/legacy/dojo/kita/Image2.jpg" alt="土曜クラスの稽古風景" width="341" height="174" loading="lazy">
+          <figcaption>土曜クラス</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "札幌北・ARCS北支部", "subject": "北 体験・入会問い合わせ" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/kita/kita/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/kita/kita/index.astro";
+const $$url = "/dojo/kita/kita";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

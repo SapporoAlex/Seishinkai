@@ -1,62 +1,115 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+
 import BranchTable from "@components/BranchTable.astro";
+
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+
 import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
     marker: "★",
     name: "Toyohira Branch",
-    address: "6-7-1-12 Toyohira 6-jo, Toyohira Children's Hall",
-    schedule: ["Saturday 18:20"],
+    address: "1-12-7 Toyohira 6-jo, Toyohira Ward, Sapporo — Toyohira Children's Hall",
+    schedule: ["Saturdays 18:20"],
   },
 ];
 ---
 
 <BaseLayout
-  title="Karate Classes at the Toyohira Branch, Toyohira Ward"
-  description="Introducing the Seishinkai Karate dojo and class in Toyohira, Toyohira Ward, Sapporo. A headquarters-run class — see training days and venue information."
+  title="Toyohira Ward Karate Class"
+  description="Information about the Seishinkai Karate Dojo and class in Toyohira, Toyohira Ward, Sapporo. This class is directly managed by Seishinkai Headquarters. Learn about the training day and venue."
   lang="en"
-  path="/en/dojo/toyohira/toyohira/"
+  path="/dojo/toyohira/toyohira/"
 >
   <section class="dojo-list">
     <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">DOJO</span>
-        <h1 class="section-title">Seishinkai Karate Federation - Toyohira Branch</h1>
+        <h1 class="section-title">Seishinkai Karate Federation — Toyohira Branch</h1>
       </div>
 
-      <h2 class="detail-page__heading">Toyohira Ward Toyohira Karate Class - Seishinkai Toyohira Branch</h2>
+      <h2 class="detail-page__heading">
+        Toyohira Ward Karate Class · Seishinkai Toyohira Branch
+      </h2>
 
       <p class="detail-page__lead">
-        The Toyohira Branch is a headquarters-run class held at the Toyohira Children's Hall.<br />
-        Instructors from the adult general division take turns leading the class.
+        The Toyohira Branch is a class directly managed by Seishinkai Headquarters and operates at the Toyohira Children's Hall.<br />
+        Instructors who are members of the adult division take turns participating and providing instruction.
       </p>
 
-      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+      <BranchTable entries={entries} />
 
       <BranchInfoCard
         name="Seishinkai Toyohira Branch"
         facts={[
-          { label: "Founded", value: "June 2011 (Heisei 23)" },
-          { label: "Past instructors", value: "Koyano, Takashima, Masuda" },
-          { label: "Instructor", value: "Directly overseen by Headquarters" },
-          { label: "Note", value: "Instructors from the adult general division take turns leading the class" },
+          { label: "Established", value: "June 2011" },
+          { label: "Former Instructors", value: "Koyano, Takashima, Masuda" },
+          { label: "Management", value: "Directly managed by Headquarters" },
+          {
+            label: "Notes",
+            value: "Instructors who are members of the adult division take turns participating.",
+          },
         ]}
         image={{
-          src: "/assets/images/dojo/img_toyohira_1.jpg",
+          src: "/assets/images/dojo/img_toyohira_bld.jpg",
           alt: "Toyohira Children's Hall",
           width: 290,
           height: 206,
         }}
-        address="6-7-1-12 Toyohira 6-jo, Toyohira-ku, Sapporo, Toyohira Children's Hall"
+        address="1-12-7 Toyohira 6-jo, Toyohira Ward, Sapporo — Toyohira Children's Hall"
         mapHref="https://www.google.com/maps/search/?api=1&query=札幌市豊平区豊平6条7丁目1-12+豊平児童会館"
         mapQuery="札幌市豊平区豊平6条7丁目1-12 豊平児童会館"
+        viewOnMapLabel="View on Google Maps"
       />
 
+      <div class="detail-gallery">
+        <figure>
+          <img
+            src="/assets/images/dojo/img_toyohira_01.jpg"
+            alt="Karate training at the Toyohira Branch"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_toyohira_02.jpg"
+            alt="Karate training at the Toyohira Branch"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_toyohira_03.jpg"
+            alt="Karate training at the Toyohira Branch"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_toyohira_04.jpg"
+            alt="Karate training at the Toyohira Branch"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+
       <p class="detail-page__back">
-        <a href="/en/dojo/toyohira/">← Back to the Toyohira Ward dojo & class list</a>
+        <a href="/dojo/toyohira/">
+          ← Back to the list of karate dojos and classes in Toyohira Ward
+        </a>
       </p>
 
       <DojoContactSection

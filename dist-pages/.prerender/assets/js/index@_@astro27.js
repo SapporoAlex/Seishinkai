@@ -1,0 +1,73 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "石狩花川北空手クラブ",
+      address: "※R4.11より緑苑台支部と統合となります",
+      schedule: []
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "石狩市花川北空手教室(統合済)", "description": "石狩市花川北の清心会空手教室の沿革。令和4年11月に緑苑台支部（石狩緑苑台空手クラブ）へ統合されました。", "lang": "ja", "path": "/dojo/hana-k/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・花川支部(花川北)</h1>
+      </div>
+
+      <h2 class="detail-page__heading">石狩市花川空手教室・清心会花川支部</h2>
+
+      <p class="detail-page__lead">
+        花川北空手教室は、平成23年11月に、花川北コミュニティセンターを会場にして設立されました。<br>
+        ジュニアクラス中心の空手クラブです。<br>
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br>
+        令和4年11月より緑苑台支部と統合になります。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "花川北支部(沿革)", "facts": [
+    { label: "設立", value: "平成23年(2011)11月" },
+    { label: "担当者", value: "本部直轄" },
+    { label: "統合", value: "令和4年(2022)11月、緑苑台支部(石狩緑苑台空手クラブ)へ統合" }
+  ], "address": "石狩市花川北3-2 花川北コミュニティセンター", "mapHref": "https://www.google.com/maps/place/石狩市立花川北コミュニティセンター/@43.1645776,141.3090072,15z/data=!4m2!3m1!1s0x0:0x85c55b058693cc05?sa=X&ved=2ahUKEwiF6uat0a7hAhVGjLwKHWchCFcQ_BIwCnoECA8QCA", "mapQuery": "43.1645776,141.3090072", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/hana-k/Image1.jpg" alt="花川北支部の稽古風景(統合前)" width="236" height="105" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※令和4年(2022)11月より、稽古会場・時間は<a href="/dojo/ryoku/">石狩緑苑台空手クラブ(花川東・緑苑台支部)</a>に統合されました。稽古日は土曜15:30〜、会場は緑苑台グリーン会館です。
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/hana-k/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/hana-k/index.astro";
+const $$url = "/dojo/hana-k";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

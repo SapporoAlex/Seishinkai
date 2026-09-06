@@ -1,0 +1,107 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "Kawashimo Branch",
+      address: "Kawashimo 3-jo 4-chome 1-1, Shiroishi-ku, Sapporo, Coop Sapporo Kawashimo Store",
+      pdfText: "➜ Entrance Directions (PDF)",
+      pdf: "/assets/pdf/kawashimo.pdf",
+      schedule: ["Saturday 10:30"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes at the Kawashimo Branch, Shiroishi Ward", "description": "Information on the Seishinkai karate dojo/class at Kawashimo, Shiroishi Ward, Sapporo, held at the Coop Sapporo Kawashimo Store. A Junior and Parent-Child Karate class for ages from preschool through adult.", "lang": "en", "path": "/en/dojo/kawashimo/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Kawashimo Branch</h1>
+      </div>
+
+      <h2 class="detail-page__heading">Kawashimo Karate Class, Shiroishi Ward / Seishinkai Kawashimo Branch</h2>
+
+      <p class="detail-page__lead">
+        The Kawashimo Karate Class began activities in June 2011 (Heisei 23) at the Higashi-Kawashimo Community Hall.<br>
+        From February 2021 (Reiwa 3), the venue moved to the circle room at the Coop Sapporo Kawashimo Store.<br>
+        Since its founding, it has run as a Junior Karate / Parent-Child Karate class, and is active with a wide range of members from preschoolers to adults.<br>
+        We especially welcome parent-child participants.<br>
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries, "headers": ["Dojo / Branch", "Address / Venue", "Training Days"] })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Seishinkai Kawashimo Branch / Kawashimo Karate Club", "facts": [
+    { label: "Founded", value: "June 2011 (Heisei 23)" },
+    { label: "Founder", value: "Takushi Muroki" },
+    { label: "Instructor", value: "Headquarters-run" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/kawashimo/img3.jpg",
+    alt: "Coop Sapporo Kawashimo Store (facing Kita-13-jo-dori)",
+    width: 253,
+    height: 143
+  }, "address": "1-1 Kawashimo 3-jo 4-chome, Shiroishi-ku, Sapporo, Coop Sapporo Kawashimo Store 2F Circle Room", "addressNote": "The entrance is on the side of the building. If you're not sure, please ask at the service counter inside the Coop store for directions to the circle room.", "mapHref": "https://www.google.com/maps/place/コープさっぽろ+川下店/@43.0492478,141.4447141,15z/data=!4m5!3m4!1s0x0:0x1c36db1f9721dd41!8m2!3d43.0492478!4d141.4447141", "mapQuery": "43.0492478,141.4447141" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_kawashimo_01.jpg" alt="Kawashimo Branch practice session" width="270" height="115" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_kawashimo_02.jpg" alt="Kawashimo Branch practice session" width="270" height="115" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_kawashimo_03.jpg" alt="Kawashimo Branch practice session" width="270" height="115" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_kawashimo_04.jpg" alt="Kawashimo Branch practice session" width="270" height="115" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="detail-gallery">
+        <figure>
+          <a href="/assets/pdf/kawashimo.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/dojo/img_kawashimo_bld.jpg" alt="Coop Sapporo Kawashimo Store (facing Kita-13-jo-dori)" width="253" height="143" loading="lazy">
+          </a>
+          <figcaption>Facing Kita-13-jo-dori</figcaption>
+        </figure>
+        <figure>
+          <a href="/assets/pdf/kawashimo.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/dojo/img_kawashimo-entry_02.jpg" alt="The side loading-dock entrance" width="254" height="147" loading="lazy">
+          </a>
+          <figcaption>Next to the side loading dock, the door at the far left (also accessible from inside the store)</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        (This was the venue until January 2021 (Reiwa 3))　<a href="https://www.google.com/maps/place/札幌市役所+都市局東川下集会所/@43.049026,141.4492294,16.5z/data=!4m5!3m4!1s0x0:0x8e098462b59e971e!8m2!3d43.049414!4d141.44758" target="_blank" rel="noopener">2-9 Kawashimo 3-jo 5-chome, Shiroishi-ku, Sapporo, Higashi-Kawashimo Community Hall</a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/shiroishi/">← Back to the list of dojos & classes in Shiroishi Ward</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Kawashimo Branch", "subject": "Kawashimo Trial Lesson Application" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/kawashimo/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/kawashimo/index.astro";
+const $$url = "/en/dojo/kawashimo";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

@@ -1,0 +1,85 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "浜頓別空手クラブ",
+      address: "浜頓別町旭町3丁目15番地 浜頓別小学校",
+      schedule: ["水曜18:30/金曜18:30"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "浜頓別町の空手教室", "description": "北海道枝幸郡浜頓別町の清心会空手道場・浜頓別支部のご案内。稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/hamaton/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・浜頓別支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">浜頓別町空手教室・清心会浜頓別支部</h2>
+
+      <p class="detail-page__lead">
+        令和5年7月より開始しました。浜頓別空手倶楽部は、清心会空手連盟の浜頓別支部としても活動しています。<br>
+        興味のある方は是非、ご連絡ください。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "道北地区・浜頓別支部", "facts": [
+    { label: "設立", value: "令和5年(2023)4月" },
+    { label: "設立者", value: "猪又(いのまた)　090-9759-3959まで" }
+  ], "image": {
+    src: "/assets/images/dojo/img_hamaton_bld.jpg",
+    alt: "浜頓別小学校体育館",
+    width: 340,
+    height: 169
+  }, "address": "浜頓別町旭町3丁目15番地　浜頓別小学校体育館", "mapHref": "https://www.google.com/maps/search/浜頓別小学校体育館/@45.1220392,142.3559264,14z/data=!3m1!4b1", "mapQuery": "45.1220392,142.3559264", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_hamaton_01.jpg" alt="浜頓別支部の稽古風景" width="332" height="206" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_hamaton_02.jpg" alt="浜頓別支部の稽古風景" width="602" height="312" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_hamaton_03.jpg" alt="浜頓別支部の稽古風景" width="332" height="206" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_hamaton_04.jpg" alt="浜頓別支部の稽古風景" width="602" height="312" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※一般部/水曜18:30・少年部/金曜18:30、会場は浜頓別小学校体育館です。
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/tobetsu/">← 一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "浜頓別支部", "subject": "浜頓別支部 体験・入会問い合わせ", "directPhone": { number: "090-9759-3959", tel: "09097593959", note: "猪又" } })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/hamaton/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/hamaton/index.astro";
+const $$url = "/dojo/hamaton";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

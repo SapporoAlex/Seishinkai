@@ -1,0 +1,105 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "新札幌支部",
+      address: "厚別区中央1条5丁目　厚別区民センター会議室",
+      schedule: ["月曜19:00(R7.7より)"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "新札幌支部の空手教室", "description": "札幌市厚別区の清心会空手道場・新札幌支部のご案内。月曜クラスの稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/n-sapporo/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・新札幌支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">厚別区新さっぽろ空手教室・清心会新札幌支部</h2>
+
+      <p class="detail-page__lead">
+        新札幌空手教室は、平成9年4月より厚別区民センターで活動を始めた清心会でも古くから活動しています。
+        設立以来、キッズ空手、ジュニア空手として開始し、園児から大人(親子)まで幅広く参加しています。
+        特に親子での参加を歓迎します。
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指
+        しています。
+      </p>
+
+        <div class="detail-page__highlight-box">
+          <p class="detail-page__highlight-text">★★</p>
+          <p class="detail-page__highlight-text">負けない心、くじけない心をつくる 清心会空手</p>
+          <p class="detail-page__highlight-text">★★</p>
+        </div>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "新札幌支部", "facts": [
+    { label: "設立", value: "平成9年(1997) 4月" },
+    { label: "設立者", value: "大久保翼" },
+    { label: "歴代", value: "大久保、阿部、他" },
+    { label: "師範", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_n-sapporo_bld.jpg",
+    alt: "厚別区民センター",
+    width: 290,
+    height: 206
+  }, "address": "厚別区中央1条5丁目　厚別区民センター会議室", "mapHref": "https://www.google.com/maps/place/札幌市+厚別区民センター/@43.036652,141.474159,15z/data=!4m2!3m1!1s0x0:0x2eeb48db85d54c24?sa=X&ved=2ahUKEwi-kKuTlaXhAhUOUN4KHZo-B5UQ_BIwCnoECA8QCA", "mapQuery": "43.036652,141.474159", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_n-sapporo_01.jpg" alt="新札幌支部の稽古風景" width="346" height="155" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_n-sapporo_02.jpg" alt="新札幌支部の稽古風景" width="346" height="155" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_n-sapporo_03.jpg" alt="新札幌支部の稽古風景" width="346" height="155" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_n-sapporo_04.jpg" alt="新札幌支部の稽古風景" width="346" height="155" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※園児は親子参加でお願いします。
+      </p>
+
+      <p class="detail-page__note">
+        ※不定期で一般部員有段者が参加します 
+      </p>
+
+      <p class="detail-page__note">
+        ※令和7年7月より練習日を月曜19:00-20:30に変更しました。
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/atsubetsu/">← 厚別区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "新札幌支部", "subject": "新札幌体験・入会問い合わせ" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/n-sapporo/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/n-sapporo/index.astro";
+const $$url = "/dojo/n-sapporo";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

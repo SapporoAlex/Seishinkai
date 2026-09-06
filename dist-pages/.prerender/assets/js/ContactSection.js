@@ -1,0 +1,90 @@
+import { c as createComponent } from './BaseLayout.js';
+import 'piccolore';
+import { m as maybeRenderHead, b as addAttribute, a as renderTemplate } from './prerender.js';
+import 'clsx';
+
+const $$ContactSection = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$props, $$slots);
+  Astro2.self = $$ContactSection;
+  const { lang = "ja" } = Astro2.props;
+  const isEn = lang === "en";
+  const t = {
+    title: isEn ? "Trial Class & Inquiries" : "体験申込・お問い合わせ",
+    lead: isEn ? "Please contact us here to book a trial class or ask about Seishinkai Karate." : "清心会空手体験申込はこちらからご連絡ください",
+    phone: isEn ? "Phone" : "お電話",
+    hours: isEn ? "Mon–Fri 1:00 PM–4:00 PM" : "月〜金 13:00〜16:00",
+    email: isEn ? "Email" : "メール",
+    email24: isEn ? "Available 24/7" : "24時間受付",
+    fax: isEn ? "Fax" : "FAX",
+    qrAlt: isEn ? "Contact QR code" : "お問い合わせQRコード",
+    qr: isEn ? "Quick contact from your smartphone" : "スマホから簡単お問い合わせ",
+    hoursTitle: isEn ? "Office Hours" : "受付時間",
+    locationTitle: isEn ? "Location" : "所在地",
+    location: isEn ? "2-1-27 Sakaedori, Shiroishi-ku, Sapporo (along Tohoku-dori)" : "札幌市白石区栄通2丁目1-27（東北通沿）",
+    noticeTitle: isEn ? "Please Note" : "ご注意",
+    notice: isEn ? "Our office is staffed on a rotating schedule, so we may occasionally be unable to answer calls during office hours. In that case, please contact us by email." : "事務局は交代制のため、時間内でも電話対応できない場合があります。その際はメールにてお問い合わせください。"
+  };
+  return renderTemplate`${maybeRenderHead()}<section class="top-contact" id="contact">
+  <div class="layout__container">
+    <div class="top-contact__contact-header">
+      <span>CONTACT</span>
+      <h2>${t.title}</h2>
+      <p>${t.lead}</p>
+    </div>
+
+    <div class="top-contact__contact-grid">
+      <!-- Phone -->
+      <div class="top-contact__contact-card highlight fade-up-in">
+        <div class="top-contact__icon">☎</div>
+        <h3>${t.phone}</h3>
+        <a href="tel:0113000048" class="top-contact__big">
+          011-300-0048
+        </a>
+        <small>${t.hours}</small>
+      </div>
+
+      <!-- Email -->
+      <div class="top-contact__contact-card fade-up-in">
+        <div class="top-contact__icon">✉</div>
+        <h3>${t.email}</h3>
+          <a class="dojo-contact__email"${addAttribute(`mailto:Karate@seishinkan.ne.jp`, "href")}>
+            Karate@seishinkan.ne.jp
+          </a><br>
+        <small>${t.email24}</small>
+      </div>
+
+      <!-- Fax -->
+      <div class="top-contact__contact-card fade-up-in">
+        <div class="top-contact__icon">📠</div>
+        <h3>${t.fax}</h3>
+        <p>011-300-0094</p>
+      </div>
+
+      <!-- QR -->
+      <div class="top-contact__contact-card top-contact__qr-card fade-up-in">
+        <img src="/assets/images/img_qr_volunteer.jpg"${addAttribute(t.qrAlt, "alt")}>
+        <p>${t.qr}</p>
+      </div>
+    </div>
+
+    <div class="top-contact__contact-info fade-up-in">
+      <div>
+        <h4>${t.hoursTitle}</h4>
+        <p>${t.hours}</p>
+      </div>
+
+      <div>
+        <h4>${t.locationTitle}</h4>
+        <p>${t.location}</p>
+      </div>
+    </div>
+
+    <div class="top-contact__notice-box fade-in">
+      <strong>${t.noticeTitle}</strong>
+      <p>${t.notice}</p>
+    </div>
+  </div>
+</section>`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/components/ContactSection.astro", void 0);
+
+export { $$ContactSection as $ };

@@ -1,0 +1,103 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "Misono Branch",
+      address: "Toyohira Ward, Misono 6-jo 7-chome, Co-op Sapporo Misono 2F Circle Room",
+      schedule: ["Sunday 13:30-14:30　※Preschoolers must attend with a parent"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Toyohira Ward Misono Branch Karate Classes", "description": "Information about the Seishinkai karate dojo/classes in Misono, Toyohira Ward, Sapporo. Formerly the Hiragishi Branch, now renamed. Introducing schedules and venue details for our junior-focused karate club.", "lang": "en", "path": "/en/dojo/misono/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-Do Federation – Misono Branch</h1>
+      </div>
+
+      <h2 class="detail-page__heading">Toyohira Ward Misono Karate Club / Misono Branch</h2>
+
+      <p class="detail-page__lead">
+        The current Misono Karate Club began activities in April 2009 as the Hiragishi Branch, using the Toyohira
+        Ward Citizens' Center as its venue. It later operated as the Misono Branch at the Misono Children's Center,
+        and in March 2021 the venue moved to the Circle Room on the 2nd floor of Co-op Sapporo Misono, at which point
+        the name changed to the Misono Karate Club (Misono Branch). Since the venue is inside a Co-op store, members
+        can conveniently run errands while practice is underway.
+        Since its founding, the club has focused on junior karate, welcoming students from preschool age through
+        junior high school. Because classes are held on Sundays, it's easy for parents and children to attend
+        together, and senior participants are also very welcome.
+        While many dojos feel like an extension of school sports clubs, we aim for a more relaxed, club-like
+        atmosphere where students can enjoy learning karate for health and fitness.
+      </p>
+
+      <div class="detail-page__highlight-box">
+        <p class="detail-page__highlight-text">Building an unyielding, unbreakable spirit — Seishinkai Karate</p>
+      </div>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Seishinkai Misono Branch", "facts": [
+    { label: "Founded", value: "April 2009 (Heisei 21)" },
+    { label: "Past Instructors", value: "Koyano, Tsubasa Okubo, and others" },
+    { label: "In Charge", value: "Headquarters-run" }
+  ], "image": {
+    src: "/assets/images/dojo/img_misono_bld.jpg",
+    alt: "Co-op Sapporo Misono Store",
+    width: 240,
+    height: 168
+  }, "address": "Misono 6-jo 7-chome, Toyohira Ward　Co-op Sapporo Misono 2F Circle Room", "mapHref": "https://www.google.com/maps/place/コープさっぽろ+美園店/@43.0373071,141.3874316,15z/data=!4m5!3m4!1s0x0:0x72d3e70b77425ccb!8m2!3d43.0373849!4d141.3872843", "mapQuery": "43.0373071,141.3874316", "viewOnMapLabel": "View on Google Maps" })}
+
+      <p class="detail-page__note">
+        ※Please enter via the 2F entrance from the parking lot. If you're unsure, ask at the Co-op service counter.
+      </p>
+
+      <p class="detail-page__note">
+        ※Senior black-belt members join on an irregular basis.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_misono_01.jpg" alt="Practice session at the Misono Branch" width="336" height="185" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_misono_02.jpg" alt="Practice session at the Misono Branch" width="336" height="185" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_misono_03.jpg" alt="Practice session at the Misono Branch" width="336" height="185" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_misono_04.jpg" alt="Practice session at the Misono Branch" width="336" height="185" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/toyohira/">← Back to the list of Toyohira Ward karate dojos/classes</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Misono Branch", "subject": "Misono Trial Class Application" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/misono/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/misono/index.astro";
+const $$url = "/en/dojo/misono";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

@@ -1,0 +1,85 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "札苗空手クラブ",
+      address: "東区東苗穂7条2丁目2-30 札苗モエレ交流センター",
+      schedule: ["水曜18:30"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "東区札苗支部の空手教室", "description": "札幌市東区東苗穂の清心会空手道場・札苗空手クラブのご案内。札苗モエレ交流センターでの水曜稽古日をご紹介します。", "lang": "ja", "path": "/dojo/h-naebo/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・札苗支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">東区札苗空手教室・清心会札苗支部</h2>
+
+      <p class="detail-page__lead">
+        札苗空手教室は、札苗モエレ交流センターをお借りして平成22年7月より活動しています。<br>
+        キッズ空手、ジュニア空手として園児から中学生を中心としていきたいと思います。体験者募集中です!<br>
+        また親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心会札苗支部", "facts": [
+    { label: "設立", value: "平成22年(2010)7月" },
+    { label: "設立者", value: "猪又敬之" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_satsunae_bld.jpg",
+    alt: "札苗モエレ交流センター",
+    width: 176,
+    height: 118
+  }, "address": "札幌市東区東苗穂7条2丁目2-30　札苗モエレ交流センター", "mapHref": "https://www.google.com/maps/place/札幌市東区札苗まちづくりセンター/@43.093113,141.4112141,15z/data=!4m2!3m1!1s0x0:0xa7db2c47df5aaf59?sa=X&ved=2ahUKEwjBv9Kwp7HhAhUwEqYKHS_gANUQ_BIwCnoECAoQCA", "mapQuery": "43.093113,141.4112141", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_satsunae_01.jpg" alt="札苗支部の稽古風景" width="315" height="141" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_satsunae_02.jpg" alt="札苗支部の稽古風景" width="315" height="141" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_satsunae_03.jpg" alt="札苗支部の稽古風景" width="315" height="141" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_satsunae_04.jpg" alt="札苗支部の稽古風景" width="315" height="141" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "札苗支部", "subject": "札苗体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/h-naebo/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/h-naebo/index.astro";
+const $$url = "/dojo/h-naebo";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

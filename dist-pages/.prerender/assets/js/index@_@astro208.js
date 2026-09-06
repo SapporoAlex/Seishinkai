@@ -1,0 +1,244 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from './prerender.js';
+import { $ as $$SocialLinkCard } from './SocialLinkCard.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const memberBlogs = [
+    {
+      name: "大久保翼",
+      image: "/assets/images/instructors/tsubasa.jpg",
+      links: [
+        { label: "Facebook", href: "https://www.facebook.com/tsubasa.ohkubo" },
+        { label: "個人ブログ", href: "http://liveisaction.tumblr.com/" }
+      ]
+    },
+    {
+      name: "髙嶋",
+      image: "/assets/images/instructors/takashima.jpg",
+      links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100010931403991" }]
+    },
+    {
+      name: "Hashini（スリランカ）",
+      image: "/assets/images/legacy/clubu/hashini.jpg",
+      links: [
+        { label: "Facebook", href: "https://www.facebook.com/kkht.hashi" },
+        { label: "ブログ", href: "https://ameblo.jp/hashitharu/entrylist.html" }
+      ]
+    },
+    {
+      name: "室木拓士",
+      image: "/assets/images/instructors/muroki.jpg",
+      links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100014649318764" }]
+    }
+  ];
+  const branchChiefBlogs = [
+    {
+      name: "前川信孝",
+      image: "/assets/images/instructors/maekawa.jpg",
+      links: [
+        { label: "Facebook", href: "https://www.facebook.com/nobutaka.maekawa" },
+        { label: "ブログ", href: "https://sky.ap.teacup.com/reimeishiya/" }
+      ]
+    },
+    {
+      name: "住吉一徳",
+      image: "/assets/images/instructors/sumiyoshi.jpg",
+      links: [
+        { label: "Facebook", href: "https://www.facebook.com/sjuku7" },
+        { label: "ブログ", href: "https://sjuku.exblog.jp/" }
+      ]
+    },
+    {
+      name: "犬浦壽信",
+      image: "/assets/images/instructors/inuura.jpg",
+      links: [
+        { label: "Facebook", href: "https://www.facebook.com/jushin.inuura.3" },
+        { label: "ブログ", href: "http://santakuji.cocolog-nifty.com/blog/" }
+      ]
+    },
+    {
+      name: "井上龍一郎",
+      image: "/assets/images/instructors/inoue.jpg",
+      links: [
+        { label: "Facebook", href: "https://www.facebook.com/ryuichirou.inoue" },
+        { label: "ブログ", href: "https://blog.goo.ne.jp/hazakuranohimawari" }
+      ]
+    },
+    {
+      name: "青木和也",
+      image: "/assets/images/legacy/images/aoki.jpg",
+      links: [
+        { label: "Facebook", href: "https://www.facebook.com/kazuya.aoki.180" },
+        { label: "ブログ", href: "https://blog.goo.ne.jp/mokunyan" }
+      ]
+    },
+    {
+      name: "波川和明",
+      image: "/assets/images/instructors/namikawa.jpg",
+      links: [
+        { label: "Facebook", href: "https://www.facebook.com/kazuaki.namikawa" },
+        { label: "ブログ", href: "https://angel.ap.teacup.com/spock/" }
+      ]
+    },
+    {
+      name: "工藤哲弘",
+      image: "/assets/images/instructors/kudo.jpg",
+      links: [{ label: "Facebook", href: "https://www.facebook.com/tetsuhiro.kudou" }]
+    },
+    {
+      name: "工藤博美",
+      image: "/assets/images/instructors/hiromi.jpg",
+      links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100004385984913" }]
+    },
+    {
+      name: "三上淳",
+      image: "/assets/images/instructors/mikami.jpg",
+      links: [{ label: "Facebook", href: "https://www.facebook.com/jun.mikami.7" }]
+    },
+    {
+      name: "及川義彦",
+      image: "/assets/images/instructors/oikawa.jpg",
+      links: [{ label: "Facebook", href: "https://www.facebook.com/profile.php?id=100010667766864" }]
+    },
+    {
+      name: "三枝篤史（福岡支部）",
+      image: "/assets/images/legacy/images/sae.jpg",
+      links: [{ label: "Facebook", href: "https://www.facebook.com/atsushi.saegusa1" }]
+    },
+    {
+      name: "Saegusa Masaki（福岡支部）",
+      image: "/assets/images/legacy/images/masaki.jpg",
+      links: [{ label: "Facebook", href: "https://www.facebook.com/masaki.saegusa.9" }]
+    }
+  ];
+  const overseasBlogs = [
+    {
+      name: "スリランカ支部長",
+      image: "/assets/images/instructors/kkpp.jpg",
+      links: [
+        {
+          label: "Facebook",
+          href: "https://www.facebook.com/kkpps.satharasinghe/"
+        }
+      ]
+    }
+  ];
+  const mimuraBlog = {
+    name: "故・三村佳代子",
+    image: "/assets/images/instructors/mimu2.jpg",
+    links: [
+      { label: "Mimuブログ", href: "https://yaplog.jp/happpykarate/1" },
+      { label: "旧Mimuブログ", href: "https://music.ap.teacup.com/kimagure/" }
+    ]
+  };
+  const officialBlogs = [
+    {
+      name: "会長ブログ",
+      href: "https://okubo-dojo.hatenablog.com/",
+      legacy: "https://blog.goo.ne.jp/okubo-seishinryu"
+    },
+    {
+      name: "清心会行事ブログ",
+      href: "https://seishinryu.hatenablog.com/",
+      legacy: "https://blog.goo.ne.jp/seishinryu"
+    },
+    {
+      name: "メディア・ニュース関連",
+      href: "https://seishinkan-news.hatenablog.com/",
+      legacy: "https://blog.goo.ne.jp/seishinkan"
+    },
+    {
+      name: "清心会全体ブログ",
+      href: "https://seishinkan-dojo.hateblo.jp/"
+    }
+  ];
+  const legacyArchives = [
+    { name: "旧ブログ(2005-2006)", href: "http://www.phoenix-c.or.jp/~okubo/blog/ms.cgi?blogid=" },
+    { name: "旧・取材関係ブログ", href: "https://red.ap.teacup.com/karatenews/" },
+    { name: "旧・行事ブログ", href: "https://red.ap.teacup.com/karate-news/" },
+    { name: "旧・会長ブログ", href: "https://red.ap.teacup.com/seishinkan2009/" }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "会員ブログ・Facebook", "description": "清心会の執行部・会員によるブログ、Facebookページの一覧です。", "lang": "ja", "path": "/news/blogs/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="detail-page">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">BLOGS</span>
+        <h1 class="section-title">執行部ブログ・Facebook</h1>
+      </div>
+
+      <p class="detail-page__intro">
+        清心会の執行部・会員が発信しているブログ、Facebookページのご紹介です。
+      </p>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">公式ブログ</h2>
+        <ul class="partner-section__list">
+          ${officialBlogs.map((b) => renderTemplate`<li class="partner-section__item">
+              <a${addAttribute(b.href, "href")} target="_blank" rel="noopener noreferrer">
+                ${b.name}
+              </a>
+            </li>`)}
+        </ul>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">個人ブログ・Facebook</h2>
+        <div class="social-link-grid">
+          ${memberBlogs.map((m) => renderTemplate`${renderComponent($$result2, "SocialLinkCard", $$SocialLinkCard, { "name": m.name, "image": m.image, "links": m.links })}`)}
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">師範・支部長・指導員ブログ・Facebook</h2>
+        <div class="social-link-grid">
+          ${branchChiefBlogs.map((m) => renderTemplate`${renderComponent($$result2, "SocialLinkCard", $$SocialLinkCard, { "name": m.name, "image": m.image, "links": m.links })}`)}
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">海外支部・メンバーFacebook</h2>
+        <div class="social-link-grid">
+          ${overseasBlogs.map((m) => renderTemplate`${renderComponent($$result2, "SocialLinkCard", $$SocialLinkCard, { "name": m.name, "image": m.image, "links": m.links })}`)}
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">故・三村佳代子 前館長ブログ</h2>
+        <div class="social-link-grid">
+          ${renderComponent($$result2, "SocialLinkCard", $$SocialLinkCard, { "name": mimuraBlog.name, "image": mimuraBlog.image, "links": mimuraBlog.links })}
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <h2 class="detail-page__heading">旧ブログ・アーカイブ</h2>
+        <ul class="partner-section__list">
+          ${legacyArchives.map((b) => renderTemplate`<li class="partner-section__item">
+              <a${addAttribute(b.href, "href")} target="_blank" rel="noopener noreferrer">
+                ${b.name}
+              </a>
+            </li>`)}
+        </ul>
+      </section>
+
+      <p class="detail-page__back">
+        <a href="/news/">← ニュース・SNSへ戻る</a>
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/news/blogs/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/news/blogs/index.astro";
+const $$url = "/news/blogs";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

@@ -1,24 +1,27 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+
 import BranchTable from "@components/BranchTable.astro";
+
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+
 import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
     marker: "★",
-    name: "Tobetsu Karate Club",
-    address: "2792 Shirakaba-cho, Tobetsu Town (Tobetsu Town General Gymnasium)",
-    schedule: ["Saturday 18:00 (since April 2024)"],
+    name: "Tobetsu Town Karate Club",
+    address: "2792 Shirakaba-cho, Tobetsu Town — Tobetsu Town General Gymnasium",
+    schedule: ["Saturdays 18:00 (from April 2024)"],
   },
 ];
 ---
 
 <BaseLayout
   title="Karate Classes in Tobetsu Town"
-  description="Information on the Seishinkai Karate dojo — Tobetsu Branch — in Tobetsu Town, Hokkaido. Training days and venue details."
+  description="Information about the Seishinkai Karate Dojo and Tobetsu Branch in Tobetsu Town, Hokkaido. Learn about training days and the training venue."
   lang="en"
-  path="/en/dojo/tobetsu/tobetsu/"
+  path="/dojo/tobetsu/tobetsu/"
 >
   <section class="dojo-list">
     <div class="page-container">
@@ -27,42 +30,77 @@ const entries = [
         <h1 class="section-title">Seishinkai Karate Federation — Tobetsu Branch</h1>
       </div>
 
-      <h2 class="detail-page__heading">Tobetsu Karate Class / Seishinkai Tobetsu Branch</h2>
+      <h2 class="detail-page__heading">
+        Tobetsu Town Karate Class · Seishinkai Tobetsu Branch
+      </h2>
 
       <p class="detail-page__lead">
-        The Tobetsu karate class started in October 2008 (Heisei 20).<br />
-        The venue is the Tobetsu Town General Gymnasium.<br />
-        The class is centered on Kids and Junior classes. Parent-child participation and Senior Class members
-        are also welcome.<br />
-        While many dojos feel like an extension of school sports-club activities, we aim for karate as health
-        and fitness training — practicing and learning together in a relaxed, club-like atmosphere.<br />
-        ※For 3-year-old preschoolers attending with a parent, the monthly fee is free.
+        The Tobetsu Karate Class began in October 2008.<br />
+        Training is held at the Tobetsu Town General Gymnasium.<br />
+        The class is primarily focused on kids and junior students. Parents and children are welcome to participate together, and seniors are also welcome to join.<br />
+        While many dojos operate more like an extension of traditional sports clubs, our aim is to enjoy learning and practicing karate as a recreational activity focused on health and physical fitness.<br />
+        ※ Three-year-old preschool children may participate together with a parent and can attend free of monthly membership fees.
       </p>
 
-      <BranchTable
-        entries={entries}
-        headers={["Dojo / Branch", "Address / Venue", "Training Days"]}
-      />
+      <BranchTable entries={entries} />
 
       {/* instructors={[
-        { src: "/assets/images/instructors/takashima.jpg", alt: "In charge: Takashima", name: "Takashima" },
+        { src: "/assets/images/instructors/takashima.jpg", alt: "Instructor Takashima", name: "Takashima" },
       ]} */}
+
       <BranchInfoCard
-        name="Tobetsu Branch (Headquarters-run)"
+        name="Tobetsu Branch (Directly Managed by Headquarters)"
         facts={[
-          { label: "Founded", value: "October 2008 (Heisei 20)" },
-          { label: "In charge", value: "Headquarters-run" },
+          { label: "Established", value: "October 2008" },
+          { label: "Instructor", value: "Directly managed by Headquarters" },
         ]}
-        address="2792 Shirakaba-cho, Tobetsu Town, Tobetsu Town General Gymnasium"
+        image={{
+          src: "/assets/images/dojo/img_tobetsu_bld.jpg",
+          alt: "Tobetsu Town General Gymnasium",
+          width: 282,
+          height: 216,
+        }}
+        address="2792 Shirakaba-cho, Tobetsu Town — Tobetsu Town General Gymnasium"
         mapHref="https://www.google.com/maps/place/当別町立当別町+総合体育館/@43.223059,141.5131699,15z/data=!4m2!3m1!1s0x0:0x42d9adf5ac1b5e0?sa=X&ved=2ahUKEwid7uW7ya_hAhVDFYgKHW7eAj0Q_BIwCnoECA8QCA"
         mapQuery="43.223059,141.5131699"
+        viewOnMapLabel="View on Google Maps"
       />
 
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/images/Image1.jpg"
-            alt="Seishinkai Karate training session"
+            src="/assets/images/dojo/img_tobetsu_01.jpg"
+            alt="Seishinkai Karate training"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_tobetsu_02.jpg"
+            alt="Seishinkai Karate training"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_tobetsu_03.jpg"
+            alt="Seishinkai Karate training"
+            width="649"
+            height="196"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_tobetsu_04.jpg"
+            alt="Seishinkai Karate training"
             width="649"
             height="196"
             loading="lazy"
@@ -70,43 +108,37 @@ const entries = [
         </figure>
       </div>
 
-      <div class="detail-gallery">
-        <figure>
-          <img
-            src="/assets/images/legacy/clubu/masuda.jpg"
-            alt="Instructor"
-            width="161"
-            height="161"
-            loading="lazy"
-          />
-        </figure>
-      </div>
-
       <p class="detail-page__note">
-        ※ When the Tobetsu Town General Gymnasium is unavailable, practice sometimes takes place at the
-        Shirakaba Community Center instead. Please check the <a
+        ※ If the Tobetsu Town General Gymnasium is unavailable, training may occasionally be held at the Shirakaba Community Center. Please check the
+        <a
           href="https://karate14.dokkin.com/"
           target="_blank"
-          rel="noopener">Tobetsu Branch schedule page</a
-        > for the current training venue.
+          rel="noopener"
+        >
+          Tobetsu Branch training schedule
+        </a>
+        for the latest information.
       </p>
 
       <p class="detail-page__note">
-        ※Alternate venue: <a
+        ※ Alternative venue:
+        <a
           href="https://www.google.com/maps/place/当別町+白樺コミュニティーセンター+社会教育課/@43.223683,141.513303,15z/data=!4m6!3m5!1s0x5f0b399134bc23a5:0xaf14adee43debde3!8m2!3d43.223683!4d141.513303!16s/g/1tfpjm7x"
           target="_blank"
-          rel="noopener">2792-1 Shirakaba, Tobetsu Town, Shirakaba Community Center</a
+          rel="noopener"
         >
+          2792-1 Shirakaba, Tobetsu Town — Shirakaba Community Center
+        </a>
       </p>
 
       <p class="detail-page__back">
-        <a href="/en/dojo/tobetsu/">← Back to the Dojo List</a>
+        <a href="/dojo/tobetsu/">← Back to the list</a>
       </p>
 
       <DojoContactSection
         lang="en"
         dojoName="Tobetsu Branch"
-        subject="Tobetsu Trial Lesson & Membership Inquiry"
+        subject="Tobetsu Branch Trial Lesson & Membership Inquiry"
       />
     </div>
   </section>

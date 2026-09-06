@@ -1,0 +1,91 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "南あいの里空手クラブ",
+      address: "北区あいの里1条6丁目拓北あいの里地区センター",
+      schedule: ["日曜10:00(冬10:30)"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "札幌市北区南あいの里支部の空手教室", "description": "札幌市北区南あいの里の清心会空手道場・教室のご案内。拓北あいの里地区センターを会場に日曜10:00より稽古を行う本部直轄教室です。", "lang": "ja", "path": "/dojo/m-ainosato/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・南あいの里支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">北区南あいの里空手教室・清心会南あいの里支部</h2>
+
+      <p class="detail-page__lead">
+        南あいの里空手教室は、平成22年5月に拓北あいの里地区センターで活動を開始しました。<br>
+        キッズ空手、ジュニア空手、親子空手中心の空手クラブです。<br>
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "南あいの里支部", "facts": [
+    { label: "設立", value: "平成22年(2010)5月" },
+    { label: "", value: "本部直轄教室" }
+  ], "image": {
+    src: "/assets/images/dojo/img_m-ainosato_bld.jpg",
+    alt: "拓北あいの里地区センター",
+    width: 345,
+    height: 226
+  }, "address": "札幌市北区あいの里1条6丁目1-1　拓北あいの里地区センター", "mapHref": "https://www.google.com/maps/place/拓北・あいの里地区センター/@43.155447,141.399294,15z/data=!4m2!3m1!1s0x0:0x78b61eb45497db44?sa=X&ved=2ahUKEwigkNm_3LHhAhXDdHAKHTGtA3YQ_BIwDHoECAsQCA", "mapQuery": "43.155447,141.399294", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_m-ainosato_01.jpg" alt="南あいの里支部の稽古風景" width="432" height="205" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_m-ainosato_02.jpg" alt="南あいの里支部の稽古風景" width="432" height="205" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_m-ainosato_03.jpg" alt="南あいの里支部の稽古風景" width="432" height="205" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_m-ainosato_04.jpg" alt="南あいの里支部の稽古風景" width="432" height="205" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ※本部直轄教室のため一般部員(黒帯、茶帯)が交代で練習を行います。
+      </p>
+
+      <p class="detail-page__note">
+        ※地区センターが使えないときは<a href="https://www.google.com/maps/place/コープさっぽろ+あいの里店/@43.1576295,141.3986342,15z/data=!4m2!3m1!1s0x0:0xc9b4786745542e81?sa=X&ved=2ahUKEwjUwuXRvMHxAhVkNKYKHT-dA5oQ_BIwEnoECD8QBQ" target="_blank" rel="noopener">コープさっぽろ あいの里店　2Fサークル室</a>
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/kita/">← 札幌市北区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "南あいの里支部", "subject": "南あいの里体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/m-ainosato/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/m-ainosato/index.astro";
+const $$url = "/dojo/m-ainosato";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

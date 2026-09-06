@@ -1,0 +1,89 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "Fushimi Branch",
+      address: "Fushimi Kaikan, Minami 14-jo Nishi 18-chome, Chuo-ku",
+      schedule: ["Saturday 13:00–14:00"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes at the Fushimi Branch, Chuo Ward", "description": "Introducing the Fushimi Branch of Seishinkai Karate at Fushimi Kaikan in Chuo Ward, Sapporo. A class centered on Junior Karate and Parent-Child Karate — see training days and venue information.", "lang": "en", "path": "/en/dojo/fushimi/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation - Fushimi Branch</h1>
+      </div>
+
+      <h2 class="detail-page__heading">Chuo Ward Fushimi Karate Club - Seishinkai Fushimi Branch</h2>
+
+      <p class="detail-page__lead">
+        The Fushimi karate class got its start in April 2012 (Heisei 24), borrowing meeting-room space from a supporting company thanks to their cooperation.<br>
+        Due to security considerations, the venue was moved the following year to its current location, Fushimi Kaikan, where it has been active ever since.<br>
+        Since its founding, the class has centered on Junior Karate and Parent-Child Karate.<br>
+        Participation by parents and children together, as well as senior class members, is especially welcome.<br>
+        While many dojos feel like an extension of a school sports club, this one aims to offer karate for health and fitness that members can enjoy learning in a relaxed, club-like atmosphere.
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries, "headers": ["Dojo / Branch", "Address / Venue", "Training Days"] })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Fushimi Branch", "facts": [
+    { label: "Founded", value: "April 2012 (Heisei 24)" },
+    { label: "Instructor", value: "Headquarters-run" }
+  ], "image": {
+    src: "/assets/images/dojo/img_fushimi_bld.jpg",
+    alt: "Fushimi Kaikan",
+    width: 293,
+    height: 200
+  }, "address": "6-10 Minami 14-jo Nishi 18-chome, Chuo-ku, Sapporo, Fushimi Kaikan", "mapHref": "https://www.google.com/maps/place/伏見会館/@43.0410241,141.3303314,17z/data=!4m5!3m4!1s0x0:0x98b47c6f2cd17d85!8m2!3d43.0402439!4d141.3289367", "mapQuery": "43.0410241,141.3303314" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_fushimi_01.jpg" alt="Training session at the Fushimi Branch" width="292" height="182" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_fushimi_02.jpg" alt="Training session at the Fushimi Branch" width="292" height="182" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_fushimi_03.jpg" alt="Training session at the Fushimi Branch" width="292" height="182" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_fushimi_04.jpg" alt="Training session at the Fushimi Branch" width="292" height="182" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        Note: Adult black belt members participate on an irregular basis.
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/cyuo/">← Back to the Chuo Ward dojo & class list</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Fushimi Branch", "subject": "Fushimi Trial Lesson Application" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/fushimi/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/fushimi/index.astro";
+const $$url = "/en/dojo/fushimi";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

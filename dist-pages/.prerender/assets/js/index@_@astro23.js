@@ -1,0 +1,85 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "伏古空手クラブ",
+      address: "東区伏古7条2丁目8-15 伏古記念会館",
+      schedule: ["土曜9:30-10:00(入門者基礎)", "10:00-10:50(6級以下)", "11:00-11:50(5級以上)"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "東区伏古支部の空手教室", "description": "札幌市東区伏古の清心会空手道場・伏古空手クラブのご案内。伏古記念会館での土曜稽古日をご紹介します。", "lang": "ja", "path": "/dojo/fushiko/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・伏古支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">東区伏古空手教室・清心会伏古支部</h2>
+
+      <p class="detail-page__lead">
+        伏古空手教室は、平成23年11月に、伏古記念会館でスタートしました。<br>
+        キッズ空手、ジュニアクラス、親子空手中心の空手クラブです。<br>
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心会伏古支部", "facts": [
+    { label: "設立", value: "平成23年(2011)11月" },
+    { label: "指導", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_fushiko_bld.jpg",
+    alt: "伏古記念会館",
+    width: 277,
+    height: 210
+  }, "address": "札幌市東区伏古7条2丁目8-15　伏古記念会館", "mapHref": "https://www.google.com/maps/place/〒007-0867+北海道札幌市東区伏古７条２丁目８−１５+伏古記念会館/@43.090063,141.3897776,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2ecb7cb8d6fb:0x18450b6d1f6a09e1!8m2!3d43.090063!4d141.3919663", "mapQuery": "43.090063,141.3897776", "viewOnMapLabel": "Google Mapsで見る" })}
+
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_fushiko_01.jpg" alt="伏古支部での稽古風景" width="324" height="190" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_fushiko_02.jpg" alt="伏古支部での稽古風景" width="324" height="190" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_fushiko_03.jpg" alt="伏古支部での稽古風景" width="324" height="190" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_fushiko_04.jpg" alt="伏古支部での稽古風景" width="324" height="190" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "伏古支部", "subject": "伏古体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/fushiko/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/fushiko/index.astro";
+const $$url = "/dojo/fushiko";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

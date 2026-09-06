@@ -1,0 +1,92 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "Aoba-Minami Branch (tentative name)",
+      address: "Aoba-Minami Community Hall, Aoba-cho 6-chome 3-10, Atsubetsu-ku (to begin once 5 participants have joined)",
+      schedule: [""]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes at the Aoba Branch (Preparing to Reopen)", "description": "An introduction to the Aoba Branch of Seishinkai Karate-do in Aoba, Atsubetsu-ku, Sapporo. We are currently recruiting participants ahead of reopening.", "lang": "en", "path": "/en/dojo/aoba/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate-do Federation – Aoba Branch (tentative name)</h1>
+      </div>
+
+      <h2 class="detail-page__heading">Atsubetsu-ku Aoba Karate Class – Seishinkai Aoba Branch (tentative name)</h2>
+
+      <p class="detail-page__lead">
+        The Aoba Karate Class began in December 2011 as a kids' and junior karate
+        program. It later operated as the Atsubetsu-Minami Branch (at the Atsubetsu-Minami
+        District Center) due to venue circumstances, but is now preparing to reopen as the
+        Aoba Branch. Since the class centers on kids' karate, junior karate, and
+        parent-and-child karate, we are planning to reopen on either a Saturday or Sunday.
+        While many dojos feel like an extension of a school sports club, we aim to make
+        training feel more like a relaxed circle activity — enjoying karate as a way to
+        build health and fitness while still learning its true spirit. We are currently
+        recruiting participants and hope to begin once 5 people have joined.
+      </p>
+
+        <div class="detail-page__highlight-box">
+          <p class="detail-page__highlight-text">★★</p>
+          <p class="detail-page__highlight-text">
+            Seishinkai Karate: cultivating a spirit that never gives up and never breaks
+          </p>
+          <p class="detail-page__highlight-text">★★</p>
+        </div>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Aoba Branch (tentative name)", "facts": [
+    { label: "Founded", value: "November 2011" },
+    { label: "Contact", value: "Headquarters-run" }
+  ], "image": {
+    src: "/assets/images/legacy/dojo/aoba/img4.jpg",
+    alt: "Aoba-Minami Community Hall",
+    width: 299,
+    height: 154
+  }, "address": "Aoba-Minami Community Hall (planned venue), Aoba 6-chome 1-10, Atsubetsu-ku", "mapHref": "https://www.google.com/maps/place/青葉南集会所/@43.0282951,141.4771169,15z/data=!4m6!3m5!1s0x5f0b2b5bd1e99d37:0xb28a71c0f3efd5a9!8m2!3d43.0282951!4d141.4771169!16s/g/1tgdnbw1?entry=ttu", "mapQuery": "43.0282951,141.4771169", "viewOnMapLabel": "View on Google Maps" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/legacy/dojo/aoba/Image1.jpg" alt="Practice session at the Aoba Branch" width="287" height="123" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        *Until the Aoba Branch officially starts, prospective participants can try a
+        class at the Momijidai Branch or the Atsubetsu-Minami Branch.
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/atsubetsu/">← Back to the list of Atsubetsu-ku dojos and classes</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Aoba Branch", "subject": "Aoba Branch Reopening / Interest in Joining" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/aoba/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/aoba/index.astro";
+const $$url = "/en/dojo/aoba";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

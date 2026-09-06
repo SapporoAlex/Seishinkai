@@ -1,0 +1,86 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "清田区里塚空手教室(清心会里塚支部)",
+      address: "札幌市清田区里塚緑ヶ丘10丁目4-17　里塚緑ヶ丘町内会館",
+      schedule: ["金曜18:30(冬季18:45)"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "清田区里塚支部の空手教室", "description": "札幌市清田区里塚緑ヶ丘町内会館の清心会空手教室のご案内。キッズ・ジュニア空手中心、稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/satozuka/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・里塚空手教室</h1>
+      </div>
+
+      <h2 class="detail-page__heading">清田区里塚空手教室・清心会里塚支部</h2>
+
+      <p class="detail-page__lead">
+        里塚空手教室は、平成11年2月に大豊湯里塚店2Fでスタートしました。<br>
+        その後、里塚会館、里塚地区センターなどを経て現在の緑ヶ丘町内会館で活動しています。<br>
+        キッズ・ジュニアクラスを中心としています。親子での参加、シニアクラスの参加も歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心会里塚支部", "facts": [
+    { label: "設立", value: "平成11年(1999)2月" },
+    { label: "設立者", value: "大久保勝美" },
+    { label: "歴代", value: "井上、大久保翼、工藤哲弘" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_satozuka_bld.jpg",
+    alt: "里塚緑ヶ丘町内会館",
+    width: 258,
+    height: 192
+  }, "address": "札幌市清田区里塚緑ヶ丘10丁目4-17　里塚緑ヶ丘町内会館", "mapHref": "https://www.google.com/maps/place/里塚緑ヶ丘町内会館/@42.9895177,141.4727112,15z/data=!4m2!3m1!1s0x0:0x56db9b692a940c94?sa=X&ved=2ahUKEwjps-jkmLHhAhUQBKYKHZFyDqEQ_BIwCnoECAsQCA", "mapQuery": "42.9895177,141.4727112", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_satozuka_01.jpg" alt="里塚空手教室の稽古風景" width="247" height="149" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_satozuka_02.jpg" alt="里塚空手教室の稽古風景" width="247" height="149" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_satozuka_03.jpg" alt="里塚空手教室の稽古風景" width="247" height="149" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_satozuka_04.jpg" alt="里塚空手教室の稽古風景" width="247" height="149" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/minami-kiyota/">← 清田区・南区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "里塚空手教室", "subject": "里塚体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/satozuka/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/satozuka/index.astro";
+const $$url = "/dojo/satozuka";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

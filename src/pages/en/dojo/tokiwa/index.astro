@@ -1,71 +1,110 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+
 import BranchTable from "@components/BranchTable.astro";
+
 import BranchInfoCard from "@components/BranchInfoCard.astro";
+
 import DojoContactSection from "@components/DojoContactSection.astro";
 
 const entries = [
   {
     marker: "#",
-    name: "Minami-ku Tokiwa Karate Class (Seishinkai Tokiwa Branch)",
+    name: "Minami Ward Tokiwa Karate Class (Seishinkai Tokiwa Branch)",
     sub: "Tokiwa Karate Club",
-    address: "1-jo 1-chome 3-1 Tokiwa, Minami-ku, Sapporo, Tokiwa Danchi Hall",
-    schedule: ["Monday 4:30-5:30 PM"],
+    address: "3-1-1 Tokiwa, Minami Ward, Sapporo — Tokiwa Danchi Community Hall",
+    schedule: ["Mondays 16:30-17:30"],
   },
 ];
 ---
 
 <BaseLayout
-  title="Karate Classes at the Minami-ku Tokiwa Branch"
-  description="Introducing the Seishinkai karate class at the Tokiwa Danchi Hall in Minami-ku, Sapporo. Focused on kids and junior karate, with training days and venue information."
+  title="Minami Ward Tokiwa Branch Karate Class"
+  description="Information about the Seishinkai Karate Class at Tokiwa Danchi Community Hall in Minami Ward, Sapporo. The class focuses on kids and junior karate, with information about training days and the training venue."
   lang="en"
-  path="/en/dojo/tokiwa/"
+  path="/dojo/tokiwa/"
 >
   <section class="dojo-list">
     <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">DOJO</span>
-        <h1 class="section-title">Seishinkai Karate Federation - Tokiwa Branch</h1>
+        <h1 class="section-title">Seishinkai Karate Federation — Tokiwa Branch</h1>
       </div>
 
-      <h2 class="detail-page__heading">Minami-ku Tokiwa Karate Class - Seishinkai Tokiwa Branch</h2>
+      <h2 class="detail-page__heading">
+        Minami Ward Tokiwa Karate Class · Seishinkai Tokiwa Branch
+      </h2>
 
       <p class="detail-page__lead">
-        The Tokiwa Karate Class started in September 2012 (Heisei 24). It began at the neighborhood hall, later moved to the Tokiwa Children's Hall, and has since returned to holding activities at the Tokiwa Danchi Hall (from April 2020, Reiwa 2).<br />
-        As a kids' and junior karate class, we would like to focus mainly on children from preschool age through junior high school. We are currently recruiting trial students!<br />
-        Participation by parents and children together, and by senior members, is also welcome.<br />
-        While many dojos feel like an extension of school sports clubs, we aim for members to practice and learn in a relaxed, club-like atmosphere as health-oriented, physical-education-style karate.
+        The Tokiwa Karate Class began in September 2012. It originally operated at a local community hall before moving to the current Tokiwa Children's Hall, and has since returned to Tokiwa Danchi Community Hall, where it has been held since April 2020.<br />
+        The class focuses primarily on preschool children through junior high school students, with kids and junior karate classes. Trial participants are welcome!<br />
+        Parents and children are also welcome to participate together, as are students interested in a senior class.<br />
+        While many dojos operate more like an extension of traditional sports clubs, our aim is to enjoy learning and practicing karate as a recreational activity focused on health and physical fitness.
       </p>
 
-      <BranchTable entries={entries} headers={["Dojo / Branch", "Address / Venue", "Training Days"]} />
+      <BranchTable entries={entries} />
 
       {/* instructors={[
         { src: "/assets/images/instructors/okimura.jpg", alt: "Instructor Okimura", name: "Okimura" },
       ]} */}
+
       <BranchInfoCard
         name="Seishinkai Tokiwa Branch / Tokiwa Karate Club"
         facts={[
-          { label: "Founded", value: "September 2012 (Heisei 24)" },
+          { label: "Established", value: "September 2012" },
           { label: "Founder", value: "Takushi Muroki (2012-2020)" },
-          { label: "Past instructors", value: ["Yutaka Yamane (2013-2014)", "Yoshihiko Oikawa (2020-2022)"] },
-          { label: "Instructor", value: "Headquarters-run" },
+          {
+            label: "Former Instructors",
+            value: ["Yutaka Yamane (2013-2014)", "Yoshihiko Oikawa (2020-2022)"],
+          },
+          { label: "Management", value: "Directly managed by Headquarters" },
         ]}
         image={{
-          src: "/assets/images/legacy/dojo/tokiwa/img2.jpg",
-          alt: "Tokiwa Danchi Hall",
+          src: "/assets/images/dojo/img_tokiwa_bld.jpg",
+          alt: "Tokiwa Danchi Community Hall",
           width: 259,
           height: 161,
         }}
-        address="2-jo 2-chome 17-23 Tokiwa, Minami-ku, Sapporo, Tokiwa Children's Hall"
-        mapHref="https://www.google.com/maps/place/常盤児童会館/@42.948119,141.347944,15z/data=!4m5!3m4!1s0x0:0xd28fbfc8404d010!8m2!3d42.948119!4d141.347944"
-        mapQuery="42.948119,141.347944"
+        mapHref="https://www.google.com/maps/@42.9544281,141.3499737,16z?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+        mapQuery="42.9544281,141.3499737"
+        viewOnMapLabel="View on Google Maps"
       />
 
       <div class="detail-gallery">
         <figure>
           <img
-            src="/assets/images/legacy/dojo/tokiwa/acs1.jpg"
-            alt="Tokiwa Branch practice session"
+            src="/assets/images/dojo/img_tokiwa_01.jpg"
+            alt="Karate training at the Tokiwa Branch"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_tokiwa_02.jpg"
+            alt="Karate training at the Tokiwa Branch"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_tokiwa_03.jpg"
+            alt="Karate training at the Tokiwa Branch"
+            width="316"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src="/assets/images/dojo/img_tokiwa_04.jpg"
+            alt="Karate training at the Tokiwa Branch"
             width="316"
             height="194"
             loading="lazy"
@@ -74,21 +113,27 @@ const entries = [
       </div>
 
       <p class="detail-page__note">
-        ※ Due to the impact of COVID-19, the venue was temporarily moved to the following location: 1-jo 1-chome 3-1 Tokiwa, Minami-ku <a
+        ※ Due to the impact of COVID-19, training was temporarily moved to the venue below:
+        3-1-1 Tokiwa, Minami Ward, Sapporo —
+        <a
           href="https://www.google.com/maps/place/〒005-0851+北海道札幌市南区常盤１条１丁目３−１+常盤団地会館/@42.955108,141.344939,17z/data=!3m1!4b1!4m5!3m4!1s0x5f752b30e3655f31:0x43a4187663d955fc!8m2!3d42.9551041!4d141.3471277"
           target="_blank"
-          rel="noopener">Tokiwa Danchi Hall</a
+          rel="noopener"
         >
+          Tokiwa Danchi Community Hall
+        </a>
       </p>
 
       <p class="detail-page__back">
-        <a href="/en/dojo/minami-kiyota/">← Back to the Kiyota Ward & Minami Ward Dojo & Class List</a>
+        <a href="/dojo/minami-kiyota/">
+          ← Back to the list of karate dojos and classes in Kiyota and Minami Wards
+        </a>
       </p>
 
       <DojoContactSection
         lang="en"
         dojoName="Tokiwa Branch"
-        subject="Tokiwa Branch Trial Lesson / Enrollment Inquiry"
+        subject="Tokiwa Branch Trial Lesson & Membership Inquiry"
       />
     </div>
   </section>

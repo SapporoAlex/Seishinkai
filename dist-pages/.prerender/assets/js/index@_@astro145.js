@@ -1,0 +1,118 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "Kyogoku Karate Club",
+      address: "160 Kyogoku, Kyogoku Town, Abuta District (Kyogoku Town Community Hall)",
+      schedule: ["Tuesday 18:15/19:05"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes in Kyogoku Town", "description": "Information on the Seishinkai Karate dojo — Kyogoku Branch — in Kyogoku Town, Abuta District, Hokkaido. Training days and venue details.", "lang": "en", "path": "/en/dojo/kyogoku/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">Seishinkai Karate Federation — Kyogoku Branch</h1>
+      </div>
+
+      <h2 class="detail-page__heading">Kyogoku Karate Class / Seishinkai Kyogoku Branch</h2>
+
+      <p class="detail-page__lead">
+        The Kyogoku Karate Club began as a branch started by members from Kyogoku Town who had been commuting
+        to the Kimobetsu Branch, with the kind cooperation of Kotoku-ji Temple in Kyogoku Town.<br>
+        The venue later moved to the Social Welfare Center, and since December 2019 (Reiwa 1) has been the
+        large hall of the Kyogoku Town Community Hall.<br>
+        The class is centered on Kids and Junior classes. Parent-child participation and Senior Class members
+        are also welcome.<br>
+        While many dojos feel like an extension of school sports-club activities, we aim for karate as health
+        and fitness training — practicing and learning together in a relaxed, club-like atmosphere.
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries, "headers": ["Dojo / Branch", "Address / Venue", "Training Days"] })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "Kyogoku Branch", "facts": [
+    { label: "Founded", value: "November 2017 (Heisei 29)" },
+    { label: "Founder", value: "Takuro Komada" },
+    { label: "In charge", value: "Headquarters-run" }
+  ], "image": {
+    src: "/assets/images/dojo/img_kyogoku_bld.jpg",
+    alt: "Kyogoku Town Community Hall",
+    width: 350,
+    height: 184
+  }, "address": "160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall", "mapHref": "https://www.google.com/maps?q=%E4%BA%AC%E6%A5%B5%E7%94%BA%E5%85%AC%E6%B0%91%E9%A4%A8", "mapQuery": "160 Kyogoku, Kyogoku Town, Abuta District, Kyogoku Town Community Hall" })}
+      
+      <p class="detail-page__note">
+        ※Session 1: white belt–light blue belt, 18:15–19:00 / Session 2: blue belt and above, 19:05–20:00.
+      </p>
+
+      <p class="detail-page__note">
+        ※Monthly fee: ¥2,500 (Kyogoku residents)~. Plus annual dues, etc.
+      </p>
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_kyogoku_01.jpg" alt="Kyogoku Branch practice session" width="441" height="270" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_kyogoku_02.jpg" alt="Kyogoku Branch practice session" width="441" height="270" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_kyogoku_03.jpg" alt="Kyogoku Branch practice session" width="441" height="270" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_kyogoku_04.jpg" alt="Kyogoku Branch practice session" width="441" height="270" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="section__title-area">
+        <h2 class="detail-page__heading">Former Venues</h2>
+      </div>
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_kyogoku_bld-former_01.jpg" alt="former Kyogoku branch training location, 615 Aza Kyogoku, Kyogoku Town, Abuta District, Kotoku-ji Temple" width="301" height="145" loading="lazy">
+          <figcaption>
+            <a href="https://www.google.com/maps/place/廣徳寺/@42.8577773,140.8859652,15z/data=!4m5!3m4!1s0x0:0xbd9afdba25b2420b!8m2!3d42.8577773!4d140.8859652" target="_blank" rel="noopener">
+              615 Aza Kyogoku, Kyogoku Town, Abuta District, Kotoku-ji Temple
+            </a>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="/assets/images/dojo/img_kyogoku_bld-former_02.jpg" alt="former Kyogoku branch training location, 68 Misaki, Kyogoku Town, Abuta District, Welfare Center" width="301" height="145" loading="lazy">
+          <figcaption>
+            <a href="https://www.google.com/maps/place/京極町+社会福祉協議会/@42.860568,140.880615,15z/data=!4m2!3m1!1s0x0:0x444da41dc2d6035" target="_blank" rel="noopener">68 Misaki, Kyogoku Town, Abuta District, Welfare Center
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/tobetsu/">← Back to the Dojo List</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "lang": "en", "dojoName": "Kyogoku Branch", "subject": "Kyogoku Trial Lesson Application" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/kyogoku/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/kyogoku/index.astro";
+const $$url = "/en/dojo/kyogoku";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

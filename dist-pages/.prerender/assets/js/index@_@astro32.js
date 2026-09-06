@@ -1,0 +1,84 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "東雁来空手クラブ",
+      address: "東区東雁来14条2丁目1-1 東雁来児童会館",
+      schedule: ["木曜18:30"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "東区東雁来支部の空手教室", "description": "札幌市東区東雁来の清心会空手道場・東雁来空手クラブのご案内。東雁来児童会館での木曜稽古日をご紹介します。", "lang": "ja", "path": "/dojo/higashikariki/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・東雁来支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">東雁来空手教室・清心会東雁来支部</h2>
+
+      <p class="detail-page__lead">
+        東雁来空手教室は、令和3年2月に東雁来集会所でスタートし、翌年、東雁来児童会館に会場を移動しました。<br>
+        子供から大人まで楽しく学べる空手です。<br>
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "清心会東雁来支部", "facts": [
+    { label: "設立", value: "令和3年(2021)2月" },
+    { label: "設立者", value: "猪又敬之" },
+    { label: "担当", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_higashikariki_bld.jpg",
+    alt: "東雁来児童会館",
+    width: 437,
+    height: 239
+  }, "address": "札幌市東区東雁来14条2丁目1-1　東雁来児童会館", "mapHref": "https://www.google.com/maps/place/札幌市東雁来児童会館+かりたま/@43.105653,141.4308999,15z/data=!4m5!3m4!1s0x0:0xeb5bbea1f521e82b!8m2!3d43.1056214!4d141.4308765", "mapQuery": "43.105653,141.4308999", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_higashikariki_01.jpg" alt="東雁来支部の稽古風景" width="611" height="216" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_higashikariki_02.jpg" alt="東雁来支部の稽古風景" width="142" height="142" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_higashikariki_03.jpg" alt="東雁来支部の稽古風景" width="611" height="216" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_higashikariki_04.jpg" alt="東雁来支部の稽古風景" width="142" height="142" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/higashi/">← 東区の空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "東雁来支部", "subject": "東雁来体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/higashikariki/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/higashikariki/index.astro";
+const $$url = "/dojo/higashikariki";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

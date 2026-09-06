@@ -1,0 +1,98 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "#",
+      name: "清心館大麻道場",
+      sub: "(江別地区本部道場)",
+      address: "江別市大麻沢町6-9 パークヒルズ1F 清心館(二番通沿)",
+      schedule: [
+        "月曜16:00",
+        "木曜18:30",
+        "金曜16:00",
+        "金曜18:45(予約制)",
+        "土曜10:00"
+      ]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "江別市大麻空手教室・清心館大麻道場", "description": "江別市大麻の清心会空手道場・清心館大麻道場のご案内。パークヒルズ1Fの常設道場、週複数回のクラスと会場情報をご紹介します。", "lang": "ja", "path": "/dojo/oasa/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・江別大麻支部「清心館大麻」</h1>
+      </div>
+
+      <h2 class="detail-page__heading">清心館大麻空手教室・清心会大麻支部</h2>
+
+      <p class="detail-page__lead">
+        清心館大麻空手教室は、平成20年4月に、江別市大麻二番通りに面したパークヒルズ1Fに開設した常設道場です。<br>
+        ジュニアクラス中心にスタートし、現在は週2回ですが現在、新規曜日でも開設準備中です。<br>
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "江別市大麻支部/大麻空手倶楽部", "facts": [
+    { label: "設立", value: "平成20年(2008)4月" },
+    { label: "担当者", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_oasa_bld.jpg",
+    alt: "清心館大麻空手道場",
+    width: 342,
+    height: 273
+  }, "address": "江別市大麻沢町6　パークヒルズ1F 清心館大麻空手道場", "addressNote": "二番通に面しています。大麻西公園となり。", "mapHref": "https://www.google.com/maps/dir/43.0720251,141.4873424/43.071927,141.48733/@43.071403,141.4865876,18.5z", "mapQuery": "43.071403,141.4865876", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_oasa_01.jpg" alt="清心館大麻道場の稽古風景" width="284" height="141" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_oasa_02.jpg" alt="清心館大麻道場の稽古風景" width="284" height="141" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_oasa_03.jpg" alt="清心館大麻道場の稽古風景" width="284" height="141" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_oasa_04.jpg" alt="清心館大麻道場の稽古風景" width="284" height="141" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="detail-page__note">
+        ●月曜クラス16:00-17:00(園児〜小学生)<br>
+        ●金曜クラス16:00-17:00(園児〜小学生)<br>
+        ●木曜クラス18:30-19:30(小学生〜大人)<br>
+        ★金曜クラス夜の部　特別限定クラス/完全予約制　18:45-20:00<br>
+        ★土曜クラス　10:00-11:00
+      </p>
+
+      <p class="detail-page__back">
+        <a href="/dojo/ebetsu/">← 江別・岩見沢・石狩の空手教室一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "江別大麻支部", "subject": "大麻体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/oasa/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/oasa/index.astro";
+const $$url = "/dojo/oasa";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

@@ -1,0 +1,118 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      no: 1,
+      marker: "★",
+      name: "Head Office / Seishinkan Sakaedori",
+      address: "Sakaedori 2-chome, Shiroishi-ku, Sapporo (along Tohoku-dori)",
+      schedule: ["Mon–Sun"]
+    },
+    {
+      no: 2,
+      marker: "★",
+      name: "Tsukisamu Branch",
+      address: "3-21 Tsukisamu-nishi 1-jo 6-chome, Tsukisamu Children's Hall",
+      schedule: ["Saturday 18:25"],
+      link: "/en/dojo/tsukisam-n/"
+    },
+    {
+      no: 3,
+      marker: "★",
+      name: "Toyohira Branch",
+      address: "1-12 Toyohira 6-jo 7-chome, Toyohira-ku, Toyohira Children's Hall",
+      schedule: ["Saturday 18:20"],
+      link: "/en/dojo/toyohira/toyohira/"
+    },
+    {
+      no: 4,
+      marker: "★",
+      name: "Toyohira Park Branch",
+      address: "Toyohira 8-jo 11-chome, Toyohira-ku, Toyohira Youth Activity Center",
+      schedule: ["Friday 16:00"],
+      link: "/en/dojo/toyohira-k/"
+    },
+    {
+      no: 5,
+      marker: "★",
+      name: "Misono Branch",
+      address: "Misono 6-jo 7-chome, Toyohira-ku, Co-op Misono Circle Room",
+      schedule: ["Sunday 13:30"],
+      link: "/en/dojo/misono/"
+    },
+    {
+      no: 6,
+      marker: "★",
+      name: "Fukuzumi Branch",
+      address: "5-5 Fukuzumi 1-jo 1-chome, Fukuzumi Children's Hall",
+      schedule: ["Wednesday 18:30"],
+      link: "/en/dojo/fukuzumi/"
+    },
+    {
+      no: 7,
+      marker: "★",
+      name: "Nishioka Branch",
+      address: "Sumikawa 6-jo 4-chome, Minami-ku, Co-op Nishioka 2F",
+      schedule: ["Saturday 13:00"],
+      link: "/en/dojo/nishioka/"
+    },
+    {
+      no: 8,
+      marker: "★",
+      name: "Sumikawa Branch",
+      address: "Hiragishi 1-jo 22-chome, Toyohira-ku, Big House Extra Store 2F",
+      schedule: ["Friday 18:30 (from April 2021)"],
+      link: "/en/dojo/sumikawa-n/"
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Karate Classes in Toyohira Ward", "description": "Directory of Seishinkai Karate dojos and classes in Toyohira Ward, Sapporo. Training schedules for the Tsukisamu, Toyohira, Misono, Fukuzumi, Nishioka, and Sumikawa branches.", "lang": "en", "path": "/en/dojo/toyohira/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Toyohira Ward Karate Dojos & Classes</h1>
+      </div>
+      <p class="detail-page__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM) ※ No reception on weekends
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries, "headers": ["Dojo / Branch", "Address / Venue", "Training Days"] })}
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>Headquarters-run class — inquiries to the head office
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>Listed start times may vary slightly due to venue availability or instructor travel time (seasonal changes between summer and winter)
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img src="/assets/images/legacy/photo/Image2.jpg" alt="Seishinkai Karate practice in Toyohira Ward" width="570" height="340" loading="lazy">
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/en/dojo/">← Back to Dojo List</a>
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/toyohira/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/toyohira/index.astro";
+const $$url = "/en/dojo/toyohira";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

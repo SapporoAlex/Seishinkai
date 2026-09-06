@@ -1,0 +1,145 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from './prerender.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const leftGroups = [
+    {
+      title: "Karate Dojos & Classes in Sapporo",
+      locations: [
+        { label: "Shiroishi Ward", href: "/en/dojo/shiroishi/" },
+        { label: "Atsubetsu Ward", href: "/en/dojo/atsubetsu/" },
+        { label: "Chuo Ward", href: "/en/dojo/cyuo/" },
+        { label: "Toyohira Ward", href: "/en/dojo/toyohira/" },
+        { label: "Kiyota Ward", href: "/en/dojo/minami-kiyota/" },
+        { label: "Higashi Ward", href: "/en/dojo/higashi/" },
+        { label: "Kita Ward", href: "/en/dojo/kita/" },
+        { label: "Minami Ward", href: "/en/dojo/minami-kiyota/" },
+        { label: "Teine Ward", href: "/en/dojo/teine/" },
+        { label: "Nishi Ward", href: "/en/dojo/teine/" },
+        { label: "Private Special Class", href: "/en/dojo/kobetsu/" },
+        { label: "Iaido Division", href: "/en/dojo/iai/" },
+        { label: "Online Karate School", href: "http://seishinryu.info/" },
+        { label: "Taijutsu Health Class", href: "/en/dojo/kenko/" },
+        { label: "Personal Training", href: "/en/dojo/exe/" },
+        { label: "About the Headquarters Dojo", href: "/en/dojo/hq/" },
+        { label: "Inoue Dojo (Inoue-juku)", href: "/en/dojo/inoue/" }
+      ]
+    },
+    {
+      title: "Overseas Dojos",
+      locations: [
+        { label: "Sri Lanka", href: "https://seishinryu.info/iskf/schedule.html" },
+        { label: "India", href: "https://seishinryu.info/iskf/schedule.html" },
+        { label: "Sweden", href: "https://seishinryu.info/iskf/schedule.html" },
+        { label: "Australia", href: "https://seishinryu.info/iskf/schedule.html" },
+        { label: "Argentina", href: "https://seishinryu.info/iskf/schedule.html" }
+      ]
+    }
+  ];
+  const rightGroups = [
+    {
+      title: "Ebetsu / Iwamizawa / Ishikari (Hanakawa)",
+      locations: [
+        { label: "Ebetsu City", href: "/en/dojo/ebetsu/" },
+        { label: "Iwamizawa City", href: "/en/dojo/ebetsu/" },
+        { label: "Ishikari City", href: "/en/dojo/ebetsu/" }
+      ]
+    },
+    {
+      title: "Eniwa (Shimamatsu) / Obihiro",
+      locations: [
+        { label: "Obihiro City", href: "/en/dojo/kitahiro/" },
+        { label: "Eniwa City", href: "/en/dojo/kitahiro/" },
+        { label: "Asahikawa City", href: "/en/dojo/kitahiro/" }
+      ]
+    },
+    {
+      title: "Tobetsu / Naganuma / Kimobetsu / Kyogoku / Hamatonbetsu / Kutchan",
+      locations: [
+        { label: "Tobetsu Town", href: "/en/dojo/tobetsu/" },
+        { label: "Naganuma Town", href: "/en/dojo/tobetsu/" },
+        { label: "Kimobetsu Town", href: "/en/dojo/tobetsu/" },
+        { label: "Kyogoku Town", href: "/en/dojo/tobetsu/" },
+        { label: "Hamatonbetsu Town", href: "/en/dojo/tobetsu/" },
+        { label: "Nanporo / Makkari", href: "/en/dojo/tobetsu/" }
+      ]
+    },
+    {
+      title: "Abira / Niikappu / Shizuoka",
+      locations: [
+        { label: "Abira Town", href: "/en/dojo/abira/" },
+        { label: "Niikappu Town", href: "/en/dojo/abira/" },
+        { label: "Shizuoka & Aichi", href: "/en/dojo/naichi/" }
+      ]
+    },
+    {
+      title: "Associate & Partner Dojos",
+      locations: [
+        { label: "Aozorakai", href: "http://aozorakai.main.jp/" },
+        { label: "Muryu-juku (Chiba)", href: "/en/dojo/naichi/" }
+      ]
+    }
+  ];
+  const columns = [leftGroups, rightGroups];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Dojo List", "description": "Directory of Seishinkai Karate dojos and classes in Sapporo, across Hokkaido, and in Chiba, Japan. Find a dojo near you.", "lang": "en", "path": "/en/dojo/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">Karate Dojos & Classes</h1>
+      </div>
+      <p class="page-intro">
+        These are the karate dojos and classes in each area certified by or affiliated with the Seishinkai Karate Federation. Click an entry to see the list. We are active at more than 80 locations in and around Sapporo. (<a href="/assets/pdf/dojo.pdf" target="_blank">Hokkaido dojo list PDF</a>) (<a href="/assets/pdf/kenko2021.pdf" target="_blank">Taijutsu health class</a>)
+      </p>
+      <p class="page-intro">
+        ※ Venues and practice days may change at short notice when public facilities close or restrict use.
+      </p>
+      <p class="dojo-list__contact">
+        Inquiries: TEL 011-300-0048 (weekdays 1:00 PM–4:00 PM)
+      </p>
+
+      <div class="dojo-list__card-group">
+        ${columns.map((groups, i) => renderTemplate`<div${addAttribute(i === 0 ? "dojo-list__card-left" : "dojo-list__card-right", "class")}>
+              ${groups.map((group) => renderTemplate`<div class="dojo-list__card">
+                  <div class="cards-list__locations">
+                    <h2 class="cards-list__locations-title">${group.title}</h2>
+                    <ul class="cards-list__locations-list">
+                      ${group.locations.map((location) => renderTemplate`<li class="dojo-list__location">
+                          <a class="dojo-list__location-link"${addAttribute(location.href, "href")}${addAttribute(location.href.startsWith("http") ? "_blank" : void 0, "target")}${addAttribute(location.href.startsWith("http") ? "noopener" : void 0, "rel")}>
+                            ${location.label}
+                          </a>
+                        </li>`)}
+                    </ul>
+                  </div>
+                </div>`)}
+            </div>`)}
+      </div>
+
+      <p class="dojo-list__map-link">
+        ★ View karate dojos in and around Sapporo on a map:
+      </p>
+      <div class="dojo-list__map-embed">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1rAno9HwrFRZw9hWdg5c6KHO0BQE&ll=43.05996085602491,141.565931101925&z=11" loading="lazy" title="Seishinkai Karate Dojo Map"></iframe>
+      </div>
+      <p class="dojo-list__note">
+        ※ The dojos listed above are the officially certified branches and related dojos of the Seishinkai Karate Federation.
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/dojo/index.astro";
+const $$url = "/en/dojo";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

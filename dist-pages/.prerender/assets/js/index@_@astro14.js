@@ -1,0 +1,97 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+import { $ as $$BranchInfoCard } from './BranchInfoCard.js';
+import { $ as $$DojoContactSection } from './DojoContactSection.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      marker: "★",
+      name: "札幌中央支部",
+      address: "中央区南2条西15丁目二条はるにれ児童会館(二条小内)",
+      schedule: ["火曜18:30"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "中央区札幌中央支部の空手教室", "description": "札幌市中央区・二条はるにれ児童会館の清心会空手道場・札幌中央支部のご案内。稽古日と会場情報をご紹介します。", "lang": "ja", "path": "/dojo/cyuomainichi/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO</span>
+        <h1 class="section-title">清心会空手道連盟・中央支部</h1>
+      </div>
+
+      <h2 class="detail-page__heading">中央区中央空手教室・清心会札幌中央支部</h2>
+
+      <p class="detail-page__lead">
+        中央空手教室は、平成14年4月に、読売新聞社札幌ビル地下のよみうり文化教室として社会人中心にスタートしました。<br>
+        平成16年、読売ビル改築に伴い毎日新聞社地下へ移転、消防法の関係で使用できなくなり平成21年に南一条ビルへ移転しジュニアクラスを新設、同時に中央区民センターで社会人クラスを継続、平成23年に一本化し区民センターで活動し、平成30年に現在の二条はるにれ児童会館に移転しました。<br>
+        特に親子での参加、シニアクラスの参加者を歓迎します。<br>
+        体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      
+      ${renderComponent($$result2, "BranchInfoCard", $$BranchInfoCard, { "name": "札幌中央支部", "facts": [
+    { label: "設立", value: "平成14年(2002)4月" },
+    { label: "設立者", value: "大久保勝美" },
+    { label: "歴代", value: "室木、前川" },
+    { label: "担当者", value: "本部直轄" }
+  ], "image": {
+    src: "/assets/images/dojo/img_chuoumainichi_bld.jpg",
+    alt: "二条はるにれ児童会館",
+    width: 251,
+    height: 193
+  }, "address": "札幌市中央区南2条西15丁目　二条小学校内(二条はるにれ児童会館)", "addressNote": "二条小学校の中にあります。", "mapHref": "https://www.google.com/maps/place/札幌市立二条小学校/@43.0546877,141.3355023,19z/data=!4m12!1m6!3m5!1s0x5f0b296539865b81:0x2362591de0c135a3!2z6IuX56mC44Gv44KL44Gr44KM5YWQ56ul5Lya6aSo!8m2!3d43.0656597!4d141.3716306!3m4!1s0x5f0b29924b409247:0x82c534a0c088c48b!8m2!3d43.0547571!4d141.3355527", "mapQuery": "43.0546877,141.3355023", "viewOnMapLabel": "Google Mapsで見る" })}
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_chuoumainichi_01.jpg" , alt="中央支部の稽古風景" width="299" height="154" loading="lazy">
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_chuoumainichi_02.jpg" , alt="中央支部の稽古風景" width="299" height="154" loading="lazy">
+        </figure>
+      </div>
+
+      <h2 class="detail-page__heading">中央支部の変遷</h2>
+
+      <div class="detail-gallery">
+        <figure>
+          <img src="/assets/images/dojo/img_chuoumainichi_01-history.jpg" alt="よみうり文化教室(2002-2004)" loading="lazy">
+          <figcaption>よみうり文化教室(2002-2004)</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_chuoumainichi_02-history.jpg" alt="毎日会館(2004-2009)" loading="lazy">
+          <figcaption>毎日会館(2004-2009)</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/images/dojo/img_chuoumainichi_05.jpg" alt="南1条ビル(2009-2011)" width="377" height="242" loading="lazy">
+          <figcaption>南1条ビル(2009-2011)</figcaption>
+        </figure>
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/cyuo/">← 中央区空手道場・教室の一覧へ戻る</a>
+      </p>
+
+      ${renderComponent($$result2, "DojoContactSection", $$DojoContactSection, { "dojoName": "中央支部", "subject": "中央支部体験申込" })}
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/cyuomainichi/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/cyuomainichi/index.astro";
+const $$url = "/dojo/cyuomainichi";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

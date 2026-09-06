@@ -1,0 +1,121 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+import { $ as $$BranchTable } from './BranchTable.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const entries = [
+    {
+      no: 1,
+      marker: "★",
+      name: "真駒内空手クラブ",
+      address: "南区真駒内幸町2丁目2-1　南区民センター集会室等",
+      schedule: ["月曜18:30"],
+      link: "/dojo/makomanai/"
+    },
+    {
+      no: 2,
+      marker: "★",
+      name: "藤野空手クラブ",
+      address: "南区藤野2条7丁目　藤野地区センター",
+      schedule: ["土曜10:00"],
+      link: "/dojo/fujino/"
+    },
+    {
+      no: 3,
+      marker: "★",
+      name: "常盤空手クラブ",
+      address: "南区常盤1条1丁目3-1　常盤団地会館",
+      schedule: ["月曜16:30"],
+      link: "/dojo/tokiwa/"
+    },
+    {
+      no: 4,
+      marker: "★",
+      name: "澄川空手クラブ",
+      address: "豊平区平岸1条22丁目　ビックハウスエクストラ店2F",
+      schedule: ["金曜18:30"],
+      link: "/dojo/sumikawa-n/"
+    },
+    {
+      no: 5,
+      marker: "★",
+      name: "里塚空手クラブ",
+      address: "清田区里塚緑ケ丘10丁目　里塚緑ヶ丘町内会館",
+      schedule: ["金曜18:30(R4.2より)"],
+      link: "/dojo/satozuka/"
+    },
+    {
+      no: 6,
+      marker: "★",
+      name: "平岡空手クラブ",
+      address: "清田区平岡5条1丁目1-40　クラブハウスプラッツ",
+      schedule: ["火曜16:00", "木曜19:00"],
+      link: "/dojo/hiraoka-c/"
+    },
+    {
+      no: 7,
+      marker: "●",
+      name: "SC平岡空手クラブ",
+      address: "清田区平岡3条5丁目　イオン平岡店2F(札幌カルチャー)",
+      schedule: ["土曜9:15"],
+      link: "/dojo/hiraoka-sc/"
+    },
+    {
+      no: 8,
+      marker: "★",
+      name: "南沢空手クラブ",
+      address: "参加者募集中",
+      schedule: ["水曜予定"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "清田区・南区の空手教室", "description": "札幌市清田区・南区の清心会空手道場・教室一覧。真駒内・藤野・常盤・澄川西・里塚・平岡の各クラブの稽古日をご案内します。", "lang": "ja", "path": "/dojo/minami-kiyota/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="dojo-list">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">DOJO LIST</span>
+        <h1 class="section-title">清田区・南区空手道場・教室の一覧</h1>
+      </div>
+      <p class="detail-page__contact">
+        お問い合わせは　TEL.011-300-0048(平日13:00-16:00)
+      </p>
+
+      ${renderComponent($$result2, "BranchTable", $$BranchTable, { "entries": entries })}
+
+      <ul class="detail-legend">
+        <li>
+          <span class="detail-legend__marker">★</span>本部直轄教室=お問い合わせは本部事務局へ
+        </li>
+        <li>
+          <span class="detail-legend__marker">●</span>講師派遣教室=お問い合わせは主催文化教室・スポーツクラブへ
+        </li>
+        <li>
+          <span class="detail-legend__marker">□</span>自主管理道場=事務局又は直接、管理担当者へ
+        </li>
+      </ul>
+
+      <div class="detail-media">
+        <img src="/assets/images/legacy/photo/Image2.jpg" alt="清心会空手 稽古の様子" width="570" height="340" loading="lazy">
+      </div>
+
+      <p class="detail-page__back">
+        <a href="/dojo/">← 空手道場・教室の一覧へ戻る</a>
+      </p>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/minami-kiyota/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/dojo/minami-kiyota/index.astro";
+const $$url = "/dojo/minami-kiyota";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

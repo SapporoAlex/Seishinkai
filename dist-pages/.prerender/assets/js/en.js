@@ -1,0 +1,10 @@
+const site = {"name":"Seishinkai Karate","fullName":"All Japan Seishinkai Karate Federation","defaultTitle":"Seishinkai Karate | Karate Dojos in Sapporo & Hokkaido, Japan","description":"Official website of the All Japan Seishinkai Karate Federation. Karate dojos for children and adults in Sapporo and across Hokkaido — training schedules, membership guide, dojo directory, and instructors.","logoAlt":"Seishinkai Karate logo","titleSeparator":" | ","areaServed":"Hokkaido, Japan"};
+const header = {"brand":"Seishinkai","nav":[{"label":"Home","href":"/en/"},{"label":"About","href":"/en/about/"},{"label":"Schedule","href":"/en/schedule/"},{"label":"Membership","href":"/en/membership/"},{"label":"Instructors","href":"/en/instructors/"},{"label":"Dojo List","href":"/en/dojo/"},{"label":"News & SNS","href":"/en/news/"},{"label":"Links & Partners","href":"/en/links-partners/"}]};
+const footer = {"text":"Copyright© 1995-2026 All Japan Seishinkai Karate Federation All Rights Reserved."};
+const en = {
+  site,
+  header,
+  footer,
+};
+
+export { en as default, footer, header, site };

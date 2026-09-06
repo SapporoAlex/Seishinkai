@@ -1,0 +1,398 @@
+import { c as createComponent, $ as $$BaseLayout } from './BaseLayout.js';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate, m as maybeRenderHead } from './prerender.js';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "About Seishinkai", "description": "Overview and history of the All Japan Seishinkai Karate Federation (Seishinkai Karate) — its founding, milestones, and activities across Hokkaido, Japan.", "lang": "en", "path": "/en/about/" }, { "default": ($$result2) => renderTemplate`
+  ${maybeRenderHead()}<section class="about">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">ABOUT</span>
+        <h1 class="section-title">About Seishinkai</h1>
+      </div>
+      <div class="page-intro">
+        <p>
+          Seishinkai grew out of the Seishinkan Okubo Dojo, founded in 1986 after the passing of the first Soke (originally the Seishin-ryu Karate Sapporo Branch, established in 1976 under Branch Chief Katsumi Okubo). In February 2004 it was incorporated with the approval of the Governor of Hokkaido, becoming Hokkaido's first registered non-profit (NPO) karate organization.
+        </p>
+        <p>
+          Official registered name: Specified Nonprofit Corporation "<a href="https://ja.wikipedia.org/wiki/全日本清心会" target="_blank" rel="noopener">All Japan Seishinkai</a>". Activities include karate classes, international exchange, and support for karate exchange students.
+        </p>
+        <p>
+          ※ We also host long- and short-term international karate students, and offer karate and iaido experiences for visitors from overseas.
+        </p>
+      </div>
+      <div class="about__timeline">
+      <div class="section__title-area">
+        <h2 class="section-title lg">History</h2>
+      </div>
+        <div class="accordion">
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item1">
+              <span>Founding & Formation (1957–1986)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item1">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li>
+                    <span class="about__timeline-date">1957</span>
+                      Soke Kazuo Kikuchi founds Seishin-ryu (karate, iaido, jujutsu, and jojutsu) in Mita, Tokyo
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1976</span>
+                      The Seishin-ryu Sapporo Branch is launched<br>
+                      (<a href="/en/about/okubo/">Katsumi Okubo</a> is appointed branch chief by Soke Kazuo Kikuchi)
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1983</span>
+                    Founder Soke Kazuo Kikuchi passes away
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1986</span>
+                    With the support of patron Yoshihiko Watanabe, the Seishinkan Okubo Dojo (Seishin-ryu Okubo-ha) is established
+                  </li>
+                </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure">
+                    <a href="https://ja.wikipedia.org/wiki/菊地和雄" target="_blank" rel="noopener">
+                      <img src="/assets/images/about/kikuchi.jpg" alt="Kazuo Kikuchi, founder of Seishin-ryu" loading="lazy">
+                    </a>
+                    <figcaption>Kazuo Kikuchi, founder of Seishin-ryu<br>(founded the style in Mita, Tokyo, 1957)</figcaption>
+                  </figure>
+                  <figure class="about__timeline-figure">
+                    <a href="https://ja.wikipedia.org/wiki/本部朝基" target="_blank" rel="noopener">
+                      <img src="/assets/images/about/motobu.jpg" alt="Choki Motobu, founder of Motobu Kenpo" loading="lazy">
+                    </a>
+                    <figcaption>Choki Motobu, founder of Motobu Kenpo<br>(a master revered by Seishinkai as a forerunner)</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item2">
+              <span>Growth Across Hokkaido (1987–2003)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item2">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li>
+                    <span class="about__timeline-date">1987</span>
+                    First Seishinkai Karate Tournament
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1990</span>
+                    Sapporo East Branch founded with the support of <a href="https://www.san-ai-jikou.co.jp/index.php" target="_blank" rel="noopener">San-ai Auto Industries</a>
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1992</span>
+                    Hokuto Branch founded with the support of alumni president Masami Koyano
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1993–</span>
+                    Branches open across the region: Atsubetsu, Asabu, Tsukisamu, Okushiri Island, and more
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">1995</span>
+                    Seishinkan website launched
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2000</span>
+                    <a href="http://seishinryu.info/" target="_blank" rel="noopener">Online karate school</a> opens
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2002</span>
+                    Yamanashi Branch (Minobusan University karate club) and Shizuoka Branch founded<br>
+                    Headquarters relocates to Higashi-Sapporo
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2003</span>
+                    With over 20 branches, application submitted to the Governor of Hokkaido for NPO certification
+                  </li>
+                </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure">
+                    <a href="https://ja.wikipedia.org/wiki/室木洋一" target="_blank" rel="noopener">
+                      <img src="/assets/images/about/muro.jpg" alt="Prof. Yoichi Muroki of Hokkaido University" loading="lazy">
+                    </a>
+                    <figcaption>Prof. Yoichi Muroki, Hokkaido University<br>(Seishinkai technical advisor, 1927–2003)</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item3">
+              <span>Incorporation & National Organization (2004–2011)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item3">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li>
+                    <span class="about__timeline-date">2004</span>
+                    Registered as the Specified Nonprofit Corporation "All Japan Seishinkai"
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2005</span>
+                    The former Seishin-ryu Hayakita Branch (Seishinkan Takahashi Dojo) joins<br>
+                    New headquarters dojo "Shiroishi Seishinkan" opens; <a href="/en/dojo/iai/">Iaido division</a> founded
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2006</span>
+                    Hokushinkai of Niikappu (Shihan Hitoshi Takano) joins
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2007</span>
+                    Kimobetsu Branch founded; short-term exchange students first accepted
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2008</span>
+                    Muryu-juku of Chiba (Shihan Taro Shinozaki) joins
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2009</span>
+                    Surpassing 70 branches, the All Japan Seishinkai Karate Federation is established
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2010</span>
+                    Permanent dojo Oasa Seishinkan opens; full acceptance of live-in karate students (uchideshi) begins
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2011</span>
+                    First overseas branch opens in Sri Lanka; permanent dojo Hondori Seishinkan opens
+                  </li>
+                </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure">
+                    <a href="/en/about/okubo/">
+                      <img src="/assets/images/about/okubo.jpg" alt="Katsumi Okubo, founder of Seishin-ryu Kenpo Karate-do and ISKF Soke" loading="lazy">
+                    </a>
+                    <figcaption>Katsumi Okubo<br>Founder of Seishin-ryu Kenpo Karate-do, ISKF President & Soke</figcaption>
+                  </figure>
+                  <figure class="about__timeline-figure-wide">
+                    <a href="/en/about/okubo/">
+                      <img src="/assets/images/about/img_seishinkai-Federation_logo.jpg" alt="FEDERATION LOGO MARK" loading="lazy">
+                    </a>
+                    <figcaption>FEDERATION LOGO MARK</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item4">
+              <span>Going International (2012–2019)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item4">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li>
+                    <span class="about__timeline-date">2012</span>
+                    With over 120 branches in Japan and abroad, the Seishin-ryu International Karate Federation (ISKF) is established<br>
+                    "Seishin-ryu Karate-do Seishinkai" and its logo are trademark-registered<br>
+                    Headquarters dojo opens in Sakaedori, Shiroishi-ku, with the Seishinkai karate archive room<br>
+                    Hokkaido's first female dojo director (Shihan <a href="/en/instructors/mimura/">Kayoko Mimura</a>) takes office
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2013</span>
+                    Fukuoka Branch founded; branches and partner dojos expand overseas, including India<br>
+                    From this year on, masters from overseas visit the headquarters annually — full-scale international karate exchange begins
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2014</span>
+                    Seishinkan Yamamoto Training Center established
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2015</span>
+                    Official style name set as "Seishin-ryu Kenpo Karate-do"
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2016</span>
+                    Seishinkai memorial monument erected<br>
+                    Permanent dojo "Chuo-Higashi Dojo" (Chuo-Higashi Branch) opens
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2017</span>
+                    Kyogoku Branch, Ishikari Ryokuendai Branch, and others founded
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2018</span>
+                    Hondori Seishinkan renovated (dojo space doubled)<br>
+                    Acacia, Nango (Lucy), and Chuo-Minami branches founded
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2019</span>
+                    Makomanai Branch and Pakistan Branch founded
+                  </li>
+                </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure -wide">
+                    <a href="/en/dojo/hq/">
+                      <img src="/assets/images/about/honbu.jpg" alt="Headquarters dojo" loading="lazy">
+                    </a>
+                    <figcaption>The headquarters dojo (opened 2012)<br>approx. 660 m² — the largest permanent dojo in Hokkaido</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__button" data-accordion-trigger="item5">
+              <span>Succession & New Era (2020–present)</span>
+              <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion__panel" data-accordion-panel="item5">
+              <div class="accordion__content about__timeline-content">
+                <ul>
+                  <li>
+                    <span class="about__timeline-date">2020</span>
+                    In response to COVID-19, <a href="http://seishinryu.info/" target="_blank" rel="noopener">online karate classes</a> begin in earnest (group and <a href="/en/dojo/kobetsu/">one-on-one</a>).<br>
+                    Bangladesh and Nepal branches founded.<br>
+                    Shihan <a href="/en/about/tubasa/">Tsubasa Okubo</a> succeeds as headquarters director and 2nd-generation ISKF Soke.<br>
+                    The federation is renamed the All Japan Seishinkai Karate & Kobudo Federation, and the international organization the Seishin-ryu Karate & Kobudo Federation.
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2021</span>
+                    <a href="/en/dojo/kenko/">Taijutsu health exercise classes</a> begin. Website visitors since 1995 pass 1.5 million (December).<br>
+                    Total enrollment since 1986 passes 7,000.
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2022</span>
+                    Cumulative enrollment reaches 7,444 (as of Dec 17, 2022)
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2023</span>
+                    Permanent dojo "<a href="/en/dojo/inoue/">Inoue Dojo</a>" completed!<br>
+                    Sweden expedition (Director Tsubasa Okubo)<br>
+                    Hamatonbetsu Branch founded
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2024</span>
+                    Australia Branch founded
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2025</span>
+                    Total enrollment since founding passes 8,000 (as of Mar 30, 2025)<br>
+                    Argentina Branch and Toyota club founded
+                  </li>
+                  <li>
+                    <span class="about__timeline-date">2026</span>
+                    New Zealand Branch founded; four branches in India, 62 dojos overseas (over 2,700 members).
+                  </li>
+                </ul>
+                <div class="about__timeline-images">
+                  <figure class="about__timeline-figure">
+                    <a href="/en/about/tubasa/">
+                      <img src="/assets/images/about/at16.jpg" alt="Tsubasa Okubo, headquarters director and 2nd-generation Soke" loading="lazy">
+                    </a>
+                    <figcaption>Tsubasa Okubo, Headquarters Director<br>(Acting ISKF President / 2nd-generation Soke, since 2020)</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about__info">
+        <div class="section__title-area">
+          <h2 class="section-title lg">Organization</h2>
+        </div>
+        <table class="about__info-table table">
+          <tr><th>Organization</th><td>Seishinkai<br>
+          ※ "Seishin-ryu Karate-do Seishinkai" and its logo are registered trademarks.</td></tr>
+          <tr><th>Style</th><td>Seishin-ryu Kenpo Karate-do (Okubo-ha Seishin-ryu)</td></tr>
+          <tr><th>Dojos</th><td>Permanent dojos under direct headquarters control, named "Seishinkan" (with regional prefixes):
+            Seishinkan Headquarters (Sakaedori Seishinkan), Hondori Seishinkan, Oasa Seishinkan, Seishinkan Yamamoto Training Center.
+            Certified dojos: <a href="http://sumiyoshijuku.org/" target="_blank" rel="noopener">Sumiyoshi-juku</a>, <a href="/en/dojo/inoue/">Inoue Dojo</a>, Hokureikai (Misawa-ji Dojo). Member dojos: Seishinkan Takahashi Dojo, Hokushinkai.
+            Associate/partner dojos: Aozorakai, Muryu-juku.
+            ※ The dojos listed on our Dojo List page are the officially certified branches, classes, and clubs of the federation.</td></tr>
+        </table>
+        <div class="section__title-area">
+          <h2 class="section-title lg">Seishin-ryu Kenpo Karate-do (ISKF)</h2>
+        </div>
+        <table class="about__info-table table">
+          <tr><th>Founding</th><td>Created by Katsumi Okubo, former head of the Seishin-ryu Sapporo Branch, drawing on his experience of town dojos, university karate clubs, Okinawan kobudo, JSDF hand-to-hand combat, and jujutsu. Strongly influenced by the late Prof. Yoichi Muroki of Hokkaido University — a specialist in developmental and exercise physiology (karate kyoshi, judo shihan, and advisor to the Daito-ryu Aiki-jujutsu Kodokai) — the style emphasizes karate for <a href="/en/dojo/kenko/">health</a> and physical education.</td></tr>
+          <tr><th>Kata</th><td>Bogyo kiso-kata, Ho-kata (4), Taikyoku (3), Pinan (5), Taisabaki (3), Naihanchin, Seiryu, Passai, Seienchin, Seishan, Kusanku, Shinpa, Wanshu, and others</td></tr>
+          <tr><th>Kumite</th><td>9 basic yakusoku kumite, single-form and multi-form kumite, bunkai kumite, kumite-gata I & II</td></tr>
+          <tr><th>Kobudo</th><td>Weapons arts including sai, tonfa, and iaido, plus self-defense jujutsu</td></tr>
+          <tr><th>Competition</th><td>Officially uses <a href="https://ja.wikipedia.org/wiki/防具付き空手" target="_blank" rel="noopener">protective-gear (bogu)</a> rules.<br>
+            ※ Branches are free to take part in regional/JKF (sundome) and full-contact federation events.</td></tr>
+          <tr>
+            <th>Patches</th>
+            <td>
+              <div class="u-col about__images">
+                <div class="about__image-case">
+                  <div class="about__image-case-set">
+                    <img src="/assets/images/img_wappen_01.jpg" alt="Round embroidered Seishin-ryu karate patch">
+                    <small>8 cm round patch</small>
+                  </div>
+                  <div class="about__image-case-set">
+                    <img src="/assets/images/img_wappen_02.jpg" alt="Rectangular Seishin-ryu karate patch">
+                    <small>5 cm × 6.5 cm sleeve patch</small>
+                  </div>
+                  <div class="about__image-case-set">
+                    <div class="u-row">
+                      <img src="/assets/images/img_wappen_03.jpg" alt="Seishin-ryu brush calligraphy">
+                      <img src="/assets/images/img_wappen_04.jpg" alt="Seishinkai brush calligraphy">
+                    </div>
+                    <small>Chest embroidery</small>
+                  </div>
+                </div>
+
+                <small>
+                  Certified dojos may also carry
+                  dojo-name embroidery.
+                </small>
+                <small>
+                  ※ The logo mark shown is a
+                  <a href="https://www.j-platpat.inpit.go.jp/c1801/TR/JP-2013-057276/40/ja" target="_blank" rel="noopener">registered trademark</a> (application no. 2013-057276).
+                </small>
+
+                  ※ Some groups descended from the former Seishin-ryu use similar logos, but any dojo not on our
+                  branch list is a separate organization unrelated to this federation. We have held the trademark since 2012,
+                  though legitimate dojos certified by the first Soke are not restricted from using it (his family has
+                  stated that Seishin-ryu belongs to all students of the Kikuchi Soke, and we respect that wish).
+
+              </div>
+            </td>
+          </tr>
+          <tr><th>Uniform</th><td>Original made-to-order karate-gi, cut and sewn to our own design (unlike off-the-shelf gi)<br>
+          ※ Available through Fujido Sports and Toyo Budogu</td></tr>
+        </table>
+        <p class="detail-page__note about__trademark-note">
+          ※ Full trademark registration details for "Seishin-ryu Karate-do Seishinkai" and its logo can be viewed on J-PlatPat (Japan Platform for Patent Information) — <a href="https://www.j-platpat.inpit.go.jp/c1801/TR/JP-2013-057276/40/ja" target="_blank" rel="noopener">trademark record, application no. 2013-057276</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+` })}`;
+}, "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/about/index.astro", void 0);
+
+const $$file = "C:/Users/McKinley Alex/Documents/GitHub/Seishinkai/src/pages/en/about/index.astro";
+const $$url = "/en/about";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
