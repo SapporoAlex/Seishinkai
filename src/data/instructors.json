@@ -222,18 +222,6 @@
         "note": "※各師範・支部長は就労後、ボランティアとして清心会活動に参加しています(順不同)",
         "members": [
           {
-            "id": "noro",
-            "image": "/assets/images/instructors/noro.jpg",
-            "name": "野呂",
-            "role": "",
-            "position": "",
-            "date": "",
-            "prefecture": "",
-            "profession": "",
-            "details": [],
-            "tags": []
-          },
-          {
             "id": "rui",
             "image": "/assets/images/instructors/rui.jpg",
             "name": "瑠唯",
