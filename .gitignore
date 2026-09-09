@@ -1,10 +1,13 @@
 node_modules/
+dist-pages/
+dist/
 .DS_Store
 .env
 .env.*
 npm-debug.log*
 .vscode/
 .idea/
+
 
 # Real newsletter Basic Auth credentials — generate locally and upload to
 # the server directly, never via git (this repo is public). See
