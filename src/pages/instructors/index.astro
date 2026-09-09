@@ -3,6 +3,12 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import ProfileCard from "@components/ProfileCard.astro";
 import sections from "@data/instructors.json";
 import beltLevels from "@data/belt-levels.json";
+
+// The overseas instructors get their own section below the tables, separate
+// from the domestic listings, so pull that group out of its parent section.
+const foreignGroups = sections.flatMap((section) =>
+  section.groups.filter((group) => group.id === "foreign"),
+);
 ---
 
 <BaseLayout
@@ -30,7 +36,9 @@ import beltLevels from "@data/belt-levels.json";
               )}
             </h2>
 
-            {section.groups.map((group) => (
+            {section.groups
+              .filter((group) => group.id !== "foreign")
+              .map((group) => (
               <div class="instructors__group">
                 {group.title && (
                   <h3 class="instructors__subsection-title">{group.title}</h3>
@@ -91,6 +99,33 @@ import beltLevels from "@data/belt-levels.json";
           </tbody>
         </table>
       </div>
+
+      {
+        foreignGroups.map((group) => (
+          <div class="instructors__category">
+            <h2 class="instructors__category-title">{group.title}</h2>
+            {group.note && <p class="instructors__note">{group.note}</p>}
+
+            <div class="instructors__grid">
+              {group.members.map((member) => (
+                <ProfileCard
+                  id={member.id}
+                  image={member.image}
+                  name={member.name}
+                  role={member.role}
+                  position={member.position}
+                  date={member.date}
+                  prefecture={member.prefecture}
+                  profession={member.profession}
+                  details={member.details}
+                  tags={member.tags}
+                  link={member.link}
+                />
+              ))}
+            </div>
+          </div>
+        ))
+      }
     </div>
   </section>
 </BaseLayout>

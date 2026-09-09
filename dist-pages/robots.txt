@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://seishinkan.ne.jp/sitemap-index.xml

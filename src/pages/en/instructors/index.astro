@@ -67,7 +67,23 @@ const NAMES: Record<string, string> = {
   "髙橋 剛": "Go Takahashi",
   "高野 均": "Hitoshi Takano",
   "高橋るみこ": "Rumiko Takahashi",
-  "ササラシン": "Sasarashin"
+  "ササラシン": "Sasarashin",
+  "ハシニ": "Hashini",
+  "サハン": "Sahan",
+  "滝上ゆか": "Yuka Takigami",
+  "前嶋智": "Satoshi Maejima",
+  "大場りお": "Rio Oba",
+  "野呂和矢": "Kazuya Noro",
+  "青木和也": "Kazuya Aoki",
+  "三枝正樹": "Masaki Saegusa",
+  "三枝篤史": "Atsushi Saegusa",
+  "ケン": "Ken",
+  "ダレン": "Darren",
+  "グレッグ": "Greg",
+  "ゴンドラ": "Gondola",
+  "アジュ": "Aju",
+  "アンソニー": "Anthony",
+  "ジャピ": "Japi"
 };
 
 const POSITIONS: Record<string, string> = {
@@ -84,6 +100,7 @@ const POSITIONS: Record<string, string> = {
   初段: "1st Dan",
   二段: "2nd Dan",
   三段: "3rd Dan",
+  支部長: "Branch Chief",
 };
 
 const ROLES: Record<string, string> = {
@@ -106,6 +123,22 @@ const PREFECTURES: Record<string, string> = {
   安平町: "Abira",
   新冠町: "Niikappu",
   愛知県: "Aichi",
+  井上道場: "Inoue Dojo",
+  静岡県: "Shizuoka",
+  浜頓別町: "Hamatonbetsu",
+  帯広市: "Obihiro",
+  髙橋道場: "Takahashi Dojo",
+  北新会: "Hokushinkai",
+  住吉塾: "Sumiyoshi-juku",
+  阿寒町: "Akan",
+  長沼町: "Naganuma",
+  スリランカ: "Sri Lanka",
+  インド: "India",
+  オーストラリア: "Australia",
+  "ケイマン諸島/カナダ": "Cayman Islands / Canada",
+  アルゼンチン: "Argentina",
+  ニュージーランド: "New Zealand",
+  フィリピン: "Philippines",
 };
 
 const PROFESSIONS: Record<string, string> = {
@@ -136,6 +169,10 @@ const PROFESSIONS: Record<string, string> = {
   公務員: "Civil servant",
   客員教授: "Visiting Professor",
   保育士: "Childcare worker",
+  趣味の学習塾: "Cram school operator (hobby)",
+  医療関係: "Medical field",
+  調理師: "Chef",
+  会社役員: "Company executive",
 };
 
 const TAGS: Record<string, string> = {
@@ -167,6 +204,7 @@ const SECTION_TITLES: Record<string, string> = {
     "ISKF All Japan Seishinkai Karate Federation — Honorary Hanshi",
   "ISKF全日本清心会空手道連盟 支部長・師範・指導員":
     "ISKF All Japan Seishinkai Karate Federation — Masters, Branch Chiefs & Instructors",
+  海外師範・支部長: "Overseas Masters & Branch Chiefs",
 };
 
 const GROUP_TITLES: Record<string, string> = {
@@ -174,17 +212,24 @@ const GROUP_TITLES: Record<string, string> = {
   本部指導員: "Headquarters Instructors",
   指導員: "Instructors",
   "内弟子・内弟子見習い": "Uchideshi (Live-in Students) & Trainees",
+  "支部長(師範・師範補・師範代)":
+    "Branch Chiefs (Shihan / Assistant Shihan / Deputy Shihan)",
+  "支部長・指導員など": "Branch Chiefs, Instructors & Others",
   "師範・支部長・指導員・助教":
     "Masters, Branch Chiefs, Instructors & Assistants",
 };
 
 const NOTES: Record<string, string> = {
+  "自営業の就労後及び定年退職後のボランティア指導員として清心会活動に参加しています(順不同)":
+    "Self-employed instructors take part in Seishinkai activities as volunteer instructors after their work day, and retired instructors do so after retirement (in no particular order)",
   "※各師範・支部長は就労後、ボランティア指導員として清心会活動に参加しています(順不同)":
     "※ Masters and branch chiefs take part in Seishinkai activities as volunteer instructors outside their regular work (in no particular order)",
   "※各師範・支部長は就労後、ボランティア指導員として交代で清心会本部・支部活動に参加しています(順不同)":
     "※ Masters and branch chiefs take turns volunteering as instructors, taking part in headquarters and branch activities outside their regular work (in no particular order)",
   "※各師範・支部長は就労後、ボランティアとして清心会活動に参加しています(順不同)":
     "※ Masters and branch chiefs take part in Seishinkai activities as volunteers outside their regular work (in no particular order)",
+  "※就労後、ボランティア指導員として清心会活動に参加しています(順不同)":
+    "※ Instructors take part in Seishinkai activities as volunteers outside their regular work (in no particular order)",
   "※すべての有段者、指導員等を掲載しているわけではありません。掲載は順不同です。":
     "※ Not all dan holders and instructors are listed. Listing is in no particular order.",
 };
@@ -207,6 +252,12 @@ const t = (dict: Record<string, string>, value: string) =>
 // external links (Facebook, other dojo sites) are used as-is.
 const localizeLink = (link?: string) =>
   link && link.startsWith("/") ? `/en${link}` : link;
+
+// The overseas instructors get their own section below the tables, separate
+// from the domestic listings, so pull that group out of its parent section.
+const foreignGroups = sections.flatMap((section) =>
+  section.groups.filter((group) => group.id === "foreign"),
+);
 ---
 
 <BaseLayout
@@ -229,7 +280,9 @@ const localizeLink = (link?: string) =>
               {t(SECTION_TITLES, section.title)}
             </h2>
 
-            {section.groups.map((group) => (
+            {section.groups
+              .filter((group) => group.id !== "foreign")
+              .map((group) => (
               <div class="instructors__group">
                 {group.title && (
                   <h3 class="instructors__subsection-title">
@@ -296,6 +349,38 @@ const localizeLink = (link?: string) =>
           </tbody>
         </table>
       </div>
+
+      {
+        foreignGroups.map((group) => (
+          <div class="instructors__category">
+            <h2 class="instructors__category-title">
+              {t(SECTION_TITLES, group.title)}
+            </h2>
+            {group.note && (
+              <p class="instructors__note">{t(NOTES, group.note)}</p>
+            )}
+
+            <div class="instructors__grid">
+              {group.members.map((member) => (
+                <ProfileCard
+                  id={member.id}
+                  image={member.image}
+                  name={t(NAMES, member.name)}
+                  role={t(ROLES, member.role)}
+                  position={t(POSITIONS, member.position)}
+                  date={member.date}
+                  prefecture={t(PREFECTURES, member.prefecture)}
+                  profession={t(PROFESSIONS, member.profession)}
+                  details={member.details.map((d) => t(DETAILS, d))}
+                  tags={member.tags.map((tag) => t(TAGS, tag))}
+                  link={localizeLink(member.link)}
+                  lang="en"
+                />
+              ))}
+            </div>
+          </div>
+        ))
+      }
     </div>
   </section>
 </BaseLayout>
