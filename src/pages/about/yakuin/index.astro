@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { positive } from "astro:schema";
 
 const IMG = "/assets/images/legacy/komon/";
 const CLUBU = "/assets/images/legacy/clubu/";
@@ -89,9 +90,42 @@ const kancho = [
       </div>
 
       <h2 class="detail-page__heading">全日本清心会空手道連盟・相談役</h2>
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--tall">
         {
           advisors.map((p) => (
+            p.href ? (
+            <figure>
+              <a href={p.href} target="_blank" rel="noopener">
+                <img src={p.image} alt={p.name} loading="lazy" />
+              </a>
+              <figcaption>
+                {p.name}
+                <br />
+                {p.role}
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener"
+                    class:list={{
+                      "logo-youtube": p.href.includes("youtube"),
+                      "logo-facebook": p.href.includes("facebook"),
+                    }}
+                  >
+                    {p.href.includes("facebook") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+                      </svg>
+                    )}
+
+                    {p.href.includes("youtube") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
+                      </svg>
+                    )}
+                  </a>
+              </figcaption>
+            </figure>
+            ) : (
             <figure>
               <a href={p.href} target="_blank" rel="noopener">
                 <img src={p.image} alt={p.name} loading="lazy" />
@@ -102,14 +136,54 @@ const kancho = [
                 {p.role}
               </figcaption>
             </figure>
+            )
           ))
         }
       </div>
 
       <h2 class="detail-page__heading">全日本清心会空手道連盟・顧問</h2>
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--tall">
         {
           advisors2.map((p) => (
+            p.href ? (
+            <figure>
+              {p.href ? (
+                <a href={p.href} target="_blank" rel="noopener">
+                  <img src={p.image} alt={p.name} loading="lazy" />
+                </a>
+              ) : (
+                <img src={p.image} alt={p.name} loading="lazy" />
+              )}
+              <figcaption>
+                {p.title}
+                <br />
+                {p.name}
+                <br />
+                {p.role}
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener"
+                    class:list={{
+                      "logo-youtube": p.href.includes("youtube"),
+                      "logo-facebook": p.href.includes("facebook"),
+                    }}
+                  >
+                    {p.href.includes("facebook") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+                      </svg>
+                    )}
+
+                    {p.href.includes("youtube") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
+                      </svg>
+                    )}
+                  </a>
+              </figcaption>
+            </figure>
+            ) : (
             <figure>
               {p.href ? (
                 <a href={p.href} target="_blank" rel="noopener">
@@ -126,12 +200,13 @@ const kancho = [
                 {p.role}
               </figcaption>
             </figure>
+            )
           ))
         }
       </div>
 
       <h2 class="detail-page__heading">全日本清心会空手道連盟・医学顧問</h2>
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--tall">
         {
           medicalAdvisors.map((p) => (
             <figure>
@@ -139,6 +214,27 @@ const kancho = [
                 <a href={p.href} target="_blank" rel="noopener">
                   <img src={p.image} alt={p.name} loading="lazy" />
                 </a>
+                <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener"
+                    class:list={{
+                      "logo-youtube": p.href.includes("youtube"),
+                      "logo-facebook": p.href.includes("facebook"),
+                    }}
+                  >
+                    {p.href.includes("facebook") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+                      </svg>
+                    )}
+
+                    {p.href.includes("youtube") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
+                      </svg>
+                    )}
+                  </a>
               ) : (
                 <img src={p.image} alt={p.name} loading="lazy" />
               )}
@@ -157,7 +253,7 @@ const kancho = [
       </div>
 
       <h2 class="detail-page__heading">清心会後援会</h2>
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--tall">
         {
           koenkai.map((p) => (
             <figure>
@@ -165,6 +261,27 @@ const kancho = [
                 <a href={p.href} target="_blank" rel="noopener">
                   <img src={p.image} alt={p.title} loading="lazy" />
                 </a>
+                <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener"
+                    class:list={{
+                      "logo-youtube": p.href.includes("youtube"),
+                      "logo-facebook": p.href.includes("facebook"),
+                    }}
+                  >
+                    {p.href.includes("facebook") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+                      </svg>
+                    )}
+
+                    {p.href.includes("youtube") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
+                      </svg>
+                    )}
+                  </a>
               ) : (
                 <img src={p.image} alt={p.title} loading="lazy" />
               )}
@@ -183,7 +300,7 @@ const kancho = [
       </div>
 
       <h2 class="detail-page__heading">清心館道場OB会</h2>
-      <div class="detail-gallery">
+      <div class="detail-gallery detail-gallery--tall">
         {
           obKai.map((p) => (
             <figure>
@@ -196,6 +313,27 @@ const kancho = [
                 {p.orgHref ? (
                   <a href={p.orgHref} target="_blank" rel="noopener">
                     {p.org}
+                  </a>
+                <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener"
+                    class:list={{
+                      "logo-youtube": p.href.includes("youtube"),
+                      "logo-facebook": p.href.includes("facebook"),
+                    }}
+                  >
+                    {p.href.includes("facebook") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+                      </svg>
+                    )}
+
+                    {p.href.includes("youtube") && (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
+                      </svg>
+                    )}
                   </a>
                 ) : (
                   p.org

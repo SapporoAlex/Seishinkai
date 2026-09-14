@@ -1,14 +1,23 @@
 .logo-youtube svg {
   position: absolute;
-  bottom: 10px;
-  width: 20%;
+  top: 10px;
+  left: 10px;
+  width: 15%;
   height: auto;
+  z-index: 10;
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px;
 }
 
 .logo-facebook svg {
   position: absolute;
-  bottom: 10px;
-  width: 20%;
+  top: 10px;
+  left: 10px;
+  width: 15%;
   height: auto;
   z-index: 10;
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px;
 }
