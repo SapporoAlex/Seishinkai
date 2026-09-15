@@ -7,7 +7,7 @@ import DojoContactSection from "@components/DojoContactSection.astro";
 const entries = [
   {
     marker: "#",
-    name: "石狩緑苑台空手クラブ",
+    name: "石狩空手クラブ",
     address: "石狩市緑苑台東2条1丁目 緑苑台グリーン会館",
     schedule: ["土曜15:30"],
   },
@@ -15,8 +15,8 @@ const entries = [
 ---
 
 <BaseLayout
-  title="石狩市緑苑台空手教室"
-  description="石狩市緑苑台の清心会空手道場・教室のご案内。緑苑台グリーン会館を会場にしたジュニア空手・親子空手中心の空手クラブ、稽古日と会場情報をご紹介します。"
+  title="石狩空手教室"
+  description="石狩市の清心会空手道場・教室のご案内。緑苑台グリーン会館を会場にしたジュニア空手・親子空手中心の空手クラブ、稽古日と会場情報をご紹介します。"
   lang="ja"
   path="/dojo/ryoku/"
 >
@@ -24,13 +24,14 @@ const entries = [
     <div class="page-container">
       <div class="section__title-area">
         <span class="section-label">DOJO</span>
-        <h1 class="section-title">清心会空手道連盟・花川東・緑苑台支部</h1>
+        <h1 class="section-title">清心会空手道連盟・石狩支部</h1>
       </div>
 
-      <h2 class="detail-page__heading">石狩市花川東空手教室・清心会緑苑台支部</h2>
+      <h2 class="detail-page__heading">石狩市空手教室・清心会石狩支部</h2>
 
       <p class="detail-page__lead">
-        花川東・緑苑台空手教室は、平成30年3月に、緑苑台グリーン会館を会場にして設立されました。<br />
+        石狩空手教室は、平成30年3月に、緑苑台グリーン会館を会場に花川東・緑苑台空手教室として設立されました<br />
+        令和８年８月に石狩市内の花川支部と統合して、石狩支部となりました。<br />
         ジュニア空手と親子空手中心の空手クラブです。<br />
         特に親子での参加、シニアクラスの参加者を歓迎します。<br />
         体育会系部活の延長線上のような道場が多い中、健康・体育の空手としてサークル感覚で楽しく練習して学ぶことを目指しています。
@@ -39,7 +40,7 @@ const entries = [
       <BranchTable entries={entries} />
 
       <BranchInfoCard
-        name="花川東・緑苑台支部"
+        name="石狩支部"
         facts={[
           { label: "設立", value: "平成30年(2018)3月" },
           { label: "設立者", value: "室木拓士" },
