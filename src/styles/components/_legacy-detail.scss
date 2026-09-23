@@ -17,13 +17,13 @@
 
     a {
       color: var(--red);
-      font-weight: 600;
+      font-weight: 500;
       text-decoration: underline;
     }
   }
 
   &__contact {
-    font-weight: 600;
+    font-weight: 500;
     color: var(--navy);
     margin-bottom: 32px;
     @include mqsp {
@@ -187,7 +187,7 @@
 
     dt {
       flex: 0 0 3.5rem;
-      font-weight: 600;
+      font-weight: 500;
       color: var(--red);
       letter-spacing: 0.02em;
       @include mqsp {
@@ -214,7 +214,8 @@
 
     a {
       color: var(--navy);
-      font-weight: 600;
+      font-weight: 500;
+      text-decoration: underline;
 
       &:hover {
         color: var(--blue);
@@ -270,7 +271,7 @@
     figcaption {
       font-size: 0.8rem;
       color: var(--navy);
-      font-weight: 600;
+      font-weight: 500;
       text-align: center;
       line-height: 1.4;
     }
@@ -300,7 +301,7 @@
     background: rgba(13, 37, 69, 0.85);
     color: #fff;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 999px;
     text-decoration: none;
     backdrop-filter: blur(2px);
@@ -308,6 +309,7 @@
 
     &:hover {
       background: var(--red);
+      color: #fff;
     }
   }
 }
@@ -390,7 +392,7 @@
 
   &__marker {
     color: var(--red);
-    font-weight: 600;
+    font-weight: 500;
     margin-right: 4px;
   }
 }
@@ -996,7 +998,7 @@
 .profile-detail {
   &__role {
     color: var(--red);
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 8px;
   }
@@ -1052,7 +1054,7 @@
     border-radius: 10px;
     background: #fff;
     color: var(--navy);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.6;
     box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
     transition:
@@ -1099,7 +1101,7 @@
   border-radius: 999px;
   background: #fff;
   color: var(--navy);
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
   box-shadow: 0 1px 2px rgba(13, 37, 69, 0.05);
@@ -1188,7 +1190,7 @@
   span {
     display: block;
     padding: 10px 12px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--navy);
   }
 
@@ -1321,7 +1323,7 @@
 
   &__date {
     flex: 0 0 9rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--navy);
     white-space: nowrap;
   }
