@@ -4467,10 +4467,6 @@ a.content-slider__slide:hover .content-slider__media img {
   word-break: break-all;
   text-decoration: none;
 }
-.dojo-contact__email:hover {
-  color: var(--blue);
-  text-decoration: underline;
-}
 .dojo-contact__note {
   margin: 22px 0 0;
   font-size: 0.85rem;
