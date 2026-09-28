@@ -8,30 +8,71 @@ const isEn = lang === "en";
 
 const t = {
   title: isEn ? "Trial Class & Inquiries" : "体験申込・お問い合わせ",
+
   lead: isEn
     ? "Please contact us here to book a trial class or ask about Seishinkai Karate."
     : "清心会空手体験申込はこちらからご連絡ください",
+
   phone: isEn ? "Phone" : "お電話",
-  hours: isEn ? "Mon–Fri 1:00 PM–4:00 PM" : "月〜金 13:00〜16:00",
+
+  hours: isEn
+    ? "Mon–Fri 1:00 PM–4:00 PM (On Saturdays, Sundays, and public holidays, inquiries are accepted by email only.)"
+    : "月～金13:00-16:00(土日祝日はメール受付のみ)",
+
   email: isEn ? "Email" : "メール",
+
   email24: isEn ? "Available 24/7" : "24時間受付",
+
+  emailButton: isEn
+    ? "Request a Trial by Email"
+    : "メールで体験を申し込む",
+
   fax: isEn ? "Fax" : "FAX",
+
   qrAlt: isEn ? "Contact QR code" : "お問い合わせQRコード",
-  qr: isEn ? "Quick contact from your smartphone" : "スマホから簡単お問い合わせ",
-  hoursTitle: isEn ? "Office Hours" : "受付時間",
+
+  qr: isEn
+    ? "Quick contact from your smartphone"
+    : "スマホから簡単お問い合わせ",
+
+  hoursTitle: isEn ? "Telephone Office Hours" : "電話受付時間",
+
   locationTitle: isEn ? "Location" : "所在地",
+
   location: isEn
     ? "2-1-27 Sakaedori, Shiroishi-ku, Sapporo (along Tohoku-dori)"
     : "札幌市白石区栄通2丁目1-27（東北通沿）",
+
   noticeTitle: isEn ? "Please Note" : "ご注意",
+
   notice: isEn
     ? "Our office is staffed on a rotating schedule, so we may occasionally be unable to answer calls during office hours. In that case, please contact us by email."
     : "事務局は交代制のため、時間内でも電話対応できない場合があります。その際はメールにてお問い合わせください。",
 };
+
+// Gmail compose settings
+const emailSubject = isEn
+  ? "Trial Lesson Request"
+  : "体験申込：（希望支部教室名）";
+
+const emailBody = isEn
+  ? `Name:
+Age:
+Desired Branch/Class:`
+  : `お名前：
+年齢：
+希望支部教室名：`;
+
+const gmailUrl =
+  `https://mail.google.com/mail/?view=cm&fs=1` +
+  `&to=Karate@seishinkan.ne.jp` +
+  `&su=${encodeURIComponent(emailSubject)}` +
+  `&body=${encodeURIComponent(emailBody)}`;
 ---
 
 <section class="top-contact" id="contact">
   <div class="layout__container">
+
     <div class="top-contact__contact-header">
       <span>CONTACT</span>
       <h2>{t.title}</h2>
@@ -39,41 +80,71 @@ const t = {
     </div>
 
     <div class="top-contact__contact-grid">
+
       <!-- Phone -->
       <div class="top-contact__contact-card highlight fade-up-in">
         <div class="top-contact__icon">☎</div>
+
         <h3>{t.phone}</h3>
+
         <a href="tel:0113000048" class="top-contact__big">
           011-300-0048
         </a>
+
+        <br>
+
         <small>{t.hours}</small>
       </div>
 
       <!-- Email -->
       <div class="top-contact__contact-card fade-up-in">
         <div class="top-contact__icon">✉</div>
+
         <h3>{t.email}</h3>
-          <a class="dojo-contact__email" href={`mailto:Karate@seishinkan.ne.jp`}>
-            Karate@seishinkan.ne.jp
-          </a><br>
+
+        <span class="dojo-contact__email">
+          Karate@seishinkan.ne.jp
+        </span>
+
+
+        <div class="topic-links">
+          <a
+            class="topic-links__item"
+            href={gmailUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.emailButton}
+          </a>
+        </div>
+        <br>
+
         <small>{t.email24}</small>
       </div>
 
       <!-- Fax -->
       <div class="top-contact__contact-card fade-up-in">
         <div class="top-contact__icon">📠</div>
+
         <h3>{t.fax}</h3>
+
         <p>011-300-0094</p>
       </div>
 
       <!-- QR -->
       <div class="top-contact__contact-card top-contact__qr-card fade-up-in">
-        <img src="/assets/images/img_qr_volunteer.jpg" alt={t.qrAlt} />
+        <img
+          src="/assets/images/img_qr_volunteer.jpg"
+          alt={t.qrAlt}
+        />
+
         <p>{t.qr}</p>
       </div>
+
     </div>
 
     <div class="top-contact__contact-info fade-up-in">
+
       <div>
         <h4>{t.hoursTitle}</h4>
         <p>{t.hours}</p>
@@ -83,11 +154,13 @@ const t = {
         <h4>{t.locationTitle}</h4>
         <p>{t.location}</p>
       </div>
+
     </div>
 
     <div class="top-contact__notice-box fade-in">
       <strong>{t.noticeTitle}</strong>
       <p>{t.notice}</p>
     </div>
+
   </div>
 </section>

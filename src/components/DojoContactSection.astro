@@ -27,24 +27,77 @@ const isEn = lang === "en";
 
 const t = {
   eyebrow: "CONTACT",
-  title: isEn ? `Contact Us About the ${dojoName}` : `${dojoName}へのお問い合わせ`,
+
+  title: isEn
+    ? `Contact Us About the ${dojoName}`
+    : `${dojoName}へのお問い合わせ`,
+
   lead: isEn
     ? "Please feel free to contact us here about a trial class or enrollment."
     : "体験・入会のお申し込みは、こちらからお気軽にご連絡ください。",
+
   directPhoneLabel: isEn ? "Direct Line" : "支部直通",
-  directEmailLabel: directEmailLabel ?? (isEn ? "Direct Email" : "支部直通メール"),
+
+  directEmailLabel:
+    directEmailLabel ?? (isEn ? "Direct Email" : "支部直通メール"),
+
   officeLabel: isEn ? "Office" : "事務局",
-  officeHours: isEn ? "Mon–Fri 1:00 PM–4:00 PM" : "月〜金 13:00〜16:00",
+
+  officeHours: isEn
+    ? "Mon–Fri 1:00 PM–4:00 PM (On Saturdays, Sundays, and public holidays, inquiries are accepted by email only.)"
+    : "月～金13:00-16:00(土日祝日はメール受付のみ)",
+
   emailLabel: isEn ? "Email" : "メール",
+
+  emailButton: isEn
+    ? "Request a Trial by Email"
+    : "メールで体験を申し込む",
+
   note: isEn
     ? "As many of our venues are rented facilities, please direct trial and enrollment inquiries to the office above."
     : "※会場は施設をお借りしている場合が多いため、体験・入会のお問い合わせは事務局までお願いします。",
 };
 
-const officeMailto = `mailto:Karate@seishinkan.ne.jp?subject=${encodeURIComponent(subject)}`;
+// Main office Gmail compose
+const officeEmailSubject = isEn
+  ? `${dojoName} Trial Request`
+  : `${dojoName} 体験申込`;
+
+const officeEmailBody = isEn
+  ? `Name:
+Age:
+Desired Branch/Class: ${dojoName}`
+  : `お名前：
+年齢：
+希望支部教室名：${dojoName}`;
+
+const officeGmailUrl =
+  `https://mail.google.com/mail/?view=cm&fs=1` +
+  `&to=Karate@seishinkan.ne.jp` +
+  `&su=${encodeURIComponent(officeEmailSubject)}` +
+  `&body=${encodeURIComponent(officeEmailBody)}`;
+
+// Direct dojo Gmail compose
+const directEmailSubject = isEn
+  ? `Trial Request: ${dojoName}`
+  : `体験申込：${dojoName}`;
+
+const directEmailBody = isEn
+  ? `Name:
+Age:`
+  : `お名前：
+年齢：`;
+
+const directGmailUrl = directEmail
+  ? `https://mail.google.com/mail/?view=cm&fs=1` +
+    `&to=${encodeURIComponent(directEmail)}` +
+    `&su=${encodeURIComponent(directEmailSubject)}` +
+    `&body=${encodeURIComponent(directEmailBody)}`
+  : "";
 ---
 
 <div class="dojo-contact">
+
   <div class="dojo-contact__header">
     <span>{t.eyebrow}</span>
     <h2>{t.title}</h2>
@@ -52,14 +105,21 @@ const officeMailto = `mailto:Karate@seishinkan.ne.jp?subject=${encodeURIComponen
   </div>
 
   <div class="dojo-contact__grid">
+
     {
       directPhone && (
         <div class="dojo-contact__card dojo-contact__card--highlight">
           <div class="dojo-contact__icon">☎</div>
+
           <h3>{t.directPhoneLabel}</h3>
-          <a class="dojo-contact__big" href={`tel:${directPhone.tel}`}>
+
+          <a
+            class="dojo-contact__big"
+            href={`tel:${directPhone.tel}`}
+          >
             {directPhone.number}
           </a>
+
           {directPhone.note && <small>{directPhone.note}</small>}
         </div>
       )
@@ -69,27 +129,68 @@ const officeMailto = `mailto:Karate@seishinkan.ne.jp?subject=${encodeURIComponen
       directEmail && (
         <div class="dojo-contact__card">
           <div class="dojo-contact__icon">✉</div>
+
           <h3>{t.directEmailLabel}</h3>
-          <a class="dojo-contact__email" href={`mailto:${directEmail}`}>
+
+          <span class="dojo-contact__email">
             {directEmail}
-          </a>
+          </span>
+
+
+          <div class="topic-links">
+            <a
+              class="topic-links__item"
+              href={directGmailUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.emailButton}
+            </a>
+          </div>
         </div>
       )
     }
 
-    <div class={`dojo-contact__card${!directPhone ? " dojo-contact__card--highlight" : ""}`}>
+    <div
+      class={`dojo-contact__card${
+        !directPhone ? " dojo-contact__card--highlight" : ""
+      }`}
+    >
       <div class="dojo-contact__icon">☎</div>
+
       <h3>{t.officeLabel}</h3>
-      <a class="dojo-contact__big" href="tel:0113000048">011-300-0048</a>
+
+      <a class="dojo-contact__big" href="tel:0113000048">
+        011-300-0048
+      </a>
+
       <small>{t.officeHours}</small>
     </div>
 
     <div class="dojo-contact__card">
       <div class="dojo-contact__icon">✉</div>
+
       <h3>{t.emailLabel}</h3>
-      <a class="dojo-contact__email" href={officeMailto}>Karate@seishinkan.ne.jp</a>
+
+      <span class="dojo-contact__email">
+        Karate@seishinkan.ne.jp
+      </span>
+
+      <div class="topic-links">
+        <a
+          class="topic-links__item"
+
+          href={officeGmailUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        {t.emailButton}
+        </a>
+      </div>
     </div>
+
   </div>
 
   <p class="dojo-contact__note">{t.note}</p>
+
 </div>
