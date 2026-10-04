@@ -185,11 +185,11 @@ const legacyArchives = [
         <h2 class="detail-page__heading">公式ブログ</h2>
         <ul class="partner-section__list">
           {officialBlogs.map((b) => (
-            <li class="partner-section__item">
-              <a href={b.href} target="_blank" rel="noopener noreferrer">
-                {b.name}
-              </a>
-            </li>
+            <a href={b.href} target="_blank" rel="noopener noreferrer">
+              <li class="partner-section__item">
+                <span class="partner-section__item__text">{b.name}</span>
+              </li>
+            </a>
           ))}
         </ul>
       </section>
@@ -236,11 +236,11 @@ const legacyArchives = [
         <h2 class="detail-page__heading">旧ブログ・アーカイブ</h2>
         <ul class="partner-section__list">
           {legacyArchives.map((b) => (
-            <li class="partner-section__item">
-              <a href={b.href} target="_blank" rel="noopener noreferrer">
-                {b.name}
-              </a>
-            </li>
+            <a href={b.href} target="_blank" rel="noopener noreferrer">
+              <li class="partner-section__item">
+                <span class="partner-section__item__text">{b.name}</span>
+              </li>
+            </a>
           ))}
         </ul>
       </section>

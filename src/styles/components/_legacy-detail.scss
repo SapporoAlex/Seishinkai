@@ -1062,6 +1062,7 @@
       box-shadow var(--hover-time),
       transform var(--hover-time);
 
+    &__text,
     a {
       display: flex;
       align-items: center;

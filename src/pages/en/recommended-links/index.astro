@@ -32,11 +32,11 @@ const links = [
       <section class="partner-section">
         <ul class="partner-section__list">
           {links.map((link) => (
-            <li class="partner-section__item">
-              <a href={link.href} target="_blank" rel="noopener noreferrer">
-                {link.name}
-              </a>
-            </li>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              <li class="partner-section__item">
+                <span class="partner-section__item__text">{link.name}</span>
+              </li>
+            </a>
           ))}
         </ul>
       </section>

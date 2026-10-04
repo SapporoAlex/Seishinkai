@@ -110,11 +110,11 @@ const yearTables = [
       <div class="partner-section">
         <ul class="partner-section__list">
           {pdfSchedules.map((p) => (
-            <li class="partner-section__item">
-              <a href={p.href} target="_blank" rel="noopener noreferrer">
-                {p.year}予定(PDF)
-              </a>
-            </li>
+            <a href={p.href} target="_blank" rel="noopener noreferrer">
+              <li class="partner-section__item">
+                <span class="partner-section__item__text">{p.year}予定(PDF)</span>
+              </li>
+            </a>
           ))}
         </ul>
       </div>

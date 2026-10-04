@@ -1,0 +1,133 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const NEWSLETTER_PASSWORD = "test123";
+
+const newsletters = [
+{ title: "Newsletter No. 517 (August 2026)", href: "/news/newsletter/会報517-2026.8.1s.pdf" },
+{ title: "Newsletter No. 516 (July 2026)", href: "/news/newsletter/会報516-2026.7.1.pdf" },
+{ title: "Newsletter No. 515 (June 2026)", href: "/news/newsletter/会報515-2026.6.1.pdf" },
+{ title: "Newsletter No. 514 (May 2026)", href: "/news/newsletter/会報514-2026.5.1.pdf" },
+{ title: "Newsletter No. 513 (April 2026)", href: "/news/newsletter/会報513-2026.4.1s.pdf" },
+];
+---
+
+<BaseLayout
+title="Newsletters"
+description="Newsletters for Seishinkai Karate members."
+lang="en"
+path="/en/news/newsletter/"
+breadcrumb={[{ path: "/en/news/", name: "News & SNS" }]}
+
+>
+
+  <section class="news">
+    <div class="page-container">
+      <div class="section__title-area">
+        <span class="section-label">NEWSLETTER</span>
+        <h1 class="section-title">Newsletters</h1>
+      </div>
+
+  <p class="page-intro">
+    These newsletters are available to Seishinkai Karate members only.
+    Enter the password to view the newsletter list.
+  </p>
+
+  <div
+    class="newsletter-gate"
+    data-newsletter-gate
+    data-newsletter-gate-password={NEWSLETTER_PASSWORD}
+  >
+    <div class="newsletter-gate__prompt" data-newsletter-gate-prompt>
+      <button
+        type="button"
+        class="newsletter-gate__open"
+        data-newsletter-gate-open
+      >
+        View Newsletters
+      </button>
+
+      <form
+        class="newsletter-gate__form is-hidden"
+        data-newsletter-gate-form
+      >
+        <label
+          class="newsletter-gate__label"
+          for="newsletter-gate-password"
+        >
+          Please enter the password
+        </label>
+
+        <div class="newsletter-gate__row">
+          <input
+            type="password"
+            id="newsletter-gate-password"
+            class="newsletter-gate__input"
+            data-newsletter-gate-input
+            autocomplete="off"
+          />
+
+          <button type="submit" class="newsletter-gate__submit">
+            View
+          </button>
+        </div>
+
+        <p
+          class="newsletter-gate__error is-hidden"
+          data-newsletter-gate-error
+        >
+          Incorrect password. Please try again.
+        </p>
+      </form>
+    </div>
+
+      <p class="news__note">
+    ※ Please note that all newsletters are written in Japanese.
+  </p>
+
+    <div
+      class="newsletter-list is-hidden"
+      data-newsletter-gate-content
+      data-show-more
+      data-batch-size="3"
+    >
+      <ul class="newsletter-list__items">
+        {
+          newsletters.map((n, i) => (
+            <li
+              class:list={[
+                "newsletter-list__item",
+                { "is-hidden": i >= 3 },
+              ]}
+              data-show-more-item
+            >
+              <a href={n.href} target="_blank" rel="noopener">
+                {n.title} (PDF)
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      {
+        newsletters.length > 3 && (
+          <button
+            type="button"
+            class="newsletter-list__show-more"
+            data-show-more-trigger
+          >
+            Show More
+          </button>
+        )
+      }
+    </div>
+  </div>
+
+  <p class="news__note">
+    <a href="/en/news/">← Back to News & SNS</a>
+  </p>
+</div>
+
+
+  </section>
+</BaseLayout>
