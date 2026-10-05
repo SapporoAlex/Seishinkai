@@ -37,7 +37,6 @@ const branchChiefBlogs = [
     image: "/assets/images/instructors/maekawa.jpg",
     links: [
       { label: "Facebook", href: "https://www.facebook.com/nobutaka.maekawa" },
-      { label: "ブログ", href: "https://sky.ap.teacup.com/reimeishiya/" },
     ],
   },
   {
@@ -61,7 +60,6 @@ const branchChiefBlogs = [
     image: "/assets/images/instructors/inoue.jpg",
     links: [
       { label: "Facebook", href: "https://www.facebook.com/ryuichirou.inoue" },
-      { label: "ブログ", href: "https://blog.goo.ne.jp/hazakuranohimawari" },
     ],
   },
   {
@@ -69,15 +67,13 @@ const branchChiefBlogs = [
     image: "/assets/images/instructors/aoki.jpg",
     links: [
       { label: "Facebook", href: "https://www.facebook.com/kazuya.aoki.180" },
-      { label: "ブログ", href: "https://blog.goo.ne.jp/mokunyan" },
     ],
   },
   {
     name: "波川和明",
     image: "/assets/images/instructors/namikawa.jpg",
     links: [
-      { label: "Facebook", href: "https://www.facebook.com/kazuaki.namikawa" },
-      { label: "ブログ", href: "https://angel.ap.teacup.com/spock/" },
+      { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100010443699593" },
     ],
   },
   {
@@ -125,14 +121,14 @@ const overseasBlogs = [
   },
 ];
 
-const mimuraBlog = {
-  name: "故・三村佳代子",
-  image: "/assets/images/instructors/mimu2.jpg",
-  links: [
-    { label: "Mimuブログ", href: "https://yaplog.jp/happpykarate/1" },
-    { label: "旧Mimuブログ", href: "https://music.ap.teacup.com/kimagure/" },
-  ],
-};
+// const mimuraBlog = {
+//   name: "故・三村佳代子",
+//   image: "/assets/images/instructors/mimu2.jpg",
+//   links: [
+//     { label: "Mimuブログ", href: "https://yaplog.jp/happpykarate/1" },
+//     { label: "Facebook", href: "https://www.facebook.com/kayoko.mimura" },
+//   ],
+// };
 
 const officialBlogs = [
   {
@@ -156,12 +152,12 @@ const officialBlogs = [
   },
 ];
 
-const legacyArchives = [
-  { name: "旧ブログ(2005-2006)", href: "http://www.phoenix-c.or.jp/~okubo/blog/ms.cgi?blogid=" },
-  { name: "旧・取材関係ブログ", href: "https://red.ap.teacup.com/karatenews/" },
-  { name: "旧・行事ブログ", href: "https://red.ap.teacup.com/karate-news/" },
-  { name: "旧・会長ブログ", href: "https://red.ap.teacup.com/seishinkan2009/" },
-];
+// const legacyArchives = [
+//   { name: "旧ブログ(2005-2006)", href: "http://www.phoenix-c.or.jp/~okubo/blog/ms.cgi?blogid=" },
+//   { name: "旧・取材関係ブログ", href: "https://red.ap.teacup.com/karatenews/" },
+//   { name: "旧・行事ブログ", href: "https://red.ap.teacup.com/karate-news/" },
+//   { name: "旧・会長ブログ", href: "https://red.ap.teacup.com/seishinkan2009/" },
+// ];
 ---
 
 <BaseLayout
@@ -221,7 +217,7 @@ const legacyArchives = [
         </div>
       </section>
 
-      <section class="partner-section">
+      <!-- <section class="partner-section">
         <h2 class="detail-page__heading">故・三村佳代子 前館長ブログ</h2>
         <div class="social-link-grid">
           <SocialLinkCard
@@ -230,9 +226,9 @@ const legacyArchives = [
             links={mimuraBlog.links}
           />
         </div>
-      </section>
+      </section> -->
 
-      <section class="partner-section">
+      <!-- <section class="partner-section">
         <h2 class="detail-page__heading">旧ブログ・アーカイブ</h2>
         <ul class="partner-section__list">
           {legacyArchives.map((b) => (
@@ -243,7 +239,7 @@ const legacyArchives = [
             </a>
           ))}
         </ul>
-      </section>
+      </section> -->
 
       <p class="detail-page__back">
         <a href="/news/">← ニュース・SNSへ戻る</a>
