@@ -1,0 +1,1 @@
+const a=document.querySelectorAll("[data-gmail-url]"),o=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);o||a.forEach(e=>{const r=e.dataset.gmailUrl;r&&(e.href=r,e.target="_blank",e.rel="noopener noreferrer")});
