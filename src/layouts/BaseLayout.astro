@@ -16,6 +16,7 @@ interface Props {
   description?: string;
   keywords?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   path?: string;
   breadcrumb?: ListItem[];
   lang?: string;
@@ -27,6 +28,8 @@ const keywords = props.keywords ?? undefined;
 const path = props.path ?? '/';
 const currentPath = path;
 const ogImage = props.ogImage ?? siteData.ogImage;
+// Dimensions are only known for the default image (public/assets/og/ogp.png)
+const isDefaultOgImage = ogImage === siteData.ogImage;
 const breadcrumb = props.breadcrumb ?? undefined;
 
 const jaPath = currentPath.startsWith('/en/') ? currentPath.replace(/^\/en/, '') || '/' : currentPath;
@@ -68,6 +71,7 @@ const description = props.description ?? localeSite.description;
 const canonicalUrl = siteDomain + path;
 const alternateUrl = siteDomain + alternatePath;
 const ogImageUrl = siteDomain + ogImage;
+const ogImageAlt = props.ogImageAlt ?? `${localeSite.fullName} (${localeSite.name})`;
 
 const orgSchema = {
   "@context": "https://schema.org",
@@ -111,10 +115,16 @@ const footerProps = localeData?.footer ?? { text: `© 2026 ${siteData.title}` };
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
+    {isDefaultOgImage && <meta property="og:image:type" content="image/png" />}
+    {isDefaultOgImage && <meta property="og:image:width" content="1200" />}
+    {isDefaultOgImage && <meta property="og:image:height" content="630" />}
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={ogLocale} />
     <meta property="og:locale:alternate" content={ogLocaleAlternate} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <meta name="format-detection" content="telephone=no" />
 
