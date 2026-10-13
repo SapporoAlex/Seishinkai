@@ -4,7 +4,7 @@
 // instead of a domain root. Run AFTER `astro build`, never before.
 //
 // The site's internal links/assets are written as root-absolute paths
-// (e.g. "/dojo/cyuo/", "/assets/images/logo.svg") because that's correct
+// (e.g. "/dojo/cyuo/", "/assets/images/logo.jpg") because that's correct
 // when the site is served from a domain root. Those same paths break once
 // the site is served from a sub-path, since the browser resolves them
 // against the domain root, not the sub-path. This script patches the
