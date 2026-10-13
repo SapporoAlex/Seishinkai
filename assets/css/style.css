@@ -1195,6 +1195,7 @@ body.is-menu-open {
   }
 }
 .cards-who__top-img {
+  border-radius: 50%;
   width: 200px;
   height: auto;
   margin-bottom: -20px;
