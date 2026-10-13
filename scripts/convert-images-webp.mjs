@@ -4,8 +4,8 @@
 // built output only — source files in src/ and public/ are left untouched,
 // so `astro dev` still serves the original jpg/png while developing.
 //
-// SVGs and GIFs are left alone on purpose: webp isn't a size win for
-// vector art, and the handful of tiny legacy GIFs aren't worth
+// SVGs and GIFs are left alone on purpose: webp isn't a size win for the
+// site's one vector logo, and the handful of tiny legacy GIFs aren't worth
 // the risk of losing animation.
 //
 // Usage: node scripts/convert-images-webp.mjs <dir>
