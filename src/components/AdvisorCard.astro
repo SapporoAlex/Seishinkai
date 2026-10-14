@@ -1,0 +1,66 @@
+---
+// Photo card for the advisors page (/about/yakuin/). The photo itself is not
+// a link, so the shared image lightbox enlarges it on click; the person's
+// Facebook (or other site) is reached only through the small icon badge.
+interface Line {
+  text: string;
+  href?: string;
+}
+
+interface Props {
+  image: string;
+  alt: string;
+  lines: Line[];
+  href?: string;
+  lang?: "ja" | "en";
+}
+
+const { image, alt, lines, href, lang = "ja" } = Astro.props;
+const isFacebook = href?.includes("facebook.com") ?? false;
+const linkLabel = isFacebook
+  ? lang === "en" ? `${alt} on Facebook` : `${alt}のFacebook`
+  : lang === "en" ? `${alt}'s website` : `${alt}のウェブサイト`;
+---
+
+<figure class="advisor-card">
+  <img src={image} alt={alt} loading="lazy" />
+  {
+    href && (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener"
+        class:list={["advisor-card__link", { "advisor-card__link--facebook": isFacebook }]}
+        aria-label={linkLabel}
+        title={linkLabel}
+      >
+        {isFacebook ? (
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+          </svg>
+        ) : (
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+          </svg>
+        )}
+      </a>
+    )
+  }
+  <figcaption>
+    {
+      lines.map((line, i) => (
+        <>
+          {i > 0 && <br />}
+          {line.href ? (
+            <a href={line.href} target="_blank" rel="noopener">
+              {line.text}
+            </a>
+          ) : (
+            line.text
+          )}
+        </>
+      ))
+    }
+  </figcaption>
+</figure>

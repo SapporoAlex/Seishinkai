@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import AdvisorCard from "@components/AdvisorCard.astro";
 
 const IMG = "/assets/images/legacy/komon/";
 const CLUBU = "/assets/images/legacy/clubu/";
@@ -7,18 +8,17 @@ const CLUBU = "/assets/images/legacy/clubu/";
 const advisors = [
   { name: "Takahiro Miyakawa", role: "Chairman, Hokkaido Mainichi Culture Association", image: `${IMG}miyakawa.jpg`, href: "https://www.facebook.com/profile.php?id=100015617839109" },
   { name: "Shigeyuki Mori", role: "Hokkaido Prefectural Assembly Member", image: `${IMG}miri-g.jpg`, href: "https://www.facebook.com/profile.php?id=100010477867334" },
-  { name: "Yuji Kobayashi", role: "Hokkaido Prefectural Assembly Member", image: `${IMG}koba.jpg`, href: "https://www.facebook.com/yuji.kobayashi.71868" },
+  { name: "Yuji Kobayashi", role: "Hokkaido Prefectural Assembly Member", image: `${IMG}koba.jpg`, href: "https://www.facebook.com/yuji.kobayashi.hidaka7" },
 ];
 
 const advisors2 = [
   { title: "Special Advisor", name: "Kazuhiro Nomura", role: "Ebetsu City Assembly Member", image: `${IMG}nomura.jpg`, href: "https://www.facebook.com/kazuhiro.nomura.5220" },
-  { title: "Advisor", name: "Hideki Maruyama", role: "Sapporo City Assembly Member", image: `${IMG}maru-g.jpg`, href: "http://www.komei.or.jp/km/sapporo-maruyama-hideki/" },
-  { title: "Advisor", name: "Nobuko Igarashi", role: "Tobetsu Town Assembly Member", image: `${IMG}igarashi.jpg` },
+  { title: "Advisor", name: "Hideki Maruyama", role: "Sapporo City Assembly Member", image: `${IMG}maru-g.jpg`, href: "https://www.facebook.com/profile.php?id=100006396061162", roleHref: "http://www.komei.or.jp/km/sapporo-maruyama-hideki/" },
 ];
 
 const medicalAdvisors = [
   { title: "M.D.", name: "Kazuhiko Nagao, 3rd Dan", role: "Director, Nagao Naika Cardiovascular Clinic", image: `${IMG}nagao.jpg`, roleHref: "http://www.nagao-naika.com/index.html" },
-  { title: "D.D.S.", name: "Ryuichiro Inoue, 6th Dan", role: "Director, Kita 10 Jo Dental Office", image: `${IMG}inoue.jpg`, href: "https://www.facebook.com/profile.php?id=100011334952601", roleHref: "https://kita10jyou.chitosedori.com/" },
+  { title: "D.D.S.", name: "Ryuichiro Inoue, 7th Dan", role: "Director, Kita 10 Jo Dental Office", image: `${IMG}inoue.jpg`, href: "https://www.facebook.com/profile.php?id=100011334952601", roleHref: "https://kita10jyou.chitosedori.com/" },
 ];
 
 const koenkai = [
@@ -28,7 +28,7 @@ const koenkai = [
 ];
 
 const obKai = [
-  { title: "Chairman: Masami Koyano", org: "Hikari Construction", orgHref: "http://hikari.geo.jp/", role: "President (founding-era member)", image: `${IMG}koya.jpg`, href: "https://www.facebook.com/masami.koyano" },
+  { title: "Chairman: Masami Koyano", org: "Hikari Construction", orgHref: "http://hikari.geo.jp/", role: "President (founding-era member)", image: `${IMG}koya.jpg`, href: "https://www.facebook.com/profile.php?id=100036455920068" },
   { title: "Director: Masaki Saegusa", org: "Saegusa Pharmaceutical", role: "President (former Fushiko Branch instructor)", image: `${CLUBU}saegusa3.jpg`, href: "https://www.facebook.com/masaki.saegusa.9" },
   { title: "Vice Chairman: Hirotaka Shimazaki", org: "ES Office", orgHref: "http://www.japan-agency.com/", role: "President (founding-era member)", image: `${IMG}shima.jpg`, href: "https://www.facebook.com/hirotaka.shimazaki.7?ref=br_rs" },
   { title: "Vice Chairman: Atsushi Saegusa", org: "Saegusa Pharmaceutical Kyushu", orgHref: "http://www.saegusayakuhin-q.co.jp/", role: "President (former Fukuoka Branch Chief)", image: `${CLUBU}saegusa2.jpg`, href: "https://www.facebook.com/atsushi.saegusa1" },
@@ -89,260 +89,38 @@ const kancho = [
       </div>
 
       <h2 class="detail-page__heading">All Japan Seishinkai Karate Federation — Advisors</h2>
-      <div class="detail-gallery detail-gallery--tall">
-        {
-          advisors.map((p) => (
-            p.href ? (
-            <figure>
-              <a href={p.href} target="_blank" rel="noopener">
-                <img src={p.image} alt={p.name} loading="lazy" />
-              </a>
-              <figcaption>
-                {p.name}
-                <br />
-                {p.role}
-                                  <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener"
-                    class:list={{
-                      "logo-youtube": p.href.includes("youtube"),
-                      "logo-facebook": p.href.includes("facebook"),
-                    }}
-                  >
-                    {p.href.includes("facebook") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
-                      </svg>
-                    )}
-
-                    {p.href.includes("youtube") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
-                      </svg>
-                    )}
-                  </a>
-              </figcaption>
-            </figure>
-            ) : (
-            <figure>
-              <a href={p.href} target="_blank" rel="noopener">
-                <img src={p.image} alt={p.name} loading="lazy" />
-              </a>
-              <figcaption>
-                {p.name}
-                <br />
-                {p.role}
-              </figcaption>
-            </figure>
-            )
-          ))
-        }
+      <div class="detail-gallery detail-gallery--tall" data-lightbox="compact">
+        {advisors.map((p) => (
+          <AdvisorCard lang="en" image={p.image} alt={p.name} href={p.href} lines={[{ text: p.name }, { text: p.role }]} />
+        ))}
       </div>
 
       <h2 class="detail-page__heading">All Japan Seishinkai Karate Federation — Consultants</h2>
-      <div class="detail-gallery detail-gallery--tall">
-        {
-          advisors2.map((p) => (
-            p.href ? (
-            <figure>
-              {p.href ? (
-                <a href={p.href} target="_blank" rel="noopener">
-                  <img src={p.image} alt={p.name} loading="lazy" />
-                </a>
-              ) : (
-                <img src={p.image} alt={p.name} loading="lazy" />
-              )}
-              <figcaption>
-                {p.title}
-                <br />
-                {p.name}
-                <br />
-                {p.role}
-                  <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener"
-                    class:list={{
-                      "logo-youtube": p.href.includes("youtube"),
-                      "logo-facebook": p.href.includes("facebook"),
-                    }}
-                  >
-                    {p.href.includes("facebook") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
-                      </svg>
-                    )}
-
-                    {p.href.includes("youtube") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
-                      </svg>
-                    )}
-                  </a>
-              </figcaption>
-            </figure>
-            ) : (
-            <figure>
-              {p.href ? (
-                <a href={p.href} target="_blank" rel="noopener">
-                  <img src={p.image} alt={p.name} loading="lazy" />
-                </a>
-              ) : (
-                <img src={p.image} alt={p.name} loading="lazy" />
-              )}
-              <figcaption>
-                {p.title}
-                <br />
-                {p.name}
-                <br />
-                {p.role}
-              </figcaption>
-            </figure>
-            )
-          ))
-        }
+      <div class="detail-gallery detail-gallery--tall" data-lightbox="compact">
+        {advisors2.map((p) => (
+          <AdvisorCard lang="en" image={p.image} alt={p.name} href={p.href} lines={[{ text: p.title }, { text: p.name }, { text: p.role, href: p.roleHref }]} />
+        ))}
       </div>
 
       <h2 class="detail-page__heading">All Japan Seishinkai Karate Federation — Medical Advisors</h2>
-      <div class="detail-gallery detail-gallery--tall">
-        {
-          medicalAdvisors.map((p) => (
-            <figure>
-              {p.href ? (
-                <a href={p.href} target="_blank" rel="noopener">
-                  <img src={p.image} alt={p.name} loading="lazy" />
-                </a>
-                <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener"
-                    class:list={{
-                      "logo-youtube": p.href.includes("youtube"),
-                      "logo-facebook": p.href.includes("facebook"),
-                    }}
-                  >
-                    {p.href.includes("facebook") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
-                      </svg>
-                    )}
-
-                    {p.href.includes("youtube") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
-                      </svg>
-                    )}
-                  </a>
-              ) : (
-                <img src={p.image} alt={p.name} loading="lazy" />
-              )}
-              <figcaption>
-                {p.title}
-                <br />
-                {p.name}
-                <br />
-                <a href={p.roleHref} target="_blank" rel="noopener">
-                  {p.role}
-                </a>
-              </figcaption>
-            </figure>
-          ))
-        }
+      <div class="detail-gallery detail-gallery--tall" data-lightbox="compact">
+        {medicalAdvisors.map((p) => (
+          <AdvisorCard lang="en" image={p.image} alt={p.name} href={p.href} lines={[{ text: p.title }, { text: p.name }, { text: p.role, href: p.roleHref }]} />
+        ))}
       </div>
 
       <h2 class="detail-page__heading">Seishinkai Support Association</h2>
-      <div class="detail-gallery detail-gallery--tall">
-        {
-          koenkai.map((p) => (
-            <figure>
-              {p.href ? (
-                <a href={p.href} target="_blank" rel="noopener">
-                  <img src={p.image} alt={p.title} loading="lazy" />
-                </a>
-                <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener"
-                    class:list={{
-                      "logo-youtube": p.href.includes("youtube"),
-                      "logo-facebook": p.href.includes("facebook"),
-                    }}
-                  >
-                    {p.href.includes("facebook") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
-                      </svg>
-                    )}
-
-                    {p.href.includes("youtube") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
-                      </svg>
-                    )}
-                  </a>
-              ) : (
-                <img src={p.image} alt={p.title} loading="lazy" />
-              )}
-              <figcaption>
-                {p.title}
-                <br />
-                <a href={p.orgHref} target="_blank" rel="noopener">
-                  {p.org}
-                </a>
-                <br />
-                {p.role}
-              </figcaption>
-            </figure>
-          ))
-        }
+      <div class="detail-gallery detail-gallery--tall" data-lightbox="compact">
+        {koenkai.map((p) => (
+          <AdvisorCard lang="en" image={p.image} alt={p.title} href={p.href} lines={[{ text: p.title }, { text: p.org, href: p.orgHref }, { text: p.role }]} />
+        ))}
       </div>
 
       <h2 class="detail-page__heading">Seishinkan OB Association</h2>
-      <div class="detail-gallery detail-gallery--tall">
-        {
-          obKai.map((p) => (
-            <figure>
-              <a href={p.href} target="_blank" rel="noopener">
-                <img src={p.image} alt={p.title} loading="lazy" />
-              </a>
-              <figcaption>
-                {p.title}
-                <br />
-                {p.orgHref ? (
-                  <a href={p.orgHref} target="_blank" rel="noopener">
-                    {p.org}
-                  </a>
-                <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener"
-                    class:list={{
-                      "logo-youtube": p.href.includes("youtube"),
-                      "logo-facebook": p.href.includes("facebook"),
-                    }}
-                  >
-                    {p.href.includes("facebook") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
-                      </svg>
-                    )}
-
-                    {p.href.includes("youtube") && (
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
-                      </svg>
-                    )}
-                  </a>
-                ) : (
-                  p.org
-                )}
-                <br />
-                {p.role}
-              </figcaption>
-            </figure>
-          ))
-        }
+      <div class="detail-gallery detail-gallery--tall" data-lightbox="compact">
+        {obKai.map((p) => (
+          <AdvisorCard lang="en" image={p.image} alt={p.title} href={p.href} lines={[{ text: p.title }, { text: p.org, href: p.orgHref }, { text: p.role }]} />
+        ))}
       </div>
 
       <h2 class="detail-page__heading">Seishinkai — Past Support Association Chairmen</h2>

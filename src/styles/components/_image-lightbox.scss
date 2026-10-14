@@ -77,16 +77,30 @@
   }
 
   &__caption {
-    margin: 16px 0 0;
+    margin: 12px 0 0;
     color: #fff;
-    font-size: 1.6rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.6;
     text-align: center;
+    white-space: pre-line;
     max-width: 70ch;
 
     &[hidden] {
       display: none;
     }
+  }
+
+  // Portrait cards: enlarge the photo, but keep it well short of full screen.
+  &--compact &__image {
+    width: auto;
+    height: min(60vh, 520px);
+    max-width: 90vw;
+    border-radius: 10px;
+  }
+
+  &--compact &__caption {
+    font-size: 0.95rem;
+    max-width: 40ch;
   }
 }
 

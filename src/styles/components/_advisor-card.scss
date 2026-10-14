@@ -1,0 +1,64 @@
+@use "../abstracts/_mixins.scss" as *;
+
+// Advisor photo cards (/about/yakuin/). Layout comes from
+// .detail-gallery--tall; this only adds the corner link badge and makes the
+// unlinked photo read as "click to enlarge".
+.advisor-card {
+  position: relative;
+
+  > img {
+    cursor: zoom-in;
+  }
+
+  // .detail-gallery--tall makes every <a> a block, which doubled the <br>
+  // line breaks around linked organisation / role names.
+  figcaption a {
+    display: inline;
+  }
+
+  &__link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    display: flex !important; // .detail-gallery--tall a sets display: block
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--blue);
+    box-shadow: 0 2px 6px rgba(13, 37, 69, 0.25);
+    transition:
+      background var(--hover-time),
+      color var(--hover-time),
+      transform var(--hover-time);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--facebook {
+      color: #1877f2;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: #1877f2;
+      color: #fff;
+      transform: scale(1.08);
+    }
+
+    @include mqsp {
+      width: 32px;
+      height: 32px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

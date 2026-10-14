@@ -1,6 +1,8 @@
 // Lightbox for plain (non-linked) gallery images only. Images already
 // wrapped in an <a> (video links, profile links, dojo-page links) keep
 // their normal navigation behavior and are skipped here entirely.
+// Galleries marked data-lightbox="compact" (e.g. portrait cards) open in a
+// smaller modal instead of filling the screen.
 export function initImageLightbox() {
   const gallerySelector = [
     ".detail-gallery img",
@@ -34,7 +36,8 @@ export function initImageLightbox() {
   const captionEl = lightbox.querySelector(".image-lightbox__caption");
   let lastFocused = null;
 
-  const open = (src, alt, captionText) => {
+  const open = (src, alt, captionText, compact) => {
+    lightbox.classList.toggle("image-lightbox--compact", compact);
     imgEl.src = src;
     imgEl.alt = alt || "";
 
@@ -71,7 +74,9 @@ export function initImageLightbox() {
       open(
         img.currentSrc || img.src,
         img.alt,
-        captionNode?.textContent?.trim(),
+        // innerText keeps <br> line breaks (shown via white-space: pre-line)
+        (captionNode?.innerText || captionNode?.textContent)?.trim(),
+        Boolean(img.closest('[data-lightbox="compact"]')),
       );
     };
 
