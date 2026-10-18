@@ -71,7 +71,7 @@
             "position": "範士",
             "date": "",
             "prefecture": "",
-            "profession": "",
+            "profession": "東洋武道具",
             "details": [],
             "tags": []
           },
@@ -619,18 +619,6 @@
             "date": "",
             "prefecture": "",
             "profession": "会社員",
-            "details": [],
-            "tags": []
-          },
-          {
-            "id": "noro",
-            "image": "/assets/images/instructors/noro.jpg",
-            "name": "野呂和矢",
-            "role": "",
-            "position": "",
-            "date": "",
-            "prefecture": "",
-            "profession": "調理師",
             "details": [],
             "tags": []
           },
