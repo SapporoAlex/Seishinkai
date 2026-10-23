@@ -1,0 +1,51 @@
+@use "../abstracts/_mixins.scss" as *;
+@use "../abstracts/_variables.scss" as *;
+
+// 404 page (src/pages/404.astro) — bilingual, centred under the logo.
+
+.not-found {
+  background: var(--off-white);
+
+  // Doubled with .page-container so it beats that utility's `text-align: start`
+  &__inner.page-container {
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    min-height: 80vh;
+  }
+
+  &__logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 8px;
+    @include mqsp {
+      width: 96px;
+    }
+  }
+
+  &__block {
+    max-width: 60ch;
+
+    & + & {
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+  }
+
+  &__text {
+    color: var(--text-mid);
+    line-height: 2;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+
+    .fv-btn-primary {
+      min-width: 200px;
+    }
+  }
+}

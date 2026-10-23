@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+// Served by the web server for any missing URL (e.g. /dojo/typo/), so every
+// link and asset here must stay root-absolute. Bilingual on one page because
+// the server can't know which language the visitor wanted.
+---
+
+<BaseLayout
+  title="ページが見つかりません / Page Not Found"
+  description="お探しのページは見つかりませんでした。The page you are looking for could not be found."
+  lang="ja"
+  path="/"
+  noindex
+>
+  <section class="not-found">
+    <div class="page-container not-found__inner">
+      <img class="not-found__logo" src="/assets/images/logo.svg" alt="清心会空手のロゴ" width="120" height="120">
+
+      <span class="section-label">404 NOT FOUND</span>
+
+      <div class="not-found__block" lang="ja">
+        <h1 class="section-title">ページが見つかりません</h1>
+        <p class="not-found__text">
+          お探しのページは移動または削除されたか、URLが間違っている可能性があります。<br>
+          お手数ですが、トップページからお探しください。
+        </p>
+      </div>
+
+      <div class="not-found__block" lang="en">
+        <p class="section-title lg">Page Not Found</p>
+        <p class="not-found__text">
+          The page you are looking for may have been moved or deleted, or the URL may be incorrect.
+          Please continue from the home page.
+        </p>
+      </div>
+
+      <div class="not-found__actions">
+        <a href="/"><div class="fv-btn-primary">トップページへ</div></a>
+        <a href="/en/"><div class="fv-btn-primary">English Home</div></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,3 @@
+# Apache: show the site's own 404 page for missing URLs.
+# (Ignored by non-Apache servers, harmless to keep.)
+ErrorDocument 404 /404.html
