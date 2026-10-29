@@ -13,6 +13,8 @@
 //     </div>
 //     <div data-newsletter-gate-content class="is-hidden">...</div>
 //   </div>
+// An optional <p data-newsletter-gate-intro> anywhere on the page is hidden
+// once unlocked.
 const STORAGE_KEY = "newsletter-gate-unlocked";
 
 export function initNewsletterGate() {
@@ -31,6 +33,9 @@ export function initNewsletterGate() {
     const unlock = () => {
       content.classList.remove("is-hidden");
       prompt.classList.add("is-hidden");
+      document
+        .querySelectorAll("[data-newsletter-gate-intro]")
+        .forEach((el) => (el.style.display = "none"));
     };
 
     let alreadyUnlocked = false;

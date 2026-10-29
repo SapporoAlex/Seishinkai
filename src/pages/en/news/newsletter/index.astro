@@ -4,6 +4,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 const NEWSLETTER_PASSWORD = "test123";
 
 const newsletters = [
+{ title: "Newsletter No. 520 (November 2026)", href: "/news/newsletter/kaiho-520-2026.11.1.pdf" },
+{ title: "Newsletter No. 519 (October 2026)", href: "/news/newsletter/kaiho-519-2026.10.1.pdf" },
+{ title: "Newsletter No. 518 (September 2026)", href: "/news/newsletter/kaiho-518-2026.9.1.pdf" },
 { title: "Newsletter No. 517 (August 2026)", href: "/news/newsletter/kaiho-517-2026-08.pdf" },
 { title: "Newsletter No. 516 (July 2026)", href: "/news/newsletter/kaiho-516-2026-07.pdf" },
 { title: "Newsletter No. 515 (June 2026)", href: "/news/newsletter/kaiho-515-2026-06.pdf" },
@@ -28,7 +31,7 @@ breadcrumb={[{ path: "/en/news/", name: "News & SNS" }]}
         <h1 class="section-title">Newsletters</h1>
       </div>
 
-  <p class="page-intro">
+  <p class="page-intro" data-newsletter-gate-intro>
     These newsletters are available to Seishinkai Karate members only.
     Enter the password to view the newsletter list.
   </p>

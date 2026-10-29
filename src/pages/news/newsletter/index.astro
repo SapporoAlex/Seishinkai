@@ -8,6 +8,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 const NEWSLETTER_PASSWORD = "test123";
 
 const newsletters = [
+  { title: "会報 第520号（2026年11月）", href: "/news/newsletter/kaiho-520-2026.11.1.pdf" },
+  { title: "会報 第519号（2026年10月）", href: "/news/newsletter/kaiho-519-2026.10.1.pdf" },
+  { title: "会報 第518号（2026年9月）", href: "/news/newsletter/kaiho-518-2026.9.1.pdf" },
   { title: "会報 第517号（2026年8月）", href: "/news/newsletter/kaiho-517-2026-08.pdf" },
   { title: "会報 第516号（2026年7月）", href: "/news/newsletter/kaiho-516-2026-07.pdf" },
   { title: "会報 第515号（2026年6月）", href: "/news/newsletter/kaiho-515-2026-06.pdf" },
@@ -29,7 +32,7 @@ const newsletters = [
         <span class="section-label">NEWSLETTER</span>
         <h1 class="section-title">会報一覧</h1>
       </div>
-      <p class="page-intro">
+      <p class="page-intro" data-newsletter-gate-intro>
         会員限定のPDF会報です。合言葉を入力すると一覧が表示されます。
       </p>
 
