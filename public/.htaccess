@@ -1,3 +1,8 @@
 # Apache: show the site's own 404 page for missing URLs.
 # (Ignored by non-Apache servers, harmless to keep.)
 ErrorDocument 404 /404.html
+
+# Redirect old profile URLs to about
+RewriteEngine On
+RewriteRule ^profile\.html$ /about [R=301,L]
+RewriteRule ^profile/?$ /about [R=301,L]
